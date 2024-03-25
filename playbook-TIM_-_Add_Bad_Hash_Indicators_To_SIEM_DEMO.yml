@@ -1,0 +1,420 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: 5.5.0
+    itemVersion: 1.0.4
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: |-
+  This playbook recives indicators from its parent playbook
+  and provides the indicators as inputs for the sub-playbooks that push the indicators
+  to the SIEM.
+id: 89f8a496-58b0-4562-87d1-fd9169e0dd56
+inputs:
+- description: ""
+  key: ""
+  playbookInputQuery:
+    daterange:
+      fromdate: "0001-01-01T00:00:00Z"
+      fromdatelicenseval: "0001-01-01T00:00:00Z"
+      period:
+        by: ""
+        byfrom: ""
+        byto: ""
+        field: ""
+        fromvalue: null
+        tovalue: null
+      todate: "0001-01-01T00:00:00Z"
+    query: ""
+    queryEntity: indicators
+    results: null
+    runFromLastJobTime: false
+  required: false
+  value: {}
+name: TIM - Add Bad Hash Indicators To SIEM_DEMO
+outputs: []
+quiet: true
+sourceplaybookid: TIM - Add Bad Hash Indicators To SIEM
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 85f87ef5-7939-4511-850e-2765c0dfb1b8
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 85f87ef5-7939-4511-850e-2765c0dfb1b8
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": -200
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: b1a8e9ab-7c0e-40b7-8ca4-b37520ebb74e
+      iscommand: false
+      name: QRadar
+      type: title
+      version: -1
+    taskid: b1a8e9ab-7c0e-40b7-8ca4-b37520ebb74e
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 990,
+          "y": 210
+        }
+      }
+  "3":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isExists
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isEqualString
+          right:
+            value:
+              simple: QRadar v3
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.state
+          operator: isEqualString
+          right:
+            value:
+              simple: active
+      label: "yes"
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "12"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7bdd37a3-efd8-4261-8e7c-91f5371beae6
+      iscommand: false
+      name: Is Qradar enabled?
+      type: condition
+      version: -1
+    taskid: 7bdd37a3-efd8-4261-8e7c-91f5371beae6
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 990,
+          "y": 360
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 40e26ac5-729b-497a-8c97-33b9ba14c8bb
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 40e26ac5-729b-497a-8c97-33b9ba14c8bb
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 810
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 4c19e252-dca1-4461-83d7-850b97b8b34c
+      iscommand: false
+      name: ArcSight
+      type: title
+      version: -1
+    taskid: 4c19e252-dca1-4461-83d7-850b97b8b34c
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": -60,
+          "y": 210
+        }
+      }
+  "6":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isExists
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isEqualString
+          right:
+            value:
+              simple: ArcSight ESM v2
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.state
+          operator: isEqualString
+          right:
+            value:
+              simple: active
+      label: "yes"
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "10"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9e9f6a00-37fc-40b6-819b-08243d0117f7
+      iscommand: false
+      name: Is ArcSight enabled?
+      type: condition
+      version: -1
+    taskid: 9e9f6a00-37fc-40b6-819b-08243d0117f7
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": -60,
+          "y": 360
+        }
+      }
+  "9":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: value
+                filters:
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: playbookQuery.indicator_type
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: File
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: playbookQuery.CustomFields.tags
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: approved_black
+                root: playbookQuery
+                transformers:
+                - operator: uniq
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "5"
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6f3dfa5e-cfb4-4b7c-81a9-8143bec03748
+      iscommand: false
+      name: Are there Hash results?
+      type: condition
+      version: -1
+    taskid: 6f3dfa5e-cfb4-4b7c-81a9-8143bec03748
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": -50
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c501b01c-a49e-4799-8b6e-84d137e3449f
+      iscommand: false
+      name: TIM - ArcSight Add Bad Hash Indicators
+      playbookId: TIM - ArcSight Add Bad Hash Indicators
+      type: playbook
+      version: -1
+    taskid: c501b01c-a49e-4799-8b6e-84d137e3449f
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": -170,
+          "y": 590
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      QRadarMd5ReferenceSetName:
+        simple: TIM_MD5
+      QRadarSha1ReferenceSetName:
+        simple: TIM_SHA1
+      QRadarSha256ReferenceSetName:
+        simple: TIM_SHA256
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c7608466-3178-4c6c-8b33-6a8891bd4917
+      iscommand: false
+      name: TIM - QRadar Add Bad Hash Indicators_DEMO
+      playbookId: 9ae10d02-e0fb-473f-808f-006655444a1b
+      type: playbook
+      version: -1
+    taskid: c7608466-3178-4c6c-8b33-6a8891bd4917
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 1110,
+          "y": 600
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1075,
+        "width": 1660,
+        "x": -170,
+        "y": -200
+      }
+    }
+  }
