@@ -1,0 +1,55 @@
+{
+	"autorun": true,
+	"cacheVersn": 0,
+	"closureScript": "4fb543d0-fe0b-4095-8cb7-c99d06a435eb",
+	"color": "#E46BCD",
+	"days": 0,
+	"daysR": 0,
+	"default": false,
+	"definitionId": "",
+	"detached": false,
+	"disabled": false,
+	"extractSettings": {
+		"fieldCliNameToExtractSettings": {
+			"emailnewbody": {
+				"extractAsIsIndicatorTypeId": "",
+				"extractIndicatorTypesIDs": [],
+				"isExtractingAllIndicatorTypes": false
+			},
+			"sourceid": {
+				"extractAsIsIndicatorTypeId": "",
+				"extractIndicatorTypesIDs": [],
+				"isExtractingAllIndicatorTypes": false
+			},
+			"sourceusername": {
+				"extractAsIsIndicatorTypeId": "accountRep",
+				"extractIndicatorTypesIDs": [],
+				"isExtractingAllIndicatorTypes": false
+			}
+		},
+		"mode": "All"
+	},
+	"fromServerVersion": "",
+	"hours": 0,
+	"hoursR": 0,
+	"id": "Manual",
+	"itemVersion": "",
+	"layout": "24ffbc89-f5f3-4cc7-84de-1d66f05df3be",
+	"locked": false,
+	"name": "Manual",
+	"onChangeRepAlg": 3,
+	"packID": "",
+	"packName": "",
+	"playbookId": "e3978062-f7cd-4154-854f-efc1d2040dd1",
+	"preProcessingScript": "",
+	"propagationLabels": [
+		"all"
+	],
+	"readonly": false,
+	"reputationCalc": 1,
+	"system": false,
+	"toServerVersion": "",
+	"version": -1,
+	"weeks": 0,
+	"weeksR": 0
+}
