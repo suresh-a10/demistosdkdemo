@@ -1,0 +1,101 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: b8e62f2e-51aa-4c67-8920-4e40020816ee
+inputs: []
+name: sample 3
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: d58a8532-8fd5-4c99-81ac-a546667c1d39
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: d58a8532-8fd5-4c99-81ac-a546667c1d39
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    scriptarguments:
+      key:
+        simple: QRadar.start
+      value:
+        complex:
+          accessor: Starttime
+          root: QRadar.Events.[0]
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Set a value in context under the key you entered. If no value is entered, the script doesn't do anything.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 96d62f31-d3a9-436b-800b-ec161a12188a
+      iscommand: false
+      name: Untitled Task
+      script: SetAndHandleEmpty
+      type: regular
+      version: -1
+    taskid: 96d62f31-d3a9-436b-800b-ec161a12188a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 200
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 245,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
