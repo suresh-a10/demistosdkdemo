@@ -1,0 +1,262 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: CVE_Eval_Pack
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 38dc80f4-946b-46d8-8e91-6e5258f39ae4
+inputs:
+- description: ""
+  key: Target
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: CPE
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: NewCVE_PerCPE
+outputs:
+- contextPath: return
+  type: boolean
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a5c9d229-9f78-4fc1-8cbb-2cda26236caf
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: a5c9d229-9f78-4fc1-8cbb-2cda26236caf
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 50
+        }
+      }
+  "1":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: ${inputs.Target}
+          operator: StringContainsArray
+          right:
+            value:
+              simple: ${inputs.CPE}
+      label: "yes"
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 89c3c8cf-a41a-4870-83bd-e8aeaf9289fb
+      iscommand: false
+      name: Check Contains
+      type: condition
+      version: -1
+    taskid: 89c3c8cf-a41a-4870-83bd-e8aeaf9289fb
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 545
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 74d240b0-c308-40fa-8957-731e94e61ad3
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 74d240b0-c308-40fa-8957-731e94e61ad3
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 895
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: return
+      value:
+        simple: "true"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 33e31c55-587b-4666-8d09-77cf35546529
+      iscommand: false
+      name: Set Return Value
+      script: Set
+      type: regular
+      version: -1
+    taskid: 33e31c55-587b-4666-8d09-77cf35546529
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: return
+      value:
+        simple: "false"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 5e655896-2a49-4b26-85f6-a43c870a1ec4
+      iscommand: false
+      name: Set Default Return
+      script: Set
+      type: regular
+      version: -1
+    taskid: 5e655896-2a49-4b26-85f6-a43c870a1ec4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 370
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "yes"
+      subplaybook:
+        simple: auto
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: f614e3c1-11dc-40c3-86ce-41d8dec8e92c
+      iscommand: false
+      name: DeleteContext
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: f614e3c1-11dc-40c3-86ce-41d8dec8e92c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 195
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 910,
+        "width": 492.5,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
