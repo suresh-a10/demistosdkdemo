@@ -1,0 +1,585 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: befbbcec-375b-4c79-8451-a34339f0e578
+inputs: []
+name: Demo test
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 28a5a32d-a05b-4e9c-8063-40fb5594ac69
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 28a5a32d-a05b-4e9c-8063-40fb5594ac69
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 172.5,
+          "y": 65
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      append:
+        simple: "true"
+      key:
+        simple: HostData
+      value:
+        simple: |-
+          {
+          "Hostname":"Test123",
+          "IPAddress":"1.2.3.4",
+          "Asset Category": "IT"
+          }
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 24beeab2-70a7-4db4-8a83-b978aff251b2
+      iscommand: false
+      name: set Context
+      script: Set
+      type: regular
+      version: -1
+    taskid: 24beeab2-70a7-4db4-8a83-b978aff251b2
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 172.5,
+          "y": 400
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "11"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      data:
+        simple: ${HostData}
+      title:
+        simple: Host Details
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Convert an array to a nice table display. Usually, from the context.
+      id: f1978c7d-5590-4878-83df-37bd27a87dd7
+      iscommand: false
+      name: To Table
+      script: ToTable
+      tags:
+      - Host Details
+      type: regular
+      version: -1
+    taskid: f1978c7d-5590-4878-83df-37bd27a87dd7
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 172.5,
+          "y": 575
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: c981d81b-dde0-4b24-8aac-a2a114232da8
+      iscommand: false
+      name: Delete context
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: c981d81b-dde0-4b24-8aac-a2a114232da8
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 172.5,
+          "y": 225
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      body:
+        simple: '{"pageSize":100,"categories":["attachments"],"tags":[],"notCategories":[],"notTags":[]}'
+      uri:
+        simple: /investigation/{incidentID}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Core REST API
+      description: send HTTP POST request
+      id: ab9d4233-ec40-46c0-83d1-98d4503440ad
+      iscommand: true
+      name: Get Attachment Entry IDS
+      script: Core REST API|||demisto-api-post
+      type: regular
+      version: -1
+    taskid: ab9d4233-ec40-46c0-83d1-98d4503440ad
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 602.5,
+          "y": 50
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    scriptarguments:
+      uri:
+        simple: /incident/1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Core REST API
+      description: send HTTP GET requests
+      id: b0353485-3f9d-4b56-815f-8e98a5100500
+      iscommand: true
+      name: Create new Indicator
+      script: Core REST API|||demisto-api-get
+      type: regular
+      version: -1
+    taskid: b0353485-3f9d-4b56-815f-8e98a5100500
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 602.5,
+          "y": 225
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: true
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "17"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      seconds:
+        simple: "300"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sleep for X seconds
+      id: 9244c899-32aa-481f-88cb-9e0342d8710e
+      iscommand: false
+      name: Sleep
+      script: Sleep
+      type: regular
+      version: -1
+    taskid: 9244c899-32aa-481f-88cb-9e0342d8710e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 110,
+          "y": 1690
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "17"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      commandstatus:
+        simple: Running
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.set.incident
+      id: 1211bc20-94cf-43d1-8bee-1a946b29771d
+      iscommand: true
+      name: Set Command Status field to Running
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: 1211bc20-94cf-43d1-8bee-1a946b29771d
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 540,
+          "y": 1650
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "12"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      extend-context:
+        simple: IncidentData=.Contents.data={"ID":val.id,"CommandStatus":val.CustomFields.commandstatus}
+      fromdate:
+        simple: 3 days ago
+      ignore-outputs:
+        simple: "false"
+      query:
+        simple: type:Manual and commandstatus:Running
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Searches Demisto incidents. A summarized version of this scrips is avilable with the summarizedversion argument.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
+      id: d7c3dfe2-f5fd-4e09-885f-043a7c87a89c
+      iscommand: false
+      name: Search Incidents
+      script: SearchIncidentsV2
+      type: regular
+      version: -1
+    taskid: d7c3dfe2-f5fd-4e09-885f-043a7c87a89c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 172.5,
+          "y": 750
+        }
+      }
+  "12":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: IncidentData.CommandStatus
+          operator: isEqualString
+          right:
+            value:
+              simple: Running
+      label: "yes"
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "9"
+      - "10"
+      "yes":
+      - "15"
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2aa2e7ae-1a7d-4402-8146-d6cd6b7d8264
+      iscommand: false
+      name: Check the commandstatus
+      type: condition
+      version: -1
+    taskid: 2aa2e7ae-1a7d-4402-8146-d6cd6b7d8264
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 172.5,
+          "y": 935
+        }
+      }
+  "13":
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+      - "10"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      uri:
+        simple: /investigation/${incident.id}/pause
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Core REST API
+      description: send HTTP POST request.
+      id: 1b9e1c4b-0225-4dab-8386-be093b5fa9c0
+      iscommand: true
+      name: Pause the playbook execution
+      script: Core REST API|||demisto-api-post
+      type: regular
+      version: -1
+    taskid: 1b9e1c4b-0225-4dab-8386-be093b5fa9c0
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -750,
+          "y": 1410
+        }
+      }
+  "14":
+    continueonerrortype: ""
+    id: "14"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      listData:
+        simple: ${foundIncidents.id}
+      listName:
+        simple: PauseIncidents
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.list.add
+      id: 45b4c201-84aa-4528-8041-c7010936df95
+      iscommand: true
+      name: Update the list with Incident ID to be paused
+      script: Builtin|||addToList
+      type: regular
+      version: -1
+    taskid: 45b4c201-84aa-4528-8041-c7010936df95
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -1630,
+          "y": 1140
+        }
+      }
+  "15":
+    continueonerrortype: ""
+    id: "15"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "16"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      commandstatus:
+        simple: Pause
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.set.incident
+      id: 2413c607-38c3-4941-8685-8133ab39b426
+      iscommand: true
+      name: Set Command Status to Pause
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: 2413c607-38c3-4941-8685-8133ab39b426
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -750,
+          "y": 1030
+        }
+      }
+  "16":
+    continueonerrortype: ""
+    id: "16"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "13"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      listData:
+        simple: ${incident.id}
+      listName:
+        simple: PauseIncidents
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.list.add
+      id: c517c334-4bd8-4f4b-80f1-108d9c7ac8b0
+      iscommand: true
+      name: Add the incident to PauseIncidents List
+      script: Builtin|||addToList
+      type: regular
+      version: -1
+    taskid: c517c334-4bd8-4f4b-80f1-108d9c7ac8b0
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -750,
+          "y": 1200
+        }
+      }
+  "17":
+    continueonerrortype: ""
+    id: "17"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      commandstatus:
+        simple: Completed
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.set.incident
+      id: c466b63c-7774-45b6-8e54-c610ae684d62
+      iscommand: true
+      name: Set Command Status to Completed
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: c466b63c-7774-45b6-8e54-c610ae684d62
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 110,
+          "y": 1890
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1935,
+        "width": 2612.5,
+        "x": -1630,
+        "y": 50
+      }
+    }
+  }
