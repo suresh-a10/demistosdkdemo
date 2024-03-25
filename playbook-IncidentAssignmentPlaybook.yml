@@ -1,0 +1,386 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: This playbook will assign incident to analyst based on current system
+  time and analysts in list
+id: 331860d6-7724-43e5-87c5-83c137e6a03b
+inputs: []
+name: IncidentAssignmentPlaybook
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: bab2faae-5d35-4e9c-8dc5-b5cfcaa5a505
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: bab2faae-5d35-4e9c-8dc5-b5cfcaa5a505
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      username:
+        complex:
+          accessor: shiftA
+          root: lists
+          transformers:
+          - args:
+              delimiter:
+                value:
+                  simple: ','
+            operator: split
+          - args:
+              index:
+                value:
+                  simple: "1"
+            operator: atIndex
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Assign analyst to incident.
+        By default,  the analyst is picked randomly from the available users, according to the provided roles (if no roles provided, will fetch all users).
+        Otherwise, the analyst will be picked according to the 'assignBy' arguments.
+        machine-learning: DBot will calculated and decide who is the best analyst for the job.
+        top-user: The user that is most commonly owns this type of incident
+        less-busy-user: The less busy analyst will be picked to be the incident owner.
+        online: The analyst is picked randomly from all online analysts, according to the provided roles (if no roles provided, will fetch all users).
+        current: The user that executed the command
+      id: 8b183052-500d-4c8c-8d0c-81aa083da6b7
+      iscommand: false
+      name: Assign analyst to shiftA
+      script: AssignAnalystToIncident
+      type: regular
+      version: -1
+    taskid: 8b183052-500d-4c8c-8d0c-81aa083da6b7
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      username:
+        complex:
+          accessor: shiftB
+          root: lists
+          transformers:
+          - args:
+              delimiter:
+                value:
+                  simple: ','
+            operator: split
+          - args:
+              index:
+                value:
+                  simple: "1"
+            operator: atIndex
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Assign analyst to incident.
+        By default,  the analyst is picked randomly from the available users, according to the provided roles (if no roles provided, will fetch all users).
+        Otherwise, the analyst will be picked according to the 'assignBy' arguments.
+        machine-learning: DBot will calculated and decide who is the best analyst for the job.
+        top-user: The user that is most commonly owns this type of incident
+        less-busy-user: The less busy analyst will be picked to be the incident owner.
+        online: The analyst is picked randomly from all online analysts, according to the provided roles (if no roles provided, will fetch all users).
+        current: The user that executed the command
+      id: b873bb22-2856-4ca5-89fe-870890b116cf
+      iscommand: false
+      name: Assign analyst to shiftB
+      script: AssignAnalystToIncident
+      type: regular
+      version: -1
+    taskid: b873bb22-2856-4ca5-89fe-870890b116cf
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 720
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      contextKey:
+        simple: currenttime
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |
+        Retrieves the current date and time.
+      id: 739e69ab-317b-4e77-8f67-53922dd7ca77
+      iscommand: false
+      name: PrintTime
+      script: GetTime
+      type: regular
+      version: -1
+    taskid: 739e69ab-317b-4e77-8f67-53922dd7ca77
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 195
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "no":
+      - "5"
+      "yes":
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        complex:
+          root: TimeNow
+          transformers:
+          - args:
+              begin_time:
+                value:
+                  simple: "06:00:00"
+              end_time:
+                value:
+                  simple: "14:00:00"
+            operator: BetweenHours
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value is true. Will return 'no' otherwise
+      id: 06011009-e7f9-4641-8928-97037693bfd4
+      iscommand: false
+      name: If time is in Shift A - 6am to 2pm
+      script: IsTrue
+      type: condition
+      version: -1
+    taskid: 06011009-e7f9-4641-8928-97037693bfd4
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 370
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "no":
+      - "7"
+      "yes":
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        complex:
+          root: TimeNow
+          transformers:
+          - args:
+              begin_time:
+                value:
+                  simple: "14:00:00"
+              end_time:
+                value:
+                  simple: "22:00:00"
+            operator: BetweenHours
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value is true. Will return 'no' otherwise
+      id: 6eb98e8a-6543-4156-8fb1-edefe24e601a
+      iscommand: false
+      name: Check if in Shift B
+      script: IsTrue
+      type: condition
+      version: -1
+    taskid: 6eb98e8a-6543-4156-8fb1-edefe24e601a
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 695,
+          "y": 545
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      username:
+        complex:
+          accessor: shiftC
+          root: lists
+          transformers:
+          - args:
+              delimiter:
+                value:
+                  simple: ','
+            operator: split
+          - args:
+              index:
+                value:
+                  simple: "1"
+            operator: atIndex
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Assign analyst to incident.
+        By default,  the analyst is picked randomly from the available users, according to the provided roles (if no roles provided, will fetch all users).
+        Otherwise, the analyst will be picked according to the 'assignBy' arguments.
+        machine-learning: DBot will calculated and decide who is the best analyst for the job.
+        top-user: The user that is most commonly owns this type of incident
+        less-busy-user: The less busy analyst will be picked to be the incident owner.
+        online: The analyst is picked randomly from all online analysts, according to the provided roles (if no roles provided, will fetch all users).
+        current: The user that executed the command
+      id: 07a6b022-07f5-482e-8bfc-88f93fe3e1d6
+      iscommand: false
+      name: Assign analyst to shiftC
+      script: AssignAnalystToIncident
+      type: regular
+      version: -1
+    taskid: 07a6b022-07f5-482e-8bfc-88f93fe3e1d6
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 720
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: ec507aea-2883-4c72-8a83-19715a139d53
+      iscommand: false
+      name: Completed
+      type: title
+      version: -1
+    taskid: ec507aea-2883-4c72-8a83-19715a139d53
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 895
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 910,
+        "width": 1240,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
