@@ -1,0 +1,192 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 802d2aa7-334f-4cf5-83b2-8bf4578fac13
+inputs: []
+name: restartFailedTasks
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0c46efe1-142a-4681-8484-a853bb744a8a
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 0c46efe1-142a-4681-8484-a853bb744a8a
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Gets failed tasks details for incidents based on a query. Limited to 1000 incidents.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
+      id: 0f958ddd-81f7-44bc-8eb2-0f64f90b384b
+      iscommand: false
+      name: Get Failed tasks
+      script: GetFailedTasks
+      type: regular
+      version: -1
+    taskid: 0f958ddd-81f7-44bc-8eb2-0f64f90b384b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      incident_limit:
+        simple: "300"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Use this Script to re-run failed tasks. Run in the same incident
+        after running `GetFailedTasks` for restarting all of the failed tasks or some
+        of them.
+      id: 8bccfd33-01e6-42dd-8faa-17877168006c
+      iscommand: false
+      name: RestartFailedtasks
+      script: RestartFailedTasks
+      type: regular
+      version: -1
+    taskid: 8bccfd33-01e6-42dd-8faa-17877168006c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.close.inv
+      id: 827c1644-3df9-412a-8c9b-4e0045164679
+      iscommand: true
+      name: Close
+      script: Builtin|||closeInvestigation
+      type: regular
+      version: -1
+    taskid: 827c1644-3df9-412a-8c9b-4e0045164679
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a7060900-b81e-4aa4-8549-70697639c1bb
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: a7060900-b81e-4aa4-8549-70697639c1bb
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 735,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
