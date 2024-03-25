@@ -1,0 +1,168 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 24cf4b7f-dd08-4b9c-8529-8599f7024565
+inputs: []
+name: Demo Timer Fields
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: bcf0af0b-27b6-4c14-8bfd-ce53ed62faac
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: bcf0af0b-27b6-4c14-8bfd-ce53ed62faac
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 520,
+          "y": -70
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 741f3f3f-b250-46a5-86f4-f3e07533306d
+      iscommand: false
+      name: Start Time to Assignment
+      type: title
+      version: -1
+    taskid: 741f3f3f-b250-46a5-86f4-f3e07533306d
+    timertriggers:
+    - action: start
+      fieldname: timetoassignment
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 520,
+          "y": 110
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      assignBy:
+        simple: random
+      roles:
+        simple: Analyst
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Assign analyst to incident.
+        By default,  the analyst is picked randomly from the available users, according to the provided roles (if no roles provided, will fetch all users).
+        Otherwise, the analyst will be picked according to the 'assignBy' arguments.
+        machine-learning: DBot will calculated and decide who is the best analyst for the job.
+        top-user: The user that is most commonly owns this type of incident
+        less-busy-user: The less busy analyst will be picked to be the incident owner.
+        online: The analyst is picked randomly from all online analysts, according to the provided roles (if no roles provided, will fetch all users).
+        current: The user that executed the command
+      id: 05580b9f-6590-48ec-8bbe-744e99f6d45f
+      iscommand: false
+      name: Assign to Analyst
+      script: AssignAnalystToIncident
+      type: regular
+      version: -1
+    taskid: 05580b9f-6590-48ec-8bbe-744e99f6d45f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 520,
+          "y": 260
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a20b790c-e2d7-4289-841f-98a102d9458e
+      iscommand: false
+      name: Stop Time to Assignment timer, start remediation SLA
+      type: title
+      version: -1
+    taskid: a20b790c-e2d7-4289-841f-98a102d9458e
+    timertriggers:
+    - action: stop
+      fieldname: timetoassignment
+    - action: start
+      fieldname: remediationsla
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 520,
+          "y": 440
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 575,
+        "width": 380,
+        "x": 520,
+        "y": -70
+      }
+    }
+  }
