@@ -1,0 +1,411 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 077565ac-0e28-487c-8d0f-6e43e5138da9
+inputs:
+- description: ""
+  key: Domain
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: Hostname
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: Username
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: Event Threshold
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: Cust_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_enrichment_actions
+outputs: []
+sourceplaybookid: f0eeae68-ba62-46ae-8945-09e1d2e89c08
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "96"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 73bd07e2-20ab-4721-8b5b-94daf5f5da9b
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 73bd07e2-20ab-4721-8b5b-94daf5f5da9b
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 50
+        }
+      }
+  "3":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Confidence
+                root: ThreatStream.Domain
+          operator: greaterThan
+          right:
+            value:
+              simple: "70"
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Severity
+                root: ThreatStream.Domain
+                transformers:
+                - operator: toUpperCase
+          operator: isEqualString
+          right:
+            value:
+              simple: VERY-HIGH
+        - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Severity
+                root: ThreatStream.Domain
+                transformers:
+                - operator: toUpperCase
+          operator: isEqualString
+          right:
+            value:
+              simple: HIGH
+      label: Confidence more than 70 and high severity
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "98"
+      Confidence more than 70 and high severity:
+      - "97"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e2c53792-242f-44a2-8945-39c0c473c75e
+      iscommand: false
+      name: Check Score on Anomali ThreatStream
+      type: condition
+      version: -1
+    taskid: e2c53792-242f-44a2-8945-39c0c473c75e
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 720
+        }
+      }
+  "30":
+    continueonerrortype: ""
+    id: "30"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 326de573-75e8-4d83-8a83-a8af108fa0e3
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 326de573-75e8-4d83-8a83-a8af108fa0e3
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1070
+        }
+      }
+  "76":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: playbook
+          operator: isEqualString
+          right:
+            value:
+              simple: stop
+      label: Stop
+    continueonerrortype: ""
+    id: "76"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "95"
+      Stop:
+      - "99"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 3cdd16c2-c031-4aa6-80b4-499c3a186666
+      iscommand: false
+      name: Check if playbook has been set to stop
+      type: condition
+      version: -1
+    taskid: 3cdd16c2-c031-4aa6-80b4-499c3a186666
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 370
+        }
+      }
+  "95":
+    continueonerror: true
+    continueonerrortype: ""
+    evidencedata:
+      customfields: {}
+      description:
+        simple: Domain Enrichment
+    id: "95"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      domain:
+        complex:
+          root: inputs.Domain
+      extended_data:
+        simple: "true"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Checks the reputation of a domain.
+      id: 637f7ad2-48d2-40d0-868b-950643069768
+      iscommand: true
+      name: Domain enrichment
+      script: '|||domain'
+      type: regular
+      version: -1
+    taskid: 637f7ad2-48d2-40d0-868b-950643069768
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 545
+        }
+      }
+  "96":
+    continueonerrortype: ""
+    id: "96"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "76"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 4dea36b0-1b53-48e7-81ab-9c110b62654b
+      iscommand: false
+      name: Cust_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_check_process_accept_list
+      playbookName: Wipro_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_check_process_accept_list
+      type: playbook
+      version: -1
+    taskid: 4dea36b0-1b53-48e7-81ab-9c110b62654b
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 195
+        }
+      }
+  "97":
+    continueonerrortype: ""
+    id: "97"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "30"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2f0237c6-5c26-4f52-86ca-22c650236e4a
+      iscommand: false
+      name: Cust_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_high_confidence
+      playbookName: Wipro_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_high_confidence
+      type: playbook
+      version: -1
+    taskid: 2f0237c6-5c26-4f52-86ca-22c650236e4a
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 895
+        }
+      }
+  "98":
+    continueonerrortype: ""
+    id: "98"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "30"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2561a5fb-e7de-4257-82d3-a832e0a636a0
+      iscommand: false
+      name: Cust_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_low_confidence
+      playbookName: Wipro_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_low_confidence
+      type: playbook
+      version: -1
+    taskid: 2561a5fb-e7de-4257-82d3-a832e0a636a0
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 895
+        }
+      }
+  "99":
+    continueonerrortype: ""
+    id: "99"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "30"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |
+        This is a generic playbook which can be used across all other Securonix playbooks where the requirement is:
+        * Closing the incident on XSOAR
+        * Sending an email to the end user/analyst
+      id: efb69d1f-48b3-4e94-8310-adcd6a33fc0d
+      iscommand: false
+      name: Cust_IRC_Securonix_Generic_SendMail_CloseIncident
+      playbookName: Wipro_IRC_Securonix_Generic_SendMail_CloseIncident
+      type: playbook
+      version: -1
+    taskid: efb69d1f-48b3-4e94-8310-adcd6a33fc0d
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 895
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1085,
+        "width": 1240,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
