@@ -1,0 +1,513 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 9ea02440-b1c4-40ff-8ce4-a07275e1fa85
+inputs: []
+name: sub-1
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "13"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2811fa74-3e05-46fb-85ce-51c7543ce3da
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 2811fa74-3e05-46fb-85ce-51c7543ce3da
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 65
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "10"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: コメントの入力が完了したら「Mark Completed」 を押下してください。
+      id: 3b75c532-258f-464f-87cd-c58eae4cb9ef
+      iscommand: false
+      name: コメント（Ana-Comment）を入力してください。
+      type: regular
+      version: -1
+    taskid: 3b75c532-258f-464f-87cd-c58eae4cb9ef
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 225
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      fields:
+        simple: u_asid=${incident.customerid};u_alarm_id=${incident.alarmid};u_alert_detection=${incident.detectiondate};u_sec_important=${incident.anaseverity};u_sec_hostname=${incident.secdevice};u_sec_source_ip=${incident.sourceip};u_sec_dest_ip=${incident.destip};u_sec_alert_detection_rule=${incident.lrrule};u_sec_analysis_comment=${incident.anacomment};u_sec_communication_direction=${incident.direction};u_sec_source_port=${incident.sourceport};u_sec_dest_port=${incident.destport};u_sec_protocol=${incident.protocol};u_short_description=${incident.anasubject}
+      input_display_value:
+        simple: "true"
+      table_name:
+        simple: sn_customerservice_u_sec_incident
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ServiceNow v2
+      description: Creates a new record in the specified ServiceNow table.
+      id: 7c1934e3-673c-4335-8391-0388c669524b
+      iscommand: true
+      name: servicenow-create-record
+      script: ServiceNow v2|||servicenow-create-record
+      type: regular
+      version: -1
+    taskid: 7c1934e3-673c-4335-8391-0388c669524b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1450
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "12"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: ケースの作成が完了したら「Mark Completed」 を押下してください。
+      id: 9253d998-5a4d-43f5-886c-89b3a9aed668
+      iscommand: false
+      name: ServiceNowでケースを作成してください。
+      type: regular
+      version: -1
+    taskid: 9253d998-5a4d-43f5-886c-89b3a9aed668
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1625
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    defaultassigneecomplex: {}
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: 上長へエスカレーションが完了したら「Mark Completed」 を押下してください。
+      id: 3b2586dc-a920-492d-8ea3-46a6f1926685
+      iscommand: false
+      name: エスカレーション
+      type: regular
+      version: -1
+    taskid: 3b2586dc-a920-492d-8ea3-46a6f1926685
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    defaultassigneecomplex: {}
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: 上長へエスカレーションが完了したら「Mark Completed」 を押下してください。
+      id: cfef736b-55ea-46fa-8732-38d8a0fbdcc8
+      iscommand: false
+      name: エスカレーション
+      type: regular
+      version: -1
+    taskid: cfef736b-55ea-46fa-8732-38d8a0fbdcc8
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 50
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: コメントの入力が完了したら「Mark Completed」 を押下してください。
+      id: f9eaafc7-2ca1-49c3-8b87-b514a49281a2
+      iscommand: false
+      name: コメント（Ana-Comment）を入力してください。
+      type: regular
+      version: -1
+    taskid: f9eaafc7-2ca1-49c3-8b87-b514a49281a2
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 152.5,
+          "y": 575
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: 件名の入力が完了したら「Mark Completed」 を押下してください。
+      id: 3f4aa2fb-5d5d-43b9-8a73-50102cc02356
+      iscommand: false
+      name: 件名（Ana-Subject）を入力してください
+      type: regular
+      version: -1
+    taskid: 3f4aa2fb-5d5d-43b9-8a73-50102cc02356
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 750
+        }
+      }
+  "8":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: incident.anasubject
+          operator: isExists
+      label: "yes"
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "11"
+      "yes":
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 33bd8b8a-204c-431b-8352-7be655bd7e2e
+      iscommand: false
+      name: 件名（Ana-Subject）の入力確認
+      type: condition
+      version: -1
+    taskid: 33bd8b8a-204c-431b-8352-7be655bd7e2e
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 925
+        }
+      }
+  "9":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: incident.direction
+          operator: isExists
+      - - left:
+            iscontext: true
+            value:
+              simple: incident.anaseverity
+          operator: isExists
+      - - left:
+            iscontext: true
+            value:
+              simple: incident.anacomment
+          operator: isExists
+      - - left:
+            iscontext: true
+            value:
+              simple: incident.anasubject
+          operator: isExists
+      label: "yes"
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "yes":
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        通信方向、重要度、コメント、件名の何れかが未入力です。
+        入力が完了したら「Mark Completed」 を押下してください。
+      id: 39939795-1fb3-43ee-8e6b-3b941a97b5d5
+      iscommand: false
+      name: 最終チェック
+      type: condition
+      version: -1
+    taskid: 39939795-1fb3-43ee-8e6b-3b941a97b5d5
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1275
+        }
+      }
+  "10":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: incident.anacomment
+          operator: isExists
+      label: "yes"
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "yes":
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: ce71035f-582b-4011-85ed-9c0efa63de8f
+      iscommand: false
+      name: コメント（Ana-Comment）の入力確認
+      type: condition
+      version: -1
+    taskid: ce71035f-582b-4011-85ed-9c0efa63de8f
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 400
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: 件名の入力が完了したら「Mark Completed」 を押下してください。
+      id: 8bff39ac-c657-4ea8-82b9-42fa2ebf9d6d
+      iscommand: false
+      name: 件名（Ana-Subject）を入力してください
+      type: regular
+      version: -1
+    taskid: 8bff39ac-c657-4ea8-82b9-42fa2ebf9d6d
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 377.5,
+          "y": 1100
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: ケースがクローズされたら「Mark Completed」 を押下してください。
+      id: bf76f8ab-f9f1-487a-80dc-d58b5b8f3175
+      iscommand: false
+      name: ServiceNowのケースはクローズされましたか？
+      type: regular
+      version: -1
+    taskid: bf76f8ab-f9f1-487a-80dc-d58b5b8f3175
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1800
+        }
+      }
+  "13":
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: ${test}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 4c2428b9-6090-4a8a-8fc0-e36d488dae61
+      iscommand: false
+      name: print
+      script: Print
+      type: regular
+      version: -1
+    taskid: 4c2428b9-6090-4a8a-8fc0-e36d488dae61
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 225
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1845,
+        "width": 1240,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
