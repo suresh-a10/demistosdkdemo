@@ -1,0 +1,597 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: d697b8b6-ca8e-4242-8eb4-6837d89610bb
+inputs:
+- description: ""
+  key: ""
+  playbookInputQuery:
+    daterange:
+      fromdate: "0001-01-01T00:00:00Z"
+      fromdatelicenseval: "0001-01-01T00:00:00Z"
+      period:
+        by: ""
+        byfrom: ""
+        byto: ""
+        field: ""
+        fromvalue: null
+        tovalue: null
+      todate: "0001-01-01T00:00:00Z"
+    query: type:IP
+    queryEntity: indicators
+    results: null
+    runFromLastJobTime: true
+  required: false
+  value: {}
+- description: ""
+  key: Threat Intel Query
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: type:ip and verdict:Malicious and expirationStatus:active
+name: TIM - UBI Get IP Indicator
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "19"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 11cdda82-d33a-4cfd-8e59-7d8e979af0e7
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 11cdda82-d33a-4cfd-8e59-7d8e979af0e7
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 65
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      entryID:
+        simple: ${File.EntryID}
+      output_data_type:
+        simple: json
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Load the contents of a file into context.
+      id: 9ea93e36-e6cc-42b9-8eaf-5c09c1df8190
+      iscommand: false
+      name: Read the Indicator File
+      script: ReadFile
+      type: regular
+      version: -1
+    taskid: 9ea93e36-e6cc-42b9-8eaf-5c09c1df8190
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 400
+        }
+      }
+  "3":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: FileData
+                transformers:
+                - operator: count
+          operator: lessThanOrEqual
+          right:
+            value:
+              simple: "10000"
+      label: "yes"
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "yes":
+      - "5"
+    note: false
+    quietmode: 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8fec3855-2f0a-4da0-86e1-e5c6c5064d9d
+      iscommand: false
+      name: Check IOCs Numbers < 10000
+      type: condition
+      version: -1
+    taskid: 8fec3855-2f0a-4da0-86e1-e5c6c5064d9d
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 735,
+          "y": 575
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "16"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      key:
+        simple: Counter
+      value:
+        simple: "0"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 414471e7-a8fc-4211-84e3-1abbbac8f064
+      iscommand: false
+      name: Set Counter
+      script: Set
+      type: regular
+      version: -1
+    taskid: 414471e7-a8fc-4211-84e3-1abbbac8f064
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1340,
+          "y": 400
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a3433f74-f288-4105-8615-a4e241592767
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: a3433f74-f288-4105-8615-a4e241592767
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 1100
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 1
+    scriptarguments:
+      limit:
+        simple: "2000000"
+      populateFields:
+        simple: id,type
+      query:
+        simple: ${playbookQuery}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Gets a list of indicator objects and the associated indicator outputs
+        that match the specified query and filters. The results are returned in a
+        structured data file.
+      id: 757be3ad-22a8-4653-856d-54e2451eb9c3
+      iscommand: false
+      name: Get All Indicators into a File
+      script: GetIndicatorsByQuery
+      type: regular
+      version: -1
+    taskid: 757be3ad-22a8-4653-856d-54e2451eb9c3
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 50
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      key:
+        simple: MAX_Count
+      value:
+        complex:
+          root: FileData
+          transformers:
+          - operator: count
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 9690ed50-2765-4bc8-8bf1-d2984c2bf204
+      iscommand: false
+      name: Set MAX_Count
+      script: Set
+      type: regular
+      version: -1
+    taskid: 9690ed50-2765-4bc8-8bf1-d2984c2bf204
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 400
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 1
+    scriptarguments:
+      key:
+        simple: Delete_Count_Error
+      value:
+        simple: "0"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 2a6bb191-3292-412b-843f-646e092fe843
+      iscommand: false
+      name: Set Delete_Count_Error
+      script: Set
+      type: regular
+      version: -1
+    taskid: 2a6bb191-3292-412b-843f-646e092fe843
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 50
+        }
+      }
+  "13":
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 1
+    scriptarguments:
+      key:
+        simple: Delete_Count
+      value:
+        simple: "0"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 1207be1a-e93c-45ee-8460-b1288613c5eb
+      iscommand: false
+      name: Set Delete Count
+      script: Set
+      type: regular
+      version: -1
+    taskid: 1207be1a-e93c-45ee-8460-b1288613c5eb
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1340,
+          "y": 50
+        }
+      }
+  "15":
+    continueonerrortype: ""
+    id: "15"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      forEach: true
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      ID:
+        simple: ${FileData.[].id}
+      IPAddress_Value:
+        simple: ${FileData.[].value}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9778012d-a874-4453-8d8e-c661d62c4151
+      iscommand: false
+      name: TIM - UBI Sub-Palybook Set Field Value for IP Indicator
+      playbookId: 3ff7812f-7ff1-4fbe-80c4-47061c4bf407
+      type: playbook
+      version: -1
+    taskid: 9778012d-a874-4453-8d8e-c661d62c4151
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 925
+        }
+      }
+  "16":
+    continueonerrortype: ""
+    id: "16"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "18"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      key:
+        simple: Fresh-Add_Count
+      value:
+        simple: "0"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 7585f884-16b5-4380-8f27-c049ea354f78
+      iscommand: false
+      name: Set Fresh Add Count
+      script: Set
+      type: regular
+      version: -1
+    taskid: 7585f884-16b5-4380-8f27-c049ea354f78
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1340,
+          "y": 575
+        }
+      }
+  "18":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: ${FileData.[].value}
+          operator: isNotEmpty
+          right:
+            value: {}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${FileData.[].id}
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "18"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "yes":
+      - "15"
+    note: false
+    quietmode: 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 90de0df2-c381-477a-8e1f-189c58b20e3b
+      iscommand: false
+      name: Is Value is Empty?
+      type: condition
+      version: -1
+    taskid: 90de0df2-c381-477a-8e1f-189c58b20e3b
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1022.5,
+          "y": 750
+        }
+      }
+  "19":
+    continueonerrortype: ""
+    id: "19"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      populateFields:
+        simple: id,score,value,ExpirationStatus
+      query:
+        complex:
+          root: inputs.Threat Intel Query
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Gets a list of indicator objects and the associated indicator outputs
+        that match the specified query and filters. The results are returned in a
+        structured data file.
+      id: 8eea3a62-5d4b-4fdd-81bd-b40de0d14458
+      iscommand: false
+      name: Get All Indicators into a File
+      script: GetIndicatorsByQuery
+      type: regular
+      version: -1
+    taskid: 8eea3a62-5d4b-4fdd-81bd-b40de0d14458
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 225
+        }
+      }
+  "20":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: value
+                filters:
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: playbookQuery.indicator_type
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: IP
+                root: playbookQuery
+                transformers:
+                - operator: uniq
+          operator: isNotEmpty
+          right:
+            value: {}
+      label: "yes"
+    continueonerrortype: ""
+    id: "20"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 153dce4e-0102-49d0-8dcb-312ae584cbd8
+      iscommand: false
+      name: Are there IP results?
+      type: condition
+      version: -1
+    taskid: 153dce4e-0102-49d0-8dcb-312ae584cbd8
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1770,
+          "y": 50
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {
+      "3_6_#default#": 0.7
+    },
+    "paper": {
+      "dimensions": {
+        "height": 1115,
+        "width": 2100,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
