@@ -1,0 +1,418 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 2ae9443a-7d05-43e2-8b5b-119755787192
+inputs:
+- description: ""
+  key: mitreid
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: MITREMAPPING
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a7c58c10-80d3-4dea-8688-555841466b9a
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: a7c58c10-80d3-4dea-8688-555841466b9a
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      attack_ids:
+        simple: ${inputs.mitreid}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: MITRE ATT&CK v2
+      description: Gets the Attack Pattern value from the Attack Pattern ID.
+      id: da67cbcf-8b85-4718-8a17-ad4bdcad0905
+      iscommand: true
+      name: ExtractMITREDetails
+      script: MITRE ATT&CK v2|||mitre-get-indicator-name
+      type: regular
+      version: -1
+    taskid: da67cbcf-8b85-4718-8a17-ad4bdcad0905
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 695,
+          "y": 545
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "no":
+      - "4"
+      "yes":
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: ${MITREATTACK.value}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value exists in the context. Will return 'no'
+        for empty empty arrays. To be used mostly with DQ and selectors.
+      id: 85d923da-128b-40a7-8f5d-b52d70531ad7
+      iscommand: false
+      name: Does MITRE ATTACK NAME Exists
+      script: Exists
+      type: condition
+      version: -1
+    taskid: 85d923da-128b-40a7-8f5d-b52d70531ad7
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 695,
+          "y": 720
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      incidentId:
+        simple: ${incident.id}
+      value:
+        simple: ${findresults.value}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.associate.indicator
+      id: ee295d18-0920-42f7-85fc-96715e2c7ee4
+      iscommand: true
+      name: Associate Incident to MITRE ATTACK When Result found in local DB
+      script: Builtin|||associateIndicatorToIncident
+      type: regular
+      version: -1
+    taskid: ee295d18-0920-42f7-85fc-96715e2c7ee4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1070
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: No MITRE ATTACK PATTERN FOUND - change for test
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 9978a849-1f5c-454b-817d-94d2df2e5898
+      iscommand: false
+      name: No MITRE ATTACK PATTERN Found
+      script: Print
+      type: regular
+      version: -1
+    taskid: 9978a849-1f5c-454b-817d-94d2df2e5898
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1070
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 902145ad-d82d-4eb9-84d3-02f831725735
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 902145ad-d82d-4eb9-84d3-02f831725735
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1245
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      execution-timeout:
+        simple: "6"
+      extend-context:
+        simple: findresults.mitreid=CustomFields.mitreid::findresults.value=value
+      query:
+        simple: mitreid=${inputs.mitreid}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.find.indicators
+      id: 3792d431-0f23-4404-8113-569e8dd697e9
+      iscommand: true
+      name: Check if Indicator Exists in DB
+      script: Builtin|||findIndicators
+      type: regular
+      version: -1
+    taskid: 3792d431-0f23-4404-8113-569e8dd697e9
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 195
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "no":
+      - "1"
+      "yes":
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: ${findresults}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value exists in the context. Will return 'no'
+        for empty empty arrays. To be used mostly with DQ and selectors.
+      id: b4585263-ac25-4dac-8777-c884ae925f94
+      iscommand: false
+      name: Does the Indicator Exist ?
+      script: Exists
+      type: condition
+      version: -1
+    taskid: b4585263-ac25-4dac-8777-c884ae925f94
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 370
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      mitreid:
+        simple: ${MITREATTACK.id}
+      value:
+        simple: ${MITREATTACK.value}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.new.indicator
+      id: 91948a1e-bada-4dc8-8398-f569e74bb3fd
+      iscommand: true
+      name: Add the Indicator in the DB
+      script: Builtin|||createNewIndicator
+      type: regular
+      version: -1
+    taskid: 91948a1e-bada-4dc8-8398-f569e74bb3fd
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 895
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+      - "10"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      incidentId:
+        simple: ${incident.id}
+      value:
+        simple: ${MITREATTACK.value}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.associate.indicator
+      id: 898fef0a-32c1-4cbe-88ba-f0cdcdf4070c
+      iscommand: true
+      name: Associate Incident to MITRE ATTACK - When result no found in local DB
+      script: Builtin|||associateIndicatorToIncident
+      type: regular
+      version: -1
+    taskid: 898fef0a-32c1-4cbe-88ba-f0cdcdf4070c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 1070
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e3510d09-374a-43c3-8702-36926c262de8
+      iscommand: false
+      name: 20201010_IncidentAnalysis_main
+      playbookId: ad88f586-31d0-4f59-8e4a-a76a169ed399
+      type: playbook
+      version: -1
+    taskid: e3510d09-374a-43c3-8702-36926c262de8
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 1250
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {
+      "2_4_no": 0.57
+    },
+    "paper": {
+      "dimensions": {
+        "height": 1295,
+        "width": 1240,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
