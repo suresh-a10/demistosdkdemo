@@ -1,0 +1,221 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: c818d465-c037-45be-8fe8-4d2f481b616f
+inputs:
+- description: ""
+  key: host
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: user
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: dest_ip
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: Splunk Query Schedule Search
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c9a74798-634f-4406-87b4-a2097b6370c0
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: c9a74798-634f-4406-87b4-a2097b6370c0
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      command:
+        simple: "!splunk-search query=\"index = notable search_name=\\\"Endpoint -
+          High Or Critical Priority Host With Malware - Rule\\\" \n| table _time,
+          host,user,dest_ip\" earliest_time=-60m latest_time=now event_limit=30 using=SplunkPy_instance_2"
+      cron:
+        simple: '* * * * * *'
+      times:
+        simple: "1"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Schedule a command to run inside the war room at a future time
+        (once or reoccurring)
+      id: f3078b97-d882-4b45-8802-0945c3d778bb
+      iscommand: false
+      name: ScheduleCommand
+      script: ScheduleCommand
+      type: regular
+      version: -1
+    taskid: f3078b97-d882-4b45-8802-0945c3d778bb
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: eb9ed36f-64c0-4e87-86c3-f4a95b33a9d2
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: eb9ed36f-64c0-4e87-86c3-f4a95b33a9d2
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      frequency:
+        simple: "1"
+      key:
+        simple: Splunk.Result.host
+      timeout:
+        simple: "10"
+      value:
+        simple: .+
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This playbook polls a context key to check if a specific value
+        exists.
+      id: 0d3481d0-4e1c-43da-856b-ee3fff7edb31
+      iscommand: false
+      name: Context Polling - Generic
+      playbookId: Context Polling - Generic
+      type: playbook
+      version: -1
+    taskid: 0d3481d0-4e1c-43da-856b-ee3fff7edb31
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 64c20d80-61b1-4a80-8b32-90f2e31fae86
+      iscommand: false
+      name: Playbook to perform rest of task and delete context
+      playbookId: f3846415-b01b-43ac-8530-4255d47e9615
+      type: playbook
+      version: -1
+    taskid: 64c20d80-61b1-4a80-8b32-90f2e31fae86
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 735,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
