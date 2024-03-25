@@ -1,0 +1,547 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 1fefb666-1896-40a5-8771-ef4616cdfba2
+inputs: []
+name: Data collection sample pb
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "10"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 4a2486fb-dbc5-4ca2-82e3-5c40561dd082
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 4a2486fb-dbc5-4ca2-82e3-5c40561dd082
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": -890,
+          "y": 55
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    externalFormUseAuth: true
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: 'Did you enjoy watching Spiderman: No way home?'
+        options: []
+        optionsarg:
+        - simple: "Yes"
+        - simple: "No"
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: singleSelect
+      sender: ""
+      title: SpiderMan Review
+      totalanswers: 0
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: 'Hi please click the link below:'
+      cc:
+        simple: pbaliga@paloaltonetworks.com
+      format: ""
+      methods:
+      - email
+      subject:
+        simple: Spiderman Review Survey
+      timings:
+        completeafterreplies: 2
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: sramesh1@paloaltonetworks.com
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      using:
+        simple: EWSO365_instance_1_copy
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: baa462d0-0ef8-4b81-8006-7da4f125c9df
+      iscommand: false
+      name: Collect data
+      tags:
+      - timerbreach
+      type: collection
+      version: -1
+    taskid: baa462d0-0ef8-4b81-8006-7da4f125c9df
+    timertriggers:
+    - action: start
+      fieldname: datacollectiontimer
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 400
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: ${SpiderMan Review.Answers.0}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 98f802b5-a673-42e0-879f-8fe738aa6e8b
+      iscommand: false
+      name: Print Response
+      script: Print
+      type: regular
+      version: -1
+    taskid: 98f802b5-a673-42e0-879f-8fe738aa6e8b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 575
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: d17fb40f-0f87-41d6-8fb8-056e8788bbd4
+      iscommand: false
+      name: delete context
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: d17fb40f-0f87-41d6-8fb8-056e8788bbd4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 225
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      email:
+        simple: shapatil@paloaltonetworks.com
+      message:
+        simple: hi
+      subject:
+        simple: test email
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Ask a user a question via email and process the reply directly
+        into the investigation.
+      id: 4d018f11-8f68-43f0-8082-c98c170b399c
+      iscommand: false
+      name: send email
+      script: EmailAskUser
+      type: regular
+      version: -1
+    taskid: 4d018f11-8f68-43f0-8082-c98c170b399c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 550,
+          "y": 270
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: sd
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      sender: ""
+      title: sd
+      totalanswers: 0
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: "<!DOCTYPE html>\n<html>\n<body>\n\n<h2>An unordered HTML list</h2>\n\n<ul>\n
+          \ <li>Coffee</li>\n  <li>Tea</li>\n  <li>Milk</li>\n</ul> \n\n${HTMLTag}\n\n\n\n</body>\n</html>"
+      cc: null
+      format: html
+      methods:
+      - email
+      subject:
+        simple: ss
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: shapatil@paloaltonetworks.com
+    note: false
+    quietmode: 0
+    scriptarguments:
+      htmlBody:
+        simple: "<!DOCTYPE html>\n<html>\n<body>\n\n<h2>An unordered HTML list</h2>\n\n<ul>\n
+          \ <li>Coffee</li>\n  <li>Tea</li>\n  <li>Milk</li>\n</ul>  \n\n${incident.details}\n\n</body>\n</html>"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sends an email using Microsoft Graph.
+      id: 2d5ef863-5845-4f20-84f3-53c48cd0565e
+      iscommand: false
+      name: Untitled Task
+      type: collection
+      version: -1
+    taskid: 2d5ef863-5845-4f20-84f3-53c48cd0565e
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": -430,
+          "y": 760
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: ${incident.details}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 0107377d-6871-45b0-81e2-84d2ec6fd362
+      iscommand: false
+      name: fetch details
+      script: Print
+      type: regular
+      version: -1
+    taskid: 0107377d-6871-45b0-81e2-84d2ec6fd362
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -430,
+          "y": 230
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: HTMLTag=.
+      id:
+        simple: ${lastCompletedTaskEntries}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.mdToHTML
+      id: 9ae0eb50-592a-42cc-82ca-52706c1b0305
+      iscommand: true
+      name: convert MD to HTML
+      script: Builtin|||mdToHtml
+      type: regular
+      version: -1
+    taskid: 9ae0eb50-592a-42cc-82ca-52706c1b0305
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -430,
+          "y": 400
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: HTMLTag
+      value:
+        complex:
+          root: HTMLTag
+          transformers:
+          - args:
+              regex:
+                value:
+                  simple: |-
+                    <!DOCTYPE html>
+                    <html>
+              replaceWith: {}
+            operator: replaceMatch
+          - args:
+              regex:
+                value:
+                  simple: |-
+                    </body>
+                    </html>
+              replaceWith: {}
+            operator: replaceMatch
+          - args:
+              regex:
+                value:
+                  simple: \n
+              replaceWith: {}
+            operator: replaceMatch
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: cc3f33ee-8003-4e99-895a-2bd63064c6ed
+      iscommand: false
+      name: set details
+      script: Set
+      type: regular
+      version: -1
+    taskid: cc3f33ee-8003-4e99-895a-2bd63064c6ed
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -430,
+          "y": 560
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: sd
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      sender: ""
+      title: sd
+      totalanswers: 0
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        complex:
+          accessor: details
+          root: incident
+          transformers:
+          - args:
+              regex:
+                value:
+                  simple: \n
+              replaceWith:
+                value:
+                  simple: <br>
+            operator: replaceMatch
+          - args:
+              prefix:
+                value:
+                  simple: "<!DOCTYPE html>\n<html>\n<body>\n\n<h2>An unordered HTML
+                    list</h2>\n\n<ul>\n  <li>Coffee</li>\n  <li>Tea</li>\n  <li>Milk</li>\n</ul>
+                    \n"
+              suffix:
+                value:
+                  simple: |2-
+
+                    </body>
+                    </html>
+            operator: concat
+      cc: null
+      format: html
+      methods:
+      - email
+      subject:
+        simple: ss
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: shapatil@paloaltonetworks.com
+    note: false
+    quietmode: 0
+    scriptarguments:
+      htmlBody:
+        simple: "<!DOCTYPE html>\n<html>\n<body>\n\n<h2>An unordered HTML list</h2>\n\n<ul>\n
+          \ <li>Coffee</li>\n  <li>Tea</li>\n  <li>Milk</li>\n</ul>  \n\n${incident.details}\n\n</body>\n</html>"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sends an email using Microsoft Graph.
+      id: 54b30cd2-556b-4311-8c14-fc0bb5248a86
+      iscommand: false
+      name: task A
+      type: collection
+      version: -1
+    taskid: 54b30cd2-556b-4311-8c14-fc0bb5248a86
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": -890,
+          "y": 225
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 800,
+        "width": 1820,
+        "x": -890,
+        "y": 55
+      }
+    }
+  }
