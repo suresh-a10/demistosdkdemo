@@ -1,0 +1,56 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 5de5c8ea-6f57-46c2-84e0-4580e991013c
+inputs: []
+name: Parseexcel
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0531c477-345a-475d-82b4-f7466a1379c7
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 0531c477-345a-475d-82b4-f7466a1379c7
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 65,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
