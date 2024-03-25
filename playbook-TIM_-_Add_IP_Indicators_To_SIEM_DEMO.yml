@@ -1,0 +1,403 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: 5.5.0
+    itemVersion: 1.0.4
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: |-
+  TIM playbook - This playbook receives indicators from its parent playbook
+    and provides the indicators as inputs for the sub-playbooks that push the indicators
+    to your SIEM.
+id: 01987ea0-aa31-4db8-8cf8-d46080346c57
+inputs:
+- description: ""
+  key: ""
+  playbookInputQuery:
+    daterange:
+      fromdate: "0001-01-01T00:00:00Z"
+      fromdatelicenseval: "0001-01-01T00:00:00Z"
+      period:
+        by: ""
+        byfrom: ""
+        byto: ""
+        field: ""
+        fromvalue: null
+        tovalue: null
+      todate: "0001-01-01T00:00:00Z"
+    query: ""
+    queryEntity: indicators
+    results: null
+    runFromLastJobTime: false
+  required: false
+  value: {}
+name: TIM - Add IP Indicators To SIEM_DEMO
+outputs: []
+quiet: true
+sourceplaybookid: TIM - Add IP Indicators To SIEM
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 4010444f-6037-4abf-8431-b55b0204ed44
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 4010444f-6037-4abf-8431-b55b0204ed44
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": -200
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 5bb73ede-64a5-4e33-882f-caa75c57c073
+      iscommand: false
+      name: QRadar
+      type: title
+      version: -1
+    taskid: 5bb73ede-64a5-4e33-882f-caa75c57c073
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 990,
+          "y": 210
+        }
+      }
+  "3":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isExists
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isEqualString
+          right:
+            value:
+              simple: QRadar v3
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.state
+          operator: isEqualString
+          right:
+            value:
+              simple: active
+      label: "yes"
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "13"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 1836aa72-322e-4fb4-88a0-f2d4e1c3d9d0
+      iscommand: false
+      name: Is Qradar enabled?
+      type: condition
+      version: -1
+    taskid: 1836aa72-322e-4fb4-88a0-f2d4e1c3d9d0
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 990,
+          "y": 360
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 21c74545-65db-46b2-8eb9-0b7ee4792962
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 21c74545-65db-46b2-8eb9-0b7ee4792962
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 780
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a1ba1b0c-b489-4b8a-8d70-9dd7bb05a0cd
+      iscommand: false
+      name: ArcSight
+      type: title
+      version: -1
+    taskid: a1ba1b0c-b489-4b8a-8d70-9dd7bb05a0cd
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": -80,
+          "y": 210
+        }
+      }
+  "6":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isExists
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isEqualString
+          right:
+            value:
+              simple: ArcSight ESM v2
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.state
+          operator: isEqualString
+          right:
+            value:
+              simple: active
+      label: "yes"
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "11"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7907c709-56af-4744-8f75-22bc7403c9f8
+      iscommand: false
+      name: Is ArcSight enabled?
+      type: condition
+      version: -1
+    taskid: 7907c709-56af-4744-8f75-22bc7403c9f8
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": -80,
+          "y": 360
+        }
+      }
+  "9":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: playbookQuery.indicator_type
+          operator: isEqualString
+          right:
+            value:
+              simple: IP
+      label: "yes"
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "5"
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: ea96e15f-7a28-42df-8866-d3d4dc20c17d
+      iscommand: false
+      name: Are there IP results?
+      type: condition
+      version: -1
+    taskid: ea96e15f-7a28-42df-8866-d3d4dc20c17d
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": -50
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 5e65e0ce-658b-44ae-83bb-65ad1fc79241
+      iscommand: false
+      name: TIM - ArcSight Add IP Indicators
+      playbookId: TIM - ArcSight Add IP Indicators
+      type: playbook
+      version: -1
+    taskid: 5e65e0ce-658b-44ae-83bb-65ad1fc79241
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": -170,
+          "y": 610
+        }
+      }
+  "13":
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      QRadarBlackListIPReferenceSetName:
+        simple: TIM_BlackList_IP
+      QRadarWhiteListIPReferenceSetName:
+        simple: TIM_WhiteList_IP
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This playbook queries indicators based on a pre-defined query or
+        results from a parent playbook, and adds the resulting indicators to a QRadar
+        Reference Set. The Reference Set name must be defined in the playbook inputs.
+      id: 291502a9-c0ef-48a9-865b-9d4526dbd7fe
+      iscommand: false
+      name: TIM - QRadar Add IP Indicators_DEMO
+      playbookId: 262b2b2a-37d8-48f8-8525-440e8d42bf21
+      type: playbook
+      version: -1
+    taskid: 291502a9-c0ef-48a9-865b-9d4526dbd7fe
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 1150,
+          "y": 590
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1045,
+        "width": 1700,
+        "x": -170,
+        "y": -200
+      }
+    }
+  }
