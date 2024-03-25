@@ -1,0 +1,314 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: CVE_Eval_Pack
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 7302f2e1-56e3-4337-856e-da0635004378
+inputs:
+- description: ""
+  key: CVE
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: ${UnknownCPEs.CVE}
+name: NewCVE_UnknownCPE_Incident
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7f71b556-931d-402e-82c3-550479021002
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 7f71b556-931d-402e-82c3-550479021002
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: name
+      value:
+        simple: 'Manual Vulnerability Assessment: ${inputs.CVE}'
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 73027056-2d91-43b2-8a7a-4b5bf9598b83
+      iscommand: false
+      name: Set Name
+      script: Set
+      type: regular
+      version: -1
+    taskid: 73027056-2d91-43b2-8a7a-4b5bf9598b83
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "3":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: foundIncidents
+                transformers:
+                - operator: count
+          operator: greaterThan
+          right:
+            value:
+              simple: "0"
+      label: exists
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: foundIncidents
+                transformers:
+                - operator: count
+          operator: isEqualNumber
+          right:
+            value:
+              simple: "0"
+      label: does not exist
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      does not exist:
+      - "5"
+      exists:
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6819f1a8-d3b7-4870-8fec-c3fa3f888b9a
+      iscommand: false
+      name: Exists
+      type: condition
+      version: -1
+    taskid: 6819f1a8-d3b7-4870-8fec-c3fa3f888b9a
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: aac30b21-9987-4e00-8b64-ff0dbb57544e
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: aac30b21-9987-4e00-8b64-ff0dbb57544e
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1070
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      cve:
+        simple: ${inputs.CVE}
+      description:
+        simple: Playbook was unable to automatically determine the applicable CPEs
+          for this CVE
+      name:
+        simple: ${name}
+      type:
+        simple: Vulnerability
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.create.inc
+      id: 61deb7f7-fb64-4628-876f-1f4e17ee0434
+      iscommand: true
+      name: Create Incident
+      script: Builtin|||createNewIncident
+      type: regular
+      version: -1
+    taskid: 61deb7f7-fb64-4628-876f-1f4e17ee0434
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 895
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      query:
+        simple: name="${name}"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Searches Demisto incidents.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: c1697ab4-a6f1-437c-80bd-39f09f777d08
+      iscommand: false
+      name: Search Incidents
+      script: SearchIncidentsV2
+      type: regular
+      version: -1
+    taskid: c1697ab4-a6f1-437c-80bd-39f09f777d08
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "no"
+      key:
+        simple: foundIncidents
+      subplaybook:
+        simple: auto
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 6b7e7fea-1e35-4321-82bd-323fe04eb1f2
+      iscommand: false
+      name: Delete Existing Found Incidents
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: 6b7e7fea-1e35-4321-82bd-323fe04eb1f2
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1085,
+        "width": 492.5,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
