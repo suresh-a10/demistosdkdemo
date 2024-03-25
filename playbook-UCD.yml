@@ -1,0 +1,310 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 42b0a515-f790-4e50-86de-736cb0bdc444
+inputs: []
+name: UCD
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 564c37b1-23e9-4801-8848-0c10ce250995
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 564c37b1-23e9-4801-8848-0c10ce250995
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: da17b8b1-6ca3-4893-8487-c00897ae57eb
+      iscommand: false
+      name: Extract IOCs
+      type: regular
+      version: -1
+    taskid: da17b8b1-6ca3-4893-8487-c00897ae57eb
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      left:
+        simple: 10.0.0.0
+      right:
+        simple: 10.0.10.255
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        checks if left side is in range of right side (from,to anotation)
+        e.g. - InRange left=4right=1,8 will return true.
+      id: 09a76f1d-de21-410b-8388-ce0b1854db11
+      iscommand: false
+      name: Exclude any Internal IP or Host
+      script: InRange
+      type: regular
+      version: -1
+    taskid: 09a76f1d-de21-410b-8388-ce0b1854db11
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "no":
+      - "5"
+      "yes":
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: ${IP}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value exists in the context. Will return 'no'
+        for empty empty arrays. To be used mostly with DQ and selectors.
+      id: f36a77fb-2029-43a5-8077-36cb768b55a6
+      iscommand: false
+      name: Is IP Present
+      script: Exists
+      type: condition
+      version: -1
+    taskid: f36a77fb-2029-43a5-8077-36cb768b55a6
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": -100,
+          "y": 570
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      ip:
+        simple: ${IP}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Provides data enrichment for ips.
+      id: 58a012cd-c7d8-4050-8558-4187c95ed30a
+      iscommand: true
+      name: IP Reputation Check
+      script: '|||ip'
+      type: regular
+      version: -1
+    taskid: 58a012cd-c7d8-4050-8558-4187c95ed30a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -280,
+          "y": 770
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      closeReason:
+        simple: No IP Present
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.close.inv
+      id: b6c49e0d-705d-4170-8f74-5a8f563facd5
+      iscommand: true
+      name: End Investigation
+      script: Builtin|||closeInvestigation
+      type: regular
+      version: -1
+    taskid: b6c49e0d-705d-4170-8f74-5a8f563facd5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 130,
+          "y": 1030
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      url:
+        simple: ${URL}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Checks the reputation of a URL.
+      id: 28e7bcf1-ae00-4964-86c1-7d655f9ed457
+      iscommand: true
+      name: Check If URL is present
+      script: '|||url'
+      type: regular
+      version: -1
+    taskid: 28e7bcf1-ae00-4964-86c1-7d655f9ed457
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 440,
+          "y": 590
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      htmlBody:
+        simple: |-
+          Hi,
+
+
+          This email has ${IP(val.Malicious).Address}. This needs to be blocked
+
+
+
+
+          ${URL}${URL.Malicious.Vendor}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sends an email.
+      id: cc8a17c7-28ef-4806-86d9-bfaadde6add9
+      iscommand: true
+      name: Untitled Task
+      script: '|||send-mail'
+      type: regular
+      version: -1
+    taskid: cc8a17c7-28ef-4806-86d9-bfaadde6add9
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 440,
+          "y": 820
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1075,
+        "width": 1100,
+        "x": -280,
+        "y": 50
+      }
+    }
+  }
