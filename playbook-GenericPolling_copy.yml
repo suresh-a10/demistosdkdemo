@@ -1,0 +1,307 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: 5.0.0
+    itemVersion: 2.2.4
+    packID: ""
+    packName: Common Playbooks
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: |-
+  Use this playbook as a sub-playbook to block execution of the master playbook until a remote action is complete.
+  This playbook implements polling by continuously running the command in Step \#2 until the operation completes.
+  The remote action should have the following structure:
+
+  1. Initiate the operation.
+  2. Poll to check if the operation completed.
+  3. (optional) Get the results of the operation.
+id: 9c62c355-c50b-439c-8a1d-32945192497b
+inputs:
+- description: List of IDs to poll
+  key: Ids
+  playbookInputQuery: null
+  required: true
+  value: {}
+- description: Name of the polling command to run
+  key: PollingCommandName
+  playbookInputQuery: null
+  required: true
+  value: {}
+- description: Argument name of the polling command.
+  key: PollingCommandArgName
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: ids
+- description: Frequency that the polling command will run (minutes).
+  key: Interval
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: "1"
+- description: Amount of time to poll before declaring a timeout and resuming the
+    playbook (in minutes).
+  key: Timeout
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: "10"
+- description: 'DT filter for polling IDs. Polling will stop when no results are returned.
+    Use single quotes, for example: WildFire.Report(val.Status!==''Success'').SHA256.'
+  key: dt
+  playbookInputQuery: null
+  required: true
+  value: {}
+- description: 'Names of additional arguments for the polling command, for example:
+    (arg1,arg2,...).'
+  key: AdditionalPollingCommandArgNames
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: 'Values of the additional arguments for the polling command, for example:
+    (value1,value2,...).'
+  key: AdditionalPollingCommandArgValues
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: GenericPolling_copy
+outputs: []
+sourceplaybookid: GenericPolling
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: '-'
+      id: 36c44b47-b8e3-4fd8-8d8b-0e2fdce68094
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 36c44b47-b8e3-4fd8-8d8b-0e2fdce68094
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      additionalPollingCommandArgNames:
+        simple: ${inputs.AdditionalPollingCommandArgNames}
+      additionalPollingCommandArgValues:
+        simple: ${inputs.AdditionalPollingCommandArgValues}
+      dt:
+        simple: ${inputs.dt}
+      ids:
+        simple: ${inputs.Ids}
+      interval:
+        simple: ${inputs.Interval}
+      playbookId:
+        simple: ${currentPlaybookID}
+      pollingCommand:
+        simple: ${inputs.PollingCommandName}
+      pollingCommandArgName:
+        simple: ${inputs.PollingCommandArgName}
+      timeout:
+        simple: ${inputs.Timeout}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Schedule Polling Task
+      id: e390a230-c9f4-4a76-8083-e42116938d79
+      iscommand: false
+      name: Schedule Polling Task
+      script: ScheduleGenericPolling
+      type: regular
+      version: -1
+    taskid: e390a230-c9f4-4a76-8083-e42116938d79
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "YES":
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This task will complete automatically when polling is complete.
+      id: 720f8cd2-81fa-443d-8f54-3e93c58e79f4
+      iscommand: false
+      name: Waiting for polling to complete (Automated Task)
+      tags:
+      - polling
+      type: condition
+      version: -1
+    taskid: 720f8cd2-81fa-443d-8f54-3e93c58e79f4
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      additionalPollingCommandArgNames:
+        simple: ${inputs.AdditionalPollingCommandArgNames}
+      additionalPollingCommandArgValues:
+        simple: ${inputs.AdditionalPollingCommandArgValues}
+      ids:
+        simple: ${inputs.Ids}
+      pollingCommand:
+        simple: ${inputs.PollingCommandName}
+      pollingCommandArgName:
+        simple: ${inputs.PollingCommandArgName}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: RunPollingCommand
+      id: 7c69bd67-e53b-41d5-8637-6bd1c49f95e7
+      iscommand: false
+      name: RunPollingCommand
+      script: RunPollingCommand
+      type: regular
+      version: -1
+    taskid: 7c69bd67-e53b-41d5-8637-6bd1c49f95e7
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Done
+      id: c02cd32f-8555-4b45-881b-6917af4d064c
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: c02cd32f-8555-4b45-881b-6917af4d064c
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": -170,
+          "y": 740
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      message:
+        simple: GenericPollingScheduledTask encountered an error.
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Scheduled Task Failed
+      id: e4e0bc93-43fe-4507-84e3-b884df35410f
+      iscommand: false
+      name: Scheduled Task Failed
+      script: PrintErrorEntry
+      type: regular
+      version: -1
+    taskid: e4e0bc93-43fe-4507-84e3-b884df35410f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 280,
+          "y": 725
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {
+      "2_5_YES": 0.48
+    },
+    "paper": {
+      "dimensions": {
+        "height": 770,
+        "width": 830,
+        "x": -170,
+        "y": 50
+      }
+    }
+  }
