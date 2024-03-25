@@ -1,0 +1,417 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: a9314178-d928-4008-89c3-c96311128390
+inputs:
+- description: ""
+  key: name
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: closedtime
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: assigneduser
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: PostIncidentReportPlaybook
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: dd7f6570-8897-49c8-8d22-6bbce0ac21f9
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: dd7f6570-8897-49c8-8d22-6bbce0ac21f9
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Summary of the Incident
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: longText
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "1"
+        label: ""
+        labelarg:
+          simple: Affected Resources in the Incident
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: longText
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "2"
+        label: ""
+        labelarg:
+          simple: Impact due to the incident
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "3"
+        label: ""
+        labelarg:
+          simple: Root Cause of the incident
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "4"
+        label: ""
+        labelarg:
+          simple: Lessons Learned from this Incident
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "5"
+        label: ""
+        labelarg:
+          simple: Planned Actions from the Incident
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: longText
+      sender: ""
+      title: Post Incident Report
+      totalanswers: 0
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: Please fill in the PIR
+      cc: null
+      format: ""
+      methods:
+      - email
+      subject:
+        simple: Please fill in the Data for Post Incident Report
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: sramesh1@paloaltonetworks.com
+    nexttasks:
+      '#none#':
+      - "2"
+    note: true
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9cccb0ba-46f4-4980-88f5-3e5ae6894d7e
+      iscommand: false
+      name: Post Incident Report Data Collection
+      type: collection
+      version: -1
+    taskid: 9cccb0ba-46f4-4980-88f5-3e5ae6894d7e
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      body:
+        simple: "Hi, \n\n\nHere is the PIR for your reference\n\n\n\nRegards,\nSrikanth
+          Ramesh"
+      subject:
+        simple: Post Incident Report for Incident ID ${incident.id}
+      to:
+        simple: sramesh1@paloaltonetworks.com
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sends an email using EWS.
+      id: be582726-6bca-4555-8696-e8348c10fa34
+      iscommand: true
+      name: Send Post Incident Report Data to Stakeholders
+      script: '|||send-mail'
+      type: regular
+      version: -1
+    taskid: be582726-6bca-4555-8696-e8348c10fa34
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      id:
+        complex:
+          accessor: id
+          root: incident
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.close.inv
+      id: 6aa27425-ab5b-444a-8c45-9d8f45782002
+      iscommand: true
+      name: Close Main Incident
+      script: Builtin|||closeInvestigation
+      type: regular
+      version: -1
+    taskid: 6aa27425-ab5b-444a-8c45-9d8f45782002
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1070
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: Are there any actions to be Tracked from this incident
+      cc: null
+      format: ""
+      methods: []
+      replyOptions:
+      - "Yes"
+      - "No"
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    nexttasks:
+      "No":
+      - "3"
+      "Yes":
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8ea28727-ef33-433b-87dc-c708c08c66a4
+      iscommand: false
+      name: Are there any actions to be Tracked from this incident
+      type: condition
+      version: -1
+    taskid: 8ea28727-ef33-433b-87dc-c708c08c66a4
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: What is the Planned Action Status
+      cc: null
+      format: ""
+      methods: []
+      replyOptions:
+      - Pending
+      - Completed
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    nexttasks:
+      Completed:
+      - "3"
+      Pending:
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 58d1e6ec-4d26-44e4-8817-7d58e56d9e9f
+      iscommand: false
+      name: Planned Action Status
+      type: condition
+      version: -1
+    taskid: 58d1e6ec-4d26-44e4-8817-7d58e56d9e9f
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 720
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: cc34c954-a1e4-47c5-8b46-4f460b4da4c4
+      iscommand: false
+      name: Close this task after completion of Planned activities
+      type: regular
+      version: -1
+    taskid: cc34c954-a1e4-47c5-8b46-4f460b4da4c4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 275,
+          "y": 895
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1115,
+        "width": 605,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
