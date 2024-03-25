@@ -1,0 +1,127 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 873ff358-c7b0-46c3-8618-65236fcc0b90
+inputs: []
+name: sample playbook
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c393e13d-01cd-4104-8958-f231e843ea3a
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: c393e13d-01cd-4104-8958-f231e843ea3a
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 710,
+          "y": -50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      value:
+        simple: Hi
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 00ebe004-b867-493c-870c-23993cf060e8
+      iscommand: false
+      name: task A
+      script: Print
+      type: regular
+      version: -1
+    taskid: 00ebe004-b867-493c-870c-23993cf060e8
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 710,
+          "y": 130
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    scriptarguments:
+      value:
+        simple: hello
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 7df215d3-1db8-4f5f-8976-55054a8bdf72
+      iscommand: false
+      name: task B
+      script: Print
+      type: regular
+      version: -1
+    taskid: 7df215d3-1db8-4f5f-8976-55054a8bdf72
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 710,
+          "y": 310
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 455,
+        "width": 380,
+        "x": 710,
+        "y": -50
+      }
+    }
+  }
