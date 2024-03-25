@@ -1,0 +1,182 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: b02c12a7-d245-4a69-8384-98bad7e1e09c
+inputs: []
+name: Test Timer Playbook
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: aa879ac9-a244-42b0-8172-7af02eec213b
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: aa879ac9-a244-42b0-8172-7af02eec213b
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a33a29b8-3b4b-46cf-83f8-74d0ca43d4f6
+      iscommand: false
+      name: IOC Enrichment
+      type: regular
+      version: -1
+    taskid: a33a29b8-3b4b-46cf-83f8-74d0ca43d4f6
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 230
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0b6024d2-8081-44df-8759-8a12e5861e0d
+      iscommand: false
+      name: Start the Time to Assignment Timer
+      type: title
+      version: -1
+    taskid: 0b6024d2-8081-44df-8759-8a12e5861e0d
+    timertriggers:
+    - action: start
+      fieldname: timetoassignment
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 400
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: aebc1e95-5960-402e-8e29-8b384484cb20
+      iscommand: false
+      name: IncidentAssignmentPlaybook
+      playbookId: 331860d6-7724-43e5-87c5-83c137e6a03b
+      type: playbook
+      version: -1
+    taskid: aebc1e95-5960-402e-8e29-8b384484cb20
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 560
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e3b4df29-8ffe-4a53-83da-bbb29c030ad7
+      iscommand: false
+      name: Stop Time to Assignement
+      type: title
+      version: -1
+    taskid: e3b4df29-8ffe-4a53-83da-bbb29c030ad7
+    timertriggers:
+    - action: stop
+      fieldname: timetoassignment
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 720
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 735,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
