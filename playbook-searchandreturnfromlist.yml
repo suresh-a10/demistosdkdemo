@@ -1,0 +1,175 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: dc91779f-a222-422a-81d8-d26add94c501
+inputs: []
+name: searchandreturnfromlist
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 89c7c447-b4be-46e6-840c-a3106d77f14f
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 89c7c447-b4be-46e6-840c-a3106d77f14f
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: searchkey
+      value:
+        simple: sri
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 124dece2-86f1-447c-8952-961975fb89fe
+      iscommand: false
+      name: Set search key
+      script: Set
+      type: regular
+      version: -1
+    taskid: 124dece2-86f1-447c-8952-961975fb89fe
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      header:
+        simple: user
+      list_name:
+        simple: assetlist
+      list_separator:
+        simple: |2+
+
+      value:
+        simple: sri
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Parses a list by header and value.
+      id: 00757f13-7063-4962-86a8-facd19a0703c
+      iscommand: false
+      name: Search and return from list
+      script: GetListRow
+      type: regular
+      version: -1
+    taskid: 00757f13-7063-4962-86a8-facd19a0703c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: searchkey
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: ca178e03-4607-4b28-82ea-cda63ca8c3c8
+      iscommand: false
+      name: delete searchkey if it exists
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: ca178e03-4607-4b28-82ea-cda63ca8c3c8
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 590,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
