@@ -1,0 +1,227 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 60f5fe17-b87a-4ecb-8e97-e53a34ac5dcc
+inputs: []
+name: kcd_sleep_task_20240112
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "12"
+      - "13"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: f58f5226-a706-4e25-8c59-c66e932c6e17
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: f58f5226-a706-4e25-8c59-c66e932c6e17
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": -690
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      id:
+        simple: taskcomplete
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.task.complete
+      id: 986021d3-d7b3-49a9-87e8-ebef7edca7ec
+      iscommand: true
+      name: complete_task
+      script: Builtin|||taskComplete
+      type: regular
+      version: -1
+    taskid: 986021d3-d7b3-49a9-87e8-ebef7edca7ec
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 330,
+          "y": -350
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: kcd_sleep_automation
+      id: 682b8117-9a03-4e79-88f6-0888dfeb979e
+      iscommand: false
+      name: Sleep task
+      script: e18fd371-8235-482f-8f54-49bbec266cf7
+      tags:
+      - timeout
+      type: regular
+      version: -1
+    taskid: 682b8117-9a03-4e79-88f6-0888dfeb979e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -590,
+          "y": -890
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "10"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      seconds:
+        simple: "60"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sleep for X seconds
+      id: dcd5ac4d-6d8d-44b7-808b-7cb711d4f925
+      iscommand: false
+      name: temporary task
+      script: Sleep
+      type: regular
+      version: -1
+    taskid: dcd5ac4d-6d8d-44b7-808b-7cb711d4f925
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 330,
+          "y": -520
+        }
+      }
+  "13":
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "14"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      seconds:
+        simple: "300"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sleep for X seconds.
+      id: cd6c2691-bff1-4d7f-8249-2ee16b690b66
+      iscommand: false
+      name: Sleep
+      script: Sleep
+      tags:
+      - taskcomplete
+      type: regular
+      version: -1
+    taskid: cd6c2691-bff1-4d7f-8249-2ee16b690b66
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -210,
+          "y": -530
+        }
+      }
+  "14":
+    continueonerrortype: ""
+    id: "14"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "Yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 5b8aad01-b613-454e-8e4f-0aa509fec434
+      iscommand: false
+      name: Print Yes
+      script: Print
+      type: regular
+      version: -1
+    taskid: 5b8aad01-b613-454e-8e4f-0aa509fec434
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -210,
+          "y": -350
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 635,
+        "width": 1300,
+        "x": -590,
+        "y": -890
+      }
+    }
+  }
