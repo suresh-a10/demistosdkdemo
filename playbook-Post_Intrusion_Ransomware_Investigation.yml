@@ -1,0 +1,2057 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: 6.0.0
+    itemVersion: 1.0.6
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: |+
+  Provides the first step in the investigation of ransomware attacks.
+   The playbook requires the ransom note and an example of an encrypted file (<1MB) to try to identify the ransomware and find a recovery tool via the online database.
+   You will be guided with further investigation steps throughout the playbook, some of the key features are:
+
+  - Encrypted file owner investigation
+   - Endpoint forensic investigation
+   - Active Directory investigation
+   - Timeline of the breach investigation
+   - Indicator and account enrichment
+
+  Playbook settings and mapping:
+   For the full operation of the playbook, the following data should be mapped to the relevant incident fields.
+   Username - Usernames (common incident field)
+   Hostname - Hostnames (common incident field)
+
+
+
+id: a98e9653-1c52-433d-8272-20bff6aa70df
+inputs:
+- description: "Determines whether to perform auto-isolation and remediation for the
+    infected endpoint and indicators.\nValues:\n- True\n- False. This is the default. "
+  key: AutoRemediation
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: "True"
+- description: |-
+    The email addresses to notify if there is a possibility of the malware spreading and infecting other endpoints.
+    Can be a CSV list.
+  key: NotificationEmail
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: sramesh1@paloaltonetworks.com
+- description: The malware notification message content.
+  key: EmailBody
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: |-
+      During an endpoint investigation in XSOAR, other infected endpoints were found, indicating the malware is spreading in your organization and requires your attention.
+      To get more information, go to this incident in XSOAR: ${incident.id}.
+name: 'Post Intrusion Ransomware Investigation '
+outputs: []
+sourceplaybookid: Post Intrusion Ransomware Investigation
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 329e0ce4-c872-49fe-8d87-cf449155d9ab
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 329e0ce4-c872-49fe-8d87-cf449155d9ab
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 275,
+          "y": 50
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "66"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 4c547a58-af2b-4ef1-873e-1c7830d79b08
+      iscommand: false
+      name: Identification
+      type: title
+      version: -1
+    taskid: 4c547a58-af2b-4ef1-873e-1c7830d79b08
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 275,
+          "y": 195
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "104"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: "Ransomware creates unique files that can help identify the ransomware
+        strain that you are dealing with. \nSome of the special features that we can
+        look for are: \n1. File extension of the encrypted files created by the ransomware
+        strain.\n2. Special attributes, such as HEX characters.\n3. Ransomware notes
+        can contain several indicators, such as BTC wallets, email addresses, or URLs/onion
+        links to communicate with the attackers.\nMake sure to retrieve the following
+        files as they will be required for further investigation in this playbook:\n1.
+        Ransom note: \nText or HTML file. The file will usually be located on the
+        desktop or in other main folders like c:\\, program files, temp, etc.\nIn
+        case of an HTML file, it can be located by the path in the address bar.\n2.Any
+        encrypted file <1MB. \n3. Other suspicious files that are visible and can
+        be related to the incident.\nNote: Keep in mind that you can use XSOAR CLI
+        to run commands in the context of the incident on enabled integrations to
+        assist in this task. "
+      id: b723a5f0-d5d4-4a86-89b2-212b17d9d3da
+      iscommand: false
+      name: Upload ransomware files
+      type: regular
+      version: -1
+    taskid: b723a5f0-d5d4-4a86-89b2-212b17d9d3da
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 1215
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    form:
+      description: Ransomware Enrichment
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Ransomware Strain
+        options: []
+        optionsarg: []
+        placeholder: Ryuk (or leave empty if not identified)
+        readonly: false
+        required: false
+        tooltip: 'Result of the enrichment from ID-Ransomware '
+        type: shortText
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "1"
+        label: ""
+        labelarg:
+          simple: Was a recovery tool found?
+        options:
+        - Not Available
+        - Available
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: Result of the enrichment from ID-Ransomware
+        type: singleSelect
+      sender: ""
+      title: Ransomware Enrichment
+      totalanswers: 0
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: Enrich the ransomware according to the task details and update the
+          results
+      cc: null
+      format: ""
+      methods: []
+      subject:
+        simple: Ransomware Enrichment
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: false
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: Analyst
+    nexttasks:
+      '#none#':
+      - "99"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: "For enrichment, it is recommended to use the community ransomware
+        identification service: \nhttps://id-ransomware.malwarehunterteam.com/ made
+        by malware hunter team.\nThis free service can identify more than 1,000 strains
+        of ransomware (and expanding every day) and may provide a tool or further
+        assistance to decrypt the files, depending on the ransomware strain you're
+        dealing with.\nAs requested in the previous steps, you can upload the following
+        files to try to identify the ransomware strain:\n1. Ransom note.\n2. Encrypted
+        file <1MB. \n3. Email address or links. \nPlease refer to the service FAQ
+        to understand the terms of service and the confidentiality of the uploaded
+        data."
+      id: 7ecb986c-4a5b-4461-8712-c5e85020226a
+      iscommand: false
+      name: Ransomware enrichment
+      type: collection
+      version: -1
+    taskid: 7ecb986c-4a5b-4461-8712-c5e85020226a
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 2615
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "12"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      body:
+        complex:
+          root: inputs.EmailBody
+      subject:
+        simple: Ransomware attack is spreading in the organization
+      to:
+        complex:
+          root: inputs.NotificationEmail
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sends an email using EWS.
+      id: 0fdda565-47d1-4063-8ae1-6afc8cb3f486
+      iscommand: true
+      name: Send ransomware notification to relevant stakeholders
+      script: '|||send-mail'
+      type: regular
+      version: -1
+    taskid: 0fdda565-47d1-4063-8ae1-6afc8cb3f486
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 275,
+          "y": 3315
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "64"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 18252ea1-d1f1-4660-828b-d21f5d1071c5
+      iscommand: false
+      name: Investigation
+      type: title
+      version: -1
+    taskid: 18252ea1-d1f1-4660-828b-d21f5d1071c5
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 3490
+        }
+      }
+  "13":
+    continueonerrortype: ""
+    form:
+      description: Retrieve and update the owner of the encrypted file.
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Who is the file owner?
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: 'The owner of the encrypted files can provide an indication of a
+          user or the source user who encrypts the files across the domain. This action
+          can help to determine the following: 1. User/account which have been compromised
+          by the attacker and is responsible for the encryption 2. Level of the privileges
+          the attacker was able to compromise. 3. Indicates a source endpoint to further
+          investigate. To verify file ownership on windows OS, right click on one
+          of the encrypted files, under security tab click advanced. in the popup
+          window you will able to see the file owner on the top left corner.'
+        type: shortText
+      sender: ""
+      title: Ransomware file owner investigation
+      totalanswers: 0
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: Retrieve and update encrypted file owner
+      cc: null
+      format: ""
+      methods: []
+      subject:
+        simple: Ransomware file owner investigation
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: false
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: Analyst
+    nexttasks:
+      '#none#':
+      - "88"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: "The owner of encrypted files can provide an indication of a user
+        whose activity should be investigated. This user may have encrypted the files
+        across the domain. \nThis action can help to determine the following:\n1.
+        User/account that have been compromised by the attacker and responsible for
+        the encryption. \n2. The level of the privileges the attacker was able to
+        compromise.\n3. Indication of a source endpoint to investigate further.\n\nVerify
+        file ownership on Windows OS by right-clicking one of the encrypted files
+        > Security tab > Advanced. In the pop-up window you will see the file owner
+        in the top left corner.\n"
+      id: c8d35aae-16b8-4418-8eef-d1e92317fc83
+      iscommand: false
+      name: File owner investigation
+      type: collection
+      version: -1
+    taskid: c8d35aae-16b8-4418-8eef-d1e92317fc83
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 3810
+        }
+      }
+  "15":
+    continueonerrortype: ""
+    id: "15"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "107"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7b9149a9-a413-4a00-8f90-e27e359e0f0f
+      iscommand: false
+      name: Detonate File - Generic
+      playbookId: Detonate File - Generic
+      type: playbook
+      version: -1
+    taskid: 7b9149a9-a413-4a00-8f90-e27e359e0f0f
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 612.5,
+          "y": 2790
+        }
+      }
+  "29":
+    continueonerrortype: ""
+    id: "29"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "38"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |
+        If a recovery tool was found, it is recommended to test it prior to using it on all of the encrypted files.
+        Test the tool on a low-impact endpoint to verify that it can decrypt the data without causing permanent data loss of the encrypted files.
+        If the tool decrypted the files successfully, make sure to deploy the tool only after applying all the necessary countermeasures to clean everything related to the breach from your environment.
+      id: 3920ef1f-f2be-4bd8-8b8b-955a1e8846af
+      iscommand: false
+      name: Test the ransomware recovery tool.
+      type: regular
+      version: -1
+    taskid: 3920ef1f-f2be-4bd8-8b8b-955a1e8846af
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 275,
+          "y": 5385
+        }
+      }
+  "38":
+    continueonerrortype: ""
+    id: "38"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "103"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 855da553-13dc-47e9-8d00-58086e703604
+      iscommand: false
+      name: 'Containment '
+      type: title
+      version: -1
+    taskid: 855da553-13dc-47e9-8d00-58086e703604
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 5560
+        }
+      }
+  "42":
+    continueonerrortype: ""
+    fieldMapping:
+    - incidentfield: Note
+      output:
+        complex:
+          root: FileData
+    id: "42"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "90"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: File.Extension
+              operator: isEqualString
+              right:
+                value:
+                  simple: txt
+            - left:
+                iscontext: true
+                value:
+                  simple: File.Extension
+              operator: isEqualString
+              right:
+                value:
+                  simple: html
+          root: File
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Load the content of a file into context.
+      id: 4b4883a0-2a19-486b-808a-1bfd823b9d9b
+      iscommand: false
+      name: Read ransom note
+      script: ReadFile
+      type: regular
+      version: -1
+    taskid: 4b4883a0-2a19-486b-808a-1bfd823b9d9b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 1565
+        }
+      }
+  "50":
+    continueonerrortype: ""
+    id: "50"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "86"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Detonate the file using active integrations that support file detonation.
+      id: b0ba3cae-1aa3-465f-80db-99d437a3e0f3
+      iscommand: false
+      name: Detonate File - Generic
+      playbookId: Detonate File - Generic
+      type: playbook
+      version: -1
+    taskid: b0ba3cae-1aa3-465f-80db-99d437a3e0f3
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 5035
+        }
+      }
+  "52":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: "0"
+                root: Endpoint Forensics Data Collection.Answers
+          operator: isEqualString
+          right:
+            value:
+              simple: "Yes"
+      label: "yes"
+    continueonerrortype: ""
+    id: "52"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "86"
+      "yes":
+      - "50"
+      - "108"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7b52dc4d-e46d-4dc6-8920-b8e7bb9b78ae
+      iscommand: false
+      name: Were binary files retrieved?
+      type: condition
+      version: -1
+    taskid: 7b52dc4d-e46d-4dc6-8920-b8e7bb9b78ae
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 4860
+        }
+      }
+  "62":
+    continueonerrortype: ""
+    id: "62"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2ba11901-804b-4ac2-8688-dfff4cd38df2
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 2ba11901-804b-4ac2-8688-dfff4cd38df2
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 6230
+        }
+      }
+  "64":
+    continueonerrortype: ""
+    id: "64"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "13"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Fetches incidents that are related/close to the given incident.
+      id: c484cfdf-4d06-4aa5-8834-2bcfb82d006e
+      iscommand: true
+      name: Fetch related incidents
+      script: Builtin|||relatedIncidents
+      type: regular
+      version: -1
+    taskid: c484cfdf-4d06-4aa5-8834-2bcfb82d006e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 3635
+        }
+      }
+  "65":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: inputs.AutoRemediation
+          operator: isEqualString
+          right:
+            value:
+              simple: "True"
+      label: "True"
+    continueonerrortype: ""
+    id: "65"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "True":
+      - "82"
+      - "111"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: d52b75d3-e06e-4704-856a-65a7f295c02e
+      iscommand: false
+      name: Auto Remediation?
+      type: condition
+      version: -1
+    taskid: d52b75d3-e06e-4704-856a-65a7f295c02e
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 275,
+          "y": 690
+        }
+      }
+  "66":
+    continueonerrortype: ""
+    id: "66"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "67"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      Hostname:
+        complex:
+          accessor: hostnames
+          root: incident
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Enrich an endpoint by hostname using one or more integrations.
+        Supported integrations:
+        - Active Directory Query v2
+        - McAfee ePolicy Orchestrator
+        - Carbon Black Enterprise Response v2
+        - Cylance Protect v2
+        - CrowdStrike Falcon Host
+        - ExtraHop Reveal(x)
+      id: 28583b4f-9d68-4af2-8908-8d7559ee38e2
+      iscommand: false
+      name: Endpoint Enrichment - Generic v2.1
+      playbookId: Endpoint Enrichment - Generic v2.1
+      type: playbook
+      version: -1
+    taskid: 28583b4f-9d68-4af2-8908-8d7559ee38e2
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 275,
+          "y": 340
+        }
+      }
+  "67":
+    continueonerrortype: ""
+    id: "67"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "65"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      Username:
+        complex:
+          accessor: usernames
+          root: incident
+          transformers:
+          - operator: uniq
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Enrich accounts using one or more integrations.
+        Supported integrations:
+        - Active Directory
+      id: c066ddab-dd44-4856-875a-6d5425944de7
+      iscommand: false
+      name: Account Enrichment - Generic v2.1
+      playbookId: Account Enrichment - Generic v2.1
+      type: playbook
+      version: -1
+    taskid: c066ddab-dd44-4856-875a-6d5425944de7
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 275,
+          "y": 515
+        }
+      }
+  "68":
+    continueonerrortype: ""
+    id: "68"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      username:
+        complex:
+          accessor: users
+          root: incident
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Active Directory Query v2
+      description: Disables an Active Directory user account.
+      id: c0b4b2a9-8676-48f1-8b7d-588462941f5b
+      iscommand: true
+      name: 'Active Directory - disable user account '
+      script: Active Directory Query v2|||ad-disable-account
+      type: regular
+      version: -1
+    taskid: c0b4b2a9-8676-48f1-8b7d-588462941f5b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 500,
+          "y": 1040
+        }
+      }
+  "77":
+    continueonerrortype: ""
+    id: "77"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "83"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: true
+    task:
+      brand: ""
+      description: |-
+        Active Directory Investigation playbook provides tools and guidance to investigate changes and manipulation in Active Directory containers, ACLs, Schema, and objects.
+        This playbook uses a 3rd party tool provided by Microsoft to scan the Active Directory access list, trees, and objects.
+        Additional investigative information is provided for manual investigation.
+      id: e1d60ab9-e578-4f7c-8f31-bfc113f23bea
+      iscommand: false
+      name: Active Directory Investigation
+      playbookId: Active Directory Investigation
+      type: playbook
+      version: -1
+    taskid: e1d60ab9-e578-4f7c-8f31-bfc113f23bea
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 4335
+        }
+      }
+  "78":
+    continueonerrortype: ""
+    id: "78"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "62"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      AutoCommit:
+        simple: "No"
+      CustomBlockRule:
+        simple: "True"
+      CustomURLCategory:
+        simple: Demisto Remediation - Malicious URLs
+      IP:
+        complex:
+          accessor: Indicator
+          filters:
+          - - ignorecase: true
+              left:
+                iscontext: true
+                value:
+                  simple: DBotScore.Type
+              operator: isEqualString
+              right:
+                value:
+                  simple: ip
+          - - left:
+                iscontext: true
+                value:
+                  simple: DBotScore.Score
+              operator: greaterThanOrEqual
+              right:
+                value:
+                  simple: "3"
+          root: DBotScore
+          transformers:
+          - operator: uniq
+      MD5:
+        complex:
+          accessor: MD5
+          root: File
+      SHA256:
+        complex:
+          accessor: SHA256
+          root: File
+      URL:
+        complex:
+          accessor: Indicator
+          filters:
+          - - ignorecase: true
+              left:
+                iscontext: true
+                value:
+                  simple: DBotScore.Type
+              operator: isEqualString
+              right:
+                value:
+                  simple: url
+          - - left:
+                iscontext: true
+                value:
+                  simple: DBotScore.Score
+              operator: greaterThanOrEqual
+              right:
+                value:
+                  simple: "3"
+          root: DBotScore
+          transformers:
+          - operator: uniq
+      URLListName:
+        simple: Demisto Remediation - URL EDL
+      Username:
+        complex:
+          accessor: Indicator
+          filters:
+          - - ignorecase: true
+              left:
+                iscontext: true
+                value:
+                  simple: DBotScore.Type
+              operator: isEqualString
+              right:
+                value:
+                  simple: username
+          - - left:
+                iscontext: true
+                value:
+                  simple: DBotScore.Score
+              operator: greaterThanOrEqual
+              right:
+                value:
+                  simple: "3"
+          root: DBotScore
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |+
+        This playbook blocks malicious Indicators using all integrations that are enabled, and the following sub-playbooks:
+
+        - Block URL - Generic
+        - Block Account - Generic
+        - Block IP - Generic v2
+        - Block File - Generic v2
+
+      id: f86d34bb-3271-4aed-80a2-763c28722f05
+      iscommand: false
+      name: Block Indicators - Generic v2
+      playbookId: Block Indicators - Generic v2
+      type: playbook
+      version: -1
+    taskid: f86d34bb-3271-4aed-80a2-763c28722f05
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 602.5,
+          "y": 5880
+        }
+      }
+  "82":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                filters:
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: modules.name
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: Active Directory Query v2
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: modules.state
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: active
+                root: modules
+          operator: isEqualString
+          right:
+            value:
+              simple: Active Directory Query v2
+      label: "yes"
+    continueonerrortype: ""
+    id: "82"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "yes":
+      - "68"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 99f04008-f1b6-4dc4-8e71-ee8189916c71
+      iscommand: false
+      name: Is Active Directory enabled?
+      type: condition
+      version: -1
+    taskid: 99f04008-f1b6-4dc4-8e71-ee8189916c71
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 612.5,
+          "y": 865
+        }
+      }
+  "83":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: 'Were binary files retrieved? '
+        options: []
+        optionsarg:
+        - simple: "Yes"
+        - simple: "No"
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: singleSelect
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "1"
+        label: ""
+        labelarg:
+          simple: What is the total number of encrypted endpoints?
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      sender: ""
+      title: Endpoint Forensics Data Collection
+      totalanswers: 0
+    id: "83"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: Endpoint Forensics Data Collection
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: false
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    nexttasks:
+      '#none#':
+      - "89"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: "Single endpoint forensics - if possible, use the file owner endpoint.\n\n1.
+        Behavioral Signature:\nas a first step, it is required to gain a behavioral
+        signature that is used to discover encrypted endpoints across the domain.\nLook
+        for a simple behavioral signature that might be observed on all endpoints,
+        such as:\n-  File creation in a common folder\n-  Unique process  creation\n-
+        \ File Hash\n-  Unique network connection \n\n2. Forensic Investigation :\nAnalyse
+        Network Share, running process, network connection, auto-run data, memory
+        dump, and other forensics methods to help you gain more knowledge about the
+        ransomware.\n\n3. Search for additional infected endpoints:\nUse the behavioral
+        signature collected from the forensic investigation task to search for additional
+        infected endpoints.\n\nPerimeter Investigation\n\nFor a proper recovery process,
+        it is essential to set the timeline for the breach. Encrypting the data is
+        the final step in the attack. \nBefore data encryption, attackers must have
+        gained initial access and moved laterally across the domain to gain higher
+        privileges so they can distribute the encryption payload to the highest number
+        of endpoints. \n1. Use Cortex XSOAR to investigate past incidents from the
+        last three weeks with users/accounts involved in the current incident. \n2.
+        Investigate past incidents with file owner user/account of the encrypted files.
+        \n3. Look for a correlation between users/accounts and past Phishing/Malware
+        alerts. \n4. Use available security/network tools to investigate and identify
+        lateral movement in the domain.\n5. Look for suspicious activity or known
+        vulnerabilities on external-facing applications and services like web servers/VPN/RDP.\n\n\n\n"
+      id: 6031d760-67e5-4a52-8bc8-dd2dc2a7776c
+      iscommand: false
+      name: Advanced forensic investigation
+      type: collection
+      version: -1
+    taskid: 6031d760-67e5-4a52-8bc8-dd2dc2a7776c
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 4510
+        }
+      }
+  "86":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Answers.1
+                root: Ransomware Enrichment
+          operator: isEqualString
+          right:
+            value:
+              simple: Available
+      label: "yes"
+    continueonerrortype: ""
+    id: "86"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "38"
+      "Yes":
+      - "29"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c4bc2d5b-76f5-4f6e-8eb6-98ca7e08bedd
+      iscommand: false
+      name: Was a Recovery tool found?
+      type: condition
+      version: -1
+    taskid: c4bc2d5b-76f5-4f6e-8eb6-98ca7e08bedd
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 5210
+        }
+      }
+  "88":
+    continueonerrortype: ""
+    id: "88"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "94"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      encryptedfileowner:
+        complex:
+          accessor: Answers.0
+          root: Ransomware file owner investigation
+      ransomwareencryptedfileowner:
+        complex:
+          accessor: "0"
+          root: Ransomware file owner investigation.Answers
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Updates the file owner field for the incident.
+      id: 8f6deb99-fc5d-44fd-8b8e-e50e1b867da5
+      iscommand: true
+      name: Set file owner field
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: 8f6deb99-fc5d-44fd-8b8e-e50e1b867da5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 3985
+        }
+      }
+  "89":
+    continueonerrortype: ""
+    id: "89"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "52"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      app:
+        simple: Cuount
+      approximatenumberofencryptedendpoints:
+        complex:
+          accessor: Answers.0
+          root: Total Number of encrypted endpoints?
+      ransomwareapproximatenumberofencryptedendpoints:
+        complex:
+          accessor: "1"
+          root: Endpoint Forensics Data Collection.Answers
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Sets the number of affected endpoints.
+      id: 924fc6e2-c6f3-4c81-8919-d67c1ea6c9b5
+      iscommand: true
+      name: Count
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: 924fc6e2-c6f3-4c81-8919-d67c1ea6c9b5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 4685
+        }
+      }
+  "90":
+    continueonerrortype: ""
+    id: "90"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "98"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      height:
+        simple: "800"
+      htmlBody:
+        complex:
+          root: FileData
+      width:
+        simple: "600"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Rasterize
+      description: Converts the body of an email to an image file or a PDF file.
+      id: ad498fcc-48b6-48c2-8ed7-46a9c0fd8ead
+      iscommand: true
+      name: Display ransom note
+      script: Rasterize|||rasterize-email
+      tags:
+      - RansomwareNote
+      type: regular
+      version: -1
+    taskid: ad498fcc-48b6-48c2-8ed7-46a9c0fd8ead
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 1740
+        }
+      }
+  "91":
+    continueonerrortype: ""
+    id: "91"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "101"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      attackeremail:
+        complex:
+          accessor: Email.Address
+          root: Account
+          transformers:
+          - operator: uniq
+      attackerurl:
+        complex:
+          accessor: URL
+          root: Onion
+          transformers:
+          - operator: uniq
+      ransomwareemail:
+        complex:
+          accessor: Email.Address
+          root: Account
+          transformers:
+          - operator: uniq
+          - args:
+              separator:
+                value:
+                  simple: ','
+            operator: join
+      ransomwareonionaddress:
+        complex:
+          accessor: Address
+          root: Onion
+          transformers:
+          - operator: uniq
+          - args:
+              separator:
+                value:
+                  simple: ','
+            operator: join
+      ransomwareonionurl:
+        complex:
+          accessor: Address
+          root: Onion
+          transformers:
+          - operator: uniq
+          - args:
+              separator:
+                value:
+                  simple: ','
+            operator: join
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Updates the incident with attacker information.
+      id: 91707aef-faf3-40a2-8e7a-8c2420882838
+      iscommand: true
+      name: Set attacker information fields
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: 91707aef-faf3-40a2-8e7a-8c2420882838
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 2090
+        }
+      }
+  "94":
+    continueonerrortype: ""
+    id: "94"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "77"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      Username:
+        complex:
+          accessor: encryptedfileowner
+          root: incident
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Enrich accounts using one or more integrations.
+        Supported integrations:
+        - Active Directory
+      id: 3907790e-fe9a-420e-846f-2f185d633a88
+      iscommand: false
+      name: Account Enrichment - Generic v2.1
+      playbookId: Account Enrichment - Generic v2.1
+      type: playbook
+      version: -1
+    taskid: 3907790e-fe9a-420e-846f-2f185d633a88
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 4160
+        }
+      }
+  "95":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: inputs.NotificationEmail
+          operator: isNotEmpty
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: inputs.EmailBody
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "95"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "12"
+      "yes":
+      - "11"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9cc6d2ec-0e55-4626-8849-74ed48b0a0d2
+      iscommand: false
+      name: Send ransomware notification?
+      type: condition
+      version: -1
+    taskid: 9cc6d2ec-0e55-4626-8849-74ed48b0a0d2
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 3140
+        }
+      }
+  "97":
+    continueonerrortype: ""
+    id: "97"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "62"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Block the indicators extracted during the investigation manually.
+      id: fbc34aa5-4932-43a0-8bfc-55b634442d3e
+      iscommand: false
+      name: Manual containment
+      type: regular
+      version: -1
+    taskid: fbc34aa5-4932-43a0-8bfc-55b634442d3e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 172.5,
+          "y": 6055
+        }
+      }
+  "98":
+    continueonerrortype: ""
+    id: "98"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "91"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: fa18f0e9-65a5-4a24-81a5-96e7d5121c02
+      iscommand: false
+      name: Extract Indicators From File - Generic v2
+      playbookId: Extract Indicators From File - Generic v2
+      type: playbook
+      version: -1
+    taskid: fa18f0e9-65a5-4a24-81a5-96e7d5121c02
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 1915
+        }
+      }
+  "99":
+    continueonerrortype: ""
+    id: "99"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "100"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      ransomwarecryptocurrencyaddress:
+        complex:
+          accessor: Address
+          root: Cryptocurrency
+          transformers:
+          - operator: uniq
+          - args:
+              separator:
+                value:
+                  simple: ','
+            operator: join
+      ransomwarecryptocurrencyaddresstype:
+        complex:
+          accessor: AddressType
+          root: Cryptocurrency
+          transformers:
+          - operator: uniq
+      ransomwaredataencryptionstatus:
+        simple: Encrypted
+      ransomwarerecoverytool:
+        complex:
+          accessor: "1"
+          root: Ransomware Enrichment.Answers
+      ransomwarestrain:
+        complex:
+          accessor: "0"
+          root: Ransomware Enrichment.Answers
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Updates the incident with ransomware information.
+      id: abd47e61-36e8-464e-8620-b8b55eb4bcff
+      iscommand: true
+      name: Set Ransomware information
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: abd47e61-36e8-464e-8620-b8b55eb4bcff
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 2790
+        }
+      }
+  "100":
+    continueonerrortype: ""
+    id: "100"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "95"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      indicatorsValues:
+        complex:
+          accessor: Address
+          root: Cryptocurrency
+      reputation:
+        simple: Bad
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Updates the severity of the cryptocurrency indicators to malicious.
+      id: 38b762c8-b061-490f-8232-8bc98f9ec967
+      iscommand: true
+      name: 'Set cryptocurrency indicators as malicious '
+      script: Builtin|||setIndicators
+      type: regular
+      version: -1
+    taskid: 38b762c8-b061-490f-8232-8bc98f9ec967
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 2965
+        }
+      }
+  "101":
+    continueonerrortype: ""
+    id: "101"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "102"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      indicatorsValues:
+        complex:
+          accessor: Address
+          root: Onion
+      reputation:
+        simple: Bad
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Updates the severity of the onion address indicators to malicious.
+      id: 2c3558f5-6a4a-48fb-8f0f-a59d43448d99
+      iscommand: true
+      name: 'Set onion addresses indicators as malicious '
+      script: Builtin|||setIndicators
+      type: regular
+      version: -1
+    taskid: 2c3558f5-6a4a-48fb-8f0f-a59d43448d99
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 2265
+        }
+      }
+  "102":
+    continueonerrortype: ""
+    id: "102"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      indicatorsValues:
+        complex:
+          accessor: Address
+          root: Account.Email
+      reputation:
+        simple: Bad
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Updates the severity of the attacker email address indicators to
+        malicious.
+      id: e3600462-ef93-4660-84dd-8d4fa26f6ba8
+      iscommand: true
+      name: 'Set attacker email addresses indicators as malicious '
+      script: Builtin|||setIndicators
+      type: regular
+      version: -1
+    taskid: e3600462-ef93-4660-84dd-8d4fa26f6ba8
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 2440
+        }
+      }
+  "103":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: inputs.AutoRemediation
+          operator: isEqualString
+          right:
+            value:
+              simple: "True"
+      label: "True"
+    continueonerrortype: ""
+    id: "103"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "97"
+      "True":
+      - "78"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: dc9aac10-033a-4d8e-8b7c-424ae4f2bc3f
+      iscommand: false
+      name: Auto Remediation?
+      type: condition
+      version: -1
+    taskid: dc9aac10-033a-4d8e-8b7c-424ae4f2bc3f
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 5705
+        }
+      }
+  "104":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: File..Extension
+          operator: isEqualString
+          right:
+            value:
+              simple: txt
+        - left:
+            iscontext: true
+            value:
+              simple: File.Extension
+          operator: isEqualString
+          right:
+            value:
+              simple: html
+      label: Note
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: File.Extension
+          operator: isNotEqualString
+          right:
+            value:
+              simple: txt
+        - left:
+            iscontext: true
+            value:
+              simple: File.Extension
+          operator: isEqualString
+          right:
+            value:
+              simple: html
+      label: Binary
+    continueonerrortype: ""
+    id: "104"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "95"
+      Binary:
+      - "15"
+      Note:
+      - "42"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 3d9dd58b-a38f-42d4-80d1-8c5c090685c6
+      iscommand: false
+      name: Handle ransomware files
+      type: condition
+      version: -1
+    taskid: 3d9dd58b-a38f-42d4-80d1-8c5c090685c6
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 387.5,
+          "y": 1390
+        }
+      }
+  "107":
+    continueonerrortype: ""
+    id: "107"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "95"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2c7eab21-465d-43a3-8578-20f0f762808f
+      iscommand: false
+      name: File Enrichment - File reputation
+      playbookId: file_enrichment_-_file_reputation
+      type: playbook
+      version: -1
+    taskid: 2c7eab21-465d-43a3-8578-20f0f762808f
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 612.5,
+          "y": 2965
+        }
+      }
+  "108":
+    continueonerrortype: ""
+    id: "108"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "86"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      MD5:
+        complex:
+          accessor: MD5
+          root: File
+      SHA1:
+        complex:
+          accessor: SHA1
+          root: File
+      SHA256:
+        complex:
+          accessor: SHA256
+          root: File
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 01aa3ec9-b20e-474c-8d14-9c0a3e19f6ae
+      iscommand: false
+      name: File Enrichment - File reputation
+      playbookId: file_enrichment_-_file_reputation
+      type: playbook
+      version: -1
+    taskid: 01aa3ec9-b20e-474c-8d14-9c0a3e19f6ae
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 612.5,
+          "y": 5035
+        }
+      }
+  "111":
+    continueonerrortype: ""
+    id: "111"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This playbook accepts an XDR endpoint ID and isolates it using
+        the 'Palo Alto Networks Cortex XDR - Investigation and Response' integration.
+      id: 4084995a-c401-430d-88ef-1e736d0c1cc3
+      iscommand: false
+      name: Cortex XDR - Isolate Endpoint
+      playbookId: Cortex XDR - Isolate Endpoint
+      type: playbook
+      version: -1
+    taskid: 4084995a-c401-430d-88ef-1e736d0c1cc3
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": -90,
+          "y": 1020
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {
+      "103_78_True": 0.41,
+      "103_97_#default#": 0.38,
+      "104_15_Binary": 0.59,
+      "104_42_Note": 0.51,
+      "104_95_#default#": 0.11,
+      "52_108_yes": 0.4,
+      "52_50_yes": 0.27,
+      "52_86_#default#": 0.43,
+      "65_6_#default#": 0.39,
+      "65_82_True": 0.54,
+      "82_68_yes": 0.63,
+      "82_6_#default#": 0.17,
+      "86_29_Yes": 0.66,
+      "86_38_#default#": 0.16,
+      "95_11_yes": 0.45,
+      "95_12_#default#": 0.38
+    },
+    "paper": {
+      "dimensions": {
+        "height": 6245,
+        "width": 1082.5,
+        "x": -90,
+        "y": 50
+      }
+    }
+  }
