@@ -1,0 +1,1220 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: b441881a-956a-465f-826b-132339f4820a
+inputs: []
+name: SearchIncidents
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7d333dad-2066-4b39-8ca1-20cb5ded11d8
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 7d333dad-2066-4b39-8ca1-20cb5ded11d8
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "2":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: File.Name
+          operator: endWith
+          right:
+            value:
+              simple: csv
+      label: "Yes"
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "Yes":
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value exists in the context. Will return 'no'
+        for empty empty arrays. To be used mostly with DQ and selectors.
+      id: c45a2b08-7248-47a8-84e2-ce5149bf3cf2
+      iscommand: false
+      name: CSV File Exists
+      type: condition
+      version: -1
+    taskid: c45a2b08-7248-47a8-84e2-ce5149bf3cf2
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 195
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "16"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 66dfdeaf-8732-44ad-8274-22392b7da646
+      iscommand: false
+      name: Extract File
+      type: title
+      version: -1
+    taskid: 66dfdeaf-8732-44ad-8274-22392b7da646
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 385
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8b675d28-9791-424b-88d8-fa94009298ec
+      iscommand: false
+      name: CSV File does not exist
+      type: regular
+      version: -1
+    taskid: 8b675d28-9791-424b-88d8-fa94009298ec
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "5":
+    continueonerror: true
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "12"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: File.Name
+              operator: isEqualString
+              right:
+                value:
+                  simple: TCCC08.csv
+          root: File
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Load the contents of a file into context.
+      id: f4c90934-ae02-4391-88a7-3e2b22de6d75
+      iscommand: false
+      name: TCCC08
+      script: ReadFile
+      type: regular
+      version: -1
+    taskid: f4c90934-ae02-4391-88a7-3e2b22de6d75
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 592.5,
+          "y": 720
+        }
+      }
+  "9":
+    continueonerror: true
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "13"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: File.Name
+              operator: isEqualString
+              right:
+                value:
+                  simple: TCCC09.csv
+          root: File
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Load the contents of a file into context.
+      id: 69906c45-61b2-4f11-8819-08c91f28fcaa
+      iscommand: false
+      name: TCCC09
+      script: ReadFile
+      type: regular
+      version: -1
+    taskid: 69906c45-61b2-4f11-8819-08c91f28fcaa
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1145,
+          "y": 710
+        }
+      }
+  "10":
+    continueonerror: true
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "14"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: File.Name
+              operator: isEqualString
+              right:
+                value:
+                  simple: Broadcom08.csv
+          root: File
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Load the contents of a file into context.
+      id: 73944fc0-296b-46b8-8ac3-ddb5e7a80472
+      iscommand: false
+      name: Broadcom08
+      script: ReadFile
+      type: regular
+      version: -1
+    taskid: 73944fc0-296b-46b8-8ac3-ddb5e7a80472
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1647.5,
+          "y": 710
+        }
+      }
+  "11":
+    continueonerror: true
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "15"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: File.Name
+              operator: isEqualString
+              right:
+                value:
+                  simple: Broadcom09.csv
+          root: File
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Load the contents of a file into context.
+      id: 21910e7b-c15c-4216-859e-d74fe19f7826
+      iscommand: false
+      name: Broadcom09
+      script: ReadFile
+      type: regular
+      version: -1
+    taskid: 21910e7b-c15c-4216-859e-d74fe19f7826
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2167.5,
+          "y": 710
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "21"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: TCCC08
+      value:
+        complex:
+          root: FileData
+          transformers:
+          - args:
+              limit: {}
+              replaceWith:
+                value:
+                  simple: ','
+              toReplace:
+                value:
+                  simple: |2+
+
+            operator: replace
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: e2b26008-dd72-4fbb-8f2c-ea8c1a835ea2
+      iscommand: false
+      name: Set
+      script: Set
+      type: regular
+      version: -1
+    taskid: e2b26008-dd72-4fbb-8f2c-ea8c1a835ea2
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 592.5,
+          "y": 895
+        }
+      }
+  "13":
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "24"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: TCCC09
+      value:
+        complex:
+          root: FileData
+          transformers:
+          - args:
+              limit: {}
+              replaceWith:
+                value:
+                  simple: ','
+              toReplace:
+                value:
+                  simple: |2+
+
+            operator: replace
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: c62d806f-1673-4d62-892e-a46713a9c18e
+      iscommand: false
+      name: Set
+      script: Set
+      type: regular
+      version: -1
+    taskid: c62d806f-1673-4d62-892e-a46713a9c18e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1145,
+          "y": 885
+        }
+      }
+  "14":
+    continueonerrortype: ""
+    id: "14"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "27"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: Broadcom08
+      value:
+        complex:
+          root: FileData
+          transformers:
+          - args:
+              limit: {}
+              replaceWith:
+                value:
+                  simple: ','
+              toReplace:
+                value:
+                  simple: |2+
+
+            operator: replace
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: c01c17f9-31df-4ae8-8245-a1ed416b0b6b
+      iscommand: false
+      name: Set
+      script: Set
+      type: regular
+      version: -1
+    taskid: c01c17f9-31df-4ae8-8245-a1ed416b0b6b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1647.5,
+          "y": 885
+        }
+      }
+  "15":
+    continueonerrortype: ""
+    id: "15"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "30"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: Broadcom09
+      value:
+        complex:
+          root: FileData
+          transformers:
+          - args:
+              limit: {}
+              replaceWith:
+                value:
+                  simple: ','
+              toReplace:
+                value:
+                  simple: |2+
+
+            operator: replace
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: fc32f554-4b1b-4216-82e7-201eb7312e9d
+      iscommand: false
+      name: Set
+      script: Set
+      type: regular
+      version: -1
+    taskid: fc32f554-4b1b-4216-82e7-201eb7312e9d
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2167.5,
+          "y": 885
+        }
+      }
+  "16":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: File.Name
+          operator: isEqualString
+          right:
+            value:
+              simple: TCCC08.csv
+      label: "yes"
+    continueonerrortype: ""
+    id: "16"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "17"
+      - "19"
+      - "18"
+      - "20"
+      "yes":
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value exists in the context. Will return 'no'
+        for empty empty arrays. To be used mostly with DQ and selectors.
+      id: 05e78409-b6ed-4a0a-83e4-c549fd77dea7
+      iscommand: false
+      name: Exists
+      type: condition
+      version: -1
+    taskid: 05e78409-b6ed-4a0a-83e4-c549fd77dea7
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 545
+        }
+      }
+  "17":
+    continueonerrortype: ""
+    id: "17"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: b23eb95e-3b79-4ade-837b-925d6d2e38b3
+      iscommand: false
+      name: No File
+      type: regular
+      version: -1
+    taskid: b23eb95e-3b79-4ade-837b-925d6d2e38b3
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 3870
+        }
+      }
+  "18":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: File.Name
+          operator: isEqualString
+          right:
+            value:
+              simple: TCCC09.csv
+      label: "yes"
+    continueonerrortype: ""
+    id: "18"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "17"
+      "yes":
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value exists in the context. Will return 'no'
+        for empty empty arrays. To be used mostly with DQ and selectors.
+      id: 2e2e4392-0987-4387-87b2-1924dfab7e8a
+      iscommand: false
+      name: Exists
+      type: condition
+      version: -1
+    taskid: 2e2e4392-0987-4387-87b2-1924dfab7e8a
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 592.5,
+          "y": 1595
+        }
+      }
+  "19":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: File.Name
+          operator: isEqualString
+          right:
+            value:
+              simple: Broadcom08.csv
+      label: "yes"
+    continueonerrortype: ""
+    id: "19"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "17"
+      "yes":
+      - "10"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value exists in the context. Will return 'no'
+        for empty empty arrays. To be used mostly with DQ and selectors.
+      id: 2c12c6c2-51a1-4fce-8d1f-aa2ce6705763
+      iscommand: false
+      name: Exists
+      type: condition
+      version: -1
+    taskid: 2c12c6c2-51a1-4fce-8d1f-aa2ce6705763
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1145,
+          "y": 1585
+        }
+      }
+  "20":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: File.Name
+          operator: isEqualString
+          right:
+            value:
+              simple: Broadcom09.csv
+      label: "yes"
+    continueonerrortype: ""
+    id: "20"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "17"
+      "yes":
+      - "11"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value exists in the context. Will return 'no'
+        for empty empty arrays. To be used mostly with DQ and selectors.
+      id: a98f3b7b-b84e-48b4-844b-a7a2c18ddec5
+      iscommand: false
+      name: Exists
+      type: condition
+      version: -1
+    taskid: a98f3b7b-b84e-48b4-844b-a7a2c18ddec5
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1647.5,
+          "y": 1585
+        }
+      }
+  "21":
+    continueonerrortype: ""
+    id: "21"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "22"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: 'TCCC08results=Contents.data={"id": val["numericId"], "type": val["type"],
+          "playbookname": val["playbookId"], "sourceinstance": val["sourceInstance"],
+          "createddate":val["created"], "occurreddate":val["occurred"]}'
+      id:
+        simple: ${TCCC08}
+      size:
+        simple: "10000"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Searches Demisto incidents
+      id: e34cfd39-8d61-4e42-8a96-7e7b9ecece05
+      iscommand: false
+      name: SearchIncidents
+      script: SearchIncidentsV2
+      type: regular
+      version: -1
+    taskid: e34cfd39-8d61-4e42-8a96-7e7b9ecece05
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 592.5,
+          "y": 1070
+        }
+      }
+  "22":
+    continueonerrortype: ""
+    id: "22"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "23"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      csvArray:
+        simple: ${TCCC08results}
+      fileName:
+        simple: TCCC08Updated
+      headers:
+        simple: id,playbookname,sourceinstance,type,createddate,occurreddate
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Export given array to csv file
+      id: c55a596a-3885-40db-8207-347180f867fc
+      iscommand: false
+      name: Export to CSV
+      script: ExportToCSV
+      type: regular
+      version: -1
+    taskid: c55a596a-3885-40db-8207-347180f867fc
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 592.5,
+          "y": 1245
+        }
+      }
+  "23":
+    continueonerrortype: ""
+    id: "23"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "18"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: FileData
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete field from context
+      id: 4c9cb90d-ba70-41af-8f7e-fd2a42d7fd86
+      iscommand: false
+      name: DeleteContext
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: 4c9cb90d-ba70-41af-8f7e-fd2a42d7fd86
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 592.5,
+          "y": 1420
+        }
+      }
+  "24":
+    continueonerrortype: ""
+    id: "24"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "25"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: 'TCCC09results=Contents.data={"id": val["numericId"], "type": val["type"],
+          "playbookname": val["playbookId"], "sourceinstance": val["sourceInstance"],
+          "createddate":val["created"], "occurreddate":val["occurred"]}'
+      id:
+        simple: ${TCCC09}
+      size:
+        simple: "10000"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Searches Demisto incidents
+      id: eafb65b4-6825-4774-8bed-36dd10b249f5
+      iscommand: false
+      name: SearchIncidents
+      script: SearchIncidentsV2
+      type: regular
+      version: -1
+    taskid: eafb65b4-6825-4774-8bed-36dd10b249f5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1145,
+          "y": 1060
+        }
+      }
+  "25":
+    continueonerrortype: ""
+    id: "25"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "26"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      csvArray:
+        simple: ${TCCC09results}
+      fileName:
+        simple: TCCC09Updated
+      headers:
+        simple: id,playbookname,sourceinstance,type,createddate,occurreddate
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Export given array to csv file
+      id: 824a0f2d-8da5-4ed2-8168-a08e971aaf6f
+      iscommand: false
+      name: Export to CSV
+      script: ExportToCSV
+      type: regular
+      version: -1
+    taskid: 824a0f2d-8da5-4ed2-8168-a08e971aaf6f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1145,
+          "y": 1235
+        }
+      }
+  "26":
+    continueonerrortype: ""
+    id: "26"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "19"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: FileData
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete field from context
+      id: 89ca15eb-57b5-47e2-8741-a6b0f10f8bec
+      iscommand: false
+      name: DeleteContext
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: 89ca15eb-57b5-47e2-8741-a6b0f10f8bec
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1145,
+          "y": 1410
+        }
+      }
+  "27":
+    continueonerrortype: ""
+    id: "27"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "28"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: 'Broadcom08results=Contents.data={"id": val["numericId"], "type":
+          val["type"], "playbookname": val["playbookId"], "sourceinstance": val["sourceInstance"],
+          "createddate":val["created"], "occurreddate":val["occurred"]}'
+      id:
+        simple: ${Broadcom08}
+      size:
+        simple: "10000"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Searches Demisto incidents
+      id: 2e59cca8-15d2-400c-8790-834aebaa66df
+      iscommand: false
+      name: SearchIncidents
+      script: SearchIncidentsV2
+      type: regular
+      version: -1
+    taskid: 2e59cca8-15d2-400c-8790-834aebaa66df
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1647.5,
+          "y": 1060
+        }
+      }
+  "28":
+    continueonerrortype: ""
+    id: "28"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "29"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      csvArray:
+        simple: ${Broadcom08results}
+      fileName:
+        simple: Broadcom08Updated
+      headers:
+        simple: id,playbookname,sourceinstance,type,createddate,occurreddate
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Export given array to csv file
+      id: 1a912c7a-e58b-421b-8910-ebd6f638e498
+      iscommand: false
+      name: Export to CSV
+      script: ExportToCSV
+      type: regular
+      version: -1
+    taskid: 1a912c7a-e58b-421b-8910-ebd6f638e498
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1647.5,
+          "y": 1235
+        }
+      }
+  "29":
+    continueonerrortype: ""
+    id: "29"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "20"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: FileData
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete field from context
+      id: c31df050-49bb-49ec-8acd-e53c0ab0a901
+      iscommand: false
+      name: DeleteContext
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: c31df050-49bb-49ec-8acd-e53c0ab0a901
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1647.5,
+          "y": 1410
+        }
+      }
+  "30":
+    continueonerrortype: ""
+    id: "30"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "31"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: 'Broadcom09results=Contents.data={"id": val["numericId"], "type":
+          val["type"], "playbookname": val["playbookId"], "sourceinstance": val["sourceInstance"],
+          "createddate":val["created"], "occurreddate":val["occurred"]}'
+      id:
+        simple: ${Broadcom09}
+      size:
+        simple: "10000"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Searches Demisto incidents
+      id: 093504e3-0729-4c28-87a5-8acaa82536b1
+      iscommand: false
+      name: SearchIncidents
+      script: SearchIncidentsV2
+      type: regular
+      version: -1
+    taskid: 093504e3-0729-4c28-87a5-8acaa82536b1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2167.5,
+          "y": 1060
+        }
+      }
+  "31":
+    continueonerrortype: ""
+    id: "31"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "32"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      csvArray:
+        simple: ${Broadcom09results}
+      fileName:
+        simple: Broadcom09Updated
+      headers:
+        simple: id,playbookname,sourceinstance,type,createddate,occurreddate
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Export given array to csv file
+      id: 7d627b74-0739-4ff9-89f6-4a4b8a10a336
+      iscommand: false
+      name: Export to CSV
+      script: ExportToCSV
+      type: regular
+      version: -1
+    taskid: 7d627b74-0739-4ff9-89f6-4a4b8a10a336
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2167.5,
+          "y": 1235
+        }
+      }
+  "32":
+    continueonerrortype: ""
+    id: "32"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: FileData
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete field from context
+      id: 25577430-2763-4918-8f09-354dc75460d5
+      iscommand: false
+      name: DeleteContext
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: 25577430-2763-4918-8f09-354dc75460d5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2167.5,
+          "y": 1410
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 3915,
+        "width": 2497.5,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
