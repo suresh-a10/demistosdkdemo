@@ -1,0 +1,38 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 70828f35-bd31-4cb1-8dd7-be7c9b2793ec
+inputs: []
+name: Newtagplaybook
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2446eb24-6c36-4c77-8668-6f21e1a16368
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 2446eb24-6c36-4c77-8668-6f21e1a16368
+    timertriggers: []
+    type: start
+version: -1
