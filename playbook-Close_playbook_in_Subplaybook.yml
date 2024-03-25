@@ -1,0 +1,148 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 1f6be2f6-9b04-4655-80d9-424e971a5c2e
+inputs: []
+name: Close playbook in Subplaybook
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 46aa3b40-9105-4db6-8c3d-2578e371c24e
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 46aa3b40-9105-4db6-8c3d-2578e371c24e
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 277138a5-eefc-4352-8852-1e54e68a0325
+      iscommand: false
+      name: closeinvestigationonly
+      playbookId: f7ea08cc-b427-4e4f-8e5b-50a662b8d25a
+      type: playbook
+      version: -1
+    taskid: 277138a5-eefc-4352-8852-1e54e68a0325
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e94c6c37-8b51-4ffa-8b22-75fa3da82bfe
+      iscommand: false
+      name: Manual task
+      type: regular
+      version: -1
+    taskid: e94c6c37-8b51-4ffa-8b22-75fa3da82bfe
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7eba81c3-b592-4b53-814c-3e3c3e0ed40e
+      iscommand: false
+      name: Manual Task
+      type: regular
+      version: -1
+    taskid: 7eba81c3-b592-4b53-814c-3e3c3e0ed40e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 590,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
