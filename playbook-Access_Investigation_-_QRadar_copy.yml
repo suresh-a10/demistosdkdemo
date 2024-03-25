@@ -1,0 +1,521 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: 5.0.0
+    itemVersion: 2.4.47
+    packID: ""
+    packName: IBM QRadar
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: |-
+  Deprecated. No available replacement. This playbook uses the QRadar integration to investigate an access incident by gathering user and IP information.
+
+  The playbook then interacts with the user that triggered the incident to confirm whether or not they initiated the access action.
+id: eeadccd6-5ced-4f4c-8a8a-2c891882aa2b
+inputs: []
+name: Access Investigation - QRadar_copy
+outputs: []
+sourceplaybookid: access_investigation_-_qradar
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: ba4044b3-c190-4199-8eaf-45151ec439f4
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: ba4044b3-c190-4199-8eaf-45151ec439f4
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": -640
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0b351bc4-9e6b-4c64-8fd5-3f82cecaa1bb
+      iscommand: false
+      name: QRadar alert
+      type: title
+      version: -1
+    taskid: 0b351bc4-9e6b-4c64-8fd5-3f82cecaa1bb
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": -510
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      GetCorrelationLogs:
+        simple: "True"
+      ID:
+        complex:
+          accessor: labels.id
+          root: incident
+      MaxLogsCount:
+        simple: "20"
+      StartTime:
+        complex:
+          root: Time
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Run on a QRadar offense to get more information:
+
+        * Get all correlations relevant to the offense
+        * Get all logs relevant to the correlations (not done by default - set "GetCorrelationLogs" to "True")
+
+        Inputs:
+        * GetCorrelationLogs (default: False)
+        * MaxLogsCount (default: 20)
+      id: fb054f10-ec34-489d-8122-1ef88dc6def9
+      iscommand: false
+      name: QRadar - Get offense correlations v2
+      playbookId: QRadar - Get offense correlations v2
+      type: playbook
+      version: -1
+    taskid: fb054f10-ec34-489d-8122-1ef88dc6def9
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      DstIP:
+        complex:
+          accessor: Correlation.DestinationIP
+          root: QRadar
+          transformers:
+          - operator: uniq
+      SrcIP:
+        complex:
+          accessor: Correlation.SourceIP
+          root: QRadar
+          transformers:
+          - operator: uniq
+      Username:
+        complex:
+          accessor: Correlation.Username
+          root: QRadar
+          transformers:
+          - operator: uniq
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 1e867513-62aa-4a22-884c-8193e60f8cbe
+      iscommand: false
+      name: Access Investigation - Generic
+      playbookId: access_investigation_-_generic
+      type: playbook
+      version: -1
+    taskid: 1e867513-62aa-4a22-884c-8193e60f8cbe
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 3355d351-d9f4-4e73-8c33-ba021db43d13
+      iscommand: false
+      name: Investigate access incident
+      type: title
+      version: -1
+    taskid: 3355d351-d9f4-4e73-8c33-ba021db43d13
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 400
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: d93b90cb-d46d-4301-8bfe-a3e0ed0b2300
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: d93b90cb-d46d-4301-8bfe-a3e0ed0b2300
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 710
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      dest:
+        complex:
+          accessor: Correlation.DestinationIP
+          root: QRadar
+          transformers:
+          - operator: uniq
+          - operator: Stringify
+      src:
+        complex:
+          accessor: Correlation.SourceIP
+          root: QRadar
+          transformers:
+          - operator: uniq
+          - operator: Stringify
+      srcuser:
+        complex:
+          accessor: Correlation.Username
+          root: QRadar
+          transformers:
+          - operator: uniq
+          - operator: Stringify
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: |-
+        Set the information retrieved from QRadar into the access incident custom fields:
+        * Dest
+        * Src
+        * Src User
+      id: b339fc25-0e22-41a1-8d5c-add78698207e
+      iscommand: true
+      name: Set QRadar information into access custom fields
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: b339fc25-0e22-41a1-8d5c-add78698207e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 225
+        }
+      }
+  "8":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                filters:
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: modules.brand
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: QRadar
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: modules.state
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: active
+                root: modules
+          operator: isExists
+      label: "yes"
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "2"
+      "yes":
+      - "11"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: b8eb6e90-3fef-4555-8a06-4dc5a0358e21
+      iscommand: false
+      name: Is QRadar v1 enabled?
+      type: condition
+      version: -1
+    taskid: b8eb6e90-3fef-4555-8a06-4dc5a0358e21
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": -210,
+          "y": -360
+        }
+      }
+  "9":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                filters:
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: modules.brand
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: QRadar_v2
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: modules.state
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: active
+                root: modules
+          operator: isExists
+      label: "yes"
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "2"
+      "yes":
+      - "10"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 92454e28-8054-489f-8616-563b868a7da8
+      iscommand: false
+      name: Is QRadar v2 enabled?
+      type: condition
+      version: -1
+    taskid: 92454e28-8054-489f-8616-563b868a7da8
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 310,
+          "y": -360
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: Time
+      value:
+        complex:
+          accessor: start_time
+          root: incident.labels
+          transformers:
+          - args:
+              formatter:
+                value:
+                  simple: '%Y-%m-%dT%H:%M:%S.%fZ'
+            operator: FormattedDateToEpoch
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 8514ebc9-2481-465e-86b6-217fa06b9e66
+      iscommand: false
+      name: Set timestamp to epoch
+      script: Set
+      type: regular
+      version: -1
+    taskid: 8514ebc9-2481-465e-86b6-217fa06b9e66
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 460,
+          "y": -140
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: Time
+      value:
+        complex:
+          root: inputs.StartTime
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: a862d427-77a1-42cd-859d-e7445478501c
+      iscommand: false
+      name: Set timestamp
+      script: Set
+      type: regular
+      version: -1
+    taskid: a862d427-77a1-42cd-859d-e7445478501c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -360,
+          "y": -160
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1415,
+        "width": 1200,
+        "x": -360,
+        "y": -640
+      }
+    }
+  }
