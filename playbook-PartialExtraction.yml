@@ -1,0 +1,493 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: daffa8ba-dcc6-4119-8241-ab63558d19c1
+inputs: []
+name: PartialExtraction
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "11"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0f124043-c8d4-4b48-8840-801b6ea02b69
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 0f124043-c8d4-4b48-8840-801b6ea02b69
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": -10
+        }
+      }
+  "1":
+    continueonerror: true
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      incidentId:
+        simple: ${incident.id}
+      indicatorsValues:
+        simple: ${ExtractedIndicators.File}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.unassociate.indicators
+      id: 46870ffb-a52e-451e-8d92-28c9677017c9
+      iscommand: true
+      name: unAssociateIndicatorsFromIncident
+      script: Builtin|||unAssociateIndicatorsFromIncident
+      type: regular
+      version: -1
+    taskid: 46870ffb-a52e-451e-8d92-28c9677017c9
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 470
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 286872af-3a92-4134-8a3c-c783324d2f4e
+      iscommand: false
+      name: DeleteContext
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: 286872af-3a92-4134-8a3c-c783324d2f4e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 290
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c25a61ca-c3c2-4d9c-87f4-0fbf92729116
+      iscommand: false
+      name: Debug/Setup
+      type: title
+      version: -1
+    taskid: c25a61ca-c3c2-4d9c-87f4-0fbf92729116
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 130
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: test.good_key_one
+      value:
+        simple: b620c4c0db33799a1943a3c7eb5d582ed93669a08e4219db8b2c9d85574ef3cc
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: b9a660f9-e193-48cb-8dfc-29fcc237e800
+      iscommand: false
+      name: Set 1
+      script: Set
+      type: regular
+      version: -1
+    taskid: b9a660f9-e193-48cb-8dfc-29fcc237e800
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 660
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: test.good_key_two
+      value:
+        simple: 57140b7485802e16ffcfddce49aa5ae933d6d32f413b98d64950b94e066e6e0f
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 64c42948-1021-4d0e-8c0b-480ccf5abd53
+      iscommand: false
+      name: Set 2
+      script: Set
+      type: regular
+      version: -1
+    taskid: 64c42948-1021-4d0e-8c0b-480ccf5abd53
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 820
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: test.bad_key
+      value:
+        simple: 56857cfc709d3996f057252c16ec4656f5292802
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 2ebe5253-1bb7-47ba-86a9-dc9eebd452e1
+      iscommand: false
+      name: Set 3
+      script: Set
+      type: regular
+      version: -1
+    taskid: 2ebe5253-1bb7-47ba-86a9-dc9eebd452e1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 980
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "10"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9ab72825-36f4-4161-8c76-c57d9147d94d
+      iscommand: false
+      name: Real Use Case Start
+      type: title
+      version: -1
+    taskid: 9ab72825-36f4-4161-8c76-c57d9147d94d
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 1140
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    reputationcalc: 2
+    scriptarguments:
+      text:
+        simple: ${testNew}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.extract.indicators
+      id: 9c35060a-66d0-4189-890a-310882793ef1
+      iscommand: true
+      name: Extract
+      script: Builtin|||extractIndicators
+      type: regular
+      version: -1
+    taskid: 9c35060a-66d0-4189-890a-310882793ef1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 1440
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "11"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: After executing this playbook, the indicator 56857cfc709d3996f057252c16ec4656f5292802
+          will be associated with this incident, but we want to avoid this by deliberately
+          not extracting from bad_key while still extracting from all other keys.
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 13d90290-0e36-4b2f-8397-c3c39ce2a36a
+      iscommand: false
+      name: Print
+      script: Print
+      type: regular
+      version: -1
+    taskid: 13d90290-0e36-4b2f-8397-c3c39ce2a36a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 1580
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: testNew
+      value:
+        complex:
+          accessor: bad_key
+          root: test
+          transformers:
+          - args:
+              limit: {}
+              replaceWith:
+                value:
+                  simple: ignore
+              toReplace:
+                iscontext: true
+                value:
+                  simple: test.bad_key
+            operator: replace
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 1af02604-709d-474b-8dc9-c6db99904e5a
+      iscommand: false
+      name: Untitled Task
+      script: Set
+      type: regular
+      version: -1
+    taskid: 1af02604-709d-474b-8dc9-c6db99904e5a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 1260
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: assignee
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: sdd
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: singleSelect
+      sender: ""
+      title: sdsd
+      totalanswers: 0
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body: null
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 62c54cac-6611-4075-896e-79ff73d85eb0
+      iscommand: false
+      name: Untitled Tasksds
+      type: collection
+      version: -1
+    taskid: 62c54cac-6611-4075-896e-79ff73d85eb0
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 1750
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1855,
+        "width": 380,
+        "x": 450,
+        "y": -10
+      }
+    }
+  }
