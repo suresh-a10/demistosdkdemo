@@ -1,0 +1,260 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 5767b7d2-1453-40f9-850e-569fe371b383
+inputs: []
+name: Test - Datacollection
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 549fd2d8-150d-471b-8d89-d496f2e28883
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 549fd2d8-150d-471b-8d89-d496f2e28883
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    externalFormUseAuth: true
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Is this Phishing
+        options: []
+        optionsarg:
+        - simple: Yes - This is Phishing Mail
+        - simple: No - This is not a Phishing Mail
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: Read the information in the email body and select if this is a phishing
+          mail or no
+        type: multiSelect
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "1"
+        label: ""
+        labelarg:
+          simple: asdasa
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      - defaultrows: []
+        fieldassociated: attachment
+        gridcolumns: []
+        id: "2"
+        label: ""
+        labelarg:
+          simple: asda
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: attachments
+      sender: ""
+      title: Testing
+      totalanswers: 0
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: "Hi, \n\nPlease click on the button below"
+      cc: null
+      defaultOption: "Yes"
+      format: ""
+      methods:
+      - SlackV3
+      - email
+      replyOptions:
+      - "Yes"
+      - "No"
+      - maybe
+      subject:
+        simple: Testing
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: sramesh1@paloaltonetworks.com
+    nexttasks:
+      '#none#':
+      - "3"
+      - "2"
+      - "4"
+    note: false
+    quietmode: 2
+    reputationcalc: 1
+    scriptarguments:
+      extend-context:
+        simple: testoutput
+      ignore-outputs:
+        simple: "true"
+    separatecontext: false
+    skipunavailable: false
+    sla:
+      days: 0
+      hours: 0
+      minutes: 0
+      weeks: 1
+    task:
+      brand: ""
+      id: 17936a05-8ba4-41b0-885e-dcaf629a93d9
+      iscommand: false
+      name: datacollectiontest
+      type: collection
+      version: -1
+    taskid: 17936a05-8ba4-41b0-885e-dcaf629a93d9
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 195
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 33ddf9ef-0768-4ba0-88d7-5a82d1c54dd9
+      iscommand: false
+      name: Waiting
+      type: regular
+      version: -1
+    taskid: 33ddf9ef-0768-4ba0-88d7-5a82d1c54dd9
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 11564652-acbf-41c2-802b-4ace4d468fae
+      iscommand: false
+      name: "no"
+      type: regular
+      version: -1
+    taskid: 11564652-acbf-41c2-802b-4ace4d468fae
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 370
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e85fe240-e675-4bbd-8342-44c6d60e7c14
+      iscommand: false
+      name: maybe
+      type: regular
+      version: -1
+    taskid: e85fe240-e675-4bbd-8342-44c6d60e7c14
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 370
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 415,
+        "width": 1240,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
