@@ -1,0 +1,137 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: bb430996-dafc-4712-8ba3-7bc7b58dcf91
+inputs: []
+name: sample job playbook
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 361097b5-6ce0-4b12-8f95-1b320a2cd6d4
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 361097b5-6ce0-4b12-8f95-1b320a2cd6d4
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      roles:
+        simple: Administrator
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.get.users
+      id: 6d1790e7-6949-4111-8f70-3fd8f3f80ec0
+      iscommand: true
+      name: Get the managers
+      script: Builtin|||getUsers
+      type: regular
+      version: -1
+    taskid: 6d1790e7-6949-4111-8f70-3fd8f3f80ec0
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 200
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    scriptarguments:
+      listData:
+        complex:
+          accessor: email
+          root: DemistoUsers
+          transformers:
+          - args:
+              separator:
+                value:
+                  simple: ','
+            operator: join
+      listName:
+        simple: shiftB
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.list.set
+      id: bb2860be-539a-4fff-881b-f09c6190ddd3
+      iscommand: true
+      name: Update the list with manager email ids
+      script: Builtin|||setList
+      type: regular
+      version: -1
+    taskid: bb2860be-539a-4fff-881b-f09c6190ddd3
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 360
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 405,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
