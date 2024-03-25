@@ -1,0 +1,374 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 75a87d34-8dbf-45de-8f96-69380e28e7d0
+inputs:
+- description: ""
+  key: Keys
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: test_abc
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: f0a86200-9cf4-4bea-8983-f994e29d2f91
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: f0a86200-9cf4-4bea-8983-f994e29d2f91
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 420,
+          "y": -600
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: hello
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: b2be5ade-afb4-4135-86b9-59f19c28332b
+      iscommand: false
+      name: Task 1
+      script: Print
+      type: regular
+      version: -1
+    taskid: b2be5ade-afb4-4135-86b9-59f19c28332b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 430,
+          "y": -10
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: hello
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: bfa48fca-fc02-45c0-8032-b62cb31b57a7
+      iscommand: false
+      name: Task 2
+      script: Print
+      type: regular
+      version: -1
+    taskid: bfa48fca-fc02-45c0-8032-b62cb31b57a7
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 430,
+          "y": 180
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: test
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      sender: ""
+      title: test
+      totalanswers: 0
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body: null
+      cc: null
+      format: ""
+      methods:
+      - email
+      subject:
+        simple: Hello
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: Administrator
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 512873ea-873d-426b-86f7-f61d527b4324
+      iscommand: false
+      name: Task 3
+      type: collection
+      version: -1
+    taskid: 512873ea-873d-426b-86f7-f61d527b4324
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 570
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: hello
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 912607ba-a57d-4233-85ab-0cc095dde257
+      iscommand: false
+      name: Task 4
+      script: Print
+      type: regular
+      version: -1
+    taskid: 912607ba-a57d-4233-85ab-0cc095dde257
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 430,
+          "y": 380
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: hello
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 292cb004-7d41-462e-8e0f-3b15953451ed
+      iscommand: false
+      name: Task 5
+      script: Print
+      type: regular
+      version: -1
+    taskid: 292cb004-7d41-462e-8e0f-3b15953451ed
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 760
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      closeNotes:
+        simple: Test
+      closeReason:
+        simple: Resolved
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.close.inv
+      id: d973acf2-d021-420b-8b64-0193071de6f4
+      iscommand: true
+      name: Close investigation
+      script: Builtin|||closeInvestigation
+      type: regular
+      version: -1
+    taskid: d973acf2-d021-420b-8b64-0193071de6f4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 940
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "true"
+      key:
+        simple: output_list
+      value:
+        simple: ${inputs.Keys}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 458a7739-bdfc-493d-8997-a78ad18e1b41
+      iscommand: false
+      name: Create List of Dictionaries
+      script: Set
+      type: regular
+      version: -1
+    taskid: 458a7739-bdfc-493d-8997-a78ad18e1b41
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 430,
+          "y": -200
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    scriptarguments:
+      url:
+        simple: https://www.google.com
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6fc439e5-f925-497f-87d5-996cdac4ca4d
+      iscommand: false
+      name: rasterize pdf
+      script: 066ea175-3640-432e-881a-f006b91a8c53
+      type: regular
+      version: -1
+    taskid: 6fc439e5-f925-497f-87d5-996cdac4ca4d
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 420,
+          "y": -430
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1635,
+        "width": 410,
+        "x": 420,
+        "y": -600
+      }
+    }
+  }
