@@ -1,0 +1,312 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 1117cc5b-cfe5-448c-88f5-494723ce0852
+inputs: []
+name: Emailaskuserresponsetest
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: f9dc3886-1acf-4d6d-8e77-682dcf5661c7
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: f9dc3886-1acf-4d6d-8e77-682dcf5661c7
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      email:
+        simple: sramesh1@paloaltonetworks.com
+      message:
+        simple: Hi, Please provide the response by choosing from below options.
+      option1:
+        simple: "yes"
+      option2:
+        simple: "no"
+      subject:
+        simple: TestingEmailaskuser
+      task:
+        simple: response
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Ask a user a question via email and process the reply directly
+        into the investigation.
+      id: 27ee4e89-3e20-4b53-8980-366ee96e2af8
+      iscommand: false
+      name: EmailUser
+      script: EmailAskUser
+      type: regular
+      version: -1
+    taskid: 27ee4e89-3e20-4b53-8980-366ee96e2af8
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 195
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "no":
+      - "4"
+      "yes":
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      responseEntryId:
+        simple: ${lastCompletedTaskEntries}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Extract user's response from EmailAskUser reply. Returns the first
+        textual response line of the provided entry that contains the reply body.
+        Use ${lastCompletedTaskEntries} to analyze the previous playbook task containing
+        the user's reply.
+      id: a94f6c11-30b3-48d3-8cb3-70b7c1af34ba
+      iscommand: false
+      name: Validating User response
+      script: EmailAskUserResponse
+      type: condition
+      version: -1
+    taskid: a94f6c11-30b3-48d3-8cb3-70b7c1af34ba
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 545
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 1be0f826-22ac-4b13-8236-e289c2fb83a6
+      iscommand: false
+      name: Print Yes
+      script: Print
+      type: regular
+      version: -1
+    taskid: 1be0f826-22ac-4b13-8236-e289c2fb83a6
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "no"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 75427d74-a608-4163-8e1e-d1b49ca0d120
+      iscommand: false
+      name: Print No
+      script: Print
+      type: regular
+      version: -1
+    taskid: 75427d74-a608-4163-8e1e-d1b49ca0d120
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 720
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0a75f204-d34c-4fe1-8762-1b27cc7b8042
+      iscommand: false
+      name: User Response
+      tags:
+      - response
+      type: regular
+      version: -1
+    taskid: 0a75f204-d34c-4fe1-8762-1b27cc7b8042
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 370
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: ${EmailAskUserResponse}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 3e2b7bb5-d641-4dc7-8e66-cf0b7b5f85de
+      iscommand: false
+      name: print user response
+      script: Print
+      type: regular
+      version: -1
+    taskid: 3e2b7bb5-d641-4dc7-8e66-cf0b7b5f85de
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 720
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: true
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      seconds:
+        simple: "600"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sleep for X seconds
+      id: 5b1a0e56-50d6-4f8c-8b9b-a19bad7e1321
+      iscommand: false
+      name: Sleep
+      script: Sleep
+      tags:
+      - response
+      type: regular
+      version: -1
+    taskid: 5b1a0e56-50d6-4f8c-8b9b-a19bad7e1321
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 895
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 940,
+        "width": 1240,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
