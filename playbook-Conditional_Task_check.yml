@@ -1,0 +1,201 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: c08d3c3b-9912-41bb-8456-d7d04787fb0d
+inputs: []
+name: Conditional Task check
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 73fc327b-d9b8-4ef9-8f0e-ae63eebe87c1
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 73fc327b-d9b8-4ef9-8f0e-ae63eebe87c1
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: Reportedemail
+      value:
+        simple: abc@dbsvicker.com
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: a3dbcaf1-8d63-4c76-8d0c-f07a2c9326fe
+      iscommand: false
+      name: Addtocontext
+      script: Set
+      type: regular
+      version: -1
+    taskid: a3dbcaf1-8d63-4c76-8d0c-f07a2c9326fe
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 195
+        }
+      }
+  "2":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: Reportedemail
+          operator: containsGeneral
+          right:
+            value:
+              simple: dbs.com
+        - left:
+            iscontext: true
+            value:
+              simple: Reportedemail
+          operator: containsGeneral
+          right:
+            value:
+              simple: dbsvicker.com
+      label: "yes"
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 4eb49d46-650b-458c-85a8-b4704f2ab7fc
+      iscommand: false
+      name: check if domain exists
+      type: condition
+      version: -1
+    taskid: 4eb49d46-650b-458c-85a8-b4704f2ab7fc
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 370
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 096ccff8-7a29-4323-86b4-ee2737d9ef6b
+      iscommand: false
+      name: Print Yes
+      type: regular
+      version: -1
+    taskid: 096ccff8-7a29-4323-86b4-ee2737d9ef6b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 1c579679-d258-4ad4-882e-07eee74d875d
+      iscommand: false
+      name: Not matching
+      type: regular
+      version: -1
+    taskid: 1c579679-d258-4ad4-882e-07eee74d875d
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 545
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 590,
+        "width": 810,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
