@@ -1,0 +1,1814 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: e27c2273-6e3b-4ae4-89ad-b9e266a8bf85
+inputs:
+- description: ""
+  key: hostname
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: username
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: src_ip
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: dst_ip
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: http_status_code
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: url
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: Zscaler_Action
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: Cust_IRC_Securonix_Zscaler ZIA Proxy Traffic - Subplaybook
+outputs: []
+sourceplaybookid: e59c7ef9-c1de-47f7-8504-64dcf1d0403a
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "88"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 5b59117e-1613-4419-8bf0-1dfa4baa3d1b
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 5b59117e-1613-4419-8bf0-1dfa4baa3d1b
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 510,
+          "y": 50
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      forEach: true
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "13"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      hostname:
+        complex:
+          root: inputs.hostname
+          transformers:
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e2e2b309-d567-4f52-8c43-0c54cdda07bb
+      iscommand: false
+      name: Zscaler Patient 0 Compliance check
+      playbookName: Zscaler Patient 0 Compliance check
+      type: playbook
+      version: -1
+    taskid: e2e2b309-d567-4f52-8c43-0c54cdda07bb
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 70,
+          "y": 545
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "66"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      username:
+        complex:
+          root: inputs.username
+          transformers:
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e2d8cc22-86a1-4423-8106-7ede67435e5d
+      iscommand: false
+      name: Zscaler_VIP_User_subplaybook
+      playbookName: Zscaler_VIP_User_subplaybook
+      type: playbook
+      version: -1
+    taskid: e2d8cc22-86a1-4423-8106-7ede67435e5d
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 895
+        }
+      }
+  "12":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: EPO_OSPlatform
+                root: ComplianceCheck
+          operator: isEqualString
+          right:
+            value:
+              simple: Server
+      label: Server
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: EPO_OSPlatform
+                root: ComplianceCheck
+          operator: isEqualString
+          right:
+            value:
+              simple: Workstation
+      label: Endpoint
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "121"
+      Endpoint:
+      - "6"
+      Server:
+      - "65"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0521a24b-8502-44e7-8cd5-6811b62860f9
+      iscommand: false
+      name: Check if the Host is a Server
+      type: condition
+      version: -1
+    taskid: 0521a24b-8502-44e7-8cd5-6811b62860f9
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 510,
+          "y": 370
+        }
+      }
+  "13":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: ITAM_Overall Compliance Status
+                root: HostComplianceCheck
+          operator: isEqualString
+          right:
+            value:
+              simple: non-compliant
+      label: Non-Compliant
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "7"
+      Non-Compliant:
+      - "14"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 1c67600b-1e1f-49d7-88de-784fe190ceab
+      iscommand: false
+      name: Check if Host is Non Compliant
+      type: condition
+      version: -1
+    taskid: 1c67600b-1e1f-49d7-88de-784fe190ceab
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 70,
+          "y": 720
+        }
+      }
+  "14":
+    continueonerrortype: ""
+    id: "14"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "68"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      username:
+        complex:
+          root: inputs.username
+          transformers:
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e7535067-672c-43b0-8c2f-3c00ce499c31
+      iscommand: false
+      name: Zscaler_VIP_User_subplaybook
+      playbookName: Zscaler_VIP_User_subplaybook
+      type: playbook
+      version: -1
+    taskid: e7535067-672c-43b0-8c2f-3c00ce499c31
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 510,
+          "y": 1070
+        }
+      }
+  "16":
+    continueonerrortype: ""
+    id: "16"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "17"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      htmlBody:
+        simple: "<html><body>\n<div dir=\"ltr\"><img src=\"https://share1.cloudhq-mkt3.net/b63bfb4cd40349.jpeg\"
+          alt=\"\" width=\"800\" height=\"171\">\n<br>\n<br>\n<p style=\"font-family:
+          Arial; font-size: 16px; width: 800px;\">Hi IRC Lead,\n</p>\n<p style=\"font-family:
+          Arial; font-size: 16px; width: 800px;\">This is AutoGenerated emailf from
+          Demisto  for the Fireeye - network Monitoring tool  and alert is triggered
+          \ for the Domain Match eventtype\n</p>\n<br>\n<p style=\"font-family: Arial;
+          font-size: 16px; width: 800px;\">\nWe are from Cyber Defense team monitors
+          the Wipro network for possible detection of Malicious activity Malware activity
+          / Scan activity and it required immediate attention<br>\t\nPlease review
+          the below information provided and provide the validation(s) and  recommendation(s)
+          to be followed.<br>\t\nOur monitoring tool detected the alert for -  Zscaler
+          Patient 0 Sandbox Malware & Malware Quarantine Subplaybook\nPart of the
+          callback phase, This alert occurs when a Possible Patient zero event is
+          logged <br><br><br>\n\n\nPlease find the Context gathering details available
+          in the Evidence board of - Demisto Incident-<br><br>\n\n\nThe User involved
+          in this incident is a VIP <br>\nPlease use the context building from the
+          Demisto Incident evidence board<br>\n\n<p style=\"font-family: Arial; font-size:
+          16px; width: 800px;\">\nValidation(s)<br><br>\t\t\t\t\t\t\t\t\t\t\n <br>\n</p>\n\n<br
+          />\n\n<p style=\"font-family: Arial; font-size: 16px; width: 800px;\">\nThis
+          is an automated email, please do not reply. If you have any queries please
+          reach out to \n  <a href=\"mailto:irc-operations@wipro.com)\">irc-operations@wipro.com</a>.\n
+          \ </p>\n<br />\n  <p style=\"font-family: Arial; font-size: 16px; width:
+          800px;\">\n  Thanks and Regards,\n  <br>IRC - Operations\n  <br>Wipro-IRMC-Cyber
+          Defense\n  <br>irc-operations@wipro.com\n  </p>\n<br>\n</div>\n</body></html>"
+      subject:
+        simple: '#{incident.priority} | ${incident.name}'
+      to:
+        complex:
+          root: analystemail
+          transformers:
+          - args:
+              prefix:
+                value:
+                  simple: irc-operations@wipro.com,irc-leads@wipro.com,
+              suffix: {}
+            operator: concat
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: EWS Mail Sender
+      description: Sends an email using EWS.
+      id: b98a2d15-632e-4dd8-8e61-b4061c54b88a
+      iscommand: true
+      name: Send email notification to IRC leads
+      script: EWS Mail Sender|||send-mail
+      type: regular
+      version: -1
+    taskid: b98a2d15-632e-4dd8-8e61-b4061c54b88a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1245
+        }
+      }
+  "17":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: 'inputs.http_status_code '
+                transformers:
+                - operator: Stringify
+          operator: isEqualString
+          right:
+            value:
+              simple: "200"
+      label: "200"
+    continueonerrortype: ""
+    id: "17"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "25"
+      "200":
+      - "19"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Set a value in context under the key you entered. If no value is entered, the script doesn't do anything.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 435a4e24-cf43-437f-8e34-c66204d5d6e5
+      iscommand: false
+      name: Check http_status_code
+      type: condition
+      version: -1
+    taskid: 435a4e24-cf43-437f-8e34-c66204d5d6e5
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 1420
+        }
+      }
+  "19":
+    continueonerrortype: ""
+    id: "19"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "65"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      priority:
+        simple: P3
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.set.incident
+      id: df3864d5-2279-4048-81ef-dbb8e0b5c8d9
+      iscommand: true
+      name: Change the priority of the incident to P2(modified to default P3)
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: df3864d5-2279-4048-81ef-dbb8e0b5c8d9
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 510,
+          "y": 2120
+        }
+      }
+  "24":
+    continueonerrortype: ""
+    id: "24"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "60"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      query:
+        simple: ( sourceBrand:"QRadar v3" or sourceBrand:"Securonix") and (usernames:${inputs.username})
+          created:>="2 days ago"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: QRadar v3
+      description: |-
+        Searches Demisto incidents.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: f50a8ff6-527d-4e61-8547-e866aee6df49
+      iscommand: false
+      name: Using hostname and username, check for any offence reported in last 48hr
+        on SIEM
+      script: SearchIncidentsV2
+      type: regular
+      version: -1
+    taskid: f50a8ff6-527d-4e61-8547-e866aee6df49
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 1770
+        }
+      }
+  "25":
+    continueonerrortype: ""
+    id: "25"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "24"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        This is a generic playbook which can be used across all other playbooks where the requirement is:
+        * Querying CS with hostname to identify associated detections and incidents within the mentioned timeframe.
+      id: 28235cae-492b-46ab-8ed9-799472e89102
+      iscommand: false
+      name: Cust_IRC_Generic_Determine CS detections and incidents for a given hostname
+      playbookName: Wipro_IRC_Generic_Determine CS detections and incidents for a
+        given hostname
+      type: playbook
+      version: -1
+    taskid: 28235cae-492b-46ab-8ed9-799472e89102
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 1595
+        }
+      }
+  "33":
+    continueonerrortype: ""
+    id: "33"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "74"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        This is a generic playbook which can be used across all other playbooks where the requirement is:
+        * Querying CS with hostname and IOC to identify the processes involved in the initiation of the connection
+      id: 33b8aaf4-bf68-4dca-85af-f3c6037ef692
+      iscommand: false
+      name: Cust_IRC_Generic_Find processes on CS using hostname and ioc
+      playbookName: Wipro_IRC_Generic_Find processes on CS using hostname and ioc
+      type: playbook
+      version: -1
+    taskid: 33b8aaf4-bf68-4dca-85af-f3c6037ef692
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 725,
+          "y": 3170
+        }
+      }
+  "34":
+    continueonerrortype: ""
+    id: "34"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "55"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        This is a generic playbook which can be used across all other playbooks where the requirement is:
+        * Querying CS with hostname and IOC to identify the processes involved in the initiation of the connection
+      id: 882e0f11-c218-4a77-8f9c-7d50add192a9
+      iscommand: false
+      name: Cust_IRC_Generic_Find processes on CS using hostname and ioc
+      playbookName: Wipro_IRC_Generic_Find processes on CS using hostname and ioc
+      type: playbook
+      version: -1
+    taskid: 882e0f11-c218-4a77-8f9c-7d50add192a9
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 295,
+          "y": 3170
+        }
+      }
+  "35":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: file_name
+                root: CrowdStrike.Process
+          operator: containsString
+          right:
+            value:
+              simple: chrome.exe
+        - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: file_name
+                root: CrowdStrike.Process
+          operator: containsString
+          right:
+            value:
+              simple: msedge.exe
+        - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: file_name
+                root: CrowdStrike.Process
+          operator: containsString
+          right:
+            value:
+              simple: firefox.exe
+        - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: file_name
+                root: CrowdStrike.Process
+          operator: containsString
+          right:
+            value:
+              simple: iexplorer.exe
+      label: browser
+    continueonerrortype: ""
+    id: "35"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "37"
+      browser:
+      - "90"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 94ee197a-e6c8-49e0-8d85-2b4c70c5966f
+      iscommand: false
+      name: Check if Process involved is a browser
+      type: condition
+      version: -1
+    taskid: 94ee197a-e6c8-49e0-8d85-2b4c70c5966f
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1277.5,
+          "y": 3520
+        }
+      }
+  "37":
+    continueonerrortype: ""
+    id: "37"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "119"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      priority:
+        simple: P3
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.set.incident
+      id: bfa8444f-ee7d-4525-8ad8-a655b9a3724b
+      iscommand: true
+      name: set P3 priority of the incident
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: bfa8444f-ee7d-4525-8ad8-a655b9a3724b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1165,
+          "y": 3870
+        }
+      }
+  "55":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Process
+                root: CrowdStrike
+          operator: isExists
+          right:
+            value: {}
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Process
+                root: CrowdStrike
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "55"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "87"
+      "yes":
+      - "35"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9ba24842-a51a-40b6-8514-2d6fddeb3af9
+      iscommand: false
+      name: Check if CS has brought any result
+      type: condition
+      version: -1
+    taskid: 9ba24842-a51a-40b6-8514-2d6fddeb3af9
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 295,
+          "y": 3345
+        }
+      }
+  "60":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: EPO_Logs
+          operator: containsGeneral
+          right:
+            value:
+              simple: '"Data":"No results returned by QRadar"'
+        - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Detection
+                root: CrowdStrike
+          operator: isEmpty
+        - left:
+            iscontext: true
+            value:
+              complex:
+                root: foundIncidents
+          operator: isEmpty
+      label: No results
+    continueonerrortype: ""
+    id: "60"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "19"
+      No results:
+      - "105"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: dbfda1a9-50c0-4f13-85e5-d925964ca2d3
+      iscommand: false
+      name: Check if any results found
+      type: condition
+      version: -1
+    taskid: dbfda1a9-50c0-4f13-85e5-d925964ca2d3
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 1945
+        }
+      }
+  "65":
+    continueonerrortype: ""
+    id: "65"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "105"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      htmlBody:
+        simple: "<html><body>\n<div dir=\"ltr\"><img src=\"https://share1.cloudhq-mkt3.net/b63bfb4cd40349.jpeg\"
+          alt=\"\" width=\"800\" height=\"171\">\n<br>\n<br>\n<p style=\"font-family:
+          Arial; font-size: 16px; width: 800px;\">Hi IRC Lead,\n</p>\n<p style=\"font-family:
+          Arial; font-size: 16px; width: 800px;\">This is AutoGenerated emailf from
+          Demisto  for the Fireeye - network Monitoring tool  and alert is triggered
+          \ for the Domain Match eventtype\n</p>\n<br>\n<p style=\"font-family: Arial;
+          font-size: 16px; width: 800px;\">\nWe are from Cyber Defense team monitors
+          the Wipro network for possible detection of Malicious activity Malware activity
+          / Scan activity and it required immediate attention<br>\t\nPlease review
+          the below information provided and provide the validation(s) and  recommendation(s)
+          to be followed.<br>\t\nOur monitoring tool detected the alert for -  Zscaler
+          Spyware, Adware & Botnet\n\nPart of the callback phase, This alert occurs
+          when a Possible Zscaler Spyware, Adware or Botnet event is logged <br><br><br>\n\n\nPlease
+          find the Context gathering details available in the Evidence board of -
+          Demisto Incident-<br><br>\n\n\nThe status Code response from the server
+          is 200 or the host was found to be a server or the there were other incidents
+          found with the given hostname or Username <br>\nPlease use the context building
+          from the Demisto Incident evidence board<br>\n\n<p style=\"font-family:
+          Arial; font-size: 16px; width: 800px;\">\nValidation(s)<br><br>\t\t\t\t\t\t\t\t\t\t\n
+          <br>\n</p>\n\n<br />\n\n<p style=\"font-family: Arial; font-size: 16px;
+          width: 800px;\">\nThis is an automated email, please do not reply. If you
+          have any queries please reach out to \n  <a href=\"mailto:irc-operations@wipro.com)\">irc-operations@wipro.com</a>.\n
+          \ </p>\n<br />\n  <p style=\"font-family: Arial; font-size: 16px; width:
+          800px;\">\n  Thanks and Regards,\n  <br>IRC - Operations\n  <br>Wipro-IRMC-Cyber
+          Defense\n  <br>irc-operations@wipro.com\n  </p>\n<br>\n</div>\n</body></html>"
+      subject:
+        simple: '#${incident.priority} | ${incident.name}'
+      to:
+        complex:
+          root: analystemail
+          transformers:
+          - args:
+              prefix:
+                value:
+                  simple: irc-operations@wipro.com,irc-leads@wipro.com,
+              suffix: {}
+            operator: concat
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: EWS Mail Sender
+      description: Sends an email using EWS.
+      id: da05d903-7dab-4a1f-8ce4-48afe4b35e4c
+      iscommand: true
+      name: Send email notification to IRC leads
+      script: EWS Mail Sender|||send-mail
+      type: regular
+      version: -1
+    taskid: da05d903-7dab-4a1f-8ce4-48afe4b35e4c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 632.5,
+          "y": 2295
+        }
+      }
+  "66":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: VIP_user
+                transformers:
+                - operator: Stringify
+          operator: isEqualString
+          right:
+            value:
+              simple: "Yes"
+      label: VIP User
+    continueonerrortype: ""
+    id: "66"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "17"
+      VIP User:
+      - "16"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Set a value in context under the key you entered. If no value is entered, the script doesn't do anything.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 1cb20885-10b9-4da1-8765-b8f3983ffe8e
+      iscommand: false
+      name: Check if the user is VIP
+      type: condition
+      version: -1
+    taskid: 1cb20885-10b9-4da1-8765-b8f3983ffe8e
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1070
+        }
+      }
+  "68":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: VIP_user
+                transformers:
+                - operator: Stringify
+          operator: isEqualString
+          right:
+            value:
+              simple: "Yes"
+      label: VIP User
+    continueonerrortype: ""
+    id: "68"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "17"
+      VIP User:
+      - "19"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Set a value in context under the key you entered. If no value is entered, the script doesn't do anything.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: f28e5535-0cdb-45ab-8c9a-3c3ef1a051d3
+      iscommand: false
+      name: Check if the user is VIP
+      type: condition
+      version: -1
+    taskid: f28e5535-0cdb-45ab-8c9a-3c3ef1a051d3
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 510,
+          "y": 1245
+        }
+      }
+  "71":
+    continueonerrortype: ""
+    evidencedata:
+      customfields: {}
+      description:
+        simple: Query to Anomali for URL reputation
+    id: "71"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "72"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      url:
+        complex:
+          root: inputs.url
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Anomali ThreatStream v2
+      description: Checks the reputation of the given URL.
+      id: 49f00db4-c6e7-458e-8b9c-31d9d265bb0a
+      iscommand: true
+      name: Query Anomali for URL Reputation
+      script: Anomali ThreatStream v2|||url
+      type: regular
+      version: -1
+    taskid: 49f00db4-c6e7-458e-8b9c-31d9d265bb0a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 295,
+          "y": 2645
+        }
+      }
+  "72":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Confidence
+                root: ThreatStream.Url
+          operator: isEmpty
+      label: No Data
+    continueonerrortype: ""
+    id: "72"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "73"
+      No Data:
+      - "34"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c3c9eef1-185b-44db-8fec-c48626c3cbc0
+      iscommand: false
+      name: Check if Anomaly has brought any results
+      type: condition
+      version: -1
+    taskid: c3c9eef1-185b-44db-8fec-c48626c3cbc0
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 510,
+          "y": 2820
+        }
+      }
+  "73":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Confidence
+                root: ThreatStream.Url
+          operator: greaterThanOrEqual
+          right:
+            value:
+              simple: "70"
+      label: '>= 70'
+    continueonerrortype: ""
+    id: "73"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "34"
+      '>= 70':
+      - "33"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 526c6f9a-9f20-41c1-876b-9c19dcd6f2ad
+      iscommand: false
+      name: Check if the score is greater than 70
+      type: condition
+      version: -1
+    taskid: 526c6f9a-9f20-41c1-876b-9c19dcd6f2ad
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 715,
+          "y": 2995
+        }
+      }
+  "74":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Process
+                root: CrowdStrike
+          operator: isExists
+          right:
+            value: {}
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: Process
+                root: CrowdStrike
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "74"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "84"
+      "yes":
+      - "75"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 4167d8c2-7cf3-4c35-88dc-d3c901e9bba4
+      iscommand: false
+      name: Check if CS has brought any result
+      type: condition
+      version: -1
+    taskid: 4167d8c2-7cf3-4c35-88dc-d3c901e9bba4
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 725,
+          "y": 3345
+        }
+      }
+  "75":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: file_name
+                root: CrowdStrike.Process
+          operator: containsString
+          right:
+            value:
+              simple: chrome.exe
+        - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: file_name
+                root: CrowdStrike.Process
+          operator: containsString
+          right:
+            value:
+              simple: msedge.exe
+        - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: file_name
+                root: CrowdStrike.Process
+          operator: containsString
+          right:
+            value:
+              simple: firefox.exe
+        - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: file_name
+                root: CrowdStrike.Process
+          operator: containsString
+          right:
+            value:
+              simple: iexplorer.exe
+      label: browser
+    continueonerrortype: ""
+    id: "75"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "120"
+      browser:
+      - "77"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c638259f-8075-49ce-8c65-e2bfad58bb33
+      iscommand: false
+      name: Check if Process involved is a browser
+      type: condition
+      version: -1
+    taskid: c638259f-8075-49ce-8c65-e2bfad58bb33
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 725,
+          "y": 3520
+        }
+      }
+  "77":
+    continueonerrortype: ""
+    id: "77"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "120"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      priority:
+        simple: P3
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.set.incident
+      id: 131e0710-c984-4488-8cbb-347b9a70529f
+      iscommand: true
+      name: set P3 priority of the incident
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: 131e0710-c984-4488-8cbb-347b9a70529f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 837.5,
+          "y": 3695
+        }
+      }
+  "81":
+    continueonerrortype: ""
+    id: "81"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "87"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: d2cc8954-b6d3-40ed-85ba-5874af4c867f
+      iscommand: false
+      name: Cust_IP Enrichment
+      playbookName: Wipro_IP Enrichment
+      type: playbook
+      version: -1
+    taskid: d2cc8954-b6d3-40ed-85ba-5874af4c867f
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 1165,
+          "y": 4220
+        }
+      }
+  "83":
+    continueonerrortype: ""
+    id: "83"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      forEach: true
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "84"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 776b84eb-8b3b-4e8f-8cfd-fde104ddd2c6
+      iscommand: false
+      name: Cust_IP Enrichment
+      playbookName: Wipro_IP Enrichment
+      type: playbook
+      version: -1
+    taskid: 776b84eb-8b3b-4e8f-8cfd-fde104ddd2c6
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 725,
+          "y": 4045
+        }
+      }
+  "84":
+    continueonerrortype: ""
+    id: "84"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 3a0e67fa-1f5e-4d77-8753-032d7096d362
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 3a0e67fa-1f5e-4d77-8753-032d7096d362
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 592.5,
+          "y": 4235
+        }
+      }
+  "87":
+    continueonerrortype: ""
+    id: "87"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 34d8abb8-c595-4095-81d0-09712c725c2a
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 34d8abb8-c595-4095-81d0-09712c725c2a
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 1062.5,
+          "y": 4395
+        }
+      }
+  "88":
+    continueonerrortype: ""
+    id: "88"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "12"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This is a generic subplaybook which checks an input host against
+        McAfee ePO and adds ComplianceCheck.EPO_AgentVersion,  ComplianceCheck.EPO_OSType,
+        ComplianceCheck.EPO_OSVersion, ComplianceCheck.EPO_LastUpdate, and ComplianceCheck.EPO_OSPlatform
+        keys to the context
+      id: a0a9b4e5-921b-47bb-839e-e4b3886b6a09
+      iscommand: false
+      name: Cust_IRC_Generic_Host_Compliance_Check_using_EPO
+      playbookName: Wipro_IRC_Generic_Host_Compliance_Check_using_EPO
+      type: playbook
+      version: -1
+    taskid: a0a9b4e5-921b-47bb-839e-e4b3886b6a09
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 510,
+          "y": 195
+        }
+      }
+  "90":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: inputs.Zscaler_Action
+          operator: isEqualString
+          right:
+            value:
+              simple: Blocked
+      label: Blocked
+    continueonerrortype: ""
+    id: "90"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "37"
+      Blocked:
+      - "91"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0c288785-f3c4-41d4-8293-b876ce007de2
+      iscommand: false
+      name: Check if Blocked by Zscaler
+      type: condition
+      version: -1
+    taskid: 0c288785-f3c4-41d4-8293-b876ce007de2
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1585,
+          "y": 3695
+        }
+      }
+  "91":
+    continueonerrortype: ""
+    id: "91"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "87"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: Zscaler_Action
+      value:
+        complex:
+          root: inputs.Zscaler_Action
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Set a value in context under the key you entered. If no value is entered, the script doesn't do anything.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 88a4e4a7-0480-4d04-8f60-a0cf3c1133a1
+      iscommand: false
+      name: Set Zscaler_Action to Context
+      script: SetAndHandleEmpty
+      type: regular
+      version: -1
+    taskid: 88a4e4a7-0480-4d04-8f60-a0cf3c1133a1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1595,
+          "y": 4220
+        }
+      }
+  "105":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: inputs.url
+          operator: containsGeneral
+          right:
+            value:
+              simple: "443"
+        - left:
+            iscontext: true
+            value:
+              complex:
+                root: inputs.url
+          operator: containsGeneral
+          right:
+            value:
+              simple: "80"
+      label: "yes"
+    continueonerrortype: ""
+    id: "105"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "71"
+      "yes":
+      - "106"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: f4b16256-97ee-4ae2-856f-202e4825d20b
+      iscommand: false
+      name: Check if port 443/80 is in URL
+      type: condition
+      version: -1
+    taskid: f4b16256-97ee-4ae2-856f-202e4825d20b
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 510,
+          "y": 2470
+        }
+      }
+  "106":
+    continueonerrortype: ""
+    evidencedata:
+      customfields: {}
+      description:
+        simple: Query to Anomali for URL reputation
+    id: "106"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "72"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      url:
+        complex:
+          root: inputs.url
+          transformers:
+          - args:
+              delimiter:
+                value:
+                  simple: ':'
+              fields:
+                value:
+                  simple: "1"
+            operator: Cut
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Anomali ThreatStream v2
+      description: Checks the reputation of the given URL.
+      id: 70ebf049-0b03-4b3f-88b4-bb5a191fe5b6
+      iscommand: true
+      name: Query Anomali for Domain Reputation
+      script: Anomali ThreatStream v2|||url
+      type: regular
+      version: -1
+    taskid: 70ebf049-0b03-4b3f-88b4-bb5a191fe5b6
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 725,
+          "y": 2645
+        }
+      }
+  "119":
+    continueonerrortype: ""
+    id: "119"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "81"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      column_headers:
+        simple: devicecustomstring1,sourceaddress,destinationaddress,eventoutcome,requestmethod,filetype
+      hours_ago:
+        simple: 24 hours ago
+      spotter_description:
+        simple: Proxy Log search for Bidirectional traffic
+      spotter_query:
+        simple: resourcegroupname = "Wipro-BITS-Prod_Zscaler ZIA"  AND tenantname
+          = "WIPRO" and sourceaddress IN ${inputs.src_ip},${inputs.dst_ip} AND destinationaddress
+          IN  ${inputs.dst_ip},${inputs.src_ip} AND accountname = ${inputs.username}
+      spotter_results_key:
+        simple: spotter_results_bidirectional_proxy_logs
+      time_zone:
+        simple: IST
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e15ee3c8-01ff-4ad6-8154-ba4cebcf8999
+      iscommand: false
+      name: Proxy Log search for Bidirectional traffic (Spotter Query)
+      playbookName: Wipro_IRC_Securonix_Generic_Get_Activity_Data
+      type: playbook
+      version: -1
+    taskid: e15ee3c8-01ff-4ad6-8154-ba4cebcf8999
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 1165,
+          "y": 4045
+        }
+      }
+  "120":
+    continueonerrortype: ""
+    id: "120"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "83"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      column_headers:
+        simple: devicecustomstring1,sourceaddress,destinationaddress,eventoutcome,requestmethod,filetype
+      hours_ago:
+        simple: 24 hours ago
+      spotter_description:
+        simple: Proxy Log search for Bidirectional traffic
+      spotter_query:
+        simple: resourcegroupname = "Wipro-BITS-Prod_Zscaler ZIA"  AND tenantname
+          = "WIPRO" and sourceaddress = ${inputs.src_ip} OR ${inputs.dst_ip} AND destinationaddress=  ${inputs.dst_ip}
+          OR ${inputs.src_ip} accountname = ${inputs.username}
+      spotter_results_key:
+        simple: spotter_results_bidirectional_proxy_logs
+      time_zone:
+        simple: IST
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 82aa54f5-efea-457a-8614-8c718fe38fde
+      iscommand: false
+      name: Proxy Log search for Bidirectional traffic (Spotter Query)
+      playbookName: Wipro_IRC_Securonix_Generic_Get_Activity_Data
+      type: playbook
+      version: -1
+    taskid: 82aa54f5-efea-457a-8614-8c718fe38fde
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 725,
+          "y": 3870
+        }
+      }
+  "121":
+    continueonerrortype: ""
+    id: "121"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e315a2f1-b71f-4ca5-85a9-49f35a474119
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: e315a2f1-b71f-4ca5-85a9-49f35a474119
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 510,
+          "y": 655
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {
+      "12_6_Endpoint": 0.56,
+      "17_19_200": 0.86,
+      "55_35_yes": 0.59,
+      "68_19_VIP User": 0.39
+    },
+    "paper": {
+      "dimensions": {
+        "height": 4410,
+        "width": 1925,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
