@@ -1,0 +1,415 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 1240b9a5-22c4-4be0-83d6-56bfb093d1bb
+inputs: []
+name: sample pb
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: cbc76276-c040-4101-89cb-baea8e407636
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: cbc76276-c040-4101-89cb-baea8e407636
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 65
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      key:
+        simple: parameterValue
+      value:
+        complex:
+          accessor: Value
+          root: parameter
+          transformers:
+          - args:
+              index:
+                iscontext: true
+                value:
+                  simple: ${indexOfParameterName}
+            operator: atIndex
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: a126b441-9094-4cac-83a5-5e63cc6fa3db
+      iscommand: false
+      name: Get Name
+      script: Set
+      type: regular
+      version: -1
+    taskid: a126b441-9094-4cac-83a5-5e63cc6fa3db
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 225
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      key:
+        simple: indexOfParameterName
+      value:
+        complex:
+          accessor: Name
+          root: parameter
+          transformers:
+          - args:
+              fromLast: {}
+              item:
+                value:
+                  simple: Name
+            operator: indexOf
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: e7088355-a290-4341-804f-215e6a2dd86b
+      iscommand: false
+      name: Get the Parameter Name & Value
+      script: Set
+      type: regular
+      version: -1
+    taskid: e7088355-a290-4341-804f-215e6a2dd86b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: sdsd
+      cc: null
+      format: ""
+      methods: []
+      replyOptions:
+      - "NO"
+      - "YES"
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 44f47e6a-ee98-447a-85ef-49fe6cb62eb7
+      iscommand: false
+      name: Untitled Task
+      type: condition
+      version: -1
+    taskid: 44f47e6a-ee98-447a-85ef-49fe6cb62eb7
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 400
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "10"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: kk
+      value:
+        simple: Nikhil
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: ccfd4512-7c6f-44e6-8815-743c3b77904f
+      iscommand: false
+      name: Untitled Task
+      script: Set
+      type: regular
+      version: -1
+    taskid: ccfd4512-7c6f-44e6-8815-743c3b77904f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 225
+        }
+      }
+  "6":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: ${key1}
+          operator: in
+          right:
+            iscontext: true
+            value:
+              simple: ${shaD}
+      label: "yes"
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "8"
+      "yes":
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9bc4704b-690a-4c0e-843c-a39c4d96793f
+      iscommand: false
+      name: Untitled Task
+      type: condition
+      version: -1
+    taskid: 9bc4704b-690a-4c0e-843c-a39c4d96793f
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 750
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: b80369d1-033f-40f1-8a1f-511319612567
+      iscommand: false
+      name: Untitled Task
+      script: Print
+      type: regular
+      version: -1
+    taskid: b80369d1-033f-40f1-8a1f-511319612567
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 925
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "no"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 00e92706-6495-4d5c-8d1c-2e7145f24a16
+      iscommand: false
+      name: Untitled Task
+      script: Print
+      type: regular
+      version: -1
+    taskid: 00e92706-6495-4d5c-8d1c-2e7145f24a16
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 695,
+          "y": 925
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: shaD
+      value:
+        simple: ${DemistoUsers.name}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 522d03ac-3b0e-4dd6-87d3-47cc53423eac
+      iscommand: false
+      name: Untitled Task
+      script: Set
+      type: regular
+      version: -1
+    taskid: 522d03ac-3b0e-4dd6-87d3-47cc53423eac
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 575
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: key1
+      value:
+        simple: ${kk} Garg
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 72474dfb-3f16-4e08-8862-927bfbc77cc6
+      iscommand: false
+      name: Untitled Task
+      script: Set
+      type: regular
+      version: -1
+    taskid: 72474dfb-3f16-4e08-8862-927bfbc77cc6
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 400
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 970,
+        "width": 1025,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
