@@ -1,0 +1,449 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 87933269-f606-46f9-8641-c505b5aa013c
+inputs: []
+name: sha
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9a9b925a-f924-4e3c-83c5-8b760e277d4a
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 9a9b925a-f924-4e3c-83c5-8b760e277d4a
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 34525a72-e930-4744-860b-38cac9cab383
+      iscommand: false
+      name: delete context
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: 34525a72-e930-4744-860b-38cac9cab383
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 190
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: New CVE ${newCVE} found. You want to take action on it?
+        options: []
+        optionsarg:
+        - simple: "Yes"
+        - simple: "No"
+        - simple: Need more information
+        placeholder: ""
+        readonly: false
+        required: true
+        tooltip: ""
+        type: singleSelect
+      sender: ""
+      title: New CVE Alert !!!!
+      totalanswers: 0
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: New message from the XBot
+      cc: null
+      format: ""
+      methods:
+      - SlackV2
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: shapatil@paloaltonetworks.com
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9c2710b0-a41c-4455-89b8-1d22c1b4522f
+      iscommand: false
+      name: CVE found! Ask manager for approval
+      type: collection
+      version: -1
+    taskid: 9c2710b0-a41c-4455-89b8-1d22c1b4522f
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 350
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      ignoreAddURL:
+        simple: "true"
+      message:
+        simple: Blocked. Thank you for your response!
+      to:
+        simple: shapatil@paloaltonetworks.com
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: SlackV2
+      description: Sends a message to a user, group, or channel.
+      id: a62253da-7a56-414b-810d-6e61cb7457f2
+      iscommand: true
+      name: Block it
+      script: SlackV2|||send-notification
+      type: regular
+      version: -1
+    taskid: a62253da-7a56-414b-810d-6e61cb7457f2
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 210,
+          "y": 770
+        }
+      }
+  "4":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: New CVE Alert !!!!.Answers.0
+          operator: isEqualString
+          right:
+            value:
+              simple: "Yes"
+      label: "yes"
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: New CVE Alert !!!!.Answers.0
+          operator: isEqualString
+          right:
+            value:
+              simple: "No"
+      label: "no"
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: New CVE Alert !!!!.Answers.0
+          operator: isEqualString
+          right:
+            value:
+              simple: Need more information
+      label: need more info
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      need more info:
+      - "6"
+      "no":
+      - "5"
+      "yes":
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 33a722bd-8999-4c6a-8e2d-13327fb18cfa
+      iscommand: false
+      name: Check Manager response
+      type: condition
+      version: -1
+    taskid: 33a722bd-8999-4c6a-8e2d-13327fb18cfa
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 520
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      ignoreAddURL:
+        simple: "true"
+      message:
+        simple: Ignored. Thank you for your response!
+      to:
+        simple: shapatil@paloaltonetworks.com
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: SlackV2
+      description: Sends a message to a user, group, or channel.
+      id: a354bbb1-cb5a-4217-84b0-1a893ddaca64
+      iscommand: true
+      name: Ignored it
+      script: SlackV2|||send-notification
+      type: regular
+      version: -1
+    taskid: a354bbb1-cb5a-4217-84b0-1a893ddaca64
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 630,
+          "y": 770
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      Question:
+        simple: Explain vulnerability cve-2017-20
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 03306704-9ed6-422a-8c95-dc7d6ef4c5b9
+      iscommand: false
+      name: Query ChatGPT
+      script: fb578079-3b32-485e-8cff-d23fff27b1c1
+      type: regular
+      version: -1
+    taskid: 03306704-9ed6-422a-8c95-dc7d6ef4c5b9
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1110,
+          "y": 760
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      ignoreAddURL:
+        simple: "true"
+      message:
+        simple: ${ChatGPT.response}
+      to:
+        simple: shapatil@paloaltonetworks.com
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: SlackV2
+      description: Sends a message to a user, group, or channel.
+      id: ad806a1e-11bd-4ef2-8dc2-9ae4e425063e
+      iscommand: true
+      name: Send ChatGPT response to Manager
+      script: SlackV2|||send-notification
+      type: regular
+      version: -1
+    taskid: ad806a1e-11bd-4ef2-8dc2-9ae4e425063e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1110,
+          "y": 970
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      uri:
+        simple: /search/playbooks
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Core REST API
+      description: send HTTP GET requests
+      id: 3350ecc6-e61b-43b6-8c99-8fd13cf0fe7e
+      iscommand: true
+      name: Untitled Task
+      script: Core REST API|||core-api-get
+      type: regular
+      version: -1
+    taskid: 3350ecc6-e61b-43b6-8c99-8fd13cf0fe7e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1110,
+          "y": 1200
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      body:
+        simple: test
+      uri:
+        simple: /automations/search
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Core REST API
+      description: send HTTP POST request
+      id: 03a45ff6-55c1-4f95-8448-9c07bcec141a
+      iscommand: true
+      name: Untitled Task
+      script: Core REST API|||core-api-post
+      type: regular
+      version: -1
+    taskid: 03a45ff6-55c1-4f95-8448-9c07bcec141a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1110,
+          "y": 1370
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1415,
+        "width": 1280,
+        "x": 210,
+        "y": 50
+      }
+    }
+  }
