@@ -1,0 +1,524 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: This playbook is for detection of Zscaler  Executables Files Downloaded
+id: ef36bcda-3521-4518-80e7-847a432939d3
+inputs: []
+name: CYBER Zscaler Executables Files Downloaded
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "21"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 862e00d7-8b0a-4b14-8960-bbc1706d268b
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 862e00d7-8b0a-4b14-8960-bbc1706d268b
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 53e2f32c-a5ee-4bed-80a0-d0389b54b336
+      iscommand: false
+      name: Investigation Phase
+      type: title
+      version: -1
+    taskid: 53e2f32c-a5ee-4bed-80a0-d0389b54b336
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 730
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set date range for CMPL email template
+      id: a8c02c2a-8a8e-4c32-82ff-59f98d630423
+      iscommand: false
+      name: S - Date Format
+      playbookName: S - Date Format
+      type: playbook
+      version: -1
+    taskid: a8c02c2a-8a8e-4c32-82ff-59f98d630423
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 910
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: A Sub playbook to gather user and their line manager email address
+      id: 6ef847d7-6a11-46a5-8200-3c7c1f1fffc6
+      iscommand: false
+      name: S - Check Email Field
+      playbookName: S - Check Email Field
+      type: playbook
+      version: -1
+    taskid: 6ef847d7-6a11-46a5-8200-3c7c1f1fffc6
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1080
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Creation of Splunk Search result to Email format
+      id: c51f4694-7988-4c50-8ead-37c1432d8f5f
+      iscommand: false
+      name: S - Common Splunk Result to Table Zscaler file download
+      playbookName: S - Common Splunk Result to Table Zscaler file download
+      type: playbook
+      version: -1
+    taskid: c51f4694-7988-4c50-8ead-37c1432d8f5f
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1260
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "10"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      CC:
+        simple: csoc@gic.com.sg;yangjiren@gic.com.sg;tianghuihui@gic.com.sg;rajaniuthaman@gic.com.sg
+      Subject:
+        simple: ${incident.emailsubject}
+      To:
+        simple: $[incident.src_user_managedBy]
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: A Sub playbook to send user a data survey, requesting them to acknowledge
+        the event and provide a description of what was done
+      id: ebb47bba-b8a8-4f46-8d68-50ca7f3ff44e
+      iscommand: false
+      name: S - CMPL Survey (Without REQ)
+      playbookName: S - CMPL Survey (Without REQ)
+      type: playbook
+      version: -1
+    taskid: ebb47bba-b8a8-4f46-8d68-50ca7f3ff44e
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1440
+        }
+      }
+  "10":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: Please provide the answer to the question below.Answers.0
+          operator: isEqualString
+          right:
+            value:
+              simple: "Yes"
+        - left:
+            iscontext: true
+            value:
+              simple: Reminder - Please provide the answer to the question below.Answers.0
+          operator: isEqualString
+          right:
+            value:
+              simple: "Yes"
+      label: "yes"
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "13"
+      "yes":
+      - "11"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 041f4cf3-e8c7-46e6-8281-43ccc88217c2
+      iscommand: false
+      name: Did Line Manager acknowledge the event
+      type: condition
+      version: -1
+    taskid: 041f4cf3-e8c7-46e6-8281-43ccc88217c2
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1620
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "12"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      Message:
+        simple: |-
+          XSOAR closed this alert as user acknowledged to the failed login events.
+          User comment: ${Please provide the answer to the question below.Answers.1}${Reminder - Please provide the answer to the question below.Answers.1}
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9ab9d668-cf22-4045-89e6-35e7ad2113b3
+      iscommand: false
+      name: S - Common Incident Closing Steps (CMPL - User Acknowledge)
+      playbookName: S - Common Incident Closing Steps (CMPL - User Acknowledge)
+      type: playbook
+      version: -1
+    taskid: 9ab9d668-cf22-4045-89e6-35e7ad2113b3
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1800
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 74c736b7-b65c-4752-893f-764fa6547928
+      iscommand: false
+      name: End Playbook
+      type: title
+      version: -1
+    taskid: 74c736b7-b65c-4752-893f-764fa6547928
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 2150
+        }
+      }
+  "13":
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "14"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      emailtemplate:
+        simple: |-
+          <p>This is an automatic message. Do not reply.<br>
+          <br>
+          Hi L3 Team and Application OIC,<br>
+          <br>
+          We require your assistance for the following case: <b><u>${incident.id}</u></b> as the user does not acknowledge to the event triggered.<br>
+          Case Severity:<b><u>${incident.labels.severity}</u></b><br><br>
+          Below is the reason provided by the user:<br><br>
+
+          <table style="width:100%;margin:1;text-align: center;" cellspacing="2" cellpadding="0" border="0" bgcolor="#000000">
+          <tbody>
+          <tr>
+          <td>${incident.eventreason}</td>
+          </tr>
+          </tbody>
+          </table>
+          <br>
+          Below is our finding / comment towards this case:<br>
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.set.incident
+      id: 34d643d5-25ad-4d99-8ed5-aba1fd072a9e
+      iscommand: true
+      name: Set Email Template
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: 34d643d5-25ad-4d99-8ed5-aba1fd072a9e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 810,
+          "y": 1715
+        }
+      }
+  "14":
+    continueonerrortype: ""
+    id: "14"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 43150817-d88d-44d4-8f92-44972c9cbe84
+      iscommand: false
+      name: T - Manual Recovery Steps
+      type: regular
+      version: -1
+    taskid: 43150817-d88d-44d4-8f92-44972c9cbe84
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 810,
+          "y": 1895
+        }
+      }
+  "15":
+    continueonerrortype: ""
+    id: "15"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "12"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c4070f6e-6064-49b4-83b9-dc95aaafaed4
+      iscommand: false
+      name: S - Common Incident Closing Steps
+      playbookName: S - Common Incident Closing Steps
+      type: playbook
+      version: -1
+    taskid: c4070f6e-6064-49b4-83b9-dc95aaafaed4
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 810,
+          "y": 1895
+        }
+      }
+  "20":
+    continueonerrortype: ""
+    id: "20"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Enquiries asked to the analyst in order to gain more context to
+        the case
+      id: 88e6cb00-6507-4fa7-8785-8528b71624c2
+      iscommand: false
+      name: S - Common Alert Enquiries_copy
+      playbookName: S - Common Alert Enquiries_Zscaler
+      type: playbook
+      version: -1
+    taskid: 88e6cb00-6507-4fa7-8785-8528b71624c2
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 530
+        }
+      }
+  "21":
+    continueonerrortype: ""
+    id: "21"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "20"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 5ff33c39-e558-4f5b-8083-76e02c1ebd80
+      iscommand: false
+      name: S - Common Incident Steps
+      playbookName: S - Common Incident Steps
+      type: playbook
+      version: -1
+    taskid: 5ff33c39-e558-4f5b-8083-76e02c1ebd80
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 210
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 2165,
+        "width": 925,
+        "x": 265,
+        "y": 50
+      }
+    }
+  }
