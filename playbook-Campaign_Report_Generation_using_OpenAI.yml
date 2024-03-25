@@ -1,0 +1,576 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: Automating Threat Intel Reports - Demo Pack
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: |-
+  This playbook generates and publishes threat intel reports, based on indicators tagged as "ToBeReported".
+  It is specific to Campaign reports, however, feel free to gentrify it as much as you'd like, switch hard-coded values to arguments, etc. You can switch the playbook trigger inputs to "from indicators" if needed, or keep it as it is.
+  Note that this creates a rough draft of a report - you'll need to add tasks of your own for making the report with sections and details per your requirements.
+id: 7bb9414b-8fbf-46ef-8a48-a7f942ed505c
+inputs:
+- description: This is a simple demo query that would run on two specific indicators.
+  key: ""
+  playbookInputQuery:
+    daterange:
+      fromdate: "0001-01-01T00:00:00Z"
+      fromdatelicenseval: "0001-01-01T00:00:00Z"
+      period:
+        by: ""
+        byfrom: ""
+        byto: ""
+        field: ""
+        fromvalue: null
+        tovalue: null
+      todate: "0001-01-01T00:00:00Z"
+    query: tags:ToBeReported -tags:ReportCreated
+    queryEntity: indicators
+    results: null
+    runFromLastJobTime: true
+  required: false
+  value: {}
+name: Campaign Report Generation using OpenAI
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "20"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 3d6cd8db-f1f5-4a91-8bb1-1c875dc2afbd
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 3d6cd8db-f1f5-4a91-8bb1-1c875dc2afbd
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 377.5,
+          "y": 50
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: After reviewing each report, choose the reports to publish from
+            the below list
+        options: []
+        optionsarg:
+        - simple: None of the reports
+        - simple: ${ThreatIntelReport.Object.value}
+        placeholder: ""
+        readonly: false
+        required: true
+        tooltip: ""
+        type: multiSelect
+      sender: Your SOC team
+      title: Choose which of the created reports should be sent to users and marked
+        as published.
+      totalanswers: 0
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body: null
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    nexttasks:
+      '#none#':
+      - "18"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: b5671229-c898-4f0e-8779-801ed6a71733
+      iscommand: false
+      name: Choose which of the created reports should be sent and published
+      type: collection
+      version: -1
+    taskid: b5671229-c898-4f0e-8779-801ed6a71733
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 720
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "19"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: Reports were created, none were published.
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 6f6c02b9-4bb7-40de-805d-356884765394
+      iscommand: false
+      name: Don't publish any reports
+      script: Print
+      type: regular
+      version: -1
+    taskid: 6f6c02b9-4bb7-40de-805d-356884765394
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1245
+        }
+      }
+  "17":
+    continueonerrortype: ""
+    id: "17"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      forEach: true
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      Indicator To Report:
+        simple: ${foundIndicators}
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 548a13a5-48df-4845-8acc-1d86a5f03edb
+      iscommand: false
+      name: Create Threat Intel Report for each indicator separately
+      playbookId: 49005dd2-b752-48f2-8c62-50a22105c3f7
+      type: playbook
+      version: -1
+    taskid: 548a13a5-48df-4845-8acc-1d86a5f03edb
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 555
+        }
+      }
+  "18":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: Choose which of the created reports should be marked as published.Answers.0
+          operator: notContainsGeneral
+          right:
+            value:
+              simple: None of the reports
+      label: "yes"
+    continueonerrortype: ""
+    id: "18"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "7"
+      "yes":
+      - "27"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: db8cecb9-722a-4f1b-8a3c-56be9771f130
+      iscommand: false
+      name: Are there any reports to publish?
+      type: condition
+      version: -1
+    taskid: db8cecb9-722a-4f1b-8a3c-56be9771f130
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 895
+        }
+      }
+  "19":
+    continueonerrortype: ""
+    id: "19"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "23"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      indicatorsIDs:
+        complex:
+          accessor: id
+          root: foundIndicators
+      tags:
+        complex:
+          accessor: tags
+          root: foundIndicators
+          transformers:
+          - args:
+              empty_values:
+                value:
+                  simple: ToBeReported
+              remove_keys: {}
+            operator: RemoveEmpty
+          - args:
+              item:
+                value:
+                  simple: ReportCreated
+            operator: append
+          - args:
+              empty_values: {}
+              remove_keys: {}
+            operator: RemoveEmpty
+          - args:
+              separator:
+                value:
+                  simple: ','
+            operator: join
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.set.indicators
+      id: ade18c9f-fc08-427e-827b-2584dcd36304
+      iscommand: true
+      name: Remove the "ToBeReported" tag and add "ReportCreated"
+      script: Builtin|||setIndicators
+      type: regular
+      version: -1
+    taskid: ade18c9f-fc08-427e-827b-2584dcd36304
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1420
+        }
+      }
+  "20":
+    continueonerrortype: ""
+    id: "20"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "29"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      add_fields_to_context:
+        simple: description,tags,aliases
+      query:
+        simple: tags:ToBeReported -tags:ReportCreated
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Searches Cortex XSOAR Indicators.
+
+        Search for XSOAR Indicators and returns the id, indicator_type, value, and score/verdict.
+
+        You can add additional fields from the indicators using the add_field_to_context argument.
+      id: 3f1f3341-fd75-46c2-887b-2453d09bef63
+      iscommand: false
+      name: Get indicators tagged as "To Be Reported"
+      script: SearchIndicator
+      type: regular
+      version: -1
+    taskid: 3f1f3341-fd75-46c2-887b-2453d09bef63
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 377.5,
+          "y": 195
+        }
+      }
+  "21":
+    continueonerrortype: ""
+    id: "21"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2bec83df-0cbb-40a4-8376-baeae1015b6c
+      iscommand: false
+      name: End
+      type: title
+      version: -1
+    taskid: 2bec83df-0cbb-40a4-8376-baeae1015b6c
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 377.5,
+          "y": 1770
+        }
+      }
+  "23":
+    continueonerrortype: ""
+    id: "23"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "21"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.close.inv
+      id: eb1e0edf-07ab-46ef-8dd1-3ee99fce001e
+      iscommand: true
+      name: Close investigation
+      script: Builtin|||closeInvestigation
+      type: regular
+      version: -1
+    taskid: eb1e0edf-07ab-46ef-8dd1-3ee99fce001e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 377.5,
+          "y": 1595
+        }
+      }
+  "27":
+    continueonerrortype: ""
+    id: "27"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "30"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      object:
+        complex:
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: ThreatIntelReport.Object.value
+              operator: in
+              right:
+                iscontext: true
+                value:
+                  simple: Choose which of the created reports should be sent to users
+                    and marked as published.Answers.0
+          root: ThreatIntelReport.Object
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sets a Threat Intel Report as published.
+      id: 5ced0abe-b328-4751-8e32-c316fdcb3e99
+      iscommand: false
+      name: Mark as published
+      script: PublishThreatIntelReport
+      type: regular
+      version: -1
+    taskid: 5ced0abe-b328-4751-8e32-c316fdcb3e99
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1070
+        }
+      }
+  "29":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: foundIndicators
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "29"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "23"
+      "yes":
+      - "17"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 02a1142e-32b9-4b43-8ac3-f6b1d77848f1
+      iscommand: false
+      name: Were any indicators found?
+      type: condition
+      version: -1
+    taskid: 02a1142e-32b9-4b43-8ac3-f6b1d77848f1
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 377.5,
+          "y": 370
+        }
+      }
+  "30":
+    continueonerrortype: ""
+    id: "30"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      forEach: true
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "19"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      ShouldSendToExternalUsers:
+        simple: "true"
+      ShouldSendToInternalUsers:
+        simple: "true"
+      ThreatIntelReport:
+        complex:
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: ThreatIntelReport.Object.value
+              operator: in
+              right:
+                iscontext: true
+                value:
+                  simple: Choose which of the created reports should be sent to users
+                    and marked as published.Answers.0
+          root: ThreatIntelReport.Object
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 1aa5ce9e-fd4f-4632-80a0-31686856b05e
+      iscommand: false
+      name: Send Threat Intel Reports
+      playbookId: 5c79ecce-b31a-438d-8c52-0658176e00d9
+      type: playbook
+      version: -1
+    taskid: 1aa5ce9e-fd4f-4632-80a0-31686856b05e
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1245
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1785,
+        "width": 810,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
