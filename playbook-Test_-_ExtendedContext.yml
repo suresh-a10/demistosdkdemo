@@ -1,0 +1,248 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 76e2c9ee-25d8-4ac4-885f-f13e1c66d1ff
+inputs:
+- description: ""
+  key: IP
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: ${ExtractedIndicators.IP}
+name: Test - ExtendedContext
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8c18edbf-2ec1-45b8-80d9-3343b5d164e7
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 8c18edbf-2ec1-45b8-80d9-3343b5d164e7
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: VT.Data.ID=.data.relationships.communicating_files.data.id::VT.Data.Type=.data.relationships.communicating_files.data.type
+      ignore-outputs:
+        simple: "false"
+      ip:
+        simple: ${inputs.IP}
+      using:
+        simple: VirusTotal (API v3)_instance_1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: VirusTotal (API v3)
+      description: Checks the reputation of an IP address.
+      id: cb84f4fc-7c4c-4d20-8a3a-90969fd4673c
+      iscommand: true
+      name: 'Get IPInfo '
+      script: VirusTotal (API v3)|||ip
+      type: regular
+      version: -1
+    taskid: cb84f4fc-7c4c-4d20-8a3a-90969fd4673c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 230
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "true"
+      key:
+        simple: IPAddress
+      value:
+        simple: ${inputs.IP}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: be990b5a-c325-4635-87e9-7bdf3b8c553e
+      iscommand: false
+      name: Set
+      script: Set
+      type: regular
+      version: -1
+    taskid: be990b5a-c325-4635-87e9-7bdf3b8c553e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 420
+        }
+      }
+  "3":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: ${IPAddress}
+          operator: isExists
+      label: "yes"
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "5"
+      "yes":
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: ae53dd14-9af4-4930-8f54-11305045b8fd
+      iscommand: false
+      name: Check IP exists or not
+      type: condition
+      version: -1
+    taskid: ae53dd14-9af4-4930-8f54-11305045b8fd
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 620
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "Yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 9ad61252-25fe-49e2-81ca-55e7fdc768cb
+      iscommand: false
+      name: Print "YES"
+      script: Print
+      type: regular
+      version: -1
+    taskid: 9ad61252-25fe-49e2-81ca-55e7fdc768cb
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 250,
+          "y": 800
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: af72e3d8-08c4-4b29-8076-50b4212b931a
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: af72e3d8-08c4-4b29-8076-50b4212b931a
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 560,
+          "y": 970
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 985,
+        "width": 690,
+        "x": 250,
+        "y": 50
+      }
+    }
+  }
