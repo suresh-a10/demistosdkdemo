@@ -1,0 +1,100 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: d27644ac-8dbe-4770-8807-7ee7d3861153
+inputs: []
+name: ScheduleCommand
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 237eeec7-3678-4382-8b61-e3a77c3f0017
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 237eeec7-3678-4382-8b61-e3a77c3f0017
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 1
+    reputationcalc: 1
+    scriptarguments:
+      command:
+        simple: '!Set key=test value=test'
+      cron:
+        simple: '* 1 * * *'
+      ignore-outputs:
+        simple: "true"
+      times:
+        simple: "10"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Schedule a command to run inside the war room at a future time
+        (once or reoccurring)
+      id: 9cc281c8-b3c5-40b3-8f0b-f7b3408b326c
+      iscommand: false
+      name: schedule Command
+      script: ScheduleCommand
+      type: regular
+      version: -1
+    taskid: 9cc281c8-b3c5-40b3-8f0b-f7b3408b326c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 250
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 295,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
