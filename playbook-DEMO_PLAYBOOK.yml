@@ -1,0 +1,141 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 3d981406-9bb1-4b3f-88aa-341a6853366a
+inputs: []
+name: DEMO PLAYBOOK
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 1c2bec9a-a4ab-460c-82b0-645a0fbefe95
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 1c2bec9a-a4ab-460c-82b0-645a0fbefe95
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 90,
+          "y": -330
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      builtincondition:
+      - - left:
+            iscontext: true
+            value:
+              simple: ${type}
+          operator: isEqualString
+          right:
+            value:
+              simple: phishing
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 10
+    note: false
+    quietmode: 2
+    scriptarguments:
+      Username:
+        simple: ${Data}
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: f8db54f9-a79b-49fe-8c8a-8b220b18a396
+      iscommand: false
+      name: Demo Sub Playbook
+      playbookId: 6c31e87b-51cc-4d73-87f9-6eec09ef9be6
+      type: playbook
+      version: -1
+    taskid: f8db54f9-a79b-49fe-8c8a-8b220b18a396
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 90,
+          "y": 90
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: Data=
+      value:
+        simple: Suresh
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: ad88e8af-9f87-402b-8374-4d5bba922e38
+      iscommand: false
+      name: Print
+      script: Print
+      type: regular
+      version: -1
+    taskid: ad88e8af-9f87-402b-8374-4d5bba922e38
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 90,
+          "y": -190
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 515,
+        "width": 380,
+        "x": 90,
+        "y": -330
+      }
+    }
+  }
