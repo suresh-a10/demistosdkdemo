@@ -1,0 +1,388 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 993be724-86ab-421e-87d4-b0b0ecf8e3ba
+inputs: []
+name: TestAskplaybook
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e1259944-79d7-45b2-891d-31faa7f9179b
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: e1259944-79d7-45b2-891d-31faa7f9179b
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 650,
+          "y": -90
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: Test Body
+      cc: null
+      format: ""
+      methods:
+      - email
+      replyOptions:
+      - "Yes"
+      - "No"
+      subject:
+        simple: Test
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: sua@paloaltonetworks.com
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e99cbb19-757b-4146-8586-829f87015035
+      iscommand: false
+      name: Datacolelction
+      type: condition
+      version: -1
+    taskid: e99cbb19-757b-4146-8586-829f87015035
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1340,
+          "y": 230
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Question 2 with Quiet mode on
+        options: []
+        optionsarg:
+        - simple: "Yes"
+        - simple: "No"
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: singleSelect
+      sender: ""
+      title: Quiet Mode on
+      totalanswers: 0
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body: null
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    note: false
+    quietmode: 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 927135b1-a68f-43f1-8ca0-cb00ebfeb2cc
+      iscommand: false
+      name: 'Data Collection with quiet mode on '
+      type: collection
+      version: -1
+    taskid: 927135b1-a68f-43f1-8ca0-cb00ebfeb2cc
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 1460,
+          "y": 440
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Is this genuine login attempt
+        options: []
+        optionsarg:
+        - {}
+        - simple: "Yes"
+        - simple: "No"
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: singleSelect
+      sender: ' soc team'
+      title: SOC Team
+      totalanswers: 0
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: "Hi \n\nThis is Test email"
+      cc: null
+      format: ""
+      methods: []
+      subject:
+        simple: 'Test '
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 0
+        retriesinterval: 0
+      to:
+        simple: sua@paloaltonetworks.com
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      extend-context:
+        simple: TestContext=
+    separatecontext: false
+    skipunavailable: false
+    sla:
+      days: 0
+      hours: 0
+      minutes: 0
+      weeks: 0
+    task:
+      brand: ""
+      id: ccb7968e-6d5b-4e4f-8801-b0acdbffd968
+      iscommand: false
+      name: Demo Data Collection
+      type: collection
+      version: -1
+    taskid: ccb7968e-6d5b-4e4f-8801-b0acdbffd968
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 650,
+          "y": 240
+        }
+      }
+  "4":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: SOC Team.Answers.0
+          operator: isEqualString
+          right:
+            value:
+              simple: "Yes"
+      label: "yes"
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "5"
+      "yes":
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6e2f4348-d1fe-4b0d-8497-064a6e32bafd
+      iscommand: false
+      name: Validate the user response
+      type: condition
+      version: -1
+    taskid: 6e2f4348-d1fe-4b0d-8497-064a6e32bafd
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 650,
+          "y": 390
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "No"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: ad31c45d-d72e-47b1-80ef-405bc4b164ff
+      iscommand: false
+      name: Print No
+      script: Print
+      type: regular
+      version: -1
+    taskid: ad31c45d-d72e-47b1-80ef-405bc4b164ff
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 400,
+          "y": 580
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "Yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 51551c37-1e67-456f-82b4-06bf735d004f
+      iscommand: false
+      name: Print Yes
+      script: Print
+      type: regular
+      version: -1
+    taskid: 51551c37-1e67-456f-82b4-06bf735d004f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 920,
+          "y": 580
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    defaultassigneecomplex:
+      simple: Analyst
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8e55cc7d-7d20-445f-8b9d-ff9d0178a968
+      iscommand: false
+      name: Manual task
+      tags:
+      - SOCManual
+      type: regular
+      version: -1
+    taskid: 8e55cc7d-7d20-445f-8b9d-ff9d0178a968
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 650,
+          "y": 50
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 765,
+        "width": 1440,
+        "x": 400,
+        "y": -90
+      }
+    }
+  }
