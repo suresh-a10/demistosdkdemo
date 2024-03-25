@@ -1,0 +1,96 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 4b249c20-1349-44fa-84ab-03826bdc0404
+inputs:
+- description: ""
+  key: SplunkResults
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: NewSubplaybook
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 407e191d-2019-4a75-8a28-c0d68c087956
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 407e191d-2019-4a75-8a28-c0d68c087956
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      details:
+        simple: ${inputs.SplunkResults}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.set.incident
+      id: 37eb33d0-dace-48a9-8e20-4b02707f7c78
+      iscommand: true
+      name: Print Splunk Results
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: 37eb33d0-dace-48a9-8e20-4b02707f7c78
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 200
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 245,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
