@@ -1,0 +1,191 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: e83e4b6d-a006-4416-85a6-e3615e78bcf4
+inputs:
+- description: ""
+  key: BU
+  playbookInputQuery: null
+  required: false
+  value:
+    complex:
+      accessor: BU
+      root: lists.BUList
+name: SingTel - Create BU Incidents
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6ccab88a-463b-4ac4-840c-b1264b60dcd8
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 6ccab88a-463b-4ac4-840c-b1264b60dcd8
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 40,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      accountname:
+        simple: ${inputs.BU}
+      iocassetlist:
+        complex:
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: AssetDetails.Key
+              operator: containsGeneral
+              right:
+                iscontext: true
+                value:
+                  simple: inputs.BU
+          root: AssetDetails
+          transformers:
+          - operator: StringifyArray
+      name:
+        simple: Test BU -${inputs.BU}
+      type:
+        simple: Unclassified
+      vulnerabilityassetlist:
+        complex:
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: ParseCSV.ParsedCSV.Key
+              operator: containsGeneral
+              right:
+                iscontext: true
+                value:
+                  simple: inputs.BU
+          root: ParseCSV.ParsedCSV
+          transformers:
+          - operator: StringifyArray
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.create.inc
+      id: da40e0e7-ead3-475c-8234-7b78bd4fc4cb
+      iscommand: true
+      name: Create New BU Incident
+      script: Builtin|||createNewIncident
+      type: regular
+      version: -1
+    taskid: da40e0e7-ead3-475c-8234-7b78bd4fc4cb
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 40,
+          "y": 220
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 10a0587e-ddbe-49e3-8ad5-f3b40ecc4dd6
+      iscommand: false
+      name: Untitled Task
+      type: regular
+      version: -1
+    taskid: 10a0587e-ddbe-49e3-8ad5-f3b40ecc4dd6
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 810,
+          "y": 590
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: bfaf6d9f-0207-4640-86c3-c8210990bd8d
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: bfaf6d9f-0207-4640-86c3-c8210990bd8d
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 40,
+          "y": 400
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 635,
+        "width": 1150,
+        "x": 40,
+        "y": 50
+      }
+    }
+  }
