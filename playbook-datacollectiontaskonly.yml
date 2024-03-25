@@ -1,0 +1,187 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 7f9ea5fe-77ab-47e5-8cdd-e9ab4d61f796
+inputs: []
+name: datacollectiontaskonly
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: b936f3e4-db15-4e7f-8ab9-b1d756828dd2
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: b936f3e4-db15-4e7f-8ab9-b1d756828dd2
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 830,
+          "y": 110
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: test
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      sender: ""
+      title: test
+      totalanswers: 0
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body: null
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 185e4795-0cee-4692-89a8-f679bb8b58fa
+      iscommand: false
+      name: Datacollectiontaskonly
+      type: collection
+      version: -1
+    taskid: 185e4795-0cee-4692-89a8-f679bb8b58fa
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 830,
+          "y": 280
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      seconds:
+        simple: "2"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sleep for X seconds
+      id: 878d7d14-6eb7-485d-8e05-99410214cc0c
+      iscommand: false
+      name: Sleep
+      script: Sleep
+      type: regular
+      version: -1
+    taskid: 878d7d14-6eb7-485d-8e05-99410214cc0c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1340,
+          "y": 330
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: EWSO365
+      description: Sends an email.
+      id: fc7a5e66-ba9e-4411-8ce8-4d70316dd351
+      iscommand: true
+      name: Sendmail
+      script: EWSO365|||send-mail
+      type: regular
+      version: -1
+    taskid: fc7a5e66-ba9e-4411-8ce8-4d70316dd351
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1120,
+          "y": 510
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 495,
+        "width": 890,
+        "x": 830,
+        "y": 110
+      }
+    }
+  }
