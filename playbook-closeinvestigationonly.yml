@@ -1,0 +1,180 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: f7ea08cc-b427-4e4f-8e5b-50a662b8d25a
+inputs: []
+name: closeinvestigationonly
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: f93f71f6-b86c-4e9c-8bc3-e9c8006c1c51
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: f93f71f6-b86c-4e9c-8bc3-e9c8006c1c51
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.close.inv
+      id: 2971931d-6741-4ba0-8c7b-855d4490ce7a
+      iscommand: true
+      name: closeinvestigation
+      script: Builtin|||closeInvestigation
+      type: regular
+      version: -1
+    taskid: 2971931d-6741-4ba0-8c7b-855d4490ce7a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8c09b49c-ba9c-4d4c-884e-9fe2bd106708
+      iscommand: false
+      name: Untitled Task
+      type: regular
+      version: -1
+    taskid: 8c09b49c-ba9c-4d4c-884e-9fe2bd106708
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 370
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      Option 1:
+      - "1"
+      Option2:
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 740b7e7d-b475-4b3b-84ec-1f35b913686b
+      iscommand: false
+      name: If option1 or option2
+      type: condition
+      version: -1
+    taskid: 740b7e7d-b475-4b3b-84ec-1f35b913686b
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 195
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 90701cf0-55bf-4606-8e80-0790ea896c85
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 90701cf0-55bf-4606-8e80-0790ea896c85
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 545
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 560,
+        "width": 810,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
