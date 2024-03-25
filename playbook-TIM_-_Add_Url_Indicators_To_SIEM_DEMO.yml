@@ -1,0 +1,403 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: 5.5.0
+    itemVersion: 1.0.4
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: |-
+  TIM playbook - This playbook receives indicators from its parent playbook
+    and provides the indicators as inputs for the sub-playbooks that push the indicators
+    to your SIEM.
+id: ce933941-714f-451a-8a93-8c3e4c2b8d28
+inputs:
+- description: ""
+  key: ""
+  playbookInputQuery:
+    daterange:
+      fromdate: "0001-01-01T00:00:00Z"
+      fromdatelicenseval: "0001-01-01T00:00:00Z"
+      period:
+        by: ""
+        byfrom: ""
+        byto: ""
+        field: ""
+        fromvalue: null
+        tovalue: null
+      todate: "0001-01-01T00:00:00Z"
+    query: ""
+    queryEntity: indicators
+    results: null
+    runFromLastJobTime: false
+  required: false
+  value: {}
+name: TIM - Add Url Indicators To SIEM_DEMO
+outputs: []
+quiet: true
+sourceplaybookid: TIM - Add Url Indicators To SIEM
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6c32bf5b-7134-4b0d-8720-673f34a27a5e
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 6c32bf5b-7134-4b0d-8720-673f34a27a5e
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": -200
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9c94b822-7837-40a4-81fb-db9a6bc8989f
+      iscommand: false
+      name: QRadar
+      type: title
+      version: -1
+    taskid: 9c94b822-7837-40a4-81fb-db9a6bc8989f
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 990,
+          "y": 210
+        }
+      }
+  "3":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isExists
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isEqualString
+          right:
+            value:
+              simple: QRadar v3
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.state
+          operator: isEqualString
+          right:
+            value:
+              simple: active
+      label: "yes"
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "12"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8c08188d-e265-42c7-820e-86fd5b94c848
+      iscommand: false
+      name: Is Qradar enabled?
+      type: condition
+      version: -1
+    taskid: 8c08188d-e265-42c7-820e-86fd5b94c848
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 990,
+          "y": 360
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 254dcca6-183a-4305-88bf-1b5e3467a2d6
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 254dcca6-183a-4305-88bf-1b5e3467a2d6
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 780
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6a0034ac-007c-49c8-8390-98aafbdd599b
+      iscommand: false
+      name: ArcSight
+      type: title
+      version: -1
+    taskid: 6a0034ac-007c-49c8-8390-98aafbdd599b
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": -80,
+          "y": 210
+        }
+      }
+  "6":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isExists
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.brand
+          operator: isEqualString
+          right:
+            value:
+              simple: ArcSight ESM v2
+      - - left:
+            iscontext: true
+            value:
+              simple: modules.state
+          operator: isEqualString
+          right:
+            value:
+              simple: active
+      label: "yes"
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "11"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 21e4f54b-bbbc-4ed8-8506-262e495da7b0
+      iscommand: false
+      name: Is ArcSight enabled?
+      type: condition
+      version: -1
+    taskid: 21e4f54b-bbbc-4ed8-8506-262e495da7b0
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": -80,
+          "y": 360
+        }
+      }
+  "9":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: playbookQuery.indicator_type
+          operator: isEqualString
+          right:
+            value:
+              simple: URL
+      label: "yes"
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "5"
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c79ae0bd-bd2b-44a4-8030-09994657be29
+      iscommand: false
+      name: Are there Url results?
+      type: condition
+      version: -1
+    taskid: c79ae0bd-bd2b-44a4-8030-09994657be29
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": -50
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: d7be3688-460c-4ad6-867e-b6babf0a8bd1
+      iscommand: false
+      name: TIM - ArcSight Add Url Indicators
+      playbookId: TIM - ArcSight Add Url Indicators
+      type: playbook
+      version: -1
+    taskid: d7be3688-460c-4ad6-867e-b6babf0a8bd1
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": -160,
+          "y": 610
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      QRadarBlackListUrlReferenceSetName:
+        simple: TIM_BlackList_URL
+      QRadarWhiteListUrlReferenceSetName:
+        simple: TIM_WhiteList_URL
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This playbook queries indicators based on a pre-defined query or
+        results from a parent playbook, and adds the resulting indicators to a QRadar
+        Reference Set. The Reference Set name must be defined in the playbook inputs.
+      id: ea96b434-e0b7-4d8c-86a3-74d7ab871207
+      iscommand: false
+      name: TIM - QRadar Add Url Indicators_DEMO
+      playbookId: 7d95df2b-cfe8-46d5-87a7-c254072ccdc8
+      type: playbook
+      version: -1
+    taskid: ea96b434-e0b7-4d8c-86a3-74d7ab871207
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 1110,
+          "y": 610
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1045,
+        "width": 1650,
+        "x": -160,
+        "y": -200
+      }
+    }
+  }
