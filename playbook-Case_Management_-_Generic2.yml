@@ -1,0 +1,493 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: 5.0.0
+    itemVersion: 1.2.2
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: This playbook executes when no other playbook is associated with an incident.
+  It enriches indicators in an incident using one or more integrations.
+id: 5ac9f4d7-12cf-4b41-8fdb-8c45bdd49dc5
+inputs: []
+name: Case Management - Generic2
+outputs: []
+sourceplaybookid: Case Management - Generic
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 201ef5a2-95f9-4eec-8e05-92d766a39ca8
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 201ef5a2-95f9-4eec-8e05-92d766a39ca8
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    form:
+      description: Complete the below items to close this Incident
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Close Notes
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: true
+        tooltip: Close Notes for this Incident
+        type: longText
+      - defaultrows: []
+        fieldassociated: closereason
+        gridcolumns: []
+        id: "1"
+        label: ""
+        labelarg:
+          simple: Close Reason
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: true
+        tooltip: ""
+        type: singleSelect
+      - defaultrows: []
+        fieldassociated: pir
+        gridcolumns: []
+        id: "2"
+        label: ""
+        labelarg:
+          simple: Do you want to generate a PIR
+        options: []
+        optionsarg:
+        - {}
+        - simple: "Yes"
+        - simple: "No"
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: singleSelect
+      sender: Your SOC team
+      title: Close Notes
+      totalanswers: 0
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body: {}
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: ${incident.owner}
+    nexttasks:
+      '#none#':
+      - "24"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |+
+        ## Investigate
+
+        - Manually review and investigate this incident.
+        - Complete the Closing Notes and select the Close Reason to close this Incident upon completion
+
+      id: 74b1c3b9-a427-4d0c-8948-cc1a75fdfca0
+      iscommand: false
+      name: Investigate
+      type: collection
+      version: -1
+    taskid: 74b1c3b9-a427-4d0c-8948-cc1a75fdfca0
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 865
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "20"
+    note: false
+    quietmode: 0
+    reputationcalc: 2
+    scriptarguments:
+      text:
+        complex:
+          root: incident
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Extracts all indicators that match the regex for the indicator
+        type, and enriches the repuration using the reputation command defined for
+        the indicator type.
+      id: 451ffd86-4ba8-4160-80f7-b695b54c8bbe
+      iscommand: true
+      name: Extract indicators from incident
+      script: Builtin|||extractIndicators
+      type: regular
+      version: -1
+    taskid: 451ffd86-4ba8-4160-80f7-b695b54c8bbe
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 195
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9da7aff0-8b5d-4285-8aaf-3e14c0ef461f
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 9da7aff0-8b5d-4285-8aaf-3e14c0ef461f
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1390
+        }
+      }
+  "16":
+    continueonerrortype: ""
+    id: "16"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "12"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      closeNotes:
+        simple: |-
+          Closed By: ${Close Notes.Answers.name}
+
+          ${Close Notes.Answers.0}
+      closeReason:
+        simple: ${Close Notes.Answers.1}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.close.inv
+      id: 919928ac-c650-4bc9-8607-4465115d0760
+      iscommand: true
+      name: Close Incident
+      script: Builtin|||closeInvestigation
+      type: regular
+      version: -1
+    taskid: 919928ac-c650-4bc9-8607-4465115d0760
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1215
+        }
+      }
+  "18":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: incident.owner
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "18"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "22"
+      "yes":
+      - "23"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Checks to see if there is an Owner assigned to this case.
+      id: 652e61cc-8647-4cf1-84cc-1e917af75793
+      iscommand: false
+      name: Is an Owner already assigned?
+      type: condition
+      version: -1
+    taskid: 652e61cc-8647-4cf1-84cc-1e917af75793
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 545
+        }
+      }
+  "20":
+    continueonerrortype: ""
+    id: "20"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "18"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c044b260-50f2-4518-8989-c90922c9e683
+      iscommand: false
+      name: Calculate Severity - Standard
+      playbookId: Calculate Severity - Standard
+      type: playbook
+      version: -1
+    taskid: c044b260-50f2-4518-8989-c90922c9e683
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 370
+        }
+      }
+  "22":
+    continueonerrortype: ""
+    id: "22"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 3986fdbf-7888-4905-874c-9c8812c4aded
+      iscommand: false
+      name: Start Time to Assignment Timer
+      type: title
+      version: -1
+    taskid: 3986fdbf-7888-4905-874c-9c8812c4aded
+    timertriggers:
+    - action: start
+      fieldname: timetoassignment
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+  "23":
+    continueonerrortype: ""
+    id: "23"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 609c1628-08be-4f78-8377-c43cf3dbc4c0
+      iscommand: false
+      name: Start Remediation SLA Timer
+      type: title
+      version: -1
+    taskid: 609c1628-08be-4f78-8377-c43cf3dbc4c0
+    timertriggers:
+    - action: start
+      fieldname: remediationsla
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 720
+        }
+      }
+  "24":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: Close Notes.Answers.2
+          operator: isEqualString
+          right:
+            value:
+              simple: "Yes"
+      label: "yes"
+    continueonerrortype: ""
+    id: "24"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "16"
+      "yes":
+      - "25"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: dbb2ee6f-d153-4134-8948-a68c9808b2ad
+      iscommand: false
+      name: Exists
+      type: condition
+      version: -1
+    taskid: dbb2ee6f-d153-4134-8948-a68c9808b2ad
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1040
+        }
+      }
+  "25":
+    continueonerrortype: ""
+    id: "25"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "12"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      assigneduser:
+        simple: ${incident.assigneduser}
+      closedtime:
+        simple: ${incident.closetime}
+      name:
+        simple: ${incident.name}
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0af7194a-41b3-4929-8885-13ae1968801d
+      iscommand: false
+      name: PostIncidentReportPlaybook
+      playbookId: a9314178-d928-4008-89c3-c96311128390
+      type: playbook
+      version: -1
+    taskid: 0af7194a-41b3-4929-8885-13ae1968801d
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 560,
+          "y": 1215
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1405,
+        "width": 890,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
