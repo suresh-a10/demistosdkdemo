@@ -1,0 +1,521 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: bb205efd-19ea-4533-8575-722af8f29143
+inputs: []
+name: TimerPlaybook
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 4534c728-7ffb-4fbb-8beb-b71859d23724
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 4534c728-7ffb-4fbb-8beb-b71859d23724
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: Test Value
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 40b652f4-edcb-4ef2-8073-ece0f5b31cb9
+      iscommand: false
+      name: Print
+      script: Print
+      type: regular
+      version: -1
+    taskid: 40b652f4-edcb-4ef2-8073-ece0f5b31cb9
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 210
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 4a566c20-f43d-433e-86ee-16594afc1379
+      iscommand: false
+      name: Start Demo SLA Timer
+      type: title
+      version: -1
+    taskid: 4a566c20-f43d-433e-86ee-16594afc1379
+    timertriggers:
+    - action: start
+      fieldname: demoslatimer
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Provide the severity ?
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      sender: ""
+      title: Change the incident Severity
+      totalanswers: 0
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: Test Survery
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8d7d18d8-a5aa-4866-86c7-988780a4de8d
+      iscommand: false
+      name: Need Analyst Inputs
+      type: collection
+      version: -1
+    taskid: 8d7d18d8-a5aa-4866-86c7-988780a4de8d
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": -630,
+          "y": 520
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "Yes":
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a6971cb2-b96f-4192-8876-bd10cf46b643
+      iscommand: false
+      name: Untitled Task
+      type: condition
+      version: -1
+    taskid: a6971cb2-b96f-4192-8876-bd10cf46b643
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 230,
+          "y": 550
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "Yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: fe9dca54-8f02-4a4c-8984-bd3ab5935365
+      iscommand: false
+      name: Print "Yes"
+      script: Print
+      type: regular
+      version: -1
+    taskid: fe9dca54-8f02-4a4c-8984-bd3ab5935365
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -20,
+          "y": 740
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8d4416c0-be46-4d44-8b29-99fe56364816
+      iscommand: false
+      name: Pause
+      type: title
+      version: -1
+    taskid: 8d4416c0-be46-4d44-8b29-99fe56364816
+    timertriggers:
+    - action: pause
+      fieldname: demoslatimer
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 220,
+          "y": 1090
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "10"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: Test Value 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: e33e993a-8c34-47a6-8166-174d0ad62902
+      iscommand: false
+      name: Print
+      script: Print
+      type: regular
+      version: -1
+    taskid: e33e993a-8c34-47a6-8166-174d0ad62902
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 220,
+          "y": 1240
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "11"
+      "yes":
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8f5fe1c1-ffcf-492c-8cd0-719bb6b0dbb1
+      iscommand: false
+      name: Untitled Task
+      type: condition
+      version: -1
+    taskid: 8f5fe1c1-ffcf-492c-8cd0-719bb6b0dbb1
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 220,
+          "y": 1595
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "11"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "Yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: f13f0943-ee15-47cc-8ab5-89601061a470
+      iscommand: false
+      name: Print "Yes"
+      script: Print
+      type: regular
+      version: -1
+    taskid: f13f0943-ee15-47cc-8ab5-89601061a470
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -110,
+          "y": 1830
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Select the close reason
+        options: []
+        optionsarg:
+        - simple: True Positive
+        - simple: False Positive
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: singleSelect
+      sender: ""
+      title: Close Reason
+      totalanswers: 0
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: Test Survery
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9ef49410-3ee2-42b7-89fd-a3d422393246
+      iscommand: false
+      name: Provide Close reason
+      type: collection
+      version: -1
+    taskid: 9ef49410-3ee2-42b7-89fd-a3d422393246
+    timertriggers:
+    - action: start
+      fieldname: demoslatimer
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 220,
+          "y": 1420
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e22e601e-f2bd-4ff8-8d47-6d7a84c5cf46
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: e22e601e-f2bd-4ff8-8d47-6d7a84c5cf46
+    timertriggers:
+    - action: stop
+      fieldname: demoslatimer
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 220,
+          "y": 2050
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a8c4e192-6df3-46ec-8bff-a319c71bcf71
+      iscommand: false
+      name: AD Test
+      playbookId: 128b585b-27b2-4f47-80e6-7398a60bed12
+      type: playbook
+      version: -1
+    taskid: a8c4e192-6df3-46ec-8bff-a319c71bcf71
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 220,
+          "y": 2230
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 2275,
+        "width": 1240,
+        "x": -630,
+        "y": 50
+      }
+    }
+  }
