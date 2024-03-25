@@ -1,0 +1,217 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: Cortex - Generate Playbook Documentation
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: Cortex - Generate playbook Documentation
+inputs: []
+name: Cortex - Generate playbook Documentation
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: ae972b4a-f22f-4541-8f77-abec14e9969f
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: ae972b4a-f22f-4541-8f77-abec14e9969f
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": -140
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      mode:
+        simple: Recursive
+      playbook_name:
+        simple: ${incident.details}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 3fedaf7f-bb41-49c6-8d22-8bac1ec9227b
+      iscommand: false
+      name: Generate Document
+      script: CortexGeneratePlaybookDocument
+      type: regular
+      version: -1
+    taskid: 3fedaf7f-bb41-49c6-8d22-8bac1ec9227b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 5
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      filename:
+        simple: ${NormalizedPlaybookInformation.name}
+      html:
+        simple: ${NormalizedPlaybookInformation.html}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This automation is developed to convert HTML file to PDF using
+        pdfkit and wkhtmltopdf. This is used to generate playbook documentation.
+      id: 957e6a92-92cd-448d-8839-c137644ac63b
+      iscommand: false
+      name: Generate PDF
+      script: ConvertHTMLtoPDF
+      type: regular
+      version: -1
+    taskid: 957e6a92-92cd-448d-8839-c137644ac63b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This automation is developed to normalize the data returned by
+        the playbook document peice to generate the PDF out of HTML.
+      id: ade49dc6-5421-43a6-885e-eb86a1c6866a
+      iscommand: false
+      name: Normalize the generated context data
+      script: CortexNormalizePlaybookDetailsForPDFGeneration
+      type: regular
+      version: -1
+    taskid: ade49dc6-5421-43a6-885e-eb86a1c6866a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 190
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: File.Extension
+              operator: isEqualString
+              right:
+                value:
+                  simple: pdf
+          root: File
+          transformers:
+          - args:
+              separator:
+                value:
+                  simple: ','
+            operator: join
+      zipName:
+        simple: Playbook Documentation for ${incident.details}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Zip a file and upload to war room
+      id: 311c323a-1cd4-46cf-8c26-e2d5d7b5d1ea
+      iscommand: false
+      name: ZIP the files
+      script: ZipFile
+      type: regular
+      version: -1
+    taskid: 311c323a-1cd4-46cf-8c26-e2d5d7b5d1ea
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 540
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 775,
+        "width": 380,
+        "x": 50,
+        "y": -140
+      }
+    }
+  }
