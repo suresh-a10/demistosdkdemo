@@ -1,0 +1,260 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 865ac934-e659-4ff8-8740-6528d1e5a513
+inputs: []
+name: test - taskcomplete
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: ea8d67d6-30fb-44c1-8073-534bca0629cc
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: ea8d67d6-30fb-44c1-8073-534bca0629cc
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 40,
+          "y": -270
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    form:
+      description: upload json file
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: upload here
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: attachments
+      sender: ""
+      title: link
+      totalanswers: 0
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body:
+        simple: sample
+      cc: null
+      format: ""
+      methods: []
+      subject: null
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: false
+        retriescount: 2
+        retriesinterval: 360
+      to: null
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: d40f8963-1a73-401a-88c6-27ce9c50c3f9
+      iscommand: false
+      name: upload json file
+      type: collection
+      version: -1
+    taskid: d40f8963-1a73-401a-88c6-27ce9c50c3f9
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 210
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        simple: ${File.EntryID}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Load the contents of a file into context.
+      id: 42fd72fb-4cde-4b07-8452-b4a100cc3a16
+      iscommand: false
+      name: read json file
+      script: ReadFile
+      type: regular
+      version: -1
+    taskid: 42fd72fb-4cde-4b07-8452-b4a100cc3a16
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 390
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      name:
+        simple: sdfsd
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.create.inc
+      id: ca0e818e-4a6b-48c9-80d0-c2e174686cad
+      iscommand: true
+      name: create incident
+      script: Builtin|||createNewIncident
+      type: regular
+      version: -1
+    taskid: ca0e818e-4a6b-48c9-80d0-c2e174686cad
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 570
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: Test task 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 30447168-1363-4545-8163-72924b257281
+      iscommand: false
+      name: Test Task
+      script: Print
+      tags:
+      - taskcomplete
+      type: regular
+      version: -1
+    taskid: 30447168-1363-4545-8163-72924b257281
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 40,
+          "y": -140
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: d805647e-91b4-48c2-813e-464693ae1455
+      iscommand: false
+      name: Print
+      script: Print
+      tags:
+      - taskcomplete
+      type: regular
+      version: -1
+    taskid: d805647e-91b4-48c2-813e-464693ae1455
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 40,
+          "y": 60
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 935,
+        "width": 390,
+        "x": 40,
+        "y": -270
+      }
+    }
+  }
