@@ -1,0 +1,136 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 56050f4c-555b-47f9-84e7-c35f1c371104
+inputs: []
+name: XSOAR - Lock
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e7ffa3d6-668e-46dd-8728-1493c8509024
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: e7ffa3d6-668e-46dd-8728-1493c8509024
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    note: false
+    quietmode: 0
+    scriptarguments:
+      emailnewrecipients:
+        simple: sua@paloaltonetworks.com
+      emailnewsubject:
+        simple: Email to Suresh
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 75e343e7-7a74-4d05-8078-b95fbf985c82
+      iscommand: false
+      name: email send Suresh
+      playbookId: 9b4a2443-d95c-4b19-8a0a-1cb25d399f07
+      type: playbook
+      version: -1
+    taskid: 75e343e7-7a74-4d05-8078-b95fbf985c82
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    note: false
+    quietmode: 0
+    scriptarguments:
+      emailnewrecipients:
+        simple: sramesh1@paloaltonetworks.com
+      emailnewsubject:
+        simple: Email to Srikanth
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 25695e52-f88c-4348-853b-12b3b78a7331
+      iscommand: false
+      name: email send Srikanth
+      playbookId: 9b4a2443-d95c-4b19-8a0a-1cb25d399f07
+      type: playbook
+      version: -1
+    taskid: 25695e52-f88c-4348-853b-12b3b78a7331
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 195
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 240,
+        "width": 810,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
