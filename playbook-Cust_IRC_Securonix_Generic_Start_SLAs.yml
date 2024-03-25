@@ -1,0 +1,225 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: |
+  This is a generic playbook which is used across all other Securonix playbooks. It start the following timers:
+  * INC Ack SLA Timer
+  * INC Triage SLA Timer
+  * QI Ack SLA Timer
+  * QI Containment SLA Timer
+  * QI Resolution SLA Timer
+  * QI Closure SLA Timer
+  * MTTD
+  * TTAA
+  * TTQ
+id: 825c0dae-5f1e-46fe-80e0-ac72996e8129
+inputs: []
+name: Cust_IRC_Securonix_Generic_Start_SLAs
+outputs: []
+sourceplaybookid: 1eb1e9f7-07a3-46cd-81c4-91d1b5e37a27
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "30"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 332acd48-c893-4f79-85c2-85f48446093e
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 332acd48-c893-4f79-85c2-85f48446093e
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "18":
+    continueonerrortype: ""
+    id: "18"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: f63ad8b8-27bc-4811-88dd-af137cd186a9
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: f63ad8b8-27bc-4811-88dd-af137cd186a9
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 515
+        }
+      }
+  "30":
+    continueonerrortype: ""
+    id: "30"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "31"
+      - "32"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 62321380-442d-4abc-8120-8ab1422d0065
+      iscommand: false
+      name: Start the SLAs
+      type: title
+      version: -1
+    taskid: 62321380-442d-4abc-8120-8ab1422d0065
+    timertriggers:
+    - action: start
+      fieldname: incackslatimer
+    - action: start
+      fieldname: inctriageslatimer
+    - action: start
+      fieldname: qiackslatimer
+    - action: start
+      fieldname: qicontainmentslatimer
+    - action: start
+      fieldname: qiresolutionslatimer
+    - action: start
+      fieldname: qiclosureslatimer
+    - action: start
+      fieldname: mttd
+    - action: start
+      fieldname: ttaa
+    - action: start
+      fieldname: ttq
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 195
+        }
+      }
+  "31":
+    continueonerrortype: ""
+    id: "31"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "18"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      startDate:
+        complex:
+          accessor: occurred
+          root: incident
+      timerField:
+        simple: ttaa
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This script changes the startDate of the input timer field
+      id: ee8236e1-d21e-4c11-8f9e-5eb6213dd29b
+      iscommand: false
+      name: Change TTAA Start Date
+      script: Wipro_IRC_Generic_changeTimersStartDate
+      type: regular
+      version: -1
+    taskid: ee8236e1-d21e-4c11-8f9e-5eb6213dd29b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 340
+        }
+      }
+  "32":
+    continueonerrortype: ""
+    id: "32"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "18"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      startDate:
+        complex:
+          accessor: occurred
+          root: incident
+      timerField:
+        simple: mttd
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This script changes the startDate of the input timer field
+      id: 2ab5571b-108d-473b-818a-05d2faeba9a8
+      iscommand: false
+      name: Change MTTD Start Date
+      script: Wipro_IRC_Generic_changeTimersStartDate
+      type: regular
+      version: -1
+    taskid: 2ab5571b-108d-473b-818a-05d2faeba9a8
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 340
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 530,
+        "width": 810,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
