@@ -1,0 +1,437 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 0fb4c595-2e0d-4446-857c-0c84c449e24e
+inputs:
+- description: ""
+  key: filter
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: (objectClass=*)
+- description: ""
+  key: attributes
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: ALL
+- description: ""
+  key: base-dn
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: page-size
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: AD Test ad-search-subsequent
+outputs: []
+quiet: true
+sourceplaybookid: 128b585b-27b2-4f47-80e6-7398a60bed12
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: ed5e6da5-7c6b-4e05-8c54-8fc8c5b7af4b
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: ed5e6da5-7c6b-4e05-8c54-8fc8c5b7af4b
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      attributes:
+        complex:
+          root: inputs.attributes
+      base-dn:
+        complex:
+          root: inputs.base-dn
+      context-output:
+        simple: "yes"
+      filter:
+        complex:
+          root: inputs.filter
+      page-cookie:
+        complex:
+          root: SearchPageCookie
+      page-size:
+        complex:
+          root: inputs.page-size
+      using:
+        simple: Active Directory Query v2_instance_1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Active Directory Query v2
+      description: Runs Active Directory queries.
+      id: 6e2f31b2-f57c-4566-8999-ddadab0d8b0b
+      iscommand: true
+      name: ad-search subsequent
+      script: Active Directory Query v2|||ad-search
+      type: regular
+      version: -1
+    taskid: 6e2f31b2-f57c-4566-8999-ddadab0d8b0b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "2":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: SearchPageCookie
+                root: ActiveDirectory
+          operator: isExists
+          right:
+            value: {}
+      label: "yes"
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "8"
+      "yes":
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9a137c8d-e69d-4a30-87bd-06fa5dc11176
+      iscommand: false
+      name: need next loop?
+      type: condition
+      version: -1
+    taskid: 9a137c8d-e69d-4a30-87bd-06fa5dc11176
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 720
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: SearchPageCookie
+      stringify:
+        simple: "false"
+      value:
+        complex:
+          accessor: SearchPageCookie
+          root: ActiveDirectory
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 65ae8c92-2896-43af-827e-9a5eb744ae32
+      iscommand: false
+      name: Set - SearchPageCookie
+      script: Set
+      type: regular
+      version: -1
+    taskid: 65ae8c92-2896-43af-827e-9a5eb744ae32
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 895
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "no"
+      key:
+        simple: ActiveDirectory
+      subplaybook:
+        simple: "no"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 6291de1b-7d0e-480e-809b-d7ed857ce28f
+      iscommand: false
+      name: DeleteContext - ActiveDirectory
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: 6291de1b-7d0e-480e-809b-d7ed857ce28f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1070
+        }
+      }
+  "5":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                root: SearchPageCookie
+          operator: isExists
+      label: "yes"
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "yes":
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9adb9045-1b7e-4849-889a-e7f3bc197fba
+      iscommand: false
+      name: subsequent search?
+      type: condition
+      version: -1
+    taskid: 9adb9045-1b7e-4849-889a-e7f3bc197fba
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 195
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      attributes:
+        complex:
+          root: inputs.attributes
+      base-dn:
+        complex:
+          root: inputs.base-dn
+      context-output:
+        simple: "yes"
+      filter:
+        complex:
+          root: inputs.filter
+      page-size:
+        complex:
+          root: inputs.page-size
+      using:
+        simple: Active Directory Query v2_instance_1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Active Directory Query v2
+      description: Runs Active Directory queries.
+      id: eb4bc105-2dba-4776-83a5-a7fe8ca11742
+      iscommand: true
+      name: ad-search 1st
+      script: Active Directory Query v2|||ad-search
+      type: regular
+      version: -1
+    taskid: eb4bc105-2dba-4776-83a5-a7fe8ca11742
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 370
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "true"
+      key:
+        simple: AD.Result
+      stringify:
+        simple: "false"
+      value:
+        complex:
+          accessor: Search
+          root: ActiveDirectory
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 502b9a79-a1cf-4596-87ac-64ab28586879
+      iscommand: false
+      name: Set - AD.Result
+      script: Set
+      type: regular
+      version: -1
+    taskid: 502b9a79-a1cf-4596-87ac-64ab28586879
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 545
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: NextSearch
+      stringify:
+        simple: "false"
+      value:
+        simple: "false"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 695252a4-5786-4863-8d85-f1d598da58c0
+      iscommand: false
+      name: Set - NextSearch
+      script: Set
+      type: regular
+      version: -1
+    taskid: 695252a4-5786-4863-8d85-f1d598da58c0
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 895
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1115,
+        "width": 810,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
