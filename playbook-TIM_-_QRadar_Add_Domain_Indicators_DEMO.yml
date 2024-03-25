@@ -1,0 +1,946 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: 5.5.0
+    itemVersion: 2.0.15
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: This playbook queries indicators based on a pre-defined query or results
+  from a parent playbook, and adds the resulting indicators to a QRadar Reference
+  Set. The Reference Set name must be defined in the playbook inputs.
+id: d88dd0c8-a8ff-408c-86c3-65b7522a0fdb
+inputs:
+- description: The name of the QRadar black list Domain reference set to insert the
+    data to.
+  key: QRadarBlackListDomainReferenceSetName
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: ""
+  playbookInputQuery:
+    daterange:
+      fromdate: "0001-01-01T00:00:00Z"
+      fromdatelicenseval: "0001-01-01T00:00:00Z"
+      period:
+        by: ""
+        byfrom: ""
+        byto: ""
+        field: ""
+        fromvalue: null
+        tovalue: null
+      todate: "0001-01-01T00:00:00Z"
+    query: ""
+    queryEntity: indicators
+    results: null
+    runFromLastJobTime: false
+  required: false
+  value: {}
+- description: The name of the QRadar white list Domain reference set to insert the
+    data in to.
+  key: QRadarWhiteListDomainReferenceSetName
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: The name of the QRadar watch list Domain reference set to insert the
+    data in to.
+  key: QRadarWatchListDomainReferenceSetName
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: TIM - QRadar Add Domain Indicators_DEMO
+outputs: []
+quiet: true
+sourceplaybookid: TIM - QRadar Add Domain Indicators
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "18"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 46ba8510-310b-4a8e-8954-7b3dd3b66a1b
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 46ba8510-310b-4a8e-8954-7b3dd3b66a1b
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 340,
+          "y": -70
+        }
+      }
+  "9":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                filters:
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: modules.brand
+                    operator: inList
+                    right:
+                      value:
+                        simple: QRadar,QRadar_v2,QRadar v3
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: modules.state
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: active
+                root: modules
+          operator: isExists
+      label: "yes"
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "34"
+      "yes":
+      - "31"
+      - "32"
+      - "37"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0894141a-0169-48c0-8ac6-0ca5a6b99892
+      iscommand: false
+      name: Is QRadarEnabled?
+      type: condition
+      version: -1
+    taskid: 0894141a-0169-48c0-8ac6-0ca5a6b99892
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 560,
+          "y": 270
+        }
+      }
+  "18":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: playbookQuery.indicator_type
+          operator: isEqualString
+          right:
+            value:
+              simple: Domain
+      label: "yes"
+    continueonerrortype: ""
+    id: "18"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "34"
+      "yes":
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 15fe4afd-83b8-4925-8854-199484af0da7
+      iscommand: false
+      name: Are there filtered results?
+      type: condition
+      version: -1
+    taskid: 15fe4afd-83b8-4925-8854-199484af0da7
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 340,
+          "y": 70
+        }
+      }
+  "26":
+    continueonerrortype: ""
+    id: "26"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "35"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      ref_name:
+        simple: ${inputs.QRadarBlackListDomainReferenceSetName}
+      value:
+        complex:
+          accessor: value
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.CustomFields.tags
+              operator: isEqualString
+              right:
+                value:
+                  simple: approved_black
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.indicator_type
+              operator: isEqualString
+              right:
+                value:
+                  simple: Domain
+          root: playbookQuery
+          transformers:
+          - operator: uniq
+      values:
+        complex:
+          root: playbookQuery
+          transformers:
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Add or update a value in a reference set.
+      id: 7e59767f-3bd1-4ec4-8e9c-764b898d2f73
+      iscommand: true
+      name: Add domains to QRadar black list domain reference set
+      script: '|||qradar-update-reference-set-value'
+      type: regular
+      version: -1
+    taskid: 7e59767f-3bd1-4ec4-8e9c-764b898d2f73
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 780,
+          "y": 1250
+        }
+      }
+  "31":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.QRadarBlackListDomainReferenceSetName
+          operator: isNotEmpty
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: value
+                filters:
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: playbookQuery.CustomFields.tags
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: approved_black
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: playbookQuery.indicator_type
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: Domain
+                root: playbookQuery
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "31"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "34"
+      "yes":
+      - "42"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 1b333b06-6fce-4f7e-8584-ea934742302f
+      iscommand: false
+      name: Is there a Qradar black list Domain Reference Set and values?
+      type: condition
+      version: -1
+    taskid: 1b333b06-6fce-4f7e-8584-ea934742302f
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 780,
+          "y": 450
+        }
+      }
+  "32":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.QRadarWhiteListDomainReferenceSetName
+          operator: isNotEmpty
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: value
+                filters:
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: playbookQuery.CustomFields.tags
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: approved_white
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: playbookQuery.indicator_type
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: Domain
+                root: playbookQuery
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "32"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "34"
+      "yes":
+      - "41"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6873e356-083e-4848-8808-9b5f55b4d3d0
+      iscommand: false
+      name: Is there a Qradar white list Domain Reference Set and values?
+      type: condition
+      version: -1
+    taskid: 6873e356-083e-4848-8808-9b5f55b4d3d0
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 2040,
+          "y": 450
+        }
+      }
+  "33":
+    continueonerrortype: ""
+    id: "33"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "36"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      ref_name:
+        simple: ${inputs.QRadarWhiteListDomainReferenceSetName}
+      value:
+        complex:
+          accessor: value
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.CustomFields.tags
+              operator: isEqualString
+              right:
+                value:
+                  simple: approved_white
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.indicator_type
+              operator: isEqualString
+              right:
+                value:
+                  simple: Domain
+          root: playbookQuery
+          transformers:
+          - operator: uniq
+      values:
+        complex:
+          root: playbookQuery
+          transformers:
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Add or update a value in a reference set.
+      id: 75c10e0f-c3d0-430f-8276-288ba392499f
+      iscommand: true
+      name: Add domains to QRadar white list domain reference set
+      script: '|||qradar-update-reference-set-value'
+      type: regular
+      version: -1
+    taskid: 75c10e0f-c3d0-430f-8276-288ba392499f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2040,
+          "y": 1240
+        }
+      }
+  "34":
+    continueonerrortype: ""
+    id: "34"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9bb477cf-bc58-4689-8def-e2de2d167f18
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 9bb477cf-bc58-4689-8def-e2de2d167f18
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 340,
+          "y": 1570
+        }
+      }
+  "35":
+    continueonerrortype: ""
+    id: "35"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "34"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      field:
+        simple: tags
+      fieldValue:
+        simple: SIEM
+      indicatorsValues:
+        complex:
+          accessor: value
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.CustomFields.tags
+              operator: isEqualString
+              right:
+                value:
+                  simple: approved_black
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.indicator_type
+              operator: isEqualString
+              right:
+                value:
+                  simple: Domain
+          root: playbookQuery
+          transformers:
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Adds the SIEM tag to the indicator.
+      id: 8bb42879-a9a0-48ad-84a8-5b537edeb28a
+      iscommand: true
+      name: Add SIEM tag
+      script: Builtin|||appendIndicatorField
+      type: regular
+      version: -1
+    taskid: 8bb42879-a9a0-48ad-84a8-5b537edeb28a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 780,
+          "y": 1390
+        }
+      }
+  "36":
+    continueonerrortype: ""
+    id: "36"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "34"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      field:
+        simple: tags
+      fieldValue:
+        simple: SIEM
+      indicatorsValues:
+        complex:
+          accessor: value
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.CustomFields.tags
+              operator: isEqualString
+              right:
+                value:
+                  simple: approved_white
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.indicator_type
+              operator: isEqualString
+              right:
+                value:
+                  simple: Domain
+          root: playbookQuery
+          transformers:
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Adds the SIEM tag to the indicator.
+      id: 0c224640-6de9-4873-8b75-df53b3165c19
+      iscommand: true
+      name: Add SIEM tag
+      script: Builtin|||appendIndicatorField
+      type: regular
+      version: -1
+    taskid: 0c224640-6de9-4873-8b75-df53b3165c19
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2040,
+          "y": 1390
+        }
+      }
+  "37":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.QRadarWatchListDomainReferenceSetName
+          operator: isNotEmpty
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: value
+                filters:
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: playbookQuery.CustomFields.tags
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: approved_watchlist
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: playbookQuery.indicator_type
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: Domain
+                root: playbookQuery
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "37"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "34"
+      "yes":
+      - "40"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e14ae963-5854-44a4-8934-d9fbb9aff956
+      iscommand: false
+      name: Is there a Qradar watch list Domain Reference Set and values?
+      type: condition
+      version: -1
+    taskid: e14ae963-5854-44a4-8934-d9fbb9aff956
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 3240,
+          "y": 450
+        }
+      }
+  "38":
+    continueonerrortype: ""
+    id: "38"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "39"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      ref_name:
+        simple: ${inputs.QRadarWatchListDomainReferenceSetName}
+      value:
+        complex:
+          accessor: value
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.CustomFields.tags
+              operator: isEqualString
+              right:
+                value:
+                  simple: approved_watchlist
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.indicator_type
+              operator: isEqualString
+              right:
+                value:
+                  simple: Domain
+          root: playbookQuery
+          transformers:
+          - operator: uniq
+      values:
+        complex:
+          root: playbookQuery
+          transformers:
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Add or update a value in a reference set.
+      id: 949e3213-2835-42cf-8961-39043db1bade
+      iscommand: true
+      name: Add domains to QRadar watch list domain reference set
+      script: '|||qradar-update-reference-set-value'
+      type: regular
+      version: -1
+    taskid: 949e3213-2835-42cf-8961-39043db1bade
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 3240,
+          "y": 1240
+        }
+      }
+  "39":
+    continueonerrortype: ""
+    id: "39"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "34"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      field:
+        simple: tags
+      fieldValue:
+        simple: SIEM
+      indicatorsValues:
+        complex:
+          accessor: value
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.CustomFields.tags
+              operator: isEqualString
+              right:
+                value:
+                  simple: approved_watchlist
+          - - left:
+                iscontext: true
+                value:
+                  simple: playbookQuery.indicator_type
+              operator: isEqualString
+              right:
+                value:
+                  simple: Domain
+          root: playbookQuery
+          transformers:
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Adds the SIEM tag to the indicator.
+      id: 489fbf8e-7a4a-4932-8383-b0f1bf732894
+      iscommand: true
+      name: Add SIEM tag
+      script: Builtin|||appendIndicatorField
+      type: regular
+      version: -1
+    taskid: 489fbf8e-7a4a-4932-8383-b0f1bf732894
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 3240,
+          "y": 1390
+        }
+      }
+  "40":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: playbookQuery.CustomFields.tags
+          operator: isEqualString
+          right:
+            value:
+              simple: approved_watchlist
+      - - left:
+            iscontext: true
+            value:
+              simple: playbookQuery.indicator_type
+          operator: isEqualString
+          right:
+            value:
+              simple: Domain
+      label: "yes"
+    continueonerrortype: ""
+    id: "40"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "34"
+      "yes":
+      - "38"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 25d0d72c-bd2c-4f69-840d-d8041afa8717
+      iscommand: false
+      name: Are there indicators with a watchlist tag?
+      type: condition
+      version: -1
+    taskid: 25d0d72c-bd2c-4f69-840d-d8041afa8717
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 3240,
+          "y": 875
+        }
+      }
+  "41":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: playbookQuery.CustomFields.tags
+          operator: isEqualString
+          right:
+            value:
+              simple: approved_white
+      - - left:
+            iscontext: true
+            value:
+              simple: playbookQuery.indicator_type
+          operator: isEqualString
+          right:
+            value:
+              simple: Domain
+      label: "yes"
+    continueonerrortype: ""
+    id: "41"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "34"
+      "yes":
+      - "33"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a6b5534f-f9db-47f5-8907-ffb18031b526
+      iscommand: false
+      name: Are there indicators with a white tag?
+      type: condition
+      version: -1
+    taskid: a6b5534f-f9db-47f5-8907-ffb18031b526
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 2040,
+          "y": 875
+        }
+      }
+  "42":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: playbookQuery.CustomFields.tags
+          operator: isEqualString
+          right:
+            value:
+              simple: approved_black
+      - - left:
+            iscontext: true
+            value:
+              simple: playbookQuery.indicator_type
+          operator: isEqualString
+          right:
+            value:
+              simple: Domain
+      label: "yes"
+    continueonerrortype: ""
+    id: "42"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "34"
+      "yes":
+      - "26"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: d1232160-c927-4df4-860c-e8c3e2d5e200
+      iscommand: false
+      name: Are there indicators with a black tag?
+      type: condition
+      version: -1
+    taskid: d1232160-c927-4df4-860c-e8c3e2d5e200
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 780,
+          "y": 875
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1705,
+        "width": 3280,
+        "x": 340,
+        "y": -70
+      }
+    }
+  }
