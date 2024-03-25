@@ -1,0 +1,314 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: CVE_Eval_Pack
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 29cf90a3-1264-4709-8d8c-9bac9a3cf449
+inputs:
+- description: ""
+  key: Target
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: CompareHost
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: CVE
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: NewCVE_HostCPE_Compare
+outputs:
+- contextPath: CompareMatch
+  type: boolean
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 40c5f085-364d-4816-82a3-8cc738ca6bda
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 40c5f085-364d-4816-82a3-8cc738ca6bda
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      arrayData:
+        simple: ${inputs.CompareHost.software}
+      contextKey:
+        simple: cpeList
+      separator:
+        simple: ;
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: 'Will create an array object in context from given string input '
+      id: 5ce2c4cf-b797-47a1-85a7-3fef9d97c2b4
+      iscommand: false
+      name: Split CPEs
+      script: CreateArray
+      type: regular
+      version: -1
+    taskid: 5ce2c4cf-b797-47a1-85a7-3fef9d97c2b4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 370
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      forEach: true
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      CPE:
+        simple: ${cpeList}
+      Target:
+        simple: ${inputs.Target}
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a6ac43d9-d42e-458b-8cd8-77f142f55785
+      iscommand: false
+      name: NewCVE_PerCPE
+      playbookId: 38dc80f4-946b-46d8-8e91-6e5258f39ae4
+      type: playbook
+      version: -1
+    taskid: a6ac43d9-d42e-458b-8cd8-77f142f55785
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 545
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "yes"
+      subplaybook:
+        simple: auto
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 47188d19-fe46-42bd-842f-0a7d69f6b0b5
+      iscommand: false
+      name: DeleteContext
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: 47188d19-fe46-42bd-842f-0a7d69f6b0b5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 195
+        }
+      }
+  "8":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: return
+          operator: containsGeneral
+          right:
+            value:
+              simple: "true"
+      label: "yes"
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "13"
+      "yes":
+      - "14"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: b9915f38-2a1f-4a18-8d3b-bbaee3cbb220
+      iscommand: false
+      name: Host matches CPE?
+      type: condition
+      version: -1
+    taskid: b9915f38-2a1f-4a18-8d3b-bbaee3cbb220
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 720
+        }
+      }
+  "13":
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 3bfb38e5-111e-46b7-8cb7-bd7623a04c59
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 3bfb38e5-111e-46b7-8cb7-bd7623a04c59
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 1070
+        }
+      }
+  "14":
+    continueonerrortype: ""
+    id: "14"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 100
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "13"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      CVEID:
+        simple: ${inputs.CVE}
+      Host:
+        simple: ${inputs.CompareHost}
+      Reason:
+        simple: '${inputs.Target} matches Host CPEs : ${cpeList} for CVE: ${inputs.CVE}
+          (Job ID: ${incident.id})'
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 72c38089-28f1-4229-8b71-3b6a7d8a2e4a
+      iscommand: false
+      name: NewCVE_KnownCPE_Incident
+      playbookId: 5cf6ba09-ae32-4f4f-8618-a52c07c82059
+      type: playbook
+      version: -1
+    taskid: 72c38089-28f1-4229-8b71-3b6a7d8a2e4a
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 895
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1085,
+        "width": 492.5,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
