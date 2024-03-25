@@ -1,0 +1,2074 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 21ce8491-ba19-4813-8f99-f3764238e54d
+inputs:
+- description: ""
+  key: ArcSight_ActiveListResourceID
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: HpLsmQosBABD2dHC4lamu4Q==
+- description: ""
+  key: Arcsight_IP_AddressFieldName
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: IPAddress
+- description: ""
+  key: Arcsight_IOC_VerdictFieldName
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: Verdict
+- description: ""
+  key: Arcsight_Entry-ID_FieldName
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: ID
+- description: ""
+  key: ArcSight_ExpirationStatusFieldName
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: ExpirationStatus
+- description: ""
+  key: Arcsight_GeoCountryField_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: GeoCountry
+- description: ""
+  key: Arcsight_GeoLocationField_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: GeoLocation
+- description: ""
+  key: Arcsight_CountryNameField_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: CountryName
+- description: ""
+  key: Arcsight_CountryCodeField_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: CountryCode
+- description: ""
+  key: Arcsight_FirstSeenField_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: FirstSeen
+- description: ""
+  key: Arcsight_LastSeenField_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: LastSeen
+- description: ""
+  key: Arcsight_SourceBrandField_Name
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: SourceBrands
+- description: ""
+  key: Arcsight_SourceInstanceField_Name
+  playbookInputQuery: null
+  required: true
+  value:
+    simple: SourceInstances
+- description: ""
+  key: Arcsight_MscoreField_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: Mscore
+- description: ""
+  key: Arcsight_CVSS_Score_Field_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: CVSSScore
+- description: ""
+  key: Arcsight_CVSS3Field_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: CVSS3
+- description: ""
+  key: Arcsight_MITRE_ID_Field_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: MitreID
+- description: ""
+  key: Arcsight_MITRE_Tactics_Field_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: MitreTactics
+- description: ""
+  key: Arcsight_KillChainPhases_Field_Name
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: KillChainPhases
+name: TIM - UBI Sub Playbook Add IP Indicators to Arcsight SIEM
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "13"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: b5e56ea4-3c8c-4f70-87c4-603b3d886270
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: b5e56ea4-3c8c-4f70-87c4-603b3d886270
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 705,
+          "y": 65
+        }
+      }
+  "1":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: brand
+                filters:
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: modules.brand
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: ArcSight ESM v2
+                - - left:
+                      iscontext: true
+                      value:
+                        simple: modules.state
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: active
+                root: modules
+          operator: isExists
+          right:
+            value: {}
+      label: "yes"
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "yes":
+      - "2"
+    note: false
+    quietmode: 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 472edbb3-5084-4fbf-885c-612232bd63e4
+      iscommand: false
+      name: Is ArcSight Enabled?
+      type: condition
+      version: -1
+    taskid: 472edbb3-5084-4fbf-885c-612232bd63e4
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 705,
+          "y": 400
+        }
+      }
+  "2":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.Arcsight_IP_AddressFieldName
+          operator: isNotEmpty
+          right:
+            value: {}
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.Arcsight_IOC_VerdictFieldName
+          operator: isNotEmpty
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.Arcsight_Entry-ID_FieldName
+          operator: isNotEmpty
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.Arcsight_GeoCountryField_Name
+          operator: isNotEmpty
+      label: "yes"
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "yes":
+      - "3"
+    note: false
+    quietmode: 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 21748953-dd49-4876-8c46-15037a18e397
+      iscommand: false
+      name: Is there an ArcSight fields name and values?
+      type: condition
+      version: -1
+    taskid: 21748953-dd49-4876-8c46-15037a18e397
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1640,
+          "y": 2380
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "48"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      entries:
+        simple: '[${Value}]'
+      resourceId:
+        simple: ${inputs.ArcSight_ActiveListResourceID}
+      retry-count:
+        simple: "50"
+      retry-interval:
+        simple: "30"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ArcSight ESM v2
+      description: Adds new entries to the Active List.
+      id: 2a424ff1-27ea-4e1e-8c37-32cfe297df6d
+      iscommand: true
+      name: Add IP to ArcSight Active list block list
+      script: ArcSight ESM v2|||as-add-entries
+      type: regular
+      version: -1
+    taskid: 2a424ff1-27ea-4e1e-8c37-32cfe297df6d
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2190,
+          "y": 2600
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      field:
+        simple: tags
+      fieldValue:
+        simple: IOC Added to ArcSight SIEM
+      indicatorsValues:
+        simple: ${Value.IPAddress}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: Adds the SIEM tag to the indicator.
+      id: 9e3715d4-1924-4b3b-8e78-e33d41c40026
+      iscommand: true
+      name: Add SIEM tag
+      script: Builtin|||appendIndicatorField
+      type: regular
+      version: -1
+    taskid: 9e3715d4-1924-4b3b-8e78-e33d41c40026
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2190,
+          "y": 2780
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 02cfded7-0de4-41cd-8371-5679056e70be
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 02cfded7-0de4-41cd-8371-5679056e70be
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 765,
+          "y": 2885
+        }
+      }
+  "13":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.ArcSight_ActiveListResourceID
+          operator: isNotEmpty
+          right:
+            value: {}
+      label: "yes"
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "yes":
+      - "1"
+    note: false
+    quietmode: 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 814ff26a-dd95-4eb5-895a-91c45c1ab40e
+      iscommand: false
+      name: Are there Resource ID Present?
+      type: condition
+      version: -1
+    taskid: 814ff26a-dd95-4eb5-895a-91c45c1ab40e
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 705,
+          "y": 225
+        }
+      }
+  "14":
+    continueonerrortype: ""
+    id: "14"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "47"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      entryFilter:
+        simple: ${inputs.Arcsight_IP_AddressFieldName}:${Value.IPAddress},${inputs.Arcsight_Entry-ID_FieldName}:${Value.ID}
+      ignore-outputs:
+        simple: "false"
+      resourceId:
+        simple: ${inputs.ArcSight_ActiveListResourceID}
+      retry-count:
+        simple: "50"
+      retry-interval:
+        simple: "200"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Returns all entries in the Active List
+      id: 7fdf23c1-8139-4253-865f-4545ec66e0ac
+      iscommand: true
+      name: Get Entry from ArcSight
+      script: '|||as-get-entries'
+      type: regular
+      version: -1
+    taskid: 7fdf23c1-8139-4253-865f-4545ec66e0ac
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1032.5,
+          "y": 575
+        }
+      }
+  "16":
+    conditions:
+    - condition:
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].IPAddress}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Value.IP}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].FirstSeen}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${FirstSeen_Value}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].LastSeen}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${LastSeen_Value}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].SourceBrands}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${SourceBrand_Value}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].SourceInstances}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Source_Instance_Value}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].ExpirationStatus}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${inputs.ExpirationStatus_Value}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].CountryCode}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${GeoCountry.code}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].GeoLocation}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${GeoCountry.location}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].CountryName}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${GeoCountry.name}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].Mscore}
+          operator: isEqualNumber
+          right:
+            value:
+              simple: ${raw.mscore}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].Verdict}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${inputs.IOC_VerdictFieldValue}
+      - - left:
+            value:
+              simple: ${Arcsight_ID}
+          operator: isEqualNumber
+          right:
+            value:
+              simple: ${inputs.Entry-ID_FieldValue}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].GeoCountry}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${GeoCountry.code}
+      label: Value Alerady Present
+    - condition:
+      - - left:
+            value:
+              simple: ${Arcsight_ID}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Value.id}
+      label: For Fresh Entry
+    continueonerrortype: ""
+    id: "16"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7735097d-1e86-419f-8cd8-6f42aa982661
+      iscommand: false
+      name: Check all Data is Present?
+      type: condition
+      version: -1
+    taskid: 7735097d-1e86-419f-8cd8-6f42aa982661
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1565,
+          "y": 50
+        }
+      }
+  "17":
+    continueonerror: true
+    continueonerrortype: errorPath
+    id: "17"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#error#':
+      - "21"
+      '#none#':
+      - "19"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      entries:
+        simple: '[${ArcsightValue}]'
+      resourceId:
+        simple: ${inputs.ArcSight_ActiveListResourceID}
+      retry-count:
+        simple: "50"
+      retry-interval:
+        simple: "200"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete entries from the Active List.
+      id: 7caba060-e1b6-4f21-88bc-26fd66eef52b
+      iscommand: true
+      name: Delete Old Entry
+      script: '|||as-delete-entries'
+      type: regular
+      version: -1
+    taskid: 7caba060-e1b6-4f21-88bc-26fd66eef52b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1600
+        }
+      }
+  "19":
+    continueonerrortype: ""
+    id: "19"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: Delete_Count
+      value:
+        simple: ${Delete_Count=val+1}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 8cea03ee-ddae-41ff-85c0-d2b428dc8d35
+      iscommand: false
+      name: Update delete count
+      script: Set
+      type: regular
+      version: -1
+    taskid: 8cea03ee-ddae-41ff-85c0-d2b428dc8d35
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1135,
+          "y": 2115
+        }
+      }
+  "21":
+    continueonerrortype: ""
+    id: "21"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: Delete_Count_Error
+      value:
+        simple: ${Delete_Count_Error=val+1}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: c890716a-9165-47e4-8ece-d10bf85ce06a
+      iscommand: false
+      name: Update Delete_Count_Error
+      script: Set
+      type: regular
+      version: -1
+    taskid: c890716a-9165-47e4-8ece-d10bf85ce06a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -440,
+          "y": 2020
+        }
+      }
+  "22":
+    conditions:
+    - condition:
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].SourceBrands}
+          operator: containsGeneral
+          right:
+            value:
+              simple: ${SourceBrand_Value}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].SourceInstances}
+          operator: containsGeneral
+          right:
+            value:
+              simple: ${Source_Instance_Value}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].Verdict}
+          operator: containsGeneral
+          right:
+            value:
+              simple: ${inputs.IOC_VerdictFieldValue}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].FirstSeen}
+          operator: containsGeneral
+          right:
+            value:
+              simple: ${FirstSeen_Value}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].LastSeen}
+          operator: containsGeneral
+          right:
+            value:
+              simple: ${LastSeen_Value}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].ExpirationStatus}
+          operator: containsGeneral
+          right:
+            value:
+              simple: ${inputs.ExpirationStatus_Value}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].CountryCode}
+          operator: containsGeneral
+          right:
+            value:
+              simple: ${GeoCountry.code}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].GeoLocation}
+          operator: containsGeneral
+          right:
+            value:
+              simple: ${GeoCountry.location}
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].Mscore}
+          operator: containsGeneral
+          right:
+            value:
+              simple: ${raw.mscore}
+      label: Value Alerady Present
+    - condition:
+      - - left:
+            value:
+              simple: ${Result.[19]}
+          operator: isEqualString
+          right:
+            value:
+              simple: Active List has no entries
+      label: Entry Not Present
+    continueonerrortype: ""
+    id: "22"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e5d9c13c-908b-4cf1-8dc9-292bf6efc89b
+      iscommand: false
+      name: Check all Data is Present?
+      type: condition
+      version: -1
+    taskid: e5d9c13c-908b-4cf1-8dc9-292bf6efc89b
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1995,
+          "y": 50
+        }
+      }
+  "23":
+    continueonerror: true
+    continueonerrortype: errorPath
+    id: "23"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 1
+    scriptarguments:
+      entries:
+        simple: '[{"${inputs.Arcsight_IP_AddressFieldName}":"${ArcSightESM.ActiveList.Entries.[0].IPAddress}","${inputs.Arcsight_IOC_VerdictFieldName}":"${ArcSightESM.ActiveList.Entries.[0].Verdict}","${inputs.Arcsight_SourceBrandField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceBrands}","${inputs.Arcsight_SourceInstanceField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceInstances}","${inputs.Arcsight_FirstSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].FirstSeen}","${inputs.Arcsight_LastSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].LastSeen}","${inputs.ArcSight_ExpirationStatusFieldName}":"${ArcSightESM.ActiveList.Entries.[0].ExpirationStatus}","${inputs.Arcsight_Entry-ID_FieldName}":"${ArcSightESM.ActiveList.Entries.[0].ID}","${inputs.Arcsight_GeoCountryField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoCountry}","${inputs.Arcsight_GeoLocationField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoLocation}","${inputs.Arcsight_CountryNameField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryName}","${inputs.Arcsight_CountryCodeField_Name}":"${{ArcSightESM.ActiveList.Entries.[0].GeoCountry}","${inputs.Arcsight_MscoreField_Name}":"${ArcSightESM.ActiveList.Entries.[0].Mscore}"}]'
+      resourceId:
+        simple: ${inputs.ArcSight_ActiveListResourceID}
+      retry-count:
+        simple: "50"
+      retry-interval:
+        simple: "300"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete entries from the Active List.
+      id: 90b191eb-3b1b-464b-8bb4-084970ae4f5f
+      iscommand: true
+      name: Delete Old Entry
+      script: '|||as-delete-entries'
+      type: regular
+      version: -1
+    taskid: 90b191eb-3b1b-464b-8bb4-084970ae4f5f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2425,
+          "y": 50
+        }
+      }
+  "24":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].IPAddress}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Value.IP}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].FirstSeen}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${FirstSeen_Value}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].LastSeen}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${LastSeen_Value}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].SourceBrands}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${SourceBrand_Value}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].SourceInstances}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Source_Instance_Value}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].ExpirationStatus}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${inputs.ExpirationStatus_Value}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].CountryCode}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${GeoCountry.code}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].GeoLocation}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${GeoCountry.location}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].CountryName}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${GeoCountry.name}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].Mscore}
+          operator: isEqualNumber
+          right:
+            value:
+              simple: ${raw.mscore}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].Verdict}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${inputs.IOC_VerdictFieldValue}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].ID}
+          operator: isEqualNumber
+          right:
+            value:
+              simple: ${inputs.Entry-ID_FieldValue}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].GeoCountry}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${GeoCountry.code}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].CVSSScore}
+          operator: isEqualNumber
+          right:
+            value:
+              simple: ${CVSSScore}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].CVSS3}
+          operator: isEqualNumber
+          right:
+            value:
+              simple: ${CVSS3 Score}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].MitreID}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Mitre Id}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].MitreTactics}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${MitreTactics}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].KillChainPhases}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${KillchainPhase}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].ThreatTypes}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${ThreatTypes}
+      label: Value Alerady Present
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: ${Result.[19]}
+          operator: isEqualString
+          right:
+            value:
+              simple: Active List has no entries
+      label: Entry Not Present
+    continueonerrortype: ""
+    id: "24"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 641b6a87-2edb-4f12-8d33-97463e6e1622
+      iscommand: false
+      name: Check all Data is Present?
+      type: condition
+      version: -1
+    taskid: 641b6a87-2edb-4f12-8d33-97463e6e1622
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 2855,
+          "y": 50
+        }
+      }
+  "25":
+    conditions:
+    - condition:
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].IPAddress}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Value.IP}
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].ID}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${inputs.Entry-ID_FieldValue}
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].SourceBrands}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${SourceBrand_Value}
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].SourceInstances}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Source_Instance_Value}
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].Verdict}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${inputs.IOC_VerdictFieldValue}
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].ExpirationStatus}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${inputs.ExpirationStatus_Value}
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].FirstSeen}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${FirstSeen_Value}
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].LastSeen}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${LastSeen_Value}
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].Mscore}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${raw.mscore}
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].GeoCountry}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${GeoCountry.code}
+      - - left:
+            value:
+              simple: ${Arcsight_Get-Result.[19].GeoLocation}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${GeoCountry.location}
+      label: Entry Present
+    continueonerrortype: ""
+    id: "25"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8dc00058-14cd-4140-8f8a-518e088e037a
+      iscommand: false
+      name: Check all Data is Present?
+      type: condition
+      version: -1
+    taskid: 8dc00058-14cd-4140-8f8a-518e088e037a
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 3285,
+          "y": 50
+        }
+      }
+  "26":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].IPAddress}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Value.IP}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].EntryID}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${inputs.Entry-ID_FieldValue}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].SourceBrands}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${SourceBrand_Value}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].SourceInstances}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Source_Instance_Value}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].Verdict}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${inputs.IOC_VerdictFieldValue}
+      - - left:
+            iscontext: true
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].ExpirationStatus}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${inputs.ExpirationStatus_Value}
+      label: Data Found
+    continueonerrortype: ""
+    id: "26"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 52159278-555a-4430-875f-d4232f14650f
+      iscommand: false
+      name: Check all Data is Present?
+      type: condition
+      version: -1
+    taskid: 52159278-555a-4430-875f-d4232f14650f
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 3715,
+          "y": 50
+        }
+      }
+  "27":
+    continueonerrortype: ""
+    id: "27"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: Fresh-Add_Count
+      value:
+        simple: ${Fresh-Add_Count=val+1}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 0aa01f60-75de-440b-880d-07a201c868c4
+      iscommand: false
+      name: Update Fresh Add Count
+      script: Set
+      type: regular
+      version: -1
+    taskid: 0aa01f60-75de-440b-880d-07a201c868c4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2045,
+          "y": 2115
+        }
+      }
+  "28":
+    conditions:
+    - condition:
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].ID}
+          operator: in
+          right:
+            value:
+              simple: ${Value.ID}
+      label: ' For Fresh Entry'
+    continueonerrortype: ""
+    id: "28"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: d8dc6f1f-5d4c-4aeb-8d68-1b4376b6cbd1
+      iscommand: false
+      name: Condition For Fresh Entry
+      type: condition
+      version: -1
+    taskid: d8dc6f1f-5d4c-4aeb-8d68-1b4376b6cbd1
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 4145,
+          "y": 50
+        }
+      }
+  "29":
+    continueonerrortype: ""
+    id: "29"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "30"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      key:
+        simple: Set Data For Deletion
+      value:
+        simple: ${Value}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 795cfc30-57d5-4f10-81ca-487245707348
+      iscommand: false
+      name: Set Data For Deletion
+      script: Set
+      type: regular
+      version: -1
+    taskid: 795cfc30-57d5-4f10-81ca-487245707348
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 4575,
+          "y": 50
+        }
+      }
+  "30":
+    continueonerrortype: ""
+    id: "30"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    scriptarguments:
+      key:
+        simple: setxy
+      value:
+        complex:
+          root: ${Set Data For Deletion}
+          transformers:
+          - args:
+              limit: {}
+              replaceWith: {}
+              toReplace:
+                value:
+                  simple: '["'
+            operator: replace
+          - args:
+              limit: {}
+              replaceWith: {}
+              toReplace:
+                value:
+                  simple: '"]'
+            operator: replace
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: f0019fb0-b670-4635-8840-9e6fe665e49d
+      iscommand: false
+      name: Set
+      script: Set
+      type: regular
+      version: -1
+    taskid: f0019fb0-b670-4635-8840-9e6fe665e49d
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 4575,
+          "y": 225
+        }
+      }
+  "31":
+    continueonerror: true
+    continueonerrortype: errorPath
+    id: "31"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    scriptarguments:
+      entries:
+        simple: '[{"${inputs.Arcsight_IP_AddressFieldName}":"${ArcSightESM.ActiveList.Entries.[0].IPAddress}","${inputs.Arcsight_IOC_VerdictFieldName}":"${ArcSightESM.ActiveList.Entries.[0].Verdict}","${inputs.Arcsight_SourceBrandField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceBrands}","${inputs.Arcsight_SourceInstanceField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceInstances}","${inputs.Arcsight_FirstSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].FirstSeen}","${inputs.Arcsight_LastSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].LastSeen}","${inputs.ArcSight_ExpirationStatusFieldName}":"${ArcSightESM.ActiveList.Entries.[0].ExpirationStatus}","${inputs.Arcsight_Entry-ID_FieldName}":"${ArcSightESM.ActiveList.Entries.[0].ID}","${inputs.Arcsight_GeoCountryField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoCountry}","${inputs.Arcsight_GeoLocationField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoLocation}","${inputs.Arcsight_CountryNameField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryName}","${inputs.Arcsight_CountryCodeField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryCode}","${inputs.Arcsight_MscoreField_Name}":"${ArcSightESM.ActiveList.Entries.[0].Mscore}"}]'
+      resourceId:
+        simple: ${inputs.ArcSight_ActiveListResourceID}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete entries from the Active List.
+      id: 0d56d650-c4a2-47ca-882c-f2ca21d3aa9d
+      iscommand: true
+      name: Delete Old Entry
+      script: '|||as-delete-entries'
+      type: regular
+      version: -1
+    taskid: 0d56d650-c4a2-47ca-882c-f2ca21d3aa9d
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 5005,
+          "y": 50
+        }
+      }
+  "33":
+    continueonerrortype: ""
+    id: "33"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "36"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      key:
+        simple: RawArcsightVal
+      value:
+        simple: '{"${inputs.Arcsight_IP_AddressFieldName}":"${ArcSightESM.ActiveList.Entries.[0].IPAddress}","${inputs.Arcsight_IOC_VerdictFieldName}":"${ArcSightESM.ActiveList.Entries.[0].Verdict}","${inputs.Arcsight_SourceBrandField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceBrands}","${inputs.Arcsight_SourceInstanceField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceInstances}","${inputs.Arcsight_FirstSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].FirstSeen}","${inputs.Arcsight_LastSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].LastSeen}","${inputs.ArcSight_ExpirationStatusFieldName}":"${ArcSightESM.ActiveList.Entries.[0].ExpirationStatus}","${inputs.Arcsight_Entry-ID_FieldName}":"${ArcSightESM.ActiveList.Entries.[0].ID}","${inputs.Arcsight_GeoCountryField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoCountry}","${inputs.Arcsight_GeoLocationField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoLocation}","${inputs.Arcsight_CountryNameField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryName}","${inputs.Arcsight_CountryCodeField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryCode}","${inputs.Arcsight_MscoreField_Name}":"${ArcSightESM.ActiveList.Entries.[0].Mscore}"}'
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 4784029a-ff35-4b1f-84e9-d272ef7de218
+      iscommand: false
+      name: Set Get Arcsight Data
+      script: Set
+      type: regular
+      version: -1
+    taskid: 4784029a-ff35-4b1f-84e9-d272ef7de218
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1145,
+          "y": 1100
+        }
+      }
+  "34":
+    conditions:
+    - condition:
+      - - left:
+            value:
+              simple: ${ArcsightValue}
+          operator: in
+          right:
+            value:
+              simple: ${Value}
+      label: Value Alerady Present
+    continueonerrortype: ""
+    id: "34"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "17"
+      Value Alerady Present:
+      - "6"
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c40f8986-35df-4c4f-88ce-a15e68360c5a
+      iscommand: false
+      name: Is Arcsight Val and Current val is same?
+      type: condition
+      version: -1
+    taskid: c40f8986-35df-4c4f-88ce-a15e68360c5a
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1370,
+          "y": 1550
+        }
+      }
+  "36":
+    continueonerror: true
+    continueonerrortype: errorPath
+    id: "36"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#error#':
+      - "40"
+      '#none#':
+      - "34"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      key:
+        simple: ArcsightValue
+      value:
+        complex:
+          root: ${RawArcsightVal}
+          transformers:
+          - args:
+              limit: {}
+              replaceWith: {}
+              toReplace:
+                value:
+                  simple: '["'
+            operator: replace
+          - args:
+              limit: {}
+              replaceWith: {}
+              toReplace:
+                value:
+                  simple: '"]'
+            operator: replace
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 25d69a26-4d07-4341-8817-25cae2ce1a6f
+      iscommand: false
+      name: Format Value
+      script: Set
+      type: regular
+      version: -1
+    taskid: 25d69a26-4d07-4341-8817-25cae2ce1a6f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1145,
+          "y": 1275
+        }
+      }
+  "37":
+    conditions:
+    - condition:
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].Mscore}
+          operator: isNotEmpty
+          right:
+            value: {}
+      label: Mscore Present
+    continueonerrortype: ""
+    id: "37"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "43"
+      Mscore Present:
+      - "33"
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7022722d-3754-49e2-811e-466438a52220
+      iscommand: false
+      name: Is Mscore Field is Present
+      type: condition
+      version: -1
+    taskid: 7022722d-3754-49e2-811e-466438a52220
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1360,
+          "y": 925
+        }
+      }
+  "38":
+    continueonerrortype: ""
+    id: "38"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    scriptarguments:
+      entries:
+        simple: '[{"${inputs.Arcsight_IP_AddressFieldName}":"${Value.IP}","${inputs.Arcsight_IOC_VerdictFieldName}":"${inputs.IOC_VerdictFieldValue}","${inputs.Arcsight_SourceBrandField_Name}":"${SourceBrand_Value}","${inputs.Arcsight_SourceInstanceField_Name}":"${Source_Instance_Value}","${inputs.Arcsight_FirstSeenField_Name}":"${FirstSeen_Value}","${inputs.Arcsight_LastSeenField_Name}":"${LastSeen_Value}","${inputs.ArcSight_ExpirationStatusFieldName}":"${inputs.ExpirationStatus_Value}","${inputs.Arcsight_Entry-ID_FieldName}":"${inputs.Entry-ID_FieldValue}","${inputs.Arcsight_GeoCountryField_Name}":"${GeoCountry.code}","${inputs.Arcsight_GeoLocationField_Name}":"${GeoCountry.location}","${inputs.Arcsight_CountryNameField_Name}":"${GeoCountry.name}","${inputs.Arcsight_CountryCodeField_Name}":"${GeoCountry.code}","${inputs.Arcsight_MscoreField_Name}":"${raw.mscore}"}]'
+      resourceId:
+        simple: ${inputs.ArcSight_ActiveListResourceID}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ArcSight ESM v2
+      description: Adds new entries to the Active List.
+      id: 81989ead-4b1e-4ae2-89c4-0912aba4a3f4
+      iscommand: true
+      name: Add IP to ArcSight Active list block list
+      script: ArcSight ESM v2|||as-add-entries
+      type: regular
+      version: -1
+    taskid: 81989ead-4b1e-4ae2-89c4-0912aba4a3f4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 5435,
+          "y": 50
+        }
+      }
+  "39":
+    continueonerrortype: ""
+    id: "39"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    scriptarguments:
+      key:
+        simple: Set Data For Deletion
+      value:
+        simple: '[{"${inputs.Arcsight_IP_AddressFieldName}":"${ArcSightESM.ActiveList.Entries.[0].IPAddress}","${inputs.Arcsight_IOC_VerdictFieldName}":"${ArcSightESM.ActiveList.Entries.[0].Verdict}","${inputs.Arcsight_SourceBrandField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceBrands}","${inputs.Arcsight_SourceInstanceField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceInstances}","${inputs.Arcsight_FirstSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].FirstSeen}","${inputs.Arcsight_LastSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].LastSeen}","${inputs.ArcSight_ExpirationStatusFieldName}":"${ArcSightESM.ActiveList.Entries.[0].ExpirationStatus}","${inputs.Arcsight_Entry-ID_FieldName}":"${ArcSightESM.ActiveList.Entries.[0].ID}","${inputs.Arcsight_GeoCountryField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoCountry}","${inputs.Arcsight_GeoLocationField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoLocation}","${inputs.Arcsight_CountryNameField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryName}","${inputs.Arcsight_CountryCodeField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryCode}","${inputs.Arcsight_MscoreField_Name}":"${ArcSightESM.ActiveList.Entries.[0].Mscore}"}]'
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: f8030fbc-edcc-44c6-8899-6afa0de07b2b
+      iscommand: false
+      name: Set Data For Deletion
+      script: Set
+      type: regular
+      version: -1
+    taskid: f8030fbc-edcc-44c6-8899-6afa0de07b2b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 5865,
+          "y": 50
+        }
+      }
+  "40":
+    conditions:
+    - condition:
+      - - left:
+            value:
+              simple: ${RawArcsightVal}
+          operator: in
+          right:
+            value:
+              simple: ${Value}
+      label: Value Alerady Present
+    continueonerrortype: ""
+    id: "40"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "41"
+      Value Alerady Present:
+      - "6"
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0b3b724b-6f83-4b0e-8eaa-0a8e7e94570f
+      iscommand: false
+      name: Is Arcsight Val and Current val is same?
+      type: condition
+      version: -1
+    taskid: 0b3b724b-6f83-4b0e-8eaa-0a8e7e94570f
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 730,
+          "y": 1600
+        }
+      }
+  "41":
+    continueonerror: true
+    continueonerrortype: errorPath
+    id: "41"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#error#':
+      - "21"
+      '#none#':
+      - "19"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      entries:
+        simple: '[${RawArcsightVal}]'
+      resourceId:
+        simple: ${inputs.ArcSight_ActiveListResourceID}
+      retry-count:
+        simple: "50"
+      retry-interval:
+        simple: "200"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete entries from the Active List.
+      id: 8ff08795-de06-4682-8f1c-8f3aa6d34425
+      iscommand: true
+      name: Delete Old Entry
+      script: '|||as-delete-entries'
+      type: regular
+      version: -1
+    taskid: 8ff08795-de06-4682-8f1c-8f3aa6d34425
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 730,
+          "y": 1820
+        }
+      }
+  "42":
+    continueonerrortype: ""
+    id: "42"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: RawArcsightVal
+      value:
+        simple: '{"${inputs.Arcsight_IP_AddressFieldName}":"${ArcSightESM.ActiveList.Entries.[0].IPAddress}","${inputs.Arcsight_IOC_VerdictFieldName}":"${ArcSightESM.ActiveList.Entries.[0].Verdict}","${inputs.Arcsight_SourceBrandField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceBrands}","${inputs.Arcsight_SourceInstanceField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceInstances}","${inputs.Arcsight_FirstSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].FirstSeen}","${inputs.Arcsight_LastSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].LastSeen}","${inputs.ArcSight_ExpirationStatusFieldName}":"${ArcSightESM.ActiveList.Entries.[0].ExpirationStatus}","${inputs.Arcsight_Entry-ID_FieldName}":"${ArcSightESM.ActiveList.Entries.[0].ID}","${inputs.Arcsight_GeoCountryField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoCountry}","${inputs.Arcsight_GeoLocationField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoLocation}","${inputs.Arcsight_CountryNameField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryName}","${inputs.Arcsight_CountryCodeField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryCode}","${inputs.Arcsight_MscoreField_Name}":"${ArcSightESM.ActiveList.Entries.[0].Mscore}","${inputs.Arcsight_CVSS_Score_Field_Name}":"${ArcSightESM.ActiveList.Entries.[0].CVSSScore}","${inputs.Arcsight_CVSS3Field_Name}":"${ArcSightESM.ActiveList.Entries.[0].CVSS3}","${inputs.Arcsight_MITRE_ID_Field_Name}":"${ArcSightESM.ActiveList.Entries.[0].MitreID}","${inputs.Arcsight_MITRE_Tactics_Field_Name}":"${ArcSightESM.ActiveList.Entries.[0].MitreTactics}","${inputs.Arcsight_KillChainPhases_Field_Name}":"${ArcSightESM.ActiveList.Entries.[0].KillChainPhases}","${inputs.Arcsight_ThreatType_Field_Name}":"${ArcSightESM.ActiveList.Entries.[0].ThreatTypes}"}'
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: a1d77e5a-5968-4538-800c-ebe813b246a8
+      iscommand: false
+      name: Set Get Arcsight Data
+      script: Set
+      type: regular
+      version: -1
+    taskid: a1d77e5a-5968-4538-800c-ebe813b246a8
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 6295,
+          "y": 50
+        }
+      }
+  "43":
+    continueonerrortype: ""
+    id: "43"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "44"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      key:
+        simple: RawArcsightVal
+      value:
+        simple: '{"${inputs.Arcsight_IP_AddressFieldName}":"${ArcSightESM.ActiveList.Entries.[0].IPAddress}","${inputs.Arcsight_IOC_VerdictFieldName}":"${ArcSightESM.ActiveList.Entries.[0].Verdict}","${inputs.Arcsight_SourceBrandField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceBrands}","${inputs.Arcsight_SourceInstanceField_Name}":"${ArcSightESM.ActiveList.Entries.[0].SourceInstances}","${inputs.Arcsight_FirstSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].FirstSeen}","${inputs.Arcsight_LastSeenField_Name}":"${ArcSightESM.ActiveList.Entries.[0].LastSeen}","${inputs.ArcSight_ExpirationStatusFieldName}":"${ArcSightESM.ActiveList.Entries.[0].ExpirationStatus}","${inputs.Arcsight_Entry-ID_FieldName}":"${ArcSightESM.ActiveList.Entries.[0].ID}","${inputs.Arcsight_GeoCountryField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoCountry}","${inputs.Arcsight_GeoLocationField_Name}":"${ArcSightESM.ActiveList.Entries.[0].GeoLocation}","${inputs.Arcsight_CountryNameField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryName}","${inputs.Arcsight_CountryCodeField_Name}":"${ArcSightESM.ActiveList.Entries.[0].CountryCode}"}'
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 668ced66-4166-42ea-8c66-39897318d7c0
+      iscommand: false
+      name: Set Get Arcsight Data
+      script: Set
+      type: regular
+      version: -1
+    taskid: 668ced66-4166-42ea-8c66-39897318d7c0
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1575,
+          "y": 1100
+        }
+      }
+  "44":
+    continueonerror: true
+    continueonerrortype: errorPath
+    id: "44"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#error#':
+      - "45"
+      '#none#':
+      - "34"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      key:
+        simple: ArcsightValue
+      value:
+        complex:
+          root: ${RawArcsightVal}
+          transformers:
+          - args:
+              limit: {}
+              replaceWith: {}
+              toReplace:
+                value:
+                  simple: '["'
+            operator: replace
+          - args:
+              limit: {}
+              replaceWith: {}
+              toReplace:
+                value:
+                  simple: '"]'
+            operator: replace
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 3501af31-447d-43d1-876a-d90cc996cf68
+      iscommand: false
+      name: Format Value
+      script: Set
+      type: regular
+      version: -1
+    taskid: 3501af31-447d-43d1-876a-d90cc996cf68
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1575,
+          "y": 1275
+        }
+      }
+  "45":
+    conditions:
+    - condition:
+      - - left:
+            value:
+              simple: ${RawArcsightVal}
+          operator: in
+          right:
+            value:
+              simple: ${Value}
+      label: Value Alerady Present
+    continueonerrortype: ""
+    id: "45"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "46"
+      Value Alerady Present:
+      - "6"
+    note: false
+    quietmode: 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 85317571-ed13-4ae9-8a62-02bf87ff7011
+      iscommand: false
+      name: Is Arcsight Val and Current val is same?
+      type: condition
+      version: -1
+    taskid: 85317571-ed13-4ae9-8a62-02bf87ff7011
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1740,
+          "y": 1655
+        }
+      }
+  "46":
+    continueonerror: true
+    continueonerrortype: errorPath
+    id: "46"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#error#':
+      - "21"
+      '#none#':
+      - "19"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      entries:
+        simple: '[${RawArcsightVal}]'
+      resourceId:
+        simple: ${inputs.ArcSight_ActiveListResourceID}
+      retry-count:
+        simple: "50"
+      retry-interval:
+        simple: "200"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete entries from the Active List.
+      id: 229f0c10-0cc0-4532-80ba-b717115a4a6c
+      iscommand: true
+      name: Delete Old Entry
+      script: '|||as-delete-entries'
+      type: regular
+      version: -1
+    taskid: 229f0c10-0cc0-4532-80ba-b717115a4a6c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1740,
+          "y": 1820
+        }
+      }
+  "47":
+    conditions:
+    - condition:
+      - - left:
+            value:
+              simple: ${ArcSightESM.ActiveList.Entries.[0].IPAddress}
+          operator: isEqualString
+          right:
+            value:
+              simple: ${Value.IPAddress}
+      label: Entry Present
+    continueonerrortype: ""
+    id: "47"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "27"
+      Entry Present:
+      - "37"
+    note: false
+    quietmode: 1
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 4a519dd2-4b71-4e2b-8c05-c649250cdd6f
+      iscommand: false
+      name: Is Entry Already Present?
+      type: condition
+      version: -1
+    taskid: 4a519dd2-4b71-4e2b-8c05-c649250cdd6f
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 1032.5,
+          "y": 750
+        }
+      }
+  "48":
+    continueonerrortype: ""
+    id: "48"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 1
+    scriptarguments:
+      append:
+        simple: "false"
+      key:
+        simple: Fresh-Add_Count
+      value:
+        simple: ${Fresh-Add_Count=val+1}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 2741c1b2-9298-4a2d-8bf6-8486fb4dec99
+      iscommand: false
+      name: Update Fresh Add Count
+      script: Set
+      type: regular
+      version: -1
+    taskid: 2741c1b2-9298-4a2d-8bf6-8486fb4dec99
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2690,
+          "y": 2660
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 2900,
+        "width": 7115,
+        "x": -440,
+        "y": 50
+      }
+    }
+  }
