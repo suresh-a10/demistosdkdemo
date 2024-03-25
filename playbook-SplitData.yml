@@ -1,0 +1,208 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: SplitData Contribution Pack
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 56bebc5d-2869-4a3e-8d88-dad4d96e9b9f
+inputs: []
+name: SplitData
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 1967e556-9d15-49d0-81ad-2af9bffc507d
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 1967e556-9d15-49d0-81ad-2af9bffc507d
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 200
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      BatchSize:
+        simple: "5"
+      InputData:
+        complex:
+          accessor: value
+          root: foundIndicators
+          transformers:
+          - args:
+              separator:
+                value:
+                  simple: ','
+            operator: join
+      outputFormat:
+        simple: List
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Takes a comma separated string data and splits it into batches
+        of desired size.
+      id: f70db7dc-7d19-4132-84ca-14f83371b56a
+      iscommand: false
+      name: Split Data in chunks
+      script: 5ed1fa85-be8a-41e1-884e-398d396b2d6e
+      type: regular
+      version: -1
+    taskid: f70db7dc-7d19-4132-84ca-14f83371b56a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1500,
+          "y": 240
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      forEach: true
+      iscommand: false
+      max: 100
+      wait: 1
+    note: false
+    quietmode: 0
+    scriptarguments:
+      DataPrint:
+        complex:
+          accessor: DemoList
+          root: lists
+          transformers:
+          - operator: ParseJSON
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: acac20fa-6405-4fd6-8c7d-d9f9f429f712
+      iscommand: false
+      name: PrintinLoop
+      playbookId: c33af6c7-700a-4110-8c69-1fa70909d05f
+      type: playbook
+      version: -1
+    taskid: acac20fa-6405-4fd6-8c7d-d9f9f429f712
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 1040,
+          "y": 445
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 3c35d2b6-f95c-437a-8971-261eae361a1f
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 3c35d2b6-f95c-437a-8971-261eae361a1f
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 540
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      query:
+        simple: type:IP
+      size:
+        simple: "100"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Searches Cortex XSOAR Indicators.
+
+        Search for XSOAR Indicators and returns the id, indicator_type, value, and score/verdict.
+
+        You can add additional fields from the indicators using the add_field_to_context argument.
+      id: cfd8a3e2-9707-47f0-89a8-2832e223a482
+      iscommand: false
+      name: Search Indicators
+      script: SearchIndicator
+      type: regular
+      version: -1
+    taskid: cfd8a3e2-9707-47f0-89a8-2832e223a482
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1310,
+          "y": -40
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 645,
+        "width": 1430,
+        "x": 450,
+        "y": -40
+      }
+    }
+  }
