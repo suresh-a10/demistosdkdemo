@@ -1,0 +1,367 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 3beef238-7c19-42cb-8cb6-f1966728743a
+inputs: []
+name: Test - MainPlaybook
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9b95e724-6295-4f6b-88c1-23d3408de5a1
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 9b95e724-6295-4f6b-88c1-23d3408de5a1
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 70,
+          "y": 165
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: sd
+        options: []
+        optionsarg: []
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: shortText
+      sender: XSOARSOCLTD
+      title: sd
+      totalanswers: 0
+    formDisplay:
+      bodybackgroundcolor: ""
+      bodyfontcolor: ""
+      headerbackgroundcolor: '#f4f5f5'
+      headerfontcolor: ""
+      isexternalrtl: false
+      sender: ""
+      submitbuttonbackgroundcolor: ""
+      submitbuttonfontcolor: ""
+      submittext: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body: {}
+      cc: null
+      format: html
+      methods: []
+      subject:
+        simple: test link
+      timings:
+        completeafterreplies: 1
+        completeaftersla: false
+        completeafterv2: true
+        retriescount: 2
+        retriesinterval: 360
+      to: {}
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7f70ae1e-15d2-462b-8a17-8758de037af8
+      iscommand: false
+      name: data collection task
+      type: collection
+      version: -1
+    taskid: 7f70ae1e-15d2-462b-8a17-8758de037af8
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 490,
+          "y": 240
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      columns:
+        simple: ASN,Address,Malicious.Vendor
+      data:
+        simple: ${IP}
+      title:
+        simple: IP details
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Convert an array to a nice table display. Usually, from the context.
+      id: 953bf0db-5647-4840-8154-856c9bd53f50
+      iscommand: false
+      name: ToTable
+      script: ToTable
+      type: regular
+      version: -1
+    taskid: 953bf0db-5647-4840-8154-856c9bd53f50
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -520,
+          "y": 450
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: HTMLData=.
+      id:
+        simple: ${lastCompletedTaskEntries}
+      text:
+        simple: ${TableData}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.mdToHTML
+      id: dc03ea77-4cfd-4936-82e2-d167332fe7c5
+      iscommand: true
+      name: html Data
+      script: Builtin|||mdToHtml
+      type: regular
+      version: -1
+    taskid: dc03ea77-4cfd-4936-82e2-d167332fe7c5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -460,
+          "y": 620
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 77d6a0f7-6678-4f13-8ef6-b3978900e5c8
+      iscommand: false
+      name: Untitled Task
+      script: Print
+      type: regular
+      version: -1
+    taskid: 77d6a0f7-6678-4f13-8ef6-b3978900e5c8
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -410,
+          "y": 230
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: true
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      seconds:
+        simple: "5"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sleep for X seconds
+      id: 06a9a54f-ebec-4298-87a4-ccc423306310
+      iscommand: false
+      name: wait a bit to get the link
+      script: Sleep
+      type: regular
+      version: -1
+    taskid: 06a9a54f-ebec-4298-87a4-ccc423306310
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 930,
+          "y": 230
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      body:
+        simple: |-
+          link is here
+          ${sd.Links.0.link}
+      subject:
+        simple: sample
+      to:
+        simple: shapatil@paloaltonetworks.com
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: EWSO365
+      description: Sends an email.
+      id: 41ee4eb3-398f-41c9-8d49-995f9ba67915
+      iscommand: true
+      name: send email
+      script: EWSO365|||send-mail
+      type: regular
+      version: -1
+    taskid: 41ee4eb3-398f-41c9-8d49-995f9ba67915
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 930,
+          "y": 400
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: eccfe2d5-3858-4b75-83e7-df06e7e713c6
+      iscommand: false
+      name: Next steps
+      type: regular
+      version: -1
+    taskid: eccfe2d5-3858-4b75-83e7-df06e7e713c6
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 490,
+          "y": 400
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 1c188c80-27b3-4dd9-89ec-38555210dfa7
+      iscommand: false
+      name: Test-SubplaybookCounter
+      playbookId: 0b38269c-1a8e-403b-88aa-65e9fcd19ef9
+      type: playbook
+      version: -1
+    taskid: 1c188c80-27b3-4dd9-89ec-38555210dfa7
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 70,
+          "y": 335
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 550,
+        "width": 1830,
+        "x": -520,
+        "y": 165
+      }
+    }
+  }
