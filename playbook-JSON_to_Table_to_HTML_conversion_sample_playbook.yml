@@ -1,0 +1,249 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: 6.0.0
+    itemVersion: 2.0.5
+    packID: ""
+    packName: System Diagnostics and Health Check
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 30240726-bda7-454c-8668-dd004872424d
+inputs: []
+name: JSON to Table to HTML conversion sample playbook
+outputs: []
+sourceplaybookid: HealthCheck
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "43"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 51fcdd53-50d9-4475-8edd-4bcf85190466
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 51fcdd53-50d9-4475-8edd-4bcf85190466
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "25":
+    continueonerrortype: ""
+    id: "25"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "45"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 8a3ff652-0108-485c-86f9-250c9f8c85de
+      iscommand: false
+      name: Send Email
+      type: title
+      version: -1
+    taskid: 8a3ff652-0108-485c-86f9-250c9f8c85de
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "43":
+    continueonerrortype: ""
+    id: "43"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "44"
+    note: false
+    quietmode: 2
+    scriptarguments:
+      columns:
+        simple: Indicator,Score
+      data:
+        simple: ${DBotScore}
+      extend-context:
+        simple: TableData=
+      title:
+        simple: IOCs
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Convert an array to a nice table display. Usually, from the context.
+      id: 2064cc0d-7560-4b2c-8252-cdb1cf4ec710
+      iscommand: false
+      name: Convert Actionable item Json data to table
+      script: ToTable
+      type: regular
+      version: -1
+    taskid: 2064cc0d-7560-4b2c-8252-cdb1cf4ec710
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "44":
+    continueonerrortype: ""
+    id: "44"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "25"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: HTMLTable=
+      id:
+        simple: ${lastCompletedTaskEntries}
+      text:
+        simple: ${TableData}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.mdToHTML
+      id: fca06dc8-55dd-49fe-805f-7d330d12ab57
+      iscommand: true
+      name: convert MD to HTML
+      script: Builtin|||mdToHtml
+      type: regular
+      version: -1
+    taskid: fca06dc8-55dd-49fe-805f-7d330d12ab57
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "45":
+    continueonerrortype: ""
+    id: "45"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "46"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      htmlBody:
+        simple: |-
+          <!DOCTYPE html>
+          <html>
+          <head>
+          <style>
+          table, th, td {
+            border: 1px solid black;
+          }
+          </style>
+          </head>
+          <body>
+          ${HTMLTable}
+          </body>
+          </html>
+      subject:
+        simple: XSOAR - IOCs
+      to:
+        simple: shapatil@paloaltonetworks.com
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: EWSO365
+      description: Sends an email.
+      id: 76e2dffa-4191-43da-8ea5-a2c5a699abe5
+      iscommand: true
+      name: Send email
+      script: EWSO365|||send-mail
+      type: regular
+      version: -1
+    taskid: 76e2dffa-4191-43da-8ea5-a2c5a699abe5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 690
+        }
+      }
+  "46":
+    continueonerrortype: ""
+    id: "46"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2074221e-01db-4be2-885b-21f196fbc454
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 2074221e-01db-4be2-885b-21f196fbc454
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 865
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 880,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
