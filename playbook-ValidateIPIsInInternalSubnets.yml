@@ -1,0 +1,127 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 90314995-b07b-4736-8c32-7e223ed0ec2a
+inputs:
+- description: ""
+  key: IPAddress
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: ValidateIPIsInInternalSubnets
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 301e3ce5-a906-4f96-855f-fcedf68fa234
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 301e3ce5-a906-4f96-855f-fcedf68fa234
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 2
+    scriptarguments:
+      ip:
+        simple: ${inputs.IPAddress}
+      ipRanges:
+        simple: ${lists.InternalSubnets}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Returns yes if the IP is in one of the ranges provided, returns
+        no otherwise.
+      id: 4187d9a1-9227-4b90-83bd-9731ce35a2a0
+      iscommand: false
+      name: Check the IP is in Internal Subnets
+      script: IsIPInRanges
+      type: regular
+      version: -1
+    taskid: 4187d9a1-9227-4b90-83bd-9731ce35a2a0
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 190
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6f2f90d5-caa2-42fc-872a-f69431433b96
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 6f2f90d5-caa2-42fc-872a-f69431433b96
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 470,
+          "y": 860
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 875,
+        "width": 400,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
