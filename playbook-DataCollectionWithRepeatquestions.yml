@@ -1,0 +1,276 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 60efe89b-99db-41b9-8e9f-d5a412199bdf
+inputs: []
+name: DataCollectionWithRepeatquestions
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: b67b67f3-6232-442c-8fb6-22067a75ef03
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: b67b67f3-6232-442c-8fb6-22067a75ef03
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Whatistheanswer
+        options: []
+        optionsarg:
+        - {}
+        - simple: "Yes"
+        - simple: "No"
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: multiSelect
+      sender: ""
+      title: Survey1
+      totalanswers: 0
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body: null
+      cc: null
+      format: ""
+      methods:
+      - email
+      subject:
+        simple: Firstsetofapprovers
+      timings:
+        completeafterreplies: 0
+        completeaftersla: false
+        completeafterv2: false
+        retriescount: 2
+        retriesinterval: 360
+      to:
+        simple: Administrator
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    sla:
+      days: 0
+      hours: 1
+      minutes: 0
+      weeks: 0
+    task:
+      brand: ""
+      id: 85cc7167-284b-4686-8031-852b80fb0bc4
+      iscommand: false
+      name: Datacollection1
+      type: collection
+      version: -1
+    taskid: 85cc7167-284b-4686-8031-852b80fb0bc4
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "no":
+      - "4"
+      "yes":
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: ${Survey1.Answers.0}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value exists in the context. Will return 'no'
+        for empty empty arrays. To be used mostly with DQ and selectors.
+      id: a7c6f239-8e38-4229-8ac6-76f897973f92
+      iscommand: false
+      name: Does an answer exist
+      script: Exists
+      type: condition
+      version: -1
+    taskid: a7c6f239-8e38-4229-8ac6-76f897973f92
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: d9b6f968-fe7a-4b51-8d11-94213652cebe
+      iscommand: false
+      name: Perform the action
+      type: regular
+      version: -1
+    taskid: d9b6f968-fe7a-4b51-8d11-94213652cebe
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    form:
+      description: ""
+      expired: false
+      questions:
+      - defaultrows: []
+        fieldassociated: ""
+        gridcolumns: []
+        id: "0"
+        label: ""
+        labelarg:
+          simple: Whatistheanswer
+        options: []
+        optionsarg:
+        - {}
+        - simple: "Yes"
+        - simple: "No"
+        placeholder: ""
+        readonly: false
+        required: false
+        tooltip: ""
+        type: multiSelect
+      sender: ""
+      title: Survey1
+      totalanswers: 0
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    message:
+      bcc: null
+      body: null
+      cc: null
+      format: ""
+      methods:
+      - email
+      subject:
+        simple: Datacollection2
+      timings:
+        completeafterreplies: 0
+        completeaftersla: false
+        completeafterv2: false
+        retriescount: 0
+        retriesinterval: 500
+      to:
+        simple: Analyst
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    sla:
+      days: 0
+      hours: 1
+      minutes: 0
+      weeks: 0
+    task:
+      brand: ""
+      id: efab78d8-2fd2-434e-85c5-11a2665ae7f6
+      iscommand: false
+      name: Datacollection2
+      type: collection
+      version: -1
+    taskid: efab78d8-2fd2-434e-85c5-11a2665ae7f6
+    timertriggers: []
+    type: collection
+    view: |-
+      {
+        "position": {
+          "x": 330,
+          "y": 550
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 765,
+        "width": 660,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
