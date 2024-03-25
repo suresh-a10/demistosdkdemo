@@ -1,0 +1,134 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 3f919231-41b1-45b0-81e1-d4e27b1ef4a2
+inputs: []
+name: rasterizeURL and attach
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 9f588718-955c-40af-82b7-050f11d68d9b
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 9f588718-955c-40af-82b7-050f11d68d9b
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      file_name:
+        simple: incidentimage
+      url:
+        simple: www.google.com
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Converts the contents of a URL to an image file or a PDF file.
+      id: 80250083-caf7-4c24-8ec8-2c15446df58a
+      iscommand: true
+      name: Rasterize URL
+      script: '|||rasterize'
+      type: regular
+      version: -1
+    taskid: 80250083-caf7-4c24-8ec8-2c15446df58a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      attachIDs:
+        simple: ${InfoFile.EntryID}
+      attachNames:
+        simple: Emailrasterize
+      body:
+        simple: "Hi, \n\nSending the image"
+      subject:
+        simple: emailurlimage
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sends an email.
+      id: 105f042b-281d-4870-844a-35cb3ff56d97
+      iscommand: true
+      name: Sendemail
+      script: '|||send-mail'
+      type: regular
+      version: -1
+    taskid: 105f042b-281d-4870-844a-35cb3ff56d97
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 415,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
