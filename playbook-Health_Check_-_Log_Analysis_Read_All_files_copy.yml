@@ -1,0 +1,668 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: 6.0.0
+    itemVersion: 2.0.10
+    packID: ""
+    packName: System Diagnostics and Health Check
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+description: Parse files from log bundle output
+id: 549b6c3f-db3e-46b4-8973-9a1bcb89b14f
+inputs:
+- description: Log bundle files
+  key: LogFiles
+  playbookInputQuery: null
+  required: false
+  value: {}
+- description: ""
+  key: Health Check Thresholds
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: ${Health Check Thresholds}
+name: Health Check - Log Analysis Read All files_copy
+outputs:
+- contextPath: HealthCheck.ActionableItems
+  description: Data read from war room file
+sourceplaybookid: Health Check - Log Analysis Read All files
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "26"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 749db5ee-0f81-4f69-8a13-db95572d6b2c
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 749db5ee-0f81-4f69-8a13-db95572d6b2c
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "42"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: inputs.LogFiles.Name
+              operator: endWith
+              right:
+                value:
+                  simple: license_data.log
+          root: inputs.LogFiles
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Read license_data.log and set customer name, license end date
+      id: cacfd0d8-cdd7-4c08-88be-cf7eca8f04f0
+      iscommand: false
+      name: Read license_data.log and set customer name, license end date
+      script: HealthCheckLicenseData
+      type: regular
+      version: -1
+    taskid: cacfd0d8-cdd7-4c08-88be-cf7eca8f04f0
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1710
+        }
+      }
+  "18":
+    continueonerrortype: ""
+    id: "18"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "42"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      IncidentID:
+        simple: ${incident.id}
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: inputs.LogFiles.Name
+              operator: startWith
+              right:
+                value:
+                  simple: server
+          - - left:
+                iscontext: true
+                value:
+                  simple: inputs.LogFiles.Name
+              operator: endWith
+              right:
+                value:
+                  simple: .log
+          root: inputs.LogFiles
+      since:
+        simple: ${incident.lasince}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Read server log file line by line and display warnings, fatal errors
+        and keyword results in a table to the war room
+      id: 0d90683d-fcdf-4ee0-8458-69dcb491944f
+      iscommand: false
+      name: Read server.log file and display
+      script: HealthCheckServerLog
+      tags:
+      - ServerResults
+      type: regular
+      version: -1
+    taskid: 0d90683d-fcdf-4ee0-8458-69dcb491944f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1710
+        }
+      }
+  "26":
+    continueonerrortype: ""
+    id: "26"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "55"
+      - "39"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 598960bf-e55d-43a0-8898-d491510a5256
+      iscommand: false
+      name: Read all files
+      type: title
+      version: -1
+    taskid: 598960bf-e55d-43a0-8898-d491510a5256
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 195
+        }
+      }
+  "36":
+    continueonerrortype: ""
+    id: "36"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "63"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: inputs.LogFiles.Name
+              operator: endWith
+              right:
+                value:
+                  simple: docker.log
+          root: inputs.LogFiles
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Read docker log file
+      id: 9843b2ae-cd2b-4c6c-8308-ee50950e353a
+      iscommand: false
+      name: Read the Docker.log file
+      script: HealthCheckDockerLog
+      type: regular
+      version: -1
+    taskid: 9843b2ae-cd2b-4c6c-8308-ee50950e353a
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 40,
+          "y": 870
+        }
+      }
+  "37":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.LogFiles.Name
+          operator: isEqualString
+          right:
+            value:
+              simple: docker.log
+      label: "yes"
+    continueonerrortype: ""
+    id: "37"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "63"
+      "yes":
+      - "36"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if docker log exist
+      id: 483cf25d-55c9-4956-858f-da570a939ad7
+      iscommand: false
+      name: 'Do we have a docker log in the bundle ? '
+      type: condition
+      version: -1
+    taskid: 483cf25d-55c9-4956-858f-da570a939ad7
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 690
+        }
+      }
+  "39":
+    continueonerrortype: ""
+    id: "39"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "37"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: inputs.LogFiles.Name
+              operator: endWith
+              right:
+                value:
+                  simple: filesystem.log
+          root: inputs.LogFiles
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: read and parse filesystem.log
+      id: b58ffb15-936a-4e03-8945-4032a389e72f
+      iscommand: false
+      name: Read the filesystem.log file
+      script: HealthCheckFileSystem
+      type: regular
+      version: -1
+    taskid: b58ffb15-936a-4e03-8945-4032a389e72f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 515
+        }
+      }
+  "42":
+    continueonerrortype: ""
+    id: "42"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: f5188063-02d9-4368-8ce0-014d8ed742b0
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: f5188063-02d9-4368-8ce0-014d8ed742b0
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1885
+        }
+      }
+  "43":
+    continueonerrortype: ""
+    id: "43"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "37"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: inputs.LogFiles.Name
+              operator: endWith
+              right:
+                value:
+                  simple: conf.log
+          root: inputs.LogFiles
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Read the conf.log file extracted from the log bundle
+      id: 59f10a54-e699-44d4-83b7-e0458f65f2d9
+      iscommand: false
+      name: 'Read the conf.log (demisto.conf) file '
+      script: HealthCheckReadConf
+      type: regular
+      version: -1
+    taskid: 59f10a54-e699-44d4-83b7-e0458f65f2d9
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 515
+        }
+      }
+  "52":
+    continueonerror: true
+    continueonerrortype: ""
+    id: "52"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "10"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: inputs.LogFiles.Name
+              operator: endWith
+              right:
+                value:
+                  simple: telemetry.log
+          root: inputs.LogFiles
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Read Telemetry file
+      id: 8ccea87d-404a-48a1-8ef6-e3c7c1a4b6b3
+      iscommand: false
+      name: Read Telemetry file (check for API)
+      script: HealthCheckReadTemeletryLog
+      type: regular
+      version: -1
+    taskid: 8ccea87d-404a-48a1-8ef6-e3c7c1a4b6b3
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 1535
+        }
+      }
+  "55":
+    continueonerrortype: ""
+    id: "55"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "43"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: inputs.LogFiles.Name
+              operator: endWith
+              right:
+                value:
+                  simple: version_control.log
+          root: inputs.LogFiles
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Read the version_control.log file extracted from the log bundle
+      id: eeafb070-6e5c-4a83-8f22-5804980cf243
+      iscommand: false
+      name: Read the version_control.log file to collect dev prod details
+      script: HealthCheckReadVC
+      type: regular
+      version: -1
+    taskid: eeafb070-6e5c-4a83-8f22-5804980cf243
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 340
+        }
+      }
+  "56":
+    continueonerrortype: ""
+    id: "56"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "52"
+      - "62"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: bed0f6c2-34ff-4f34-8386-c9d9d0574749
+      iscommand: false
+      name: Continue
+      type: title
+      version: -1
+    taskid: bed0f6c2-34ff-4f34-8386-c9d9d0574749
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1390
+        }
+      }
+  "62":
+    continueonerrortype: ""
+    id: "62"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "18"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6d873b1e-609b-4c0e-840e-b5afb93dfd07
+      iscommand: false
+      name: Server Logs Logic
+      type: title
+      version: -1
+    taskid: 6d873b1e-609b-4c0e-840e-b5afb93dfd07
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1550
+        }
+      }
+  "63":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.LogFiles.Name
+          operator: isEqualString
+          right:
+            value:
+              simple: panic.log
+      label: "yes"
+    continueonerrortype: ""
+    id: "63"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "56"
+      "yes":
+      - "64"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if docker log exist
+      id: ba1f5b46-1ab1-4ee5-8a25-a4eea38c54af
+      iscommand: false
+      name: 'Do we have a docker log in the bundle ? '
+      type: condition
+      version: -1
+    taskid: ba1f5b46-1ab1-4ee5-8a25-a4eea38c54af
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1040
+        }
+      }
+  "64":
+    continueonerrortype: ""
+    id: "64"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "56"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryID:
+        complex:
+          accessor: EntryID
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: inputs.LogFiles.Name
+              operator: endWith
+              right:
+                value:
+                  simple: panic.log
+          root: inputs.LogFiles
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Read panic log file line by line and display warnings, fatal errors
+        and keyword results in a table to the war room
+      id: 040b5249-28d3-4c83-89b5-c1a158780c27
+      iscommand: false
+      name: Read the panic.log file
+      script: HealthCheckPanicLog
+      type: regular
+      version: -1
+    taskid: 040b5249-28d3-4c83-89b5-c1a158780c27
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 532.5,
+          "y": 1215
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {
+      "37_63_#default#": 0.9
+    },
+    "paper": {
+      "dimensions": {
+        "height": 1900,
+        "width": 872.5,
+        "x": 40,
+        "y": 50
+      }
+    }
+  }
