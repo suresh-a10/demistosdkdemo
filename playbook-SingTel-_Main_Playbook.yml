@@ -1,0 +1,230 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: ba00221b-fb94-47aa-865a-5225c0ee2c63
+inputs:
+- description: ""
+  key: BUData
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: SingTel- Main Playbook
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: bdae8c5d-d140-4e89-8310-47406fde5978
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: bdae8c5d-d140-4e89-8310-47406fde5978
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 1160,
+          "y": -200
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: ${inputs.BUData}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: b4d6f14f-6b32-4591-8629-c3ba8ddf55c5
+      iscommand: false
+      name: Print
+      script: Print
+      type: regular
+      version: -1
+    taskid: b4d6f14f-6b32-4591-8629-c3ba8ddf55c5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 2070,
+          "y": 130
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "true"
+      key:
+        simple: BUList
+      value:
+        complex:
+          accessor: Key
+          root: AssetDetails
+          transformers:
+          - args:
+              to:
+                value:
+                  simple: '-'
+            operator: substringTo
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 3abad9cc-1d3a-4e6b-8422-930ba825aca1
+      iscommand: false
+      name: Get the BU List for Jira Asset Details List
+      script: Set
+      type: regular
+      version: -1
+    taskid: 3abad9cc-1d3a-4e6b-8422-930ba825aca1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1160,
+          "y": -40
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      append:
+        simple: "true"
+      key:
+        simple: BUList
+      value:
+        complex:
+          accessor: Key
+          root: ParseCSV.ParsedCSV
+          transformers:
+          - args:
+              to:
+                value:
+                  simple: '-'
+            operator: substringTo
+          - operator: uniq
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: c1123c5b-17fc-4c25-8259-6e5e97db02a1
+      iscommand: false
+      name: Get BU List from VulAssetDetails
+      script: Set
+      type: regular
+      version: -1
+    taskid: c1123c5b-17fc-4c25-8259-6e5e97db02a1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 1160,
+          "y": 130
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      forEach: true
+      iscommand: false
+      max: 100
+      wait: 1
+    note: false
+    quietmode: 0
+    scriptarguments:
+      BU:
+        complex:
+          root: BUList
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 1ef6ec0a-27fc-4121-849f-dc39adee9f6b
+      iscommand: false
+      name: SingTel - Create BU Incidents
+      playbookId: e83e4b6d-a006-4416-85a6-e3615e78bcf4
+      type: playbook
+      version: -1
+    taskid: 1ef6ec0a-27fc-4121-849f-dc39adee9f6b
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 1160,
+          "y": 320
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 615,
+        "width": 1290,
+        "x": 1160,
+        "y": -200
+      }
+    }
+  }
