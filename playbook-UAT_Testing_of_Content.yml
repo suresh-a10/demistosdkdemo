@@ -1,0 +1,992 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 4fc581bd-5b16-4b7d-82e7-5f8860f63d64
+inputs:
+- description: Provide the name of list where all inputs are added
+  key: ListName
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: UAT Testing of Content
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7efc8ef7-e5e1-457e-8458-558f54673407
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 7efc8ef7-e5e1-457e-8458-558f54673407
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      name:
+        simple: ${lists.inputs.name}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.set.incident
+      id: b92aef1d-7964-4723-8800-5715a054d4f1
+      iscommand: true
+      name: setIncident
+      script: Builtin|||setIncident
+      type: regular
+      version: -1
+    taskid: b92aef1d-7964-4723-8800-5715a054d4f1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 195
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "18"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: testkey
+      value:
+        simple: testvaluewithuppercasetransformer
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: a3bb1a0c-b412-4c43-8002-0f124bc2a3b0
+      iscommand: false
+      name: Set
+      script: Set
+      type: regular
+      version: -1
+    taskid: a3bb1a0c-b412-4c43-8002-0f124bc2a3b0
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 370
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      contextKey:
+        simple: testingcommentstocontext
+      entryId:
+        simple: ${lastCompletedTaskEntries}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: "Takes the comments of a given entry ID and stores them in the
+        incident context, under a provided context key. \nFor accessing the last executed
+        task's comments, provide ${lastCompletedTaskEntries.[0]} as the value for
+        the entryId input parameter."
+      id: 0e6ff04d-f7c4-43d4-84e6-bddfd00a0dd1
+      iscommand: false
+      name: Comments To Context
+      script: commentsToContext
+      type: regular
+      version: -1
+    taskid: 0e6ff04d-f7c4-43d4-84e6-bddfd00a0dd1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 720
+        }
+      }
+  "4":
+    continueonerror: true
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      file:
+        simple: input.csv
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This script will parse a CSV file and place the unique IPs, Domains
+        and Hashes into the context.
+      id: 9654fd5e-deff-4d4c-8b37-30f90e02cc34
+      iscommand: false
+      name: ParseCSV
+      script: ParseCSV
+      type: regular
+      version: -1
+    taskid: 9654fd5e-deff-4d4c-8b37-30f90e02cc34
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 895
+        }
+      }
+  "5":
+    continueonerror: true
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      csvArray:
+        simple: ${incident}
+      fileName:
+        simple: export.csv
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Export given array to csv file
+      id: a9613ea3-6d8d-4466-85ef-efec39b82329
+      iscommand: false
+      name: ExporttoCSV
+      script: ExportToCSV
+      type: regular
+      version: -1
+    taskid: a9613ea3-6d8d-4466-85ef-efec39b82329
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1070
+        }
+      }
+  "6":
+    continueonerror: true
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: ${ParseCSV.ParsedCSV}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: caa0f6f5-60df-405b-8e03-af95927bcafa
+      iscommand: false
+      name: DeleteContext
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: caa0f6f5-60df-405b-8e03-af95927bcafa
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1255
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      seconds:
+        simple: "2"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Sleep for X seconds
+      id: e845b1ce-6cec-4847-8571-e2497cbca38e
+      iscommand: false
+      name: Sleep
+      script: Sleep
+      type: regular
+      version: -1
+    taskid: e845b1ce-6cec-4847-8571-e2497cbca38e
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1420
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      file:
+        simple: ${lists.input.hash}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Retrieve results for a file hash using WildFire.
+      id: a9cbdce9-be81-411d-8fc7-3342c77d1c1d
+      iscommand: true
+      name: file
+      script: '|||file'
+      type: regular
+      version: -1
+    taskid: a9cbdce9-be81-411d-8fc7-3342c77d1c1d
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1595
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "10"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      url:
+        simple: ${lists.input.url}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Submits a URL to scan.
+      id: e88b25db-d2b3-4291-8e0b-f98236298883
+      iscommand: true
+      name: url
+      script: '|||url'
+      type: regular
+      version: -1
+    taskid: e88b25db-d2b3-4291-8e0b-f98236298883
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1770
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "no":
+      - "12"
+      "yes":
+      - "11"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: ${URL}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check if a given value exists in the context. Will return 'no'
+        for empty empty arrays. To be used mostly with DQ and selectors.
+      id: 774fc246-0afe-450f-8acb-fb4417c61dfa
+      iscommand: false
+      name: Exists
+      script: Exists
+      type: condition
+      version: -1
+    taskid: 774fc246-0afe-450f-8acb-fb4417c61dfa
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1945
+        }
+      }
+  "11":
+    continueonerrortype: ""
+    id: "11"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "13"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      text:
+        simple: ${ParseCSV}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.extract.indicators
+      id: a9f62308-3ff7-4fa1-8e0a-400860e580ab
+      iscommand: true
+      name: extractIndicators
+      script: Builtin|||extractIndicators
+      type: regular
+      version: -1
+    taskid: a9f62308-3ff7-4fa1-8e0a-400860e580ab
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 2120
+        }
+      }
+  "12":
+    continueonerrortype: ""
+    id: "12"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: bdc2f541-ab20-4088-8bac-c7273648da59
+      iscommand: false
+      name: Untitled Task
+      type: regular
+      version: -1
+    taskid: bdc2f541-ab20-4088-8bac-c7273648da59
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 695,
+          "y": 2120
+        }
+      }
+  "13":
+    continueonerrortype: ""
+    id: "13"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "14"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      roles:
+        simple: administrator
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Assign analyst to incident.
+        By default,  the analyst is picked randomly from the available users, according to the provided roles (if no roles provided, will fetch all users).
+        Otherwise, the analyst will be picked according to the 'assignBy' arguments.
+        machine-learning: DBot will calculated and decide who is the best analyst for the job.
+        top-user: The user that is most commonly owns this type of incident
+        less-busy-user: The less busy analyst will be picked to be the incident owner.
+        online: The analyst is picked randomly from all online analysts, according to the provided roles (if no roles provided, will fetch all users).
+        current: The user that executed the command
+      id: 190f602c-452b-4b83-8990-9cb91737ca7c
+      iscommand: false
+      name: Assign Analyst to Incident
+      script: AssignAnalystToIncident
+      type: regular
+      version: -1
+    taskid: 190f602c-452b-4b83-8990-9cb91737ca7c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 2295
+        }
+      }
+  "14":
+    continueonerrortype: ""
+    id: "14"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "15"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      arrayData:
+        simple: ${lists.input.array}
+      contextKey:
+        simple: arraytest
+      separator:
+        simple: ','
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: 'Will create an array object in context from given string input '
+      id: dd6351a4-ca7e-400a-8234-c01f2ff29f6c
+      iscommand: false
+      name: create Array
+      script: CreateArray
+      type: regular
+      version: -1
+    taskid: dd6351a4-ca7e-400a-8234-c01f2ff29f6c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 2470
+        }
+      }
+  "15":
+    continueonerrortype: ""
+    id: "15"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "no":
+      - "17"
+      "yes":
+      - "16"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Checks if the investigation found any malicious indicators (file,
+        URL, IP address, domain, or email). Returns "yes" if at least one malicious
+        indicator is found.
+      id: 62f45c30-7503-4562-8613-4e3e8ca09da5
+      iscommand: false
+      name: Is Malicious Indicator Found
+      script: IsMaliciousIndicatorFound
+      type: condition
+      version: -1
+    taskid: 62f45c30-7503-4562-8613-4e3e8ca09da5
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 2645
+        }
+      }
+  "16":
+    continueonerrortype: ""
+    id: "16"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "19"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: empty
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Set a value in context under the key you entered. If no value is entered, the script doesn't do anything.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 9ff8e4f1-3955-4dc8-8a86-6e1e97e878ae
+      iscommand: false
+      name: Set and handle empty - empty
+      script: SetAndHandleEmpty
+      type: regular
+      version: -1
+    taskid: 9ff8e4f1-3955-4dc8-8a86-6e1e97e878ae
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 2820
+        }
+      }
+  "17":
+    continueonerrortype: ""
+    id: "17"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "19"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: empty
+      value:
+        simple: abc
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Set a value in context under the key you entered. If no value is entered, the script doesn't do anything.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 82e96860-89f4-43ba-8298-cebef70128dc
+      iscommand: false
+      name: Set and handle empty - non empty
+      script: SetAndHandleEmpty
+      type: regular
+      version: -1
+    taskid: 82e96860-89f4-43ba-8298-cebef70128dc
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 2820
+        }
+      }
+  "18":
+    continueonerrortype: ""
+    id: "18"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: This value has to goto Context
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: e5a60df0-b706-4334-8fc5-2661e0562ef5
+      iscommand: false
+      name: Print
+      script: Print
+      type: regular
+      version: -1
+    taskid: e5a60df0-b706-4334-8fc5-2661e0562ef5
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 545
+        }
+      }
+  "19":
+    continueonerrortype: ""
+    id: "19"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "20"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Identify whether the incident includes an email message attached
+        as an eml or msg file and return the answer to playbook. Also saves the identified
+        entry ID to context for use for later. Commonly used in automated playbooks
+        that handle phishing reports sent to a special phishing mailbox set up by
+        the security team.
+      id: d6c527d1-6eb3-44c6-840a-aac96aec0764
+      iscommand: false
+      name: Identify Attached email
+      script: IdentifyAttachedEmail
+      type: condition
+      version: -1
+    taskid: d6c527d1-6eb3-44c6-840a-aac96aec0764
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 2995
+        }
+      }
+  "20":
+    continueonerrortype: ""
+    id: "20"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      "no":
+      - "21"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryId:
+        simple: ${lastCompletedTaskEntries}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Check whether given entry/entries returned an error. Use ${lastCompletedTaskEntries}
+        to check the previous task entries. If array is provided, will return yes
+        if one of the entries returned an error.
+      id: 82a9e215-81c1-4eb9-8708-7ca0cb9fe77b
+      iscommand: false
+      name: Is Error
+      script: isError
+      type: condition
+      version: -1
+    taskid: 82a9e215-81c1-4eb9-8708-7ca0cb9fe77b
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 3170
+        }
+      }
+  "21":
+    continueonerrortype: ""
+    id: "21"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "22"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Finds similar incidents by common incident keys, labels, custom fields or context keys.
+        It's highly recommended to use incident keys if possible (e.g., "type" for the same incident type).
+        For best performance, it's recommended to avoid using context keys if possible (for example, if the value also appears in a label key, use label).
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 957b3926-0284-4c2f-856d-ffc675497fb1
+      iscommand: false
+      name: FindSimilarIncidents
+      script: FindSimilarIncidents
+      type: regular
+      version: -1
+    taskid: 957b3926-0284-4c2f-856d-ffc675497fb1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 3345
+        }
+      }
+  "22":
+    continueonerrortype: ""
+    id: "22"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "23"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      page:
+        simple: "1"
+      query:
+        simple: -category:job
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Searches Demisto incidents.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: a571047c-cdb3-4a66-8f84-a20738b4bd4d
+      iscommand: false
+      name: SearchIncidents
+      script: SearchIncidentsV2
+      type: regular
+      version: -1
+    taskid: a571047c-cdb3-4a66-8f84-a20738b4bd4d
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 3520
+        }
+      }
+  "23":
+    continueonerrortype: ""
+    id: "23"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "24"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      command:
+        simple: '!Print value="Testing schedule command"'
+      cron:
+        simple: '* * * * *'
+      times:
+        simple: "20"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Schedule a command to run inside the war room at a future time
+        (once or reoccurring)
+      id: 241c8d7b-c086-4166-8e6c-084f39c24726
+      iscommand: false
+      name: schedulecommand
+      script: ScheduleCommand
+      type: regular
+      version: -1
+    taskid: 241c8d7b-c086-4166-8e6c-084f39c24726
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 260,
+          "y": 3670
+        }
+      }
+  "24":
+    continueonerrortype: ""
+    id: "24"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "25"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Show all scheduled entries for specific incident.
+      id: ceab5b2d-48ba-4d25-897a-8950119fc722
+      iscommand: false
+      name: Show Scheduled entries
+      script: ShowScheduledEntries
+      type: regular
+      version: -1
+    taskid: ceab5b2d-48ba-4d25-897a-8950119fc722
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 260,
+          "y": 3830
+        }
+      }
+  "25":
+    continueonerrortype: ""
+    id: "25"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      taskID:
+        simple: ${ScheduledEntries.id}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: This stops the scheduled task whose ID is given in the taskID argument.
+      id: 7d6d6d15-1c1b-4888-8797-540a4dc05051
+      iscommand: false
+      name: Stop scheduled command
+      script: StopScheduledTask
+      type: regular
+      version: -1
+    taskid: 7d6d6d15-1c1b-4888-8797-540a4dc05051
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 260,
+          "y": 3980
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {
+      "20_21_no": 0.48
+    },
+    "paper": {
+      "dimensions": {
+        "height": 4025,
+        "width": 1025,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
