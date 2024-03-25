@@ -1,0 +1,262 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 20a1b6c1-baca-4322-8bbd-51833dd76314
+inputs:
+- description: ""
+  key: Incident Phase
+  playbookInputQuery: null
+  required: false
+  value:
+    simple: ${incident.investigationstage}
+name: DEV/CaseManagement
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "9"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 31f1a2ab-8a48-47ed-801a-c9579ce9b200
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 31f1a2ab-8a48-47ed-801a-c9579ce9b200
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |
+        Adds provided entries to the incident Evidence Board. In playbook, can be positioned after a task to add the previous task's entries to Evidence Board automatically (with no need to provide arguments)
+      id: 2b335612-fb7c-4c1d-8108-cfbbb0f5fed2
+      iscommand: false
+      name: Update the XSOAR ticket closure notes as Evidence
+      script: AddEvidence
+      type: regular
+      version: -1
+    taskid: 2b335612-fb7c-4c1d-8108-cfbbb0f5fed2
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 920
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "8"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      name:
+        simple: 'Parent Ticket no: = ${incident.id}'
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.create.inc
+      id: b0df6d46-bff0-4fe3-8a71-ed8b319df436
+      iscommand: true
+      name: Create new XSOAR incident
+      script: Builtin|||createNewIncident
+      type: regular
+      version: -1
+    taskid: b0df6d46-bff0-4fe3-8a71-ed8b319df436
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+  "8":
+    continueonerrortype: ""
+    id: "8"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      iscommand: false
+      max: 0
+      wait: 1
+    nexttasks:
+      '#none#':
+      - "10"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      Ids:
+        simple: ${CreatedIncidentID}
+      Interval:
+        simple: "1"
+      PollingCommandArgName:
+        simple: id
+      PollingCommandName:
+        simple: SearchIncidentsV2
+      Timeout:
+        simple: "10"
+      dt:
+        simple: foundIncidents(val.status!=2).id
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Use this playbook as a sub-playbook to block execution of the master playbook until a remote action is complete.
+        This playbook implements polling by continuously running the command in Step \#2 until the operation completes.
+        The remote action should have the following structure:
+
+        1. Initiate the operation.
+        2. Poll to check if the operation completed.
+        3. (optional) Get the results of the operation.
+      id: 3869a117-e481-4a4c-8f78-facab9334653
+      iscommand: false
+      name: GenericPolling
+      playbookId: GenericPolling
+      type: playbook
+      version: -1
+    taskid: 3869a117-e481-4a4c-8f78-facab9334653
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "9":
+    continueonerrortype: ""
+    id: "9"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "4"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Delete field from context
+      id: d35e4c5a-ef53-456d-8266-3947e7ba357f
+      iscommand: false
+      name: Delete Context Data
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: d35e4c5a-ef53-456d-8266-3947e7ba357f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "10":
+    continueonerrortype: ""
+    id: "10"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      id:
+        simple: ${CreatedIncidentID}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Searches Demisto incidents.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
+      id: 9928bf8d-bb64-489a-8b6e-9aa48e23d7f0
+      iscommand: false
+      name: Fetch the XSOAR ticket details
+      script: SearchIncidentsV2
+      type: regular
+      version: -1
+    taskid: 9928bf8d-bb64-489a-8b6e-9aa48e23d7f0
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 725
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 965,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
