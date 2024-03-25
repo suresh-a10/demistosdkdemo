@@ -1,0 +1,153 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 75d70fce-10bf-4e94-8989-8b40f3394646
+inputs: []
+name: azuretesting
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e02fdf59-ee5b-4e42-83e2-bf0c41637378
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: e02fdf59-ee5b-4e42-83e2-bf0c41637378
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: testmainplaybook
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Azure Storage
+      description: Prints text to war room (Markdown supported)
+      id: 5a6df298-d49d-497c-8a6a-3ea4f9baf365
+      iscommand: false
+      name: Testing azure storage
+      script: Print
+      type: regular
+      version: -1
+    taskid: 5a6df298-d49d-497c-8a6a-3ea4f9baf365
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: a47c8073-7b3e-4b88-86b1-dfbf33a905d2
+      iscommand: false
+      name: AD Test
+      playbookId: 128b585b-27b2-4f47-80e6-7398a60bed12
+      type: playbook
+      version: -1
+    taskid: a47c8073-7b3e-4b88-86b1-dfbf33a905d2
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 550
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    separatecontext: true
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 89db2063-a3e9-44b0-8c0d-a38e27bebb9f
+      iscommand: false
+      name: AdoptionPlaybook
+      playbookId: f08482fc-bb09-41b2-842c-9971ee690224
+      type: playbook
+      version: -1
+    taskid: 89db2063-a3e9-44b0-8c0d-a38e27bebb9f
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 360
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 595,
+        "width": 380,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
