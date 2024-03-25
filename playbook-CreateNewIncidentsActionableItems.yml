@@ -1,0 +1,92 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: d6ceca72-39a9-469a-8be1-74da59d978ab
+inputs:
+- description: ""
+  key: ActionableItems
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: CreateNewIncidentsActionableItems
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: c6951cf5-3614-4596-89c5-ccf21a86c96b
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: c6951cf5-3614-4596-89c5-ccf21a86c96b
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 0e5580c1-76ee-47b5-886c-beb05f039511
+      iscommand: false
+      name: Untitled Task
+      type: regular
+      version: -1
+    taskid: 0e5580c1-76ee-47b5-886c-beb05f039511
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 200
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 245,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
