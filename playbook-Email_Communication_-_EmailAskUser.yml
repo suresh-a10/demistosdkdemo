@@ -1,0 +1,381 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 856807fc-4441-4f35-8aa0-c3e988bf861c
+inputs: []
+name: Email Communication - EmailAskUser
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 2a29bc98-d36f-4c5a-818a-aefe6f56b233
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 2a29bc98-d36f-4c5a-818a-aefe6f56b233
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      bodyType:
+        simple: html
+      email:
+        simple: sua@paloaltonetworks.com
+      message:
+        simple: |-
+          <html>
+          <body>
+          <table>
+          <thead>
+          <tr>
+          <th>ID</th>
+          <th>CSPID</th>
+          <th>Email</th>
+          <th>SponserID</th>
+          <th>SEmail</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+          <td>4</td>
+          <td>emp123</td>
+          <td>test@test.com</td>
+          <td>123</td>
+          <td>cortexxsoar2023@gmail.com</td>
+          </tr>
+
+          <tr>
+          <td>3</td>
+          <td>emp789</td>
+          <td>def@test.com</td>
+          <td>123</td>
+          <td>cortexxsoar2023@gmail.com</td>
+          </tr>
+
+          <tr>
+          <td>5</td>
+          <td>emp1213</td>
+          <td>jkl@test.com</td>
+          <td>123</td>
+          <td>cortexxsoar2023@gmail.com</td>
+          </tr>
+          </tbody>
+          </table>
+
+          </body>
+          </html>
+      option1:
+        simple: "yes"
+      option2:
+        simple: "no"
+      replyEntriesTag:
+        simple: userreply
+      subject:
+        simple: Test Email Communication - EmailAskUser
+      task:
+        simple: "2"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Ask a user a question via email and process the reply directly
+        into the investigation.
+      id: f048a1f4-898f-4a88-8a2e-3a33ceed6b60
+      iscommand: false
+      name: Send Email to User
+      script: EmailAskUser
+      type: regular
+      version: -1
+    taskid: f048a1f4-898f-4a88-8a2e-3a33ceed6b60
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 230
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 2
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 59900c06-99d2-4e35-8832-5ae68c4996aa
+      iscommand: false
+      name: Wait for user reply
+      tags:
+      - userreply
+      type: regular
+      version: -1
+    taskid: 59900c06-99d2-4e35-8832-5ae68c4996aa
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 420
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: UserResponse=
+      responseEntryId:
+        simple: ${lastCompletedTaskEntries}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Extract user's response from EmailAskUser reply. Returns the first
+        textual response line of the provided entry that contains the reply body.
+        Use ${lastCompletedTaskEntries} to analyze the previous playbook task containing
+        the user's reply.
+      id: fa37b3f3-5015-480d-805e-7dfd9a72ab36
+      iscommand: false
+      name: Validate Email response
+      script: EmailAskUserResponse
+      type: condition
+      version: -1
+    taskid: fa37b3f3-5015-480d-805e-7dfd9a72ab36
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 590
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 4b4c1848-fe9c-41be-837e-ff1097314a89
+      iscommand: false
+      name: User responded with Yes
+      script: Print
+      type: regular
+      version: -1
+    taskid: 4b4c1848-fe9c-41be-837e-ff1097314a89
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": -110,
+          "y": 970
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: "no"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: e6501c6b-1497-4907-8fde-ba34f575b1e4
+      iscommand: false
+      name: User responded with no
+      script: Print
+      type: regular
+      version: -1
+    taskid: e6501c6b-1497-4907-8fde-ba34f575b1e4
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 930,
+          "y": 1040
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 71fab3d4-2626-4d33-83ca-bf874d6f96d8
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 71fab3d4-2626-4d33-83ca-bf874d6f96d8
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 380,
+          "y": 1230
+        }
+      }
+  "7":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: EmailAskUserResponse
+          operator: containsGeneral
+          right:
+            value:
+              simple: "yes"
+      label: "yes"
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: EmailAskUserResponse
+          operator: containsGeneral
+          right:
+            value:
+              simple: "no"
+      label: "no"
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "no":
+      - "5"
+      "yes":
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Extract user's response from EmailAskUser reply. Returns the first
+        textual response line of the provided entry that contains the reply body.
+        Use ${lastCompletedTaskEntries} to analyze the previous playbook task containing
+        the user's reply.
+      id: ccd84df7-d89a-4154-8fa1-07a42848b370
+      iscommand: false
+      name: Check the user the response
+      type: condition
+      version: -1
+    taskid: ccd84df7-d89a-4154-8fa1-07a42848b370
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 810
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {
+      "3_7_#default#": 0.53
+    },
+    "paper": {
+      "dimensions": {
+        "height": 1245,
+        "width": 1420,
+        "x": -110,
+        "y": 50
+      }
+    }
+  }
