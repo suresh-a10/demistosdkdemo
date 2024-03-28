@@ -248,7 +248,7 @@
 						"type": "evidence",
 						"w": 2,
 						"x": 1,
-						"y": 8
+						"y": 10
 					},
 					{
 						"displayType": "ROW",
@@ -264,7 +264,7 @@
 						"type": "team",
 						"w": 1,
 						"x": 0,
-						"y": 17
+						"y": 19
 					},
 					{
 						"displayType": "ROW",
@@ -281,7 +281,7 @@
 						"type": "indicators",
 						"w": 2,
 						"x": 1,
-						"y": 12
+						"y": 14
 					},
 					{
 						"displayType": "CARD",
@@ -388,7 +388,7 @@
 						"static": false,
 						"w": 1,
 						"x": 0,
-						"y": 10
+						"y": 12
 					},
 					{
 						"displayType": "ROW",
@@ -432,7 +432,7 @@
 						"static": false,
 						"w": 1,
 						"x": 0,
-						"y": 16
+						"y": 18
 					},
 					{
 						"displayType": "CARD",
@@ -458,7 +458,7 @@
 						"static": false,
 						"w": 1,
 						"x": 0,
-						"y": 12
+						"y": 14
 					},
 					{
 						"h": 2,
@@ -473,7 +473,7 @@
 						"type": "droppedIncidents",
 						"w": 2,
 						"x": 1,
-						"y": 10
+						"y": 12
 					},
 					{
 						"displayType": "ROW",
@@ -538,7 +538,7 @@
 						"static": false,
 						"w": 1,
 						"x": 0,
-						"y": 14
+						"y": 16
 					},
 					{
 						"displayType": "ROW",
@@ -591,7 +591,7 @@
 						"static": false,
 						"w": 1,
 						"x": 0,
-						"y": 8
+						"y": 10
 					},
 					{
 						"displayType": "ROW",
@@ -617,7 +617,7 @@
 						"static": false,
 						"w": 3,
 						"x": 0,
-						"y": 6
+						"y": 8
 					},
 					{
 						"h": 3,
@@ -645,6 +645,31 @@
 						"type": "invTimeline",
 						"w": 1,
 						"x": 0,
+						"y": 5
+					},
+					{
+						"displayType": "ROW",
+						"h": 2,
+						"hideName": false,
+						"i": "caseinfoid-298e3cd0-ebf0-11ee-b2e8-1512ac7eca65",
+						"items": [
+							{
+								"endCol": 2,
+								"fieldId": "gridfield",
+								"height": 22,
+								"id": "2c9402c0-ebf0-11ee-b2e8-1512ac7eca65",
+								"index": 0,
+								"sectionItemType": "field",
+								"startCol": 0
+							}
+						],
+						"maxW": 3,
+						"minH": 1,
+						"moved": false,
+						"name": "New Section",
+						"static": false,
+						"w": 1,
+						"x": 0,
 						"y": 3
 					}
 				],
@@ -665,7 +690,7 @@
 						"displayType": "ROW",
 						"h": 1,
 						"hideName": false,
-						"i": "caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-886a2680-7d4b-11ec-b1bd-2dfbe894a946",
+						"i": "dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-886a2680-7d4b-11ec-b1bd-2dfbe894a946",
 						"items": [],
 						"maxW": 3,
 						"minH": 1,
@@ -681,7 +706,7 @@
 						"displayType": "ROW",
 						"h": 2,
 						"hideName": false,
-						"i": "caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-d9807460-7d51-11ec-b1bd-2dfbe894a946",
+						"i": "dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-d9807460-7d51-11ec-b1bd-2dfbe894a946",
 						"items": [
 							{
 								"endCol": 2,
@@ -734,7 +759,7 @@
 						"displayType": "CARD",
 						"h": 4,
 						"hideName": false,
-						"i": "caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-0e0a2960-7d52-11ec-b1bd-2dfbe894a946",
+						"i": "dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-0e0a2960-7d52-11ec-b1bd-2dfbe894a946",
 						"items": [
 							{
 								"endCol": 2,
@@ -760,7 +785,7 @@
 						"displayType": "ROW",
 						"h": 2,
 						"hideName": false,
-						"i": "caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-b5e8dcd0-7d52-11ec-b1bd-2dfbe894a946",
+						"i": "dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-b5e8dcd0-7d52-11ec-b1bd-2dfbe894a946",
 						"items": [
 							{
 								"endCol": 2,
@@ -804,7 +829,7 @@
 						"displayType": "CARD",
 						"h": 4,
 						"hideName": false,
-						"i": "caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-cb644860-7d52-11ec-b1bd-2dfbe894a946",
+						"i": "dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-cb644860-7d52-11ec-b1bd-2dfbe894a946",
 						"items": [
 							{
 								"endCol": 2,
@@ -828,7 +853,7 @@
 					{
 						"h": 2,
 						"hideName": true,
-						"i": "caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-2dcbc7d0-7d53-11ec-b1bd-2dfbe894a946",
+						"i": "dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-2dcbc7d0-7d53-11ec-b1bd-2dfbe894a946",
 						"items": [],
 						"maxW": 3,
 						"minH": 1,
@@ -848,7 +873,7 @@
 						"h": 2,
 						"hideItemTitleOnlyOne": false,
 						"hideName": false,
-						"i": "caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-3de024e0-7d53-11ec-b1bd-2dfbe894a946",
+						"i": "dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-3de024e0-7d53-11ec-b1bd-2dfbe894a946",
 						"items": [
 							{
 								"endCol": 2,
@@ -914,7 +939,7 @@
 					{
 						"h": 6,
 						"hideName": true,
-						"i": "caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-6748bae0-7d53-11ec-b1bd-2dfbe894a946",
+						"i": "dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-6748bae0-7d53-11ec-b1bd-2dfbe894a946",
 						"items": [],
 						"maxW": 3,
 						"minH": 1,
@@ -933,7 +958,7 @@
 						"displayType": "ROW",
 						"h": 4,
 						"hideItemTitleOnlyOne": true,
-						"i": "caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-87317e70-7d56-11ec-b8c5-4554d2e91d33",
+						"i": "dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-dkrjnwti2y-caseinfoid-es2ik6qpfh-edsrfgt5ii-87317e70-7d56-11ec-b8c5-4554d2e91d33",
 						"items": [
 							{
 								"endCol": 4,
@@ -989,7 +1014,7 @@
 						"displayType": "ROW",
 						"h": 4,
 						"hideName": false,
-						"i": "caseinfoid-1a795950-a08c-11ee-a26a-156b03bb2804",
+						"i": "dkrjnwti2y-caseinfoid-1a795950-a08c-11ee-a26a-156b03bb2804",
 						"items": [
 							{
 								"endCol": 2,
@@ -1014,7 +1039,7 @@
 						"displayType": "ROW",
 						"h": 2,
 						"hideName": false,
-						"i": "caseinfoid-1baafb80-a08c-11ee-a26a-156b03bb2804",
+						"i": "dkrjnwti2y-caseinfoid-1baafb80-a08c-11ee-a26a-156b03bb2804",
 						"items": [],
 						"maxW": 3,
 						"minH": 1,
@@ -1086,10 +1111,8 @@
 								"startCol": 0
 							}
 						],
-						"maxH": null,
-						"maxW": 1,
+						"maxW": 3,
 						"minH": 1,
-						"minW": 1,
 						"moved": false,
 						"name": "XSOAR Case Details",
 						"static": false,
@@ -1100,10 +1123,8 @@
 					{
 						"h": 4,
 						"i": "7zqf6euijn-caseinfoid-61263cc0-98b1-11e9-97d7-ed26ef9e46c8",
-						"maxH": null,
-						"maxW": 2,
+						"maxW": 3,
 						"minH": 1,
-						"minW": 2,
 						"moved": false,
 						"name": "Notes",
 						"static": false,
@@ -1116,10 +1137,8 @@
 						"displayType": "ROW",
 						"h": 2,
 						"i": "7zqf6euijn-caseinfoid-6aabad20-98b1-11e9-97d7-ed26ef9e46c8",
-						"maxH": null,
-						"maxW": 1,
+						"maxW": 3,
 						"minH": 1,
-						"minW": 1,
 						"moved": false,
 						"name": "Work Plan",
 						"static": false,
@@ -1133,10 +1152,8 @@
 						"h": 2,
 						"i": "7zqf6euijn-caseinfoid-770ec200-98b1-11e9-97d7-ed26ef9e46c8",
 						"isVisible": true,
-						"maxH": null,
 						"maxW": 3,
 						"minH": 1,
-						"minW": 3,
 						"moved": false,
 						"name": "XSOAR Linked Incidents",
 						"static": false,
@@ -1188,10 +1205,8 @@
 								"startCol": 0
 							}
 						],
-						"maxH": null,
-						"maxW": 1,
+						"maxW": 3,
 						"minH": 1,
-						"minW": 1,
 						"moved": false,
 						"name": "Jira TimeLine ",
 						"static": false,
@@ -1245,10 +1260,8 @@
 								"startCol": 0
 							}
 						],
-						"maxH": null,
-						"maxW": 1,
+						"maxW": 3,
 						"minH": 1,
-						"minW": 1,
 						"moved": false,
 						"name": "Mirroring Information",
 						"static": false,
@@ -1293,10 +1306,8 @@
 								"startCol": 0
 							}
 						],
-						"maxH": null,
-						"maxW": 1,
+						"maxW": 3,
 						"minH": 1,
-						"minW": 1,
 						"moved": false,
 						"name": "Jira Ticket Members",
 						"static": false,
@@ -1369,10 +1380,8 @@
 								"startCol": 0
 							}
 						],
-						"maxH": null,
-						"maxW": 1,
+						"maxW": 3,
 						"minH": 1,
-						"minW": 1,
 						"moved": false,
 						"name": "Jira Issue Details ",
 						"static": false,
@@ -1407,10 +1416,8 @@
 								"startCol": 0
 							}
 						],
-						"maxH": null,
-						"maxW": 1,
+						"maxW": 3,
 						"minH": 1,
-						"minW": 1,
 						"moved": false,
 						"name": "Jira Issue Description",
 						"static": false,
@@ -1435,10 +1442,8 @@
 								"startCol": 0
 							}
 						],
-						"maxH": null,
-						"maxW": 1,
+						"maxW": 3,
 						"minH": 1,
-						"minW": 1,
 						"moved": false,
 						"name": "Attachments",
 						"static": false,
