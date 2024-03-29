@@ -1,0 +1,43 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 99767e53-0ad7-472f-81d5-9e569b157a28
+inputs:
+- description: ""
+  key: id
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: Set Incident Data
+outputs: []
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: cbdb68ea-405f-4f40-83f9-0d24ba32d779
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: cbdb68ea-405f-4f40-83f9-0d24ba32d779
+    timertriggers: []
+    type: start
+version: -1
