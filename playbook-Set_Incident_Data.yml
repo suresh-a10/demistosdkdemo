@@ -16,7 +16,7 @@ inputs:
   playbookInputQuery: null
   required: false
   value:
-    simple: ${ParseExcely.[0]}
+    simple: ${ParseExcel.[0]}
 name: Set Incident Data
 outputs: []
 quiet: true
@@ -64,7 +64,7 @@ tasks:
     quietmode: 0
     scriptarguments:
       query:
-        simple: violationid:${inputs.id}
+        simple: violationid:${inputs.Data.ID}
     separatecontext: false
     skipunavailable: false
     task:
@@ -75,13 +75,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: af0b119c-4922-4ab8-8ba1-07c2f28a3ec9
+      id: 1c0a3d20-1ea9-49fe-8cbf-08d22d72e41e
       iscommand: false
       name: search incident with violation id
       script: SearchIncidentsV2
       type: regular
       version: -1
-    taskid: af0b119c-4922-4ab8-8ba1-07c2f28a3ec9
+    taskid: 1c0a3d20-1ea9-49fe-8cbf-08d22d72e41e
     timertriggers: []
     type: regular
     view: |-
@@ -97,9 +97,52 @@ tasks:
     ignoreworker: false
     isautoswitchedtoquietmode: false
     isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
     note: false
     quietmode: 0
     scriptarguments:
+      acknowleged:
+        complex:
+          accessor: Acknowleged}
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: ${inputs.Data.ID}
+              operator: isEqualString
+              right:
+                value:
+                  simple: ${incident.violationid}
+          root: ${inputs.Data
+      closurecategory:
+        complex:
+          accessor: Closure Category
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: inputs.Data.ID
+              operator: isEqualString
+              right:
+                iscontext: true
+                value:
+                  simple: ${incident.violationid}
+          root: inputs.Data
+      closurenotes:
+        complex:
+          accessor: Closure Notes}
+          filters:
+          - - left:
+                iscontext: true
+                value:
+                  simple: ${inputs.Data.ID}
+              operator: isEqualString
+              right:
+                value:
+                  simple: ${incident.violationid}
+          root: ${inputs.Data
       id:
         simple: ${foundIncidents.id}
     separatecontext: false
@@ -107,13 +150,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 586309d5-3e63-4da6-8653-00799e843ae7
+      id: cb2bc1fc-a3fb-48e2-8d91-ed7303e8404e
       iscommand: true
       name: update the incident
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 586309d5-3e63-4da6-8653-00799e843ae7
+    taskid: cb2bc1fc-a3fb-48e2-8d91-ed7303e8404e
     timertriggers: []
     type: regular
     view: |-
@@ -123,13 +166,45 @@ tasks:
           "y": 390
         }
       }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      id:
+        simple: ${foundIncidents.id}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Builtin
+      description: commands.local.cmd.close.inv
+      id: 238e7cf2-f01c-48be-82e2-4cfafa57adcd
+      iscommand: true
+      name: Close investigation
+      script: Builtin|||closeInvestigation
+      type: regular
+      version: -1
+    taskid: 238e7cf2-f01c-48be-82e2-4cfafa57adcd
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 630
+        }
+      }
 version: -1
 view: |-
   {
     "linkLabelsPosition": {},
     "paper": {
       "dimensions": {
-        "height": 465,
+        "height": 705,
         "width": 380,
         "x": 450,
         "y": 20
