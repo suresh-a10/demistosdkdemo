@@ -14,6 +14,8 @@ inputs: []
 name: Demo - Sub Playbook Output
 outputs:
 - contextPath: Data
+  description: This will not take any context keys, we just need provide the description
+    of Context Path (Data)
 quiet: true
 starttaskid: "0"
 tasks:
