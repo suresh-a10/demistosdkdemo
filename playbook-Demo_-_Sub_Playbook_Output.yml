@@ -50,136 +50,34 @@ tasks:
           "y": 50
         }
       }
-  "2":
-    continueonerrortype: ""
-    id: "2"
-    ignoreworker: false
-    isautoswitchedtoquietmode: false
-    isoversize: false
-    note: false
-    quietmode: 0
-    scriptarguments:
-      value:
-        simple: Test Task 2
-    separatecontext: false
-    skipunavailable: false
-    task:
-      brand: ""
-      description: Prints text to war room (Markdown supported)
-      id: e3809ca4-ebee-4285-82e9-50a7d7c9688b
-      iscommand: false
-      name: Print Task 2
-      script: Print
-      type: regular
-      version: -1
-    taskid: e3809ca4-ebee-4285-82e9-50a7d7c9688b
-    timertriggers: []
-    type: regular
-    view: |-
-      {
-        "position": {
-          "x": 440,
-          "y": 720
-        }
-      }
-  "3":
-    continueonerrortype: ""
-    id: "3"
-    ignoreworker: false
-    isautoswitchedtoquietmode: false
-    isoversize: false
-    nexttasks:
-      '#none#':
-      - "4"
-    note: false
-    quietmode: 2
-    scriptarguments:
-      ip:
-        simple: ${inputs.IP }
-      using:
-        simple: VirusTotal (API v3)_instance_1
-    separatecontext: false
-    skipunavailable: false
-    task:
-      brand: VirusTotal (API v3)
-      description: Checks the reputation of an IP address.
-      id: f1ab3c8a-4c02-4b7f-8590-3932bbbd33d2
-      iscommand: true
-      name: Check IP reputation
-      script: VirusTotal (API v3)|||ip
-      type: regular
-      version: -1
-    taskid: f1ab3c8a-4c02-4b7f-8590-3932bbbd33d2
-    timertriggers: []
-    type: regular
-    view: |-
-      {
-        "position": {
-          "x": 960,
-          "y": 180
-        }
-      }
-  "4":
-    continueonerrortype: ""
-    id: "4"
-    ignoreworker: false
-    isautoswitchedtoquietmode: false
-    isoversize: false
-    note: false
-    quietmode: 2
-    scriptarguments:
-      domain:
-        simple: google.com
-    separatecontext: false
-    skipunavailable: false
-    task:
-      brand: VirusTotal (API v3)
-      description: Checks the reputation of a domain.
-      id: a03c46f2-71ff-458f-817d-cf9968898a03
-      iscommand: true
-      name: Check Domain reputation
-      script: VirusTotal (API v3)|||domain
-      type: regular
-      version: -1
-    taskid: a03c46f2-71ff-458f-817d-cf9968898a03
-    timertriggers: []
-    type: regular
-    view: |-
-      {
-        "position": {
-          "x": 1060,
-          "y": 390
-        }
-      }
   "5":
     continueonerrortype: ""
     id: "5"
     ignoreworker: false
     isautoswitchedtoquietmode: false
     isoversize: false
+    nexttasks:
+      '#none#':
+      - "6"
     note: false
     quietmode: 2
     scriptarguments:
-      append:
-        simple: "true"
       ignore-outputs:
         simple: "false"
-      key:
-        simple: Data
-      value:
-        simple: Test
+      ip:
+        simple: 8.8.8.8
     separatecontext: false
     skipunavailable: false
     task:
-      brand: ""
-      description: Set a value in context under the key you entered.
-      id: 49e0b559-33ee-4d93-8932-cecd3501275a
-      iscommand: false
+      brand: VirusTotal (API v3)
+      description: Checks the reputation of an IP address.
+      id: 349eb9ef-3877-4d00-8adf-f12acc632751
+      iscommand: true
       name: Set Data
-      script: Set
+      script: VirusTotal (API v3)|||ip
       type: regular
       version: -1
-    taskid: 49e0b559-33ee-4d93-8932-cecd3501275a
+    taskid: 349eb9ef-3877-4d00-8adf-f12acc632751
     timertriggers: []
     type: regular
     view: |-
@@ -189,15 +87,49 @@ tasks:
           "y": 190
         }
       }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    scriptarguments:
+      extend-context:
+        simple: Data2=
+      value:
+        simple: This is test
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Prints text to war room (Markdown supported)
+      id: 9f145517-4ef2-4a02-89d1-426f0fe73ffa
+      iscommand: false
+      name: Print
+      script: Print
+      type: regular
+      version: -1
+    taskid: 9f145517-4ef2-4a02-89d1-426f0fe73ffa
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 460,
+          "y": 430
+        }
+      }
 version: -1
 view: |-
   {
     "linkLabelsPosition": {},
     "paper": {
       "dimensions": {
-        "height": 765,
-        "width": 1000,
-        "x": 440,
+        "height": 475,
+        "width": 380,
+        "x": 460,
         "y": 50
       }
     }
