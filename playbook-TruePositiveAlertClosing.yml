@@ -1,0 +1,161 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: ""
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: 5703c0fc-d03c-4141-8734-93c66b0e29e8
+inputs: []
+name: TruePositiveAlertClosing
+outputs: []
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 7513e609-7f91-417d-895f-b5ccc46de9dc
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 7513e609-7f91-417d-895f-b5ccc46de9dc
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      entryId:
+        simple: ${File.EntryID}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: The automation takes Excel file (entryID) as an input and parses
+        its content to the war room and context
+      id: 32b42793-fe7b-4919-8ace-e711985df6e1
+      iscommand: false
+      name: Parse Excel
+      script: ParseExcel
+      type: regular
+      version: -1
+    taskid: 32b42793-fe7b-4919-8ace-e711985df6e1
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 210
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    loop:
+      exitCondition: ""
+      forEach: true
+      iscommand: false
+      max: 100
+      wait: 1
+    note: false
+    quietmode: 0
+    scriptarguments:
+      Data:
+        complex:
+          accessor: '[0]'
+          root: ParseExcel
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: cedcbd36-c768-4fbd-8357-e36212422f8a
+      iscommand: false
+      name: Set Incident Data
+      playbookId: 99767e53-0ad7-472f-81d5-9e569b157a28
+      type: playbook
+      version: -1
+    taskid: cedcbd36-c768-4fbd-8357-e36212422f8a
+    timertriggers: []
+    type: playbook
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 390
+        }
+      }
+  "3":
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: e51e2716-2f0f-41d5-8e96-43c9dbda30e3
+      iscommand: false
+      name: Untitled Task
+      type: regular
+      version: -1
+    taskid: e51e2716-2f0f-41d5-8e96-43c9dbda30e3
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 600
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 645,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
