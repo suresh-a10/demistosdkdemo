@@ -173,7 +173,7 @@ tasks:
       id: 712259a3-c95a-423f-8639-431fb8d514c7
       iscommand: false
       name: Cortex XDR - Unisolate Endpoint
-      playbookName: Cortex XDR - Unisolate Endpoint
+      playbookId: Cortex XDR - Unisolate Endpoint
       type: playbook
       version: -1
     taskid: 712259a3-c95a-423f-8639-431fb8d514c7
