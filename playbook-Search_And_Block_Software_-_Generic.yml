@@ -334,7 +334,7 @@ tasks:
       id: 51fcc25e-607e-43af-899b-d4e19570ddd0
       iscommand: false
       name: Cortex XDR - Search And Block Software - XQL Engine
-      playbookName: Cortex XDR - Search And Block Software - XQL Engine
+      playbookId: Cortex XDR - Search And Block Software - XQL Engine
       type: playbook
       version: -1
     taskid: 51fcc25e-607e-43af-899b-d4e19570ddd0
