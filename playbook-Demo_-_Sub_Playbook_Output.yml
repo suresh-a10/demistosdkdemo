@@ -13,11 +13,16 @@ id: fb4716be-86c0-48c4-8d2f-80c9c99952bb
 inputs: []
 name: Demo - Sub Playbook Output
 outputs:
-- contextPath: Data
-  description: This will not take any context keys, we just need provide the description
-    of Context Path (Data)
 - contextPath: Data2
   type: unknown
+- contextPath: IP.Address
+  description: Bad IP address.
+- contextPath: IP.Geo.Country
+  description: Bad IP country.
+- contextPath: DBotScore.Score
+  type: unknown
+- contextPath: DBotScore.Vendor
+  description: The vendor used to calculate the score.
 quiet: true
 starttaskid: "0"
 tasks:
