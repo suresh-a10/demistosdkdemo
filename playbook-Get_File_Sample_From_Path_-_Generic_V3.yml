@@ -428,7 +428,7 @@ tasks:
       id: 291977e7-1951-462c-8875-7a8f13ad4636
       iscommand: false
       name: Cortex XDR - Retrieve File v2
-      playbookName: Cortex XDR - Retrieve File v2
+      playbookId: Cortex XDR - Retrieve File v2
       type: playbook
       version: -1
     taskid: 291977e7-1951-462c-8875-7a8f13ad4636
