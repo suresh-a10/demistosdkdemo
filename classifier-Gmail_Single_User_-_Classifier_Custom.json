@@ -12,11 +12,12 @@
 	"instanceIds": null,
 	"itemVersion": "1.3.11",
 	"keyTypeMap": {
+		"Email": "DemoPhishing",
 		"Gmail Single User": "Phishing",
 		"UserResponse": "Manual"
 	},
 	"locked": false,
-	"logicalVersion": 1,
+	"logicalVersion": 2,
 	"mapping": null,
 	"name": "Gmail Single User - Classifier_Custom",
 	"nameRaw": "Gmail Single User - Classifier_Custom",
