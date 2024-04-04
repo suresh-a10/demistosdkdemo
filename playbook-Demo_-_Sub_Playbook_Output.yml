@@ -76,13 +76,13 @@ tasks:
     task:
       brand: VirusTotal (API v3)
       description: Checks the reputation of an IP address.
-      id: 349eb9ef-3877-4d00-8adf-f12acc632751
+      id: 552f9829-5d29-48cc-8203-e2c7429a2117
       iscommand: true
-      name: Set Data
+      name: check IP reputation
       script: VirusTotal (API v3)|||ip
       type: regular
       version: -1
-    taskid: 349eb9ef-3877-4d00-8adf-f12acc632751
+    taskid: 552f9829-5d29-48cc-8203-e2c7429a2117
     timertriggers: []
     type: regular
     view: |-
