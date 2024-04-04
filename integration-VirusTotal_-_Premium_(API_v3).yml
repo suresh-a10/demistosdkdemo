@@ -51,7 +51,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.5.0
-    itemVersion: 2.6.17
+    itemVersion: 2.6.18
     packID: VirusTotal
     packName: VirusTotal
     packPropagationLabels:
@@ -1581,7 +1581,7 @@ script:
   runonce: false
   script: |
     register_module_line('VirusTotal - Premium (API v3)', 'start', __line__())
-    ### pack version: 2.6.17
+    ### pack version: 2.6.18
     """
     VirusTotal V3 - Premium API
     Difference: https://developers.virustotal.com/v3.0/reference#public-vs-premium-api
