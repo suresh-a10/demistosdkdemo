@@ -16,6 +16,8 @@ outputs:
 - contextPath: Data
   description: This will not take any context keys, we just need provide the description
     of Context Path (Data)
+- contextPath: Data2
+  type: unknown
 quiet: true
 starttaskid: "0"
 tasks:
