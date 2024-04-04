@@ -14,7 +14,7 @@
 	"formatScript": "",
 	"fromServerVersion": "5.5.0",
 	"id": "DomainGlob",
-	"itemVersion": "3.4.7",
+	"itemVersion": "3.4.8",
 	"layout": "domainRepUnified",
 	"legacyNames": null,
 	"locked": false,
