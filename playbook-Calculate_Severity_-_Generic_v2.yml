@@ -953,7 +953,7 @@ tasks:
       id: b771e4bf-bbac-4d17-8a2d-e042e64cf9ec
       iscommand: false
       name: Calculate Severity - Cortex XDR Risky Assets
-      playbookName: Calculate Severity - Cortex XDR Risky Assets
+      playbookId: Calculate Severity - Cortex XDR Risky Assets
       type: playbook
       version: -1
     taskid: b771e4bf-bbac-4d17-8a2d-e042e64cf9ec
