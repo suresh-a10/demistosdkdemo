@@ -33,7 +33,7 @@
 	"hidden": false,
 	"id": "incident_prismacloudstatus",
 	"isReadOnly": true,
-	"itemVersion": "4.3.0",
+	"itemVersion": "4.3.1",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Prisma Cloud Status",
