@@ -2,7 +2,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.5.0
-    itemVersion: 2.6.17
+    itemVersion: 2.6.18
     packID: VirusTotal
     packName: VirusTotal
     packPropagationLabels:
