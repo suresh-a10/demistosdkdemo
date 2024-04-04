@@ -13,8 +13,16 @@
 	"itemVersion": "1.3.11",
 	"keyTypeMap": {},
 	"locked": false,
-	"logicalVersion": 6,
+	"logicalVersion": 7,
 	"mapping": {
+		"DemoPhishing": {
+			"dontMapEventToLabels": false,
+			"internalMapping": {
+				"File Name": {
+					"simple": "Attachments.[0].Name"
+				}
+			}
+		},
 		"Manual": {
 			"dontMapEventToLabels": false,
 			"internalMapping": {
