@@ -804,7 +804,7 @@ tasks:
       id: 83835468-5432-4baa-8656-cfd7c05fecbe
       iscommand: false
       name: Cortex XDR - Get entity alerts by MITRE tactics
-      playbookName: Cortex XDR - Get entity alerts by MITRE tactics
+      playbookId: Cortex XDR - Get entity alerts by MITRE tactics
       type: playbook
       version: -1
     taskid: 83835468-5432-4baa-8656-cfd7c05fecbe
@@ -929,7 +929,7 @@ tasks:
       description: |-
         This playbook searches for failed logon on a specific user by querying logs from different sources.
 
-        Supported integrations:
+        Supported Integrations:
         -Splunk
         -Qradar
         -Azure Log Analytics
