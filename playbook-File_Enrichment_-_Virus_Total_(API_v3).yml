@@ -2,7 +2,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.0.0
-    itemVersion: 2.6.17
+    itemVersion: 2.6.18
     packID: VirusTotal
     packName: VirusTotal
     packPropagationLabels:
@@ -459,7 +459,6 @@ tasks:
         }
       }
   "30":
-    continueonerror: true
     continueonerrortype: ""
     id: "30"
     ignoreworker: false
