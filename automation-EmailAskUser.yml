@@ -70,7 +70,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 1.14.19
+    itemVersion: 1.14.25
     packID: CommonScripts
     packName: Common Scripts
     packPropagationLabels:
@@ -85,7 +85,7 @@ pswd: ""
 runas: DBotWeakRole
 runonce: false
 script: |
-  // pack version: 1.14.19
+  // pack version: 1.14.25
   // email body type
   var bodyType = 'text';
   if (args.bodyType === 'html') {
