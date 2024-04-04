@@ -2,7 +2,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.0.0
-    itemVersion: 2.6.24
+    itemVersion: 2.6.26
     packID: CommonPlaybooks
     packName: Common Playbooks
     packPropagationLabels:
@@ -309,6 +309,8 @@ tasks:
       - "29"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: CheckPointFirewall_v2
@@ -398,6 +400,8 @@ tasks:
       - "13"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: Zscaler
@@ -951,6 +955,8 @@ tasks:
       - "28"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: FortiGate
@@ -1183,6 +1189,8 @@ tasks:
       - "31"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: F5Silverline
@@ -1902,6 +1910,8 @@ tasks:
       - "57"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: Cisco ASA
@@ -2040,6 +2050,8 @@ tasks:
       - "59"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: Stealthwatch Cloud
@@ -2147,6 +2159,8 @@ tasks:
       - "89"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: Cisco Firepower
@@ -2245,6 +2259,8 @@ tasks:
       - "66"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: Akamai WAF
@@ -2359,6 +2375,8 @@ tasks:
       - "93"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: ThreatX
@@ -2472,6 +2490,8 @@ tasks:
       - "73"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: Signal Sciences WAF
@@ -2633,6 +2653,8 @@ tasks:
       - "94"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: sophos_firewall
@@ -2671,6 +2693,8 @@ tasks:
       - "75"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: ARIA Packet Intelligence
@@ -3713,6 +3737,8 @@ tasks:
       - "107"
     note: false
     quietmode: 0
+    results:
+    - brandInstances
     scriptarguments:
       brandname:
         simple: Palo Alto Networks - Prisma SASE
