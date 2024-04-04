@@ -217,7 +217,7 @@ tasks:
       id: 936cbb1b-fc14-42e0-80e4-9ca0bbec9f10
       iscommand: false
       name: Cortex XDR - Search and Compare Process Executions - XDR Alerts
-      playbookName: Cortex XDR - Search and Compare Process Executions - XDR Alerts
+      playbookId: Cortex XDR - Search and Compare Process Executions - XDR Alerts
       type: playbook
       version: -1
     taskid: 936cbb1b-fc14-42e0-80e4-9ca0bbec9f10
@@ -269,7 +269,7 @@ tasks:
       id: 6246b45d-476d-4e3d-8c6a-6eccafe838ef
       iscommand: false
       name: Cortex XDR - Search and Compare Process Executions - XQL Engine
-      playbookName: Cortex XDR - Search and Compare Process Executions - XQL Engine
+      playbookId: Cortex XDR - Search and Compare Process Executions - XQL Engine
       type: playbook
       version: -1
     taskid: 6246b45d-476d-4e3d-8c6a-6eccafe838ef
