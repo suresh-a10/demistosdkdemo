@@ -200,7 +200,7 @@ tasks:
       id: 0cc3c7da-178a-4039-807e-d07f04c57ed8
       iscommand: false
       name: Block Domain - Zscaler
-      playbookName: Block Domain - Zscaler
+      playbookId: Block Domain - Zscaler
       type: playbook
       version: -1
     taskid: 0cc3c7da-178a-4039-807e-d07f04c57ed8
