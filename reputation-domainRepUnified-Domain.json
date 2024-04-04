@@ -453,7 +453,7 @@
 	"formatScript": "ExtractDomainAndFQDNFromUrlAndEmail",
 	"fromServerVersion": "5.5.0",
 	"id": "domainRepUnified",
-	"itemVersion": "3.4.7",
+	"itemVersion": "3.4.8",
 	"layout": "domainRepUnified",
 	"legacyNames": null,
 	"locked": false,
