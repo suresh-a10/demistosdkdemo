@@ -11,7 +11,7 @@ contentitemexportablefields:
     toServerVersion: ""
 id: 8ffa88bd-3f69-4977-8db5-33893517cc38
 inputs: []
-name: Test -Loop Counter
+name: Test Playbook
 outputs: []
 starttaskid: "0"
 tasks:
