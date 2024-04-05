@@ -17,7 +17,7 @@
 						"displayType": "CARD",
 						"h": 2,
 						"hideName": false,
-						"i": "vug7e0qild-7e73cc44-16ac-4450-8317-a08366066d6f-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-ceba8ff0-b30a-11eb-941c-e725acf1fbbc",
+						"i": "vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-ceba8ff0-b30a-11eb-941c-e725acf1fbbc",
 						"items": [
 							{
 								"endCol": 4,
@@ -93,7 +93,6 @@
 								"startCol": 3
 							}
 						],
-						"maxH": null,
 						"maxW": 3,
 						"minH": 1,
 						"moved": false,
@@ -108,7 +107,7 @@
 						"h": 5,
 						"hideItemTitleOnlyOne": true,
 						"hideName": true,
-						"i": "vug7e0qild-7e73cc44-16ac-4450-8317-a08366066d6f-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-ea684940-b30a-11eb-941c-e725acf1fbbc",
+						"i": "vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-ea684940-b30a-11eb-941c-e725acf1fbbc",
 						"items": [
 							{
 								"dropEffect": "move",
@@ -120,18 +119,8 @@
 								"listId": "vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-ea684940-b30a-11eb-941c-e725acf1fbbc",
 								"sectionItemType": "field",
 								"startCol": 0
-							},
-							{
-								"endCol": 2,
-								"fieldId": "campaignbody",
-								"height": 22,
-								"id": "4bc0aa00-d377-11ed-8898-213af344d8c8",
-								"index": 1,
-								"sectionItemType": "field",
-								"startCol": 0
 							}
 						],
-						"maxH": null,
 						"maxW": 3,
 						"minH": 1,
 						"moved": false,
@@ -181,9 +170,8 @@
 							}
 						],
 						"h": 7,
-						"i": "vug7e0qild-7e73cc44-16ac-4450-8317-a08366066d6f-vug7e0qild-7dd401c8-ae6d-44e5-8d04-0841609649eb-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-00d25a90-b30b-11eb-941c-e725acf1fbbc",
+						"i": "vug7e0qild-7dd401c8-ae6d-44e5-8d04-0841609649eb-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-00d25a90-b30b-11eb-941c-e725acf1fbbc",
 						"items": [],
-						"maxH": null,
 						"maxW": 3,
 						"minH": 1,
 						"moved": false,
@@ -198,7 +186,7 @@
 						"displayType": "CARD",
 						"h": 3,
 						"hideName": false,
-						"i": "vug7e0qild-7e73cc44-16ac-4450-8317-a08366066d6f-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-6f681d80-00ce-11ec-a297-5338d677a3d9",
+						"i": "vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-6f681d80-00ce-11ec-a297-5338d677a3d9",
 						"items": [
 							{
 								"endCol": 4,
@@ -259,7 +247,6 @@
 								"startCol": 2
 							}
 						],
-						"maxH": null,
 						"maxW": 3,
 						"minH": 1,
 						"moved": false,
@@ -273,7 +260,7 @@
 						"displayType": "ROW",
 						"h": 2,
 						"hideName": false,
-						"i": "vug7e0qild-7e73cc44-16ac-4450-8317-a08366066d6f-vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-feaf2490-30ce-11ec-b47a-c9c7aa670747",
+						"i": "vug7e0qild-5ddcdd29-1503-43be-8c54-1f54f685eec3-vug7e0qild-feaf2490-30ce-11ec-b47a-c9c7aa670747",
 						"items": [
 							{
 								"dropEffect": "move",
@@ -334,7 +321,6 @@
 								"startCol": 1
 							}
 						],
-						"maxH": null,
 						"maxW": 3,
 						"minH": 1,
 						"moved": false,
@@ -593,9 +579,7 @@
 	"name": "Campaign Report - Demo layout",
 	"packID": "",
 	"packName": "Automating Threat Intel Reports - Demo Pack",
-	"propagationLabels": [
-		"all"
-	],
+	"propagationLabels": [],
 	"quickView": null,
 	"quickViewV2": null,
 	"system": false,
