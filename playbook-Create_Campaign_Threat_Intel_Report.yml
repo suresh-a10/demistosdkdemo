@@ -42,11 +42,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e6dab650-7ec1-4ba5-81c5-34d9267c8391
+      id: a1f07c11-8288-4af5-850a-8f501d6fe5d8
       iscommand: false
       name: ""
       version: -1
-    taskid: e6dab650-7ec1-4ba5-81c5-34d9267c8391
+    taskid: a1f07c11-8288-4af5-850a-8f501d6fe5d8
     timertriggers: []
     type: start
     view: |-
@@ -79,21 +79,19 @@ tasks:
           summary at the beginning, and an ending conclusion.'
       retry-count:
         simple: "1"
-      using:
-        simple: OpenAI_instance_1
     separatecontext: false
     skipunavailable: false
     task:
       brand: OpenAI
       description: Enter an instruction and watch the API respond with a completion
         that attempts to match the context or pattern you provided.
-      id: 050d2077-7533-45f5-8b85-712299b27b99
+      id: e762f5f0-999b-4639-82b6-7059ae4c95a7
       iscommand: true
       name: Fetch vulnerability details and style with OpenAI
       script: OpenAI|||openai-completions
       type: regular
       version: -1
-    taskid: 050d2077-7533-45f5-8b85-712299b27b99
+    taskid: e762f5f0-999b-4639-82b6-7059ae4c95a7
     timertriggers: []
     type: regular
     view: |-
@@ -140,13 +138,13 @@ tasks:
     skipunavailable: false
     task:
       brand: Builtin
-      id: 53cc24a8-8e03-4281-84c2-7d86590a6196
+      id: 3c7e88f1-ba86-4131-8002-76f97797ce24
       iscommand: true
       name: Create New Threat Intel Report
       script: Builtin|||createThreatIntelReport
       type: regular
       version: -1
-    taskid: 53cc24a8-8e03-4281-84c2-7d86590a6196
+    taskid: 3c7e88f1-ba86-4131-8002-76f97797ce24
     timertriggers: []
     type: regular
     view: |-
@@ -168,12 +166,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0cb17f29-6d75-422f-8be3-14abab3754fb
+      id: 7a121bc5-27df-4e89-8d79-7231c86c2464
       iscommand: false
       name: End
       type: title
       version: -1
-    taskid: 0cb17f29-6d75-422f-8be3-14abab3754fb
+    taskid: 7a121bc5-27df-4e89-8d79-7231c86c2464
     timertriggers: []
     type: title
     view: |-
@@ -220,13 +218,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 411effc0-b8bb-40ca-8f00-4acb26143db0
+      id: 328bd38c-909d-4357-83a9-584e8960979a
       iscommand: false
       name: Set report URL
       script: Set
       type: regular
       version: -1
-    taskid: 411effc0-b8bb-40ca-8f00-4acb26143db0
+    taskid: 328bd38c-909d-4357-83a9-584e8960979a
     timertriggers: []
     type: regular
     view: |-
@@ -266,13 +264,13 @@ tasks:
         See incident Context Data menu for available placeholders
 
         Note: Sending emails require an active  Mail Sender integration instance.
-      id: 7de1306c-52b1-4fe7-845b-318085000182
+      id: bb6c3c94-dabc-4dad-8bc4-ce82982416da
       iscommand: false
       name: Set report fields in template
       script: CreateEmailHtmlBody
       type: regular
       version: -1
-    taskid: 7de1306c-52b1-4fe7-845b-318085000182
+    taskid: bb6c3c94-dabc-4dad-8bc4-ce82982416da
     timertriggers: []
     type: regular
     view: |-
@@ -308,13 +306,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: b459d857-b1b9-4fe5-884b-e57e953d20f2
+      id: e5a1a304-77ff-475f-8706-a8ce2d8c702a
       iscommand: false
       name: Delete context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: b459d857-b1b9-4fe5-884b-e57e953d20f2
+    taskid: e5a1a304-77ff-475f-8706-a8ce2d8c702a
     timertriggers: []
     type: regular
     view: |-
