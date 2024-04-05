@@ -23,25 +23,25 @@ tasks:
     isoversize: false
     nexttasks:
       '#none#':
-      - "11"
+      - "9"
     note: false
     quietmode: 0
     separatecontext: false
     skipunavailable: false
     task:
       brand: ""
-      id: bbee9248-f927-4c53-8a1e-47996509c4ac
+      id: 61a4e4a4-3155-4895-8da0-a480fa4ba9f2
       iscommand: false
       name: ""
       version: -1
-    taskid: bbee9248-f927-4c53-8a1e-47996509c4ac
+    taskid: 61a4e4a4-3155-4895-8da0-a480fa4ba9f2
     timertriggers: []
     type: start
     view: |-
       {
         "position": {
           "x": 20,
-          "y": -520
+          "y": -350
         }
       }
   "1":
@@ -66,13 +66,13 @@ tasks:
     task:
       brand: jira-v2
       description: Creates a new issue in Jira.
-      id: 4a0bfbe0-3a5b-4fa8-8f0e-70abdc5fd3ce
+      id: 8bbfeed2-21f1-4342-8cf6-8cd538bac71c
       iscommand: true
       name: Create Jira Ticket
       script: jira-v2|||jira-create-issue
       type: regular
       version: -1
-    taskid: 4a0bfbe0-3a5b-4fa8-8f0e-70abdc5fd3ce
+    taskid: 8bbfeed2-21f1-4342-8cf6-8cd538bac71c
     timertriggers: []
     type: regular
     view: |-
@@ -105,13 +105,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 66e5ae4d-a05d-4acd-8fac-178a0a662f85
+      id: 5edfaa20-342a-4601-8880-2d8793006f71
       iscommand: false
       name: sub-pb
       playbookId: ba00221b-fb94-47aa-865a-5225c0ee2c63
       type: playbook
       version: -1
-    taskid: 66e5ae4d-a05d-4acd-8fac-178a0a662f85
+    taskid: 5edfaa20-342a-4601-8880-2d8793006f71
     timertriggers: []
     type: playbook
     view: |-
@@ -155,13 +155,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 177a8496-d1e3-48ab-8eb3-2cf90fe884b5
+      id: cd87830b-5037-466c-87c5-332aecfad6f4
       iscommand: false
       name: Hi
-      playbookId: access_investigation_-_generic
+      playbookName: Access Investigation - Generic
       type: playbook
       version: -1
-    taskid: 177a8496-d1e3-48ab-8eb3-2cf90fe884b5
+    taskid: cd87830b-5037-466c-87c5-332aecfad6f4
     timertriggers: []
     type: playbook
     view: |-
@@ -209,12 +209,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5d96bf04-4e89-4f95-8880-a518f9febabf
+      id: 84dac753-59d8-41e4-8d4c-2976cc7e235b
       iscommand: false
       name: test the ask task
       type: condition
       version: -1
-    taskid: 5d96bf04-4e89-4f95-8880-a518f9febabf
+    taskid: 84dac753-59d8-41e4-8d4c-2976cc7e235b
     timertriggers: []
     type: condition
     view: |-
@@ -243,13 +243,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 08cd6a85-5787-4599-842b-98bc0242bf1d
+      id: 4d89632a-1648-42de-8f2d-f85d83209772
       iscommand: false
       name: "Yes"
       script: Print
       type: regular
       version: -1
-    taskid: 08cd6a85-5787-4599-842b-98bc0242bf1d
+    taskid: 4d89632a-1648-42de-8f2d-f85d83209772
     timertriggers: []
     type: regular
     view: |-
@@ -271,12 +271,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 81e06369-5fad-42de-8949-710e8a28f671
+      id: ce6f9c79-d734-41df-8378-44c465d15ddc
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 81e06369-5fad-42de-8949-710e8a28f671
+    taskid: ce6f9c79-d734-41df-8378-44c465d15ddc
     timertriggers: []
     type: title
     view: |-
@@ -307,13 +307,13 @@ tasks:
       brand: ipinfo_v2
       description: Check IP reputation (when information is available, returns a JSON
         with details). Uses all configured Threat Intelligence feeds.
-      id: c3c3b40d-82a9-41ff-8afe-8ab7df26af29
+      id: 69262d3f-9651-41a8-896f-226938e1ca74
       iscommand: true
       name: Untitled Task
       script: ipinfo_v2|||ip
       type: regular
       version: -1
-    taskid: c3c3b40d-82a9-41ff-8afe-8ab7df26af29
+    taskid: 69262d3f-9651-41a8-896f-226938e1ca74
     timertriggers: []
     type: regular
     view: |-
@@ -332,33 +332,36 @@ tasks:
     loop:
       builtincondition:
       - - left:
+            iscontext: true
             value:
-              simple: ${test.5.stop}
-          operator: isTrue
+              simple: inputs.max_tires
+          operator: isEqualString
           right:
-            value: {}
+            iscontext: true
+            value:
+              simple: ${test.[1].retrycount}
       exitCondition: ""
       iscommand: false
-      max: 6
-      wait: 30
+      max: 0
+      wait: 1
     note: false
-    quietmode: 0
+    quietmode: 2
     scriptarguments:
       max_tries:
         simple: "6"
-      taskid:
-        simple: "5"
+      task_id:
+        simple: "1"
     separatecontext: false
     skipunavailable: false
     task:
       brand: ""
-      id: a531d26b-5505-48be-8595-085fad4b2ebf
+      id: 0e32c119-32e3-468f-84b5-49cf10619f50
       iscommand: false
       name: Test-SubplaybookCounter
       playbookId: 0b38269c-1a8e-403b-88aa-65e9fcd19ef9
       type: playbook
       version: -1
-    taskid: a531d26b-5505-48be-8595-085fad4b2ebf
+    taskid: 0e32c119-32e3-468f-84b5-49cf10619f50
     timertriggers: []
     type: playbook
     view: |-
@@ -418,12 +421,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1ed07210-fac9-4003-8121-c5cac8f1f0f2
+      id: 0152dcfc-1e21-4161-89c8-7b2857bb6561
       iscommand: false
       name: Untitled Task
       type: collection
       version: -1
-    taskid: 1ed07210-fac9-4003-8121-c5cac8f1f0f2
+    taskid: 0152dcfc-1e21-4161-89c8-7b2857bb6561
     timertriggers: []
     type: collection
     view: |-
@@ -433,51 +436,16 @@ tasks:
           "y": 125
         }
       }
-  "11":
-    continueonerrortype: ""
-    id: "11"
-    ignoreworker: false
-    isautoswitchedtoquietmode: false
-    isoversize: false
-    nexttasks:
-      '#none#':
-      - "9"
-    note: false
-    quietmode: 0
-    scriptarguments:
-      value:
-        simple: test
-    separatecontext: false
-    skipunavailable: false
-    task:
-      brand: ""
-      description: Prints text to war room (Markdown supported)
-      id: 514edfa0-9d1f-4cd1-86e0-afe6ca70c985
-      iscommand: false
-      name: Print
-      script: Print
-      type: regular
-      version: -1
-    taskid: 514edfa0-9d1f-4cd1-86e0-afe6ca70c985
-    timertriggers: []
-    type: regular
-    view: |-
-      {
-        "position": {
-          "x": 20,
-          "y": -390
-        }
-      }
 version: -1
 view: |-
   {
     "linkLabelsPosition": {},
     "paper": {
       "dimensions": {
-        "height": 1215,
+        "height": 1045,
         "width": 1770,
         "x": -560,
-        "y": -520
+        "y": -350
       }
     }
   }
