@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: def48d04-c52c-44ea-82eb-8503a29ccd59
+      id: 9daaf5e1-5be9-42ae-8b1f-e05ca44560c8
       iscommand: false
       name: ""
       version: -1
-    taskid: def48d04-c52c-44ea-82eb-8503a29ccd59
+    taskid: 9daaf5e1-5be9-42ae-8b1f-e05ca44560c8
     timertriggers: []
     type: start
     view: |-
@@ -66,13 +66,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a6fe35f2-5cd6-4502-8685-3eafca684f29
+      id: 4a94742c-0a1f-43be-8a0f-66ff9112bf5c
       iscommand: false
       name: XDR Demo Playbook
       playbookId: ff1d730e-8379-458d-89a6-6fbb9491192f
       type: playbook
       version: -1
-    taskid: a6fe35f2-5cd6-4502-8685-3eafca684f29
+    taskid: 4a94742c-0a1f-43be-8a0f-66ff9112bf5c
     timertriggers: []
     type: playbook
     view: |-
