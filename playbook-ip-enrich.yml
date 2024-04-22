@@ -32,11 +32,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c19cc7c1-d21f-4669-8834-1b52731fad7b
+      id: 226f1a3c-ca83-4fa7-85a7-c7ae08b224e7
       iscommand: false
       name: ""
       version: -1
-    taskid: c19cc7c1-d21f-4669-8834-1b52731fad7b
+    taskid: 226f1a3c-ca83-4fa7-85a7-c7ae08b224e7
     timertriggers: []
     type: start
     view: |-
@@ -77,13 +77,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 036e3b6e-ae9f-4663-81bb-e3e0be70b351
+      id: f24d78ed-4764-415e-87ec-07dad324a4c4
       iscommand: false
       name: Set
       script: Set
       type: regular
       version: -1
-    taskid: 036e3b6e-ae9f-4663-81bb-e3e0be70b351
+    taskid: f24d78ed-4764-415e-87ec-07dad324a4c4
     timertriggers: []
     type: regular
     view: |-
