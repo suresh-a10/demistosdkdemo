@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 04958785-90f2-43e6-81f7-4793c96ceaa3
+      id: 5e68c331-e58a-4d21-8c3f-ee4ed479d758
       iscommand: false
       name: ""
       version: -1
-    taskid: 04958785-90f2-43e6-81f7-4793c96ceaa3
+    taskid: 5e68c331-e58a-4d21-8c3f-ee4ed479d758
     timertriggers: []
     type: start
     view: |-
@@ -95,12 +95,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: aaabd5fa-ec86-410e-8e3f-e0e84720c89f
+      id: 9382f4db-7514-4fc3-85a9-50a6a9cd99ae
       iscommand: false
       name: Access the input from the approver
       type: condition
       version: -1
-    taskid: aaabd5fa-ec86-410e-8e3f-e0e84720c89f
+    taskid: 9382f4db-7514-4fc3-85a9-50a6a9cd99ae
     timertriggers: []
     type: condition
     view: |-
@@ -125,12 +125,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c2c55553-5b34-4fd9-8a72-708cad08fda0
+      id: fe6415a7-93de-4b44-8f41-89182ae9beab
       iscommand: false
       name: Call automation to block an IP/ Isolate Endpoint/ Remediate Vulnerability
       type: title
       version: -1
-    taskid: c2c55553-5b34-4fd9-8a72-708cad08fda0
+    taskid: fe6415a7-93de-4b44-8f41-89182ae9beab
     timertriggers: []
     type: title
     view: |-
@@ -155,12 +155,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f0f69ec1-313e-453b-880a-57127f54b800
+      id: 2ad6d736-135e-46a2-80d8-7c852388b93a
       iscommand: false
       name: Go back to investigation with approver comments
       type: title
       version: -1
-    taskid: f0f69ec1-313e-453b-880a-57127f54b800
+    taskid: 2ad6d736-135e-46a2-80d8-7c852388b93a
     timertriggers: []
     type: title
     view: |-
@@ -225,12 +225,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8a2bed33-dcd8-44f5-8037-0ef4c2c8448a
+      id: e0f43d0e-2f35-4004-8d3d-e57adc963998
       iscommand: false
       name: Please ask you question
       type: collection
       version: -1
-    taskid: 8a2bed33-dcd8-44f5-8037-0ef4c2c8448a
+    taskid: e0f43d0e-2f35-4004-8d3d-e57adc963998
     timertriggers: []
     type: collection
     view: |-
@@ -263,13 +263,13 @@ tasks:
     task:
       brand: SlackV2
       description: Sends a message to a user, group, or channel.
-      id: 3431a24b-d91a-465b-8c19-76aba568d440
+      id: 8cb922ec-2bfa-411a-890a-8e3ba3b12e8e
       iscommand: true
       name: Block it
       script: SlackV2|||send-notification
       type: regular
       version: -1
-    taskid: 3431a24b-d91a-465b-8c19-76aba568d440
+    taskid: 8cb922ec-2bfa-411a-890a-8e3ba3b12e8e
     timertriggers: []
     type: regular
     view: |-
@@ -303,13 +303,13 @@ tasks:
     task:
       brand: SlackV2
       description: Sends a message to a user, group, or channel.
-      id: 700f5e40-8bd1-434e-88d2-4fbc3bbfbed4
+      id: d3220a21-1270-4b45-8fac-44433cd3bc33
       iscommand: true
       name: Need more detailed investigation
       script: SlackV2|||send-notification
       type: regular
       version: -1
-    taskid: 700f5e40-8bd1-434e-88d2-4fbc3bbfbed4
+    taskid: d3220a21-1270-4b45-8fac-44433cd3bc33
     timertriggers: []
     type: regular
     view: |-
@@ -337,13 +337,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5429e4b2-e7ac-49c4-8202-54cdf58f1907
+      id: de3862d1-61f3-4b92-8af8-2fbd04df2bbf
       iscommand: false
       name: Query ChatGPT
       script: fb578079-3b32-485e-8cff-d23fff27b1c1
       type: regular
       version: -1
-    taskid: 5429e4b2-e7ac-49c4-8202-54cdf58f1907
+    taskid: de3862d1-61f3-4b92-8af8-2fbd04df2bbf
     timertriggers: []
     type: regular
     view: |-
@@ -376,13 +376,13 @@ tasks:
     task:
       brand: SlackV2
       description: Sends a message to a user, group, or channel.
-      id: b79e0bd4-1a09-4f01-8d39-eaccacd4d62e
+      id: 4aad4c04-f806-43ba-8c7c-a59f9c9f388f
       iscommand: true
       name: Send ChatGPT response to Manager
       script: SlackV2|||send-notification
       type: regular
       version: -1
-    taskid: b79e0bd4-1a09-4f01-8d39-eaccacd4d62e
+    taskid: 4aad4c04-f806-43ba-8c7c-a59f9c9f388f
     timertriggers: []
     type: regular
     view: |-
@@ -449,12 +449,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: cb3651b6-4118-4a50-87f4-a4df250df669
+      id: 849e050a-ddc2-48e9-89cd-3543e51f16e8
       iscommand: false
       name: Ask for approval to block the IP Isolate endpoint or remediate the vulnerability
       type: collection
       version: -1
-    taskid: cb3651b6-4118-4a50-87f4-a4df250df669
+    taskid: 849e050a-ddc2-48e9-89cd-3543e51f16e8
     timertriggers: []
     type: collection
     view: |-
@@ -476,12 +476,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ee07846b-b71a-449c-88b1-416d3f8f6f64
+      id: 74c1b9c9-dd8d-43b4-8bb4-915823af2092
       iscommand: false
       name: end
       type: title
       version: -1
-    taskid: ee07846b-b71a-449c-88b1-416d3f8f6f64
+    taskid: 74c1b9c9-dd8d-43b4-8bb4-915823af2092
     timertriggers: []
     type: title
     view: |-
@@ -503,12 +503,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8dba0c7a-b03b-4172-8d6f-edc0871f9a4f
+      id: 22faa594-9cd8-43ed-8823-4c0167bdf90f
       iscommand: false
       name: end
       type: title
       version: -1
-    taskid: 8dba0c7a-b03b-4172-8d6f-edc0871f9a4f
+    taskid: 22faa594-9cd8-43ed-8823-4c0167bdf90f
     timertriggers: []
     type: title
     view: |-
@@ -530,12 +530,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 472263cd-514f-4fb8-8831-940f2867313e
+      id: a5535416-7a72-4469-8cfc-2f37dbfa7500
       iscommand: false
       name: end
       type: title
       version: -1
-    taskid: 472263cd-514f-4fb8-8831-940f2867313e
+    taskid: a5535416-7a72-4469-8cfc-2f37dbfa7500
     timertriggers: []
     type: title
     view: |-
