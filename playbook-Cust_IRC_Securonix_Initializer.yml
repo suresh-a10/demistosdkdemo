@@ -34,11 +34,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c6ce1def-34c1-4c32-84fa-dbaf468c352f
+      id: da754a8a-ae98-401e-8194-3cdfdd224a33
       iscommand: false
       name: ""
       version: -1
-    taskid: c6ce1def-34c1-4c32-84fa-dbaf468c352f
+    taskid: da754a8a-ae98-401e-8194-3cdfdd224a33
     timertriggers: []
     type: start
     view: |-
@@ -68,13 +68,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0949f263-bfad-4553-8490-9a59f25ebcf6
+      id: 6e211f76-6862-4ae1-83ca-10efaa358f08
       iscommand: false
       name: CUst_IRC_Securonix_Generic_Get_Policy_Violations
       playbookName: Wipro_IRC_Securonix_Generic_Get_Policy_Violations
       type: playbook
       version: -1
-    taskid: 0949f263-bfad-4553-8490-9a59f25ebcf6
+    taskid: 6e211f76-6862-4ae1-83ca-10efaa358f08
     timertriggers: []
     type: playbook
     view: |-
@@ -130,13 +130,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: e9e445fb-94e3-485e-89fc-82ea62fe7ab2
+      id: 3fa44335-b002-41dd-8a26-ca3b72e9c91e
       iscommand: false
       name: Set from date
       script: SetAndHandleEmpty
       type: regular
       version: -1
-    taskid: e9e445fb-94e3-485e-89fc-82ea62fe7ab2
+    taskid: 3fa44335-b002-41dd-8a26-ca3b72e9c91e
     timertriggers: []
     type: regular
     view: |-
@@ -187,13 +187,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 793619b4-6123-44b0-8e93-875929b90329
+      id: 21da64c5-6c2c-4aa2-8bc7-d5fd97b51a0a
       iscommand: false
       name: Set to date
       script: SetAndHandleEmpty
       type: regular
       version: -1
-    taskid: 793619b4-6123-44b0-8e93-875929b90329
+    taskid: 21da64c5-6c2c-4aa2-8bc7-d5fd97b51a0a
     timertriggers: []
     type: regular
     view: |-
@@ -219,12 +219,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6e7c4c67-94f7-406e-8dd3-5721a7af3e35
+      id: 7f137730-3bef-49b7-80c3-05e9acc396ad
       iscommand: false
       name: Delete unnecessary context
       type: title
       version: -1
-    taskid: 6e7c4c67-94f7-406e-8dd3-5721a7af3e35
+    taskid: 7f137730-3bef-49b7-80c3-05e9acc396ad
     timertriggers: []
     type: title
     view: |-
@@ -258,13 +258,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 60537455-85a4-4e28-8884-bb3f81a3f270
+      id: 774344f9-caf8-4591-890a-79410e8171d3
       iscommand: false
       name: Delete from_date
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 60537455-85a4-4e28-8884-bb3f81a3f270
+    taskid: 774344f9-caf8-4591-890a-79410e8171d3
     timertriggers: []
     type: regular
     view: |-
@@ -298,13 +298,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 29be5530-53b9-466b-8636-089b055114dd
+      id: de4b48c5-73a1-4187-8c6b-21b6eb5e171c
       iscommand: false
       name: Delete to_date
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 29be5530-53b9-466b-8636-089b055114dd
+    taskid: de4b48c5-73a1-4187-8c6b-21b6eb5e171c
     timertriggers: []
     type: regular
     view: |-
@@ -326,12 +326,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 49584098-87cb-42fc-883c-cde6705aefb4
+      id: effe6261-2dbb-4da1-8108-aba0df5dfb69
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 49584098-87cb-42fc-883c-cde6705aefb4
+    taskid: effe6261-2dbb-4da1-8108-aba0df5dfb69
     timertriggers: []
     type: title
     view: |-
@@ -364,13 +364,13 @@ tasks:
     task:
       brand: ""
       description: Delete field from context
-      id: 20747c69-6c94-419f-8725-989192c2ab0f
+      id: 55d04920-7dc8-4cf4-8d2d-c89caa52deec
       iscommand: false
       name: Delete Context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 20747c69-6c94-419f-8725-989192c2ab0f
+    taskid: 55d04920-7dc8-4cf4-8d2d-c89caa52deec
     timertriggers: []
     type: regular
     view: |-
@@ -401,13 +401,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: dec4e1aa-af78-4af6-8b02-b3aed64056f2
+      id: ae82047a-5074-4d1f-8f7d-69f89aab0259
       iscommand: true
       name: Assign default P3 priority and Medium severity
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: dec4e1aa-af78-4af6-8b02-b3aed64056f2
+    taskid: ae82047a-5074-4d1f-8f7d-69f89aab0259
     timertriggers: []
     type: regular
     view: |-
@@ -441,13 +441,13 @@ tasks:
       description: This is a generic subplaybook of Securonix which takes Violator
         ID, Violator Sub Text, Violator Text and Resource Name as inputs and sets
         the violator type as either accountname, ipaddress or resourcename
-      id: 7a7af09a-3d33-4fef-8f8c-9dc02e6c1541
+      id: e2b12810-f5b9-41b0-8613-0b115f3908be
       iscommand: false
       name: Cust_IRC_Securonix_Generic_Identify_Violator_Type
       playbookName: Wipro_IRC_Securonix_Generic_Identify_Violator_Type
       type: playbook
       version: -1
-    taskid: 7a7af09a-3d33-4fef-8f8c-9dc02e6c1541
+    taskid: e2b12810-f5b9-41b0-8613-0b115f3908be
     timertriggers: []
     type: playbook
     view: |-
@@ -477,13 +477,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 414fa26c-1025-4ae1-812f-2a06e6277d68
+      id: 3736a7f5-0904-45bf-893f-8fba12658b02
       iscommand: false
       name: Wipro_IRC_Securonix_Generic_Assign_Owner
       playbookId: cf99b3fe-2026-4266-8a77-cf78dd8b70fc
       type: playbook
       version: -1
-    taskid: 414fa26c-1025-4ae1-812f-2a06e6277d68
+    taskid: 3736a7f5-0904-45bf-893f-8fba12658b02
     timertriggers: []
     type: playbook
     view: |-
@@ -671,13 +671,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: a0e10e63-c493-4c18-8b09-1c794f3ae4da
+      id: a4cd54af-bc7f-430d-86f5-da8e7362d691
       iscommand: true
       name: Set the required common incident fields in the layout
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: a0e10e63-c493-4c18-8b09-1c794f3ae4da
+    taskid: a4cd54af-bc7f-430d-86f5-da8e7362d691
     timertriggers: []
     type: regular
     view: |-
@@ -707,13 +707,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 19649c8c-2bc3-42a1-8dbf-22ed24572dad
+      id: 9e625a17-28ba-4fe4-8228-709e5773e601
       iscommand: false
       name: Cust_IRC_Generic_Associate_MITRE
       playbookName: Wipro_IRC_Generic_Associate_MITRE
       type: playbook
       version: -1
-    taskid: 19649c8c-2bc3-42a1-8dbf-22ed24572dad
+    taskid: 9e625a17-28ba-4fe4-8228-709e5773e601
     timertriggers: []
     type: playbook
     view: |-
@@ -751,13 +751,13 @@ tasks:
         * Inventory_VDI
         and outputs the IP details which belongs to one of the IP in these lists. Sets the fields wiprocriticalasset and assettable.
         If  the IP is not found, it is resolved to a host and then it is checked
-      id: 57e3ec67-acea-434e-8e71-af20fe05ecdc
+      id: b6a3e6b8-7fd2-48c7-85b0-863c2c8920b3
       iscommand: false
       name: Cust_IRC_Generic_Critical_Asset
       playbookName: Wipro_IRC_Generic_Critical_Asset
       type: playbook
       version: -1
-    taskid: 57e3ec67-acea-434e-8e71-af20fe05ecdc
+    taskid: b6a3e6b8-7fd2-48c7-85b0-863c2c8920b3
     timertriggers: []
     type: playbook
     view: |-
