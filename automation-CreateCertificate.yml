@@ -23,7 +23,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.5.0
-    itemVersion: 1.2.45
+    itemVersion: 1.2.44
     packID: MicrosoftExchangeOnline
     packName: Microsoft Exchange Online
     packPropagationLabels:
@@ -49,7 +49,7 @@ pswd: ""
 runas: DBotWeakRole
 runonce: false
 script: |-
-  ### pack version: 1.2.45
+  ### pack version: 1.2.44
   Import-Module SelfSignedCertificate
 
   function CreateCertificate
