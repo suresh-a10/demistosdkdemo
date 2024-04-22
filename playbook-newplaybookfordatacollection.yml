@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f72d4cd6-459d-43dc-8030-4348df3e3490
+      id: 0fbca8cd-adfa-4e3e-8167-958f5f2a913c
       iscommand: false
       name: ""
       version: -1
-    taskid: f72d4cd6-459d-43dc-8030-4348df3e3490
+    taskid: 0fbca8cd-adfa-4e3e-8167-958f5f2a913c
     timertriggers: []
     type: start
     view: |-
@@ -111,12 +111,12 @@ tasks:
         Ask the user what IPs should be blocked.
 
         Remember that the direction you have decided is - ${inputs.RuleDirection}
-      id: 00ca0437-07d5-48fe-88d0-f2e6173a26df
+      id: 8762a7c0-5c08-4157-83e4-05c30a24aecc
       iscommand: false
       name: Analyst Verification Prompt (without IP Internal List)
       type: collection
       version: -1
-    taskid: 00ca0437-07d5-48fe-88d0-f2e6173a26df
+    taskid: 8762a7c0-5c08-4157-83e4-05c30a24aecc
     timertriggers: []
     type: collection
     view: |-
@@ -146,13 +146,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.extract.indicators
-      id: dd6666ad-477a-4c8b-8799-d38f52ef484f
+      id: 4e7b201c-8e5f-4fbb-87b9-5b2a8dabd119
       iscommand: true
       name: Extract IP
       script: Builtin|||extractIndicators
       type: regular
       version: -1
-    taskid: dd6666ad-477a-4c8b-8799-d38f52ef484f
+    taskid: 4e7b201c-8e5f-4fbb-87b9-5b2a8dabd119
     timertriggers: []
     type: regular
     view: |-
@@ -188,13 +188,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 29c28fb8-5f3d-487c-87e4-f5e1a03fe56b
+      id: 72c15b56-4b93-4f52-813a-2939e155a5ab
       iscommand: false
       name: Block IPs that were approved
       script: SetAndHandleEmpty
       type: regular
       version: -1
-    taskid: 29c28fb8-5f3d-487c-87e4-f5e1a03fe56b
+    taskid: 72c15b56-4b93-4f52-813a-2939e155a5ab
     timertriggers: []
     type: regular
     view: |-
@@ -216,12 +216,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e6d7da36-6eee-4d43-86cb-551fa4321578
+      id: 17e32b67-9b4e-4def-8426-b07d668f737f
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: e6d7da36-6eee-4d43-86cb-551fa4321578
+    taskid: 17e32b67-9b4e-4def-8426-b07d668f737f
     timertriggers: []
     type: title
     view: |-
@@ -250,13 +250,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: c3eb9981-8d12-49f4-836b-ee92d5afdcc1
+      id: f22bef3b-4370-4318-8221-7497774199b4
       iscommand: false
       name: Print Blocklist
       script: Print
       type: regular
       version: -1
-    taskid: c3eb9981-8d12-49f4-836b-ee92d5afdcc1
+    taskid: f22bef3b-4370-4318-8221-7497774199b4
     timertriggers: []
     type: regular
     view: |-
