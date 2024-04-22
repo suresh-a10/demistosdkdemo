@@ -71,11 +71,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 41b0a2d5-da58-4e10-89a3-cb17fa687166
+      id: 3de20e00-fff5-405a-89c9-7167d1b5ceda
       iscommand: false
       name: ""
       version: -1
-    taskid: 41b0a2d5-da58-4e10-89a3-cb17fa687166
+    taskid: 3de20e00-fff5-405a-89c9-7167d1b5ceda
     timertriggers: []
     type: start
     view: |-
@@ -97,12 +97,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b3e810f7-a225-4495-8855-740c9c8e39ad
+      id: 0e4c3c8d-8a45-4650-8412-ed7b764d3124
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: b3e810f7-a225-4495-8855-740c9c8e39ad
+    taskid: 0e4c3c8d-8a45-4650-8412-ed7b764d3124
     timertriggers: []
     type: title
     view: |-
@@ -157,12 +157,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2969e01a-b7cf-43b5-8349-f22896ef183a
+      id: 04f47951-6296-4635-8f72-418f432b0905
       iscommand: false
       name: Is QRadarEnabled?
       type: condition
       version: -1
-    taskid: 2969e01a-b7cf-43b5-8349-f22896ef183a
+    taskid: 04f47951-6296-4635-8f72-418f432b0905
     timertriggers: []
     type: condition
     view: |-
@@ -216,12 +216,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7f7f3ce7-a338-4e4f-8a68-d951cd5f60c2
+      id: 34c5c586-7317-4e70-82a6-9f397d19472b
       iscommand: false
       name: Are there filtered results?
       type: condition
       version: -1
-    taskid: 7f7f3ce7-a338-4e4f-8a68-d951cd5f60c2
+    taskid: 34c5c586-7317-4e70-82a6-9f397d19472b
     timertriggers: []
     type: condition
     view: |-
@@ -296,13 +296,13 @@ tasks:
     task:
       brand: ""
       description: Add or update a value in a reference set.
-      id: 0dee2f15-d981-4b84-84a2-db12c559d44a
+      id: 9c7a84b9-e7be-435d-89c2-24a0a4017d3a
       iscommand: true
       name: Add Sha256 to QRadar reference set
       script: '|||qradar-update-reference-set-value'
       type: regular
       version: -1
-    taskid: 0dee2f15-d981-4b84-84a2-db12c559d44a
+    taskid: 9c7a84b9-e7be-435d-89c2-24a0a4017d3a
     timertriggers: []
     type: regular
     view: |-
@@ -361,12 +361,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: fb326827-183e-4a74-80f5-225ab3d9f5de
+      id: 29b39edd-23f0-47b3-8e1e-bb6ea045f47b
       iscommand: false
       name: Is there a Qradar Sha256 Reference Set and values?
       type: condition
       version: -1
-    taskid: fb326827-183e-4a74-80f5-225ab3d9f5de
+    taskid: 29b39edd-23f0-47b3-8e1e-bb6ea045f47b
     timertriggers: []
     type: condition
     view: |-
@@ -433,12 +433,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b45abd1e-2527-4711-8c23-a5e6a3b81582
+      id: d165fd75-d78f-42f0-83ad-8522c1b3c4fe
       iscommand: false
       name: Is there a Qradar Sha1 Reference Set and values?
       type: condition
       version: -1
-    taskid: b45abd1e-2527-4711-8c23-a5e6a3b81582
+    taskid: d165fd75-d78f-42f0-83ad-8522c1b3c4fe
     timertriggers: []
     type: condition
     view: |-
@@ -513,13 +513,13 @@ tasks:
     task:
       brand: ""
       description: Add or update a value in a reference set.
-      id: 327f89f8-786e-4056-81d9-702c573467ca
+      id: a1c74783-45b9-40a1-8736-e9655f0a354f
       iscommand: true
       name: Add Sha1 to QRadar reference set
       script: '|||qradar-update-reference-set-value'
       type: regular
       version: -1
-    taskid: 327f89f8-786e-4056-81d9-702c573467ca
+    taskid: a1c74783-45b9-40a1-8736-e9655f0a354f
     timertriggers: []
     type: regular
     view: |-
@@ -586,12 +586,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 359847e9-7db7-44e0-867f-75a9b243c4bc
+      id: 9439aa3f-1c55-4238-889e-412fbc239370
       iscommand: false
       name: Is there a Qradar Md5 Reference Set and values?
       type: condition
       version: -1
-    taskid: 359847e9-7db7-44e0-867f-75a9b243c4bc
+    taskid: 9439aa3f-1c55-4238-889e-412fbc239370
     timertriggers: []
     type: condition
     view: |-
@@ -666,13 +666,13 @@ tasks:
     task:
       brand: ""
       description: Add or update a value in a reference set.
-      id: f566cacb-829b-4aaf-8df2-2ce83203cc25
+      id: 882d3e45-1dfd-434a-8d0c-3a2c17406137
       iscommand: true
       name: Add Md5 to QRadar reference set
       script: '|||qradar-update-reference-set-value'
       type: regular
       version: -1
-    taskid: f566cacb-829b-4aaf-8df2-2ce83203cc25
+    taskid: 882d3e45-1dfd-434a-8d0c-3a2c17406137
     timertriggers: []
     type: regular
     view: |-
@@ -697,12 +697,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c49abffe-7a17-4a35-8d04-5a7cd95fd5dc
+      id: ca71f92d-5f84-437d-8c03-732418420970
       iscommand: false
       name: Sha256
       type: title
       version: -1
-    taskid: c49abffe-7a17-4a35-8d04-5a7cd95fd5dc
+    taskid: ca71f92d-5f84-437d-8c03-732418420970
     timertriggers: []
     type: title
     view: |-
@@ -727,12 +727,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6d766e22-28cd-4396-87c2-140b61d3557a
+      id: 8bd46de6-6c42-40a7-8a74-668bf004631d
       iscommand: false
       name: Sha1
       type: title
       version: -1
-    taskid: 6d766e22-28cd-4396-87c2-140b61d3557a
+    taskid: 8bd46de6-6c42-40a7-8a74-668bf004631d
     timertriggers: []
     type: title
     view: |-
@@ -757,12 +757,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 62d57375-eb94-4c12-8795-397206e7869b
+      id: a5beedd2-fc00-427e-88cb-49ca56eea4fe
       iscommand: false
       name: Md5
       type: title
       version: -1
-    taskid: 62d57375-eb94-4c12-8795-397206e7869b
+    taskid: a5beedd2-fc00-427e-88cb-49ca56eea4fe
     timertriggers: []
     type: title
     view: |-
@@ -824,13 +824,13 @@ tasks:
     task:
       brand: Builtin
       description: Adds the SIEM tag to the indicator.
-      id: 2d9aef2e-af44-44b7-8669-0bba09541fdf
+      id: b639546c-2d0d-47fa-8832-18c14af9cdb3
       iscommand: true
       name: Add SIEM tag
       script: Builtin|||appendIndicatorField
       type: regular
       version: -1
-    taskid: 2d9aef2e-af44-44b7-8669-0bba09541fdf
+    taskid: b639546c-2d0d-47fa-8832-18c14af9cdb3
     timertriggers: []
     type: regular
     view: |-
@@ -892,13 +892,13 @@ tasks:
     task:
       brand: Builtin
       description: Adds the SIEM tag to the indicator.
-      id: 39eaf75b-a7ca-4815-8b04-61cd0f800d4a
+      id: cf7ccb7b-5f7f-4de6-8f55-20f99868dad4
       iscommand: true
       name: Add SIEM tag
       script: Builtin|||appendIndicatorField
       type: regular
       version: -1
-    taskid: 39eaf75b-a7ca-4815-8b04-61cd0f800d4a
+    taskid: cf7ccb7b-5f7f-4de6-8f55-20f99868dad4
     timertriggers: []
     type: regular
     view: |-
@@ -960,13 +960,13 @@ tasks:
     task:
       brand: Builtin
       description: Adds the SIEM tag to the indicator.
-      id: 6f4515c1-29ef-4795-8019-2a6937c6e7df
+      id: 414b8c9b-da54-4971-8ef7-0036c5cf72f6
       iscommand: true
       name: Add SIEM tag
       script: Builtin|||appendIndicatorField
       type: regular
       version: -1
-    taskid: 6f4515c1-29ef-4795-8019-2a6937c6e7df
+    taskid: 414b8c9b-da54-4971-8ef7-0036c5cf72f6
     timertriggers: []
     type: regular
     view: |-
