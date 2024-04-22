@@ -2065,8 +2065,6 @@ tasks:
       - "31"
     note: false
     quietmode: 0
-    results:
-    - brandInstances
     scriptarguments:
       brandname:
         simple: Active Directory Query v2
