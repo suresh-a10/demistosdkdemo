@@ -2,7 +2,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.1.0
-    itemVersion: 3.6.17
+    itemVersion: 3.6.14
     packID: Phishing
     packName: Phishing
     packPropagationLabels:
@@ -11,8 +11,7 @@ contentitemexportablefields:
     propagationLabels: []
     toServerVersion: ""
 description: Runs various machine-learning based checks on phishing emails and URLs,
-  in an attempt to predict whether they are phishing or benign. This playbook is available
-  only on Cortex XSOAR.
+  in an attempt to predict whether they are phishing or benign.
 id: Phishing - Machine Learning Analysis
 inputs:
 - description: The list of URLs that were extracted from the file. This output is
