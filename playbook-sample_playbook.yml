@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c393e13d-01cd-4104-8958-f231e843ea3a
+      id: 15de8435-5298-4060-8053-1b1d646e1779
       iscommand: false
       name: ""
       version: -1
-    taskid: c393e13d-01cd-4104-8958-f231e843ea3a
+    taskid: 15de8435-5298-4060-8053-1b1d646e1779
     timertriggers: []
     type: start
     view: |-
@@ -64,13 +64,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 00ebe004-b867-493c-870c-23993cf060e8
+      id: 13f2fd48-60b1-4465-8e43-39151c5cf2e4
       iscommand: false
       name: task A
       script: Print
       type: regular
       version: -1
-    taskid: 00ebe004-b867-493c-870c-23993cf060e8
+    taskid: 13f2fd48-60b1-4465-8e43-39151c5cf2e4
     timertriggers: []
     type: regular
     view: |-
@@ -96,13 +96,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 7df215d3-1db8-4f5f-8976-55054a8bdf72
+      id: f5107076-edf8-4a68-873c-0c0ac98b1c50
       iscommand: false
       name: task B
       script: Print
       type: regular
       version: -1
-    taskid: 7df215d3-1db8-4f5f-8976-55054a8bdf72
+    taskid: f5107076-edf8-4a68-873c-0c0ac98b1c50
     timertriggers: []
     type: regular
     view: |-
