@@ -94,7 +94,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.8.0
-    itemVersion: 3.0.8
+    itemVersion: 3.0.7
     packID: HelloWorld
     packName: HelloWorld
     packPropagationLabels:
@@ -324,12 +324,12 @@ script:
     - contextPath: IP.Relationships.EntityBType
       description: The type of the destination of the relationship.
       type: string
-  dockerimage: demisto/python3:3.10.13.89009
+  dockerimage: demisto/python3:3.10.13.87159
   isfetch: true
   runonce: false
   script: |
     register_module_line('HelloWorld', 'start', __line__())
-    ### pack version: 3.0.8
+    ### pack version: 3.0.7
 
 
 
@@ -1240,6 +1240,7 @@ script:
         main function, parses params and runs command functions
         """
 
+        params = demisto.params()
         params = demisto.params()
         args = demisto.args()
         command = demisto.command()
