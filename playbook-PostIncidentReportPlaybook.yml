@@ -45,11 +45,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: dd7f6570-8897-49c8-8d22-6bbce0ac21f9
+      id: 5f8d36ba-ff28-4936-85b9-0f3bd2d4fc29
       iscommand: false
       name: ""
       version: -1
-    taskid: dd7f6570-8897-49c8-8d22-6bbce0ac21f9
+    taskid: 5f8d36ba-ff28-4936-85b9-0f3bd2d4fc29
     timertriggers: []
     type: start
     view: |-
@@ -183,12 +183,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9cccb0ba-46f4-4980-88f5-3e5ae6894d7e
+      id: a411b09b-dce8-4fb3-8a47-c4a61c5d901a
       iscommand: false
       name: Post Incident Report Data Collection
       type: collection
       version: -1
-    taskid: 9cccb0ba-46f4-4980-88f5-3e5ae6894d7e
+    taskid: a411b09b-dce8-4fb3-8a47-c4a61c5d901a
     timertriggers: []
     type: collection
     view: |-
@@ -222,13 +222,13 @@ tasks:
     task:
       brand: ""
       description: Sends an email using EWS.
-      id: be582726-6bca-4555-8696-e8348c10fa34
+      id: 97f60a3c-e8c9-4593-8c8c-89b93da70f6a
       iscommand: true
       name: Send Post Incident Report Data to Stakeholders
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: be582726-6bca-4555-8696-e8348c10fa34
+    taskid: 97f60a3c-e8c9-4593-8c8c-89b93da70f6a
     timertriggers: []
     type: regular
     view: |-
@@ -256,13 +256,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: 6aa27425-ab5b-444a-8c45-9d8f45782002
+      id: 648a8421-ff62-4503-8f51-110d54120d27
       iscommand: true
       name: Close Main Incident
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 6aa27425-ab5b-444a-8c45-9d8f45782002
+    taskid: 648a8421-ff62-4503-8f51-110d54120d27
     timertriggers: []
     type: regular
     view: |-
@@ -307,12 +307,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8ea28727-ef33-433b-87dc-c708c08c66a4
+      id: 55f6ca65-de70-4fc3-8edd-ba68706de828
       iscommand: false
       name: Are there any actions to be Tracked from this incident
       type: condition
       version: -1
-    taskid: 8ea28727-ef33-433b-87dc-c708c08c66a4
+    taskid: 55f6ca65-de70-4fc3-8edd-ba68706de828
     timertriggers: []
     type: condition
     view: |-
@@ -357,12 +357,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 58d1e6ec-4d26-44e4-8817-7d58e56d9e9f
+      id: d4af144f-def5-41d8-8e84-db6f73df6903
       iscommand: false
       name: Planned Action Status
       type: condition
       version: -1
-    taskid: 58d1e6ec-4d26-44e4-8817-7d58e56d9e9f
+    taskid: d4af144f-def5-41d8-8e84-db6f73df6903
     timertriggers: []
     type: condition
     view: |-
@@ -387,12 +387,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: cc34c954-a1e4-47c5-8b46-4f460b4da4c4
+      id: 96fbcb4b-9545-4c00-8fb8-1c7a6e700e68
       iscommand: false
       name: Close this task after completion of Planned activities
       type: regular
       version: -1
-    taskid: cc34c954-a1e4-47c5-8b46-4f460b4da4c4
+    taskid: 96fbcb4b-9545-4c00-8fb8-1c7a6e700e68
     timertriggers: []
     type: regular
     view: |-
