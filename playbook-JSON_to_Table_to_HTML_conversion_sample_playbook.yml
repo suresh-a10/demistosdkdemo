@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 51fcdd53-50d9-4475-8edd-4bcf85190466
+      id: a0519a09-99e4-4ac9-8e75-4432120a8597
       iscommand: false
       name: ""
       version: -1
-    taskid: 51fcdd53-50d9-4475-8edd-4bcf85190466
+    taskid: a0519a09-99e4-4ac9-8e75-4432120a8597
     timertriggers: []
     type: start
     view: |-
@@ -60,12 +60,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8a3ff652-0108-485c-86f9-250c9f8c85de
+      id: 44adebf2-68f6-4b52-8bf6-660bf2f53919
       iscommand: false
       name: Send Email
       type: title
       version: -1
-    taskid: 8a3ff652-0108-485c-86f9-250c9f8c85de
+    taskid: 44adebf2-68f6-4b52-8bf6-660bf2f53919
     timertriggers: []
     type: title
     view: |-
@@ -100,13 +100,13 @@ tasks:
     task:
       brand: ""
       description: Convert an array to a nice table display. Usually, from the context.
-      id: 2064cc0d-7560-4b2c-8252-cdb1cf4ec710
+      id: 603d9436-f3cc-44e4-839e-2f71d94ccde3
       iscommand: false
       name: Convert Actionable item Json data to table
       script: ToTable
       type: regular
       version: -1
-    taskid: 2064cc0d-7560-4b2c-8252-cdb1cf4ec710
+    taskid: 603d9436-f3cc-44e4-839e-2f71d94ccde3
     timertriggers: []
     type: regular
     view: |-
@@ -139,13 +139,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.mdToHTML
-      id: fca06dc8-55dd-49fe-805f-7d330d12ab57
+      id: de65380d-579e-48bd-8cbf-44a9bbc46f5c
       iscommand: true
       name: convert MD to HTML
       script: Builtin|||mdToHtml
       type: regular
       version: -1
-    taskid: fca06dc8-55dd-49fe-805f-7d330d12ab57
+    taskid: de65380d-579e-48bd-8cbf-44a9bbc46f5c
     timertriggers: []
     type: regular
     view: |-
@@ -191,13 +191,13 @@ tasks:
     task:
       brand: EWSO365
       description: Sends an email.
-      id: 76e2dffa-4191-43da-8ea5-a2c5a699abe5
+      id: 0efcb706-6d26-4494-8f8d-cbb99b5ce957
       iscommand: true
       name: Send email
       script: EWSO365|||send-mail
       type: regular
       version: -1
-    taskid: 76e2dffa-4191-43da-8ea5-a2c5a699abe5
+    taskid: 0efcb706-6d26-4494-8f8d-cbb99b5ce957
     timertriggers: []
     type: regular
     view: |-
@@ -219,12 +219,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2074221e-01db-4be2-885b-21f196fbc454
+      id: 2aa50428-d0cd-4077-8272-e838cecee28e
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 2074221e-01db-4be2-885b-21f196fbc454
+    taskid: 2aa50428-d0cd-4077-8272-e838cecee28e
     timertriggers: []
     type: title
     view: |-
