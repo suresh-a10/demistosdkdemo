@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: bd26dee4-cb41-40b3-854e-1a5541c6a6d4
+      id: 794be731-07be-4055-87c0-2e9f576aca39
       iscommand: false
       name: ""
       version: -1
-    taskid: bd26dee4-cb41-40b3-854e-1a5541c6a6d4
+    taskid: 794be731-07be-4055-87c0-2e9f576aca39
     timertriggers: []
     type: start
     view: |-
@@ -64,13 +64,13 @@ tasks:
       brand: ""
       description: Returns integration instances configured in Cortex XSOAR. You can
         filter by instance status and/or brand name (vendor).
-      id: 48e4c377-d95a-4e2b-825c-09175ed0cd7c
+      id: 26005feb-3148-44c7-8002-bcf4079c2135
       iscommand: false
       name: Get Instance List
       script: GetInstances
       type: regular
       version: -1
-    taskid: 48e4c377-d95a-4e2b-825c-09175ed0cd7c
+    taskid: 26005feb-3148-44c7-8002-bcf4079c2135
     timertriggers: []
     type: regular
     view: |-
@@ -98,13 +98,13 @@ tasks:
     task:
       brand: ""
       description: Export given array to csv file
-      id: 97c2db7b-837f-4a7c-8a19-677721292861
+      id: d5ec253c-9bb2-4a7e-843f-bcfbc85556d8
       iscommand: false
       name: Untitled Task
       script: ExportToCSV
       type: regular
       version: -1
-    taskid: 97c2db7b-837f-4a7c-8a19-677721292861
+    taskid: d5ec253c-9bb2-4a7e-843f-bcfbc85556d8
     timertriggers: []
     type: regular
     view: |-
