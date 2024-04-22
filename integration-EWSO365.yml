@@ -178,7 +178,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 1.2.45
+    itemVersion: 1.2.44
     packID: MicrosoftExchangeOnline
     packName: Microsoft Exchange Online
     packPropagationLabels:
@@ -1065,7 +1065,7 @@ script:
   runonce: false
   script: |
     register_module_line('EWSO365', 'start', __line__())
-    ### pack version: 1.2.45
+    ### pack version: 1.2.44
     import email
     import hashlib
     import json
@@ -2353,7 +2353,7 @@ script:
         def run_retry_on_rate_limit(args_for_next_run: dict):
             return CommandResults(readable_output="Rate limit reached, rerunning the command in 1 min",
                                   scheduled_command=ScheduledCommand(command=demisto.command(), next_run_in_seconds=60,
-                                                                     args=args_for_next_run, timeout_in_seconds=900))
+                                                                     args=args_for_next_run))
 
         def handle_error_with_metrics(self, res):
             MicrosoftClient.create_api_metrics(res.status_code)
