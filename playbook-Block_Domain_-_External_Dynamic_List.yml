@@ -2,7 +2,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.5.0
-    itemVersion: 3.2.21
+    itemVersion: 3.2.19
     packID: EDL
     packName: Generic Export Indicators Service
     packPropagationLabels:
