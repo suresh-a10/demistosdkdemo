@@ -123,11 +123,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8603a5ca-1cc5-4ee4-8f34-b4fa341b98ea
+      id: 12ba606c-7257-462d-8b93-22575dc97395
       iscommand: false
       name: ""
       version: -1
-    taskid: 8603a5ca-1cc5-4ee4-8f34-b4fa341b98ea
+    taskid: 12ba606c-7257-462d-8b93-22575dc97395
     timertriggers: []
     type: start
     view: |-
@@ -207,12 +207,12 @@ tasks:
     task:
       brand: Mail Sender (New)
       description: Send an email
-      id: a0f889de-cfd2-4977-8be9-2b3eb4ad6a2e
+      id: 5abea31e-eb76-403d-80c9-dd839100683e
       iscommand: false
       name: Assign to analyst
       type: collection
       version: -1
-    taskid: a0f889de-cfd2-4977-8be9-2b3eb4ad6a2e
+    taskid: 5abea31e-eb76-403d-80c9-dd839100683e
     timertriggers: []
     type: collection
     view: |-
@@ -239,13 +239,13 @@ tasks:
     task:
       brand: Builtin
       description: Close the investigation.
-      id: 6c1a3c06-49fd-484d-8149-ed6a8a930fb5
+      id: 8f8cbd5a-4eb2-4335-85fb-94a697cfbfb5
       iscommand: true
       name: Close investigation
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 6c1a3c06-49fd-484d-8149-ed6a8a930fb5
+    taskid: 8f8cbd5a-4eb2-4335-85fb-94a697cfbfb5
     timertriggers: []
     type: regular
     view: |-
@@ -270,12 +270,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6c27ceb1-2bcc-4305-8f7e-2e2d2ef85110
+      id: c2c11a8e-40a5-44e2-8b11-abe4f8bed10a
       iscommand: false
       name: Triage
       type: title
       version: -1
-    taskid: 6c27ceb1-2bcc-4305-8f7e-2e2d2ef85110
+    taskid: c2c11a8e-40a5-44e2-8b11-abe4f8bed10a
     timertriggers: []
     type: title
     view: |-
@@ -309,13 +309,13 @@ tasks:
     task:
       brand: ""
       description: Store the email address of the user that reported the incident.
-      id: ad9d9ed7-37fc-4b32-8bce-7d629238165b
+      id: b7c4f4b4-08c1-4c64-851f-cd5ba479885a
       iscommand: false
       name: Store the email address of the reporting user
       script: Set
       type: regular
       version: -1
-    taskid: ad9d9ed7-37fc-4b32-8bce-7d629238165b
+    taskid: b7c4f4b4-08c1-4c64-851f-cd5ba479885a
     timertriggers: []
     type: regular
     view: |-
@@ -357,13 +357,13 @@ tasks:
       brand: ""
       description: |
         Send an auto-response to user that reported the incident, informing them the incident was received and being handled.
-      id: 68960e74-2188-4fde-8b45-74d23f1c7a0e
+      id: 22eff487-15ba-45a3-82d4-bf3c1e110e8c
       iscommand: true
       name: Notify User
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: 68960e74-2188-4fde-8b45-74d23f1c7a0e
+    taskid: 22eff487-15ba-45a3-82d4-bf3c1e110e8c
     timertriggers: []
     type: regular
     view: |-
@@ -388,13 +388,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6706925b-6d9b-4c6b-86c9-3212c2701501
+      id: 10fa76a4-fe09-441d-8fc9-3014775f9f1c
       iscommand: false
       name: Process Email - Generic
       playbookId: process_email_-_generic
       type: playbook
       version: -1
-    taskid: 6706925b-6d9b-4c6b-86c9-3212c2701501
+    taskid: 10fa76a4-fe09-441d-8fc9-3014775f9f1c
     timertriggers: []
     type: playbook
     view: |-
@@ -420,12 +420,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 09402633-fb36-44f5-89eb-c7e6634a4ad3
+      id: 79e889e6-365d-4acc-82df-dce228aec207
       iscommand: false
       name: Remediation
       type: title
       version: -1
-    taskid: 09402633-fb36-44f5-89eb-c7e6634a4ad3
+    taskid: 79e889e6-365d-4acc-82df-dce228aec207
     timertriggers:
     - action: start
       fieldname: remediationsla
@@ -495,13 +495,13 @@ tasks:
       brand: ""
       description: This playbook searches and delete emails with similar attributes
         of a malicious email using EWS or Office 365.
-      id: 59c119b2-a4de-41db-8f8c-7f6048c7aa9e
+      id: 656a377d-b114-4f6a-8182-cbf4b25c6b11
       iscommand: false
       name: Search And Delete Emails - Generic v2
       playbookId: Search And Delete Emails - Generic v2
       type: playbook
       version: -1
-    taskid: 59c119b2-a4de-41db-8f8c-7f6048c7aa9e
+    taskid: 656a377d-b114-4f6a-8182-cbf4b25c6b11
     timertriggers: []
     type: playbook
     view: |-
@@ -523,12 +523,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 10d47111-483e-438c-836b-3a4c500abeda
+      id: 186635b5-b5f8-411f-861c-516c18acfc89
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 10d47111-483e-438c-836b-3a4c500abeda
+    taskid: 186635b5-b5f8-411f-861c-516c18acfc89
     timertriggers: []
     type: title
     view: |-
@@ -553,12 +553,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9fee00c5-bad7-4729-8a9a-16ec04b6b607
+      id: 3356f8af-72c9-4908-85ed-240344c5e112
       iscommand: false
       name: Email Is Malicious
       type: title
       version: -1
-    taskid: 9fee00c5-bad7-4729-8a9a-16ec04b6b607
+    taskid: 3356f8af-72c9-4908-85ed-240344c5e112
     timertriggers: []
     type: title
     view: |-
@@ -587,12 +587,12 @@ tasks:
         Inform the organization about the threat\n3. Hunt the relevant IOCs\n4. Update
         proxies and firewalls as necessary\n5. Block the malicious sender/ domain
         in the mail-gateway "
-      id: 129a684d-ede3-4eb7-8853-522d5ed34059
+      id: eb8bc6e4-e4b7-4e25-8009-be4ab3d8a660
       iscommand: false
       name: Manually remediate  the incident
       type: regular
       version: -1
-    taskid: 129a684d-ede3-4eb7-8853-522d5ed34059
+    taskid: eb8bc6e4-e4b7-4e25-8009-be4ab3d8a660
     timertriggers: []
     type: regular
     view: |-
@@ -632,12 +632,12 @@ tasks:
     task:
       brand: ""
       description: Checks whether the "SearchAndDelete" playbook input is set to True.
-      id: 06da6aea-c535-42b3-8d6e-a190779eaf73
+      id: 18433899-25c0-49aa-8377-28da15549b24
       iscommand: false
       name: Should emails be searched and deleted?
       type: condition
       version: -1
-    taskid: 06da6aea-c535-42b3-8d6e-a190779eaf73
+    taskid: 18433899-25c0-49aa-8377-28da15549b24
     timertriggers: []
     type: condition
     view: |-
@@ -662,12 +662,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e12aa263-9665-49f4-8e1f-ff1bc7208dd9
+      id: 03ab3722-e103-4786-8c3c-63e2df680005
       iscommand: false
       name: Start Detection Timer
       type: title
       version: -1
-    taskid: e12aa263-9665-49f4-8e1f-ff1bc7208dd9
+    taskid: 03ab3722-e103-4786-8c3c-63e2df680005
     timertriggers:
     - action: start
       fieldname: detectionsla
@@ -694,12 +694,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 34081a27-e3e8-4746-8197-4b8d365e4b5e
+      id: 2b5c9056-1b77-4edd-81f1-e2d6f857761b
       iscommand: false
       name: Stop Remediation Timer
       type: title
       version: -1
-    taskid: 34081a27-e3e8-4746-8197-4b8d365e4b5e
+    taskid: 2b5c9056-1b77-4edd-81f1-e2d6f857761b
     timertriggers:
     - action: stop
       fieldname: remediationsla
@@ -726,12 +726,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9e2cac19-ecd1-42f1-8d76-e1a72edf2d34
+      id: fd18cd5d-be38-472b-88ba-355790e9669f
       iscommand: false
       name: Indicator Enrichment & Detonation
       type: title
       version: -1
-    taskid: 9e2cac19-ecd1-42f1-8d76-e1a72edf2d34
+    taskid: fd18cd5d-be38-472b-88ba-355790e9669f
     timertriggers: []
     type: title
     view: |-
@@ -756,13 +756,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 80df9c86-8a20-47f2-8dbc-342920aa0927
+      id: 7d3c40a3-228f-461a-8938-7080d1ee54ec
       iscommand: false
       name: Extract Indicators From File - Generic v2
       playbookId: Extract Indicators From File - Generic v2
       type: playbook
       version: -1
-    taskid: 80df9c86-8a20-47f2-8dbc-342920aa0927
+    taskid: 7d3c40a3-228f-461a-8938-7080d1ee54ec
     timertriggers: []
     type: playbook
     view: |-
@@ -787,12 +787,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b70d4267-dd4c-489b-8ac2-d8eb6a00d433
+      id: 987d80e1-8a03-4416-8024-adf6e8fc9ff0
       iscommand: false
       name: Investigation
       type: title
       version: -1
-    taskid: b70d4267-dd4c-489b-8ac2-d8eb6a00d433
+    taskid: 987d80e1-8a03-4416-8024-adf6e8fc9ff0
     timertriggers: []
     type: title
     view: |-
@@ -841,12 +841,12 @@ tasks:
       description: Whether the email should be authenticated using DKIM, SPF and DMARC.
         This checks whether "AuthenticateEmail" output is set to "True" and whether
         there are headers from an email to authenticate.
-      id: db5a9195-84d9-4b8d-883a-e1fcc10320d2
+      id: 3782e58d-90ba-4165-8854-41663cf63715
       iscommand: false
       name: Should the email be authenticated?
       type: condition
       version: -1
-    taskid: db5a9195-84d9-4b8d-883a-e1fcc10320d2
+    taskid: 3782e58d-90ba-4165-8854-41663cf63715
     timertriggers: []
     type: condition
     view: |-
@@ -871,12 +871,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: db0ef7c9-8b61-4db0-8c97-14455cc16857
+      id: e8e4f1a8-27c9-45c7-8ead-8b29bf3386dd
       iscommand: false
       name: Email Authenticity Check
       type: title
       version: -1
-    taskid: db0ef7c9-8b61-4db0-8c97-14455cc16857
+    taskid: e8e4f1a8-27c9-45c7-8ead-8b29bf3386dd
     timertriggers: []
     type: title
     view: |-
@@ -911,13 +911,13 @@ tasks:
       brand: ""
       description: Checks the authenticity of an email based on the email's SPF, DMARC,
         and DKIM.
-      id: 2a67a42f-30f2-46ce-85d1-3256b04c6ec8
+      id: 4977734b-a5f9-43b6-8f2f-b80d749ffe2f
       iscommand: false
       name: Authenticate email
       script: CheckEmailAuthenticity
       type: regular
       version: -1
-    taskid: 2a67a42f-30f2-46ce-85d1-3256b04c6ec8
+    taskid: 4977734b-a5f9-43b6-8f2f-b80d749ffe2f
     timertriggers: []
     type: regular
     view: |-
@@ -987,13 +987,13 @@ tasks:
       brand: Builtin
       description: Save the verdict, regarding the authenticity of the email, in an
         incident field.
-      id: d214326e-dd20-41da-8386-3eb56537682a
+      id: 10a0a547-f8d1-4648-8e0d-c0f29e6fd93c
       iscommand: true
       name: Save authenticity check result to incident field
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: d214326e-dd20-41da-8386-3eb56537682a
+    taskid: 10a0a547-f8d1-4648-8e0d-c0f29e6fd93c
     timertriggers: []
     type: regular
     view: |-
@@ -1059,13 +1059,13 @@ tasks:
         - Email authenticity
         - Current incident severity
         - Microsoft Headers
-      id: 17a5d58b-43ee-40bd-8c23-b5fc9d2c437e
+      id: fd42e12e-6a8d-4900-8d18-4bebf5b307c5
       iscommand: false
       name: Calculate Severity - Generic v2
       playbookId: Calculate Severity - Generic v2
       type: playbook
       version: -1
-    taskid: 17a5d58b-43ee-40bd-8c23-b5fc9d2c437e
+    taskid: fd42e12e-6a8d-4900-8d18-4bebf5b307c5
     timertriggers: []
     type: playbook
     view: |-
@@ -1097,13 +1097,13 @@ tasks:
       brand: Builtin
       description: Saves the email address of the reporter of the email, in an incident
         field.
-      id: 0c434853-368b-410d-8e6f-3860c7ad785c
+      id: 8d5b07cb-630f-4ba7-8fd9-ade6535e1c59
       iscommand: true
       name: Save reporter email address in field
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 0c434853-368b-410d-8e6f-3860c7ad785c
+    taskid: 8d5b07cb-630f-4ba7-8fd9-ade6535e1c59
     timertriggers: []
     type: regular
     view: |-
@@ -1218,13 +1218,13 @@ tasks:
     task:
       brand: ""
       description: Enrich entities using one or more integrations
-      id: edf701a3-7593-4415-8191-1354e4dddbb3
+      id: 20469fcd-c536-4d02-81d3-61d4181a6542
       iscommand: false
       name: Entity Enrichment - Phishing v2
       playbookId: Entity Enrichment - Phishing v2
       type: playbook
       version: -1
-    taskid: edf701a3-7593-4415-8191-1354e4dddbb3
+    taskid: 20469fcd-c536-4d02-81d3-61d4181a6542
     timertriggers: []
     type: playbook
     view: |-
@@ -1249,12 +1249,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e775a211-8c9b-459c-8bd6-d075a1ad5685
+      id: 6d50beb3-068d-4602-8b8b-a3b452444a05
       iscommand: false
       name: Search & Delete Email
       type: title
       version: -1
-    taskid: e775a211-8c9b-459c-8bd6-d075a1ad5685
+    taskid: 6d50beb3-068d-4602-8b8b-a3b452444a05
     timertriggers: []
     type: title
     view: |-
@@ -1279,12 +1279,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c9c9c95b-5f57-4898-8176-41222a7eec69
+      id: a587ae55-20a7-4268-8621-0108f9c0fd21
       iscommand: false
       name: Manual Remediation
       type: title
       version: -1
-    taskid: c9c9c95b-5f57-4898-8176-41222a7eec69
+    taskid: a587ae55-20a7-4268-8621-0108f9c0fd21
     timertriggers: []
     type: title
     view: |-
@@ -1315,13 +1315,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.extract.indicators
-      id: cd1b20e3-f578-4f49-8ab6-fcb0cda7e8b8
+      id: cd401221-8931-4e1c-8cb2-4548e43f6f5b
       iscommand: true
       name: Extract the email address of the reporting user
       script: Builtin|||extractIndicators
       type: regular
       version: -1
-    taskid: cd1b20e3-f578-4f49-8ab6-fcb0cda7e8b8
+    taskid: cd401221-8931-4e1c-8cb2-4548e43f6f5b
     timertriggers: []
     type: regular
     view: |-
@@ -1356,13 +1356,13 @@ tasks:
       description: |-
         A script to generate investigation summary report in an automated way
         Can be used in post-processing flow as well.
-      id: 8ccdae2a-6498-4573-8d21-f51921aa2eb2
+      id: 9e35452f-dd9c-468f-83fe-2e84786fc0f1
       iscommand: false
       name: Generate Incident Report
       script: GenerateInvestigationSummaryReport
       type: regular
       version: -1
-    taskid: 8ccdae2a-6498-4573-8d21-f51921aa2eb2
+    taskid: 9e35452f-dd9c-468f-83fe-2e84786fc0f1
     timertriggers: []
     type: regular
     view: |-
@@ -1400,13 +1400,13 @@ tasks:
       description: Send a team member or channel a question with predefined response
         options on Microsoft Teams. The response can be used to close a task (might
         be conditional) in a playbook.
-      id: 6dfd9ec8-9b67-4f22-8816-fafd57a8f991
+      id: b606565b-ecc6-4c8c-88e5-934485a3f316
       iscommand: false
       name: Teams Ask For Approval
       script: MicrosoftTeamsAsk
       type: regular
       version: -1
-    taskid: 6dfd9ec8-9b67-4f22-8816-fafd57a8f991
+    taskid: b606565b-ecc6-4c8c-88e5-934485a3f316
     timertriggers: []
     type: regular
     view: |-
@@ -1444,12 +1444,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a36d3495-56ff-41b5-81df-5d0f2ac7a9b7
+      id: 7299bf14-51bf-4522-8d1b-b3795c0c8c2a
       iscommand: false
       name: Determine if malicious or not?
       type: condition
       version: -1
-    taskid: a36d3495-56ff-41b5-81df-5d0f2ac7a9b7
+    taskid: 7299bf14-51bf-4522-8d1b-b3795c0c8c2a
     timertriggers: []
     type: condition
     view: |-
