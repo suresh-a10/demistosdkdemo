@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2cd2c5ab-9ec0-439c-8274-c7156361686d
+      id: 05708ff8-24e1-4c6b-8940-0d1336a62d6d
       iscommand: false
       name: ""
       version: -1
-    taskid: 2cd2c5ab-9ec0-439c-8274-c7156361686d
+    taskid: 05708ff8-24e1-4c6b-8940-0d1336a62d6d
     timertriggers: []
     type: start
     view: |-
@@ -125,12 +125,12 @@ tasks:
     task:
       brand: ""
       description: Sends an email using Microsoft Graph.
-      id: 753a7994-f0e8-449a-8ba3-3be105adaa0f
+      id: a2eff896-fa93-47db-8d26-2511f1fa7268
       iscommand: false
       name: task A
       type: collection
       version: -1
-    taskid: 753a7994-f0e8-449a-8ba3-3be105adaa0f
+    taskid: a2eff896-fa93-47db-8d26-2511f1fa7268
     timertriggers: []
     type: collection
     view: |-
