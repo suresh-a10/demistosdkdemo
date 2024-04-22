@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 08daa8df-c09e-4044-80ba-86fba0f9716c
+      id: 18733505-a0c5-4435-8d03-b04dc32957ac
       iscommand: false
       name: ""
       version: -1
-    taskid: 08daa8df-c09e-4044-80ba-86fba0f9716c
+    taskid: 18733505-a0c5-4435-8d03-b04dc32957ac
     timertriggers: []
     type: start
     view: |-
@@ -63,13 +63,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: 5571861f-e723-402a-8e68-598fdf95fabf
+      id: e33746ee-0d51-4f1a-8475-8ef79d10d391
       iscommand: true
       name: close incident
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 5571861f-e723-402a-8e68-598fdf95fabf
+    taskid: e33746ee-0d51-4f1a-8475-8ef79d10d391
     timertriggers: []
     type: regular
     view: |-
@@ -129,12 +129,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7fb2fb71-06b5-4ad0-8b5c-825cff129352
+      id: c19c8976-8f29-4b1e-8ef8-d28cddde8166
       iscommand: false
       name: Incident Closure
       type: collection
       version: -1
-    taskid: 7fb2fb71-06b5-4ad0-8b5c-825cff129352
+    taskid: c19c8976-8f29-4b1e-8ef8-d28cddde8166
     timertriggers: []
     type: collection
     view: |-
