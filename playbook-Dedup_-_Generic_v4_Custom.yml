@@ -133,11 +133,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 57e8f4b4-4055-4eb5-8f24-65b2f8a9853d
+      id: db37c478-ddb6-415e-83d5-5a3c943438d0
       iscommand: false
       name: ""
       version: -1
-    taskid: 57e8f4b4-4055-4eb5-8f24-65b2f8a9853d
+    taskid: db37c478-ddb6-415e-83d5-5a3c943438d0
     timertriggers: []
     type: start
     view: |-
@@ -183,13 +183,13 @@ tasks:
       brand: ""
       description: Find past similar incidents based on similar incident fields. Includes
         an option to also display indicator similarity.
-      id: 0ab5642b-677f-4f43-8fc6-a027c475b597
+      id: 064cfdd3-1f36-410b-8af2-4d7e67f27ef2
       iscommand: false
       name: Find Similar Incidents By Fields
       script: DBotFindSimilarIncidents
       type: regular
       version: -1
-    taskid: 0ab5642b-677f-4f43-8fc6-a027c475b597
+    taskid: 064cfdd3-1f36-410b-8af2-4d7e67f27ef2
     timertriggers: []
     type: regular
     view: |-
@@ -236,12 +236,12 @@ tasks:
     task:
       brand: ""
       description: Checks if the DBotFindSimilarIncidents task returned an output.
-      id: c2ed1097-f848-497b-85be-dab11755a146
+      id: 35739e7b-bc49-47a8-8034-a9a28d84200b
       iscommand: false
       name: Are There Any Similar Incidents?
       type: condition
       version: -1
-    taskid: c2ed1097-f848-497b-85be-dab11755a146
+    taskid: 35739e7b-bc49-47a8-8034-a9a28d84200b
     timertriggers: []
     type: condition
     view: |-
@@ -263,12 +263,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 99e968be-dd76-4cf8-819b-4a9ee7bdd632
+      id: ad789d4f-9228-4189-8044-c4af5ece1479
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 99e968be-dd76-4cf8-819b-4a9ee7bdd632
+    taskid: ad789d4f-9228-4189-8044-c4af5ece1479
     timertriggers: []
     type: title
     view: |-
@@ -312,13 +312,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.linkIncidents
-      id: e6129aab-eb2a-4c92-81df-d7b08de89eb1
+      id: 70a52b84-3a24-41d8-8fd2-e8d477f260ee
       iscommand: true
       name: Link similar incident
       script: Builtin|||linkIncidents
       type: regular
       version: -1
-    taskid: e6129aab-eb2a-4c92-81df-d7b08de89eb1
+    taskid: 70a52b84-3a24-41d8-8fd2-e8d477f260ee
     timertriggers: []
     type: regular
     view: |-
@@ -343,12 +343,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 418747d0-2d33-4ca5-8640-ccc58c468895
+      id: ee8f826d-9187-48a3-848b-6d04cc8669b6
       iscommand: false
       name: Similar Incident Found
       type: title
       version: -1
-    taskid: 418747d0-2d33-4ca5-8640-ccc58c468895
+    taskid: ee8f826d-9187-48a3-848b-6d04cc8669b6
     timertriggers: []
     type: title
     view: |-
@@ -380,13 +380,13 @@ tasks:
       brand: Builtin
       description: 'Close the similar incident with a similarity score greater than
         or equal to the CloseSimilar value. '
-      id: 174c008a-b5df-4e49-8674-dd250c1f93b5
+      id: efd6b551-25fb-4c83-89c1-26ef4bddf3a6
       iscommand: true
       name: Close Incident
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 174c008a-b5df-4e49-8674-dd250c1f93b5
+    taskid: efd6b551-25fb-4c83-89c1-26ef4bddf3a6
     timertriggers: []
     type: regular
     view: |-
@@ -439,12 +439,12 @@ tasks:
     task:
       brand: ""
       description: Define how to handle a similar incident.
-      id: 6d22488c-9d7b-455c-879e-55c111c1a2ae
+      id: 9d7462d2-2d50-4873-8f7c-2bf125178b60
       iscommand: false
       name: Handle Similar Incident
       type: condition
       version: -1
-    taskid: 6d22488c-9d7b-455c-879e-55c111c1a2ae
+    taskid: 9d7462d2-2d50-4873-8f7c-2bf125178b60
     timertriggers: []
     type: condition
     view: |-
@@ -484,12 +484,12 @@ tasks:
     task:
       brand: ""
       description: Do you want to close any similar incidents?
-      id: aaa82d26-4929-4d7a-84df-579b144b94f5
+      id: cf2085a4-e4e5-445d-8bd0-6d0793448614
       iscommand: false
       name: Close Incident?
       type: condition
       version: -1
-    taskid: aaa82d26-4929-4d7a-84df-579b144b94f5
+    taskid: cf2085a4-e4e5-445d-8bd0-6d0793448614
     timertriggers: []
     type: condition
     view: |-
@@ -526,13 +526,13 @@ tasks:
     task:
       brand: ""
       description: Finds similar incidents based on indicator similarity.
-      id: b92ede19-362a-432b-8d47-a63c5f6de883
+      id: ad9f1c5c-c5d2-4038-87f6-a19721973b0c
       iscommand: false
       name: Find Similar Incidents by Indicators
       script: DBotFindSimilarIncidentsByIndicators
       type: regular
       version: -1
-    taskid: b92ede19-362a-432b-8d47-a63c5f6de883
+    taskid: ad9f1c5c-c5d2-4038-87f6-a19721973b0c
     timertriggers: []
     type: regular
     view: |-
@@ -592,12 +592,12 @@ tasks:
       brand: ""
       description: Define how you prefer to identify similarity using playbook input
         - 'method'
-      id: bebc215b-9416-4792-82cd-704782b8d207
+      id: a7869d0a-f187-4ab6-81d6-d8234491a71a
       iscommand: false
       name: Find Similar Incidents By?
       type: condition
       version: -1
-    taskid: bebc215b-9416-4792-82cd-704782b8d207
+    taskid: a7869d0a-f187-4ab6-81d6-d8234491a71a
     timertriggers: []
     type: condition
     view: |-
@@ -641,12 +641,12 @@ tasks:
       brand: ""
       description: Do you want to identify similar incidents by indicators? If yes,
         the 'method' input should contain "indicator".
-      id: 074d32e2-1d91-4225-84d1-a5a1fd42de04
+      id: 9b7a11c1-a02d-4123-82fc-149179a9dd64
       iscommand: false
       name: Also Find Similarity By Indicators?
       type: condition
       version: -1
-    taskid: 074d32e2-1d91-4225-84d1-a5a1fd42de04
+    taskid: 9b7a11c1-a02d-4123-82fc-149179a9dd64
     timertriggers: []
     type: condition
     view: |-
@@ -683,12 +683,12 @@ tasks:
     task:
       brand: ""
       description: Checks if the CloseSimilar input was defined.
-      id: 8bd8a25a-823c-4c57-8d68-356035e97311
+      id: 72885f56-f4be-4963-8709-a1ba9074cb43
       iscommand: false
       name: A closer percentage was provided?
       type: condition
       version: -1
-    taskid: 8bd8a25a-823c-4c57-8d68-356035e97311
+    taskid: 72885f56-f4be-4963-8709-a1ba9074cb43
     timertriggers: []
     type: condition
     view: |-
@@ -739,12 +739,12 @@ tasks:
     task:
       brand: ""
       description: Checks if there are similar incidents by fields.
-      id: b38be268-7155-445e-8f1b-4ed28aa178c3
+      id: bd6b3ad4-71d9-4a8b-88fd-9483770252ce
       iscommand: false
       name: Are There Similar Incidents by Fields?
       type: condition
       version: -1
-    taskid: b38be268-7155-445e-8f1b-4ed28aa178c3
+    taskid: bd6b3ad4-71d9-4a8b-88fd-9483770252ce
     timertriggers: []
     type: condition
     view: |-
@@ -776,13 +776,13 @@ tasks:
       brand: Builtin
       description: Close the similar incident with a similarity score greater than
         or equal to the CloseSimilar value.
-      id: 4aa07278-880e-45a9-8b40-fea8676eb248
+      id: 1bd22f89-c646-4e42-8f47-798827b81066
       iscommand: true
       name: Close incident
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 4aa07278-880e-45a9-8b40-fea8676eb248
+    taskid: 1bd22f89-c646-4e42-8f47-798827b81066
     timertriggers: []
     type: regular
     view: |-
@@ -833,12 +833,12 @@ tasks:
     task:
       brand: ""
       description: Checks if there are similar incidents by indicators.
-      id: 002478d2-31f3-4859-899b-d4948ed93e39
+      id: 933626ec-a64b-4538-8cea-836291889ee2
       iscommand: false
       name: Are There Similar Incidents by Indicators?
       type: condition
       version: -1
-    taskid: 002478d2-31f3-4859-899b-d4948ed93e39
+    taskid: 933626ec-a64b-4538-8cea-836291889ee2
     timertriggers: []
     type: condition
     view: |-
