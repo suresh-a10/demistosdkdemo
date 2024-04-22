@@ -37,11 +37,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: cbdb68ea-405f-4f40-83f9-0d24ba32d779
+      id: d0293451-b041-444d-8429-f4424812b1be
       iscommand: false
       name: ""
       version: -1
-    taskid: cbdb68ea-405f-4f40-83f9-0d24ba32d779
+    taskid: d0293451-b041-444d-8429-f4424812b1be
     timertriggers: []
     type: start
     view: |-
@@ -75,13 +75,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: c2db3bb0-d807-4f2d-8702-04934a879a1a
+      id: 22e84a93-697e-496e-892d-3ebd4adf6ad8
       iscommand: false
       name: search incident with violation id
       script: SearchIncidentsV2
       type: regular
       version: -1
-    taskid: c2db3bb0-d807-4f2d-8702-04934a879a1a
+    taskid: 22e84a93-697e-496e-892d-3ebd4adf6ad8
     timertriggers: []
     type: regular
     view: |-
@@ -150,13 +150,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 37fb5107-8f60-4a25-8708-6ed3f4c23d95
+      id: c96e8ba5-b3ea-48ca-87a2-6dfb4ed8b269
       iscommand: true
       name: update the incident
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 37fb5107-8f60-4a25-8708-6ed3f4c23d95
+    taskid: c96e8ba5-b3ea-48ca-87a2-6dfb4ed8b269
     timertriggers: []
     type: regular
     view: |-
@@ -185,13 +185,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: 238e7cf2-f01c-48be-82e2-4cfafa57adcd
+      id: 958d5e3a-9cd9-451b-8ce1-6933a47e353c
       iscommand: true
       name: Close investigation
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 238e7cf2-f01c-48be-82e2-4cfafa57adcd
+    taskid: 958d5e3a-9cd9-451b-8ce1-6933a47e353c
     timertriggers: []
     type: regular
     view: |-
@@ -222,13 +222,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: 69437949-fd51-4f05-8d32-f560644596fc
+      id: 64f75407-2771-434b-8017-e057ffb4a24b
       iscommand: false
       name: Delete Context Key FoundIncidents
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 69437949-fd51-4f05-8d32-f560644596fc
+    taskid: 64f75407-2771-434b-8017-e057ffb4a24b
     timertriggers: []
     type: regular
     view: |-
