@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 43271c59-ead2-45ef-8830-488678703d20
+      id: aa9794fb-52c9-415d-8eb9-60eeb473ff18
       iscommand: false
       name: ""
       version: -1
-    taskid: 43271c59-ead2-45ef-8830-488678703d20
+    taskid: aa9794fb-52c9-415d-8eb9-60eeb473ff18
     timertriggers: []
     type: start
     view: |-
@@ -65,13 +65,13 @@ tasks:
     task:
       brand: ""
       description: Parses a list by header and value.
-      id: 5d0c6857-d466-4074-8806-1fffd40a00d6
+      id: 19d2edbc-3a6f-460c-872f-90d98cd6cd2a
       iscommand: false
       name: get email address
       script: GetListRow
       type: regular
       version: -1
-    taskid: 5d0c6857-d466-4074-8806-1fffd40a00d6
+    taskid: 19d2edbc-3a6f-460c-872f-90d98cd6cd2a
     timertriggers: []
     type: regular
     view: |-
