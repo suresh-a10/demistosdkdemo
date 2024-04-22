@@ -37,11 +37,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b2dc7b57-dc0c-4449-8735-43e3d90f4d2a
+      id: 16e98619-e263-48fd-8d13-dedafe1c863b
       iscommand: false
       name: ""
       version: -1
-    taskid: b2dc7b57-dc0c-4449-8735-43e3d90f4d2a
+    taskid: 16e98619-e263-48fd-8d13-dedafe1c863b
     timertriggers: []
     type: start
     view: |-
@@ -71,13 +71,13 @@ tasks:
       brand: ""
       description: Use this automation to check for validity of your SSL certificate
         and get the time until expiration.
-      id: 3df9c66e-8f51-4f68-8dcc-ad6dd0c65cef
+      id: 27ee5283-03d8-4f9f-8354-d0a4b07b3d07
       iscommand: false
       name: verify the SSL
       script: SSLVerifier
       type: regular
       version: -1
-    taskid: 3df9c66e-8f51-4f68-8dcc-ad6dd0c65cef
+    taskid: 27ee5283-03d8-4f9f-8354-d0a4b07b3d07
     timertriggers: []
     type: regular
     view: |-
