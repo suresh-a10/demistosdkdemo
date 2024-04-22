@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 564c37b1-23e9-4801-8848-0c10ce250995
+      id: 6ce00a95-1aa0-4ebf-8158-913ca3c47352
       iscommand: false
       name: ""
       version: -1
-    taskid: 564c37b1-23e9-4801-8848-0c10ce250995
+    taskid: 6ce00a95-1aa0-4ebf-8158-913ca3c47352
     timertriggers: []
     type: start
     view: |-
@@ -59,12 +59,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: da17b8b1-6ca3-4893-8487-c00897ae57eb
+      id: f4a84b74-b5d1-44d6-81f0-56fde51d6ddd
       iscommand: false
       name: Extract IOCs
       type: regular
       version: -1
-    taskid: da17b8b1-6ca3-4893-8487-c00897ae57eb
+    taskid: f4a84b74-b5d1-44d6-81f0-56fde51d6ddd
     timertriggers: []
     type: regular
     view: |-
@@ -98,13 +98,13 @@ tasks:
       description: |-
         checks if left side is in range of right side (from,to anotation)
         e.g. - InRange left=4right=1,8 will return true.
-      id: 09a76f1d-de21-410b-8388-ce0b1854db11
+      id: 0cf2fde2-06cc-4270-8e32-a0642ce89f31
       iscommand: false
       name: Exclude any Internal IP or Host
       script: InRange
       type: regular
       version: -1
-    taskid: 09a76f1d-de21-410b-8388-ce0b1854db11
+    taskid: 0cf2fde2-06cc-4270-8e32-a0642ce89f31
     timertriggers: []
     type: regular
     view: |-
@@ -136,13 +136,13 @@ tasks:
       brand: ""
       description: Check if a given value exists in the context. Will return 'no'
         for empty empty arrays. To be used mostly with DQ and selectors.
-      id: f36a77fb-2029-43a5-8077-36cb768b55a6
+      id: 8c12a933-a395-4d55-8112-f1469310a9b6
       iscommand: false
       name: Is IP Present
       script: Exists
       type: condition
       version: -1
-    taskid: f36a77fb-2029-43a5-8077-36cb768b55a6
+    taskid: 8c12a933-a395-4d55-8112-f1469310a9b6
     timertriggers: []
     type: condition
     view: |-
@@ -171,13 +171,13 @@ tasks:
     task:
       brand: ""
       description: Provides data enrichment for ips.
-      id: 58a012cd-c7d8-4050-8558-4187c95ed30a
+      id: 0ef31828-87e7-4348-8ec3-f52b264c3ec6
       iscommand: true
       name: IP Reputation Check
       script: '|||ip'
       type: regular
       version: -1
-    taskid: 58a012cd-c7d8-4050-8558-4187c95ed30a
+    taskid: 0ef31828-87e7-4348-8ec3-f52b264c3ec6
     timertriggers: []
     type: regular
     view: |-
@@ -203,13 +203,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: b6c49e0d-705d-4170-8f74-5a8f563facd5
+      id: 9f212f59-099f-40fe-8424-becc6259a9a2
       iscommand: true
       name: End Investigation
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: b6c49e0d-705d-4170-8f74-5a8f563facd5
+    taskid: 9f212f59-099f-40fe-8424-becc6259a9a2
     timertriggers: []
     type: regular
     view: |-
@@ -238,13 +238,13 @@ tasks:
     task:
       brand: ""
       description: Checks the reputation of a URL.
-      id: 28e7bcf1-ae00-4964-86c1-7d655f9ed457
+      id: 8822982a-2c20-4ccd-8dd5-0a73e32c0db6
       iscommand: true
       name: Check If URL is present
       script: '|||url'
       type: regular
       version: -1
-    taskid: 28e7bcf1-ae00-4964-86c1-7d655f9ed457
+    taskid: 8822982a-2c20-4ccd-8dd5-0a73e32c0db6
     timertriggers: []
     type: regular
     view: |-
@@ -279,13 +279,13 @@ tasks:
     task:
       brand: ""
       description: Sends an email.
-      id: cc8a17c7-28ef-4806-86d9-bfaadde6add9
+      id: 1e475eaf-96c0-437e-888c-c7949c67cc77
       iscommand: true
       name: Untitled Task
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: cc8a17c7-28ef-4806-86d9-bfaadde6add9
+    taskid: 1e475eaf-96c0-437e-888c-c7949c67cc77
     timertriggers: []
     type: regular
     view: |-
