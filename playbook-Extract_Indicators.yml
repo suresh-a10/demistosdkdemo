@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b42cf7bc-2316-4c2d-8191-66f9f3d191ba
+      id: 6b9bc64a-9878-4118-803e-cd0036825dfe
       iscommand: false
       name: ""
       version: -1
-    taskid: b42cf7bc-2316-4c2d-8191-66f9f3d191ba
+    taskid: 6b9bc64a-9878-4118-803e-cd0036825dfe
     timertriggers: []
     type: start
     view: |-
@@ -61,13 +61,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.extract.indicators
-      id: deb4d226-6493-4c91-8a51-7f56b84c1360
+      id: f0a87447-86d9-4eaf-8dff-be49d012eaa7
       iscommand: true
       name: Extract Indicators
       script: Builtin|||extractIndicators
       type: regular
       version: -1
-    taskid: deb4d226-6493-4c91-8a51-7f56b84c1360
+    taskid: f0a87447-86d9-4eaf-8dff-be49d012eaa7
     timertriggers: []
     type: regular
     view: |-
