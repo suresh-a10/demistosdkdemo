@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f9dc3886-1acf-4d6d-8e77-682dcf5661c7
+      id: 12e9e9b4-829d-4a52-86db-b289493ae057
       iscommand: false
       name: ""
       version: -1
-    taskid: f9dc3886-1acf-4d6d-8e77-682dcf5661c7
+    taskid: 12e9e9b4-829d-4a52-86db-b289493ae057
     timertriggers: []
     type: start
     view: |-
@@ -74,13 +74,13 @@ tasks:
       brand: ""
       description: Ask a user a question via email and process the reply directly
         into the investigation.
-      id: 27ee4e89-3e20-4b53-8980-366ee96e2af8
+      id: f596df51-ce8f-4e20-8bff-f180fd7740de
       iscommand: false
       name: EmailUser
       script: EmailAskUser
       type: regular
       version: -1
-    taskid: 27ee4e89-3e20-4b53-8980-366ee96e2af8
+    taskid: f596df51-ce8f-4e20-8bff-f180fd7740de
     timertriggers: []
     type: regular
     view: |-
@@ -116,13 +116,13 @@ tasks:
         textual response line of the provided entry that contains the reply body.
         Use ${lastCompletedTaskEntries} to analyze the previous playbook task containing
         the user's reply.
-      id: a94f6c11-30b3-48d3-8cb3-70b7c1af34ba
+      id: acea228b-490f-41af-8420-9ff5301f6898
       iscommand: false
       name: Validating User response
       script: EmailAskUserResponse
       type: condition
       version: -1
-    taskid: a94f6c11-30b3-48d3-8cb3-70b7c1af34ba
+    taskid: acea228b-490f-41af-8420-9ff5301f6898
     timertriggers: []
     type: condition
     view: |-
@@ -151,13 +151,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 1be0f826-22ac-4b13-8236-e289c2fb83a6
+      id: 3db28c82-2a14-4114-81a6-df9c8ba24656
       iscommand: false
       name: Print Yes
       script: Print
       type: regular
       version: -1
-    taskid: 1be0f826-22ac-4b13-8236-e289c2fb83a6
+    taskid: 3db28c82-2a14-4114-81a6-df9c8ba24656
     timertriggers: []
     type: regular
     view: |-
@@ -183,13 +183,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 75427d74-a608-4163-8e1e-d1b49ca0d120
+      id: c2773d3c-8e84-4f80-8067-0aa4912b9ebe
       iscommand: false
       name: Print No
       script: Print
       type: regular
       version: -1
-    taskid: 75427d74-a608-4163-8e1e-d1b49ca0d120
+    taskid: c2773d3c-8e84-4f80-8067-0aa4912b9ebe
     timertriggers: []
     type: regular
     view: |-
@@ -214,14 +214,14 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0a75f204-d34c-4fe1-8762-1b27cc7b8042
+      id: 1754eb1b-400b-4127-851e-5fab6409c40d
       iscommand: false
       name: User Response
       tags:
       - response
       type: regular
       version: -1
-    taskid: 0a75f204-d34c-4fe1-8762-1b27cc7b8042
+    taskid: 1754eb1b-400b-4127-851e-5fab6409c40d
     timertriggers: []
     type: regular
     view: |-
@@ -247,13 +247,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 3e2b7bb5-d641-4dc7-8e66-cf0b7b5f85de
+      id: 7feaa4ee-2972-4889-8e76-4cb39ba1b684
       iscommand: false
       name: print user response
       script: Print
       type: regular
       version: -1
-    taskid: 3e2b7bb5-d641-4dc7-8e66-cf0b7b5f85de
+    taskid: 7feaa4ee-2972-4889-8e76-4cb39ba1b684
     timertriggers: []
     type: regular
     view: |-
@@ -279,7 +279,7 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds
-      id: 5b1a0e56-50d6-4f8c-8b9b-a19bad7e1321
+      id: 0ef5935e-b869-4861-8b15-30c6e6cb80fc
       iscommand: false
       name: Sleep
       script: Sleep
@@ -287,7 +287,7 @@ tasks:
       - response
       type: regular
       version: -1
-    taskid: 5b1a0e56-50d6-4f8c-8b9b-a19bad7e1321
+    taskid: 0ef5935e-b869-4861-8b15-30c6e6cb80fc
     timertriggers: []
     type: regular
     view: |-
