@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1d48b54b-a523-4995-8477-970dba179d76
+      id: 59c51238-7306-4396-8bb5-95ea64e8a6b7
       iscommand: false
       name: ""
       version: -1
-    taskid: 1d48b54b-a523-4995-8477-970dba179d76
+    taskid: 59c51238-7306-4396-8bb5-95ea64e8a6b7
     timertriggers: []
     type: start
     view: |-
@@ -57,13 +57,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0ec1d5a0-2cbc-4233-82c1-7625b16bb1ef
+      id: a24e1c70-5e5c-47e6-8b78-f6762f515d38
       iscommand: false
       name: Sendmail
       playbookId: 5d8493d5-65bc-4dc1-8b8a-4aef68a19d41
       type: playbook
       version: -1
-    taskid: 0ec1d5a0-2cbc-4233-82c1-7625b16bb1ef
+    taskid: a24e1c70-5e5c-47e6-8b78-f6762f515d38
     timertriggers: []
     type: playbook
     view: |-
@@ -92,13 +92,13 @@ tasks:
     task:
       brand: ""
       description: Sends an email.
-      id: 55e170a4-8bf8-41fb-8c00-9574a5cda210
+      id: 67905818-c148-4972-87db-e292177363c4
       iscommand: true
       name: Sendmail in mainplaybook
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: 55e170a4-8bf8-41fb-8c00-9574a5cda210
+    taskid: 67905818-c148-4972-87db-e292177363c4
     timertriggers: []
     type: regular
     view: |-
