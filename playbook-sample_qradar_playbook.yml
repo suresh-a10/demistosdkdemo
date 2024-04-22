@@ -36,11 +36,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9f391347-de71-4582-8d05-0293da3d944f
+      id: 28229dc5-03cd-4e75-8f4d-f9866ef59570
       iscommand: false
       name: ""
       version: -1
-    taskid: 9f391347-de71-4582-8d05-0293da3d944f
+    taskid: 28229dc5-03cd-4e75-8f4d-f9866ef59570
     timertriggers: []
     type: start
     view: |-
@@ -128,13 +128,13 @@ tasks:
       brand: ""
       description: This playbook runs a QRadar query and return its results to the
         context.
-      id: 46294ca7-9c95-442d-820f-ca9ca81e82f1
+      id: 9da047ee-fadb-4dca-8aef-b8c6822bafa4
       iscommand: false
       name: QRadarFullSearch
       playbookId: QRadarFullSearch
       type: playbook
       version: -1
-    taskid: 46294ca7-9c95-442d-820f-ca9ca81e82f1
+    taskid: 9da047ee-fadb-4dca-8aef-b8c6822bafa4
     timertriggers: []
     type: playbook
     view: |-
