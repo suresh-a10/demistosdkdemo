@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e99bb08a-877c-4cbe-8fd5-38dc6e6f7465
+      id: 888a6eef-69ca-4759-8619-a80e785c574d
       iscommand: false
       name: ""
       version: -1
-    taskid: e99bb08a-877c-4cbe-8fd5-38dc6e6f7465
+    taskid: 888a6eef-69ca-4759-8619-a80e785c574d
     timertriggers: []
     type: start
     view: |-
@@ -71,13 +71,13 @@ tasks:
       brand: Gmail Single User
       description: Ask a user a question via email and process the reply directly
         into the investigation.
-      id: c25efda1-e0ad-4514-8629-bb9add2cbaae
+      id: 2cb33841-b6ce-49ae-8363-bb23fc46efdd
       iscommand: false
       name: Send Email
       script: EmailAskUser
       type: regular
       version: -1
-    taskid: c25efda1-e0ad-4514-8629-bb9add2cbaae
+    taskid: 2cb33841-b6ce-49ae-8363-bb23fc46efdd
     timertriggers: []
     type: regular
     view: |-
@@ -103,13 +103,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 472f6963-f88c-47e7-8a50-4bd05882f715
+      id: 2d2ebd88-d266-4fcd-8aea-f852a41b9ff4
       iscommand: false
       name: Print
       script: Print
       type: regular
       version: -1
-    taskid: 472f6963-f88c-47e7-8a50-4bd05882f715
+    taskid: 2d2ebd88-d266-4fcd-8aea-f852a41b9ff4
     timertriggers: []
     type: regular
     view: |-
@@ -144,13 +144,13 @@ tasks:
       brand: Gmail Single User
       description: Ask a user a question via email and process the reply directly
         into the investigation.
-      id: c26d3b15-b9c0-4680-8e05-1c8d5b545c1f
+      id: a14972d4-f370-4cd3-8860-4512437e64be
       iscommand: false
       name: Send Email
       script: EmailAskUser
       type: regular
       version: -1
-    taskid: c26d3b15-b9c0-4680-8e05-1c8d5b545c1f
+    taskid: a14972d4-f370-4cd3-8860-4512437e64be
     timertriggers: []
     type: regular
     view: |-
