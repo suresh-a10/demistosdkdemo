@@ -36,11 +36,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7d77ff3c-c563-47a8-8b4e-bd3149ca619f
+      id: b8cf81b0-ba9b-4bec-8017-02de24d44c4a
       iscommand: false
       name: ""
       version: -1
-    taskid: 7d77ff3c-c563-47a8-8b4e-bd3149ca619f
+    taskid: b8cf81b0-ba9b-4bec-8017-02de24d44c4a
     timertriggers: []
     type: start
     view: |-
@@ -71,13 +71,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: e35a0433-1734-46b0-8a18-cbc48405e99b
+      id: c577030c-a9df-40df-8868-e225ffa903f2
       iscommand: false
       name: Print Data
       script: Print
       type: regular
       version: -1
-    taskid: e35a0433-1734-46b0-8a18-cbc48405e99b
+    taskid: c577030c-a9df-40df-8868-e225ffa903f2
     timertriggers: []
     type: regular
     view: |-
@@ -99,12 +99,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ae49db41-a7d8-4cd1-897c-cd3aa8e6ffa5
+      id: 1a62418f-0b53-42fe-8b35-4884395f79cf
       iscommand: false
       name: End
       type: title
       version: -1
-    taskid: ae49db41-a7d8-4cd1-897c-cd3aa8e6ffa5
+    taskid: 1a62418f-0b53-42fe-8b35-4884395f79cf
     timertriggers: []
     type: title
     view: |-
