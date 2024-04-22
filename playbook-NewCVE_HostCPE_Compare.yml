@@ -48,11 +48,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 40c5f085-364d-4816-82a3-8cc738ca6bda
+      id: 5f188bfb-2098-4713-8623-3b9806616447
       iscommand: false
       name: ""
       version: -1
-    taskid: 40c5f085-364d-4816-82a3-8cc738ca6bda
+    taskid: 5f188bfb-2098-4713-8623-3b9806616447
     timertriggers: []
     type: start
     view: |-
@@ -85,13 +85,13 @@ tasks:
     task:
       brand: ""
       description: 'Will create an array object in context from given string input '
-      id: 5ce2c4cf-b797-47a1-85a7-3fef9d97c2b4
+      id: 769a366a-210e-48c9-81af-38a3cef014e7
       iscommand: false
       name: Split CPEs
       script: CreateArray
       type: regular
       version: -1
-    taskid: 5ce2c4cf-b797-47a1-85a7-3fef9d97c2b4
+    taskid: 769a366a-210e-48c9-81af-38a3cef014e7
     timertriggers: []
     type: regular
     view: |-
@@ -127,13 +127,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a6ac43d9-d42e-458b-8cd8-77f142f55785
+      id: a4dfa01e-6309-4e63-8963-e0701fb9b66a
       iscommand: false
       name: NewCVE_PerCPE
       playbookId: 38dc80f4-946b-46d8-8e91-6e5258f39ae4
       type: playbook
       version: -1
-    taskid: a6ac43d9-d42e-458b-8cd8-77f142f55785
+    taskid: a4dfa01e-6309-4e63-8963-e0701fb9b66a
     timertriggers: []
     type: playbook
     view: |-
@@ -169,13 +169,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 47188d19-fe46-42bd-842f-0a7d69f6b0b5
+      id: 5e107180-65c4-423a-82cd-0bcd6a0020c1
       iscommand: false
       name: DeleteContext
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 47188d19-fe46-42bd-842f-0a7d69f6b0b5
+    taskid: 5e107180-65c4-423a-82cd-0bcd6a0020c1
     timertriggers: []
     type: regular
     view: |-
@@ -213,12 +213,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b9915f38-2a1f-4a18-8d3b-bbaee3cbb220
+      id: 0aabb853-4657-4f93-810e-c1a941aaaccf
       iscommand: false
       name: Host matches CPE?
       type: condition
       version: -1
-    taskid: b9915f38-2a1f-4a18-8d3b-bbaee3cbb220
+    taskid: 0aabb853-4657-4f93-810e-c1a941aaaccf
     timertriggers: []
     type: condition
     view: |-
@@ -240,12 +240,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3bfb38e5-111e-46b7-8cb7-bd7623a04c59
+      id: 5ee231ef-a9f2-4d52-83b7-2246bdb00405
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 3bfb38e5-111e-46b7-8cb7-bd7623a04c59
+    taskid: 5ee231ef-a9f2-4d52-83b7-2246bdb00405
     timertriggers: []
     type: title
     view: |-
@@ -283,13 +283,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 72c38089-28f1-4229-8b71-3b6a7d8a2e4a
+      id: 78a3e456-45aa-474c-820f-4d452a2d9a9a
       iscommand: false
       name: NewCVE_KnownCPE_Incident
       playbookId: 5cf6ba09-ae32-4f4f-8618-a52c07c82059
       type: playbook
       version: -1
-    taskid: 72c38089-28f1-4229-8b71-3b6a7d8a2e4a
+    taskid: 78a3e456-45aa-474c-820f-4d452a2d9a9a
     timertriggers: []
     type: playbook
     view: |-
