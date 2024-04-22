@@ -54,11 +54,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 26891d2e-12ed-4161-88f0-327e2fa6016d
+      id: bef5dee4-f30f-4e00-86fc-523be8f10c02
       iscommand: false
       name: ""
       version: -1
-    taskid: 26891d2e-12ed-4161-88f0-327e2fa6016d
+    taskid: bef5dee4-f30f-4e00-86fc-523be8f10c02
     timertriggers: []
     type: start
     view: |-
@@ -83,12 +83,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e0105294-ee8a-4db2-8810-918390493b82
+      id: 3e2bfd5d-fb1c-410d-83b7-b42677850b93
       iscommand: false
       name: QRadar
       type: title
       version: -1
-    taskid: e0105294-ee8a-4db2-8810-918390493b82
+    taskid: 3e2bfd5d-fb1c-410d-83b7-b42677850b93
     timertriggers: []
     type: title
     view: |-
@@ -139,12 +139,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 125d489b-7134-4d0d-8278-144aef6edde3
+      id: 0d09384d-2664-4a6e-83f2-4f6ae0e03359
       iscommand: false
       name: Is Qradar enabled?
       type: condition
       version: -1
-    taskid: 125d489b-7134-4d0d-8278-144aef6edde3
+    taskid: 0d09384d-2664-4a6e-83f2-4f6ae0e03359
     timertriggers: []
     type: condition
     view: |-
@@ -166,12 +166,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1815fc21-600a-4d26-8ba0-084a01dbcc1c
+      id: cca0de7b-0e44-4413-83ee-801126b8f420
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 1815fc21-600a-4d26-8ba0-084a01dbcc1c
+    taskid: cca0de7b-0e44-4413-83ee-801126b8f420
     timertriggers: []
     type: title
     view: |-
@@ -196,12 +196,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1f7fb4ab-b289-4da0-8ca6-ed1a96861a6a
+      id: 2fc93866-314f-4ac1-8f17-eaa64b2c6493
       iscommand: false
       name: ArcSight
       type: title
       version: -1
-    taskid: 1f7fb4ab-b289-4da0-8ca6-ed1a96861a6a
+    taskid: 2fc93866-314f-4ac1-8f17-eaa64b2c6493
     timertriggers: []
     type: title
     view: |-
@@ -252,12 +252,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1c94e580-a35c-4f37-8eb0-e5000b935edc
+      id: bdcf03f1-f9f0-40e7-8257-5161873dbed7
       iscommand: false
       name: Is ArcSight enabled?
       type: condition
       version: -1
-    taskid: 1c94e580-a35c-4f37-8eb0-e5000b935edc
+    taskid: bdcf03f1-f9f0-40e7-8257-5161873dbed7
     timertriggers: []
     type: condition
     view: |-
@@ -296,12 +296,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6aa730d3-01e8-4cbe-8247-c32ef076687d
+      id: 763cdfae-4797-4070-8f02-b25b14e4a670
       iscommand: false
       name: Are there Domain results?
       type: condition
       version: -1
-    taskid: 6aa730d3-01e8-4cbe-8247-c32ef076687d
+    taskid: 763cdfae-4797-4070-8f02-b25b14e4a670
     timertriggers: []
     type: condition
     view: |-
@@ -326,13 +326,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3705f0a6-bd9c-4395-8818-7952e26f6368
+      id: 4a389992-72c7-4a26-8930-444f728a0c49
       iscommand: false
       name: TIM - ArcSight Add Domain Indicators
       playbookId: TIM - ArcSight Add Domain Indicators
       type: playbook
       version: -1
-    taskid: 3705f0a6-bd9c-4395-8818-7952e26f6368
+    taskid: 4a389992-72c7-4a26-8930-444f728a0c49
     timertriggers: []
     type: playbook
     view: |-
@@ -367,13 +367,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 50c3da2d-7ac8-4a6b-87f4-03861a8a9ebb
+      id: 877ae12d-b21f-442a-87c3-519346da5b6c
       iscommand: false
       name: TIM - QRadar Add Domain Indicators_DEMO
       playbookId: d88dd0c8-a8ff-408c-86c3-65b7522a0fdb
       type: playbook
       version: -1
-    taskid: 50c3da2d-7ac8-4a6b-87f4-03861a8a9ebb
+    taskid: 877ae12d-b21f-442a-87c3-519346da5b6c
     timertriggers: []
     type: playbook
     view: |-
