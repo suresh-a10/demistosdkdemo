@@ -54,11 +54,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6c6031d9-bf7f-484f-82d2-bb9de6729b7b
+      id: 47d23d9e-c05c-46e0-8684-84fae33e25d2
       iscommand: false
       name: ""
       version: -1
-    taskid: 6c6031d9-bf7f-484f-82d2-bb9de6729b7b
+    taskid: 47d23d9e-c05c-46e0-8684-84fae33e25d2
     timertriggers: []
     type: start
     view: |-
@@ -98,13 +98,13 @@ tasks:
     task:
       brand: ""
       description: Sets a value into the context with the given context key
-      id: aecd3b17-4751-4689-80da-23951a4eec5b
+      id: 97f02fa7-84a7-438d-8428-775e7f47eb5e
       iscommand: false
       name: Set IP to array
       script: Set
       type: regular
       version: -1
-    taskid: aecd3b17-4751-4689-80da-23951a4eec5b
+    taskid: 97f02fa7-84a7-438d-8428-775e7f47eb5e
     timertriggers: []
     type: regular
     view: |-
@@ -251,13 +251,13 @@ tasks:
       brand: ""
       description: This playbook runs a QRadar query and return its results to the
         context.
-      id: eb986b1c-f0ef-4bf0-84a7-ee7fedfa90e7
+      id: c031ee2e-7e4b-4387-85f6-2e0342789cfe
       iscommand: false
       name: QRadarFullSearch
       playbookId: QRadarFullSearch
       type: playbook
       version: -1
-    taskid: eb986b1c-f0ef-4bf0-84a7-ee7fedfa90e7
+    taskid: c031ee2e-7e4b-4387-85f6-2e0342789cfe
     timertriggers: []
     type: playbook
     view: |-
