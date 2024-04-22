@@ -35,22 +35,7 @@
 		"incidentfield": [
 			{
 				"description": "",
-				"name": "AzureDevOps  Project Name",
-				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "AzureDevOps  RepositoryID",
-				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "AzureDevOps  Repository Name",
-				"type": "shortText"
-			},
-			{
-				"description": "",
-				"name": "AzureDevOps  Pull Request ID",
+				"name": "AzureDevOps  Project ID",
 				"type": "shortText"
 			},
 			{
@@ -60,7 +45,22 @@
 			},
 			{
 				"description": "",
-				"name": "AzureDevOps  Project ID",
+				"name": "AzureDevOps  Pull Request ID",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "AzureDevOps  RepositoryID",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "AzureDevOps  Project Name",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "AzureDevOps  Repository Name",
 				"type": "shortText"
 			}
 		],
@@ -80,108 +80,140 @@
 				"category": "Utilities",
 				"commands": [
 					{
-						"description": "Generate the login url used for Authorization code flow.",
-						"name": "azure-devops-generate-login-url"
+						"description": "Retrieve information for a pipeline run.",
+						"name": "azure-devops-pipeline-run-get"
 					},
 					{
-						"description": "Retrieve a particular commit.",
-						"name": "azure-devops-commit-get"
-					},
-					{
-						"description": "Retrieve repository branches list.",
-						"name": "azure-devops-branch-list"
-					},
-					{
-						"description": "Get the commits for the specified pull request.",
-						"name": "azure-devops-pull-request-commit-list"
-					},
-					{
-						"description": "Run this command to complete the authorization process. Should be used after running the azure-devops-auth-start command.",
-						"name": "azure-devops-auth-complete"
-					},
-					{
-						"description": "Run a pipeline. A DevOps pipeline is a set of automated processes and tools that allows both developers and operations professionals to work cohesively to build and deploy code to a production environment.",
-						"name": "azure-devops-pipeline-run"
-					},
-					{
-						"description": "Retrieve git repositories in the organization project.",
-						"name": "azure-devops-repository-list"
-					},
-					{
-						"description": "Query users that were added to organization projects.",
-						"name": "azure-devops-user-list"
-					},
-					{
-						"description": "Getting the content file.",
-						"name": "azure-devops-file-get"
-					},
-					{
-						"description": "Retrieve all projects in the organization that the authenticated user has access to.",
-						"name": "azure-devops-project-list"
-					},
-					{
-						"description": "Retrieve pull-request.",
-						"name": "azure-devops-pull-request-get"
+						"description": "Tests the connectivity to Azure.",
+						"name": "azure-devops-auth-test"
 					},
 					{
 						"description": "Retrieve Git commits for a project.",
 						"name": "azure-devops-commit-list"
 					},
 					{
-						"description": "Retrieve project pipelines list.",
-						"name": "azure-devops-pipeline-list"
-					},
-					{
-						"description": "Get a list of members for a specific team.",
-						"name": "azure-devops-team-member-list"
-					},
-					{
-						"description": "Remove the user from all project memberships.",
-						"name": "azure-devops-user-remove"
-					},
-					{
-						"description": "Get mapping fields from remote incident. Please note that this method will not update the current incident. It's here for debugging purposes.",
-						"name": "get-mapping-fields"
-					},
-					{
-						"description": "Add a reviewer to a pull request.",
-						"name": "azure-devops-pull-request-reviewer-add"
-					},
-					{
-						"description": "Retrieve the reviewers for a pull request.",
-						"name": "azure-devops-pull-request-reviewer-list"
-					},
-					{
-						"description": "Create a branch.",
-						"name": "azure-devops-branch-create"
+						"description": "Update a file in the repository.",
+						"name": "azure-devops-file-update"
 					},
 					{
 						"description": "Returns a single work item.",
 						"name": "azure-devops-work-item-get"
 					},
 					{
-						"description": "Run this command if for some reason you need to rerun the authentication process.",
-						"name": "azure-devops-auth-reset"
+						"description": "Retrieve a particular commit.",
+						"name": "azure-devops-commit-get"
 					},
 					{
-						"description": "Get a single blob.",
-						"name": "azure-devops-blob-zip-get"
+						"description": "Retrieve project pipelines list.",
+						"name": "azure-devops-pipeline-list"
 					},
 					{
-						"description": "Create a thread in a pull request.",
-						"name": "azure-devops-pull-request-thread-create"
+						"description": "Run this command to start the authorization process and follow the instructions in the command results.",
+						"name": "azure-devops-auth-start"
+					},
+					{
+						"description": "Retrieve pull-request.",
+						"name": "azure-devops-pull-request-get"
+					},
+					{
+						"description": "Run this command to complete the authorization process. Should be used after running the azure-devops-auth-start command.",
+						"name": "azure-devops-auth-complete"
 					},
 					{
 						"description": "Updates a single work item.",
 						"name": "azure-devops-work-item-update"
 					},
 					{
+						"description": "Creates a single work item.",
+						"name": "azure-devops-work-item-create"
+					},
+					{
+						"description": "Generate the login url used for Authorization code flow.",
+						"name": "azure-devops-generate-login-url"
+					},
+					{
+						"description": "Retrieve git repositories in the organization project.",
+						"name": "azure-devops-repository-list"
+					},
+					{
+						"description": "Remove the user from all project memberships.",
+						"name": "azure-devops-user-remove"
+					},
+					{
 						"description": "Add a file to the repository.",
 						"name": "azure-devops-file-create"
 					},
 					{
-						"description": "Tests the connectivity to Azure.",
-						"name": "azure-devops-auth-test"
+						"description": "Get a single blob.",
+						"name": "azure-devops-blob-zip-get"
+					},
+					{
+						"description": "Add a reviewer to a pull request.",
+						"name": "azure-devops-pull-request-reviewer-add"
+					},
+					{
+						"description": "Retrieve all projects in the organization that the authenticated user has access to.",
+						"name": "azure-devops-project-list"
+					},
+					{
+						"description": "Retrieve pipeline runs list. The command retrieves up to the top 10000 runs for a particular pipeline.",
+						"name": "azure-devops-pipeline-run-list"
+					},
+					{
+						"description": "Query users that were added to organization projects.",
+						"name": "azure-devops-user-list"
+					},
+					{
+						"description": "Create a branch.",
+						"name": "azure-devops-branch-create"
+					},
+					{
+						"description": "Retrieve all threads in a pull request.",
+						"name": "azure-devops-pull-request-thread-list"
+					},
+					{
+						"description": "Add a user, assign the user a license and extensions, and make the user a member of a project group in an account.",
+						"name": "azure-devops-user-add"
+					},
+					{
+						"description": "Getting the content file.",
+						"name": "azure-devops-file-get"
+					},
+					{
+						"description": "Run this command if for some reason you need to rerun the authentication process.",
+						"name": "azure-devops-auth-reset"
+					},
+					{
+						"description": "Update a file in the repository.",
+						"name": "azure-devops-file-delete"
+					},
+					{
+						"description": "Create a new pull request.",
+						"name": "azure-devops-pull-request-create"
+					},
+					{
+						"description": "Retrieve the reviewers for a pull request.",
+						"name": "azure-devops-pull-request-reviewer-list"
+					},
+					{
+						"description": "Update a pull request. At least one of the following arguments must be provided: title, description, or status.",
+						"name": "azure-devops-pull-request-update"
+					},
+					{
+						"description": "Get a list of teams.",
+						"name": "azure-devops-project-team-list"
+					},
+					{
+						"description": "Get the commits for the specified pull request.",
+						"name": "azure-devops-pull-request-commit-list"
+					},
+					{
+						"description": "Create a thread in a pull request.",
+						"name": "azure-devops-pull-request-thread-create"
+					},
+					{
+						"description": "Get a list of members for a specific team.",
+						"name": "azure-devops-team-member-list"
 					},
 					{
 						"description": "Retrieve repository files (items) list.",
@@ -192,52 +224,20 @@
 						"name": "azure-devops-pull-request-thread-update"
 					},
 					{
-						"description": "Add a user, assign the user a license and extensions, and make the user a member of a project group in an account.",
-						"name": "azure-devops-user-add"
-					},
-					{
-						"description": "Create a new pull request.",
-						"name": "azure-devops-pull-request-create"
-					},
-					{
-						"description": "Update a pull request. At least one of the following arguments must be provided: title, description, or status.",
-						"name": "azure-devops-pull-request-update"
-					},
-					{
-						"description": "Retrieve information for a pipeline run.",
-						"name": "azure-devops-pipeline-run-get"
+						"description": "Get mapping fields from remote incident. Please note that this method will not update the current incident. It's here for debugging purposes.",
+						"name": "get-mapping-fields"
 					},
 					{
 						"description": "Retrieve pull requests in repository.",
 						"name": "azure-devops-pull-request-list"
 					},
 					{
-						"description": "Update a file in the repository.",
-						"name": "azure-devops-file-update"
+						"description": "Run a pipeline. A DevOps pipeline is a set of automated processes and tools that allows both developers and operations professionals to work cohesively to build and deploy code to a production environment.",
+						"name": "azure-devops-pipeline-run"
 					},
 					{
-						"description": "Get a list of teams.",
-						"name": "azure-devops-project-team-list"
-					},
-					{
-						"description": "Retrieve all threads in a pull request.",
-						"name": "azure-devops-pull-request-thread-list"
-					},
-					{
-						"description": "Creates a single work item.",
-						"name": "azure-devops-work-item-create"
-					},
-					{
-						"description": "Run this command to start the authorization process and follow the instructions in the command results.",
-						"name": "azure-devops-auth-start"
-					},
-					{
-						"description": "Retrieve pipeline runs list. The command retrieves up to the top 10000 runs for a particular pipeline.",
-						"name": "azure-devops-pipeline-run-list"
-					},
-					{
-						"description": "Update a file in the repository.",
-						"name": "azure-devops-file-delete"
+						"description": "Retrieve repository branches list.",
+						"name": "azure-devops-branch-list"
 					}
 				],
 				"description": "Manage Git repositories in Azure DevOps Services. Integration capabilities include retrieving, creating, and updating pull requests. Run pipelines and retrieve Git information.",
@@ -263,28 +263,28 @@
 		"widget": null,
 		"wizard": null
 	},
-	"currentVersion": "1.3.17",
+	"currentVersion": "1.3.16",
 	"definitionId": "",
 	"dependencies": {
 		"Base": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "1.33.44",
+			"minVersion": "1.33.35",
 			"name": "Base"
 		},
 		"CommonTypes": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": false,
-			"minVersion": "3.4.7",
+			"minVersion": "3.4.2",
 			"name": "Common Types"
 		}
 	},
 	"deprecated": false,
 	"description": "Create and manage Git repositories in Azure DevOps Services.",
 	"disabledMonthly": false,
-	"downloads": 1377,
+	"downloads": 1303,
 	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
 	"fromServerVersion": "6.0.0",
 	"general": [
@@ -301,7 +301,7 @@
 			"name": "AzureDevOps"
 		}
 	],
-	"itemVersion": "1.3.17",
+	"itemVersion": "1.3.16",
 	"keywords": [
 		"Microsoft"
 	],
@@ -332,6 +332,6 @@
 	"updated": "2024-03-28T10:25:26Z",
 	"useCases": [],
 	"version": -1,
-	"versionInfo": "919924",
+	"versionInfo": "860237",
 	"videos": []
 }
