@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 46aa3b40-9105-4db6-8c3d-2578e371c24e
+      id: 429485f0-5edc-40d3-8741-af3f633c5fe4
       iscommand: false
       name: ""
       version: -1
-    taskid: 46aa3b40-9105-4db6-8c3d-2578e371c24e
+    taskid: 429485f0-5edc-40d3-8741-af3f633c5fe4
     timertriggers: []
     type: start
     view: |-
@@ -60,13 +60,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 277138a5-eefc-4352-8852-1e54e68a0325
+      id: 69f4d1a3-a990-43a9-89fa-279da8105368
       iscommand: false
       name: closeinvestigationonly
       playbookId: f7ea08cc-b427-4e4f-8e5b-50a662b8d25a
       type: playbook
       version: -1
-    taskid: 277138a5-eefc-4352-8852-1e54e68a0325
+    taskid: 69f4d1a3-a990-43a9-89fa-279da8105368
     timertriggers: []
     type: playbook
     view: |-
@@ -91,12 +91,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e94c6c37-8b51-4ffa-8b22-75fa3da82bfe
+      id: 00ec335c-c171-485c-8f2e-9e7b2878c72a
       iscommand: false
       name: Manual task
       type: regular
       version: -1
-    taskid: e94c6c37-8b51-4ffa-8b22-75fa3da82bfe
+    taskid: 00ec335c-c171-485c-8f2e-9e7b2878c72a
     timertriggers: []
     type: regular
     view: |-
@@ -118,12 +118,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7eba81c3-b592-4b53-814c-3e3c3e0ed40e
+      id: 2077ff92-0321-486f-8287-210eecf1258a
       iscommand: false
       name: Manual Task
       type: regular
       version: -1
-    taskid: 7eba81c3-b592-4b53-814c-3e3c3e0ed40e
+    taskid: 2077ff92-0321-486f-8287-210eecf1258a
     timertriggers: []
     type: regular
     view: |-
