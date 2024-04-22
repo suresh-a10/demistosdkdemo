@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 51099290-9925-4892-8c79-47d81e2be9e2
+      id: 9270efd6-cebc-4f0b-899c-6b0d13b84802
       iscommand: false
       name: ""
       version: -1
-    taskid: 51099290-9925-4892-8c79-47d81e2be9e2
+    taskid: 9270efd6-cebc-4f0b-899c-6b0d13b84802
     timertriggers: []
     type: start
     view: |-
@@ -61,13 +61,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: ac7f490c-eb86-479d-863c-d6d1330e3f4b
+      id: b974e7f7-e39d-4b0e-83ec-8d8f95b9af00
       iscommand: true
       name: Set Inciodent to role
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: ac7f490c-eb86-479d-863c-d6d1330e3f4b
+    taskid: b974e7f7-e39d-4b0e-83ec-8d8f95b9af00
     timertriggers: []
     type: regular
     view: |-
