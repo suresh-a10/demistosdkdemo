@@ -196,7 +196,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 1.6.6
+    itemVersion: 1.6.5
     packID: MicrosoftGraphMail
     packName: Microsoft Graph Mail
     packPropagationLabels:
@@ -1026,7 +1026,7 @@ script:
   runonce: false
   script: |
     register_module_line('Microsoft Graph Mail Single User', 'start', __line__())
-    ### pack version: 1.6.6
+    ### pack version: 1.6.5
 
 
     import json
@@ -2267,7 +2267,7 @@ script:
         def run_retry_on_rate_limit(args_for_next_run: dict):
             return CommandResults(readable_output="Rate limit reached, rerunning the command in 1 min",
                                   scheduled_command=ScheduledCommand(command=demisto.command(), next_run_in_seconds=60,
-                                                                     args=args_for_next_run, timeout_in_seconds=900))
+                                                                     args=args_for_next_run))
 
         def handle_error_with_metrics(self, res):
             MicrosoftClient.create_api_metrics(res.status_code)
