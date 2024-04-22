@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 53a7cdfc-1235-492f-83a9-c613fcb8216b
+      id: 73a6c6da-f4da-4ba5-88d9-691b2b78ee92
       iscommand: false
       name: ""
       version: -1
-    taskid: 53a7cdfc-1235-492f-83a9-c613fcb8216b
+    taskid: 73a6c6da-f4da-4ba5-88d9-691b2b78ee92
     timertriggers: []
     type: start
     view: |-
@@ -71,13 +71,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 53107a24-9ae2-4cf2-828c-d25d5be8722f
+      id: 884252e8-2c3d-418e-8289-42fec035a06d
       iscommand: false
       name: Delete Context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 53107a24-9ae2-4cf2-828c-d25d5be8722f
+    taskid: 884252e8-2c3d-418e-8289-42fec035a06d
     timertriggers: []
     type: regular
     view: |-
@@ -102,13 +102,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 39835858-b13a-4e63-83c7-6652521d8794
+      id: 65cb3365-e009-4581-80ae-520b9d71b98a
       iscommand: false
       name: Playbook to perform rest of task
       playbookId: 99788f3d-2a74-4f71-86ed-63a27a121154
       type: playbook
       version: -1
-    taskid: 39835858-b13a-4e63-83c7-6652521d8794
+    taskid: 65cb3365-e009-4581-80ae-520b9d71b98a
     timertriggers: []
     type: playbook
     view: |-
@@ -130,12 +130,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7c5b1208-d883-4f8c-8ae0-7158e707d9bd
+      id: 9aac59af-e548-4f87-8298-19d4fecaf20f
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 7c5b1208-d883-4f8c-8ae0-7158e707d9bd
+    taskid: 9aac59af-e548-4f87-8298-19d4fecaf20f
     timertriggers: []
     type: title
     view: |-
