@@ -177,11 +177,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c36af7f0-61b0-4e84-8aa8-88d8036245ca
+      id: 89366be7-2446-428a-86b6-de7a543eb5e7
       iscommand: false
       name: ""
       version: -1
-    taskid: c36af7f0-61b0-4e84-8aa8-88d8036245ca
+    taskid: 89366be7-2446-428a-86b6-de7a543eb5e7
     timertriggers: []
     type: start
     view: |-
@@ -212,13 +212,13 @@ tasks:
     task:
       brand: ""
       description: Uploads the URL of a remote file to WildFire for analysis.
-      id: e416ba05-2d66-4671-888b-8034680e8796
+      id: 7c60d9fe-aedd-4d0c-8065-4796ae08cb30
       iscommand: true
       name: WildFire Upload File URL
       script: '|||wildfire-upload-file-url'
       type: regular
       version: -1
-    taskid: e416ba05-2d66-4671-888b-8034680e8796
+    taskid: 7c60d9fe-aedd-4d0c-8065-4796ae08cb30
     timertriggers: []
     type: regular
     view: |-
@@ -273,13 +273,13 @@ tasks:
         1. Initiate the operation.
         2. Poll to check if the operation completed.
         3. (optional) Get the results of the operation.
-      id: d3f1053f-bf63-454e-8d38-f05d94d99556
+      id: 04b8c062-bab7-4bf3-8762-cd8c1a6e7fd3
       iscommand: false
       name: GenericPolling
       playbookId: GenericPolling
       type: playbook
       version: -1
-    taskid: d3f1053f-bf63-454e-8d38-f05d94d99556
+    taskid: 04b8c062-bab7-4bf3-8762-cd8c1a6e7fd3
     timertriggers: []
     type: playbook
     view: |-
@@ -301,12 +301,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 60484d20-fc2d-499b-8778-3962368dfe5b
+      id: 46256772-bcfe-4901-820f-0d66ac428849
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 60484d20-fc2d-499b-8778-3962368dfe5b
+    taskid: 46256772-bcfe-4901-820f-0d66ac428849
     timertriggers: []
     type: title
     view: |-
@@ -342,12 +342,12 @@ tasks:
     task:
       brand: ""
       description: Look for file URLs to detonate
-      id: 75c1c4a7-1f26-4785-89eb-e1a3b085b364
+      id: bcd19ae8-fffe-47ac-88e7-bf4104f82ed2
       iscommand: false
       name: Is there a URL to detonate?
       type: condition
       version: -1
-    taskid: 75c1c4a7-1f26-4785-89eb-e1a3b085b364
+    taskid: bcd19ae8-fffe-47ac-88e7-bf4104f82ed2
     timertriggers: []
     type: condition
     view: |-
@@ -402,12 +402,12 @@ tasks:
     task:
       brand: ""
       description: Check if integration instance is enabled.
-      id: b340e210-9895-45fe-82bc-3ee9a6d6fc39
+      id: 7911c085-9689-4974-84ff-568221e133e5
       iscommand: false
       name: Is WildFire-v2 enabled?
       type: condition
       version: -1
-    taskid: b340e210-9895-45fe-82bc-3ee9a6d6fc39
+    taskid: 7911c085-9689-4974-84ff-568221e133e5
     timertriggers: []
     type: condition
     view: |-
@@ -438,13 +438,13 @@ tasks:
     task:
       brand: ""
       description: Retrieves results for a file hash using WildFire.
-      id: 784929aa-945f-40a8-8eaa-c88dae629e7c
+      id: f68bda9f-42be-49fd-87c2-25e7d1b05a35
       iscommand: true
       name: WildFire Get Report
       script: '|||wildfire-report'
       type: regular
       version: -1
-    taskid: 784929aa-945f-40a8-8eaa-c88dae629e7c
+    taskid: f68bda9f-42be-49fd-87c2-25e7d1b05a35
     timertriggers: []
     type: regular
     view: |-
@@ -474,13 +474,13 @@ tasks:
     task:
       brand: ""
       description: Uploads a URL of a webpage to WildFire for analysis.
-      id: cfa99438-c73d-4832-8e7a-76e13983ffd9
+      id: 5c12d1b2-7584-419f-8ff5-a63f76ff6670
       iscommand: true
       name: WildFire Upload URL
       script: '|||wildfire-upload-url'
       type: regular
       version: -1
-    taskid: cfa99438-c73d-4832-8e7a-76e13983ffd9
+    taskid: 5c12d1b2-7584-419f-8ff5-a63f76ff6670
     timertriggers: []
     type: regular
     view: |-
@@ -527,12 +527,12 @@ tasks:
     task:
       brand: ""
       description: Was the file successfully submitted using the URL provided.
-      id: d01bafd2-adb0-4dab-82d4-7423360ab62d
+      id: acd22faa-441e-4c57-8705-06d283d7594d
       iscommand: false
       name: Was there an unsuccessful file url submission?
       type: condition
       version: -1
-    taskid: d01bafd2-adb0-4dab-82d4-7423360ab62d
+    taskid: acd22faa-441e-4c57-8705-06d283d7594d
     timertriggers: []
     type: condition
     view: |-
@@ -578,12 +578,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 79ee7f6d-3b41-4751-8f2d-498963463e23
+      id: fef7b25e-b5fe-4a3e-8bb7-81fca125de4f
       iscommand: false
       name: Was the file uploaded successfully and is a report pending?
       type: condition
       version: -1
-    taskid: 79ee7f6d-3b41-4751-8f2d-498963463e23
+    taskid: fef7b25e-b5fe-4a3e-8bb7-81fca125de4f
     timertriggers: []
     type: condition
     view: |-
@@ -638,13 +638,13 @@ tasks:
         1. Initiate the operation.
         2. Poll to check if the operation completed.
         3. (optional) Get the results of the operation.
-      id: 9096b3eb-3e33-40d6-877d-c14a4b90c81c
+      id: bf3eb6eb-ab8f-4398-8238-ab19e65c2d70
       iscommand: false
       name: GenericPolling
       playbookId: GenericPolling
       type: playbook
       version: -1
-    taskid: 9096b3eb-3e33-40d6-877d-c14a4b90c81c
+    taskid: bf3eb6eb-ab8f-4398-8238-ab19e65c2d70
     timertriggers: []
     type: playbook
     view: |-
@@ -675,13 +675,13 @@ tasks:
     task:
       brand: ""
       description: Checks if a report already exists for the file or URL submitted.
-      id: 8b3e228e-a8ed-49f5-880a-3f9935680418
+      id: adcb4d4e-97a0-4129-89ea-532016951817
       iscommand: true
       name: WildFire Get Report - Check If a Report already exists
       script: '|||wildfire-report'
       type: regular
       version: -1
-    taskid: 8b3e228e-a8ed-49f5-880a-3f9935680418
+    taskid: adcb4d4e-97a0-4129-89ea-532016951817
     timertriggers: []
     type: regular
     view: |-
@@ -712,13 +712,13 @@ tasks:
     task:
       brand: ""
       description: Checks if a report already exists for the file or URL submitted.
-      id: 78a903df-da41-42d6-8c13-947499a01942
+      id: 9c6b9811-1fd5-4b46-8198-e28ce2f4fd16
       iscommand: true
       name: WildFire Get Report - Check If a Report already exists
       script: '|||wildfire-report'
       type: regular
       version: -1
-    taskid: 78a903df-da41-42d6-8c13-947499a01942
+    taskid: 9c6b9811-1fd5-4b46-8198-e28ce2f4fd16
     timertriggers: []
     type: regular
     view: |-
@@ -756,12 +756,12 @@ tasks:
     task:
       brand: ""
       description: Was the file successfully submitted using the URL provided.
-      id: 5cd7721e-7625-4193-8246-3e7d67a3a817
+      id: 83889ca5-1af6-4238-8739-7461f900e2f5
       iscommand: false
       name: Was there a successful file url submission?
       type: condition
       version: -1
-    taskid: 5cd7721e-7625-4193-8246-3e7d67a3a817
+    taskid: 83889ca5-1af6-4238-8739-7461f900e2f5
     timertriggers: []
     type: condition
     view: |-
