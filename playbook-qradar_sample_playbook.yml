@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 61056310-b7d4-4d46-8547-5fdef99e1cf2
+      id: a76b122e-3dbb-4a58-86c2-f65731dfa7ae
       iscommand: false
       name: ""
       version: -1
-    taskid: 61056310-b7d4-4d46-8547-5fdef99e1cf2
+    taskid: a76b122e-3dbb-4a58-86c2-f65731dfa7ae
     timertriggers: []
     type: start
     view: |-
@@ -95,12 +95,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 980e5774-b32d-4f85-84f3-7dcf5eafa364
+      id: 1c249c4b-e101-401a-8bf6-793184dcdea0
       iscommand: false
       name: Upload a file
       type: collection
       version: -1
-    taskid: 980e5774-b32d-4f85-84f3-7dcf5eafa364
+    taskid: 1c249c4b-e101-401a-8bf6-793184dcdea0
     timertriggers: []
     type: collection
     view: |-
@@ -153,13 +153,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.extract.indicators
-      id: 702e0578-7a01-408b-878a-3a8f1a69bff3
+      id: 1e643dad-a060-413a-804c-c0589c767f87
       iscommand: true
       name: extract indicators from a file
       script: Builtin|||extractIndicators
       type: regular
       version: -1
-    taskid: 702e0578-7a01-408b-878a-3a8f1a69bff3
+    taskid: 1e643dad-a060-413a-804c-c0589c767f87
     timertriggers: []
     type: regular
     view: |-
@@ -193,13 +193,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: de0ce982-85e2-47d7-8a5d-f64f1e3c44a1
+      id: 478190ee-e43a-4a29-8e62-39feec8af76b
       iscommand: false
       name: delete context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: de0ce982-85e2-47d7-8a5d-f64f1e3c44a1
+    taskid: 478190ee-e43a-4a29-8e62-39feec8af76b
     timertriggers: []
     type: regular
     view: |-
@@ -243,13 +243,13 @@ tasks:
       brand: ""
       description: 'The Playbook queries QRadar SIEM for indicators such as file hashes,
         IP addresses, domains, or urls. '
-      id: daa1b3e1-f180-4138-8d91-19efa08dd5fb
+      id: d5d21840-9f86-4364-8751-1a05513d051c
       iscommand: false
       name: QRadar Indicator Hunting V2_copy
       playbookId: fee733df-d9c0-4df4-83dc-79b481899479
       type: playbook
       version: -1
-    taskid: daa1b3e1-f180-4138-8d91-19efa08dd5fb
+    taskid: d5d21840-9f86-4364-8751-1a05513d051c
     timertriggers: []
     type: playbook
     view: |-
