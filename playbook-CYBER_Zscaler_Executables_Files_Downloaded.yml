@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 862e00d7-8b0a-4b14-8960-bbc1706d268b
+      id: d73916f7-1be2-40de-8e82-8fc14c192a64
       iscommand: false
       name: ""
       version: -1
-    taskid: 862e00d7-8b0a-4b14-8960-bbc1706d268b
+    taskid: d73916f7-1be2-40de-8e82-8fc14c192a64
     timertriggers: []
     type: start
     view: |-
@@ -60,12 +60,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 53e2f32c-a5ee-4bed-80a0-d0389b54b336
+      id: 6f420e9b-71d3-44b5-8048-32635c662522
       iscommand: false
       name: Investigation Phase
       type: title
       version: -1
-    taskid: 53e2f32c-a5ee-4bed-80a0-d0389b54b336
+    taskid: 6f420e9b-71d3-44b5-8048-32635c662522
     timertriggers: []
     type: title
     view: |-
@@ -91,13 +91,13 @@ tasks:
     task:
       brand: ""
       description: Set date range for CMPL email template
-      id: a8c02c2a-8a8e-4c32-82ff-59f98d630423
+      id: 1e2c0215-9975-4af9-8493-98aab4e80454
       iscommand: false
       name: S - Date Format
       playbookName: S - Date Format
       type: playbook
       version: -1
-    taskid: a8c02c2a-8a8e-4c32-82ff-59f98d630423
+    taskid: 1e2c0215-9975-4af9-8493-98aab4e80454
     timertriggers: []
     type: playbook
     view: |-
@@ -123,13 +123,13 @@ tasks:
     task:
       brand: ""
       description: A Sub playbook to gather user and their line manager email address
-      id: 6ef847d7-6a11-46a5-8200-3c7c1f1fffc6
+      id: 01b502c2-dce4-40d2-88cb-67bb46e6491c
       iscommand: false
       name: S - Check Email Field
       playbookName: S - Check Email Field
       type: playbook
       version: -1
-    taskid: 6ef847d7-6a11-46a5-8200-3c7c1f1fffc6
+    taskid: 01b502c2-dce4-40d2-88cb-67bb46e6491c
     timertriggers: []
     type: playbook
     view: |-
@@ -155,13 +155,13 @@ tasks:
     task:
       brand: ""
       description: Creation of Splunk Search result to Email format
-      id: c51f4694-7988-4c50-8ead-37c1432d8f5f
+      id: 55215ed5-074f-4f22-8ff4-98e56eddb297
       iscommand: false
       name: S - Common Splunk Result to Table Zscaler file download
       playbookName: S - Common Splunk Result to Table Zscaler file download
       type: playbook
       version: -1
-    taskid: c51f4694-7988-4c50-8ead-37c1432d8f5f
+    taskid: 55215ed5-074f-4f22-8ff4-98e56eddb297
     timertriggers: []
     type: playbook
     view: |-
@@ -200,13 +200,13 @@ tasks:
       brand: ""
       description: A Sub playbook to send user a data survey, requesting them to acknowledge
         the event and provide a description of what was done
-      id: ebb47bba-b8a8-4f46-8d68-50ca7f3ff44e
+      id: a35a6923-8254-4eac-8682-9050616b2ba5
       iscommand: false
       name: S - CMPL Survey (Without REQ)
       playbookName: S - CMPL Survey (Without REQ)
       type: playbook
       version: -1
-    taskid: ebb47bba-b8a8-4f46-8d68-50ca7f3ff44e
+    taskid: a35a6923-8254-4eac-8682-9050616b2ba5
     timertriggers: []
     type: playbook
     view: |-
@@ -252,12 +252,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 041f4cf3-e8c7-46e6-8281-43ccc88217c2
+      id: d6d886b0-6079-49c5-8f5a-3f6fe1baca85
       iscommand: false
       name: Did Line Manager acknowledge the event
       type: condition
       version: -1
-    taskid: 041f4cf3-e8c7-46e6-8281-43ccc88217c2
+    taskid: d6d886b0-6079-49c5-8f5a-3f6fe1baca85
     timertriggers: []
     type: condition
     view: |-
@@ -292,13 +292,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9ab9d668-cf22-4045-89e6-35e7ad2113b3
+      id: b44016aa-8567-4c9a-81ba-167b648676b7
       iscommand: false
       name: S - Common Incident Closing Steps (CMPL - User Acknowledge)
       playbookName: S - Common Incident Closing Steps (CMPL - User Acknowledge)
       type: playbook
       version: -1
-    taskid: 9ab9d668-cf22-4045-89e6-35e7ad2113b3
+    taskid: b44016aa-8567-4c9a-81ba-167b648676b7
     timertriggers: []
     type: playbook
     view: |-
@@ -320,12 +320,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 74c736b7-b65c-4752-893f-764fa6547928
+      id: 70d259cb-a119-4fc3-88b0-54cf726767b0
       iscommand: false
       name: End Playbook
       type: title
       version: -1
-    taskid: 74c736b7-b65c-4752-893f-764fa6547928
+    taskid: 70d259cb-a119-4fc3-88b0-54cf726767b0
     timertriggers: []
     type: title
     view: |-
@@ -371,13 +371,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 34d643d5-25ad-4d99-8ed5-aba1fd072a9e
+      id: 06aafa3b-8122-4da4-8f06-0912d82bca4b
       iscommand: true
       name: Set Email Template
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 34d643d5-25ad-4d99-8ed5-aba1fd072a9e
+    taskid: 06aafa3b-8122-4da4-8f06-0912d82bca4b
     timertriggers: []
     type: regular
     view: |-
@@ -399,12 +399,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 43150817-d88d-44d4-8f92-44972c9cbe84
+      id: 3894a6f9-7183-4290-875a-bf9173bfbbc6
       iscommand: false
       name: T - Manual Recovery Steps
       type: regular
       version: -1
-    taskid: 43150817-d88d-44d4-8f92-44972c9cbe84
+    taskid: 3894a6f9-7183-4290-875a-bf9173bfbbc6
     timertriggers: []
     type: regular
     view: |-
@@ -429,13 +429,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c4070f6e-6064-49b4-83b9-dc95aaafaed4
+      id: 144d9775-242f-4758-8bec-d463da25f540
       iscommand: false
       name: S - Common Incident Closing Steps
       playbookName: S - Common Incident Closing Steps
       type: playbook
       version: -1
-    taskid: c4070f6e-6064-49b4-83b9-dc95aaafaed4
+    taskid: 144d9775-242f-4758-8bec-d463da25f540
     timertriggers: []
     type: playbook
     view: |-
@@ -462,13 +462,13 @@ tasks:
       brand: ""
       description: Enquiries asked to the analyst in order to gain more context to
         the case
-      id: 88e6cb00-6507-4fa7-8785-8528b71624c2
+      id: ccd9241a-642e-4860-83d4-9a21ec176a7a
       iscommand: false
       name: S - Common Alert Enquiries_copy
       playbookName: S - Common Alert Enquiries_Zscaler
       type: playbook
       version: -1
-    taskid: 88e6cb00-6507-4fa7-8785-8528b71624c2
+    taskid: ccd9241a-642e-4860-83d4-9a21ec176a7a
     timertriggers: []
     type: playbook
     view: |-
@@ -493,13 +493,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5ff33c39-e558-4f5b-8083-76e02c1ebd80
+      id: 29497a58-1d4c-4472-8684-edbc85fe981f
       iscommand: false
       name: S - Common Incident Steps
       playbookName: S - Common Incident Steps
       type: playbook
       version: -1
-    taskid: 5ff33c39-e558-4f5b-8083-76e02c1ebd80
+    taskid: 29497a58-1d4c-4472-8684-edbc85fe981f
     timertriggers: []
     type: playbook
     view: |-
