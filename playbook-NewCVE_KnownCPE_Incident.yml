@@ -46,11 +46,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b394b298-a5b5-414b-8e62-5efd4fdfc54f
+      id: d554dc99-7524-4cd8-81cb-56c9f5246de4
       iscommand: false
       name: ""
       version: -1
-    taskid: b394b298-a5b5-414b-8e62-5efd4fdfc54f
+    taskid: d554dc99-7524-4cd8-81cb-56c9f5246de4
     timertriggers: []
     type: start
     view: |-
@@ -81,13 +81,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: beebc94d-f069-4e4d-86e8-c1ee1c9140e3
+      id: bb69cdec-938e-4fd9-8e69-e0f22514f1d5
       iscommand: false
       name: Set Name
       script: Set
       type: regular
       version: -1
-    taskid: beebc94d-f069-4e4d-86e8-c1ee1c9140e3
+    taskid: bb69cdec-938e-4fd9-8e69-e0f22514f1d5
     timertriggers: []
     type: regular
     view: |-
@@ -130,12 +130,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9c4eb640-5f6e-4676-8fa1-7c12ec8a0730
+      id: 80f4c8a5-9879-4420-85d5-5e27568daa44
       iscommand: false
       name: Exists
       type: condition
       version: -1
-    taskid: 9c4eb640-5f6e-4676-8fa1-7c12ec8a0730
+    taskid: 80f4c8a5-9879-4420-85d5-5e27568daa44
     timertriggers: []
     type: condition
     view: |-
@@ -157,12 +157,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 58a0a50b-7824-49cb-8cf3-33668978dcfc
+      id: cf87a76c-4f9f-457d-8dff-e877d3bc91cd
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 58a0a50b-7824-49cb-8cf3-33668978dcfc
+    taskid: cf87a76c-4f9f-457d-8dff-e877d3bc91cd
     timertriggers: []
     type: title
     view: |-
@@ -198,13 +198,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.create.inc
-      id: d75b64ec-26ba-439b-8fff-da287770ad00
+      id: af84161c-741b-486d-8c26-0a939868c0eb
       iscommand: true
       name: Create Incident
       script: Builtin|||createNewIncident
       type: regular
       version: -1
-    taskid: d75b64ec-26ba-439b-8fff-da287770ad00
+    taskid: af84161c-741b-486d-8c26-0a939868c0eb
     timertriggers: []
     type: regular
     view: |-
@@ -238,13 +238,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: e10758f8-0fb8-4e40-8d18-c90cdaf6d79f
+      id: f21cf634-bc94-4a2c-8933-62720d6d54fc
       iscommand: false
       name: Search Incidents
       script: SearchIncidentsV2
       type: regular
       version: -1
-    taskid: e10758f8-0fb8-4e40-8d18-c90cdaf6d79f
+    taskid: f21cf634-bc94-4a2c-8933-62720d6d54fc
     timertriggers: []
     type: regular
     view: |-
@@ -280,13 +280,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 0969a6d8-7c17-427c-844e-e4b9bf3bf4b7
+      id: 80ad578e-d0b7-48dd-8987-2bbd0549f348
       iscommand: false
       name: Delete Context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 0969a6d8-7c17-427c-844e-e4b9bf3bf4b7
+    taskid: 80ad578e-d0b7-48dd-8987-2bbd0549f348
     timertriggers: []
     type: regular
     view: |-
