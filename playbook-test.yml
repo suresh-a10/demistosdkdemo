@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7c2a6b20-1be4-46e1-821b-b7f139bf0238
+      id: 4f3daef0-670d-42b4-8165-eb1c813f2728
       iscommand: false
       name: ""
       version: -1
-    taskid: 7c2a6b20-1be4-46e1-821b-b7f139bf0238
+    taskid: 4f3daef0-670d-42b4-8165-eb1c813f2728
     timertriggers: []
     type: start
     view: |-
@@ -67,13 +67,13 @@ tasks:
     task:
       brand: Builtin
       description: Prints text to war room (Markdown supported)
-      id: 23e5bece-7d87-4a45-863c-9b71f8c35229
+      id: bca636ee-3b38-4746-8d06-1b907c0246d0
       iscommand: false
       name: Set
       script: Print
       type: regular
       version: -1
-    taskid: 23e5bece-7d87-4a45-863c-9b71f8c35229
+    taskid: bca636ee-3b38-4746-8d06-1b907c0246d0
     timertriggers: []
     type: regular
     view: |-
@@ -114,12 +114,12 @@ tasks:
       description: "Gets a value and return it. This is to be used in playbook conditional
         tasks - get a value from incident field, label or context, and act accordingly.
         \nIf an array is returned. the first value will be the decision making value."
-      id: 90a4f244-3953-426c-8cad-fa0eab8aa9a2
+      id: 5f16d2d1-888c-4c2d-8159-c8978bbc4656
       iscommand: false
       name: Check if value exists in a list
       type: condition
       version: -1
-    taskid: 90a4f244-3953-426c-8cad-fa0eab8aa9a2
+    taskid: 5f16d2d1-888c-4c2d-8159-c8978bbc4656
     timertriggers: []
     type: condition
     view: |-
@@ -148,13 +148,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 397d181a-c48c-4e8a-83e9-ffbbd0189ad9
+      id: ef0969ca-ac52-4640-8834-1a2c5e42280c
       iscommand: false
       name: Print Yes
       script: Print
       type: regular
       version: -1
-    taskid: 397d181a-c48c-4e8a-83e9-ffbbd0189ad9
+    taskid: ef0969ca-ac52-4640-8834-1a2c5e42280c
     timertriggers: []
     type: regular
     view: |-
@@ -183,13 +183,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 9897edd3-3fd6-462d-8445-0f4492388e4a
+      id: 106bbed3-baaf-4fcc-8570-b0c26e10dd10
       iscommand: false
       name: Print No
       script: Print
       type: regular
       version: -1
-    taskid: 9897edd3-3fd6-462d-8445-0f4492388e4a
+    taskid: 106bbed3-baaf-4fcc-8570-b0c26e10dd10
     timertriggers: []
     type: regular
     view: |-
@@ -215,13 +215,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: a2aea902-fd24-40be-8c20-8554f5d5b013
+      id: 91613a0e-f47c-468e-89af-6a8e4a68eef3
       iscommand: true
       name: Set Role to windows
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: a2aea902-fd24-40be-8c20-8554f5d5b013
+    taskid: 91613a0e-f47c-468e-89af-6a8e4a68eef3
     timertriggers: []
     type: regular
     view: |-
@@ -249,13 +249,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: b8178915-e35b-4226-8c87-c2ff6a210e86
+      id: dcbaf7c6-0413-4e62-8a8b-cac232de8ca0
       iscommand: true
       name: Close
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: b8178915-e35b-4226-8c87-c2ff6a210e86
+    taskid: dcbaf7c6-0413-4e62-8a8b-cac232de8ca0
     timertriggers: []
     type: regular
     view: |-
@@ -280,13 +280,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 75fc9096-35bf-43df-8f46-38b62814b344
+      id: 9e16f7f1-519a-4c54-8a2a-0bd2f11da242
       iscommand: false
       name: Tags testing
       playbookId: 4615403c-bf6f-4113-8f54-dc780b92e502
       type: playbook
       version: -1
-    taskid: 75fc9096-35bf-43df-8f46-38b62814b344
+    taskid: 9e16f7f1-519a-4c54-8a2a-0bd2f11da242
     timertriggers: []
     type: playbook
     view: |-
@@ -311,13 +311,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 18047380-d535-4b54-8bf0-a74057c12048
+      id: e45678f7-8bce-47fb-82a5-d91a62c7db10
       iscommand: false
       name: Tags testing
       playbookId: 4615403c-bf6f-4113-8f54-dc780b92e502
       type: playbook
       version: -1
-    taskid: 18047380-d535-4b54-8bf0-a74057c12048
+    taskid: e45678f7-8bce-47fb-82a5-d91a62c7db10
     timertriggers: []
     type: playbook
     view: |-
@@ -342,13 +342,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 42aa6572-5ba0-43b5-8a79-bdc0e7b74985
+      id: a94eb523-9d16-4ded-8d26-f362ce63a13f
       iscommand: false
       name: Tags testing
       playbookId: 4615403c-bf6f-4113-8f54-dc780b92e502
       type: playbook
       version: -1
-    taskid: 42aa6572-5ba0-43b5-8a79-bdc0e7b74985
+    taskid: a94eb523-9d16-4ded-8d26-f362ce63a13f
     timertriggers: []
     type: playbook
     view: |-
@@ -377,13 +377,13 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds
-      id: 51de3177-96d6-4eb3-8ad7-cb90e79ba822
+      id: 8f96a9e6-b3b6-4459-8f89-a215491ea33c
       iscommand: false
       name: Untitled Task
       script: Sleep
       type: regular
       version: -1
-    taskid: 51de3177-96d6-4eb3-8ad7-cb90e79ba822
+    taskid: 8f96a9e6-b3b6-4459-8f89-a215491ea33c
     timertriggers: []
     type: regular
     view: |-
@@ -416,13 +416,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 7eca8ab8-25e5-479e-835c-ec2c5325b404
+      id: eaa45875-b498-4365-880c-0776260bb07b
       iscommand: false
       name: Provide Password
       script: Set
       type: regular
       version: -1
-    taskid: 7eca8ab8-25e5-479e-835c-ec2c5325b404
+    taskid: eaa45875-b498-4365-880c-0776260bb07b
     timertriggers: []
     type: regular
     view: |-
@@ -458,13 +458,13 @@ tasks:
       brand: ""
       description: Extracts regex data from the provided text. The script support
         groups and looping.
-      id: 21aa0a87-4934-4c1f-8096-c74b18d561b7
+      id: 98fb6da2-daec-4197-867c-8553ccf79068
       iscommand: false
       name: Validate password length
       script: MatchRegexV2
       type: regular
       version: -1
-    taskid: 21aa0a87-4934-4c1f-8096-c74b18d561b7
+    taskid: 98fb6da2-daec-4197-867c-8553ccf79068
     timertriggers: []
     type: regular
     view: |-
@@ -504,12 +504,12 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 58adcf61-1772-469f-880d-5fe806ba37f9
+      id: 79c0ec6d-0901-480f-8df1-74eb4fe8a58c
       iscommand: false
       name: Password Length is 10
       type: condition
       version: -1
-    taskid: 58adcf61-1772-469f-880d-5fe806ba37f9
+    taskid: 79c0ec6d-0901-480f-8df1-74eb4fe8a58c
     timertriggers: []
     type: condition
     view: |-
@@ -531,12 +531,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e52ed29a-7421-4f84-8fae-bd0bf377936d
+      id: 625f1307-504f-4b05-8f78-157b9375547f
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: e52ed29a-7421-4f84-8fae-bd0bf377936d
+    taskid: 625f1307-504f-4b05-8f78-157b9375547f
     timertriggers: []
     type: title
     view: |-
@@ -565,13 +565,13 @@ tasks:
       brand: ""
       description: |
         Creates a file (using the given data input or entry ID) and uploads it to the current investigation War Room.
-      id: fc217565-abdd-4249-85b3-7af0d8b1e62f
+      id: 3e621d28-6cbf-418a-88ca-966f0de58746
       iscommand: false
       name: FileCreate
       script: FileCreateAndUploadV2
       type: regular
       version: -1
-    taskid: fc217565-abdd-4249-85b3-7af0d8b1e62f
+    taskid: 3e621d28-6cbf-418a-88ca-966f0de58746
     timertriggers: []
     type: regular
     view: |-
@@ -598,14 +598,14 @@ tasks:
       weeks: 0
     task:
       brand: ""
-      id: 704ade2e-1f59-4c38-8dcb-fa13f25cc47b
+      id: 0b2cfbde-b9e9-4b95-8f33-3e263560aa24
       iscommand: false
       name: wait
       tags:
       - timerbreach
       type: regular
       version: -1
-    taskid: 704ade2e-1f59-4c38-8dcb-fa13f25cc47b
+    taskid: 0b2cfbde-b9e9-4b95-8f33-3e263560aa24
     timertriggers:
     - action: start
       fieldname: demoslatimer
@@ -636,13 +636,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 9713feb3-20e9-4965-8e82-bef40d4d2cfc
+      id: b719cc0d-e578-4438-8e52-c2d841d725d0
       iscommand: false
       name: Print
       script: Print
       type: regular
       version: -1
-    taskid: 9713feb3-20e9-4965-8e82-bef40d4d2cfc
+    taskid: b719cc0d-e578-4438-8e52-c2d841d725d0
     timertriggers: []
     type: regular
     view: |-
