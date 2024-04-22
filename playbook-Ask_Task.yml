@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 641d1921-e43d-4d88-8b7d-f7045d358e7d
+      id: ffde19a4-0735-4586-8833-9855e2f30cdb
       iscommand: false
       name: ""
       version: -1
-    taskid: 641d1921-e43d-4d88-8b7d-f7045d358e7d
+    taskid: ffde19a4-0735-4586-8833-9855e2f30cdb
     timertriggers: []
     type: start
     view: |-
@@ -69,13 +69,13 @@ tasks:
     task:
       brand: Builtin
       description: Set a value in context under the key you entered.
-      id: 3dfb95c0-5801-4f94-8299-20dfb8ad868d
+      id: 47363ac8-903c-49c9-8b0b-f300f9088b06
       iscommand: false
       name: Set
       script: Set
       type: regular
       version: -1
-    taskid: 3dfb95c0-5801-4f94-8299-20dfb8ad868d
+    taskid: 47363ac8-903c-49c9-8b0b-f300f9088b06
     timertriggers: []
     type: regular
     view: |-
@@ -137,12 +137,12 @@ tasks:
     task:
       brand: ""
       description: Indicates whether a given value is a member of given array
-      id: 69994287-287a-4e4b-8839-f209a8663720
+      id: 8619978d-cdf3-42ed-8799-8a15fe904466
       iscommand: false
       name: Condition
       type: condition
       version: -1
-    taskid: 69994287-287a-4e4b-8839-f209a8663720
+    taskid: 8619978d-cdf3-42ed-8799-8a15fe904466
     timertriggers: []
     type: condition
     view: |-
@@ -164,12 +164,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 27d423e0-4cfb-45e2-8c73-eab8506ae708
+      id: a430fba2-10b0-434f-8945-0592e2ebdae2
       iscommand: false
       name: "Yes"
       type: regular
       version: -1
-    taskid: 27d423e0-4cfb-45e2-8c73-eab8506ae708
+    taskid: a430fba2-10b0-434f-8945-0592e2ebdae2
     timertriggers: []
     type: regular
     view: |-
@@ -191,12 +191,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5e529c3c-661a-42e6-889c-fed46787bcf8
+      id: 0a56203f-6aaa-4352-89ce-0295617239ca
       iscommand: false
       name: "No"
       type: regular
       version: -1
-    taskid: 5e529c3c-661a-42e6-889c-fed46787bcf8
+    taskid: 0a56203f-6aaa-4352-89ce-0295617239ca
     timertriggers: []
     type: regular
     view: |-
@@ -226,13 +226,13 @@ tasks:
     task:
       brand: EWSO365
       description: Sends an email.
-      id: 7f2d583d-1e0f-4780-8cad-3a64d09bde05
+      id: ecd78700-a3bb-4dac-8913-000473158c26
       iscommand: true
       name: sendmail
       script: EWSO365|||send-mail
       type: regular
       version: -1
-    taskid: 7f2d583d-1e0f-4780-8cad-3a64d09bde05
+    taskid: ecd78700-a3bb-4dac-8913-000473158c26
     timertriggers: []
     type: regular
     view: |-
@@ -270,13 +270,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: e2366f7a-bf4d-4784-8b79-acc9322d0da6
+      id: a2e0dbd4-e8db-48a8-80ed-7d46a17903bc
       iscommand: false
       name: Make an array
       script: Set
       type: regular
       version: -1
-    taskid: e2366f7a-bf4d-4784-8b79-acc9322d0da6
+    taskid: a2e0dbd4-e8db-48a8-80ed-7d46a17903bc
     timertriggers: []
     type: regular
     view: |-
@@ -318,12 +318,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e837ca34-2109-40ca-8548-e791258817e3
+      id: 95422f1f-45e8-480b-8ace-ae7cde9e0333
       iscommand: false
       name: Ask Task
       type: condition
       version: -1
-    taskid: e837ca34-2109-40ca-8548-e791258817e3
+    taskid: 95422f1f-45e8-480b-8ace-ae7cde9e0333
     timertriggers: []
     type: condition
     view: |-
