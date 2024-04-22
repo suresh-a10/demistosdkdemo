@@ -36,11 +36,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3a6894c4-fbce-4785-820b-ff2ed02a9f8b
+      id: 7362f38e-fbf7-4290-80d8-4965c016cc2f
       iscommand: false
       name: ""
       version: -1
-    taskid: 3a6894c4-fbce-4785-820b-ff2ed02a9f8b
+    taskid: 7362f38e-fbf7-4290-80d8-4965c016cc2f
     timertriggers: []
     type: start
     view: |-
@@ -69,13 +69,13 @@ tasks:
     task:
       brand: ""
       description: Queries a domain in AlienVault OTX.
-      id: 016775fd-af7e-4094-8e37-03b75e274b28
+      id: 331dc379-0ca9-493d-8544-642ce0db51a5
       iscommand: true
       name: Domain command
       script: '|||domain'
       type: regular
       version: -1
-    taskid: 016775fd-af7e-4094-8e37-03b75e274b28
+    taskid: 331dc379-0ca9-493d-8544-642ce0db51a5
     timertriggers: []
     type: regular
     view: |-
@@ -97,12 +97,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ea5fb036-b9c2-40d8-8946-47d1be707099
+      id: 5900f09c-55b4-4605-8716-a5939644b211
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: ea5fb036-b9c2-40d8-8946-47d1be707099
+    taskid: 5900f09c-55b4-4605-8716-a5939644b211
     timertriggers: []
     type: title
     view: |-
