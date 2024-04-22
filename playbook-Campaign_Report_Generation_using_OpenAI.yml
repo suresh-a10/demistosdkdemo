@@ -54,11 +54,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 931a9ace-e910-43f5-854b-d2b726de5b8a
+      id: 0eefd82c-70a7-460f-8afa-91c25b86115d
       iscommand: false
       name: ""
       version: -1
-    taskid: 931a9ace-e910-43f5-854b-d2b726de5b8a
+    taskid: 0eefd82c-70a7-460f-8afa-91c25b86115d
     timertriggers: []
     type: start
     view: |-
@@ -122,12 +122,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 73e631c7-ba82-48b8-864f-988000e4d8f5
+      id: 1be462f8-94c4-4524-85c0-53b2360c7bf4
       iscommand: false
       name: Choose which of the created reports should be sent and published
       type: collection
       version: -1
-    taskid: 73e631c7-ba82-48b8-864f-988000e4d8f5
+    taskid: 1be462f8-94c4-4524-85c0-53b2360c7bf4
     timertriggers: []
     type: collection
     view: |-
@@ -156,13 +156,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 15e20eaa-24be-4da8-8d69-be806909b7bf
+      id: 77d1d38e-0c20-47ea-8ebc-5098d374eb14
       iscommand: false
       name: Don't publish any reports
       script: Print
       type: regular
       version: -1
-    taskid: 15e20eaa-24be-4da8-8d69-be806909b7bf
+    taskid: 77d1d38e-0c20-47ea-8ebc-5098d374eb14
     timertriggers: []
     type: regular
     view: |-
@@ -196,13 +196,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2d0e13c1-b84d-4c35-8280-9040ed047a19
+      id: 0c084407-9373-44d7-8866-e30d522737fb
       iscommand: false
       name: Create Threat Intel Report for each indicator separately
       playbookId: 49005dd2-b752-48f2-8c62-50a22105c3f7
       type: playbook
       version: -1
-    taskid: 2d0e13c1-b84d-4c35-8280-9040ed047a19
+    taskid: 0c084407-9373-44d7-8866-e30d522737fb
     timertriggers: []
     type: playbook
     view: |-
@@ -240,12 +240,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5c0967db-69c0-4e09-812e-eb6684d3f031
+      id: 99f36f5e-1a9b-4e2e-8674-eb46d5ff4ea9
       iscommand: false
       name: Are there any reports to publish?
       type: condition
       version: -1
-    taskid: 5c0967db-69c0-4e09-812e-eb6684d3f031
+    taskid: 99f36f5e-1a9b-4e2e-8674-eb46d5ff4ea9
     timertriggers: []
     type: condition
     view: |-
@@ -301,13 +301,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.indicators
-      id: 2e0b0059-d246-459c-850f-da2c3b513255
+      id: 5a7a9181-8139-49ed-83ca-21b81a5e4244
       iscommand: true
       name: Remove the "ToBeReported" tag and add "ReportCreated"
       script: Builtin|||setIndicators
       type: regular
       version: -1
-    taskid: 2e0b0059-d246-459c-850f-da2c3b513255
+    taskid: 5a7a9181-8139-49ed-83ca-21b81a5e4244
     timertriggers: []
     type: regular
     view: |-
@@ -343,13 +343,13 @@ tasks:
         Search for XSOAR Indicators and returns the id, indicator_type, value, and score/verdict.
 
         You can add additional fields from the indicators using the add_field_to_context argument.
-      id: 3dba9783-4c93-4a7f-828e-e3884dc61be3
+      id: ccb1d666-f0d6-4583-83ed-5926b70fe1c6
       iscommand: false
       name: Get indicators tagged as "To Be Reported"
       script: SearchIndicator
       type: regular
       version: -1
-    taskid: 3dba9783-4c93-4a7f-828e-e3884dc61be3
+    taskid: ccb1d666-f0d6-4583-83ed-5926b70fe1c6
     timertriggers: []
     type: regular
     view: |-
@@ -371,12 +371,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e74e4f0f-d4f5-46d5-8e42-37f36a84b2bc
+      id: 1e3db83e-9377-4e3f-853b-e8f7b1ca6b25
       iscommand: false
       name: End
       type: title
       version: -1
-    taskid: e74e4f0f-d4f5-46d5-8e42-37f36a84b2bc
+    taskid: 1e3db83e-9377-4e3f-853b-e8f7b1ca6b25
     timertriggers: []
     type: title
     view: |-
@@ -402,13 +402,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: 06755670-a695-4206-86f7-2dd29a0d894d
+      id: 5bd78cc2-360b-42d2-8226-aef3d8a6f200
       iscommand: true
       name: Close investigation
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 06755670-a695-4206-86f7-2dd29a0d894d
+    taskid: 5bd78cc2-360b-42d2-8226-aef3d8a6f200
     timertriggers: []
     type: regular
     view: |-
@@ -449,13 +449,13 @@ tasks:
     task:
       brand: ""
       description: Sets a Threat Intel Report as published.
-      id: ad2f0f49-6c71-4aba-880d-37eae2b1be2d
+      id: d5e18ed6-8d44-4ef8-8bae-0796377873cd
       iscommand: false
       name: Mark as published
       script: PublishThreatIntelReport
       type: regular
       version: -1
-    taskid: ad2f0f49-6c71-4aba-880d-37eae2b1be2d
+    taskid: d5e18ed6-8d44-4ef8-8bae-0796377873cd
     timertriggers: []
     type: regular
     view: |-
@@ -490,12 +490,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4ae6dfc1-27fa-40bf-8ec1-25adb8d2d88f
+      id: 6d9f194b-e74a-431a-8295-2df8809505b6
       iscommand: false
       name: Were any indicators found?
       type: condition
       version: -1
-    taskid: 4ae6dfc1-27fa-40bf-8ec1-25adb8d2d88f
+    taskid: 6d9f194b-e74a-431a-8295-2df8809505b6
     timertriggers: []
     type: condition
     view: |-
@@ -545,13 +545,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 10466eeb-3273-4939-8fc0-d2c17ae60e9f
+      id: e7d1d85d-b426-4d7b-83b8-865484ef0eb7
       iscommand: false
       name: Send Threat Intel Reports
       playbookId: 5c79ecce-b31a-438d-8c52-0658176e00d9
       type: playbook
       version: -1
-    taskid: 10466eeb-3273-4939-8fc0-d2c17ae60e9f
+    taskid: e7d1d85d-b426-4d7b-83b8-865484ef0eb7
     timertriggers: []
     type: playbook
     view: |-
