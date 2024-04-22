@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 768a1050-fa6e-4db1-89d9-c92bb5b98e94
+      id: 90ac4ac1-eeec-4b14-8b31-a615fbb96d92
       iscommand: false
       name: ""
       version: -1
-    taskid: 768a1050-fa6e-4db1-89d9-c92bb5b98e94
+    taskid: 90ac4ac1-eeec-4b14-8b31-a615fbb96d92
     timertriggers: []
     type: start
     view: |-
@@ -63,13 +63,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.find.indicators
-      id: 97e8089e-1226-4949-8982-cb8f7d88e983
+      id: 9a91d844-d909-4557-8fcc-8d73c9b68374
       iscommand: true
       name: search Indicators
       script: Builtin|||findIndicators
       type: regular
       version: -1
-    taskid: 97e8089e-1226-4949-8982-cb8f7d88e983
+    taskid: 9a91d844-d909-4557-8fcc-8d73c9b68374
     timertriggers: []
     type: regular
     view: |-
@@ -99,13 +99,13 @@ tasks:
     task:
       brand: Demisto REST API
       description: send HTTP POST request
-      id: 6b169612-8c44-4a73-8018-0c6906f84362
+      id: d3cbba40-6273-4930-8b0c-3fe3800e3570
       iscommand: true
       name: delete indicators
       script: Demisto REST API|||demisto-api-post
       type: regular
       version: -1
-    taskid: 6b169612-8c44-4a73-8018-0c6906f84362
+    taskid: d3cbba40-6273-4930-8b0c-3fe3800e3570
     timertriggers: []
     type: regular
     view: |-
