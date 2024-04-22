@@ -8,7 +8,7 @@
 	"hideSearch": false,
 	"id": "Prisma Cloud Incidents",
 	"isCommon": true,
-	"itemVersion": "4.3.1",
+	"itemVersion": "4.3.0",
 	"layout": [
 		{
 			"forceRange": false,
