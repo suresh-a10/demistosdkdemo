@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 12960e44-14cd-47e8-8ff8-c50c00b42700
+      id: 643f2e66-765f-4d4c-883f-b50040c22f45
       iscommand: false
       name: ""
       version: -1
-    taskid: 12960e44-14cd-47e8-8ff8-c50c00b42700
+    taskid: 643f2e66-765f-4d4c-883f-b50040c22f45
     timertriggers: []
     type: start
     view: |-
@@ -69,13 +69,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: a3f37851-fa90-4925-8573-049e54acce98
+      id: ad8262ba-0b91-47d8-88a3-e6ae7655602a
       iscommand: false
       name: Set
       script: SetAndHandleEmpty
       type: regular
       version: -1
-    taskid: a3f37851-fa90-4925-8573-049e54acce98
+    taskid: ad8262ba-0b91-47d8-88a3-e6ae7655602a
     timertriggers: []
     type: regular
     view: |-
