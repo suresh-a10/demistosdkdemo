@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 237eeec7-3678-4382-8b61-e3a77c3f0017
+      id: 60d26d72-4e69-4b35-850f-6449d79b78a1
       iscommand: false
       name: ""
       version: -1
-    taskid: 237eeec7-3678-4382-8b61-e3a77c3f0017
+    taskid: 60d26d72-4e69-4b35-850f-6449d79b78a1
     timertriggers: []
     type: start
     view: |-
@@ -69,13 +69,13 @@ tasks:
       brand: ""
       description: Schedule a command to run inside the war room at a future time
         (once or reoccurring)
-      id: 9cc281c8-b3c5-40b3-8f0b-f7b3408b326c
+      id: c1ee33de-27a9-4055-8f49-98ce941c127f
       iscommand: false
       name: schedule Command
       script: ScheduleCommand
       type: regular
       version: -1
-    taskid: 9cc281c8-b3c5-40b3-8f0b-f7b3408b326c
+    taskid: c1ee33de-27a9-4055-8f49-98ce941c127f
     timertriggers: []
     type: regular
     view: |-
