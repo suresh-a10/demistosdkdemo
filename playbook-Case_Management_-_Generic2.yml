@@ -33,11 +33,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 201ef5a2-95f9-4eec-8e05-92d766a39ca8
+      id: fac0ca9d-95b9-413b-8118-53fc48fd5d5e
       iscommand: false
       name: ""
       version: -1
-    taskid: 201ef5a2-95f9-4eec-8e05-92d766a39ca8
+    taskid: fac0ca9d-95b9-413b-8118-53fc48fd5d5e
     timertriggers: []
     type: start
     view: |-
@@ -135,12 +135,12 @@ tasks:
         - Manually review and investigate this incident.
         - Complete the Closing Notes and select the Close Reason to close this Incident upon completion
 
-      id: 74b1c3b9-a427-4d0c-8948-cc1a75fdfca0
+      id: 07d7db4d-e420-445d-86a3-3f50e535e024
       iscommand: false
       name: Investigate
       type: collection
       version: -1
-    taskid: 74b1c3b9-a427-4d0c-8948-cc1a75fdfca0
+    taskid: 07d7db4d-e420-445d-86a3-3f50e535e024
     timertriggers: []
     type: collection
     view: |-
@@ -173,13 +173,13 @@ tasks:
       description: Extracts all indicators that match the regex for the indicator
         type, and enriches the repuration using the reputation command defined for
         the indicator type.
-      id: 451ffd86-4ba8-4160-80f7-b695b54c8bbe
+      id: 0faf4ea0-0e45-4198-8715-89ec45fa33b6
       iscommand: true
       name: Extract indicators from incident
       script: Builtin|||extractIndicators
       type: regular
       version: -1
-    taskid: 451ffd86-4ba8-4160-80f7-b695b54c8bbe
+    taskid: 0faf4ea0-0e45-4198-8715-89ec45fa33b6
     timertriggers: []
     type: regular
     view: |-
@@ -201,12 +201,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9da7aff0-8b5d-4285-8aaf-3e14c0ef461f
+      id: 8bfc9dff-5df2-4ac5-8e44-7f1a720fffb4
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 9da7aff0-8b5d-4285-8aaf-3e14c0ef461f
+    taskid: 8bfc9dff-5df2-4ac5-8e44-7f1a720fffb4
     timertriggers: []
     type: title
     view: |-
@@ -240,13 +240,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: 919928ac-c650-4bc9-8607-4465115d0760
+      id: ac359644-3992-4902-8d9e-872373a0b337
       iscommand: true
       name: Close Incident
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 919928ac-c650-4bc9-8607-4465115d0760
+    taskid: ac359644-3992-4902-8d9e-872373a0b337
     timertriggers: []
     type: regular
     view: |-
@@ -282,12 +282,12 @@ tasks:
     task:
       brand: ""
       description: Checks to see if there is an Owner assigned to this case.
-      id: 652e61cc-8647-4cf1-84cc-1e917af75793
+      id: fd34f66c-b8bd-4ff8-8f1b-620a3e1b57f5
       iscommand: false
       name: Is an Owner already assigned?
       type: condition
       version: -1
-    taskid: 652e61cc-8647-4cf1-84cc-1e917af75793
+    taskid: fd34f66c-b8bd-4ff8-8f1b-620a3e1b57f5
     timertriggers: []
     type: condition
     view: |-
@@ -312,13 +312,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c044b260-50f2-4518-8989-c90922c9e683
+      id: 585049f3-975f-44b8-8e81-6e7aabaa10ab
       iscommand: false
       name: Calculate Severity - Standard
       playbookId: Calculate Severity - Standard
       type: playbook
       version: -1
-    taskid: c044b260-50f2-4518-8989-c90922c9e683
+    taskid: 585049f3-975f-44b8-8e81-6e7aabaa10ab
     timertriggers: []
     type: playbook
     view: |-
@@ -343,12 +343,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3986fdbf-7888-4905-874c-9c8812c4aded
+      id: 6cfe779f-b559-47d3-884e-9fcccbede742
       iscommand: false
       name: Start Time to Assignment Timer
       type: title
       version: -1
-    taskid: 3986fdbf-7888-4905-874c-9c8812c4aded
+    taskid: 6cfe779f-b559-47d3-884e-9fcccbede742
     timertriggers:
     - action: start
       fieldname: timetoassignment
@@ -375,12 +375,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 609c1628-08be-4f78-8377-c43cf3dbc4c0
+      id: 1ee9e225-26c3-4250-8716-82bef6ce331f
       iscommand: false
       name: Start Remediation SLA Timer
       type: title
       version: -1
-    taskid: 609c1628-08be-4f78-8377-c43cf3dbc4c0
+    taskid: 1ee9e225-26c3-4250-8716-82bef6ce331f
     timertriggers:
     - action: start
       fieldname: remediationsla
@@ -420,12 +420,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: dbb2ee6f-d153-4134-8948-a68c9808b2ad
+      id: f14c2e5a-daf9-4838-8d11-7afaaf64ba37
       iscommand: false
       name: Exists
       type: condition
       version: -1
-    taskid: dbb2ee6f-d153-4134-8948-a68c9808b2ad
+    taskid: f14c2e5a-daf9-4838-8d11-7afaaf64ba37
     timertriggers: []
     type: condition
     view: |-
@@ -462,13 +462,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0af7194a-41b3-4929-8885-13ae1968801d
+      id: ab64dc29-88ab-427f-8dbb-399fd4c2c65a
       iscommand: false
       name: PostIncidentReportPlaybook
       playbookId: a9314178-d928-4008-89c3-c96311128390
       type: playbook
       version: -1
-    taskid: 0af7194a-41b3-4929-8885-13ae1968801d
+    taskid: ab64dc29-88ab-427f-8dbb-399fd4c2c65a
     timertriggers: []
     type: playbook
     view: |-
