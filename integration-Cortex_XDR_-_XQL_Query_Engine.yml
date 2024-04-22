@@ -39,7 +39,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.5.0
-    itemVersion: 6.1.26
+    itemVersion: 6.1.25
     packID: CortexXDR
     packName: Cortex XDR by Palo Alto Networks
     packPropagationLabels:
@@ -1688,7 +1688,7 @@ script:
   runonce: false
   script: |
     register_module_line('Cortex XDR - XQL Query Engine', 'start', __line__())
-    ### pack version: 6.1.26
+    ### pack version: 6.1.25
 
 
     import copy
