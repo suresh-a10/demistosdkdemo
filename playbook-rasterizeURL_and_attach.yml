@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9f588718-955c-40af-82b7-050f11d68d9b
+      id: eb7900c8-cc66-4ece-85d6-dee4e2f8473b
       iscommand: false
       name: ""
       version: -1
-    taskid: 9f588718-955c-40af-82b7-050f11d68d9b
+    taskid: eb7900c8-cc66-4ece-85d6-dee4e2f8473b
     timertriggers: []
     type: start
     view: |-
@@ -65,13 +65,13 @@ tasks:
     task:
       brand: ""
       description: Converts the contents of a URL to an image file or a PDF file.
-      id: 80250083-caf7-4c24-8ec8-2c15446df58a
+      id: e919b1c5-1ed8-4624-81fa-33c2543f1928
       iscommand: true
       name: Rasterize URL
       script: '|||rasterize'
       type: regular
       version: -1
-    taskid: 80250083-caf7-4c24-8ec8-2c15446df58a
+    taskid: e919b1c5-1ed8-4624-81fa-33c2543f1928
     timertriggers: []
     type: regular
     view: |-
@@ -103,13 +103,13 @@ tasks:
     task:
       brand: ""
       description: Sends an email.
-      id: 105f042b-281d-4870-844a-35cb3ff56d97
+      id: 16a462bf-2e6a-4bb8-8715-7b2534db41b4
       iscommand: true
       name: Sendemail
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: 105f042b-281d-4870-844a-35cb3ff56d97
+    taskid: 16a462bf-2e6a-4bb8-8715-7b2534db41b4
     timertriggers: []
     type: regular
     view: |-
