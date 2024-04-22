@@ -35,11 +35,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 158ce968-0954-4ff7-872b-31c055524148
+      id: 21d78761-d319-4b21-88e8-b32899e4e3bc
       iscommand: false
       name: ""
       version: -1
-    taskid: 158ce968-0954-4ff7-872b-31c055524148
+    taskid: 21d78761-d319-4b21-88e8-b32899e4e3bc
     timertriggers: []
     type: start
     view: |-
@@ -82,13 +82,13 @@ tasks:
       brand: ""
       description: |
         Encode a file as base64 and store it in context
-      id: f6a788bf-716a-4254-85ac-670520b54e8d
+      id: 3dab3e64-b92b-47fa-8fd9-20ef841b8bd9
       iscommand: false
       name: Base64 Encode - png or jpeg
       script: 25b3a0e5-547a-42fe-8932-5f7969dfca15
       type: regular
       version: -1
-    taskid: f6a788bf-716a-4254-85ac-670520b54e8d
+    taskid: 3dab3e64-b92b-47fa-8fd9-20ef841b8bd9
     timertriggers: []
     type: regular
     view: |-
@@ -115,13 +115,13 @@ tasks:
       brand: ""
       description: 'This automation creates image tags from base64 encoded images
         in context.  '
-      id: 15d212f0-9661-4d97-863f-edc56d3dc6f0
+      id: 1012b5e5-9f74-41a2-8f69-d9e97c91af5c
       iscommand: false
       name: Create html links with base64 encoded images
       script: 37a9e1d4-b046-4b79-8ed3-55875c9891cd
       type: regular
       version: -1
-    taskid: 15d212f0-9661-4d97-863f-edc56d3dc6f0
+    taskid: 1012b5e5-9f74-41a2-8f69-d9e97c91af5c
     timertriggers: []
     type: regular
     view: |-
@@ -182,12 +182,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: fa008ffb-6b9f-4bad-8019-39381efc7da2
+      id: c19e2411-b60d-4242-89d3-0facf98f9355
       iscommand: false
       name: Ask User for an Email Address
       type: collection
       version: -1
-    taskid: fa008ffb-6b9f-4bad-8019-39381efc7da2
+    taskid: c19e2411-b60d-4242-89d3-0facf98f9355
     timertriggers: []
     type: collection
     view: |-
@@ -236,13 +236,13 @@ tasks:
     task:
       brand: ""
       description: Sends an email.
-      id: 1920d75f-d757-4d5f-801c-9aea8dc25871
+      id: 87f3dcef-7b04-4911-81b1-1c88b2f9e9f4
       iscommand: true
       name: Send Email with Images in HTML Body
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: 1920d75f-d757-4d5f-801c-9aea8dc25871
+    taskid: 87f3dcef-7b04-4911-81b1-1c88b2f9e9f4
     timertriggers: []
     type: regular
     view: |-
@@ -270,13 +270,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: fd5cefa6-0eda-44c1-8e5b-77b0f403cc5b
+      id: 45f843e7-0490-45c5-81e5-a1178d535ff1
       iscommand: true
       name: 'Fin. '
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: fd5cefa6-0eda-44c1-8e5b-77b0f403cc5b
+    taskid: 45f843e7-0490-45c5-81e5-a1178d535ff1
     timertriggers: []
     type: regular
     view: |-
