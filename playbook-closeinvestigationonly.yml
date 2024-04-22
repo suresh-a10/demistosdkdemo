@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f93f71f6-b86c-4e9c-8bc3-e9c8006c1c51
+      id: ac1a7b78-8f0e-4a80-8c7e-6626f779770e
       iscommand: false
       name: ""
       version: -1
-    taskid: f93f71f6-b86c-4e9c-8bc3-e9c8006c1c51
+    taskid: ac1a7b78-8f0e-4a80-8c7e-6626f779770e
     timertriggers: []
     type: start
     view: |-
@@ -60,13 +60,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: 2971931d-6741-4ba0-8c7b-855d4490ce7a
+      id: d367ffda-5c9a-48f2-8845-412c18b74bee
       iscommand: true
       name: closeinvestigation
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 2971931d-6741-4ba0-8c7b-855d4490ce7a
+    taskid: d367ffda-5c9a-48f2-8845-412c18b74bee
     timertriggers: []
     type: regular
     view: |-
@@ -91,12 +91,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8c09b49c-ba9c-4d4c-884e-9fe2bd106708
+      id: 282cf01e-cbc9-4e31-82b0-d0927c397caa
       iscommand: false
       name: Untitled Task
       type: regular
       version: -1
-    taskid: 8c09b49c-ba9c-4d4c-884e-9fe2bd106708
+    taskid: 282cf01e-cbc9-4e31-82b0-d0927c397caa
     timertriggers: []
     type: regular
     view: |-
@@ -123,12 +123,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 740b7e7d-b475-4b3b-84ec-1f35b913686b
+      id: cb8a799d-0583-4079-8c39-43186ff3f862
       iscommand: false
       name: If option1 or option2
       type: condition
       version: -1
-    taskid: 740b7e7d-b475-4b3b-84ec-1f35b913686b
+    taskid: cb8a799d-0583-4079-8c39-43186ff3f862
     timertriggers: []
     type: condition
     view: |-
@@ -150,12 +150,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 90701cf0-55bf-4606-8e80-0790ea896c85
+      id: ec594ac7-9d8a-45da-86c2-a8ee3b195b28
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 90701cf0-55bf-4606-8e80-0790ea896c85
+    taskid: ec594ac7-9d8a-45da-86c2-a8ee3b195b28
     timertriggers: []
     type: title
     view: |-
