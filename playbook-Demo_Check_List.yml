@@ -41,11 +41,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d8bafbd9-5a89-4b5a-877d-43b375aa52a4
+      id: 22add77e-7c26-42cd-8ecd-59cb3499a500
       iscommand: false
       name: ""
       version: -1
-    taskid: d8bafbd9-5a89-4b5a-877d-43b375aa52a4
+    taskid: 22add77e-7c26-42cd-8ecd-59cb3499a500
     timertriggers: []
     type: start
     view: |-
@@ -79,13 +79,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: 1899bafe-8504-4d87-8130-be9cb9c0eec2
+      id: 7bdf1726-9434-4306-8f59-cf06c8b61eb8
       iscommand: false
       name: Print users
       script: SetAndHandleEmpty
       type: regular
       version: -1
-    taskid: 1899bafe-8504-4d87-8130-be9cb9c0eec2
+    taskid: 7bdf1726-9434-4306-8f59-cf06c8b61eb8
     timertriggers: []
     type: regular
     view: |-
@@ -111,13 +111,13 @@ tasks:
     task:
       brand: EWSO365
       description: Sends an email.
-      id: 0893b86f-deb0-4967-88f0-571854444bb6
+      id: 5a88c9c4-b4ff-46bc-884f-0acda52476dc
       iscommand: true
       name: Send Mail
       script: EWSO365|||send-mail
       type: regular
       version: -1
-    taskid: 0893b86f-deb0-4967-88f0-571854444bb6
+    taskid: 5a88c9c4-b4ff-46bc-884f-0acda52476dc
     timertriggers: []
     type: regular
     view: |-
