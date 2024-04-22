@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f58f5226-a706-4e25-8c59-c66e932c6e17
+      id: 74033744-cb64-49ad-8cc3-f340f6d1ad3b
       iscommand: false
       name: ""
       version: -1
-    taskid: f58f5226-a706-4e25-8c59-c66e932c6e17
+    taskid: 74033744-cb64-49ad-8cc3-f340f6d1ad3b
     timertriggers: []
     type: start
     view: |-
@@ -61,13 +61,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.task.complete
-      id: 986021d3-d7b3-49a9-87e8-ebef7edca7ec
+      id: 9b28cd12-7efb-4395-8a53-82644fe65c1c
       iscommand: true
       name: complete_task
       script: Builtin|||taskComplete
       type: regular
       version: -1
-    taskid: 986021d3-d7b3-49a9-87e8-ebef7edca7ec
+    taskid: 9b28cd12-7efb-4395-8a53-82644fe65c1c
     timertriggers: []
     type: regular
     view: |-
@@ -90,7 +90,7 @@ tasks:
     task:
       brand: ""
       description: kcd_sleep_automation
-      id: 682b8117-9a03-4e79-88f6-0888dfeb979e
+      id: 41b76788-bbe6-4e72-82a3-467ce774f0a4
       iscommand: false
       name: Sleep task
       script: e18fd371-8235-482f-8f54-49bbec266cf7
@@ -98,7 +98,7 @@ tasks:
       - timeout
       type: regular
       version: -1
-    taskid: 682b8117-9a03-4e79-88f6-0888dfeb979e
+    taskid: 41b76788-bbe6-4e72-82a3-467ce774f0a4
     timertriggers: []
     type: regular
     view: |-
@@ -127,13 +127,13 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds
-      id: dcd5ac4d-6d8d-44b7-808b-7cb711d4f925
+      id: a8944150-e414-41a8-828b-102d2227ae6c
       iscommand: false
       name: temporary task
       script: Sleep
       type: regular
       version: -1
-    taskid: dcd5ac4d-6d8d-44b7-808b-7cb711d4f925
+    taskid: a8944150-e414-41a8-828b-102d2227ae6c
     timertriggers: []
     type: regular
     view: |-
@@ -162,7 +162,7 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds.
-      id: cd6c2691-bff1-4d7f-8249-2ee16b690b66
+      id: 8cca72b4-4761-4bf2-88ac-441a06ff8cec
       iscommand: false
       name: Sleep
       script: Sleep
@@ -170,7 +170,7 @@ tasks:
       - taskcomplete
       type: regular
       version: -1
-    taskid: cd6c2691-bff1-4d7f-8249-2ee16b690b66
+    taskid: 8cca72b4-4761-4bf2-88ac-441a06ff8cec
     timertriggers: []
     type: regular
     view: |-
@@ -196,13 +196,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 5b8aad01-b613-454e-8e4f-0aa509fec434
+      id: 6224d27a-02df-483f-83ff-6434b6989c83
       iscommand: false
       name: Print Yes
       script: Print
       type: regular
       version: -1
-    taskid: 5b8aad01-b613-454e-8e4f-0aa509fec434
+    taskid: 6224d27a-02df-483f-83ff-6434b6989c83
     timertriggers: []
     type: regular
     view: |-
