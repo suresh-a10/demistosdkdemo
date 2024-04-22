@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d7c7a7ac-3a63-411d-8fe7-ade7bb008a31
+      id: 0c9679c7-5397-4980-8778-e2536d96c38d
       iscommand: false
       name: ""
       version: -1
-    taskid: d7c7a7ac-3a63-411d-8fe7-ade7bb008a31
+    taskid: 0c9679c7-5397-4980-8778-e2536d96c38d
     timertriggers: []
     type: start
     view: |-
@@ -68,13 +68,13 @@ tasks:
     task:
       brand: ""
       description: Send an email
-      id: bdda79b7-84a1-45a8-800a-2a761e550908
+      id: 8b08cb2b-580b-41bf-8efb-006582b34030
       iscommand: true
       name: Send Email
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: bdda79b7-84a1-45a8-800a-2a761e550908
+    taskid: 8b08cb2b-580b-41bf-8efb-006582b34030
     timertriggers: []
     type: regular
     view: |-
@@ -120,12 +120,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c613ed56-d93f-407f-805d-9f92a57415a8
+      id: 976bfeb7-989e-4443-877b-24741e25f5b5
       iscommand: false
       name: 'Is it risky? '
       type: condition
       version: -1
-    taskid: c613ed56-d93f-407f-805d-9f92a57415a8
+    taskid: 976bfeb7-989e-4443-877b-24741e25f5b5
     timertriggers: []
     type: condition
     view: |-
@@ -154,13 +154,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 1b51d625-a86e-4e10-87a6-35a740ded470
+      id: d2021d95-6002-4bd5-8b61-6c0aef0fa1d4
       iscommand: false
       name: Print
       script: Print
       type: regular
       version: -1
-    taskid: 1b51d625-a86e-4e10-87a6-35a740ded470
+    taskid: d2021d95-6002-4bd5-8b61-6c0aef0fa1d4
     timertriggers: []
     type: regular
     view: |-
@@ -183,13 +183,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: aed2659e-5645-4366-85a9-face1068a707
+      id: 2cbfaf3c-6298-4c95-8168-88ac1177cf88
       iscommand: true
       name: Close
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: aed2659e-5645-4366-85a9-face1068a707
+    taskid: 2cbfaf3c-6298-4c95-8168-88ac1177cf88
     timertriggers: []
     type: regular
     view: |-
