@@ -29,7 +29,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 1.14.25
+    itemVersion: 1.14.19
     packID: CommonScripts
     packName: Common Scripts
     packPropagationLabels:
@@ -59,7 +59,7 @@ runas: DBotWeakRole
 runonce: false
 script: |
   register_module_line('IsInternalDomainName', 'start', __line__())
-  ### pack version: 1.14.25
+  ### pack version: 1.14.19
   """
   Script to check if a domain or a sub domain is part of a given domain
   """
