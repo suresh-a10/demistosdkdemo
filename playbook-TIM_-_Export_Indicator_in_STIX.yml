@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: dfbf679c-10f8-484c-8911-8d4b7e6b19d8
+      id: f5ef2d72-1255-4bd1-83bb-27b845c91c86
       iscommand: false
       name: ""
       version: -1
-    taskid: dfbf679c-10f8-484c-8911-8d4b7e6b19d8
+    taskid: f5ef2d72-1255-4bd1-83bb-27b845c91c86
     timertriggers: []
     type: start
     view: |-
@@ -68,13 +68,13 @@ tasks:
         Search for XSOAR Indicators and returns the id, indicator_type, value, and score/verdict.
 
         You can add additional fields from the indicators using the add_field_to_context argument.
-      id: 5d26a105-a8a1-4702-8bd9-7db53e2b6144
+      id: a6b14a77-4485-4bf9-83a3-50fac15cec88
       iscommand: false
       name: Search Indicators
       script: SearchIndicator
       type: regular
       version: -1
-    taskid: 5d26a105-a8a1-4702-8bd9-7db53e2b6144
+    taskid: a6b14a77-4485-4bf9-83a3-50fac15cec88
     timertriggers: []
     type: regular
     view: |-
@@ -107,13 +107,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP POST request.
-      id: 09dba819-95f2-43f1-8155-f1e58b414362
+      id: bb142a83-1ea0-4ad2-87ba-bd7011024ce5
       iscommand: true
       name: Batch export to STIX
       script: Core REST API|||core-api-post
       type: regular
       version: -1
-    taskid: 09dba819-95f2-43f1-8155-f1e58b414362
+    taskid: bb142a83-1ea0-4ad2-87ba-bd7011024ce5
     timertriggers: []
     type: regular
     view: |-
@@ -141,13 +141,13 @@ tasks:
     task:
       brand: Core REST API
       description: Download files from Core server.
-      id: 9aa6db54-fe18-4f7b-81ea-7f5fc1cc16f2
+      id: 5bd8d3da-988e-4c25-80a8-a35cff2a1192
       iscommand: true
       name: Download the STIX format file
       script: Core REST API|||core-api-download
       type: regular
       version: -1
-    taskid: 9aa6db54-fe18-4f7b-81ea-7f5fc1cc16f2
+    taskid: 5bd8d3da-988e-4c25-80a8-a35cff2a1192
     timertriggers: []
     type: regular
     view: |-
@@ -173,13 +173,13 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds
-      id: e664c188-cf22-434c-8115-5c3dcb85688b
+      id: a8e134c9-0714-4569-8b34-eb27605fadc4
       iscommand: false
       name: wait for file to generate
       script: Sleep
       type: regular
       version: -1
-    taskid: e664c188-cf22-434c-8115-5c3dcb85688b
+    taskid: a8e134c9-0714-4569-8b34-eb27605fadc4
     timertriggers: []
     type: regular
     view: |-
