@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d77c88de-278b-443b-86e8-c34cead774aa
+      id: 051f15c8-7325-4ceb-848e-5203ea7f87ab
       iscommand: false
       name: ""
       version: -1
-    taskid: d77c88de-278b-443b-86e8-c34cead774aa
+    taskid: 051f15c8-7325-4ceb-848e-5203ea7f87ab
     timertriggers: []
     type: start
     view: |-
@@ -69,13 +69,13 @@ tasks:
         less-busy-user: The less busy analyst will be picked to be the incident owner.
         online: The analyst is picked randomly from all online analysts, according to the provided roles (if no roles provided, will fetch all users).
         current: The user that executed the command
-      id: 11f4e739-ae0e-4b42-81d1-396bf38206ca
+      id: 999c11ae-7eb8-4594-83c3-b6a7a72eb3c9
       iscommand: false
       name: assign analyst
       script: AssignAnalystToIncident
       type: regular
       version: -1
-    taskid: 11f4e739-ae0e-4b42-81d1-396bf38206ca
+    taskid: 999c11ae-7eb8-4594-83c3-b6a7a72eb3c9
     timertriggers: []
     type: regular
     view: |-
