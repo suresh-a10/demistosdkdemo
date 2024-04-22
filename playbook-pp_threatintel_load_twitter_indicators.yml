@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4ecce93c-f32b-4d17-8901-9f8e9acc3d52
+      id: 61e5cb25-b348-476f-8644-a0a4e5fe6aa4
       iscommand: false
       name: ""
       version: -1
-    taskid: 4ecce93c-f32b-4d17-8901-9f8e9acc3d52
+    taskid: 61e5cb25-b348-476f-8644-a0a4e5fe6aa4
     timertriggers: []
     type: start
     view: |-
@@ -62,13 +62,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 87f1bab7-1f4e-4d80-84ca-d41bf9d7f42d
+      id: 5b61b691-8713-45f2-8f76-facb8223f6f9
       iscommand: false
       name: Fetch and load intel feed
       script: pp_threatintel_fetch_twitter_feed
       type: regular
       version: -1
-    taskid: 87f1bab7-1f4e-4d80-84ca-d41bf9d7f42d
+    taskid: 5b61b691-8713-45f2-8f76-facb8223f6f9
     timertriggers: []
     type: regular
     view: |-
@@ -95,13 +95,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e4cfd9cd-672b-4599-8385-10a8e72db0e8
+      id: 648b2234-4055-4119-8c68-1bb539aa1bbb
       iscommand: false
       name: Close incident
       script: pp_CloseInvestigation_v2
       type: regular
       version: -1
-    taskid: e4cfd9cd-672b-4599-8385-10a8e72db0e8
+    taskid: 648b2234-4055-4119-8c68-1bb539aa1bbb
     timertriggers: []
     type: regular
     view: |-
@@ -129,13 +129,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c314282a-bff0-4236-8962-6c9102763c55
+      id: b97c8673-a6a7-41e9-80da-82bbf97ec087
       iscommand: false
       name: Get number of indicators before loading today's data
       script: pp_splunk_search_v2
       type: regular
       version: -1
-    taskid: c314282a-bff0-4236-8962-6c9102763c55
+    taskid: b97c8673-a6a7-41e9-80da-82bbf97ec087
     timertriggers: []
     type: regular
     view: |-
@@ -163,13 +163,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8a8b8143-e71a-42f8-8931-e241b69d09aa
+      id: c8b778d7-8695-4902-820c-a611445b2cf5
       iscommand: false
       name: Get number of indicators after loading today's data
       script: pp_splunk_search_v2
       type: regular
       version: -1
-    taskid: 8a8b8143-e71a-42f8-8931-e241b69d09aa
+    taskid: c8b778d7-8695-4902-820c-a611445b2cf5
     timertriggers: []
     type: regular
     view: |-
