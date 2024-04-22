@@ -23,7 +23,7 @@
 	"hidden": false,
 	"id": "incident_gdprnotifyauthorities",
 	"isReadOnly": true,
-	"itemVersion": "1.14.25",
+	"itemVersion": "1.14.19",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "GDPR Notify Authorities",
