@@ -10,10 +10,10 @@
 	"incidentSamples": null,
 	"indicatorSamples": null,
 	"instanceIds": null,
-	"itemVersion": "4.3.1",
+	"itemVersion": "4.3.0",
 	"keyTypeMap": null,
 	"locked": false,
-	"logicalVersion": 1,
+	"logicalVersion": 0,
 	"mapping": {
 		"AWS CloudTrail Misconfiguration": {
 			"dontMapEventToLabels": false,
