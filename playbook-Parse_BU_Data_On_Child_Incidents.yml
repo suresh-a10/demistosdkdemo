@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c0ef6ff5-ccf3-48ba-8cfe-cefb80505984
+      id: b37b8856-0035-4e36-83c0-448af31dc667
       iscommand: false
       name: ""
       version: -1
-    taskid: c0ef6ff5-ccf3-48ba-8cfe-cefb80505984
+    taskid: b37b8856-0035-4e36-83c0-448af31dc667
     timertriggers: []
     type: start
     view: |-
@@ -67,13 +67,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 77796138-492f-4bc8-82c0-552f274c0459
+      id: 15946d44-6b53-428b-8824-81bbbd83bb2b
       iscommand: false
       name: Store the Data in Context
       script: Set
       type: regular
       version: -1
-    taskid: 77796138-492f-4bc8-82c0-552f274c0459
+    taskid: 15946d44-6b53-428b-8824-81bbbd83bb2b
     timertriggers: []
     type: regular
     view: |-
@@ -95,12 +95,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 45371bf9-2413-4cc0-803d-e7ca1d7ed64e
+      id: fcdc00cf-1f0c-4854-8b3e-f8d3c6f24cfc
       iscommand: false
       name: Untitled Task
       type: regular
       version: -1
-    taskid: 45371bf9-2413-4cc0-803d-e7ca1d7ed64e
+    taskid: fcdc00cf-1f0c-4854-8b3e-f8d3c6f24cfc
     timertriggers: []
     type: regular
     view: |-
@@ -144,13 +144,13 @@ tasks:
     task:
       brand: ""
       description: Export given array to csv file
-      id: 9ca21049-8025-4cb2-80de-4fea7be53da3
+      id: 764e495e-3973-42a1-84a7-45233f029bdf
       iscommand: false
       name: Export IOC Asset Info Based on BU
       script: ExportToCSV
       type: regular
       version: -1
-    taskid: 9ca21049-8025-4cb2-80de-4fea7be53da3
+    taskid: 764e495e-3973-42a1-84a7-45233f029bdf
     timertriggers: []
     type: regular
     view: |-
@@ -194,13 +194,13 @@ tasks:
     task:
       brand: ""
       description: Export given array to csv file
-      id: 5ec90563-ff84-427a-81fc-19ea8f56fcdf
+      id: a20542e7-5800-49c8-85fd-b5a560b5341e
       iscommand: false
       name: Export Vulnerable Assets Info Based on BU
       script: ExportToCSV
       type: regular
       version: -1
-    taskid: 5ec90563-ff84-427a-81fc-19ea8f56fcdf
+    taskid: a20542e7-5800-49c8-85fd-b5a560b5341e
     timertriggers: []
     type: regular
     view: |-
@@ -242,13 +242,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 88366e01-9606-47ae-8bb9-bb22ef92257d
+      id: 919ef36d-b0d0-4f67-8945-1a97845cf58e
       iscommand: true
       name: Set Email Properties
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 88366e01-9606-47ae-8bb9-bb22ef92257d
+    taskid: 919ef36d-b0d0-4f67-8945-1a97845cf58e
     timertriggers: []
     type: regular
     view: |-
@@ -281,13 +281,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 0ddde087-22f9-4573-8c5e-67f85cad2c6e
+      id: 278b4530-bb19-4789-877f-9e2cbd5a7575
       iscommand: false
       name: Store the Data in Context
       script: Set
       type: regular
       version: -1
-    taskid: 0ddde087-22f9-4573-8c5e-67f85cad2c6e
+    taskid: 278b4530-bb19-4789-877f-9e2cbd5a7575
     timertriggers: []
     type: regular
     view: |-
@@ -323,12 +323,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 86bcc1eb-04e1-4ee6-8585-722d36a5cd84
+      id: b1bc8a7f-36da-4750-8065-9f43ca1b75a3
       iscommand: false
       name: Check if VulAsset deails exists or not?
       type: condition
       version: -1
-    taskid: 86bcc1eb-04e1-4ee6-8585-722d36a5cd84
+    taskid: b1bc8a7f-36da-4750-8065-9f43ca1b75a3
     timertriggers: []
     type: condition
     view: |-
@@ -364,12 +364,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4c65440c-45b9-432a-8683-a7c5ac1eb3f0
+      id: 8277068a-9a9c-4196-808f-227a727dc1d9
       iscommand: false
       name: Check if  IOCAsset deails exists or not?
       type: condition
       version: -1
-    taskid: 4c65440c-45b9-432a-8683-a7c5ac1eb3f0
+    taskid: 8277068a-9a9c-4196-808f-227a727dc1d9
     timertriggers: []
     type: condition
     view: |-
@@ -404,13 +404,13 @@ tasks:
     task:
       brand: SplunkPy_test_final_v2
       description: Searches Splunk for events.
-      id: 8a62f779-ec27-4d68-87d2-5686e80033cd
+      id: 5bc9fcb4-aa6d-4b50-8820-a2bc8e0e992b
       iscommand: true
       name: query splunk (for indicators in lookup file )
       script: SplunkPy_test_final_v2|||splunk-search
       type: regular
       version: -1
-    taskid: 8a62f779-ec27-4d68-87d2-5686e80033cd
+    taskid: 5bc9fcb4-aa6d-4b50-8820-a2bc8e0e992b
     timertriggers: []
     type: regular
     view: |-
@@ -445,13 +445,13 @@ tasks:
     task:
       brand: SplunkPy_test_final_v2
       description: Searches Splunk for events.
-      id: 3abd344e-f873-4438-84b3-42b0dba201aa
+      id: 8bea2a0c-1dab-47af-8478-e3e79eca1901
       iscommand: true
       name: query splunk (for indicators in lookup file )
       script: SplunkPy_test_final_v2|||splunk-search
       type: regular
       version: -1
-    taskid: 3abd344e-f873-4438-84b3-42b0dba201aa
+    taskid: 8bea2a0c-1dab-47af-8478-e3e79eca1901
     timertriggers: []
     type: regular
     view: |-
@@ -486,13 +486,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: b0d44022-4da2-449b-8fe9-98b61ea66988
+      id: b2911807-4633-493d-8e83-babe34847b76
       iscommand: false
       name: Send Email to BU
       script: d4ff89db-151e-41fd-8719-471b2019098f
       type: regular
       version: -1
-    taskid: b0d44022-4da2-449b-8fe9-98b61ea66988
+    taskid: b2911807-4633-493d-8e83-babe34847b76
     timertriggers: []
     type: regular
     view: |-
@@ -533,13 +533,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 93e8cb5d-e4a3-4952-8910-d478b172c70a
+      id: cc73ed6b-fe35-41a1-813b-0dac8850ba1b
       iscommand: true
       name: Set Email Properties
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 93e8cb5d-e4a3-4952-8910-d478b172c70a
+    taskid: cc73ed6b-fe35-41a1-813b-0dac8850ba1b
     timertriggers: []
     type: regular
     view: |-
@@ -561,12 +561,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5a4f1740-c863-41bd-83e5-fda32129ad9d
+      id: b97955c5-447c-4840-8894-ef02cf22c4b6
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 5a4f1740-c863-41bd-83e5-fda32129ad9d
+    taskid: b97955c5-447c-4840-8894-ef02cf22c4b6
     timertriggers: []
     type: title
     view: |-
@@ -616,13 +616,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 99aa63b0-92ca-4863-8789-b3460a16d1a7
+      id: 70ca1ff8-bfbd-4907-8325-238bee685c13
       iscommand: false
       name: Set
       script: Set
       type: regular
       version: -1
-    taskid: 99aa63b0-92ca-4863-8789-b3460a16d1a7
+    taskid: 70ca1ff8-bfbd-4907-8325-238bee685c13
     timertriggers: []
     type: regular
     view: |-
