@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ea8d67d6-30fb-44c1-8073-534bca0629cc
+      id: 3bf34304-6118-44de-8a66-3b432eb86131
       iscommand: false
       name: ""
       version: -1
-    taskid: ea8d67d6-30fb-44c1-8073-534bca0629cc
+    taskid: 3bf34304-6118-44de-8a66-3b432eb86131
     timertriggers: []
     type: start
     view: |-
@@ -95,12 +95,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d40f8963-1a73-401a-88c6-27ce9c50c3f9
+      id: 235bc663-2dda-4d61-8812-4dc5b7485ad6
       iscommand: false
       name: upload json file
       type: collection
       version: -1
-    taskid: d40f8963-1a73-401a-88c6-27ce9c50c3f9
+    taskid: 235bc663-2dda-4d61-8812-4dc5b7485ad6
     timertriggers: []
     type: collection
     view: |-
@@ -129,13 +129,13 @@ tasks:
     task:
       brand: ""
       description: Load the contents of a file into context.
-      id: 42fd72fb-4cde-4b07-8452-b4a100cc3a16
+      id: 52245764-c8a4-4cf1-8494-ae9871051972
       iscommand: false
       name: read json file
       script: ReadFile
       type: regular
       version: -1
-    taskid: 42fd72fb-4cde-4b07-8452-b4a100cc3a16
+    taskid: 52245764-c8a4-4cf1-8494-ae9871051972
     timertriggers: []
     type: regular
     view: |-
@@ -161,13 +161,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.create.inc
-      id: ca0e818e-4a6b-48c9-80d0-c2e174686cad
+      id: b058951d-0fe6-44d1-8779-4c3ace68176e
       iscommand: true
       name: create incident
       script: Builtin|||createNewIncident
       type: regular
       version: -1
-    taskid: ca0e818e-4a6b-48c9-80d0-c2e174686cad
+    taskid: b058951d-0fe6-44d1-8779-4c3ace68176e
     timertriggers: []
     type: regular
     view: |-
@@ -196,7 +196,7 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 30447168-1363-4545-8163-72924b257281
+      id: 75cd33f9-d689-45b8-8807-33486b96b6b4
       iscommand: false
       name: Test Task
       script: Print
@@ -204,7 +204,7 @@ tasks:
       - taskcomplete
       type: regular
       version: -1
-    taskid: 30447168-1363-4545-8163-72924b257281
+    taskid: 75cd33f9-d689-45b8-8807-33486b96b6b4
     timertriggers: []
     type: regular
     view: |-
@@ -227,7 +227,7 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: d805647e-91b4-48c2-813e-464693ae1455
+      id: 27676ebd-084b-41b9-8e2d-9faf3361707d
       iscommand: false
       name: Print
       script: Print
@@ -235,7 +235,7 @@ tasks:
       - taskcomplete
       type: regular
       version: -1
-    taskid: d805647e-91b4-48c2-813e-464693ae1455
+    taskid: 27676ebd-084b-41b9-8e2d-9faf3361707d
     timertriggers: []
     type: regular
     view: |-
