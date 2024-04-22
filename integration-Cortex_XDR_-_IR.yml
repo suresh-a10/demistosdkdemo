@@ -201,7 +201,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 6.1.26
+    itemVersion: 6.1.25
     packID: CortexXDR
     packName: Cortex XDR by Palo Alto Networks
     packPropagationLabels:
@@ -3835,7 +3835,7 @@ script:
       required: true
     description: Remove one or more users from a role.
     name: xdr-remove-user-role
-  dockerimage: demisto/python3:3.10.14.91134
+  dockerimage: demisto/python3:3.10.14.90585
   isfetch: true
   ismappable: true
   isremotesyncin: true
@@ -3843,7 +3843,7 @@ script:
   runonce: false
   script: |
     register_module_line('Cortex XDR - IR', 'start', __line__())
-    ### pack version: 6.1.26
+    ### pack version: 6.1.25
 
 
     import hashlib
@@ -8517,8 +8517,8 @@ script:
 
 
     def get_headers(params: dict) -> dict:
-        api_key = params.get('apikey_creds', {}).get('password', '') or params.get('apikey', '')
-        api_key_id = params.get('apikey_id_creds', {}).get('password', '') or params.get('apikey_id')
+        api_key = params.get('apikey') or params.get('apikey_creds', {}).get('password', '')
+        api_key_id = params.get('apikey_id') or params.get('apikey_id_creds', {}).get('password', '')
         nonce: str = "".join([secrets.choice(string.ascii_letters + string.digits) for _ in range(64)])
         timestamp: str = str(int(datetime.now(timezone.utc).timestamp()) * 1000)
         auth_key = f"{api_key}{nonce}{timestamp}"
