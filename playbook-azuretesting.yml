@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e02fdf59-ee5b-4e42-83e2-bf0c41637378
+      id: 4e8dd668-88d8-41fc-8adc-e43075b32c3b
       iscommand: false
       name: ""
       version: -1
-    taskid: e02fdf59-ee5b-4e42-83e2-bf0c41637378
+    taskid: 4e8dd668-88d8-41fc-8adc-e43075b32c3b
     timertriggers: []
     type: start
     view: |-
@@ -63,13 +63,13 @@ tasks:
     task:
       brand: Azure Storage
       description: Prints text to war room (Markdown supported)
-      id: 5a6df298-d49d-497c-8a6a-3ea4f9baf365
+      id: ffbd8128-1478-4c95-84a7-f6c29185f1a3
       iscommand: false
       name: Testing azure storage
       script: Print
       type: regular
       version: -1
-    taskid: 5a6df298-d49d-497c-8a6a-3ea4f9baf365
+    taskid: ffbd8128-1478-4c95-84a7-f6c29185f1a3
     timertriggers: []
     type: regular
     view: |-
@@ -91,13 +91,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a47c8073-7b3e-4b88-86b1-dfbf33a905d2
+      id: 17aedbbf-02b6-460a-80d5-ce99adda900d
       iscommand: false
       name: AD Test
       playbookId: 128b585b-27b2-4f47-80e6-7398a60bed12
       type: playbook
       version: -1
-    taskid: a47c8073-7b3e-4b88-86b1-dfbf33a905d2
+    taskid: 17aedbbf-02b6-460a-80d5-ce99adda900d
     timertriggers: []
     type: playbook
     view: |-
@@ -122,13 +122,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 89db2063-a3e9-44b0-8c0d-a38e27bebb9f
+      id: 43450004-49fe-46d6-87c7-1f57bdf315c1
       iscommand: false
       name: AdoptionPlaybook
       playbookId: f08482fc-bb09-41b2-842c-9971ee690224
       type: playbook
       version: -1
-    taskid: 89db2063-a3e9-44b0-8c0d-a38e27bebb9f
+    taskid: 43450004-49fe-46d6-87c7-1f57bdf315c1
     timertriggers: []
     type: playbook
     view: |-
