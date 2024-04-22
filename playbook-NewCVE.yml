@@ -51,11 +51,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d5bc0f78-606e-4d2f-8670-9fdaf6957da3
+      id: ae54c796-2e32-4135-8a7c-3b438785b449
       iscommand: false
       name: ""
       version: -1
-    taskid: d5bc0f78-606e-4d2f-8670-9fdaf6957da3
+    taskid: ae54c796-2e32-4135-8a7c-3b438785b449
     timertriggers: []
     type: start
     view: |-
@@ -103,13 +103,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 7f3b1dd3-ee59-43d6-8d35-97481981a11f
+      id: ad7290bf-7cf2-4006-8047-fc5867558703
       iscommand: false
       name: Extract CVE List
       script: Set
       type: regular
       version: -1
-    taskid: 7f3b1dd3-ee59-43d6-8d35-97481981a11f
+    taskid: ad7290bf-7cf2-4006-8047-fc5867558703
     timertriggers: []
     type: regular
     view: |-
@@ -131,12 +131,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 19436b71-bcf8-4298-84c3-5d54765f1c40
+      id: 1293c085-817b-46f5-8b52-911606c67793
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 19436b71-bcf8-4298-84c3-5d54765f1c40
+    taskid: 1293c085-817b-46f5-8b52-911606c67793
     timertriggers: []
     type: title
     view: |-
@@ -174,13 +174,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 1b6e2d4a-9a3c-4566-88b6-909aab023ae8
+      id: 5f9cfa3c-40e1-4474-8256-54e6b5a703dc
       iscommand: false
       name: UnknownCPEs
       script: Set
       type: regular
       version: -1
-    taskid: 1b6e2d4a-9a3c-4566-88b6-909aab023ae8
+    taskid: 5f9cfa3c-40e1-4474-8256-54e6b5a703dc
     timertriggers: []
     type: regular
     view: |-
@@ -218,13 +218,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 4aba9391-a4ee-40c5-88b3-d5aefd38df42
+      id: 21101e25-0a25-4362-8732-143fbf4690a8
       iscommand: false
       name: KnownCPEs
       script: Set
       type: regular
       version: -1
-    taskid: 4aba9391-a4ee-40c5-88b3-d5aefd38df42
+    taskid: 21101e25-0a25-4362-8732-143fbf4690a8
     timertriggers: []
     type: regular
     view: |-
@@ -258,13 +258,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7f1dfd9d-1b2d-43b7-8b16-294755f28ac7
+      id: 674feda3-599c-43ad-8dda-0abd52361dbd
       iscommand: false
       name: NewCVE_UnknownCPE_Incident
       playbookId: 7302f2e1-56e3-4337-856e-da0635004378
       type: playbook
       version: -1
-    taskid: 7f1dfd9d-1b2d-43b7-8b16-294755f28ac7
+    taskid: 674feda3-599c-43ad-8dda-0abd52361dbd
     timertriggers: []
     type: playbook
     view: |-
@@ -298,13 +298,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: a39be55c-c883-4608-8e22-b8dc6a2625c0
+      id: 22c55b83-33c3-412d-8e38-3f247c9265e9
       iscommand: false
       name: Delete Context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: a39be55c-c883-4608-8e22-b8dc6a2625c0
+    taskid: 22c55b83-33c3-412d-8e38-3f247c9265e9
     timertriggers: []
     type: regular
     view: |-
@@ -346,12 +346,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 723acb06-3e3b-4dc3-8e31-b81e38224289
+      id: ca5ac9fe-eeca-4c41-867a-7b453ef2da5a
       iscommand: false
       name: Are there CVEs with no CPEs?
       type: condition
       version: -1
-    taskid: 723acb06-3e3b-4dc3-8e31-b81e38224289
+    taskid: ca5ac9fe-eeca-4c41-867a-7b453ef2da5a
     timertriggers: []
     type: condition
     view: |-
@@ -376,13 +376,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1a853278-ccc1-4b57-8bb9-e084706292aa
+      id: 79502e2e-c467-4455-8db4-7f6f2a4cd7fa
       iscommand: false
       name: NewCVE_KnownCPE_Check
       playbookId: 47219563-3ac4-4f03-8c1c-db16914d1f10
       type: playbook
       version: -1
-    taskid: 1a853278-ccc1-4b57-8bb9-e084706292aa
+    taskid: 79502e2e-c467-4455-8db4-7f6f2a4cd7fa
     timertriggers: []
     type: playbook
     view: |-
@@ -427,12 +427,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 975d104f-7520-40b1-83ce-4288bb351b2e
+      id: dccd3e44-c505-43c8-89c0-dfe7d9576bd4
       iscommand: false
       name: Do we have CVEs?
       type: condition
       version: -1
-    taskid: 975d104f-7520-40b1-83ce-4288bb351b2e
+    taskid: dccd3e44-c505-43c8-89c0-dfe7d9576bd4
     timertriggers: []
     type: condition
     view: |-
@@ -476,12 +476,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0e7c8f57-dd51-4b7d-8623-8e0da03964fc
+      id: a328d907-b5ef-4a58-87d9-954b49591fea
       iscommand: false
       name: Are there CVEs with known CPEs?
       type: condition
       version: -1
-    taskid: 0e7c8f57-dd51-4b7d-8623-8e0da03964fc
+    taskid: a328d907-b5ef-4a58-87d9-954b49591fea
     timertriggers: []
     type: condition
     view: |-
