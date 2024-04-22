@@ -37,11 +37,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 264ebd1c-e951-4eb8-81c4-e7644b92cfad
+      id: 84dd12aa-ff18-4142-8a01-a8753543ad9f
       iscommand: false
       name: ""
       version: -1
-    taskid: 264ebd1c-e951-4eb8-81c4-e7644b92cfad
+    taskid: 84dd12aa-ff18-4142-8a01-a8753543ad9f
     timertriggers: []
     type: start
     view: |-
@@ -63,12 +63,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a42e4d72-0e13-416e-8bef-3df00a56c45c
+      id: a57488df-c2f9-4f1a-8c06-1f983e1a0c1d
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: a42e4d72-0e13-416e-8bef-3df00a56c45c
+    taskid: a57488df-c2f9-4f1a-8c06-1f983e1a0c1d
     timertriggers: []
     type: title
     view: |-
@@ -105,12 +105,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3ea38a03-dd07-4f26-8a79-0e695efe6eb3
+      id: 3c85960f-877a-46c3-8794-8a656f03bd0b
       iscommand: false
       name: Check if source username is saved
       type: condition
       version: -1
-    taskid: 3ea38a03-dd07-4f26-8a79-0e695efe6eb3
+    taskid: 3c85960f-877a-46c3-8794-8a656f03bd0b
     timertriggers: []
     type: condition
     view: |-
@@ -149,13 +149,13 @@ tasks:
         This is a generic playbook which can be used across all other playbooks where the requirement is:
         * Resolving a hostname against EPO or ITAM (in the same order) and finding out the username associated with it
         * It adds the "internal.username" key to the context with enriched information
-      id: 61af7e6e-9e01-4023-8052-1be634850497
+      id: 2fed5fef-f2ec-4438-8a2f-9c888000c3a7
       iscommand: false
       name: Cust_IRC_Generic_Find_User_Of_Host_master
       playbookId: 6afcc234-b2f6-4840-85a2-4a518288ffb9
       type: playbook
       version: -1
-    taskid: 61af7e6e-9e01-4023-8052-1be634850497
+    taskid: 2fed5fef-f2ec-4438-8a2f-9c888000c3a7
     timertriggers: []
     type: playbook
     view: |-
@@ -201,12 +201,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 79a7d29f-62ff-4b98-8f6f-db3a0f7d603c
+      id: c1035f05-1174-4564-89c4-49271b575fe6
       iscommand: false
       name: Check if user resolved
       type: condition
       version: -1
-    taskid: 79a7d29f-62ff-4b98-8f6f-db3a0f7d603c
+    taskid: c1035f05-1174-4564-89c4-49271b575fe6
     timertriggers: []
     type: condition
     view: |-
@@ -251,13 +251,13 @@ tasks:
         This is a generic playbook which can be used across all other playbooks where the requirement is:
         * Resolving a username against EPO or ITAM (in the same order) and finding out the hostname associated with it
         * It adds the "internal.hostname" key to the context with enriched information
-      id: 8f095269-c5c2-4898-8236-4e81af53a5a5
+      id: d8b7f813-9b48-4f85-86c4-6cf4552ccd75
       iscommand: false
       name: Cust_IRC_Generic_Find_Host_Of_User_master
       playbookId: b3dbbaae-4e4b-47e2-815e-c0dedd468933
       type: playbook
       version: -1
-    taskid: 8f095269-c5c2-4898-8236-4e81af53a5a5
+    taskid: d8b7f813-9b48-4f85-86c4-6cf4552ccd75
     timertriggers: []
     type: playbook
     view: |-
@@ -296,13 +296,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7b8df217-bdf2-4e2a-8048-7411df984589
+      id: 537f9746-bbaa-43dc-8776-ae9fe05a0439
       iscommand: false
       name: Cust_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_Compliance_Check
       playbookId: 4a00c6a4-93f4-4711-85c8-144874223704
       type: playbook
       version: -1
-    taskid: 7b8df217-bdf2-4e2a-8048-7411df984589
+    taskid: 537f9746-bbaa-43dc-8776-ae9fe05a0439
     timertriggers: []
     type: playbook
     view: |-
@@ -339,12 +339,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8b458343-3fa8-44f4-888a-1599a09e7647
+      id: de4d2c1d-1b98-4543-8de4-618fa410aba8
       iscommand: false
       name: Check if source hostname is  saved
       type: condition
       version: -1
-    taskid: 8b458343-3fa8-44f4-888a-1599a09e7647
+    taskid: de4d2c1d-1b98-4543-8de4-618fa410aba8
     timertriggers: []
     type: condition
     view: |-
@@ -398,13 +398,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8c5b01d2-8ce5-48ba-8af8-b780507b8c3a
+      id: 08a63ad8-01f1-49cd-85b5-891694168099
       iscommand: false
       name: Cust_IRC_Cisco_Umbrella_Playbook_enrichment_actions
       playbookId: 077565ac-0e28-487c-8d0f-6e43e5138da9
       type: playbook
       version: -1
-    taskid: 8c5b01d2-8ce5-48ba-8af8-b780507b8c3a
+    taskid: 08a63ad8-01f1-49cd-85b5-891694168099
     timertriggers: []
     type: playbook
     view: |-
@@ -472,13 +472,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ed442e7a-71a1-4a9f-8333-1141a1d49032
+      id: a3260d48-298d-4814-87cd-7f90a4ff77f6
       iscommand: false
       name: Cust_IRC_Cisco_Umbrella_Playbook_enrichment_actions
       playbookId: 077565ac-0e28-487c-8d0f-6e43e5138da9
       type: playbook
       version: -1
-    taskid: ed442e7a-71a1-4a9f-8333-1141a1d49032
+    taskid: a3260d48-298d-4814-87cd-7f90a4ff77f6
     timertriggers: []
     type: playbook
     view: |-
@@ -519,13 +519,13 @@ tasks:
         * MTTD
         * TTAA
         * TTQ
-      id: 0e7e777a-211b-4641-8f23-7125a812c4f8
+      id: de0aace8-c41a-4c69-83eb-5b2dc997a2b0
       iscommand: false
       name: Cust_IRC_Securonix_Generic_Start_SLAs
       playbookId: 825c0dae-5f1e-46fe-80e0-ac72996e8129
       type: playbook
       version: -1
-    taskid: 0e7e777a-211b-4641-8f23-7125a812c4f8
+    taskid: de0aace8-c41a-4c69-83eb-5b2dc997a2b0
     timertriggers: []
     type: playbook
     view: |-
@@ -558,13 +558,13 @@ tasks:
       description: This is a Securonix initializer playbook which identifies the violator
         type, gets the associated policy violations, associates MITRE indicators,
         sets default priority and severity and assigns an analyst to the incident
-      id: dceef309-07a5-40a4-80c1-5add03577f19
+      id: 3b836f10-9156-4909-828b-848f701adb74
       iscommand: false
       name: Cust_IRC_Securonix_Initializer
       playbookId: 3217ac4e-38e5-4d81-8c38-faf7200efc22
       type: playbook
       version: -1
-    taskid: dceef309-07a5-40a4-80c1-5add03577f19
+    taskid: 3b836f10-9156-4909-828b-848f701adb74
     timertriggers: []
     type: playbook
     view: |-
@@ -639,13 +639,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 982f6962-6f1b-4f16-8e92-6c8ab4c6eb42
+      id: 09e4cc95-6bae-492c-812f-4d17418b4f29
       iscommand: true
       name: Set the required usecase specific incident fields in the layout
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 982f6962-6f1b-4f16-8e92-6c8ab4c6eb42
+    taskid: 09e4cc95-6bae-492c-812f-4d17418b4f29
     timertriggers: []
     type: regular
     view: |-
@@ -677,13 +677,13 @@ tasks:
       brand: ""
       description: This is a generic subplaybook of Wipro_IRC_Generic_Assign_Analyst_Shift_Based_master
         which checks the input role and reads the list and assigns the analyst accordingly
-      id: a8dda148-f8ec-4e96-81e8-eced6a1d7910
+      id: 635ab1ea-0f90-441a-8c64-5c99456796d4
       iscommand: false
       name: Cust_IRC_Generic_Assign_Analyst_Shift_Based_subplaybook
       playbookName: Wipro_IRC_Generic_Assign_Analyst_Shift_Based_subplaybook
       type: playbook
       version: -1
-    taskid: a8dda148-f8ec-4e96-81e8-eced6a1d7910
+    taskid: 635ab1ea-0f90-441a-8c64-5c99456796d4
     timertriggers: []
     type: playbook
     view: |-
