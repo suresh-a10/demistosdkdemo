@@ -306,7 +306,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.5.0
-    itemVersion: 3.2.21
+    itemVersion: 3.2.19
     packID: EDL
     packName: Generic Export Indicators Service
     packPropagationLabels:
@@ -338,11 +338,16 @@ detaileddescription: |-
 
   **Note**: The `Listen Port` parameter is required.
 
-  1. Navigate to **Settings > About > Troubleshooting**.
-  2. In the **Server Configuration** section, verify that the `instance.execute.external.<instance_name>` key is set to `true`. If this key does not exist, click **+ Add Server Configuration** and add the `instance.execute.external.<instance_name>` and set the value to `true`. See [this documentation](https://xsoar.pan.dev/docs/reference/articles/long-running-invoke) for further information.
-  3.  In a web browser, go to
-      `https://*<xsoar_address>*/instance/execute/*<instance_name>*`
-       (In Multi Tenant environments, go to `https://<cortex-xsoar-address>/acc-<account name>/instance/execute/<instance_name>/`)
+  1. For Cortex XSOAR  6.x only:
+     1. Navigate to **Settings > About > Troubleshooting**.
+     2. (For Cortex XSOAR 6.x only) In the **Server Configuration** section, verify that the `instance.execute.external.<instance_name>` key is set to `true`. If this key does not exist, click **+ Add Server Configuration** and add the `instance.execute.external.<instance_name>` and set the value to `true`. See [this documentation](https://xsoar.pan.dev/docs/reference/articles/long-running-invoke) for further information.
+  2.  In a web browser, go to:
+
+     - (For Cortex XSOAR 6.x) `https://*<xsoar_address>*/instance/execute/*<instance_name>*`
+     - (For Cortex XSOAR 8 or Cortex XSIAM) `https://ext-<tenant>.crtx.<region>.paloaltonetworks.com/xsoar/instance/execute/<instance-name>`
+
+
+  In Multi Tenant environments, go to `https://<cortex-xsoar-address>/acc-<account name>/instance/execute/<instance_name>/`
 
 
   #### Note:
@@ -572,13 +577,13 @@ script:
       - "True"
     description: Updates values stored in the List (only available On-Demand).
     name: export-indicators-list-update
-  dockerimage: demisto/flask-nginx:1.0.0.87872
+  dockerimage: demisto/flask-nginx:1.0.0.85991
   longRunning: true
   longRunningPort: true
   runonce: false
   script: |
     register_module_line('EDL', 'start', __line__())
-    ### pack version: 3.2.21
+    ### pack version: 3.2.19
 
 
     import tempfile
@@ -931,8 +936,6 @@ script:
             for ioc_res in indicator_searcher:
                 fetched_iocs = ioc_res.get('iocs') or []
                 for ioc in fetched_iocs:
-                    demisto.debug(f"Parsing the following indicator: {ioc.get('value')}")
-
                     ioc_counter += 1
                     if request_args.out_format == FORMAT_PROXYSG:
                         files_by_category = create_proxysg_out_format(ioc, files_by_category, request_args)
@@ -957,7 +960,7 @@ script:
                         break
 
         except Exception as e:
-            demisto.error(f'Error in parsing the indicators, error: {str(e)}')
+            demisto.error(f'Error parsing the following indicator: {ioc.get("value")}\n{e}')
             # 429 error can only be raised when the Elasticsearch instance encountered an error
             if '[429] Failed with error' in str(e):
                 version = demisto.demistoVersion()
