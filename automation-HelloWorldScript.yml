@@ -9,7 +9,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 3.0.8
+    itemVersion: 3.0.7
     packID: HelloWorld
     packName: HelloWorld
     packPropagationLabels:
@@ -30,7 +30,7 @@ runas: DBotWeakRole
 runonce: false
 script: |
   register_module_line('HelloWorldScript', 'start', __line__())
-  ### pack version: 3.0.8
+  ### pack version: 3.0.7
 
 
   """HelloWorld Script for Cortex XSOAR (aka Demisto)
