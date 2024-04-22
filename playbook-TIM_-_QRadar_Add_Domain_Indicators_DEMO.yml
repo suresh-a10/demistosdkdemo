@@ -73,11 +73,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 46ba8510-310b-4a8e-8954-7b3dd3b66a1b
+      id: c43250ab-dc6a-490b-8a9c-a09429ecff16
       iscommand: false
       name: ""
       version: -1
-    taskid: 46ba8510-310b-4a8e-8954-7b3dd3b66a1b
+    taskid: c43250ab-dc6a-490b-8a9c-a09429ecff16
     timertriggers: []
     type: start
     view: |-
@@ -132,12 +132,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0894141a-0169-48c0-8ac6-0ca5a6b99892
+      id: 99fb9acd-afd8-4263-8092-54aecff652e6
       iscommand: false
       name: Is QRadarEnabled?
       type: condition
       version: -1
-    taskid: 0894141a-0169-48c0-8ac6-0ca5a6b99892
+    taskid: 99fb9acd-afd8-4263-8092-54aecff652e6
     timertriggers: []
     type: condition
     view: |-
@@ -175,12 +175,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 15fe4afd-83b8-4925-8854-199484af0da7
+      id: e7517443-ecde-40dd-8c2a-21eab12f61fb
       iscommand: false
       name: Are there filtered results?
       type: condition
       version: -1
-    taskid: 15fe4afd-83b8-4925-8854-199484af0da7
+    taskid: e7517443-ecde-40dd-8c2a-21eab12f61fb
     timertriggers: []
     type: condition
     view: |-
@@ -237,13 +237,13 @@ tasks:
     task:
       brand: ""
       description: Add or update a value in a reference set.
-      id: 7e59767f-3bd1-4ec4-8e9c-764b898d2f73
+      id: c52f555a-67c1-4a7f-8de6-8dfa47240de0
       iscommand: true
       name: Add domains to QRadar black list domain reference set
       script: '|||qradar-update-reference-set-value'
       type: regular
       version: -1
-    taskid: 7e59767f-3bd1-4ec4-8e9c-764b898d2f73
+    taskid: c52f555a-67c1-4a7f-8de6-8dfa47240de0
     timertriggers: []
     type: regular
     view: |-
@@ -302,12 +302,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1b333b06-6fce-4f7e-8584-ea934742302f
+      id: b3e888ed-4766-4098-8d79-3f9964d86398
       iscommand: false
       name: Is there a Qradar black list Domain Reference Set and values?
       type: condition
       version: -1
-    taskid: 1b333b06-6fce-4f7e-8584-ea934742302f
+    taskid: b3e888ed-4766-4098-8d79-3f9964d86398
     timertriggers: []
     type: condition
     view: |-
@@ -366,12 +366,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6873e356-083e-4848-8808-9b5f55b4d3d0
+      id: 934627c4-7010-4feb-8a44-047c0ba3f158
       iscommand: false
       name: Is there a Qradar white list Domain Reference Set and values?
       type: condition
       version: -1
-    taskid: 6873e356-083e-4848-8808-9b5f55b4d3d0
+    taskid: 934627c4-7010-4feb-8a44-047c0ba3f158
     timertriggers: []
     type: condition
     view: |-
@@ -428,13 +428,13 @@ tasks:
     task:
       brand: ""
       description: Add or update a value in a reference set.
-      id: 75c10e0f-c3d0-430f-8276-288ba392499f
+      id: 7a9ddddc-8ad8-4526-874a-2f2092f14965
       iscommand: true
       name: Add domains to QRadar white list domain reference set
       script: '|||qradar-update-reference-set-value'
       type: regular
       version: -1
-    taskid: 75c10e0f-c3d0-430f-8276-288ba392499f
+    taskid: 7a9ddddc-8ad8-4526-874a-2f2092f14965
     timertriggers: []
     type: regular
     view: |-
@@ -456,12 +456,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9bb477cf-bc58-4689-8def-e2de2d167f18
+      id: f23c753d-5ca1-4c12-8bbc-b177b88ed100
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 9bb477cf-bc58-4689-8def-e2de2d167f18
+    taskid: f23c753d-5ca1-4c12-8bbc-b177b88ed100
     timertriggers: []
     type: title
     view: |-
@@ -515,13 +515,13 @@ tasks:
     task:
       brand: Builtin
       description: Adds the SIEM tag to the indicator.
-      id: 8bb42879-a9a0-48ad-84a8-5b537edeb28a
+      id: 7cddb1eb-081f-4a88-8c8f-2872f6beba6b
       iscommand: true
       name: Add SIEM tag
       script: Builtin|||appendIndicatorField
       type: regular
       version: -1
-    taskid: 8bb42879-a9a0-48ad-84a8-5b537edeb28a
+    taskid: 7cddb1eb-081f-4a88-8c8f-2872f6beba6b
     timertriggers: []
     type: regular
     view: |-
@@ -575,13 +575,13 @@ tasks:
     task:
       brand: Builtin
       description: Adds the SIEM tag to the indicator.
-      id: 0c224640-6de9-4873-8b75-df53b3165c19
+      id: c7bd2fce-b1eb-4cb0-83e2-d00da054cc2e
       iscommand: true
       name: Add SIEM tag
       script: Builtin|||appendIndicatorField
       type: regular
       version: -1
-    taskid: 0c224640-6de9-4873-8b75-df53b3165c19
+    taskid: c7bd2fce-b1eb-4cb0-83e2-d00da054cc2e
     timertriggers: []
     type: regular
     view: |-
@@ -640,12 +640,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e14ae963-5854-44a4-8934-d9fbb9aff956
+      id: 6dd89f4c-053f-4ae5-86e2-d36bf0ee309a
       iscommand: false
       name: Is there a Qradar watch list Domain Reference Set and values?
       type: condition
       version: -1
-    taskid: e14ae963-5854-44a4-8934-d9fbb9aff956
+    taskid: 6dd89f4c-053f-4ae5-86e2-d36bf0ee309a
     timertriggers: []
     type: condition
     view: |-
@@ -702,13 +702,13 @@ tasks:
     task:
       brand: ""
       description: Add or update a value in a reference set.
-      id: 949e3213-2835-42cf-8961-39043db1bade
+      id: d6644449-2cf0-434a-83b1-b87e1c84e032
       iscommand: true
       name: Add domains to QRadar watch list domain reference set
       script: '|||qradar-update-reference-set-value'
       type: regular
       version: -1
-    taskid: 949e3213-2835-42cf-8961-39043db1bade
+    taskid: d6644449-2cf0-434a-83b1-b87e1c84e032
     timertriggers: []
     type: regular
     view: |-
@@ -762,13 +762,13 @@ tasks:
     task:
       brand: Builtin
       description: Adds the SIEM tag to the indicator.
-      id: 489fbf8e-7a4a-4932-8383-b0f1bf732894
+      id: 67e00df2-e38a-4bdb-8dad-c37bb2c47644
       iscommand: true
       name: Add SIEM tag
       script: Builtin|||appendIndicatorField
       type: regular
       version: -1
-    taskid: 489fbf8e-7a4a-4932-8383-b0f1bf732894
+    taskid: 67e00df2-e38a-4bdb-8dad-c37bb2c47644
     timertriggers: []
     type: regular
     view: |-
@@ -814,12 +814,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 25d0d72c-bd2c-4f69-840d-d8041afa8717
+      id: 08bea76c-8d06-4805-8207-df9b3300508c
       iscommand: false
       name: Are there indicators with a watchlist tag?
       type: condition
       version: -1
-    taskid: 25d0d72c-bd2c-4f69-840d-d8041afa8717
+    taskid: 08bea76c-8d06-4805-8207-df9b3300508c
     timertriggers: []
     type: condition
     view: |-
@@ -865,12 +865,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a6b5534f-f9db-47f5-8907-ffb18031b526
+      id: 941ce0ba-2b8f-4a28-8e35-0cb61077a4e5
       iscommand: false
       name: Are there indicators with a white tag?
       type: condition
       version: -1
-    taskid: a6b5534f-f9db-47f5-8907-ffb18031b526
+    taskid: 941ce0ba-2b8f-4a28-8e35-0cb61077a4e5
     timertriggers: []
     type: condition
     view: |-
@@ -916,12 +916,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d1232160-c927-4df4-860c-e8c3e2d5e200
+      id: 4024817a-21b5-4163-83c9-b771af2ef0a9
       iscommand: false
       name: Are there indicators with a black tag?
       type: condition
       version: -1
-    taskid: d1232160-c927-4df4-860c-e8c3e2d5e200
+    taskid: 4024817a-21b5-4163-83c9-b771af2ef0a9
     timertriggers: []
     type: condition
     view: |-
