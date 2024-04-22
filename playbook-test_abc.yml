@@ -36,11 +36,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f0a86200-9cf4-4bea-8983-f994e29d2f91
+      id: bb66ba8f-1f52-43cc-8eac-232e2fe40d6b
       iscommand: false
       name: ""
       version: -1
-    taskid: f0a86200-9cf4-4bea-8983-f994e29d2f91
+    taskid: bb66ba8f-1f52-43cc-8eac-232e2fe40d6b
     timertriggers: []
     type: start
     view: |-
@@ -69,13 +69,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: b2be5ade-afb4-4135-86b9-59f19c28332b
+      id: 9d71950f-47c8-4f46-8ab1-46599056182c
       iscommand: false
       name: Task 1
       script: Print
       type: regular
       version: -1
-    taskid: b2be5ade-afb4-4135-86b9-59f19c28332b
+    taskid: 9d71950f-47c8-4f46-8ab1-46599056182c
     timertriggers: []
     type: regular
     view: |-
@@ -104,13 +104,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: bfa48fca-fc02-45c0-8032-b62cb31b57a7
+      id: d809ba92-5485-4f5d-8cc2-4a7951bad597
       iscommand: false
       name: Task 2
       script: Print
       type: regular
       version: -1
-    taskid: bfa48fca-fc02-45c0-8032-b62cb31b57a7
+    taskid: d809ba92-5485-4f5d-8cc2-4a7951bad597
     timertriggers: []
     type: regular
     view: |-
@@ -173,12 +173,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 512873ea-873d-426b-86f7-f61d527b4324
+      id: bb5cece7-3b0d-4f48-81ef-3cd677ed3c2e
       iscommand: false
       name: Task 3
       type: collection
       version: -1
-    taskid: 512873ea-873d-426b-86f7-f61d527b4324
+    taskid: bb5cece7-3b0d-4f48-81ef-3cd677ed3c2e
     timertriggers: []
     type: collection
     view: |-
@@ -207,13 +207,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 912607ba-a57d-4233-85ab-0cc095dde257
+      id: dc313370-e362-420b-8082-5f4dbc249176
       iscommand: false
       name: Task 4
       script: Print
       type: regular
       version: -1
-    taskid: 912607ba-a57d-4233-85ab-0cc095dde257
+    taskid: dc313370-e362-420b-8082-5f4dbc249176
     timertriggers: []
     type: regular
     view: |-
@@ -242,13 +242,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 292cb004-7d41-462e-8e0f-3b15953451ed
+      id: b79c0f24-040c-44ed-8e1b-bd51626ab83f
       iscommand: false
       name: Task 5
       script: Print
       type: regular
       version: -1
-    taskid: 292cb004-7d41-462e-8e0f-3b15953451ed
+    taskid: b79c0f24-040c-44ed-8e1b-bd51626ab83f
     timertriggers: []
     type: regular
     view: |-
@@ -276,13 +276,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: d973acf2-d021-420b-8b64-0193071de6f4
+      id: ddcd050b-1e04-4b12-87a5-7cbd1f2a4bb5
       iscommand: true
       name: Close investigation
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: d973acf2-d021-420b-8b64-0193071de6f4
+    taskid: ddcd050b-1e04-4b12-87a5-7cbd1f2a4bb5
     timertriggers: []
     type: regular
     view: |-
@@ -312,13 +312,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 458a7739-bdfc-493d-8997-a78ad18e1b41
+      id: 6cce16c0-366b-4a57-84dd-c6f65d9fcfcc
       iscommand: false
       name: Create List of Dictionaries
       script: Set
       type: regular
       version: -1
-    taskid: 458a7739-bdfc-493d-8997-a78ad18e1b41
+    taskid: 6cce16c0-366b-4a57-84dd-c6f65d9fcfcc
     timertriggers: []
     type: regular
     view: |-
@@ -343,13 +343,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6fc439e5-f925-497f-87d5-996cdac4ca4d
+      id: bd8c947e-21e8-450d-804b-d4917e874e6d
       iscommand: false
       name: rasterize pdf
       script: 066ea175-3640-432e-881a-f006b91a8c53
       type: regular
       version: -1
-    taskid: 6fc439e5-f925-497f-87d5-996cdac4ca4d
+    taskid: bd8c947e-21e8-450d-804b-d4917e874e6d
     timertriggers: []
     type: regular
     view: |-
