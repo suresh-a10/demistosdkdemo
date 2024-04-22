@@ -2,7 +2,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 2.1.24
+    itemVersion: 2.1.22
     packID: PAN-OS
     packName: PAN-OS by Palo Alto Networks
     packPropagationLabels:
@@ -455,8 +455,6 @@ tasks:
       - "16"
     note: false
     quietmode: 0
-    results:
-    - AreValuesEqual
     scriptarguments:
       left:
         simple: ${inputs.auto_commit}
