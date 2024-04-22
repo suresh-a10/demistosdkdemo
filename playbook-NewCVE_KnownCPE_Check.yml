@@ -44,11 +44,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f9788a70-e2f9-4735-8dfe-5b54d6675834
+      id: b4a8e3f1-59ac-4efb-83e8-f85f5e262f18
       iscommand: false
       name: ""
       version: -1
-    taskid: f9788a70-e2f9-4735-8dfe-5b54d6675834
+    taskid: b4a8e3f1-59ac-4efb-83e8-f85f5e262f18
     timertriggers: []
     type: start
     view: |-
@@ -70,12 +70,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e29fbfab-337e-4d97-8862-1d4ad62b6a8a
+      id: 3f3ece86-0366-4f30-8de1-a8df4db3ed46
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: e29fbfab-337e-4d97-8862-1d4ad62b6a8a
+    taskid: 3f3ece86-0366-4f30-8de1-a8df4db3ed46
     timertriggers: []
     type: title
     view: |-
@@ -106,13 +106,13 @@ tasks:
     task:
       brand: ""
       description: Parses a list by header and value.
-      id: 980772d2-fb99-40b8-87f5-d35fb8607342
+      id: fc02d8b1-e006-40de-8b4b-0c492a9d0eb9
       iscommand: false
       name: GetListRow
       script: GetListRow
       type: regular
       version: -1
-    taskid: 980772d2-fb99-40b8-87f5-d35fb8607342
+    taskid: fc02d8b1-e006-40de-8b4b-0c492a9d0eb9
     timertriggers: []
     type: regular
     view: |-
@@ -150,13 +150,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 544c6db7-f2ce-4726-81af-9c2444ec4785
+      id: 05585b50-5d68-4d28-8b53-f96ce36cb248
       iscommand: false
       name: NewCVE_HostCPE_Compare
       playbookId: 29cf90a3-1264-4709-8d8c-9bac9a3cf449
       type: playbook
       version: -1
-    taskid: 544c6db7-f2ce-4726-81af-9c2444ec4785
+    taskid: 05585b50-5d68-4d28-8b53-f96ce36cb248
     timertriggers: []
     type: playbook
     view: |-
