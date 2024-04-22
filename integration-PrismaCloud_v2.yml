@@ -126,7 +126,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.5.0
-    itemVersion: 4.3.1
+    itemVersion: 4.3.0
     packID: PrismaCloud
     packName: Prisma Cloud by Palo Alto Networks
     packPropagationLabels:
@@ -2335,18 +2335,19 @@ script:
     description: Updates the remote incident with local incident changes. This method
       is only used for debugging purposes and will not update the current incident.
     name: update-remote-system
-  dockerimage: demisto/python3:3.10.14.91134
+  dockerimage: demisto/python3:3.10.13.88772
   isfetch: true
   isremotesyncin: true
   isremotesyncout: true
   runonce: false
   script: |
     register_module_line('PrismaCloud v2', 'start', __line__())
-    ### pack version: 4.3.1
+    ### pack version: 4.3.0
 
 
     from copy import deepcopy
 
+    import urllib3
     import json
 
 
@@ -2442,12 +2443,11 @@ script:
 
     class Client(BaseClient):
         def __init__(self, server_url: str, verify: bool, proxy: bool, headers: Dict[str, str], username: str, password: str,
-                     mirror_direction: str | None, close_incident: bool, close_alert: bool, is_test_module: bool):
+                     mirror_direction: str | None, close_incident: bool, close_alert: bool):
             super().__init__(base_url=server_url, verify=verify, proxy=proxy, headers=headers)
             self.mirror_direction = mirror_direction
             self.close_incident = close_incident
             self.close_alert = close_alert
-            self.retries = 0 if is_test_module else 2
             self.generate_auth_token(username, password)
 
         def generate_auth_token(self, username: str, password: str) -> None:
@@ -2458,7 +2458,7 @@ script:
             data = {'username': username, 'password': password}
             demisto.debug("Sending request to get the auth token")
 
-            response = self._http_request('POST', 'login', json_data=data, retries=self.retries)
+            response = self._http_request('POST', 'login', json_data=data, retries=2)
             try:
                 token = response.get('token')
                 if not token:
@@ -2484,7 +2484,7 @@ script:
                                         })
             demisto.info(f'Executing Prisma Cloud alert search with payload: {data}')
 
-            return self._http_request('POST', 'v2/alert', params=params, json_data=data, retries=self.retries)
+            return self._http_request('POST', 'v2/alert', params=params, json_data=data, retries=2)
 
         def alert_get_details_request(self, alert_id: str, detailed: Optional[str] = None):
             params = assign_params(detailed=detailed)
@@ -4539,13 +4539,11 @@ script:
 
         command = demisto.command()
         demisto.debug(f'Command being called is {command}')
-        is_test_module: bool = (command == 'test-module')
 
         try:
-
+            urllib3.disable_warnings()
             client: Client = Client(url, verify_certificate, proxy, headers=HEADERS, username=username, password=password,
-                                    mirror_direction=mirror_direction, close_incident=close_incident, close_alert=close_alert,
-                                    is_test_module=is_test_module)
+                                    mirror_direction=mirror_direction, close_incident=close_incident, close_alert=close_alert)
             commands_without_args = {
                 'prisma-cloud-alert-filter-list': alert_filter_list_command,
 
