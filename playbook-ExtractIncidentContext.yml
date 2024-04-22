@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 149b61cc-ef7c-48ec-8b3e-85d604cde6cd
+      id: ea8ac635-191b-4fff-82c4-d16df4f130c8
       iscommand: false
       name: ""
       version: -1
-    taskid: 149b61cc-ef7c-48ec-8b3e-85d604cde6cd
+    taskid: ea8ac635-191b-4fff-82c4-d16df4f130c8
     timertriggers: []
     type: start
     view: |-
@@ -70,13 +70,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 4bcee0a3-66ce-4e35-8d29-5b5474dfe1c6
+      id: 5f36cd3d-b347-40cd-8da0-726e01ebf527
       iscommand: false
       name: GetIncidentID
       script: SearchIncidentsV2
       type: regular
       version: -1
-    taskid: 4bcee0a3-66ce-4e35-8d29-5b5474dfe1c6
+    taskid: 5f36cd3d-b347-40cd-8da0-726e01ebf527
     timertriggers: []
     type: regular
     view: |-
@@ -109,13 +109,13 @@ tasks:
     task:
       brand: ""
       description: Gets a value from the specified incident's context.
-      id: 08c567ba-9a3b-478c-8fd0-ca8d014ab92f
+      id: c6258a45-b0f5-4a7e-8b13-3c12415bad39
       iscommand: false
       name: Extract Incident Context
       script: GetByIncidentId
       type: regular
       version: -1
-    taskid: 08c567ba-9a3b-478c-8fd0-ca8d014ab92f
+    taskid: c6258a45-b0f5-4a7e-8b13-3c12415bad39
     timertriggers: []
     type: regular
     view: |-
@@ -146,13 +146,13 @@ tasks:
     task:
       brand: ""
       description: Export given array to csv file
-      id: e64de28c-0dc3-46ab-8eab-915e73d63b16
+      id: e0bb7de2-c18d-4952-8857-801d99a229d8
       iscommand: false
       name: Create CSV
       script: ExportToCSV
       type: regular
       version: -1
-    taskid: e64de28c-0dc3-46ab-8eab-915e73d63b16
+    taskid: e0bb7de2-c18d-4952-8857-801d99a229d8
     timertriggers: []
     type: regular
     view: |-
@@ -185,13 +185,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 182b26e6-089b-4ff7-8535-1217f23c6658
+      id: 21df0e2d-b5c8-4144-8ea7-f267ef96bef1
       iscommand: false
       name: DeleteContext
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 182b26e6-089b-4ff7-8535-1217f23c6658
+    taskid: 21df0e2d-b5c8-4144-8ea7-f267ef96bef1
     timertriggers: []
     type: regular
     view: |-
