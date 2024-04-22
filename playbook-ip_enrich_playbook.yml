@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b63fdc00-4e0b-4e20-840c-c4a2031c5462
+      id: a11e7b1c-bdbd-4eb5-8e7d-3fdd0660402c
       iscommand: false
       name: ""
       version: -1
-    taskid: b63fdc00-4e0b-4e20-840c-c4a2031c5462
+    taskid: a11e7b1c-bdbd-4eb5-8e7d-3fdd0660402c
     timertriggers: []
     type: start
     view: |-
@@ -94,12 +94,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3af899ea-4b2e-4777-86b1-b04427355691
+      id: 965a435e-1eda-4e0a-8093-0fdc14c839a4
       iscommand: false
       name: Attach file
       type: collection
       version: -1
-    taskid: 3af899ea-4b2e-4777-86b1-b04427355691
+    taskid: 965a435e-1eda-4e0a-8093-0fdc14c839a4
     timertriggers: []
     type: collection
     view: |-
@@ -129,13 +129,13 @@ tasks:
     task:
       brand: ""
       description: Load the contents of a file into context.
-      id: 9f99782d-dd48-41c9-8dad-4cd2b8f76482
+      id: 43697a8a-740c-40dc-804a-8d5dc3636c5a
       iscommand: false
       name: Read file
       script: ReadFile
       type: regular
       version: -1
-    taskid: 9f99782d-dd48-41c9-8dad-4cd2b8f76482
+    taskid: 43697a8a-740c-40dc-804a-8d5dc3636c5a
     timertriggers: []
     type: regular
     view: |-
@@ -164,13 +164,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.extract.indicators
-      id: 62e11b0c-e570-4809-811e-b68edd49d646
+      id: bffc7bcf-9b3a-4aa9-8ec2-e67a60c6b1ba
       iscommand: true
       name: Extract indicators
       script: Builtin|||extractIndicators
       type: regular
       version: -1
-    taskid: 62e11b0c-e570-4809-811e-b68edd49d646
+    taskid: bffc7bcf-9b3a-4aa9-8ec2-e67a60c6b1ba
     timertriggers: []
     type: regular
     view: |-
@@ -199,13 +199,13 @@ tasks:
     task:
       brand: VirusTotal (API v3)
       description: Checks the reputation of an IP address.
-      id: 795267c6-efb5-4da3-8544-95089eabbaa4
+      id: fe4b28ce-3ca5-4a69-83b6-b4efcd6c5f2d
       iscommand: true
       name: Enrich IPs
       script: VirusTotal (API v3)|||ip
       type: regular
       version: -1
-    taskid: 795267c6-efb5-4da3-8544-95089eabbaa4
+    taskid: fe4b28ce-3ca5-4a69-83b6-b4efcd6c5f2d
     timertriggers: []
     type: regular
     view: |-
@@ -233,13 +233,13 @@ tasks:
     task:
       brand: ""
       description: Export given array to csv file
-      id: 79e8ae39-9371-4dc4-8deb-14244ce85a36
+      id: d6c60335-3234-43c8-8531-e3e9f1524423
       iscommand: false
       name: Export to CSV file
       script: ExportToCSV
       type: regular
       version: -1
-    taskid: 79e8ae39-9371-4dc4-8deb-14244ce85a36
+    taskid: d6c60335-3234-43c8-8531-e3e9f1524423
     timertriggers: []
     type: regular
     view: |-
