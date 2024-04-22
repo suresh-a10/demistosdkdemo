@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 549fd2d8-150d-471b-8d89-d496f2e28883
+      id: c88c0dc4-51be-4207-885d-6b2481518f15
       iscommand: false
       name: ""
       version: -1
-    taskid: 549fd2d8-150d-471b-8d89-d496f2e28883
+    taskid: c88c0dc4-51be-4207-885d-6b2481518f15
     timertriggers: []
     type: start
     view: |-
@@ -149,12 +149,12 @@ tasks:
       weeks: 1
     task:
       brand: ""
-      id: 17936a05-8ba4-41b0-885e-dcaf629a93d9
+      id: abde3fea-9e7d-4740-8510-7ee759117e59
       iscommand: false
       name: datacollectiontest
       type: collection
       version: -1
-    taskid: 17936a05-8ba4-41b0-885e-dcaf629a93d9
+    taskid: abde3fea-9e7d-4740-8510-7ee759117e59
     timertriggers: []
     type: collection
     view: |-
@@ -176,12 +176,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 33ddf9ef-0768-4ba0-88d7-5a82d1c54dd9
+      id: 91952bfb-1f43-4098-8c61-161309ef3266
       iscommand: false
       name: Waiting
       type: regular
       version: -1
-    taskid: 33ddf9ef-0768-4ba0-88d7-5a82d1c54dd9
+    taskid: 91952bfb-1f43-4098-8c61-161309ef3266
     timertriggers: []
     type: regular
     view: |-
@@ -203,12 +203,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 11564652-acbf-41c2-802b-4ace4d468fae
+      id: 2e3e074a-0139-410b-8b3e-191d22070b0c
       iscommand: false
       name: "no"
       type: regular
       version: -1
-    taskid: 11564652-acbf-41c2-802b-4ace4d468fae
+    taskid: 2e3e074a-0139-410b-8b3e-191d22070b0c
     timertriggers: []
     type: regular
     view: |-
@@ -230,12 +230,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e85fe240-e675-4bbd-8342-44c6d60e7c14
+      id: 9abe9bb6-84ca-4c8c-806f-8af2b6c43099
       iscommand: false
       name: maybe
       type: regular
       version: -1
-    taskid: e85fe240-e675-4bbd-8342-44c6d60e7c14
+    taskid: 9abe9bb6-84ca-4c8c-806f-8af2b6c43099
     timertriggers: []
     type: regular
     view: |-
