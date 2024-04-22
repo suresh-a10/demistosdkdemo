@@ -87,11 +87,11 @@ tasks:
     task:
       brand: ""
       description: '-'
-      id: 36c44b47-b8e3-4fd8-8d8b-0e2fdce68094
+      id: a265c9fe-be00-4da4-810f-685f0e0998db
       iscommand: false
       name: ""
       version: -1
-    taskid: 36c44b47-b8e3-4fd8-8d8b-0e2fdce68094
+    taskid: a265c9fe-be00-4da4-810f-685f0e0998db
     timertriggers: []
     type: start
     view: |-
@@ -136,13 +136,13 @@ tasks:
     task:
       brand: ""
       description: Schedule Polling Task
-      id: e390a230-c9f4-4a76-8083-e42116938d79
+      id: afbb2b70-eecc-4992-8556-971b868b745a
       iscommand: false
       name: Schedule Polling Task
       script: ScheduleGenericPolling
       type: regular
       version: -1
-    taskid: e390a230-c9f4-4a76-8083-e42116938d79
+    taskid: afbb2b70-eecc-4992-8556-971b868b745a
     timertriggers: []
     type: regular
     view: |-
@@ -170,14 +170,14 @@ tasks:
     task:
       brand: ""
       description: This task will complete automatically when polling is complete.
-      id: 720f8cd2-81fa-443d-8f54-3e93c58e79f4
+      id: a7466db2-307e-4fbe-8c14-216d386b5dcf
       iscommand: false
       name: Waiting for polling to complete (Automated Task)
       tags:
       - polling
       type: condition
       version: -1
-    taskid: 720f8cd2-81fa-443d-8f54-3e93c58e79f4
+    taskid: a7466db2-307e-4fbe-8c14-216d386b5dcf
     timertriggers: []
     type: condition
     view: |-
@@ -214,13 +214,13 @@ tasks:
     task:
       brand: ""
       description: RunPollingCommand
-      id: 7c69bd67-e53b-41d5-8637-6bd1c49f95e7
+      id: b3a3df7e-f551-4742-80c6-13e8569d86f5
       iscommand: false
       name: RunPollingCommand
       script: RunPollingCommand
       type: regular
       version: -1
-    taskid: 7c69bd67-e53b-41d5-8637-6bd1c49f95e7
+    taskid: b3a3df7e-f551-4742-80c6-13e8569d86f5
     timertriggers: []
     type: regular
     view: |-
@@ -243,12 +243,12 @@ tasks:
     task:
       brand: ""
       description: Done
-      id: c02cd32f-8555-4b45-881b-6917af4d064c
+      id: 7acc11d8-1c2b-4f0e-8296-88e646d91fc8
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: c02cd32f-8555-4b45-881b-6917af4d064c
+    taskid: 7acc11d8-1c2b-4f0e-8296-88e646d91fc8
     timertriggers: []
     type: title
     view: |-
@@ -274,13 +274,13 @@ tasks:
     task:
       brand: ""
       description: Scheduled Task Failed
-      id: e4e0bc93-43fe-4507-84e3-b884df35410f
+      id: 7443f669-ea64-459a-8933-43e2c063908a
       iscommand: false
       name: Scheduled Task Failed
       script: PrintErrorEntry
       type: regular
       version: -1
-    taskid: e4e0bc93-43fe-4507-84e3-b884df35410f
+    taskid: 7443f669-ea64-459a-8933-43e2c063908a
     timertriggers: []
     type: regular
     view: |-
