@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4a2486fb-dbc5-4ca2-82e3-5c40561dd082
+      id: fe722b35-5606-4973-878d-a5c45c39a1bb
       iscommand: false
       name: ""
       version: -1
-    taskid: 4a2486fb-dbc5-4ca2-82e3-5c40561dd082
+    taskid: fe722b35-5606-4973-878d-a5c45c39a1bb
     timertriggers: []
     type: start
     view: |-
@@ -105,14 +105,14 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: baa462d0-0ef8-4b81-8006-7da4f125c9df
+      id: 18b787f2-62af-4d18-8bc5-71fed8ecae0f
       iscommand: false
       name: Collect data
       tags:
       - timerbreach
       type: collection
       version: -1
-    taskid: baa462d0-0ef8-4b81-8006-7da4f125c9df
+    taskid: 18b787f2-62af-4d18-8bc5-71fed8ecae0f
     timertriggers:
     - action: start
       fieldname: datacollectiontimer
@@ -140,13 +140,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 98f802b5-a673-42e0-879f-8fe738aa6e8b
+      id: 884be1c4-8699-48df-8df3-96c02a20e508
       iscommand: false
       name: Print Response
       script: Print
       type: regular
       version: -1
-    taskid: 98f802b5-a673-42e0-879f-8fe738aa6e8b
+    taskid: 884be1c4-8699-48df-8df3-96c02a20e508
     timertriggers: []
     type: regular
     view: |-
@@ -177,13 +177,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: d17fb40f-0f87-41d6-8fb8-056e8788bbd4
+      id: 2e42a115-1854-4aa8-8943-6f0c16dfcdc0
       iscommand: false
       name: delete context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: d17fb40f-0f87-41d6-8fb8-056e8788bbd4
+    taskid: 2e42a115-1854-4aa8-8943-6f0c16dfcdc0
     timertriggers: []
     type: regular
     view: |-
@@ -214,13 +214,13 @@ tasks:
       brand: ""
       description: Ask a user a question via email and process the reply directly
         into the investigation.
-      id: 4d018f11-8f68-43f0-8082-c98c170b399c
+      id: 6048b8e5-fa10-43ad-8db4-e8362e0a5211
       iscommand: false
       name: send email
       script: EmailAskUser
       type: regular
       version: -1
-    taskid: 4d018f11-8f68-43f0-8082-c98c170b399c
+    taskid: 6048b8e5-fa10-43ad-8db4-e8362e0a5211
     timertriggers: []
     type: regular
     view: |-
@@ -287,12 +287,12 @@ tasks:
     task:
       brand: ""
       description: Sends an email using Microsoft Graph.
-      id: 2d5ef863-5845-4f20-84f3-53c48cd0565e
+      id: f697c2b3-2ac9-48f3-8712-b3c74f0d1415
       iscommand: false
       name: Untitled Task
       type: collection
       version: -1
-    taskid: 2d5ef863-5845-4f20-84f3-53c48cd0565e
+    taskid: f697c2b3-2ac9-48f3-8712-b3c74f0d1415
     timertriggers: []
     type: collection
     view: |-
@@ -321,13 +321,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 0107377d-6871-45b0-81e2-84d2ec6fd362
+      id: 301ff868-d8c2-48a6-8744-0858d128a6b7
       iscommand: false
       name: fetch details
       script: Print
       type: regular
       version: -1
-    taskid: 0107377d-6871-45b0-81e2-84d2ec6fd362
+    taskid: 301ff868-d8c2-48a6-8744-0858d128a6b7
     timertriggers: []
     type: regular
     view: |-
@@ -358,13 +358,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.mdToHTML
-      id: 9ae0eb50-592a-42cc-82ca-52706c1b0305
+      id: cbf343fa-f78c-4849-8574-a2a122e5dba5
       iscommand: true
       name: convert MD to HTML
       script: Builtin|||mdToHtml
       type: regular
       version: -1
-    taskid: 9ae0eb50-592a-42cc-82ca-52706c1b0305
+    taskid: cbf343fa-f78c-4849-8574-a2a122e5dba5
     timertriggers: []
     type: regular
     view: |-
@@ -421,13 +421,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: cc3f33ee-8003-4e99-895a-2bd63064c6ed
+      id: 24fbb853-d3ef-4934-814c-11563d89a01f
       iscommand: false
       name: set details
       script: Set
       type: regular
       version: -1
-    taskid: cc3f33ee-8003-4e99-895a-2bd63064c6ed
+    taskid: 24fbb853-d3ef-4934-814c-11563d89a01f
     timertriggers: []
     type: regular
     view: |-
@@ -517,12 +517,12 @@ tasks:
     task:
       brand: ""
       description: Sends an email using Microsoft Graph.
-      id: 54b30cd2-556b-4311-8c14-fc0bb5248a86
+      id: a7483b46-a990-4513-8fe6-29907fbfa89c
       iscommand: false
       name: task A
       type: collection
       version: -1
-    taskid: 54b30cd2-556b-4311-8c14-fc0bb5248a86
+    taskid: a7483b46-a990-4513-8fe6-29907fbfa89c
     timertriggers: []
     type: collection
     view: |-
