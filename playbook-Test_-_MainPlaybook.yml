@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9b95e724-6295-4f6b-88c1-23d3408de5a1
+      id: 7ab0b0c6-2fb6-4f4c-8bbb-6d36d0da509e
       iscommand: false
       name: ""
       version: -1
-    taskid: 9b95e724-6295-4f6b-88c1-23d3408de5a1
+    taskid: 7ab0b0c6-2fb6-4f4c-8bbb-6d36d0da509e
     timertriggers: []
     type: start
     view: |-
@@ -105,12 +105,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7f70ae1e-15d2-462b-8a17-8758de037af8
+      id: 8daf0377-17b6-4e95-8eb1-1a3083f7b4ba
       iscommand: false
       name: data collection task
       type: collection
       version: -1
-    taskid: 7f70ae1e-15d2-462b-8a17-8758de037af8
+    taskid: 8daf0377-17b6-4e95-8eb1-1a3083f7b4ba
     timertriggers: []
     type: collection
     view: |-
@@ -143,13 +143,13 @@ tasks:
     task:
       brand: ""
       description: Convert an array to a nice table display. Usually, from the context.
-      id: 953bf0db-5647-4840-8154-856c9bd53f50
+      id: d259f7ec-b885-4d50-8882-5d82675a6f7e
       iscommand: false
       name: ToTable
       script: ToTable
       type: regular
       version: -1
-    taskid: 953bf0db-5647-4840-8154-856c9bd53f50
+    taskid: d259f7ec-b885-4d50-8882-5d82675a6f7e
     timertriggers: []
     type: regular
     view: |-
@@ -179,13 +179,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.mdToHTML
-      id: dc03ea77-4cfd-4936-82e2-d167332fe7c5
+      id: f0b1efa2-3a83-479a-8ed2-de7df8c72d1d
       iscommand: true
       name: html Data
       script: Builtin|||mdToHtml
       type: regular
       version: -1
-    taskid: dc03ea77-4cfd-4936-82e2-d167332fe7c5
+    taskid: f0b1efa2-3a83-479a-8ed2-de7df8c72d1d
     timertriggers: []
     type: regular
     view: |-
@@ -208,13 +208,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 77d6a0f7-6678-4f13-8ef6-b3978900e5c8
+      id: d0c21485-f4be-440f-81e8-8c2ee888c0fc
       iscommand: false
       name: Untitled Task
       script: Print
       type: regular
       version: -1
-    taskid: 77d6a0f7-6678-4f13-8ef6-b3978900e5c8
+    taskid: d0c21485-f4be-440f-81e8-8c2ee888c0fc
     timertriggers: []
     type: regular
     view: |-
@@ -243,13 +243,13 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds
-      id: 06a9a54f-ebec-4298-87a4-ccc423306310
+      id: 1f6f9023-929e-4e28-8a7b-1e7eda9db294
       iscommand: false
       name: wait a bit to get the link
       script: Sleep
       type: regular
       version: -1
-    taskid: 06a9a54f-ebec-4298-87a4-ccc423306310
+    taskid: 1f6f9023-929e-4e28-8a7b-1e7eda9db294
     timertriggers: []
     type: regular
     view: |-
@@ -281,13 +281,13 @@ tasks:
     task:
       brand: EWSO365
       description: Sends an email.
-      id: 41ee4eb3-398f-41c9-8d49-995f9ba67915
+      id: 3493d277-040a-4fd1-82b6-a2c3dfded250
       iscommand: true
       name: send email
       script: EWSO365|||send-mail
       type: regular
       version: -1
-    taskid: 41ee4eb3-398f-41c9-8d49-995f9ba67915
+    taskid: 3493d277-040a-4fd1-82b6-a2c3dfded250
     timertriggers: []
     type: regular
     view: |-
@@ -309,12 +309,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: eccfe2d5-3858-4b75-83e7-df06e7e713c6
+      id: b1c14643-de2a-430e-81c8-67ca4a70e577
       iscommand: false
       name: Next steps
       type: regular
       version: -1
-    taskid: eccfe2d5-3858-4b75-83e7-df06e7e713c6
+    taskid: b1c14643-de2a-430e-81c8-67ca4a70e577
     timertriggers: []
     type: regular
     view: |-
@@ -336,13 +336,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1c188c80-27b3-4dd9-89ec-38555210dfa7
+      id: f239bdf1-eac9-40b9-85a4-7ed6b7d355ce
       iscommand: false
       name: Test-SubplaybookCounter
       playbookId: 0b38269c-1a8e-403b-88aa-65e9fcd19ef9
       type: playbook
       version: -1
-    taskid: 1c188c80-27b3-4dd9-89ec-38555210dfa7
+    taskid: f239bdf1-eac9-40b9-85a4-7ed6b7d355ce
     timertriggers: []
     type: playbook
     view: |-
