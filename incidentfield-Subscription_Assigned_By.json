@@ -33,7 +33,7 @@
 	"hidden": false,
 	"id": "incident_subscriptionassignedby",
 	"isReadOnly": false,
-	"itemVersion": "4.3.1",
+	"itemVersion": "4.3.0",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Subscription Assigned By",
