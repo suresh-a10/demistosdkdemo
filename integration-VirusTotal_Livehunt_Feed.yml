@@ -98,7 +98,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.5.0
-    itemVersion: 2.6.18
+    itemVersion: 2.6.17
     packID: VirusTotal
     packName: VirusTotal
     packPropagationLabels:
@@ -147,7 +147,7 @@ script:
   runonce: false
   script: |
     register_module_line('VirusTotal Livehunt Feed', 'start', __line__())
-    ### pack version: 2.6.18
+    ### pack version: 2.6.17
 
 
     import urllib3
