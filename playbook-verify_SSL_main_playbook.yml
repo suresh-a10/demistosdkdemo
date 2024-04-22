@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ebb16193-6408-4943-8ce6-e6c4d540162d
+      id: 41df9f6a-32dd-42c8-8f05-ebb46b940d82
       iscommand: false
       name: ""
       version: -1
-    taskid: ebb16193-6408-4943-8ce6-e6c4d540162d
+    taskid: 41df9f6a-32dd-42c8-8f05-ebb46b940d82
     timertriggers: []
     type: start
     view: |-
@@ -78,13 +78,13 @@ tasks:
     task:
       brand: Builtin
       description: Parses a list by header and value.
-      id: 8623be3e-93b4-47c1-8fe7-be3f9e5c530f
+      id: dc96a820-5bed-4ff6-8030-74316785498a
       iscommand: false
       name: get from list
       script: GetListRow
       type: regular
       version: -1
-    taskid: 8623be3e-93b4-47c1-8fe7-be3f9e5c530f
+    taskid: dc96a820-5bed-4ff6-8030-74316785498a
     timertriggers: []
     type: regular
     view: |-
@@ -115,13 +115,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 56322f78-95b2-4e5b-824b-96ff18bb6730
+      id: f6a1d47b-8328-4697-8813-d95531b9b037
       iscommand: false
       name: verify SSL sub playbook
       playbookId: f2f82edf-9118-4f3e-8ca4-b68b0240e31d
       type: playbook
       version: -1
-    taskid: 56322f78-95b2-4e5b-824b-96ff18bb6730
+    taskid: f6a1d47b-8328-4697-8813-d95531b9b037
     timertriggers: []
     type: playbook
     view: |-
