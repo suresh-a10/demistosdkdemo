@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a8dd19cd-d0e9-40e1-881d-b1e11e4115e0
+      id: d289cbe5-2b3c-4588-8649-1538019b50e9
       iscommand: false
       name: ""
       version: -1
-    taskid: a8dd19cd-d0e9-40e1-881d-b1e11e4115e0
+    taskid: d289cbe5-2b3c-4588-8649-1538019b50e9
     timertriggers: []
     type: start
     view: |-
@@ -64,13 +64,13 @@ tasks:
       brand: SplunkPy
       description: Query Splunk to retrieve a list of sample alerts by alert type.
         Used for mapping fetched incidents through the Get Schema option.
-      id: 9b614428-c055-4cfe-8933-88af23480eba
+      id: fede27c8-626d-478d-8019-abf8b2ac463b
       iscommand: true
       name: Splunk Test
       script: SplunkPy|||get-mapping-fields
       type: regular
       version: -1
-    taskid: 9b614428-c055-4cfe-8933-88af23480eba
+    taskid: fede27c8-626d-478d-8019-abf8b2ac463b
     timertriggers: []
     type: regular
     view: |-
@@ -99,13 +99,13 @@ tasks:
     task:
       brand: ""
       description: Provides data enrichment for ips.
-      id: 5578d000-d2dc-41de-8623-a5837d57d79c
+      id: 0c96d772-d963-40ad-87e8-78476f7f30c4
       iscommand: true
       name: Ip Reputation
       script: '|||ip'
       type: regular
       version: -1
-    taskid: 5578d000-d2dc-41de-8623-a5837d57d79c
+    taskid: 0c96d772-d963-40ad-87e8-78476f7f30c4
     timertriggers: []
     type: regular
     view: |-
@@ -140,13 +140,13 @@ tasks:
     task:
       brand: ""
       description: Sends an email.
-      id: b1cc578d-0aea-4a24-848a-9fee4feae97b
+      id: ee63fb08-2ca4-4d60-8fdd-89e4e07be3be
       iscommand: true
       name: Send Notification
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: b1cc578d-0aea-4a24-848a-9fee4feae97b
+    taskid: ee63fb08-2ca4-4d60-8fdd-89e4e07be3be
     timertriggers: []
     type: regular
     view: |-
@@ -168,12 +168,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2949f35a-4d3a-48fb-8188-0c72d73a4a9a
+      id: 2982f15f-add1-460b-89e6-4cbd4814a0d0
       iscommand: false
       name: End
       type: title
       version: -1
-    taskid: 2949f35a-4d3a-48fb-8188-0c72d73a4a9a
+    taskid: 2982f15f-add1-460b-89e6-4cbd4814a0d0
     timertriggers: []
     type: title
     view: |-
