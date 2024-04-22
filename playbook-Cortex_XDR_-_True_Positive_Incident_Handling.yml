@@ -836,8 +836,6 @@ tasks:
       - "54"
     note: false
     quietmode: 0
-    results:
-    - brandInstances
     scriptarguments:
       brandname:
         simple: ServiceNow v2
@@ -876,8 +874,6 @@ tasks:
       - "55"
     note: false
     quietmode: 0
-    results:
-    - brandInstances
     scriptarguments:
       brandname:
         simple: jira-v2
