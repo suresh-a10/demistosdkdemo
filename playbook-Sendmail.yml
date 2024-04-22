@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7b51a974-9359-41d8-89c7-62f590def39d
+      id: 44b4f3c7-a144-4054-853c-53960b4015ec
       iscommand: false
       name: ""
       version: -1
-    taskid: 7b51a974-9359-41d8-89c7-62f590def39d
+    taskid: 44b4f3c7-a144-4054-853c-53960b4015ec
     timertriggers: []
     type: start
     view: |-
@@ -60,13 +60,13 @@ tasks:
     task:
       brand: ""
       description: Sends an email.
-      id: 726017a6-cc82-49f7-8414-458f8478288d
+      id: 61cb34a0-337a-410b-883d-683907c6ef63
       iscommand: true
       name: Sendmail
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: 726017a6-cc82-49f7-8414-458f8478288d
+    taskid: 61cb34a0-337a-410b-883d-683907c6ef63
     timertriggers: []
     type: regular
     view: |-
@@ -102,13 +102,13 @@ tasks:
       brand: ""
       description: Ask a user a question via email and process the reply directly
         into the investigation.
-      id: 20d04fba-69be-44c8-8e67-668c2c012abd
+      id: e8b912c6-23cf-498b-87ee-59da3fb436de
       iscommand: false
       name: Untitled Task
       script: EmailAskUser
       type: regular
       version: -1
-    taskid: 20d04fba-69be-44c8-8e67-668c2c012abd
+    taskid: e8b912c6-23cf-498b-87ee-59da3fb436de
     timertriggers: []
     type: regular
     view: |-
@@ -134,13 +134,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: eb819004-5b7d-4091-8753-1569b6b44291
+      id: 6f09eda3-690b-49c3-8e77-3c98a6dfd669
       iscommand: false
       name: Untitled Task
       script: Print
       type: regular
       version: -1
-    taskid: eb819004-5b7d-4091-8753-1569b6b44291
+    taskid: 6f09eda3-690b-49c3-8e77-3c98a6dfd669
     timertriggers: []
     type: regular
     view: |-
