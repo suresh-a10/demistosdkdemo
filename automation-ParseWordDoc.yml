@@ -1,6 +1,6 @@
 args:
 - default: true
-  description: Docx file to parse.
+  description: Docx file to parse
   name: entryID
   required: true
 comment: Takes an input docx file (entryID) as an input and saves an output text file
@@ -12,7 +12,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 1.14.25
+    itemVersion: 1.14.19
     packID: CommonScripts
     packName: Common Scripts
     packPropagationLabels:
@@ -20,7 +20,7 @@ contentitemexportablefields:
     prevname: ""
     propagationLabels: []
     toServerVersion: ""
-dockerimage: demisto/office-utils:2.0.0.89801
+dockerimage: demisto/docxpy:1.0.0.40261
 enabled: true
 engineinfo: {}
 mainengineinfo: {}
@@ -30,7 +30,7 @@ runas: DBotWeakRole
 runonce: false
 script: |
   register_module_line('ParseWordDoc', 'start', __line__())
-  ### pack version: 1.14.25
+  ### pack version: 1.14.19
 
 
   from docx import Document
