@@ -36,11 +36,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a60d79ad-b1fb-4ef1-80fd-7b427f177d3a
+      id: 527a8094-f4fb-40fb-84f3-9387a19e701b
       iscommand: false
       name: ""
       version: -1
-    taskid: a60d79ad-b1fb-4ef1-80fd-7b427f177d3a
+    taskid: 527a8094-f4fb-40fb-84f3-9387a19e701b
     timertriggers: []
     type: start
     view: |-
@@ -78,13 +78,13 @@ tasks:
     task:
       brand: SplunkPy
       description: Searches Splunk for events.
-      id: 626146f1-267d-4668-8919-e18860668dd1
+      id: 630ae0e6-3e42-49bb-80a1-edfdc75ad877
       iscommand: true
       name: Get SID
       script: SplunkPy|||splunk-search
       type: regular
       version: -1
-    taskid: 626146f1-267d-4668-8919-e18860668dd1
+    taskid: 630ae0e6-3e42-49bb-80a1-edfdc75ad877
     timertriggers: []
     type: regular
     view: |-
@@ -116,13 +116,13 @@ tasks:
       brand: SplunkPy
       description: Returns the results of a previous Splunk search. You can use this
         command in conjunction with the splunk-job-create command.
-      id: 7ee2ccde-e83a-4412-8dad-faf635cfb2e1
+      id: e1f9f7bd-d100-43cb-8a66-d2be03dbdc27
       iscommand: true
       name: Fetch Results
       script: SplunkPy|||splunk-results
       type: regular
       version: -1
-    taskid: 7ee2ccde-e83a-4412-8dad-faf635cfb2e1
+    taskid: e1f9f7bd-d100-43cb-8a66-d2be03dbdc27
     timertriggers: []
     type: regular
     view: |-
@@ -157,13 +157,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d70adbe3-17a4-41f5-841b-b84df776d168
+      id: ffac8227-5ffc-43f7-89b8-93e79f1ecf91
       iscommand: false
       name: Playbook to perform rest of task
       playbookId: 99788f3d-2a74-4f71-86ed-63a27a121154
       type: playbook
       version: -1
-    taskid: d70adbe3-17a4-41f5-841b-b84df776d168
+    taskid: ffac8227-5ffc-43f7-89b8-93e79f1ecf91
     timertriggers: []
     type: playbook
     view: |-
