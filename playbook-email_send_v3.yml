@@ -32,11 +32,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: fbd21444-8234-4821-836c-9a54a9edeb61
+      id: 985686e2-251b-4e86-8a8d-68462ecf4b64
       iscommand: false
       name: ""
       version: -1
-    taskid: fbd21444-8234-4821-836c-9a54a9edeb61
+    taskid: 985686e2-251b-4e86-8a8d-68462ecf4b64
     timertriggers: []
     type: start
     view: |-
@@ -105,13 +105,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 021c9550-1a4c-458b-8dbb-a2fb8e6e6cf0
+      id: 1de24ed0-78c6-4e21-8d55-4465a7e62030
       iscommand: true
       name: Set Incident Fields
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 021c9550-1a4c-458b-8dbb-a2fb8e6e6cf0
+    taskid: 1de24ed0-78c6-4e21-8d55-4465a7e62030
     timertriggers: []
     type: regular
     view: |-
@@ -150,13 +150,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: 505b0b24-9364-4060-8d50-de6eedc8b65d
+      id: d56a54c1-68fd-4bb3-8db8-7899a4a253fe
       iscommand: false
       name: Send Email
       script: SendEmailReply
       type: regular
       version: -1
-    taskid: 505b0b24-9364-4060-8d50-de6eedc8b65d
+    taskid: d56a54c1-68fd-4bb3-8db8-7899a4a253fe
     timertriggers: []
     type: regular
     view: |-
@@ -187,13 +187,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 64c96bc1-77f1-40b3-8b42-1a7b19e21e67
+      id: 843c424d-d682-4bf8-80b5-0f93e20952f6
       iscommand: true
       name: Set SLA
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 64c96bc1-77f1-40b3-8b42-1a7b19e21e67
+    taskid: 843c424d-d682-4bf8-80b5-0f93e20952f6
     timertriggers: []
     type: regular
     view: |-
@@ -215,14 +215,14 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d68fae89-d5f9-4fe7-8402-9f525c694828
+      id: 5fa6f661-9a5e-48a4-8a7c-a11a83e47347
       iscommand: false
       name: wait for user response
       tags:
       - userreply2
       type: regular
       version: -1
-    taskid: d68fae89-d5f9-4fe7-8402-9f525c694828
+    taskid: 5fa6f661-9a5e-48a4-8a7c-a11a83e47347
     timertriggers:
     - action: start
       fieldname: demosla
@@ -253,13 +253,13 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds.
-      id: 235e5425-d4ca-42c9-8fa9-c986f3771ea9
+      id: 32a088c3-f4af-4865-89de-7b36a8280fc0
       iscommand: false
       name: Sleep 1 sec
       script: Sleep
       type: regular
       version: -1
-    taskid: 235e5425-d4ca-42c9-8fa9-c986f3771ea9
+    taskid: 32a088c3-f4af-4865-89de-7b36a8280fc0
     timertriggers: []
     type: regular
     view: |-
@@ -293,13 +293,13 @@ tasks:
         If the lock is already in use, the command waits until the lock is released
         or until timeout is reached. If timeout is reached and the lock hasn't been
         released, the command fails to get the lock.
-      id: 317df1da-b4de-4bac-8238-f812be0f1156
+      id: 7d6ad002-cbef-4cc6-8ebb-f8a3ea626d2f
       iscommand: true
       name: demisto lock
       script: Demisto Lock|||demisto-lock-get
       type: regular
       version: -1
-    taskid: 317df1da-b4de-4bac-8238-f812be0f1156
+    taskid: 7d6ad002-cbef-4cc6-8ebb-f8a3ea626d2f
     timertriggers: []
     type: regular
     view: |-
@@ -328,13 +328,13 @@ tasks:
     task:
       brand: Demisto Lock
       description: Release a lock
-      id: 090c1764-f989-4e22-8dd7-d6e1e4bbee17
+      id: 849e147c-04f8-4395-8f70-661ee7b27d2f
       iscommand: true
       name: demisto release lock
       script: Demisto Lock|||demisto-lock-release
       type: regular
       version: -1
-    taskid: 090c1764-f989-4e22-8dd7-d6e1e4bbee17
+    taskid: 849e147c-04f8-4395-8f70-661ee7b27d2f
     timertriggers: []
     type: regular
     view: |-
@@ -356,12 +356,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a70e1cbd-50a3-4af2-80ec-808675a1f93b
+      id: 7e049490-a952-430a-8de3-892da7ebea8f
       iscommand: false
       name: end
       type: title
       version: -1
-    taskid: a70e1cbd-50a3-4af2-80ec-808675a1f93b
+    taskid: 7e049490-a952-430a-8de3-892da7ebea8f
     timertriggers: []
     type: title
     view: |-
