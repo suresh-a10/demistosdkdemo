@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7513e609-7f91-417d-895f-b5ccc46de9dc
+      id: 02929faa-d751-4210-8f43-617c7a4eaca6
       iscommand: false
       name: ""
       version: -1
-    taskid: 7513e609-7f91-417d-895f-b5ccc46de9dc
+    taskid: 02929faa-d751-4210-8f43-617c7a4eaca6
     timertriggers: []
     type: start
     view: |-
@@ -64,13 +64,13 @@ tasks:
       brand: ""
       description: The automation takes Excel file (entryID) as an input and parses
         its content to the war room and context
-      id: 32b42793-fe7b-4919-8ace-e711985df6e1
+      id: ee192a79-29ec-4123-8acf-56d446c4adb0
       iscommand: false
       name: Parse Excel
       script: ParseExcel
       type: regular
       version: -1
-    taskid: 32b42793-fe7b-4919-8ace-e711985df6e1
+    taskid: ee192a79-29ec-4123-8acf-56d446c4adb0
     timertriggers: []
     type: regular
     view: |-
@@ -103,13 +103,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: cedcbd36-c768-4fbd-8357-e36212422f8a
+      id: 40f1a236-78fe-4b3d-80fb-d67bd7595e78
       iscommand: false
       name: Set Incident Data
       playbookId: 99767e53-0ad7-472f-81d5-9e569b157a28
       type: playbook
       version: -1
-    taskid: cedcbd36-c768-4fbd-8357-e36212422f8a
+    taskid: 40f1a236-78fe-4b3d-80fb-d67bd7595e78
     timertriggers: []
     type: playbook
     view: |-
@@ -131,12 +131,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e51e2716-2f0f-41d5-8e96-43c9dbda30e3
+      id: d252f6b5-ac17-4e91-8205-15d083e22a31
       iscommand: false
       name: Untitled Task
       type: regular
       version: -1
-    taskid: e51e2716-2f0f-41d5-8e96-43c9dbda30e3
+    taskid: d252f6b5-ac17-4e91-8205-15d083e22a31
     timertriggers: []
     type: regular
     view: |-
