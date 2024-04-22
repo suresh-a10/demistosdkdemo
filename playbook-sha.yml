@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9a9b925a-f924-4e3c-83c5-8b760e277d4a
+      id: 8ae1839e-0743-4508-8529-e119ef451bac
       iscommand: false
       name: ""
       version: -1
-    taskid: 9a9b925a-f924-4e3c-83c5-8b760e277d4a
+    taskid: 8ae1839e-0743-4508-8529-e119ef451bac
     timertriggers: []
     type: start
     view: |-
@@ -68,13 +68,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 34525a72-e930-4744-860b-38cac9cab383
+      id: 2c2fe337-8017-42de-8c2d-2e426bcfdba9
       iscommand: false
       name: delete context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 34525a72-e930-4744-860b-38cac9cab383
+    taskid: 2c2fe337-8017-42de-8c2d-2e426bcfdba9
     timertriggers: []
     type: regular
     view: |-
@@ -140,12 +140,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9c2710b0-a41c-4455-89b8-1d22c1b4522f
+      id: f079f78f-864b-482c-825c-02c18de22fd5
       iscommand: false
       name: CVE found! Ask manager for approval
       type: collection
       version: -1
-    taskid: 9c2710b0-a41c-4455-89b8-1d22c1b4522f
+    taskid: f079f78f-864b-482c-825c-02c18de22fd5
     timertriggers: []
     type: collection
     view: |-
@@ -175,13 +175,13 @@ tasks:
     task:
       brand: SlackV2
       description: Sends a message to a user, group, or channel.
-      id: a62253da-7a56-414b-810d-6e61cb7457f2
+      id: f2aef9d1-7cf9-4ed6-8aa5-b0cde2ad07eb
       iscommand: true
       name: Block it
       script: SlackV2|||send-notification
       type: regular
       version: -1
-    taskid: a62253da-7a56-414b-810d-6e61cb7457f2
+    taskid: f2aef9d1-7cf9-4ed6-8aa5-b0cde2ad07eb
     timertriggers: []
     type: regular
     view: |-
@@ -241,12 +241,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 33a722bd-8999-4c6a-8e2d-13327fb18cfa
+      id: 4b2d9532-4948-4d63-806b-a15aee94ff3a
       iscommand: false
       name: Check Manager response
       type: condition
       version: -1
-    taskid: 33a722bd-8999-4c6a-8e2d-13327fb18cfa
+    taskid: 4b2d9532-4948-4d63-806b-a15aee94ff3a
     timertriggers: []
     type: condition
     view: |-
@@ -276,13 +276,13 @@ tasks:
     task:
       brand: SlackV2
       description: Sends a message to a user, group, or channel.
-      id: a354bbb1-cb5a-4217-84b0-1a893ddaca64
+      id: 6f40a512-7a59-4e5b-8d31-fac44d92e079
       iscommand: true
       name: Ignored it
       script: SlackV2|||send-notification
       type: regular
       version: -1
-    taskid: a354bbb1-cb5a-4217-84b0-1a893ddaca64
+    taskid: 6f40a512-7a59-4e5b-8d31-fac44d92e079
     timertriggers: []
     type: regular
     view: |-
@@ -310,13 +310,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 03306704-9ed6-422a-8c95-dc7d6ef4c5b9
+      id: c9c52fc8-2d1b-4998-8094-5feda9594df1
       iscommand: false
       name: Query ChatGPT
       script: fb578079-3b32-485e-8cff-d23fff27b1c1
       type: regular
       version: -1
-    taskid: 03306704-9ed6-422a-8c95-dc7d6ef4c5b9
+    taskid: c9c52fc8-2d1b-4998-8094-5feda9594df1
     timertriggers: []
     type: regular
     view: |-
@@ -349,13 +349,13 @@ tasks:
     task:
       brand: SlackV2
       description: Sends a message to a user, group, or channel.
-      id: ad806a1e-11bd-4ef2-8dc2-9ae4e425063e
+      id: 64c1d69e-5a43-48ed-8e72-61ddf26eacb0
       iscommand: true
       name: Send ChatGPT response to Manager
       script: SlackV2|||send-notification
       type: regular
       version: -1
-    taskid: ad806a1e-11bd-4ef2-8dc2-9ae4e425063e
+    taskid: 64c1d69e-5a43-48ed-8e72-61ddf26eacb0
     timertriggers: []
     type: regular
     view: |-
@@ -384,13 +384,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP GET requests
-      id: 3350ecc6-e61b-43b6-8c99-8fd13cf0fe7e
+      id: 8073e6f1-ddc1-4a12-84c6-b34ca9f6acae
       iscommand: true
       name: Untitled Task
       script: Core REST API|||core-api-get
       type: regular
       version: -1
-    taskid: 3350ecc6-e61b-43b6-8c99-8fd13cf0fe7e
+    taskid: 8073e6f1-ddc1-4a12-84c6-b34ca9f6acae
     timertriggers: []
     type: regular
     view: |-
@@ -418,13 +418,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP POST request
-      id: 03a45ff6-55c1-4f95-8448-9c07bcec141a
+      id: 4bd68a41-7e58-493d-8de1-c85afe9cc58b
       iscommand: true
       name: Untitled Task
       script: Core REST API|||core-api-post
       type: regular
       version: -1
-    taskid: 03a45ff6-55c1-4f95-8448-9c07bcec141a
+    taskid: 4bd68a41-7e58-493d-8de1-c85afe9cc58b
     timertriggers: []
     type: regular
     view: |-
