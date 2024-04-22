@@ -33,11 +33,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0442ed27-106c-4754-86ff-d36ad8292139
+      id: adee5b4b-d15e-434f-8481-2789f21384cc
       iscommand: false
       name: ""
       version: -1
-    taskid: 0442ed27-106c-4754-86ff-d36ad8292139
+    taskid: adee5b4b-d15e-434f-8481-2789f21384cc
     timertriggers: []
     type: start
     view: |-
@@ -70,13 +70,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 7d81be56-1419-46f2-8eeb-850d6513fcc5
+      id: 3f596d5e-9e88-431e-8365-f6b77a871d8c
       iscommand: false
       name: Untitled Task
       script: SearchIncidentsV2
       type: regular
       version: -1
-    taskid: 7d81be56-1419-46f2-8eeb-850d6513fcc5
+    taskid: 3f596d5e-9e88-431e-8365-f6b77a871d8c
     timertriggers: []
     type: regular
     view: |-
