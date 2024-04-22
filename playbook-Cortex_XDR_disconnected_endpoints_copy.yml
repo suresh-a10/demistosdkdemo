@@ -72,11 +72,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 11b3bf49-7884-457d-822c-0b0ee76eb13b
+      id: 87980f8a-4367-4675-84ec-730d79a1cae9
       iscommand: false
       name: ""
       version: -1
-    taskid: 11b3bf49-7884-457d-822c-0b0ee76eb13b
+    taskid: 87980f8a-4367-4675-84ec-730d79a1cae9
     timertriggers: []
     type: start
     view: |-
@@ -125,13 +125,13 @@ tasks:
         be concatenated using the AND condition (OR is not supported). The maximum
         result set size is 100. Offset is the zero-based number of the endpoint from
         the start of the result set (start by counting from 0).
-      id: 77e00dbe-8e5d-4f05-8675-57bda31ecc2c
+      id: f34af505-93ca-41d5-8646-f5475d1ece73
       iscommand: true
       name: 'Get XDR disconnected endpoints '
       script: '|||xdr-get-endpoints'
       type: regular
       version: -1
-    taskid: 77e00dbe-8e5d-4f05-8675-57bda31ecc2c
+    taskid: f34af505-93ca-41d5-8646-f5475d1ece73
     timertriggers: []
     type: regular
     view: |-
@@ -180,7 +180,7 @@ tasks:
     task:
       brand: ""
       description: Export the given array to a CSV file.
-      id: 49d4cd69-7b8e-4170-8dd4-8b406d91f9f9
+      id: 7bb2c388-aad0-4d5c-851f-d421754b6db0
       iscommand: false
       name: Generate a CSV report for disconnected XDR endpoints
       script: ExportToCSV
@@ -188,7 +188,7 @@ tasks:
       - Endpoint report
       type: regular
       version: -1
-    taskid: 49d4cd69-7b8e-4170-8dd4-8b406d91f9f9
+    taskid: 7bb2c388-aad0-4d5c-851f-d421754b6db0
     timertriggers: []
     type: regular
     view: |-
@@ -227,13 +227,13 @@ tasks:
     task:
       brand: ""
       description: Sends an mail using Gmail/EWS.
-      id: d0a25a5c-22fc-486c-8db9-3b7712bcc070
+      id: c5503bd6-f79c-4b63-8e44-e044bf33ffff
       iscommand: true
       name: Mail disconnected endpoints report
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: d0a25a5c-22fc-486c-8db9-3b7712bcc070
+    taskid: c5503bd6-f79c-4b63-8e44-e044bf33ffff
     timertriggers: []
     type: regular
     view: |-
@@ -255,12 +255,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: dc3f0de3-018c-45fd-8c9b-8fbec69fdcd1
+      id: 1bbe42a2-cb8c-4c04-807d-c4e14fc44c58
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: dc3f0de3-018c-45fd-8c9b-8fbec69fdcd1
+    taskid: 1bbe42a2-cb8c-4c04-807d-c4e14fc44c58
     timertriggers: []
     type: title
     view: |-
@@ -312,12 +312,12 @@ tasks:
     task:
       brand: ""
       description: ''''''
-      id: 5a48c50c-5292-44ad-8490-657d5c362769
+      id: db2f90f5-8532-436c-8526-ab2902471741
       iscommand: false
       name: Disconnected endpoints found?
       type: condition
       version: -1
-    taskid: 5a48c50c-5292-44ad-8490-657d5c362769
+    taskid: db2f90f5-8532-436c-8526-ab2902471741
     timertriggers: []
     type: condition
     view: |-
@@ -391,13 +391,13 @@ tasks:
       brand: Builtin
       description: Count the users and hosts involved in the incidents and insert
         the amount in the incident field,
-      id: e4357ffe-e338-4496-8de4-dd97a07ea613
+      id: c8682f3f-1a1b-404f-8fa8-20f114a2a9ae
       iscommand: true
       name: Count involved users and hosts
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: e4357ffe-e338-4496-8de4-dd97a07ea613
+    taskid: c8682f3f-1a1b-404f-8fa8-20f114a2a9ae
     timertriggers: []
     type: regular
     view: |-
@@ -433,13 +433,13 @@ tasks:
     task:
       brand: ""
       description: Creates a grid table from items or key-value pairs.
-      id: 714ab97f-e4e6-4a95-8fc6-4832254535ce
+      id: cde4094f-c8f8-4b82-88a3-495bd2dd2498
       iscommand: false
       name: Set endpoints grid
       script: SetGridField
       type: regular
       version: -1
-    taskid: 714ab97f-e4e6-4a95-8fc6-4832254535ce
+    taskid: cde4094f-c8f8-4b82-88a3-495bd2dd2498
     timertriggers: []
     type: regular
     view: |-
@@ -488,7 +488,7 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: d7986a4a-bd67-4f23-8aac-6566f6a7db85
+      id: d78eb837-b56b-44c9-8118-6e26275ae531
       iscommand: false
       name: |2-
 
@@ -496,7 +496,7 @@ tasks:
       script: Set
       type: regular
       version: -1
-    taskid: d7986a4a-bd67-4f23-8aac-6566f6a7db85
+    taskid: d78eb837-b56b-44c9-8118-6e26275ae531
     timertriggers: []
     type: regular
     view: |-
@@ -533,12 +533,12 @@ tasks:
     task:
       brand: ""
       description: ''''''
-      id: 58c3dc22-4376-4886-83a3-6c1d546709ea
+      id: cc612047-1763-4bc9-8733-e341ba51dc02
       iscommand: false
       name: Email report?
       type: condition
       version: -1
-    taskid: 58c3dc22-4376-4886-83a3-6c1d546709ea
+    taskid: cc612047-1763-4bc9-8733-e341ba51dc02
     timertriggers: []
     type: condition
     view: |-
@@ -564,13 +564,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: 8494a1f1-272a-4f9d-8665-94a666f32bec
+      id: 8f57041e-db4b-4748-8a82-8da1f7452663
       iscommand: true
       name: Close job
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 8494a1f1-272a-4f9d-8665-94a666f32bec
+    taskid: 8f57041e-db4b-4748-8a82-8da1f7452663
     timertriggers: []
     type: regular
     view: |-
@@ -604,13 +604,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: de5f3c9f-35c2-4bcd-8028-ee3757bafb9b
+      id: feefe7dc-59e8-421c-83f9-181016ee3dbf
       iscommand: false
       name: delete context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: de5f3c9f-35c2-4bcd-8028-ee3757bafb9b
+    taskid: feefe7dc-59e8-421c-83f9-181016ee3dbf
     timertriggers: []
     type: regular
     view: |-
