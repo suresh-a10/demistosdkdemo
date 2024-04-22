@@ -27,11 +27,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1967e556-9d15-49d0-81ad-2af9bffc507d
+      id: 1c0f5bed-b7dd-4393-8892-65e2dcba06c1
       iscommand: false
       name: ""
       version: -1
-    taskid: 1967e556-9d15-49d0-81ad-2af9bffc507d
+    taskid: 1c0f5bed-b7dd-4393-8892-65e2dcba06c1
     timertriggers: []
     type: start
     view: |-
@@ -70,13 +70,13 @@ tasks:
       brand: ""
       description: Takes a comma separated string data and splits it into batches
         of desired size.
-      id: f70db7dc-7d19-4132-84ca-14f83371b56a
+      id: 81576f6a-7d20-4783-8a90-99fc0f45ce3d
       iscommand: false
       name: Split Data in chunks
       script: 5ed1fa85-be8a-41e1-884e-398d396b2d6e
       type: regular
       version: -1
-    taskid: f70db7dc-7d19-4132-84ca-14f83371b56a
+    taskid: 81576f6a-7d20-4783-8a90-99fc0f45ce3d
     timertriggers: []
     type: regular
     view: |-
@@ -111,13 +111,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: acac20fa-6405-4fd6-8c7d-d9f9f429f712
+      id: 68aab3d8-f94a-41af-8d2e-3b8edac007ad
       iscommand: false
       name: PrintinLoop
       playbookId: c33af6c7-700a-4110-8c69-1fa70909d05f
       type: playbook
       version: -1
-    taskid: acac20fa-6405-4fd6-8c7d-d9f9f429f712
+    taskid: 68aab3d8-f94a-41af-8d2e-3b8edac007ad
     timertriggers: []
     type: playbook
     view: |-
@@ -139,12 +139,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3c35d2b6-f95c-437a-8971-261eae361a1f
+      id: 65e870e4-4c9d-4892-805d-09c041ba80a4
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 3c35d2b6-f95c-437a-8971-261eae361a1f
+    taskid: 65e870e4-4c9d-4892-805d-09c041ba80a4
     timertriggers: []
     type: title
     view: |-
@@ -177,13 +177,13 @@ tasks:
         Search for XSOAR Indicators and returns the id, indicator_type, value, and score/verdict.
 
         You can add additional fields from the indicators using the add_field_to_context argument.
-      id: cfd8a3e2-9707-47f0-89a8-2832e223a482
+      id: 8299e11f-2aa5-4900-82bd-b546f7f8ac47
       iscommand: false
       name: Search Indicators
       script: SearchIndicator
       type: regular
       version: -1
-    taskid: cfd8a3e2-9707-47f0-89a8-2832e223a482
+    taskid: 8299e11f-2aa5-4900-82bd-b546f7f8ac47
     timertriggers: []
     type: regular
     view: |-
