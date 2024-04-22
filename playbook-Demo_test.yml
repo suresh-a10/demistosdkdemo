@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 28a5a32d-a05b-4e9c-8063-40fb5594ac69
+      id: ee24e5c0-8a68-4475-8c21-9e2fd9db1aff
       iscommand: false
       name: ""
       version: -1
-    taskid: 28a5a32d-a05b-4e9c-8063-40fb5594ac69
+    taskid: ee24e5c0-8a68-4475-8c21-9e2fd9db1aff
     timertriggers: []
     type: start
     view: |-
@@ -72,13 +72,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 24beeab2-70a7-4db4-8a83-b978aff251b2
+      id: 8f85ba04-8bd6-464e-82cf-d23d8f6eefe0
       iscommand: false
       name: set Context
       script: Set
       type: regular
       version: -1
-    taskid: 24beeab2-70a7-4db4-8a83-b978aff251b2
+    taskid: 8f85ba04-8bd6-464e-82cf-d23d8f6eefe0
     timertriggers: []
     type: regular
     view: |-
@@ -109,7 +109,7 @@ tasks:
     task:
       brand: ""
       description: Convert an array to a nice table display. Usually, from the context.
-      id: f1978c7d-5590-4878-83df-37bd27a87dd7
+      id: 626cfe7b-338a-464f-899e-92ed79d5634e
       iscommand: false
       name: To Table
       script: ToTable
@@ -117,7 +117,7 @@ tasks:
       - Host Details
       type: regular
       version: -1
-    taskid: f1978c7d-5590-4878-83df-37bd27a87dd7
+    taskid: 626cfe7b-338a-464f-899e-92ed79d5634e
     timertriggers: []
     type: regular
     view: |-
@@ -151,13 +151,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: c981d81b-dde0-4b24-8aac-a2a114232da8
+      id: 3fc1dc00-1858-4314-8cfb-392cc9c12a5b
       iscommand: false
       name: Delete context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: c981d81b-dde0-4b24-8aac-a2a114232da8
+    taskid: 3fc1dc00-1858-4314-8cfb-392cc9c12a5b
     timertriggers: []
     type: regular
     view: |-
@@ -188,13 +188,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP POST request
-      id: ab9d4233-ec40-46c0-83d1-98d4503440ad
+      id: ffb9f9a3-b104-414f-80d6-7c3e0e6fbcd0
       iscommand: true
       name: Get Attachment Entry IDS
       script: Core REST API|||demisto-api-post
       type: regular
       version: -1
-    taskid: ab9d4233-ec40-46c0-83d1-98d4503440ad
+    taskid: ffb9f9a3-b104-414f-80d6-7c3e0e6fbcd0
     timertriggers: []
     type: regular
     view: |-
@@ -220,13 +220,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP GET requests
-      id: b0353485-3f9d-4b56-815f-8e98a5100500
+      id: bb8b375a-a10c-4e17-817d-f53b74cc730b
       iscommand: true
       name: Create new Indicator
       script: Core REST API|||demisto-api-get
       type: regular
       version: -1
-    taskid: b0353485-3f9d-4b56-815f-8e98a5100500
+    taskid: bb8b375a-a10c-4e17-817d-f53b74cc730b
     timertriggers: []
     type: regular
     view: |-
@@ -255,13 +255,13 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds
-      id: 9244c899-32aa-481f-88cb-9e0342d8710e
+      id: bb1122bc-6016-48fb-8c7b-421032c52e03
       iscommand: false
       name: Sleep
       script: Sleep
       type: regular
       version: -1
-    taskid: 9244c899-32aa-481f-88cb-9e0342d8710e
+    taskid: bb1122bc-6016-48fb-8c7b-421032c52e03
     timertriggers: []
     type: regular
     view: |-
@@ -290,13 +290,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 1211bc20-94cf-43d1-8bee-1a946b29771d
+      id: 0b3e76a2-2c81-451d-8c82-0120317167ca
       iscommand: true
       name: Set Command Status field to Running
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 1211bc20-94cf-43d1-8bee-1a946b29771d
+    taskid: 0b3e76a2-2c81-451d-8c82-0120317167ca
     timertriggers: []
     type: regular
     view: |-
@@ -336,13 +336,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: d7c3dfe2-f5fd-4e09-885f-043a7c87a89c
+      id: dad11bca-b51c-4817-8233-91f86d1e20de
       iscommand: false
       name: Search Incidents
       script: SearchIncidentsV2
       type: regular
       version: -1
-    taskid: d7c3dfe2-f5fd-4e09-885f-043a7c87a89c
+    taskid: dad11bca-b51c-4817-8233-91f86d1e20de
     timertriggers: []
     type: regular
     view: |-
@@ -381,12 +381,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2aa2e7ae-1a7d-4402-8146-d6cd6b7d8264
+      id: ae9072dd-54b9-477a-81b5-cd55e3c79618
       iscommand: false
       name: Check the commandstatus
       type: condition
       version: -1
-    taskid: 2aa2e7ae-1a7d-4402-8146-d6cd6b7d8264
+    taskid: ae9072dd-54b9-477a-81b5-cd55e3c79618
     timertriggers: []
     type: condition
     view: |-
@@ -416,13 +416,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP POST request.
-      id: 1b9e1c4b-0225-4dab-8386-be093b5fa9c0
+      id: 8be9d05f-0489-4ac5-8ea6-b21be8b24a45
       iscommand: true
       name: Pause the playbook execution
       script: Core REST API|||demisto-api-post
       type: regular
       version: -1
-    taskid: 1b9e1c4b-0225-4dab-8386-be093b5fa9c0
+    taskid: 8be9d05f-0489-4ac5-8ea6-b21be8b24a45
     timertriggers: []
     type: regular
     view: |-
@@ -450,13 +450,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.list.add
-      id: 45b4c201-84aa-4528-8041-c7010936df95
+      id: f79e287c-4783-4383-8cce-5e6b2a1d2139
       iscommand: true
       name: Update the list with Incident ID to be paused
       script: Builtin|||addToList
       type: regular
       version: -1
-    taskid: 45b4c201-84aa-4528-8041-c7010936df95
+    taskid: f79e287c-4783-4383-8cce-5e6b2a1d2139
     timertriggers: []
     type: regular
     view: |-
@@ -485,13 +485,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 2413c607-38c3-4941-8685-8133ab39b426
+      id: 413baff7-989e-4747-8974-42a773c64e43
       iscommand: true
       name: Set Command Status to Pause
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 2413c607-38c3-4941-8685-8133ab39b426
+    taskid: 413baff7-989e-4747-8974-42a773c64e43
     timertriggers: []
     type: regular
     view: |-
@@ -522,13 +522,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.list.add
-      id: c517c334-4bd8-4f4b-80f1-108d9c7ac8b0
+      id: 140560fd-7f54-4567-8ac8-189d5304a53f
       iscommand: true
       name: Add the incident to PauseIncidents List
       script: Builtin|||addToList
       type: regular
       version: -1
-    taskid: c517c334-4bd8-4f4b-80f1-108d9c7ac8b0
+    taskid: 140560fd-7f54-4567-8ac8-189d5304a53f
     timertriggers: []
     type: regular
     view: |-
@@ -554,13 +554,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: c466b63c-7774-45b6-8e54-c610ae684d62
+      id: 8efb5ac4-0cdf-4a29-8374-0b234e4bdff5
       iscommand: true
       name: Set Command Status to Completed
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: c466b63c-7774-45b6-8e54-c610ae684d62
+    taskid: 8efb5ac4-0cdf-4a29-8374-0b234e4bdff5
     timertriggers: []
     type: regular
     view: |-
