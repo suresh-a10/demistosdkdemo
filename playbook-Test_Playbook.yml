@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 61a4e4a4-3155-4895-8da0-a480fa4ba9f2
+      id: b189f141-b6ea-49cd-8abe-29d348e7ff80
       iscommand: false
       name: ""
       version: -1
-    taskid: 61a4e4a4-3155-4895-8da0-a480fa4ba9f2
+    taskid: b189f141-b6ea-49cd-8abe-29d348e7ff80
     timertriggers: []
     type: start
     view: |-
@@ -66,13 +66,13 @@ tasks:
     task:
       brand: jira-v2
       description: Creates a new issue in Jira.
-      id: 8bbfeed2-21f1-4342-8cf6-8cd538bac71c
+      id: 67771d39-b544-4ae8-840f-d147a90759c4
       iscommand: true
       name: Create Jira Ticket
       script: jira-v2|||jira-create-issue
       type: regular
       version: -1
-    taskid: 8bbfeed2-21f1-4342-8cf6-8cd538bac71c
+    taskid: 67771d39-b544-4ae8-840f-d147a90759c4
     timertriggers: []
     type: regular
     view: |-
@@ -105,13 +105,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5edfaa20-342a-4601-8880-2d8793006f71
+      id: 22fb27ac-0917-424f-8cd1-ab26c5de72bc
       iscommand: false
       name: sub-pb
       playbookId: ba00221b-fb94-47aa-865a-5225c0ee2c63
       type: playbook
       version: -1
-    taskid: 5edfaa20-342a-4601-8880-2d8793006f71
+    taskid: 22fb27ac-0917-424f-8cd1-ab26c5de72bc
     timertriggers: []
     type: playbook
     view: |-
@@ -155,13 +155,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: cd87830b-5037-466c-87c5-332aecfad6f4
+      id: 960c6d0a-e007-484d-8dce-f481e10eec07
       iscommand: false
       name: Hi
       playbookName: Access Investigation - Generic
       type: playbook
       version: -1
-    taskid: cd87830b-5037-466c-87c5-332aecfad6f4
+    taskid: 960c6d0a-e007-484d-8dce-f481e10eec07
     timertriggers: []
     type: playbook
     view: |-
@@ -209,12 +209,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 84dac753-59d8-41e4-8d4c-2976cc7e235b
+      id: 7f7c000d-b5c7-46b7-84de-0bba0dce74a5
       iscommand: false
       name: test the ask task
       type: condition
       version: -1
-    taskid: 84dac753-59d8-41e4-8d4c-2976cc7e235b
+    taskid: 7f7c000d-b5c7-46b7-84de-0bba0dce74a5
     timertriggers: []
     type: condition
     view: |-
@@ -243,13 +243,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 4d89632a-1648-42de-8f2d-f85d83209772
+      id: dcdc9c98-3bd0-4fdf-820e-c3cfb373d0ae
       iscommand: false
       name: "Yes"
       script: Print
       type: regular
       version: -1
-    taskid: 4d89632a-1648-42de-8f2d-f85d83209772
+    taskid: dcdc9c98-3bd0-4fdf-820e-c3cfb373d0ae
     timertriggers: []
     type: regular
     view: |-
@@ -271,12 +271,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ce6f9c79-d734-41df-8378-44c465d15ddc
+      id: 41c39c82-eb1a-4aec-8a5f-25689e33341b
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: ce6f9c79-d734-41df-8378-44c465d15ddc
+    taskid: 41c39c82-eb1a-4aec-8a5f-25689e33341b
     timertriggers: []
     type: title
     view: |-
@@ -307,13 +307,13 @@ tasks:
       brand: ipinfo_v2
       description: Check IP reputation (when information is available, returns a JSON
         with details). Uses all configured Threat Intelligence feeds.
-      id: 69262d3f-9651-41a8-896f-226938e1ca74
+      id: b5be0865-2144-40e7-8d4b-4eef395f6e4d
       iscommand: true
       name: Untitled Task
       script: ipinfo_v2|||ip
       type: regular
       version: -1
-    taskid: 69262d3f-9651-41a8-896f-226938e1ca74
+    taskid: b5be0865-2144-40e7-8d4b-4eef395f6e4d
     timertriggers: []
     type: regular
     view: |-
@@ -355,13 +355,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0e32c119-32e3-468f-84b5-49cf10619f50
+      id: cd977f99-aa14-41e2-8546-a63402f71fc3
       iscommand: false
       name: Test-SubplaybookCounter
       playbookId: 0b38269c-1a8e-403b-88aa-65e9fcd19ef9
       type: playbook
       version: -1
-    taskid: 0e32c119-32e3-468f-84b5-49cf10619f50
+    taskid: cd977f99-aa14-41e2-8546-a63402f71fc3
     timertriggers: []
     type: playbook
     view: |-
@@ -421,12 +421,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0152dcfc-1e21-4161-89c8-7b2857bb6561
+      id: 6cf46c40-c05d-4e84-8c19-4ed37e237ae1
       iscommand: false
       name: Untitled Task
       type: collection
       version: -1
-    taskid: 0152dcfc-1e21-4161-89c8-7b2857bb6561
+    taskid: 6cf46c40-c05d-4e84-8c19-4ed37e237ae1
     timertriggers: []
     type: collection
     view: |-
