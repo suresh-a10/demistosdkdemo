@@ -2,7 +2,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.8.0
-    itemVersion: 3.6.17
+    itemVersion: 3.6.14
     packID: Phishing
     packName: Phishing
     packPropagationLabels:
@@ -369,8 +369,8 @@ tasks:
     view: |-
       {
         "position": {
-          "x": -590,
-          "y": 3200
+          "x": -920,
+          "y": 3025
         }
       }
   "8":
@@ -962,7 +962,7 @@ tasks:
       {
         "position": {
           "x": -920,
-          "y": 2880
+          "y": 2860
         }
       }
   "33":
@@ -994,7 +994,7 @@ tasks:
     view: |-
       {
         "position": {
-          "x": -590,
+          "x": -920,
           "y": 3370
         }
       }
@@ -2475,7 +2475,7 @@ tasks:
         complex:
           root: inputs.PhishingModelName
     separatecontext: true
-    skipunavailable: true
+    skipunavailable: false
     task:
       brand: ""
       id: 9ff4d990-f0b2-4085-8352-137c92a77882
@@ -3887,7 +3887,7 @@ tasks:
       {
         "position": {
           "x": -920,
-          "y": 3010
+          "y": 2990
         }
       }
 version: -1
@@ -3914,8 +3914,6 @@ view: |-
       "222_53_yes": 0.42,
       "222_56_#default#": 0.17,
       "223_224_yes": 0.47,
-      "228_7_yes": 0.65,
-      "33_226_No": 0.55,
       "33_30_yes": 0.34,
       "36_152_Yes": 0.49,
       "79_82_yes": 0.46,
