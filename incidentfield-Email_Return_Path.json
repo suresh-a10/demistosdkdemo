@@ -24,7 +24,7 @@
 	"hidden": false,
 	"id": "incident_emailreturnpath",
 	"isReadOnly": false,
-	"itemVersion": "3.6.17",
+	"itemVersion": "3.6.14",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Email Return Path",
