@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 361097b5-6ce0-4b12-8f95-1b320a2cd6d4
+      id: 45734155-ec36-4e19-874f-e6051ff4b47f
       iscommand: false
       name: ""
       version: -1
-    taskid: 361097b5-6ce0-4b12-8f95-1b320a2cd6d4
+    taskid: 45734155-ec36-4e19-874f-e6051ff4b47f
     timertriggers: []
     type: start
     view: |-
@@ -64,13 +64,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.get.users
-      id: 6d1790e7-6949-4111-8f70-3fd8f3f80ec0
+      id: e688ec5d-472e-4b0d-8554-5f342f9eee53
       iscommand: true
       name: Get the managers
       script: Builtin|||getUsers
       type: regular
       version: -1
-    taskid: 6d1790e7-6949-4111-8f70-3fd8f3f80ec0
+    taskid: e688ec5d-472e-4b0d-8554-5f342f9eee53
     timertriggers: []
     type: regular
     view: |-
@@ -106,13 +106,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.list.set
-      id: bb2860be-539a-4fff-881b-f09c6190ddd3
+      id: ce819e54-8e02-47e3-8730-ac93523c79de
       iscommand: true
       name: Update the list with manager email ids
       script: Builtin|||setList
       type: regular
       version: -1
-    taskid: bb2860be-539a-4fff-881b-f09c6190ddd3
+    taskid: ce819e54-8e02-47e3-8730-ac93523c79de
     timertriggers: []
     type: regular
     view: |-
