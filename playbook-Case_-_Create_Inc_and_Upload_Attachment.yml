@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 35a0df49-8160-4fab-8792-bb0523331e0b
+      id: eb919913-6195-460f-87d8-b75218566236
       iscommand: false
       name: ""
       version: -1
-    taskid: 35a0df49-8160-4fab-8792-bb0523331e0b
+    taskid: eb919913-6195-460f-87d8-b75218566236
     timertriggers: []
     type: start
     view: |-
@@ -68,13 +68,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.create.inc
-      id: 7b8f90ba-fa68-48cd-8dec-946a5fc15e55
+      id: c5d8f02c-9833-4d06-8a45-0819bb4aaad5
       iscommand: true
       name: Create BU New Incident
       script: Builtin|||createNewIncident
       type: regular
       version: -1
-    taskid: 7b8f90ba-fa68-48cd-8dec-946a5fc15e55
+    taskid: c5d8f02c-9833-4d06-8a45-0819bb4aaad5
     timertriggers: []
     type: regular
     view: |-
@@ -109,13 +109,13 @@ tasks:
     task:
       brand: Core REST API
       description: Send HTTP Multipart request to upload files to Demisto server.
-      id: 14f0509c-6006-4d02-8da3-40520079cbfa
+      id: bf1633ad-bd5b-4dbd-8e31-542b76e8a316
       iscommand: true
       name: Upload the IOC attachment to BU Incident
       script: Core REST API|||demisto-api-multipart
       type: regular
       version: -1
-    taskid: 14f0509c-6006-4d02-8da3-40520079cbfa
+    taskid: bf1633ad-bd5b-4dbd-8e31-542b76e8a316
     timertriggers: []
     type: regular
     view: |-
@@ -153,12 +153,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5be111ac-be03-4242-8836-89f54e0f3afd
+      id: e436d8ef-3f3f-4493-8b1a-b3a02d7ed72c
       iscommand: false
       name: Check the Splunk results file exists or not
       type: condition
       version: -1
-    taskid: 5be111ac-be03-4242-8836-89f54e0f3afd
+    taskid: e436d8ef-3f3f-4493-8b1a-b3a02d7ed72c
     timertriggers: []
     type: condition
     view: |-
@@ -193,13 +193,13 @@ tasks:
     task:
       brand: Core REST API
       description: Send HTTP Multipart request to upload files to Demisto server.
-      id: d91e2801-f58c-4fb5-8644-71c54ddc77aa
+      id: 558f63d7-9147-4634-8d37-da0d31842ba7
       iscommand: true
       name: Upload the Splunk Search Results file attachment to  BU Incident
       script: Core REST API|||demisto-api-multipart
       type: regular
       version: -1
-    taskid: d91e2801-f58c-4fb5-8644-71c54ddc77aa
+    taskid: 558f63d7-9147-4634-8d37-da0d31842ba7
     timertriggers: []
     type: regular
     view: |-
@@ -225,13 +225,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.linkIncidents
-      id: a0965a5e-efbf-4470-8268-70f3b5b275cd
+      id: 08200277-23df-4a74-80c7-7f1a1cdfa501
       iscommand: true
       name: 'Link Incident '
       script: Builtin|||linkIncidents
       type: regular
       version: -1
-    taskid: a0965a5e-efbf-4470-8268-70f3b5b275cd
+    taskid: 08200277-23df-4a74-80c7-7f1a1cdfa501
     timertriggers: []
     type: regular
     view: |-
@@ -265,13 +265,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: 433c1f56-d944-45a1-846b-075cbf61eda8
+      id: 0e6a1e97-3755-4869-8d8d-65ab95f7aa73
       iscommand: false
       name: Delete context key CreatedIncidentID
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 433c1f56-d944-45a1-846b-075cbf61eda8
+    taskid: 0e6a1e97-3755-4869-8d8d-65ab95f7aa73
     timertriggers: []
     type: regular
     view: |-
@@ -293,12 +293,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7607b94c-c61b-47ef-8a19-124fd3878ffd
+      id: 54e4c838-a0c9-4402-82d0-b8c4bd9fc34f
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 7607b94c-c61b-47ef-8a19-124fd3878ffd
+    taskid: 54e4c838-a0c9-4402-82d0-b8c4bd9fc34f
     timertriggers: []
     type: title
     view: |-
