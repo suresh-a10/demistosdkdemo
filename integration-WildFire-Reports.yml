@@ -37,7 +37,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.5.0
-    itemVersion: 2.1.43
+    itemVersion: 2.1.42
     packID: Palo_Alto_Networks_WildFire
     packName: WildFire by Palo Alto Networks
     packPropagationLabels:
@@ -73,7 +73,7 @@ script:
   runonce: false
   script: |
     register_module_line('WildFire-Reports', 'start', __line__())
-    ### pack version: 2.1.43
+    ### pack version: 2.1.42
 
     import urllib3
     # Disable insecure warnings
