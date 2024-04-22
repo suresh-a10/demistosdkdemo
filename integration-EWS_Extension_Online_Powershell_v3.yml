@@ -38,7 +38,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.5.0
-    itemVersion: 1.2.45
+    itemVersion: 1.2.44
     packID: MicrosoftExchangeOnline
     packName: Microsoft Exchange Online
     packPropagationLabels:
@@ -2329,7 +2329,7 @@ script:
   dockerimage: demisto/pwsh-exchangev3:1.0.0.80547
   runonce: false
   script: |
-    ### pack version: 1.2.45
+    ### pack version: 1.2.44
 
     <# IMPORTANT NOTICE
     # When conencting to ExchangeOnline - only needed command between CreateSession
