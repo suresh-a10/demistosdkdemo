@@ -43,11 +43,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 83dc2c89-abb7-48eb-8e09-c0a0c70cba1a
+      id: bb0baa3a-d582-48b6-8511-eef340c9e391
       iscommand: false
       name: ""
       version: -1
-    taskid: 83dc2c89-abb7-48eb-8e09-c0a0c70cba1a
+    taskid: bb0baa3a-d582-48b6-8511-eef340c9e391
     timertriggers: []
     type: start
     view: |-
@@ -86,12 +86,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 974bfaff-3062-4d72-8388-86f5324c60ec
+      id: 46a44977-f2dc-4022-8c6f-6ac3068b190f
       iscommand: false
       name: Compare Mitretactic
       type: condition
       version: -1
-    taskid: 974bfaff-3062-4d72-8388-86f5324c60ec
+    taskid: 46a44977-f2dc-4022-8c6f-6ac3068b190f
     timertriggers: []
     type: condition
     view: |-
@@ -124,13 +124,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: f6d65001-721d-4863-8833-9ea3868fb668
+      id: e56cbd26-6ef3-4de7-8986-8317a3e3c1f8
       iscommand: true
       name: Increase the severity score of the Parent score
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: f6d65001-721d-4863-8833-9ea3868fb668
+    taskid: e56cbd26-6ef3-4de7-8986-8317a3e3c1f8
     timertriggers: []
     type: regular
     view: |-
@@ -165,13 +165,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 62fb53a3-dd53-48be-85da-9f5a35c4bc76
+      id: f7f76f72-bbd8-4240-8510-c25b8e05175c
       iscommand: true
       name: Get Linked Incidents
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 62fb53a3-dd53-48be-85da-9f5a35c4bc76
+    taskid: f7f76f72-bbd8-4240-8510-c25b8e05175c
     timertriggers: []
     type: regular
     view: |-
@@ -218,13 +218,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 7bc72a59-1da1-4531-8208-924952e0a8fd
+      id: e1751154-46b8-472c-8237-9fcb0bf984dd
       iscommand: false
       name: Get index of Mitre Tactic Name from List
       script: Set
       type: regular
       version: -1
-    taskid: 7bc72a59-1da1-4531-8208-924952e0a8fd
+    taskid: e1751154-46b8-472c-8237-9fcb0bf984dd
     timertriggers: []
     type: regular
     view: |-
@@ -271,13 +271,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 2e5a43ca-9f3e-4dde-814d-0c70b422cf9c
+      id: 9ef4a727-a0f4-4c72-82be-1b2c30a0020b
       iscommand: false
       name: Get index of Mitre Tactic Name from List
       script: Set
       type: regular
       version: -1
-    taskid: 2e5a43ca-9f3e-4dde-814d-0c70b422cf9c
+    taskid: 9ef4a727-a0f4-4c72-82be-1b2c30a0020b
     timertriggers: []
     type: regular
     view: |-
@@ -314,13 +314,13 @@ tasks:
         Returns yes: if first > second
         Returns no: if first <= second
         Returns exception if one of the inputs is not a number
-      id: 3b3ee266-b334-4122-8469-8594864f0267
+      id: 6f814109-7279-4ae1-804e-42fc91d7f844
       iscommand: false
       name: Check Child Tactic Index is greater than Parent Tactic Index
       script: IsGreaterThan
       type: condition
       version: -1
-    taskid: 3b3ee266-b334-4122-8469-8594864f0267
+    taskid: 6f814109-7279-4ae1-804e-42fc91d7f844
     timertriggers: []
     type: condition
     view: |-
@@ -361,13 +361,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 77062052-3224-485f-8324-8dc05d7d344f
+      id: 69b35537-a5b6-4607-8734-2b913db94714
       iscommand: true
       name: Set the MireTactic Score
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 77062052-3224-485f-8324-8dc05d7d344f
+    taskid: 69b35537-a5b6-4607-8734-2b913db94714
     timertriggers: []
     type: regular
     view: |-
