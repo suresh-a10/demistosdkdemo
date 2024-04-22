@@ -14,7 +14,7 @@
 	"formatScript": "",
 	"fromServerVersion": "6.0.0",
 	"id": "X509 Certificate",
-	"itemVersion": "3.4.8",
+	"itemVersion": "3.4.7",
 	"layout": "X509 Certificate",
 	"legacyNames": null,
 	"locked": false,
