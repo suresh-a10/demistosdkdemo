@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f63fbb9a-2f3e-4404-818d-9d981a515dd2
+      id: 72f65786-f310-4a20-87b8-53bab3574f89
       iscommand: false
       name: ""
       version: -1
-    taskid: f63fbb9a-2f3e-4404-818d-9d981a515dd2
+    taskid: 72f65786-f310-4a20-87b8-53bab3574f89
     timertriggers: []
     type: start
     view: |-
@@ -75,13 +75,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a6cce334-93f7-4643-8f05-33243be75c85
+      id: 541ee428-d764-4303-8990-42d428dc9fbd
       iscommand: false
       name: Splunk query for zscaler policy engine
       script: pp_splunk_search_v2
       type: regular
       version: -1
-    taskid: a6cce334-93f7-4643-8f05-33243be75c85
+    taskid: 541ee428-d764-4303-8990-42d428dc9fbd
     timertriggers: []
     type: regular
     view: |-
@@ -115,13 +115,13 @@ tasks:
     task:
       brand: SlackV2
       description: Sends a message to a user, group, or channel.
-      id: ca8d2c22-56ba-467a-84d0-40582a22c268
+      id: b8d7a617-c94e-41d6-8f2b-1e2328d6170f
       iscommand: true
       name: Send splunk results to slack
       script: SlackV2|||send-notification
       type: regular
       version: -1
-    taskid: ca8d2c22-56ba-467a-84d0-40582a22c268
+    taskid: b8d7a617-c94e-41d6-8f2b-1e2328d6170f
     timertriggers: []
     type: regular
     view: |-
@@ -148,13 +148,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8d352e68-fa23-4afc-8d46-3a5a61d82468
+      id: fa0acd13-f07f-425d-8aa2-1c438f165223
       iscommand: false
       name: Close investigation
       script: pp_CloseInvestigation_v2
       type: regular
       version: -1
-    taskid: 8d352e68-fa23-4afc-8d46-3a5a61d82468
+    taskid: fa0acd13-f07f-425d-8aa2-1c438f165223
     timertriggers: []
     type: regular
     view: |-
@@ -183,13 +183,13 @@ tasks:
     task:
       brand: ""
       description: Delete field from context
-      id: 8915c3cc-0334-418b-8294-0aa932611429
+      id: 39c35143-c8a0-48c7-8569-68514cb31698
       iscommand: false
       name: Delete Splunk context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 8915c3cc-0334-418b-8294-0aa932611429
+    taskid: 39c35143-c8a0-48c7-8569-68514cb31698
     timertriggers: []
     type: regular
     view: |-
@@ -218,13 +218,13 @@ tasks:
     task:
       brand: ""
       description: Delete field from context
-      id: edce041b-5fd2-426e-8638-7359762909c8
+      id: af79bd01-79ac-484d-8cfe-e705e874ddff
       iscommand: false
       name: Delete Splunk context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: edce041b-5fd2-426e-8638-7359762909c8
+    taskid: af79bd01-79ac-484d-8cfe-e705e874ddff
     timertriggers: []
     type: regular
     view: |-
@@ -264,13 +264,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e78ffee9-0713-4873-8f2a-89a19a2f61d8
+      id: 989b8e41-dfae-4a76-83af-9621c590d621
       iscommand: false
       name: Splunk query for zscaler policy engine (total volume)
       script: pp_splunk_search_v2
       type: regular
       version: -1
-    taskid: e78ffee9-0713-4873-8f2a-89a19a2f61d8
+    taskid: 989b8e41-dfae-4a76-83af-9621c590d621
     timertriggers: []
     type: regular
     view: |-
@@ -306,13 +306,13 @@ tasks:
     task:
       brand: SlackV2
       description: Sends a message to a user, group, or channel.
-      id: a167046b-5677-41a3-818a-5c6de529e20f
+      id: 62c880c1-5d95-4b24-8094-da75b0333345
       iscommand: true
       name: Send splunk results to slack
       script: SlackV2|||send-notification
       type: regular
       version: -1
-    taskid: a167046b-5677-41a3-818a-5c6de529e20f
+    taskid: 62c880c1-5d95-4b24-8094-da75b0333345
     timertriggers: []
     type: regular
     view: |-
@@ -345,13 +345,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 3849cb04-c33b-44a8-896d-be389e91d426
+      id: 574eea68-f2c9-47bd-8c28-c5fa32231546
       iscommand: false
       name: Move splunk results to slack_message context data
       script: Set
       type: regular
       version: -1
-    taskid: 3849cb04-c33b-44a8-896d-be389e91d426
+    taskid: 574eea68-f2c9-47bd-8c28-c5fa32231546
     timertriggers: []
     type: regular
     view: |-
@@ -407,13 +407,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 468d9ae6-a192-4ed5-859c-660b6f674385
+      id: 358b7615-1824-4eeb-8fc2-22e097c2c558
       iscommand: false
       name: Replace characters in slack_message
       script: Set
       type: regular
       version: -1
-    taskid: 468d9ae6-a192-4ed5-859c-660b6f674385
+    taskid: 358b7615-1824-4eeb-8fc2-22e097c2c558
     timertriggers: []
     type: regular
     view: |-
@@ -444,13 +444,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: dd0c5492-673d-4933-8f7a-080f6bb0462f
+      id: 74d479dc-b721-4fcc-84e1-fbe08b8ddd80
       iscommand: false
       name: Set slack channel name
       script: Set
       type: regular
       version: -1
-    taskid: dd0c5492-673d-4933-8f7a-080f6bb0462f
+    taskid: 74d479dc-b721-4fcc-84e1-fbe08b8ddd80
     timertriggers: []
     type: regular
     view: |-
@@ -484,13 +484,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3ac976da-7e27-4c71-8ae6-0193a0889ece
+      id: d61b5d01-1c09-4302-86e4-a1e7a7a80ead
       iscommand: false
       name: Splunk query for zscaler policy engine (total volume)
       script: pp_splunk_search_v2
       type: regular
       version: -1
-    taskid: 3ac976da-7e27-4c71-8ae6-0193a0889ece
+    taskid: d61b5d01-1c09-4302-86e4-a1e7a7a80ead
     timertriggers: []
     type: regular
     view: |-
@@ -515,12 +515,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 66ac8ec1-31d9-4f82-84c0-a6e1720bca03
+      id: 73832017-cd7a-408c-8326-80b1f3a17e2a
       iscommand: false
       name: Zscaler DLP policies total volume
       type: title
       version: -1
-    taskid: 66ac8ec1-31d9-4f82-84c0-a6e1720bca03
+    taskid: 73832017-cd7a-408c-8326-80b1f3a17e2a
     timertriggers: []
     type: title
     view: |-
@@ -545,12 +545,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5ad3d831-969e-4980-8531-556e921b9115
+      id: 63af5da7-9058-4654-8373-19c73a50f14c
       iscommand: false
       name: Zscaler volume by DLP policy
       type: title
       version: -1
-    taskid: 5ad3d831-969e-4980-8531-556e921b9115
+    taskid: 63af5da7-9058-4654-8373-19c73a50f14c
     timertriggers: []
     type: title
     view: |-
@@ -575,12 +575,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: fc6f0560-0499-42aa-8ea6-2c26f81939a4
+      id: c319f786-e0f1-450b-8767-49e0845ad230
       iscommand: false
       name: OneDrive Personal traffic volume
       type: title
       version: -1
-    taskid: fc6f0560-0499-42aa-8ea6-2c26f81939a4
+    taskid: c319f786-e0f1-450b-8767-49e0845ad230
     timertriggers: []
     type: title
     view: |-
@@ -609,13 +609,13 @@ tasks:
     task:
       brand: ""
       description: Delete field from context
-      id: a873fdee-a9c7-4323-8e83-0d9db5871216
+      id: 02f21a30-5e54-4fc3-8864-5b0c61003884
       iscommand: false
       name: Delete Splunk context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: a873fdee-a9c7-4323-8e83-0d9db5871216
+    taskid: 02f21a30-5e54-4fc3-8864-5b0c61003884
     timertriggers: []
     type: regular
     view: |-
@@ -644,13 +644,13 @@ tasks:
     task:
       brand: ""
       description: Delete field from context
-      id: ebdc9deb-4c5c-4d68-8a0e-602c51ccfc12
+      id: 625659d5-bea9-4f6c-8efa-380bdeaaeb43
       iscommand: false
       name: Delete Splunk context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: ebdc9deb-4c5c-4d68-8a0e-602c51ccfc12
+    taskid: 625659d5-bea9-4f6c-8efa-380bdeaaeb43
     timertriggers: []
     type: regular
     view: |-
@@ -683,13 +683,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 389fb3fc-1426-4a7d-8c8b-997612ecfbe8
+      id: ebdd130d-2f36-4131-881c-f120feba9b27
       iscommand: false
       name: Move splunk results to slack_message context data
       script: Set
       type: regular
       version: -1
-    taskid: 389fb3fc-1426-4a7d-8c8b-997612ecfbe8
+    taskid: ebdd130d-2f36-4131-881c-f120feba9b27
     timertriggers: []
     type: regular
     view: |-
@@ -719,13 +719,13 @@ tasks:
     task:
       brand: SlackV2
       description: Creates a channel in Slack.
-      id: 35e83c9a-3a85-4692-82ce-419874ebc9cc
+      id: cc76f143-8789-4afe-8fe6-34d3fc7040b6
       iscommand: true
       name: Create channel
       script: SlackV2|||slack-create-channel
       type: regular
       version: -1
-    taskid: 35e83c9a-3a85-4692-82ce-419874ebc9cc
+    taskid: cc76f143-8789-4afe-8fe6-34d3fc7040b6
     timertriggers: []
     type: regular
     view: |-
@@ -758,13 +758,13 @@ tasks:
     task:
       brand: SlackV2
       description: Sends a message to a user, group, or channel.
-      id: 0f9737f4-9472-40dd-8d51-af949f1866f4
+      id: d22cfd2c-7158-41c6-8057-19de338828c7
       iscommand: true
       name: Send splunk results to slack
       script: SlackV2|||send-notification
       type: regular
       version: -1
-    taskid: 0f9737f4-9472-40dd-8d51-af949f1866f4
+    taskid: d22cfd2c-7158-41c6-8057-19de338828c7
     timertriggers: []
     type: regular
     view: |-
@@ -820,13 +820,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 68e22670-b332-4bde-82dd-9da0bbad149c
+      id: a6a25fcd-e98b-4bb5-8b50-7d7d49f87b4e
       iscommand: false
       name: Replace characters in slack_message
       script: Set
       type: regular
       version: -1
-    taskid: 68e22670-b332-4bde-82dd-9da0bbad149c
+    taskid: a6a25fcd-e98b-4bb5-8b50-7d7d49f87b4e
     timertriggers: []
     type: regular
     view: |-
