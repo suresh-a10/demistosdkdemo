@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4459554e-cb83-4728-8595-81554df06964
+      id: 9cb11f12-579a-4795-823e-4ccbbdcc6af7
       iscommand: false
       name: ""
       version: -1
-    taskid: 4459554e-cb83-4728-8595-81554df06964
+    taskid: 9cb11f12-579a-4795-823e-4ccbbdcc6af7
     timertriggers: []
     type: start
     view: |-
@@ -62,13 +62,13 @@ tasks:
       brand: ""
       description: |
         Retrieves the current date and time.
-      id: 23b496b3-8955-4edd-842b-03b3b724dce3
+      id: da9db531-ec3c-49c7-85ca-137499f4d257
       iscommand: false
       name: Get Time
       script: GetTime
       type: regular
       version: -1
-    taskid: 23b496b3-8955-4edd-842b-03b3b724dce3
+    taskid: da9db531-ec3c-49c7-85ca-137499f4d257
     timertriggers: []
     type: regular
     view: |-
@@ -97,13 +97,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 330b3f43-620c-4113-81ed-afe006b24916
+      id: 924f0b72-d22b-45b5-8fbb-4809fdc9a1bc
       iscommand: false
       name: Print time
       script: Print
       type: regular
       version: -1
-    taskid: 330b3f43-620c-4113-81ed-afe006b24916
+    taskid: 924f0b72-d22b-45b5-8fbb-4809fdc9a1bc
     timertriggers: []
     type: regular
     view: |-
@@ -137,13 +137,13 @@ tasks:
       brand: ""
       description: Schedule a command to run inside the war room at a future time
         (once or reoccurring)
-      id: 0927e9f7-343d-499b-8627-6fc6a0ef22ac
+      id: 7a378579-4947-4b9a-8ce1-d9737f951c95
       iscommand: false
       name: Schedule
       script: ScheduleCommand
       type: regular
       version: -1
-    taskid: 0927e9f7-343d-499b-8627-6fc6a0ef22ac
+    taskid: 7a378579-4947-4b9a-8ce1-d9737f951c95
     timertriggers: []
     type: regular
     view: |-
@@ -165,12 +165,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4c498371-9956-4e01-8790-72bb5a5ac818
+      id: 035dc65c-2684-4592-85cf-70008560fac7
       iscommand: false
       name: Manual Task to be closed
       type: regular
       version: -1
-    taskid: 4c498371-9956-4e01-8790-72bb5a5ac818
+    taskid: 035dc65c-2684-4592-85cf-70008560fac7
     timertriggers: []
     type: regular
     view: |-
