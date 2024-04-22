@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 928ae4ee-0ff9-4ed4-8344-a8bd1cc7ade1
+      id: fbda9d62-fdc2-47d1-8dc7-22ddc723fe20
       iscommand: false
       name: ""
       version: -1
-    taskid: 928ae4ee-0ff9-4ed4-8344-a8bd1cc7ade1
+    taskid: fbda9d62-fdc2-47d1-8dc7-22ddc723fe20
     timertriggers: []
     type: start
     view: |-
@@ -65,13 +65,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: cdb98daf-7531-41e5-85d9-3e8915e54391
+      id: 80fd43ae-cbc1-46d2-800b-f4aec505067a
       iscommand: true
       name: Set field SOCAssigned
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: cdb98daf-7531-41e5-85d9-3e8915e54391
+    taskid: 80fd43ae-cbc1-46d2-800b-f4aec505067a
     timertriggers:
     - action: start
       fieldname: demoslatimer
@@ -134,12 +134,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d431782a-49d0-41d1-8e3b-fd77b1bbe9d0
+      id: 126279ff-7cd3-4278-81be-5c52066f3331
       iscommand: false
       name: SOC Anlayst
       type: collection
       version: -1
-    taskid: d431782a-49d0-41d1-8e3b-fd77b1bbe9d0
+    taskid: 126279ff-7cd3-4278-81be-5c52066f3331
     timertriggers: []
     type: collection
     view: |-
@@ -168,13 +168,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: f0db8f94-4840-45b3-8a7b-08b8e549f2e7
+      id: a47f3e35-ec82-4b8e-8c9e-ea4a2d508e0e
       iscommand: true
       name: Set field SOCAssigned
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: f0db8f94-4840-45b3-8a7b-08b8e549f2e7
+    taskid: a47f3e35-ec82-4b8e-8c9e-ea4a2d508e0e
     timertriggers:
     - action: pause
       fieldname: demoslatimer
@@ -203,12 +203,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 960fdf60-ab98-4cd5-8e97-32a3700aacf5
+      id: f5c4a086-9c06-4c67-8e44-e21c7b6975d7
       iscommand: false
       name: Is this an incident
       type: condition
       version: -1
-    taskid: 960fdf60-ab98-4cd5-8e97-32a3700aacf5
+    taskid: f5c4a086-9c06-4c67-8e44-e21c7b6975d7
     timertriggers: []
     type: condition
     view: |-
@@ -237,13 +237,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 8b46120b-1360-450a-8abe-72ecfd3c72d4
+      id: 75d98dd8-fe18-4302-8850-8344a01e8d2f
       iscommand: false
       name: Print "Yes"
       script: Print
       type: regular
       version: -1
-    taskid: 8b46120b-1360-450a-8abe-72ecfd3c72d4
+    taskid: 75d98dd8-fe18-4302-8850-8344a01e8d2f
     timertriggers: []
     type: regular
     view: |-
@@ -272,13 +272,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 93a83616-1ca3-41a6-8ec5-801b28092514
+      id: 9b77ae6a-59ce-4379-8c62-30cd9f0cfacd
       iscommand: false
       name: Print
       script: Print
       type: regular
       version: -1
-    taskid: 93a83616-1ca3-41a6-8ec5-801b28092514
+    taskid: 9b77ae6a-59ce-4379-8c62-30cd9f0cfacd
     timertriggers: []
     type: regular
     view: |-
@@ -339,12 +339,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ae8dd3e4-e6a3-4e06-8678-7aa7946a3a35
+      id: 8c81a421-de0a-45ca-8453-1f47a295460f
       iscommand: false
       name: Need Analyst Inputs
       type: collection
       version: -1
-    taskid: ae8dd3e4-e6a3-4e06-8678-7aa7946a3a35
+    taskid: 8c81a421-de0a-45ca-8453-1f47a295460f
     timertriggers: []
     type: collection
     view: |-
@@ -373,13 +373,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 3c6b4012-5547-42c8-8582-95a60688897b
+      id: 907ccccc-70b6-49b5-8a54-9258b4ae44be
       iscommand: true
       name: Set field SOCAssigned
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 3c6b4012-5547-42c8-8582-95a60688897b
+    taskid: 907ccccc-70b6-49b5-8a54-9258b4ae44be
     timertriggers:
     - action: start
       fieldname: demoslatimer
@@ -403,12 +403,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e92f0fca-58c2-446a-8d5f-c9f3fb8ad05d
+      id: d7a54159-bb81-4ebc-88e4-7740e4a08b9a
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: e92f0fca-58c2-446a-8d5f-c9f3fb8ad05d
+    taskid: d7a54159-bb81-4ebc-88e4-7740e4a08b9a
     timertriggers: []
     type: title
     view: |-
@@ -437,13 +437,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 0b6c0d4e-e98b-4a22-8426-3edf9c8833d3
+      id: 2a05cead-7adc-46cc-80b4-09015436c6f7
       iscommand: true
       name: Set field SOCAssigned
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 0b6c0d4e-e98b-4a22-8426-3edf9c8833d3
+    taskid: 2a05cead-7adc-46cc-80b4-09015436c6f7
     timertriggers:
     - action: stop
       fieldname: demoslatimer
