@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6bc2eb93-77b2-4631-89d8-b77139649964
+      id: f69db425-22c0-45cf-8f2d-9dea45d487e4
       iscommand: false
       name: ""
       version: -1
-    taskid: 6bc2eb93-77b2-4631-89d8-b77139649964
+    taskid: f69db425-22c0-45cf-8f2d-9dea45d487e4
     timertriggers: []
     type: start
     view: |-
@@ -65,13 +65,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.list.get
-      id: 787f7a17-f759-4a66-8e86-f3040a313ecd
+      id: 54f7edd2-b84e-4cb3-852b-4e90ea007242
       iscommand: true
       name: Get List of Incidents to be resumed
       script: Builtin|||getList
       type: regular
       version: -1
-    taskid: 787f7a17-f759-4a66-8e86-f3040a313ecd
+    taskid: 54f7edd2-b84e-4cb3-852b-4e90ea007242
     timertriggers: []
     type: regular
     view: |-
@@ -100,13 +100,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP POST request.
-      id: dff7a851-0a65-4c23-87e2-b1525b3250bd
+      id: 61aac2c6-9e7f-4122-8394-b238cc0c6e0d
       iscommand: true
       name: Resume Playbook Execution
       script: Core REST API|||demisto-api-post
       type: regular
       version: -1
-    taskid: dff7a851-0a65-4c23-87e2-b1525b3250bd
+    taskid: 61aac2c6-9e7f-4122-8394-b238cc0c6e0d
     timertriggers: []
     type: regular
     view: |-
@@ -146,13 +146,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.list.set
-      id: 94763be0-7698-4de8-876e-77f2d4119c80
+      id: 78a751c0-681b-4cd8-87bc-adc375cfb781
       iscommand: true
       name: Update the list
       script: Builtin|||setList
       type: regular
       version: -1
-    taskid: 94763be0-7698-4de8-876e-77f2d4119c80
+    taskid: 78a751c0-681b-4cd8-87bc-adc375cfb781
     timertriggers: []
     type: regular
     view: |-
@@ -192,13 +192,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: e029caa1-984b-4220-8ee2-e33b1a6d1020
+      id: 8cd6f223-0c25-47b5-84a0-9c40792dfc6b
       iscommand: false
       name: Set IncidentData
       script: Set
       type: regular
       version: -1
-    taskid: e029caa1-984b-4220-8ee2-e33b1a6d1020
+    taskid: 8cd6f223-0c25-47b5-84a0-9c40792dfc6b
     timertriggers: []
     type: regular
     view: |-
@@ -239,12 +239,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9dbc6317-a499-406e-8db8-c402f8221363
+      id: b6d6a3a9-c10d-4f65-8625-d576b785170d
       iscommand: false
       name: Check length of IncidentIDs List
       type: condition
       version: -1
-    taskid: 9dbc6317-a499-406e-8db8-c402f8221363
+    taskid: b6d6a3a9-c10d-4f65-8625-d576b785170d
     timertriggers: []
     type: condition
     view: |-
@@ -273,13 +273,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP POST request.
-      id: c0ca38cd-64f7-4bfe-8b11-aed586433a88
+      id: 0bcb590a-8f38-42cb-8344-06150bb27fdc
       iscommand: true
       name: Resume Playbook Execution
       script: Core REST API|||demisto-api-post
       type: regular
       version: -1
-    taskid: c0ca38cd-64f7-4bfe-8b11-aed586433a88
+    taskid: 0bcb590a-8f38-42cb-8344-06150bb27fdc
     timertriggers: []
     type: regular
     view: |-
