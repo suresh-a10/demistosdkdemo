@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e1259944-79d7-45b2-891d-31faa7f9179b
+      id: 7eca2e77-eae7-4efa-85a9-22f5a143b15e
       iscommand: false
       name: ""
       version: -1
-    taskid: e1259944-79d7-45b2-891d-31faa7f9179b
+    taskid: 7eca2e77-eae7-4efa-85a9-22f5a143b15e
     timertriggers: []
     type: start
     view: |-
@@ -77,12 +77,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e99cbb19-757b-4146-8586-829f87015035
+      id: 27c9b8d4-f0b1-497a-8e85-d968be144670
       iscommand: false
       name: Datacolelction
       type: condition
       version: -1
-    taskid: e99cbb19-757b-4146-8586-829f87015035
+    taskid: 27c9b8d4-f0b1-497a-8e85-d968be144670
     timertriggers: []
     type: condition
     view: |-
@@ -141,12 +141,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 927135b1-a68f-43f1-8ca0-cb00ebfeb2cc
+      id: bb2c531b-b782-4c72-81c9-b59dd756660e
       iscommand: false
       name: 'Data Collection with quiet mode on '
       type: collection
       version: -1
-    taskid: 927135b1-a68f-43f1-8ca0-cb00ebfeb2cc
+    taskid: bb2c531b-b782-4c72-81c9-b59dd756660e
     timertriggers: []
     type: collection
     view: |-
@@ -220,12 +220,12 @@ tasks:
       weeks: 0
     task:
       brand: ""
-      id: ccb7968e-6d5b-4e4f-8801-b0acdbffd968
+      id: 2bfd96b2-1298-45f8-851e-b87d3f6dd229
       iscommand: false
       name: Demo Data Collection
       type: collection
       version: -1
-    taskid: ccb7968e-6d5b-4e4f-8801-b0acdbffd968
+    taskid: 2bfd96b2-1298-45f8-851e-b87d3f6dd229
     timertriggers: []
     type: collection
     view: |-
@@ -263,12 +263,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6e2f4348-d1fe-4b0d-8497-064a6e32bafd
+      id: d56f811a-7380-47be-821d-a8daca06a689
       iscommand: false
       name: Validate the user response
       type: condition
       version: -1
-    taskid: 6e2f4348-d1fe-4b0d-8497-064a6e32bafd
+    taskid: d56f811a-7380-47be-821d-a8daca06a689
     timertriggers: []
     type: condition
     view: |-
@@ -294,13 +294,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: ad31c45d-d72e-47b1-80ef-405bc4b164ff
+      id: 507203c3-69f0-4eb4-825d-ed2f337fc4b9
       iscommand: false
       name: Print No
       script: Print
       type: regular
       version: -1
-    taskid: ad31c45d-d72e-47b1-80ef-405bc4b164ff
+    taskid: 507203c3-69f0-4eb4-825d-ed2f337fc4b9
     timertriggers: []
     type: regular
     view: |-
@@ -326,13 +326,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 51551c37-1e67-456f-82b4-06bf735d004f
+      id: 1ac5dbb1-6589-46c9-8b25-99a705736908
       iscommand: false
       name: Print Yes
       script: Print
       type: regular
       version: -1
-    taskid: 51551c37-1e67-456f-82b4-06bf735d004f
+    taskid: 1ac5dbb1-6589-46c9-8b25-99a705736908
     timertriggers: []
     type: regular
     view: |-
@@ -356,14 +356,14 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8e55cc7d-7d20-445f-8b9d-ff9d0178a968
+      id: e1fe04dd-dfb3-4646-8d27-4ec2e7531e16
       iscommand: false
       name: Manual task
       tags:
       - SOCManual
       type: regular
       version: -1
-    taskid: 8e55cc7d-7d20-445f-8b9d-ff9d0178a968
+    taskid: e1fe04dd-dfb3-4646-8d27-4ec2e7531e16
     timertriggers: []
     type: regular
     view: |-
