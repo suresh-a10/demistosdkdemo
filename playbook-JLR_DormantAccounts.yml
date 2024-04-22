@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: cf6738b5-ec66-48dc-8612-8e33ca2a1cd0
+      id: 98fc536a-c3aa-4424-8bb0-5f7a8dda66e7
       iscommand: false
       name: ""
       version: -1
-    taskid: cf6738b5-ec66-48dc-8612-8e33ca2a1cd0
+    taskid: 98fc536a-c3aa-4424-8bb0-5f7a8dda66e7
     timertriggers: []
     type: start
     view: |-
@@ -69,13 +69,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8868b58b-d4c0-499b-8cbf-c38c3ce1a226
+      id: 476892b2-f5a3-4ecc-8a65-4165ac140752
       iscommand: false
       name: Demo - Dormant Accounts
       playbookId: 761f5876-98c7-4bd9-8fa6-1e2d6887d56e
       type: playbook
       version: -1
-    taskid: 8868b58b-d4c0-499b-8cbf-c38c3ce1a226
+    taskid: 476892b2-f5a3-4ecc-8a65-4165ac140752
     timertriggers: []
     type: playbook
     view: |-
@@ -105,13 +105,13 @@ tasks:
       brand: ""
       description: This script will parse a CSV file and place the unique IPs, Domains
         and Hashes into the context.
-      id: b0c75d5e-42aa-40ec-8909-91c1506d2938
+      id: 8167ed16-45f8-44fc-842f-f11bc4f4d7be
       iscommand: false
       name: Parse the CSV file
       script: ParseCSV
       type: regular
       version: -1
-    taskid: b0c75d5e-42aa-40ec-8909-91c1506d2938
+    taskid: 8167ed16-45f8-44fc-842f-f11bc4f4d7be
     timertriggers: []
     type: regular
     view: |-
