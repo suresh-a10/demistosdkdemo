@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8a777f26-91b1-4143-85ea-47614cc42833
+      id: d0d1ec73-0301-44f4-8fe6-d340bef11c95
       iscommand: false
       name: ""
       version: -1
-    taskid: 8a777f26-91b1-4143-85ea-47614cc42833
+    taskid: d0d1ec73-0301-44f4-8fe6-d340bef11c95
     timertriggers: []
     type: start
     view: |-
@@ -64,13 +64,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 20ab6873-224a-4df4-8423-09cb7850f627
+      id: eee20d43-b77d-41b9-8abf-eb3ac8266af9
       iscommand: false
       name: Demo - Sub Playbook Output
       playbookId: fb4716be-86c0-48c4-8d2f-80c9c99952bb
       type: playbook
       version: -1
-    taskid: 20ab6873-224a-4df4-8423-09cb7850f627
+    taskid: eee20d43-b77d-41b9-8abf-eb3ac8266af9
     timertriggers: []
     type: playbook
     view: |-
