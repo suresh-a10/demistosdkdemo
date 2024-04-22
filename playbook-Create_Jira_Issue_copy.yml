@@ -138,11 +138,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9d7231b3-1b1f-4fea-85c3-e100eedce068
+      id: 17111124-2587-47d8-8742-d9bb3c953012
       iscommand: false
       name: ""
       version: -1
-    taskid: 9d7231b3-1b1f-4fea-85c3-e100eedce068
+    taskid: 17111124-2587-47d8-8742-d9bb3c953012
     timertriggers: []
     type: start
     view: |-
@@ -185,13 +185,13 @@ tasks:
     task:
       brand: ""
       description: Creates a new issue in Jira.
-      id: d98c3f04-5784-4860-88a5-7ad40ddcdb21
+      id: abd073e9-8658-48f5-85f2-c28beffd4329
       iscommand: true
       name: Create Jira issue
       script: '|||jira-create-issue'
       type: regular
       version: -1
-    taskid: d98c3f04-5784-4860-88a5-7ad40ddcdb21
+    taskid: abd073e9-8658-48f5-85f2-c28beffd4329
     timertriggers: []
     type: regular
     view: |-
@@ -213,12 +213,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3308e86b-c49e-42dd-8669-6bbdc544726e
+      id: fb6f1430-ceb4-4415-82a5-c6cd69d1516b
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 3308e86b-c49e-42dd-8669-6bbdc544726e
+    taskid: fb6f1430-ceb4-4415-82a5-c6cd69d1516b
     timertriggers: []
     type: title
     view: |-
@@ -271,12 +271,12 @@ tasks:
     task:
       brand: ""
       description: Check for a playbook input to indicate which sync mode was selected.
-      id: 93b31025-4860-4259-8116-758b182a1823
+      id: 92c11b6e-92a1-4922-8c63-582e4e112109
       iscommand: false
       name: Mirror or State Polling?
       type: condition
       version: -1
-    taskid: 93b31025-4860-4259-8116-758b182a1823
+    taskid: 92c11b6e-92a1-4922-8c63-582e4e112109
     timertriggers: []
     type: condition
     view: |-
@@ -331,13 +331,13 @@ tasks:
       brand: ""
       description: Mirror Jira Ticket is designed to serve as a sub-playbook, which
         enables ticket mirroring with Jira.
-      id: 499a1840-fcc3-4543-83af-ee6102683783
+      id: 073e3f68-0e4a-4395-8279-17cda5b1a24a
       iscommand: false
       name: Mirror Jira Ticket
       playbookId: Mirror Jira Ticket
       type: playbook
       version: -1
-    taskid: 499a1840-fcc3-4543-83af-ee6102683783
+    taskid: 073e3f68-0e4a-4395-8279-17cda5b1a24a
     timertriggers: []
     type: playbook
     view: |-
@@ -387,13 +387,13 @@ tasks:
       description: |-
         Use Jira Incident State Polling as a sub-playbook when required to pause the execution of a master playbook until the Jira ticket state is either resolved or closed.
         This playbook implements polling by continuously running the jira-get-issue command until the state is either resolved or closed.
-      id: d85fc2cd-f8d5-4958-8e4b-28a9e2f08fb0
+      id: 91d8e5e0-f711-4b6a-8d3a-be2301954060
       iscommand: false
       name: Jira Ticket State Polling
       playbookId: Jira Ticket State Polling
       type: playbook
       version: -1
-    taskid: d85fc2cd-f8d5-4958-8e4b-28a9e2f08fb0
+    taskid: 91d8e5e0-f711-4b6a-8d3a-be2301954060
     timertriggers: []
     type: playbook
     view: |-
@@ -486,13 +486,13 @@ tasks:
     task:
       brand: ""
       description: Fetches an issue from Jira.
-      id: b2446f14-0bb6-4a38-8710-b2bf9a711822
+      id: 3688fc70-ccdc-408d-8c47-cf53d13d13c8
       iscommand: true
       name: Initial Update Incident with Jira Information
       script: '|||jira-get-issue'
       type: regular
       version: -1
-    taskid: b2446f14-0bb6-4a38-8710-b2bf9a711822
+    taskid: 3688fc70-ccdc-408d-8c47-cf53d13d13c8
     timertriggers: []
     type: regular
     view: |-
@@ -524,13 +524,13 @@ tasks:
       brand: ""
       description: Returns 'yes' if integration brand is available. Otherwise returns
         'no'
-      id: 8478f984-cac4-4e3d-8654-70d983febc45
+      id: fb77b3d7-3441-42ac-83dc-9a0d476e4c36
       iscommand: false
       name: Is Jira integration enabled?
       script: IsIntegrationAvailable
       type: condition
       version: -1
-    taskid: 8478f984-cac4-4e3d-8654-70d983febc45
+    taskid: fb77b3d7-3441-42ac-83dc-9a0d476e4c36
     timertriggers: []
     type: condition
     view: |-
@@ -559,13 +559,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: a5da663f-0fdb-4f68-8406-5a92bc488d8e
+      id: 99e62724-a630-4444-81ad-7e55ebcf5324
       iscommand: true
       name: close investigation
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: a5da663f-0fdb-4f68-8406-5a92bc488d8e
+    taskid: 99e62724-a630-4444-81ad-7e55ebcf5324
     timertriggers: []
     type: regular
     view: |-
