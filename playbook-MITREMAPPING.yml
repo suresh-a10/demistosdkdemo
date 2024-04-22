@@ -35,11 +35,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a7c58c10-80d3-4dea-8688-555841466b9a
+      id: 658414a4-df3b-466f-8bc1-f831bab42c18
       iscommand: false
       name: ""
       version: -1
-    taskid: a7c58c10-80d3-4dea-8688-555841466b9a
+    taskid: 658414a4-df3b-466f-8bc1-f831bab42c18
     timertriggers: []
     type: start
     view: |-
@@ -68,13 +68,13 @@ tasks:
     task:
       brand: MITRE ATT&CK v2
       description: Gets the Attack Pattern value from the Attack Pattern ID.
-      id: da67cbcf-8b85-4718-8a17-ad4bdcad0905
+      id: 89d8fcdd-c954-4c8d-8e66-937b36a87490
       iscommand: true
       name: ExtractMITREDetails
       script: MITRE ATT&CK v2|||mitre-get-indicator-name
       type: regular
       version: -1
-    taskid: da67cbcf-8b85-4718-8a17-ad4bdcad0905
+    taskid: 89d8fcdd-c954-4c8d-8e66-937b36a87490
     timertriggers: []
     type: regular
     view: |-
@@ -106,13 +106,13 @@ tasks:
       brand: ""
       description: Check if a given value exists in the context. Will return 'no'
         for empty empty arrays. To be used mostly with DQ and selectors.
-      id: 85d923da-128b-40a7-8f5d-b52d70531ad7
+      id: 2636df25-9eb2-4492-8323-21f3d6196110
       iscommand: false
       name: Does MITRE ATTACK NAME Exists
       script: Exists
       type: condition
       version: -1
-    taskid: 85d923da-128b-40a7-8f5d-b52d70531ad7
+    taskid: 2636df25-9eb2-4492-8323-21f3d6196110
     timertriggers: []
     type: condition
     view: |-
@@ -143,13 +143,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.associate.indicator
-      id: ee295d18-0920-42f7-85fc-96715e2c7ee4
+      id: 3b6ae042-8c8d-47a0-8629-9303a53c72e6
       iscommand: true
       name: Associate Incident to MITRE ATTACK When Result found in local DB
       script: Builtin|||associateIndicatorToIncident
       type: regular
       version: -1
-    taskid: ee295d18-0920-42f7-85fc-96715e2c7ee4
+    taskid: 3b6ae042-8c8d-47a0-8629-9303a53c72e6
     timertriggers: []
     type: regular
     view: |-
@@ -178,13 +178,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 9978a849-1f5c-454b-817d-94d2df2e5898
+      id: 1a514c22-add8-4c86-8fa5-dc958490d7d8
       iscommand: false
       name: No MITRE ATTACK PATTERN Found
       script: Print
       type: regular
       version: -1
-    taskid: 9978a849-1f5c-454b-817d-94d2df2e5898
+    taskid: 1a514c22-add8-4c86-8fa5-dc958490d7d8
     timertriggers: []
     type: regular
     view: |-
@@ -206,12 +206,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 902145ad-d82d-4eb9-84d3-02f831725735
+      id: f3182a36-7228-4611-8b04-6199e5cb0d90
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 902145ad-d82d-4eb9-84d3-02f831725735
+    taskid: f3182a36-7228-4611-8b04-6199e5cb0d90
     timertriggers: []
     type: title
     view: |-
@@ -244,13 +244,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.find.indicators
-      id: 3792d431-0f23-4404-8113-569e8dd697e9
+      id: 347b4f81-12d3-4294-8c2e-227ae869aa9c
       iscommand: true
       name: Check if Indicator Exists in DB
       script: Builtin|||findIndicators
       type: regular
       version: -1
-    taskid: 3792d431-0f23-4404-8113-569e8dd697e9
+    taskid: 347b4f81-12d3-4294-8c2e-227ae869aa9c
     timertriggers: []
     type: regular
     view: |-
@@ -282,13 +282,13 @@ tasks:
       brand: ""
       description: Check if a given value exists in the context. Will return 'no'
         for empty empty arrays. To be used mostly with DQ and selectors.
-      id: b4585263-ac25-4dac-8777-c884ae925f94
+      id: 6150ccb7-c999-49f5-8e1e-ba57da9f5a46
       iscommand: false
       name: Does the Indicator Exist ?
       script: Exists
       type: condition
       version: -1
-    taskid: b4585263-ac25-4dac-8777-c884ae925f94
+    taskid: 6150ccb7-c999-49f5-8e1e-ba57da9f5a46
     timertriggers: []
     type: condition
     view: |-
@@ -319,13 +319,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.new.indicator
-      id: 91948a1e-bada-4dc8-8398-f569e74bb3fd
+      id: 92841bca-19c8-4c06-88c6-79ed2ba60d6b
       iscommand: true
       name: Add the Indicator in the DB
       script: Builtin|||createNewIndicator
       type: regular
       version: -1
-    taskid: 91948a1e-bada-4dc8-8398-f569e74bb3fd
+    taskid: 92841bca-19c8-4c06-88c6-79ed2ba60d6b
     timertriggers: []
     type: regular
     view: |-
@@ -357,13 +357,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.associate.indicator
-      id: 898fef0a-32c1-4cbe-88ba-f0cdcdf4070c
+      id: aa598029-bd81-4010-803b-3b0d799f761a
       iscommand: true
       name: Associate Incident to MITRE ATTACK - When result no found in local DB
       script: Builtin|||associateIndicatorToIncident
       type: regular
       version: -1
-    taskid: 898fef0a-32c1-4cbe-88ba-f0cdcdf4070c
+    taskid: aa598029-bd81-4010-803b-3b0d799f761a
     timertriggers: []
     type: regular
     view: |-
@@ -385,13 +385,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e3510d09-374a-43c3-8702-36926c262de8
+      id: 0954ae87-8699-4884-86a6-22037511b14c
       iscommand: false
       name: 20201010_IncidentAnalysis_main
       playbookId: ad88f586-31d0-4f59-8e4a-a76a169ed399
       type: playbook
       version: -1
-    taskid: e3510d09-374a-43c3-8702-36926c262de8
+    taskid: 0954ae87-8699-4884-86a6-22037511b14c
     timertriggers: []
     type: playbook
     view: |-
