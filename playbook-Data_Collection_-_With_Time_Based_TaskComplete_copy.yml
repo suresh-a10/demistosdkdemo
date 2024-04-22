@@ -32,11 +32,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7c80dfa5-9f37-4652-84b5-e482e0411619
+      id: 579f1a7c-73a0-4e26-8e4c-e848320c7c5c
       iscommand: false
       name: ""
       version: -1
-    taskid: 7c80dfa5-9f37-4652-84b5-e482e0411619
+    taskid: 579f1a7c-73a0-4e26-8e4c-e848320c7c5c
     timertriggers: []
     type: start
     view: |-
@@ -106,12 +106,12 @@ tasks:
       weeks: 0
     task:
       brand: ""
-      id: be74ba79-a6a9-4e92-84d3-e0c3c06de3e8
+      id: b560b4a6-46cf-4782-81c3-1bc1c05b9faf
       iscommand: false
       name: Collect Data
       type: collection
       version: -1
-    taskid: be74ba79-a6a9-4e92-84d3-e0c3c06de3e8
+    taskid: b560b4a6-46cf-4782-81c3-1bc1c05b9faf
     timertriggers: []
     type: collection
     view: |-
@@ -133,12 +133,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 093905ce-5edb-45f4-877f-757ea7fa3d3b
+      id: 3ceb8526-8060-46e1-8ebd-a042f0a35a37
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 093905ce-5edb-45f4-877f-757ea7fa3d3b
+    taskid: 3ceb8526-8060-46e1-8ebd-a042f0a35a37
     timertriggers: []
     type: title
     view: |-
@@ -174,12 +174,12 @@ tasks:
       description: |-
         Check if there is name under the Answers entry in context, if there is, it means there were answers to the Data Collection
         A different logic can be applied here as well
-      id: c8b5874d-a93e-4d8f-8a14-b01c42257cb6
+      id: f6980457-f8c8-46fe-89ba-340684f29805
       iscommand: false
       name: Check if we got answers
       type: condition
       version: -1
-    taskid: c8b5874d-a93e-4d8f-8a14-b01c42257cb6
+    taskid: f6980457-f8c8-46fe-89ba-340684f29805
     timertriggers: []
     type: condition
     view: |-
@@ -208,13 +208,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 922ea65c-1bda-4982-85ae-13783f73556d
+      id: 31fbd842-f821-45c3-8e83-a31c55a09d8a
       iscommand: false
       name: Found Answers
       script: Print
       type: regular
       version: -1
-    taskid: 922ea65c-1bda-4982-85ae-13783f73556d
+    taskid: 31fbd842-f821-45c3-8e83-a31c55a09d8a
     timertriggers: []
     type: regular
     view: |-
@@ -246,13 +246,13 @@ tasks:
       description: |-
         Complete the Data Collection Task (based on the tag 'DC')
         Set to not stop on error, so if the Data Collection was already completed by a reply, this task is not going to fail
-      id: 7f61e58e-d7d2-4fe8-8fbb-bda74e7ec863
+      id: 94d8c650-8800-47e8-8a0a-c676048a35e8
       iscommand: true
       name: Complete Data Collection
       script: Builtin|||taskComplete
       type: regular
       version: -1
-    taskid: 7f61e58e-d7d2-4fe8-8fbb-bda74e7ec863
+    taskid: 94d8c650-8800-47e8-8a0a-c676048a35e8
     timertriggers: []
     type: regular
     view: |-
@@ -283,13 +283,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 68aedc82-44d2-4472-8251-1b767cf2f30e
+      id: 2364c0ef-8ffb-44e3-88b7-aa634ebe5946
       iscommand: false
       name: Got response
       script: Set
       type: regular
       version: -1
-    taskid: 68aedc82-44d2-4472-8251-1b767cf2f30e
+    taskid: 2364c0ef-8ffb-44e3-88b7-aa634ebe5946
     timertriggers: []
     type: regular
     view: |-
@@ -327,7 +327,7 @@ tasks:
     task:
       brand: ""
       description: Called by the GenericPolling playbook, schedules the polling task.
-      id: 340810cb-f885-4e29-80fb-db419e652439
+      id: f098a217-c53a-4968-8460-5b6e77ecd134
       iscommand: false
       name: generic polling task
       script: ScheduleGenericPolling
@@ -335,7 +335,7 @@ tasks:
       - DC
       type: regular
       version: -1
-    taskid: 340810cb-f885-4e29-80fb-db419e652439
+    taskid: f098a217-c53a-4968-8460-5b6e77ecd134
     timertriggers: []
     type: regular
     view: |-
