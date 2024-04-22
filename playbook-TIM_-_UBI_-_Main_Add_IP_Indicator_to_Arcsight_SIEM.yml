@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d6f4120b-fa26-47a3-8988-6135ccebe8ca
+      id: 21ce475f-24c1-4982-8092-849971190ab0
       iscommand: false
       name: ""
       version: -1
-    taskid: d6f4120b-fa26-47a3-8988-6135ccebe8ca
+    taskid: 21ce475f-24c1-4982-8092-849971190ab0
     timertriggers: []
     type: start
     view: |-
@@ -68,13 +68,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 41248c88-4b89-421c-88dc-2951c2b2f9bf
+      id: 6f32fd3b-9aad-45e9-8532-00253559e163
       iscommand: false
       name: TIM - UBI Get IP Indicator
       playbookId: d697b8b6-ca8e-4242-8eb4-6837d89610bb
       type: playbook
       version: -1
-    taskid: 41248c88-4b89-421c-88dc-2951c2b2f9bf
+    taskid: 6f32fd3b-9aad-45e9-8532-00253559e163
     timertriggers: []
     type: playbook
     view: |-
@@ -96,12 +96,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d6b98fed-d25c-481b-81a9-01257d73bf85
+      id: a0f2a0b5-6e0f-4b16-8d15-e990a8b042cb
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: d6b98fed-d25c-481b-81a9-01257d73bf85
+    taskid: a0f2a0b5-6e0f-4b16-8d15-e990a8b042cb
     timertriggers: []
     type: title
     view: |-
@@ -135,13 +135,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: 3a373506-5348-4e36-8af3-4e84a3e426e6
+      id: 95ede8f9-6d94-4344-8fea-27005cf5f48a
       iscommand: false
       name: Delete All Context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 3a373506-5348-4e36-8af3-4e84a3e426e6
+    taskid: 95ede8f9-6d94-4344-8fea-27005cf5f48a
     timertriggers: []
     type: regular
     view: |-
@@ -171,13 +171,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 87d1de7c-84c5-4506-8a42-07a9f7f3760d
+      id: f2dd0934-9f3e-498a-857a-840b0ff6b290
       iscommand: false
       name: TIM - UBI Get IP Indicator
       playbookId: d697b8b6-ca8e-4242-8eb4-6837d89610bb
       type: playbook
       version: -1
-    taskid: 87d1de7c-84c5-4506-8a42-07a9f7f3760d
+    taskid: f2dd0934-9f3e-498a-857a-840b0ff6b290
     timertriggers: []
     type: playbook
     view: |-
@@ -204,13 +204,13 @@ tasks:
       brand: ""
       description: |
         Retrieves the current date and time.
-      id: e4f3bdb7-7049-4b69-8a01-74348376fd43
+      id: e1368d20-581a-4ba6-82da-9159599bb34e
       iscommand: false
       name: Get time
       script: GetTime
       type: regular
       version: -1
-    taskid: e4f3bdb7-7049-4b69-8a01-74348376fd43
+    taskid: e1368d20-581a-4ba6-82da-9159599bb34e
     timertriggers: []
     type: regular
     view: |-
@@ -236,13 +236,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: 3ff96526-0f51-4ade-8aa7-68993586bedd
+      id: 674eddd2-f6c0-4b61-8c1b-08bae61bc009
       iscommand: true
       name: Closed Incident
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 3ff96526-0f51-4ade-8aa7-68993586bedd
+    taskid: 674eddd2-f6c0-4b61-8c1b-08bae61bc009
     timertriggers: []
     type: regular
     view: |-
