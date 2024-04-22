@@ -1,0 +1,335 @@
+contentitemexportablefields:
+  contentitemfields:
+    definitionid: ""
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    packName: MSSentinelIncidentValidator Contribution Pack
+    prevname: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+id: a568e71f-82fd-4589-848e-f61e09c86222
+inputs:
+- description: ""
+  key: id
+  playbookInputQuery: null
+  required: false
+  value: {}
+name: searchRelevantXSOARIncident
+outputs:
+- contextPath: sentinelIncidentExists.sentinelincidentnumber
+  description: A list of incident IDs returned from the query.
+  type: string
+- contextPath: sentinelIncidentExists.xsoarincidentnumber
+  description: A list of incident IDs returned from the query.
+  type: string
+- contextPath: missingSentinelIncident
+  description: A list of the incident create date returned from the query.
+  type: string
+quiet: true
+starttaskid: "0"
+tasks:
+  "0":
+    continueonerrortype: ""
+    id: "0"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "1"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 5f0005b5-0d07-4623-896d-19f2db23d423
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: 5f0005b5-0d07-4623-896d-19f2db23d423
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+  "1":
+    continueonerrortype: ""
+    id: "1"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "2"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      all:
+        simple: "yes"
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: |-
+        Delete field from context.
+
+        This automation runs using the default Limited User role, unless you explicitly change the permissions.
+        For more information, see the section about permissions here:
+        https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
+      id: 87a27cab-0659-48f8-80e3-0d60f17827a9
+      iscommand: false
+      name: DeleteContext
+      script: DeleteContext
+      type: regular
+      version: -1
+    taskid: 87a27cab-0659-48f8-80e3-0d60f17827a9
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 195
+        }
+      }
+  "2":
+    continueonerrortype: ""
+    id: "2"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "3"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      add_fields_to_context:
+        simple: dbotMirrorId
+      query:
+        simple: dbotMirrorId:${inputs.id}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: "Searches Cortex XSOAR Incidents and returnrs the most relevant
+        fields. Default search range is the last 30 days, if you want to change this,
+        use the fromDate argument. \n\nReturns the id, name, type, severity, status,
+        owner, and created/closed times to context.  You can add additional fields
+        using the add_field_to_context argument.\n\nThis automation runs using the
+        default Limited User role, unless you explicitly change the permissions.  Based
+        on the SearchIncidentsV2 from the Common Scripts pack, but more efficient."
+      id: fcbe77dc-fa1b-4ec7-8229-5529a27eb0fe
+      iscommand: false
+      name: SearchXSOARIncident
+      script: SearchIncidentsSummary
+      type: regular
+      version: -1
+    taskid: fcbe77dc-fa1b-4ec7-8229-5529a27eb0fe
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 370
+        }
+      }
+  "3":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: foundIncidents.id
+          operator: isExists
+      label: "yes"
+    continueonerrortype: ""
+    id: "3"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#default#':
+      - "6"
+      "yes":
+      - "4"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: b18c2e17-89e0-4df7-8af7-c1c09b591165
+      iscommand: false
+      name: Was Result found
+      type: condition
+      version: -1
+    taskid: b18c2e17-89e0-4df7-8af7-c1c09b591165
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 545
+        }
+      }
+  "4":
+    continueonerrortype: ""
+    id: "4"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "7"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: sentinelIncidentExists.sentinelincidentnumber
+      value:
+        simple: ${inputs.id}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 61504db9-258d-4eb1-8758-a1f9e342d53c
+      iscommand: false
+      name: Set Found Sentinel Incident Number
+      script: Set
+      type: regular
+      version: -1
+    taskid: 61504db9-258d-4eb1-8758-a1f9e342d53c
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 720
+        }
+      }
+  "5":
+    continueonerrortype: ""
+    id: "5"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 6e92e61f-a825-46c8-82fb-b9a27eca320e
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 6e92e61f-a825-46c8-82fb-b9a27eca320e
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 1070
+        }
+      }
+  "6":
+    continueonerrortype: ""
+    id: "6"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: missingSentinelIncident
+      value:
+        simple: ${inputs.id}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: 775f603c-6f4d-4e80-8baa-7b519fb71915
+      iscommand: false
+      name: Set Missing Incident
+      script: Set
+      type: regular
+      version: -1
+    taskid: 775f603c-6f4d-4e80-8baa-7b519fb71915
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 895
+        }
+      }
+  "7":
+    continueonerrortype: ""
+    id: "7"
+    ignoreworker: false
+    isautoswitchedtoquietmode: false
+    isoversize: false
+    nexttasks:
+      '#none#':
+      - "5"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      key:
+        simple: sentinelIncidentExists.xsoarincidentnumber
+      value:
+        simple: ${foundIncidents.id}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Set a value in context under the key you entered.
+      id: d8bd4c8f-0a9c-4181-8f04-9cf52464634f
+      iscommand: false
+      name: Set Found XSOAR Incident number
+      script: Set
+      type: regular
+      version: -1
+    taskid: d8bd4c8f-0a9c-4181-8f04-9cf52464634f
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 895
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1085,
+        "width": 810,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
