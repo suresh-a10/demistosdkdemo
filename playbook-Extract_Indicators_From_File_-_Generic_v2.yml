@@ -2,7 +2,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 2.6.26
+    itemVersion: 2.6.24
     packID: CommonPlaybooks
     packName: Common Playbooks
     packPropagationLabels:
@@ -863,8 +863,6 @@ tasks:
       maxImages:
         complex:
           root: inputs.MaxImagesFromPDF
-      unescape_url:
-        simple: "true"
     separatecontext: false
     skipunavailable: false
     task:
