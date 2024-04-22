@@ -31,12 +31,6 @@ args:
   predefined:
   - "true"
   - "false"
-- defaultValue: "false"
-  description: add utf8 BOM to csv report.
-  name: addUtf8Bom
-  predefined:
-  - "true"
-  - "false"
 comment: Parse Sane-json-reports and export them as pdf files (used internally).
 commonfields:
   id: SanePdfReports
@@ -45,7 +39,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.5.0
-    itemVersion: 1.33.48
+    itemVersion: 1.33.43
     packID: Base
     packName: Base
     packPropagationLabels:
@@ -53,7 +47,7 @@ contentitemexportablefields:
     prevname: ""
     propagationLabels: []
     toServerVersion: ""
-dockerimage: demisto/sane-pdf-reports:1.0.0.91719
+dockerimage: demisto/sane-pdf-reports:1.0.0.90542
 enabled: true
 engineinfo: {}
 mainengineinfo: {}
@@ -63,7 +57,7 @@ runas: DBotWeakRole
 runonce: false
 script: |
   register_module_line('SanePdfReports', 'start', __line__())
-  ### pack version: 1.33.48
+  ### pack version: 1.33.43
 
 
 
@@ -195,8 +189,7 @@ script: |
           pageSize = demisto.args().get('paperSize', 'letter')
           disableHeaders = demisto.args().get('disableHeaders', '')
           tableTextMaxLength = demisto.args().get('tableTextMaxLength', '300')
-          forceServerFormattedTimeString = demisto.args().get('forceServerFormattedTimeString', 'false')
-          addUtf8Bom = demisto.args().get('addUtf8Bom', 'false')
+          forceServerFormattedTimeString = argToBoolean(demisto.args().get('forceServerFormattedTimeString', 'false'))
 
           # Note: After headerRightImage the empty one is for legacy argv in server.js
           extra_cmd = f"{orientation} {resourceTimeout} {reportType} " + \
@@ -229,7 +222,6 @@ script: |
                   extra_cmd += ' ""'
 
               extra_cmd += f' "{forceServerFormattedTimeString}"'
-              extra_cmd += f' "{addUtf8Bom}"'
 
           with tempfile.TemporaryDirectory(suffix='sane-pdf', ignore_cleanup_errors=True) as tmpdir:  # type: ignore[call-overload]
               input_file = tmpdir + '/input.json'
@@ -249,8 +241,7 @@ script: |
                   f' resourceTimeout="{resourceTimeout}",' \
                   f' reportType="{reportType}", headerLeftImage="{headerLeftImage}",' \
                   f' headerRightImage="{headerRightImage}", pageSize="{pageSize}",' \
-                  f' disableHeaders="{disableHeaders}", forceServerFormattedTimeString="{forceServerFormattedTimeString}",' \
-                  f' addUtf8Bom="{addUtf8Bom}"'
+                  f' disableHeaders="{disableHeaders}", forceServerFormattedTimeString="{forceServerFormattedTimeString}"'
 
               if isMDImagesSupported:
                   params += f', markdownArtifactsServerAddress="{mdServerAddress}"'
