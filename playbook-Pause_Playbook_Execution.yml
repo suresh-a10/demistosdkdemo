@@ -36,11 +36,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8d2e4a86-2d83-4871-8eef-465504510c28
+      id: c8a0296b-c541-4967-8c08-1accb96b0fd3
       iscommand: false
       name: ""
       version: -1
-    taskid: 8d2e4a86-2d83-4871-8eef-465504510c28
+    taskid: c8a0296b-c541-4967-8c08-1accb96b0fd3
     timertriggers: []
     type: start
     view: |-
@@ -66,13 +66,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP POST request.
-      id: 83966170-6e4c-4992-8607-d02524974e82
+      id: b57ea310-f9e7-4f73-8ce1-71419bc9aae2
       iscommand: true
       name: Pause the playbook investigation
       script: Core REST API|||demisto-api-post
       type: regular
       version: -1
-    taskid: 83966170-6e4c-4992-8607-d02524974e82
+    taskid: b57ea310-f9e7-4f73-8ce1-71419bc9aae2
     timertriggers: []
     type: regular
     view: |-
