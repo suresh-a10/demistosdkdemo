@@ -38,11 +38,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 59b14a98-2ba3-4d27-8c24-782edad79a00
+      id: c693473f-96b7-4647-8bcb-7e33b403f721
       iscommand: false
       name: ""
       version: -1
-    taskid: 59b14a98-2ba3-4d27-8c24-782edad79a00
+    taskid: c693473f-96b7-4647-8bcb-7e33b403f721
     timertriggers: []
     type: start
     view: |-
@@ -75,13 +75,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.summaryReport
-      id: 3e802c34-9d85-4624-8122-1df49c169682
+      id: a1ebf800-af37-415f-88d2-c548c0be5861
       iscommand: true
       name: Generate Report
       script: Builtin|||generateSummaryReport
       type: regular
       version: -1
-    taskid: 3e802c34-9d85-4624-8122-1df49c169682
+    taskid: a1ebf800-af37-415f-88d2-c548c0be5861
     timertriggers: []
     type: regular
     view: |-
@@ -133,13 +133,13 @@ tasks:
       brand: ""
       description: Ask a user a question via email and process the reply directly
         into the investigation.
-      id: 2de41da1-e20f-44ec-8884-8256fcaa7e9b
+      id: 76ef2ca3-24cb-4364-84bd-3e9cf92f68e5
       iscommand: false
       name: emailAskUser
       script: EmailAskUser
       type: regular
       version: -1
-    taskid: 2de41da1-e20f-44ec-8884-8256fcaa7e9b
+    taskid: 76ef2ca3-24cb-4364-84bd-3e9cf92f68e5
     timertriggers: []
     type: regular
     view: |-
@@ -164,14 +164,14 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f38d9bb8-e4fd-4a7d-8c66-a0d58887cdb8
+      id: 26c3d4fd-eee4-482e-8091-93eef8ee1444
       iscommand: false
       name: This is an Automated Task, do not close manually
       tags:
       - response
       type: regular
       version: -1
-    taskid: f38d9bb8-e4fd-4a7d-8c66-a0d58887cdb8
+    taskid: 26c3d4fd-eee4-482e-8091-93eef8ee1444
     timertriggers: []
     type: regular
     view: |-
@@ -205,13 +205,13 @@ tasks:
         textual response line of the provided entry that contains the reply body.
         Use ${lastCompletedTaskEntries} to analyze the previous playbook task containing
         the user's reply.
-      id: fd0220af-3773-416c-81de-dcbee554f047
+      id: efe0f376-3c98-4be2-8550-149dc41e87c1
       iscommand: false
       name: Validate User Response
       script: EmailAskUserResponse
       type: condition
       version: -1
-    taskid: fd0220af-3773-416c-81de-dcbee554f047
+    taskid: efe0f376-3c98-4be2-8550-149dc41e87c1
     timertriggers: []
     type: condition
     view: |-
@@ -244,13 +244,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 38281263-acf9-476c-8515-2a6784bd91a3
+      id: 4b110565-dcc6-4ad7-83c0-9bf332aa62c9
       iscommand: false
       name: User Response yes
       script: Set
       type: regular
       version: -1
-    taskid: 38281263-acf9-476c-8515-2a6784bd91a3
+    taskid: 4b110565-dcc6-4ad7-83c0-9bf332aa62c9
     timertriggers: []
     type: regular
     view: |-
@@ -283,13 +283,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 5c3236c3-460b-4534-8ec6-ce0bbef98ee9
+      id: cd66ec0a-a567-4792-82b7-90f2c97c811d
       iscommand: false
       name: User Response no
       script: Set
       type: regular
       version: -1
-    taskid: 5c3236c3-460b-4534-8ec6-ce0bbef98ee9
+    taskid: cd66ec0a-a567-4792-82b7-90f2c97c811d
     timertriggers: []
     type: regular
     view: |-
@@ -311,12 +311,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9ce70a0d-be93-44d3-83cf-a49d305bd71f
+      id: 485d6e8b-f499-4a02-8fe1-ae1d788939f0
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 9ce70a0d-be93-44d3-83cf-a49d305bd71f
+    taskid: 485d6e8b-f499-4a02-8fe1-ae1d788939f0
     timertriggers: []
     type: title
     view: |-
