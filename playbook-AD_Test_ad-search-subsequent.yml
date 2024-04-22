@@ -54,11 +54,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ed5e6da5-7c6b-4e05-8c54-8fc8c5b7af4b
+      id: 68616378-955a-45b2-8362-dcefd1e9e47a
       iscommand: false
       name: ""
       version: -1
-    taskid: ed5e6da5-7c6b-4e05-8c54-8fc8c5b7af4b
+    taskid: 68616378-955a-45b2-8362-dcefd1e9e47a
     timertriggers: []
     type: start
     view: |-
@@ -104,13 +104,13 @@ tasks:
     task:
       brand: Active Directory Query v2
       description: Runs Active Directory queries.
-      id: 6e2f31b2-f57c-4566-8999-ddadab0d8b0b
+      id: 724890b6-674d-4516-8fc0-5144e2371b25
       iscommand: true
       name: ad-search subsequent
       script: Active Directory Query v2|||ad-search
       type: regular
       version: -1
-    taskid: 6e2f31b2-f57c-4566-8999-ddadab0d8b0b
+    taskid: 724890b6-674d-4516-8fc0-5144e2371b25
     timertriggers: []
     type: regular
     view: |-
@@ -149,12 +149,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9a137c8d-e69d-4a30-87bd-06fa5dc11176
+      id: 10675e05-21e7-4f1a-8b33-cc7c983c3995
       iscommand: false
       name: need next loop?
       type: condition
       version: -1
-    taskid: 9a137c8d-e69d-4a30-87bd-06fa5dc11176
+    taskid: 10675e05-21e7-4f1a-8b33-cc7c983c3995
     timertriggers: []
     type: condition
     view: |-
@@ -191,13 +191,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 65ae8c92-2896-43af-827e-9a5eb744ae32
+      id: cca6935f-e547-461c-8459-6aa7c6fd72cb
       iscommand: false
       name: Set - SearchPageCookie
       script: Set
       type: regular
       version: -1
-    taskid: 65ae8c92-2896-43af-827e-9a5eb744ae32
+    taskid: cca6935f-e547-461c-8459-6aa7c6fd72cb
     timertriggers: []
     type: regular
     view: |-
@@ -232,13 +232,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 6291de1b-7d0e-480e-809b-d7ed857ce28f
+      id: ac001941-ede1-41af-83b2-5773e6a614fd
       iscommand: false
       name: DeleteContext - ActiveDirectory
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 6291de1b-7d0e-480e-809b-d7ed857ce28f
+    taskid: ac001941-ede1-41af-83b2-5773e6a614fd
     timertriggers: []
     type: regular
     view: |-
@@ -274,12 +274,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9adb9045-1b7e-4849-889a-e7f3bc197fba
+      id: b0cea134-7540-48b2-801f-8ccee39b123a
       iscommand: false
       name: subsequent search?
       type: condition
       version: -1
-    taskid: 9adb9045-1b7e-4849-889a-e7f3bc197fba
+    taskid: b0cea134-7540-48b2-801f-8ccee39b123a
     timertriggers: []
     type: condition
     view: |-
@@ -322,13 +322,13 @@ tasks:
     task:
       brand: Active Directory Query v2
       description: Runs Active Directory queries.
-      id: eb4bc105-2dba-4776-83a5-a7fe8ca11742
+      id: 72f94f2d-3db5-42f9-8b23-cb14cc9ab2aa
       iscommand: true
       name: ad-search 1st
       script: Active Directory Query v2|||ad-search
       type: regular
       version: -1
-    taskid: eb4bc105-2dba-4776-83a5-a7fe8ca11742
+    taskid: 72f94f2d-3db5-42f9-8b23-cb14cc9ab2aa
     timertriggers: []
     type: regular
     view: |-
@@ -365,13 +365,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 502b9a79-a1cf-4596-87ac-64ab28586879
+      id: 7181a989-2044-4c99-8d12-dd727e7afdc5
       iscommand: false
       name: Set - AD.Result
       script: Set
       type: regular
       version: -1
-    taskid: 502b9a79-a1cf-4596-87ac-64ab28586879
+    taskid: 7181a989-2044-4c99-8d12-dd727e7afdc5
     timertriggers: []
     type: regular
     view: |-
@@ -406,13 +406,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 695252a4-5786-4863-8d85-f1d598da58c0
+      id: 32d42dba-bf64-44a6-8848-9e58f0a7e3d6
       iscommand: false
       name: Set - NextSearch
       script: Set
       type: regular
       version: -1
-    taskid: 695252a4-5786-4863-8d85-f1d598da58c0
+    taskid: 32d42dba-bf64-44a6-8848-9e58f0a7e3d6
     timertriggers: []
     type: regular
     view: |-
