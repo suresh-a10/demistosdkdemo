@@ -8,7 +8,7 @@
 	"hideSearch": false,
 	"id": "My Threat Landscape",
 	"isCommon": true,
-	"itemVersion": "1.4.0",
+	"itemVersion": "1.3.10",
 	"layout": [
 		{
 			"forceRange": false,
