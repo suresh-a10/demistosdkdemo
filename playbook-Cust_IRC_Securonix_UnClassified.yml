@@ -32,11 +32,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a551abbc-10af-46fa-8543-dcfb47534010
+      id: 6fc1ecb7-cd09-4ff9-8b06-8a9a890b7ace
       iscommand: false
       name: ""
       version: -1
-    taskid: a551abbc-10af-46fa-8543-dcfb47534010
+    taskid: 6fc1ecb7-cd09-4ff9-8b06-8a9a890b7ace
     timertriggers: []
     type: start
     view: |-
@@ -69,13 +69,13 @@ tasks:
       description: This is a Securonix initializer playbook which identifies the violator
         type, gets the associated policy violations, associates MITRE indicators,
         sets default priority and severity and assigns an analyst to the incident
-      id: e18e3d1b-5dd3-402f-8700-155cbd6b3284
+      id: 5f16c9fb-6feb-4cad-8701-997ed4a99273
       iscommand: false
       name: Cust_IRC_Securonix_Initializer
       playbookId: 3217ac4e-38e5-4d81-8c38-faf7200efc22
       type: playbook
       version: -1
-    taskid: e18e3d1b-5dd3-402f-8700-155cbd6b3284
+    taskid: 5f16c9fb-6feb-4cad-8701-997ed4a99273
     timertriggers: []
     type: playbook
     view: |-
@@ -97,12 +97,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2b4efa89-47b3-46c8-8b62-4e155751fe73
+      id: b7caf93f-f3ac-4cb4-8df4-87532f0260fc
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 2b4efa89-47b3-46c8-8b62-4e155751fe73
+    taskid: b7caf93f-f3ac-4cb4-8df4-87532f0260fc
     timertriggers: []
     type: title
     view: |-
@@ -136,13 +136,13 @@ tasks:
         This is a generic playbook which can be used across all other Securonix playbooks where the requirement is:
         * Closing the incident on XSOAR
         * Sending an email to the end user/analyst
-      id: 19e3c4c0-7cea-4740-8360-b924f6c89152
+      id: 797f500a-8aeb-4450-8d9f-fbc6e2f95b87
       iscommand: false
       name: Cust_IRC_Securonix_Generic_SendMail_CloseIncident
       playbookName: Wipro_IRC_Securonix_Generic_SendMail_CloseIncident
       type: playbook
       version: -1
-    taskid: 19e3c4c0-7cea-4740-8360-b924f6c89152
+    taskid: 797f500a-8aeb-4450-8d9f-fbc6e2f95b87
     timertriggers: []
     type: playbook
     view: |-
@@ -184,12 +184,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c28f1eb0-c998-49ea-8e84-9c7e17119154
+      id: a885235b-101b-496e-8afb-521103244aa6
       iscommand: false
       name: Check if Vectra detection
       type: condition
       version: -1
-    taskid: c28f1eb0-c998-49ea-8e84-9c7e17119154
+    taskid: a885235b-101b-496e-8afb-521103244aa6
     timertriggers: []
     type: condition
     view: |-
