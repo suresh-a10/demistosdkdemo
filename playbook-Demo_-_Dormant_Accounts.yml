@@ -40,11 +40,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e225a398-faa9-4464-8a56-c53cf773e238
+      id: c9028886-a775-4cff-8bdf-03f93939e753
       iscommand: false
       name: ""
       version: -1
-    taskid: e225a398-faa9-4464-8a56-c53cf773e238
+    taskid: c9028886-a775-4cff-8bdf-03f93939e753
     timertriggers: []
     type: start
     view: |-
@@ -95,13 +95,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: a194666c-13d5-4981-8f4f-69fbee9816de
+      id: bb8b6ad2-0008-4b60-8e40-99a5c72ca623
       iscommand: false
       name: Get the Accounts Details based on Sponsor
       script: Set
       type: regular
       version: -1
-    taskid: a194666c-13d5-4981-8f4f-69fbee9816de
+    taskid: bb8b6ad2-0008-4b60-8e40-99a5c72ca623
     timertriggers: []
     type: regular
     view: |-
@@ -133,13 +133,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.mdToHTML
-      id: ec179627-3674-4bb9-8b9c-7084112b83e1
+      id: 76e50d5c-cac4-4b2d-8b62-5c682cdb44dd
       iscommand: true
       name: HTML Table
       script: Builtin|||mdToHtml
       type: regular
       version: -1
-    taskid: ec179627-3674-4bb9-8b9c-7084112b83e1
+    taskid: 76e50d5c-cac4-4b2d-8b62-5c682cdb44dd
     timertriggers: []
     type: regular
     view: |-
@@ -181,13 +181,13 @@ tasks:
     task:
       brand: Gmail Single User
       description: Sends an email using Gmail.
-      id: 58a80c59-5998-4423-8dbc-8af1fffc761a
+      id: 96fc76a2-eae1-4368-82c9-d826966de3c8
       iscommand: true
       name: Send Email
       script: Gmail Single User|||send-mail
       type: regular
       version: -1
-    taskid: 58a80c59-5998-4423-8dbc-8af1fffc761a
+    taskid: 96fc76a2-eae1-4368-82c9-d826966de3c8
     timertriggers: []
     type: regular
     view: |-
@@ -218,13 +218,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: 1e4221d4-0414-40ba-8efd-8f0c0311d8b3
+      id: 626e559f-c4be-45ed-848e-bb0a33da02f5
       iscommand: false
       name: Delete Context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 1e4221d4-0414-40ba-8efd-8f0c0311d8b3
+    taskid: 626e559f-c4be-45ed-848e-bb0a33da02f5
     timertriggers: []
     type: regular
     view: |-
