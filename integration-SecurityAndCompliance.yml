@@ -21,7 +21,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.5.0
-    itemVersion: 1.2.45
+    itemVersion: 1.2.44
     packID: MicrosoftExchangeOnline
     packName: Microsoft Exchange Online
     packPropagationLabels:
@@ -913,7 +913,7 @@ script:
   dockerimage: demisto/powershell-ubuntu:7.3.0.49844
   runonce: false
   script: |-
-    ### pack version: 1.2.45
+    ### pack version: 1.2.44
 
 
     $script:INTEGRATION_NAME = "Security And Compliance"
