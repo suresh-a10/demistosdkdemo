@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d41febbe-0370-4e78-8852-80b649946dd3
+      id: 9f0f8ca8-37b3-4196-8658-7454c6cee600
       iscommand: false
       name: ""
       version: -1
-    taskid: d41febbe-0370-4e78-8852-80b649946dd3
+    taskid: 9f0f8ca8-37b3-4196-8658-7454c6cee600
     timertriggers: []
     type: start
     view: |-
@@ -74,13 +74,13 @@ tasks:
         less-busy-user: The less busy analyst will be picked to be the incident owner.
         online: The analyst is picked randomly from all online analysts, according to the provided roles (if no roles provided, will fetch all users).
         current: The user that executed the command
-      id: 8ba97d41-dd07-4654-850a-398ce97597fc
+      id: fd7cc35c-8751-498c-8c5f-dfb933c044c9
       iscommand: false
       name: Assign Incident to Analyst
       script: AssignAnalystToIncident
       type: regular
       version: -1
-    taskid: 8ba97d41-dd07-4654-850a-398ce97597fc
+    taskid: fd7cc35c-8751-498c-8c5f-dfb933c044c9
     timertriggers: []
     type: regular
     view: |-
@@ -106,13 +106,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 1fcd7e1f-4fac-4f1b-82e5-076dd41519cb
+      id: 4b83527b-4893-469d-8f60-a776a5db0f64
       iscommand: true
       name: 'Set role '
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 1fcd7e1f-4fac-4f1b-82e5-076dd41519cb
+    taskid: 4b83527b-4893-469d-8f60-a776a5db0f64
     timertriggers: []
     type: regular
     view: |-
