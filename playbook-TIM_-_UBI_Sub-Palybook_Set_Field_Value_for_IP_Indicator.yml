@@ -41,11 +41,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2c7408d3-5f88-4c79-8c54-c46e994910b7
+      id: 209102c6-793d-4d60-85b8-1a721c6f1642
       iscommand: false
       name: ""
       version: -1
-    taskid: 2c7408d3-5f88-4c79-8c54-c46e994910b7
+    taskid: 209102c6-793d-4d60-85b8-1a721c6f1642
     timertriggers: []
     type: start
     view: |-
@@ -78,13 +78,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: e33c4597-c789-4736-871d-2b16e9e4f6d3
+      id: 20e35840-4bba-4b1f-8f8d-54a31304f9cf
       iscommand: false
       name: Set score
       script: Set
       type: regular
       version: -1
-    taskid: e33c4597-c789-4736-871d-2b16e9e4f6d3
+    taskid: 20e35840-4bba-4b1f-8f8d-54a31304f9cf
     timertriggers: []
     type: regular
     view: |-
@@ -115,13 +115,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: d8b412ae-b850-4149-8180-31a78239da23
+      id: a44ab775-40ed-44c6-8351-9343d4b4d047
       iscommand: false
       name: Set score
       script: Set
       type: regular
       version: -1
-    taskid: d8b412ae-b850-4149-8180-31a78239da23
+    taskid: a44ab775-40ed-44c6-8351-9343d4b4d047
     timertriggers: []
     type: regular
     view: |-
@@ -154,13 +154,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 35c0bf1e-b62f-4fd0-8b68-6ef4a924863d
+      id: b26810ea-6f9c-4dec-8ab4-fe2f41babb46
       iscommand: false
       name: Set score
       script: Set
       type: regular
       version: -1
-    taskid: 35c0bf1e-b62f-4fd0-8b68-6ef4a924863d
+    taskid: b26810ea-6f9c-4dec-8ab4-fe2f41babb46
     timertriggers: []
     type: regular
     view: |-
@@ -193,13 +193,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: fdbfcb12-f332-4b52-85dd-e5257e02906c
+      id: f3386cbf-0066-48f0-8b53-a872300b30fe
       iscommand: false
       name: Set score
       script: Set
       type: regular
       version: -1
-    taskid: fdbfcb12-f332-4b52-85dd-e5257e02906c
+    taskid: f3386cbf-0066-48f0-8b53-a872300b30fe
     timertriggers: []
     type: regular
     view: |-
@@ -237,12 +237,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9d681d98-9000-49eb-805e-caaeab049f13
+      id: e8bee81b-98c9-4f60-881b-95e109a1eedc
       iscommand: false
       name: Check score is 3 or not?
       type: condition
       version: -1
-    taskid: 9d681d98-9000-49eb-805e-caaeab049f13
+    taskid: e8bee81b-98c9-4f60-881b-95e109a1eedc
     timertriggers: []
     type: condition
     view: |-
@@ -280,12 +280,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1e547790-91d3-47f3-845d-3554c1814a08
+      id: bfadb700-cc58-4ad3-85a8-5fa5c3ac3d5c
       iscommand: false
       name: Check score is 3 or not?
       type: condition
       version: -1
-    taskid: 1e547790-91d3-47f3-845d-3554c1814a08
+    taskid: bfadb700-cc58-4ad3-85a8-5fa5c3ac3d5c
     timertriggers: []
     type: condition
     view: |-
@@ -323,12 +323,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f02b5a76-78cb-4535-8222-dca246b09f59
+      id: ec76a0d0-cabd-4538-8303-6b872ead50e0
       iscommand: false
       name: Check score is 3 or not?
       type: condition
       version: -1
-    taskid: f02b5a76-78cb-4535-8222-dca246b09f59
+    taskid: ec76a0d0-cabd-4538-8303-6b872ead50e0
     timertriggers: []
     type: condition
     view: |-
@@ -366,12 +366,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: dd7a0c20-873f-4a66-82e1-22182863c01c
+      id: 55b27082-d15e-4149-8a61-d6936d9376e6
       iscommand: false
       name: Check score is 3 or not?
       type: condition
       version: -1
-    taskid: dd7a0c20-873f-4a66-82e1-22182863c01c
+    taskid: 55b27082-d15e-4149-8a61-d6936d9376e6
     timertriggers: []
     type: condition
     view: |-
@@ -402,13 +402,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: fea96f02-fc00-411c-8695-d1cb1324fa05
+      id: d77111a6-129f-417a-8167-119a13b3896f
       iscommand: false
       name: Set Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: fea96f02-fc00-411c-8695-d1cb1324fa05
+    taskid: d77111a6-129f-417a-8167-119a13b3896f
     timertriggers: []
     type: regular
     view: |-
@@ -439,13 +439,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: d3ad0ca3-1bdb-4807-84b2-b20da5f50195
+      id: fa0f0b23-a368-4505-8429-cebc91cd0643
       iscommand: false
       name: Set Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: d3ad0ca3-1bdb-4807-84b2-b20da5f50195
+    taskid: fa0f0b23-a368-4505-8429-cebc91cd0643
     timertriggers: []
     type: regular
     view: |-
@@ -476,13 +476,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 65ec2ae3-561e-486d-8d3e-9a70b8b49d2c
+      id: 517fffbc-af4c-4d1c-82d5-20206a759904
       iscommand: false
       name: Set Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: 65ec2ae3-561e-486d-8d3e-9a70b8b49d2c
+    taskid: 517fffbc-af4c-4d1c-82d5-20206a759904
     timertriggers: []
     type: regular
     view: |-
@@ -513,13 +513,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 674effb2-8f09-4be9-89e3-44ce16cde916
+      id: 56299604-786e-435b-866f-7ca2890ca853
       iscommand: false
       name: Set Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: 674effb2-8f09-4be9-89e3-44ce16cde916
+    taskid: 56299604-786e-435b-866f-7ca2890ca853
     timertriggers: []
     type: regular
     view: |-
@@ -550,13 +550,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: ee5d7f1f-0804-4862-87bc-6be7d801216b
+      id: 282aab2a-c9a5-4190-82d1-9228df775150
       iscommand: false
       name: Set Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: ee5d7f1f-0804-4862-87bc-6be7d801216b
+    taskid: 282aab2a-c9a5-4190-82d1-9228df775150
     timertriggers: []
     type: regular
     view: |-
@@ -587,13 +587,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 9d109155-40c6-4b70-82a9-9e9c16935d93
+      id: 5ed66f6c-f55f-4dcb-898d-8a0d43271bac
       iscommand: false
       name: Set Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: 9d109155-40c6-4b70-82a9-9e9c16935d93
+    taskid: 5ed66f6c-f55f-4dcb-898d-8a0d43271bac
     timertriggers: []
     type: regular
     view: |-
@@ -624,13 +624,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 71f1ebd2-540c-44a7-8110-bd76017b1336
+      id: 81138b5a-b84b-4fb3-8d44-913291a87378
       iscommand: false
       name: Set Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: 71f1ebd2-540c-44a7-8110-bd76017b1336
+    taskid: 81138b5a-b84b-4fb3-8d44-913291a87378
     timertriggers: []
     type: regular
     view: |-
@@ -661,13 +661,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 67e829c8-6e17-4bb1-81a2-dd2da62e6c09
+      id: 87b0c1f1-e739-4fe4-81dd-2b53717c1188
       iscommand: false
       name: Set Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: 67e829c8-6e17-4bb1-81a2-dd2da62e6c09
+    taskid: 87b0c1f1-e739-4fe4-81dd-2b53717c1188
     timertriggers: []
     type: regular
     view: |-
@@ -703,13 +703,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 1aef839f-ff17-43e6-867f-fb90a6a84066
+      id: 6ad358a4-00f8-4fc5-8e08-f28d3b18c259
       iscommand: false
       name: Set Mscore
       script: Set
       type: regular
       version: -1
-    taskid: 1aef839f-ff17-43e6-867f-fb90a6a84066
+    taskid: 6ad358a4-00f8-4fc5-8e08-f28d3b18c259
     timertriggers: []
     type: regular
     view: |-
@@ -734,12 +734,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: bd7068ed-bf12-4b78-813e-2203d61c9199
+      id: 632acbac-751b-4bc1-8383-637875719f82
       iscommand: false
       name: Vendor not present
       type: title
       version: -1
-    taskid: bd7068ed-bf12-4b78-813e-2203d61c9199
+    taskid: 632acbac-751b-4bc1-8383-637875719f82
     timertriggers: []
     type: title
     view: |-
@@ -764,12 +764,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8e252145-e364-4d5d-8887-119f643cb856
+      id: 448c8b56-e20a-4325-8b0e-fcb3becad394
       iscommand: false
       name: Condition Checked
       type: title
       version: -1
-    taskid: 8e252145-e364-4d5d-8887-119f643cb856
+    taskid: 448c8b56-e20a-4325-8b0e-fcb3becad394
     timertriggers: []
     type: title
     view: |-
@@ -800,13 +800,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: c11bca4a-376f-447d-8e2f-ca70584d7963
+      id: 1579dd24-3536-4ef0-80c7-fc057201232f
       iscommand: false
       name: Set SourceBand
       script: Set
       type: regular
       version: -1
-    taskid: c11bca4a-376f-447d-8e2f-ca70584d7963
+    taskid: 1579dd24-3536-4ef0-80c7-fc057201232f
     timertriggers: []
     type: regular
     view: |-
@@ -837,13 +837,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: c4af7393-8413-4028-8082-5bab2c00b08e
+      id: 2f817b75-c8a9-409f-8d62-75dc39dfbe91
       iscommand: false
       name: Store Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: c4af7393-8413-4028-8082-5bab2c00b08e
+    taskid: 2f817b75-c8a9-409f-8d62-75dc39dfbe91
     timertriggers: []
     type: regular
     view: |-
@@ -874,13 +874,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 017d7446-d4bc-45e8-815e-f190256d8e06
+      id: 16d834f3-d679-4ea5-832a-99768418d4dc
       iscommand: false
       name: Set IP values
       script: Set
       type: regular
       version: -1
-    taskid: 017d7446-d4bc-45e8-815e-f190256d8e06
+    taskid: 16d834f3-d679-4ea5-832a-99768418d4dc
     timertriggers: []
     type: regular
     view: |-
@@ -902,12 +902,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: af0e79cc-81fd-4ce7-8cc2-6f0ef3632b81
+      id: 4f12d0f3-f45b-4c2b-8a14-ec324f3d3e9d
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: af0e79cc-81fd-4ce7-8cc2-6f0ef3632b81
+    taskid: 4f12d0f3-f45b-4c2b-8a14-ec324f3d3e9d
     timertriggers: []
     type: title
     view: |-
@@ -940,13 +940,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: c67bd177-85ba-4654-86c7-a126075be459
+      id: 8b4939bb-ae2d-4cb0-87f4-43315ef2a38e
       iscommand: false
       name: Set ID values
       script: Set
       type: regular
       version: -1
-    taskid: c67bd177-85ba-4654-86c7-a126075be459
+    taskid: 8b4939bb-ae2d-4cb0-87f4-43315ef2a38e
     timertriggers: []
     type: regular
     view: |-
@@ -1012,13 +1012,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 337f92b5-a97d-4cf4-885c-50c32e46a335
+      id: 0aef83a0-98c1-44df-8432-d7bd736f6ca0
       iscommand: false
       name: Set First Seen Time
       script: Set
       type: regular
       version: -1
-    taskid: 337f92b5-a97d-4cf4-885c-50c32e46a335
+    taskid: 0aef83a0-98c1-44df-8432-d7bd736f6ca0
     timertriggers: []
     type: regular
     view: |-
@@ -1084,13 +1084,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 1f1f7deb-01d6-4c5a-8197-293e037f4a2c
+      id: 6a466657-86d1-4b16-8788-be912b09993f
       iscommand: false
       name: Set Last Seen Time
       script: Set
       type: regular
       version: -1
-    taskid: 1f1f7deb-01d6-4c5a-8197-293e037f4a2c
+    taskid: 6a466657-86d1-4b16-8788-be912b09993f
     timertriggers: []
     type: regular
     view: |-
@@ -1134,13 +1134,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 394fa84f-c325-4ad0-8430-dc44fc2fc7d0
+      id: 0c8da45c-cde1-40c0-8815-a76a9f20a1d7
       iscommand: false
       name: Set County Name
       script: Set
       type: regular
       version: -1
-    taskid: 394fa84f-c325-4ad0-8430-dc44fc2fc7d0
+    taskid: 0c8da45c-cde1-40c0-8815-a76a9f20a1d7
     timertriggers: []
     type: regular
     view: |-
@@ -1174,13 +1174,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: b9a50617-17c1-4c07-83e3-16032aa3f051
+      id: fbfc7776-d9ce-4ce3-8387-0c3875ca9b14
       iscommand: false
       name: Set Geo Location
       script: Set
       type: regular
       version: -1
-    taskid: b9a50617-17c1-4c07-83e3-16032aa3f051
+    taskid: fbfc7776-d9ce-4ce3-8387-0c3875ca9b14
     timertriggers: []
     type: regular
     view: |-
@@ -1218,13 +1218,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 567aac1f-190d-4ed2-8104-f81d645d8f52
+      id: 071de2bc-eb79-49b9-8779-b36e2071bdb9
       iscommand: false
       name: Set GeoCountry
       script: Set
       type: regular
       version: -1
-    taskid: 567aac1f-190d-4ed2-8104-f81d645d8f52
+    taskid: 071de2bc-eb79-49b9-8779-b36e2071bdb9
     timertriggers: []
     type: regular
     view: |-
@@ -1257,13 +1257,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: d07962c4-52f2-4d68-8c90-29bfbeb4d09b
+      id: 28be4c7d-ec4a-4405-8fb8-5e780bf3cac6
       iscommand: false
       name: Set Indicator Type
       script: Set
       type: regular
       version: -1
-    taskid: d07962c4-52f2-4d68-8c90-29bfbeb4d09b
+    taskid: 28be4c7d-ec4a-4405-8fb8-5e780bf3cac6
     timertriggers: []
     type: regular
     view: |-
@@ -1294,13 +1294,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 080d5a96-cb4b-4c85-86bc-ae7fa37bf8e7
+      id: d9f64fd2-8fd4-4436-8d22-ccde8342d172
       iscommand: false
       name: Set CVSS Score
       script: Set
       type: regular
       version: -1
-    taskid: 080d5a96-cb4b-4c85-86bc-ae7fa37bf8e7
+    taskid: d9f64fd2-8fd4-4436-8d22-ccde8342d172
     timertriggers: []
     type: regular
     view: |-
@@ -1331,13 +1331,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: e955753a-f1f7-45ec-8093-1902a59a6371
+      id: f6a1b9e6-09e9-4d86-8728-5771b4011ff2
       iscommand: false
       name: Set CVSS3 Score
       script: Set
       type: regular
       version: -1
-    taskid: e955753a-f1f7-45ec-8093-1902a59a6371
+    taskid: f6a1b9e6-09e9-4d86-8728-5771b4011ff2
     timertriggers: []
     type: regular
     view: |-
@@ -1370,13 +1370,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 25ac2797-15bf-43d7-8ff6-9fc3859d31d9
+      id: 56c91f80-ca0e-40c3-87cb-a69128c6540b
       iscommand: false
       name: Set MITRE Id
       script: Set
       type: regular
       version: -1
-    taskid: 25ac2797-15bf-43d7-8ff6-9fc3859d31d9
+    taskid: 56c91f80-ca0e-40c3-87cb-a69128c6540b
     timertriggers: []
     type: regular
     view: |-
@@ -1407,13 +1407,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 34ac6dcd-1abd-4cff-80d7-2f05ac4ca410
+      id: f4d6a67e-6a98-4e0d-821f-cecefc021fd3
       iscommand: false
       name: Set MITRE Tactics
       script: Set
       type: regular
       version: -1
-    taskid: 34ac6dcd-1abd-4cff-80d7-2f05ac4ca410
+    taskid: f4d6a67e-6a98-4e0d-821f-cecefc021fd3
     timertriggers: []
     type: regular
     view: |-
@@ -1444,13 +1444,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 9e69d917-c6b8-49b1-887a-e6995400e5f2
+      id: c2021633-0a13-4d56-82ef-23e8d5427165
       iscommand: false
       name: Set Kill Chain Phases
       script: Set
       type: regular
       version: -1
-    taskid: 9e69d917-c6b8-49b1-887a-e6995400e5f2
+    taskid: c2021633-0a13-4d56-82ef-23e8d5427165
     timertriggers: []
     type: regular
     view: |-
@@ -1475,12 +1475,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: bf2b57a5-8973-4f0b-8ad8-d4e59a644014
+      id: d6eea46c-f9c9-4bc5-880c-4a0745b0fe4b
       iscommand: false
       name: Data Store Completed
       type: title
       version: -1
-    taskid: bf2b57a5-8973-4f0b-8ad8-d4e59a644014
+    taskid: d6eea46c-f9c9-4bc5-880c-4a0745b0fe4b
     timertriggers: []
     type: title
     view: |-
@@ -1549,13 +1549,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 18973a0c-01b3-455a-85c5-daf3ae331465
+      id: ca85d3a3-6ab7-4b91-8d2c-613e263b2273
       iscommand: false
       name: TIM - UBI Sub Playbook Add IP Indicators to Arcsight SIEM
       playbookId: 21ce8491-ba19-4813-8f99-f3764238e54d
       type: playbook
       version: -1
-    taskid: 18973a0c-01b3-455a-85c5-daf3ae331465
+    taskid: ca85d3a3-6ab7-4b91-8d2c-613e263b2273
     timertriggers: []
     type: playbook
     view: |-
@@ -1588,13 +1588,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 61ed9d11-2d43-414f-8eed-8efa22ced3f9
+      id: 038f8267-6e8d-496d-880b-6033dddeb527
       iscommand: false
       name: Set score
       script: Set
       type: regular
       version: -1
-    taskid: 61ed9d11-2d43-414f-8eed-8efa22ced3f9
+    taskid: 038f8267-6e8d-496d-880b-6033dddeb527
     timertriggers: []
     type: regular
     view: |-
@@ -1632,12 +1632,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9c1694d7-6cf0-4706-83e1-c11436e08528
+      id: 7336d15f-e7e5-435a-8148-1356017f8e44
       iscommand: false
       name: Check score is 3 or not?
       type: condition
       version: -1
-    taskid: 9c1694d7-6cf0-4706-83e1-c11436e08528
+    taskid: 7336d15f-e7e5-435a-8148-1356017f8e44
     timertriggers: []
     type: condition
     view: |-
@@ -1668,13 +1668,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 09e816e0-411c-4322-8b69-52f7aa2989c3
+      id: 0e04f665-dea3-4183-821e-f566be3469f9
       iscommand: false
       name: Set Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: 09e816e0-411c-4322-8b69-52f7aa2989c3
+    taskid: 0e04f665-dea3-4183-821e-f566be3469f9
     timertriggers: []
     type: regular
     view: |-
@@ -1705,13 +1705,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 8f6e4fa2-8b95-429f-88a6-0a9e255f68ca
+      id: f12282e3-789e-4cb6-85ae-2480955a9a01
       iscommand: false
       name: Set Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: 8f6e4fa2-8b95-429f-88a6-0a9e255f68ca
+    taskid: f12282e3-789e-4cb6-85ae-2480955a9a01
     timertriggers: []
     type: regular
     view: |-
@@ -1744,13 +1744,13 @@ tasks:
     task:
       brand: Builtin
       description: Set a value in context under the key you entered.
-      id: 2f4603e3-8c8e-48eb-8994-34368edd6159
+      id: c5b06903-9af7-4ba7-8a8e-bacf46bfe63b
       iscommand: false
       name: Update_Counter
       script: Set
       type: regular
       version: -1
-    taskid: 2f4603e3-8c8e-48eb-8994-34368edd6159
+    taskid: c5b06903-9af7-4ba7-8a8e-bacf46bfe63b
     timertriggers: []
     type: regular
     view: |-
@@ -1786,13 +1786,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: 07c98897-fcb0-4359-8c76-411fd47ee0cb
+      id: 038e1826-3207-4952-848e-f365e504840c
       iscommand: false
       name: Remove Context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 07c98897-fcb0-4359-8c76-411fd47ee0cb
+    taskid: 038e1826-3207-4952-848e-f365e504840c
     timertriggers: []
     type: regular
     view: |-
@@ -1830,12 +1830,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1859d90b-3a6c-4aa3-8b68-64c077dbc01b
+      id: b4f2eab2-f773-49f4-87e2-aa1f5c31a501
       iscommand: false
       name: Is Taxii a2b9dd7d-8d1a-4d55-8c5a-aad8dbb7a594 Present?
       type: condition
       version: -1
-    taskid: 1859d90b-3a6c-4aa3-8b68-64c077dbc01b
+    taskid: b4f2eab2-f773-49f4-87e2-aa1f5c31a501
     timertriggers: []
     type: condition
     view: |-
@@ -1868,13 +1868,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 7c56c86f-5ee9-4a53-89d8-520b97ff6fe0
+      id: 5b942cae-8109-4568-8979-115c7cac2974
       iscommand: false
       name: Set score
       script: Set
       type: regular
       version: -1
-    taskid: 7c56c86f-5ee9-4a53-89d8-520b97ff6fe0
+    taskid: 5b942cae-8109-4568-8979-115c7cac2974
     timertriggers: []
     type: regular
     view: |-
@@ -1912,12 +1912,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ca56b146-fcf7-4a4e-89ea-3e61d81ce735
+      id: 0b76d43e-bb08-4ef6-8aed-b0349deb7f39
       iscommand: false
       name: Check score is 3 or not?
       type: condition
       version: -1
-    taskid: ca56b146-fcf7-4a4e-89ea-3e61d81ce735
+    taskid: 0b76d43e-bb08-4ef6-8aed-b0349deb7f39
     timertriggers: []
     type: condition
     view: |-
@@ -1948,13 +1948,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: accebcc4-b43a-4f98-854e-7d9c8b2e5228
+      id: d39d0c6c-c1b1-4147-831a-55fe60cee337
       iscommand: false
       name: Set Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: accebcc4-b43a-4f98-854e-7d9c8b2e5228
+    taskid: d39d0c6c-c1b1-4147-831a-55fe60cee337
     timertriggers: []
     type: regular
     view: |-
@@ -1985,13 +1985,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 55754120-f9dc-4aae-8f85-96cb35ed343c
+      id: 282bbde8-8d67-4ef3-805d-48b39ea4d786
       iscommand: false
       name: Set Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: 55754120-f9dc-4aae-8f85-96cb35ed343c
+    taskid: 282bbde8-8d67-4ef3-805d-48b39ea4d786
     timertriggers: []
     type: regular
     view: |-
@@ -2022,13 +2022,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: c8ee5289-0fd9-448f-85bb-8c8b8660f3a0
+      id: cd4b76ac-a7cc-4105-89d5-6b96eeb8e723
       iscommand: false
       name: First seen not available
       script: Set
       type: regular
       version: -1
-    taskid: c8ee5289-0fd9-448f-85bb-8c8b8660f3a0
+    taskid: cd4b76ac-a7cc-4105-89d5-6b96eeb8e723
     timertriggers: []
     type: regular
     view: |-
@@ -2059,13 +2059,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: ea8cd561-8c39-4a75-8b5f-62579783cbaf
+      id: 7b83f5c6-c802-4887-8fc8-5300bba14399
       iscommand: false
       name: Last seen not available
       script: Set
       type: regular
       version: -1
-    taskid: ea8cd561-8c39-4a75-8b5f-62579783cbaf
+    taskid: 7b83f5c6-c802-4887-8fc8-5300bba14399
     timertriggers: []
     type: regular
     view: |-
@@ -2103,12 +2103,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b7e24229-3932-4ca9-8f12-c937b46198be
+      id: fd1dbfc2-312b-4de3-87ca-76654b3b418a
       iscommand: false
       name: Is firstseen value is correct?
       type: condition
       version: -1
-    taskid: b7e24229-3932-4ca9-8f12-c937b46198be
+    taskid: fd1dbfc2-312b-4de3-87ca-76654b3b418a
     timertriggers: []
     type: condition
     view: |-
@@ -2146,12 +2146,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a9934acc-71c4-4325-8983-68db77df14d2
+      id: 8838bb50-e0d5-4e69-879d-38df445d0ec6
       iscommand: false
       name: Is Lastseen value is correct?
       type: condition
       version: -1
-    taskid: a9934acc-71c4-4325-8983-68db77df14d2
+    taskid: 8838bb50-e0d5-4e69-879d-38df445d0ec6
     timertriggers: []
     type: condition
     view: |-
@@ -2189,12 +2189,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 96997ab9-34df-498b-8f96-d979cdc629fa
+      id: b91e1e05-df4f-4ccb-8dd0-f0e1ee43b6d2
       iscommand: false
       name: Is Indicator Is Active ?
       type: condition
       version: -1
-    taskid: 96997ab9-34df-498b-8f96-d979cdc629fa
+    taskid: b91e1e05-df4f-4ccb-8dd0-f0e1ee43b6d2
     timertriggers: []
     type: condition
     view: |-
@@ -2225,13 +2225,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: d3e87bbf-41d7-452a-87c1-abce40208b03
+      id: 18e48e8b-ed3f-449a-8f51-a758eb8170ad
       iscommand: false
       name: Set Country Code
       script: Set
       type: regular
       version: -1
-    taskid: d3e87bbf-41d7-452a-87c1-abce40208b03
+    taskid: 18e48e8b-ed3f-449a-8f51-a758eb8170ad
     timertriggers: []
     type: regular
     view: |-
@@ -2262,13 +2262,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: a407200d-a770-4a1b-8fa6-5f78b16ff7a2
+      id: 9f9d7978-1c70-4ea7-86b2-4430d91b6ab8
       iscommand: false
       name: Set County Name
       script: Set
       type: regular
       version: -1
-    taskid: a407200d-a770-4a1b-8fa6-5f78b16ff7a2
+    taskid: 9f9d7978-1c70-4ea7-86b2-4430d91b6ab8
     timertriggers: []
     type: regular
     view: |-
@@ -2299,13 +2299,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 1c73e67b-f488-431c-8073-ced788e113b7
+      id: 83652699-df66-40c5-8f09-6a205daa8e8d
       iscommand: false
       name: Set Geo Location
       script: Set
       type: regular
       version: -1
-    taskid: 1c73e67b-f488-431c-8073-ced788e113b7
+    taskid: 83652699-df66-40c5-8f09-6a205daa8e8d
     timertriggers: []
     type: regular
     view: |-
@@ -2346,13 +2346,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 8ed037ad-73b9-4da5-8e12-a7c6adf1e54d
+      id: 95572a08-5a72-4cf0-8184-2b226e44ac01
       iscommand: false
       name: Format Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: 8ed037ad-73b9-4da5-8e12-a7c6adf1e54d
+    taskid: 95572a08-5a72-4cf0-8184-2b226e44ac01
     timertriggers: []
     type: regular
     view: |-
@@ -2423,13 +2423,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 7d0a4e90-41b1-4ab3-84cb-d00f2d58e221
+      id: 763b7cb9-f747-439d-8e9d-f2771637b916
       iscommand: false
       name: Ready Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: 7d0a4e90-41b1-4ab3-84cb-d00f2d58e221
+    taskid: 763b7cb9-f747-439d-8e9d-f2771637b916
     timertriggers: []
     type: regular
     view: |-
@@ -2470,13 +2470,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 3e57d051-9746-437d-8609-a4c889b13e79
+      id: 7dedc1c0-2a88-45d5-89e2-6512eda50628
       iscommand: false
       name: Format Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: 3e57d051-9746-437d-8609-a4c889b13e79
+    taskid: 7dedc1c0-2a88-45d5-89e2-6512eda50628
     timertriggers: []
     type: regular
     view: |-
@@ -2547,13 +2547,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: d30f8e41-1208-46de-8df9-e411a75d42fc
+      id: c7fbdc0b-4e7b-4fb7-8fd1-06eefac5b11c
       iscommand: false
       name: Ready Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: d30f8e41-1208-46de-8df9-e411a75d42fc
+    taskid: c7fbdc0b-4e7b-4fb7-8fd1-06eefac5b11c
     timertriggers: []
     type: regular
     view: |-
@@ -2584,13 +2584,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 11499be5-dd24-4b02-8fdc-a56b078f8923
+      id: f64a603f-e7e3-4106-8967-f6d30e5fc4c0
       iscommand: false
       name: Set Verdict Value
       script: Set
       type: regular
       version: -1
-    taskid: 11499be5-dd24-4b02-8fdc-a56b078f8923
+    taskid: f64a603f-e7e3-4106-8967-f6d30e5fc4c0
     timertriggers: []
     type: regular
     view: |-
@@ -2628,12 +2628,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 39012ac6-f389-4097-86d6-fc6d028f4013
+      id: 75105a38-3679-479d-88eb-5d21a6f910fb
       iscommand: false
       name: Is Source Brand Present?
       type: condition
       version: -1
-    taskid: 39012ac6-f389-4097-86d6-fc6d028f4013
+    taskid: 75105a38-3679-479d-88eb-5d21a6f910fb
     timertriggers: []
     type: condition
     view: |-
@@ -2659,12 +2659,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d18d1d9c-ee51-4ec7-82d6-b00169ee71a9
+      id: 3f1735ff-8051-4617-8efc-ec638ea9905a
       iscommand: false
       name: Source Value set
       type: title
       version: -1
-    taskid: d18d1d9c-ee51-4ec7-82d6-b00169ee71a9
+    taskid: 3f1735ff-8051-4617-8efc-ec638ea9905a
     timertriggers: []
     type: title
     view: |-
@@ -2695,13 +2695,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.find.indicators
-      id: cea5a36f-4e12-4b4f-84ce-06c0f5837284
+      id: e4aa47e0-d4b8-4616-8a4e-797b07ed14d5
       iscommand: true
       name: Get Indicator
       script: Builtin|||findIndicators
       type: regular
       version: -1
-    taskid: cea5a36f-4e12-4b4f-84ce-06c0f5837284
+    taskid: e4aa47e0-d4b8-4616-8a4e-797b07ed14d5
     timertriggers: []
     type: regular
     view: |-
@@ -2739,12 +2739,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7b00ea1e-dc86-4945-8e3e-0ab8d1d92f40
+      id: 75134023-68d2-446e-8e00-e92ace0c7053
       iscommand: false
       name: Is Mandiant Advantage Present?
       type: condition
       version: -1
-    taskid: 7b00ea1e-dc86-4945-8e3e-0ab8d1d92f40
+    taskid: 75134023-68d2-446e-8e00-e92ace0c7053
     timertriggers: []
     type: condition
     view: |-
@@ -2782,12 +2782,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2ce175dc-7fd5-4f75-81b2-64f063ffb6b7
+      id: e76d912a-84ea-45c4-8d71-64780b85ce5f
       iscommand: false
       name: Is VirusTotal Present?
       type: condition
       version: -1
-    taskid: 2ce175dc-7fd5-4f75-81b2-64f063ffb6b7
+    taskid: e76d912a-84ea-45c4-8d71-64780b85ce5f
     timertriggers: []
     type: condition
     view: |-
@@ -2825,12 +2825,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: bdd7464a-bf8c-4bdf-890d-26cc03e443f9
+      id: e2e15010-cbb0-407e-8103-33124561a445
       iscommand: false
       name: Is AlienVault Present?
       type: condition
       version: -1
-    taskid: bdd7464a-bf8c-4bdf-890d-26cc03e443f9
+    taskid: e2e15010-cbb0-407e-8103-33124561a445
     timertriggers: []
     type: condition
     view: |-
@@ -2868,12 +2868,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: cd0ed973-0a58-4d24-815a-44ffa7b77b4b
+      id: a5280602-cd03-4333-827e-204a4fb81455
       iscommand: false
       name: Is Unit42IntelObjectsFeed  Present?
       type: condition
       version: -1
-    taskid: cd0ed973-0a58-4d24-815a-44ffa7b77b4b
+    taskid: a5280602-cd03-4333-827e-204a4fb81455
     timertriggers: []
     type: condition
     view: |-
@@ -2911,12 +2911,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7685e6a0-68b8-4c09-8515-2481c22daecb
+      id: 3bf17c27-6628-4df5-8cd5-0228f1b8e1f3
       iscommand: false
       name: Is Autofocus  Present?
       type: condition
       version: -1
-    taskid: 7685e6a0-68b8-4c09-8515-2481c22daecb
+    taskid: 3bf17c27-6628-4df5-8cd5-0228f1b8e1f3
     timertriggers: []
     type: condition
     view: |-
@@ -2949,13 +2949,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 35f69238-4320-437f-82b5-bf031ea2afae
+      id: e46231c5-698f-4ab3-8b8a-179da818ed46
       iscommand: false
       name: Set score
       script: Set
       type: regular
       version: -1
-    taskid: 35f69238-4320-437f-82b5-bf031ea2afae
+    taskid: e46231c5-698f-4ab3-8b8a-179da818ed46
     timertriggers: []
     type: regular
     view: |-
@@ -2991,12 +2991,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 51abe1e1-1bf7-4821-8b48-cf92f365d05d
+      id: 5effdfce-864f-43bc-8bb3-5b4a0d66f244
       iscommand: false
       name: Check score is 3 or not?
       type: condition
       version: -1
-    taskid: 51abe1e1-1bf7-4821-8b48-cf92f365d05d
+    taskid: 5effdfce-864f-43bc-8bb3-5b4a0d66f244
     timertriggers: []
     type: condition
     view: |-
@@ -3027,13 +3027,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 21ff8275-0cdd-4ad9-8410-13e4566f00ad
+      id: dc8cbc86-fd7d-4c95-8f62-9e6e32dd7cad
       iscommand: false
       name: Set Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: 21ff8275-0cdd-4ad9-8410-13e4566f00ad
+    taskid: dc8cbc86-fd7d-4c95-8f62-9e6e32dd7cad
     timertriggers: []
     type: regular
     view: |-
@@ -3064,13 +3064,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: ab7f60c4-6a8a-4b52-8f63-4de4e6d90a26
+      id: db34440a-5200-4363-87b2-6fd07432623f
       iscommand: false
       name: Set Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: ab7f60c4-6a8a-4b52-8f63-4de4e6d90a26
+    taskid: db34440a-5200-4363-87b2-6fd07432623f
     timertriggers: []
     type: regular
     view: |-
@@ -3103,12 +3103,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d0f2bc4e-2806-49ff-8e69-78ae9f89424a
+      id: 5a4b1a03-b8bd-4041-8e4c-0dc3a5edbe1d
       iscommand: false
       name: Check for Vendors
       type: title
       version: -1
-    taskid: d0f2bc4e-2806-49ff-8e69-78ae9f89424a
+    taskid: 5a4b1a03-b8bd-4041-8e4c-0dc3a5edbe1d
     timertriggers: []
     type: title
     view: |-
@@ -3146,12 +3146,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5115a7f7-c119-48c4-8469-1f089c707bde
+      id: 59214759-e84a-4986-8c0c-710ee1c56b83
       iscommand: false
       name: Is Unit42v2 Feed Present?
       type: condition
       version: -1
-    taskid: 5115a7f7-c119-48c4-8469-1f089c707bde
+    taskid: 59214759-e84a-4986-8c0c-710ee1c56b83
     timertriggers: []
     type: condition
     view: |-
@@ -3184,13 +3184,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 5a7ee95e-5cf4-45d8-825b-f2db2fad5694
+      id: abd105c6-f3c5-4aa7-818a-a2fa49f079c1
       iscommand: false
       name: Set score
       script: Set
       type: regular
       version: -1
-    taskid: 5a7ee95e-5cf4-45d8-825b-f2db2fad5694
+    taskid: abd105c6-f3c5-4aa7-818a-a2fa49f079c1
     timertriggers: []
     type: regular
     view: |-
@@ -3228,12 +3228,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e4058e81-813b-4ece-8016-86c627a871b6
+      id: 15210790-e0c3-4fcd-8356-33357cbdf689
       iscommand: false
       name: Check score is 3 or not?
       type: condition
       version: -1
-    taskid: e4058e81-813b-4ece-8016-86c627a871b6
+    taskid: 15210790-e0c3-4fcd-8356-33357cbdf689
     timertriggers: []
     type: condition
     view: |-
@@ -3264,13 +3264,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: e7cbf1b5-06e1-4b61-8416-331c63c3e16e
+      id: ebaaafe1-c0ce-47c0-81d9-10f1a8046f95
       iscommand: false
       name: Set Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: e7cbf1b5-06e1-4b61-8416-331c63c3e16e
+    taskid: ebaaafe1-c0ce-47c0-81d9-10f1a8046f95
     timertriggers: []
     type: regular
     view: |-
@@ -3301,13 +3301,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 356402d5-be41-450a-86e0-44183132ea1c
+      id: d576ecf5-b0b0-4acb-8ecb-ef4d8282438e
       iscommand: false
       name: Set Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: 356402d5-be41-450a-86e0-44183132ea1c
+    taskid: d576ecf5-b0b0-4acb-8ecb-ef4d8282438e
     timertriggers: []
     type: regular
     view: |-
@@ -3345,12 +3345,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5f2da4dc-2068-443a-8b9c-689134a4b7e5
+      id: 9d214cb2-fdfc-4be5-8991-2198ae565247
       iscommand: false
       name: Is Unit 42 Atom Present?
       type: condition
       version: -1
-    taskid: 5f2da4dc-2068-443a-8b9c-689134a4b7e5
+    taskid: 9d214cb2-fdfc-4be5-8991-2198ae565247
     timertriggers: []
     type: condition
     view: |-
@@ -3381,13 +3381,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 93cc871c-2125-460b-83e8-c35760b8decc
+      id: c1d037d4-2f9d-4d57-8f9e-206fb38e4f3a
       iscommand: false
       name: Set Mscore
       script: Set
       type: regular
       version: -1
-    taskid: 93cc871c-2125-460b-83e8-c35760b8decc
+    taskid: c1d037d4-2f9d-4d57-8f9e-206fb38e4f3a
     timertriggers: []
     type: regular
     view: |-
@@ -3425,13 +3425,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 5f75b49c-9869-404d-8e3d-f55825e8bdae
+      id: 2206a4ac-0554-4dd2-8aac-fb7bf3023de1
       iscommand: false
       name: Set Expiration Status
       script: Set
       type: regular
       version: -1
-    taskid: 5f75b49c-9869-404d-8e3d-f55825e8bdae
+    taskid: 2206a4ac-0554-4dd2-8aac-fb7bf3023de1
     timertriggers: []
     type: regular
     view: |-
@@ -3462,13 +3462,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 62e68222-d14c-4eaa-8d51-c227710d43de
+      id: 77817021-0864-47aa-8c8a-b03f044b683e
       iscommand: false
       name: Set Expiration Status
       script: Set
       type: regular
       version: -1
-    taskid: 62e68222-d14c-4eaa-8d51-c227710d43de
+    taskid: 77817021-0864-47aa-8c8a-b03f044b683e
     timertriggers: []
     type: regular
     view: |-
@@ -3499,13 +3499,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: d0c4341c-5a61-4ae5-8be4-829b831a8560
+      id: 2939982e-661e-4991-8424-9aef672f643b
       iscommand: false
       name: Set Mscore
       script: Set
       type: regular
       version: -1
-    taskid: d0c4341c-5a61-4ae5-8be4-829b831a8560
+    taskid: 2939982e-661e-4991-8424-9aef672f643b
     timertriggers: []
     type: regular
     view: |-
@@ -3543,13 +3543,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 4349fa93-e4d2-4a91-8426-f98ec4be591d
+      id: 3b999fc0-3f0c-49bb-83e8-7d513aa4e698
       iscommand: false
       name: Set Country Code
       script: Set
       type: regular
       version: -1
-    taskid: 4349fa93-e4d2-4a91-8426-f98ec4be591d
+    taskid: 3b999fc0-3f0c-49bb-83e8-7d513aa4e698
     timertriggers: []
     type: regular
     view: |-
@@ -3580,13 +3580,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 3882cd5f-1f82-4b05-86dc-414c3daab93d
+      id: 087c0513-04e0-48de-8e92-7f91df7879c8
       iscommand: false
       name: Set Country Code
       script: Set
       type: regular
       version: -1
-    taskid: 3882cd5f-1f82-4b05-86dc-414c3daab93d
+    taskid: 087c0513-04e0-48de-8e92-7f91df7879c8
     timertriggers: []
     type: regular
     view: |-
@@ -3624,12 +3624,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2dbb9e4d-5a3c-4bb0-87a7-8c76ec89e9bd
+      id: 72800698-c3a3-4324-8623-0ffc2425f79c
       iscommand: false
       name: Is Taxii ab144522-61b3-4643-83a2-3f8b920f22c8 Present?
       type: condition
       version: -1
-    taskid: 2dbb9e4d-5a3c-4bb0-87a7-8c76ec89e9bd
+    taskid: 72800698-c3a3-4324-8623-0ffc2425f79c
     timertriggers: []
     type: condition
     view: |-
@@ -3662,13 +3662,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 67f87d3c-935d-4d63-8eca-287fcbdb69ee
+      id: e5ceb792-7000-40de-8683-dd5d809c9509
       iscommand: false
       name: Set score
       script: Set
       type: regular
       version: -1
-    taskid: 67f87d3c-935d-4d63-8eca-287fcbdb69ee
+    taskid: e5ceb792-7000-40de-8683-dd5d809c9509
     timertriggers: []
     type: regular
     view: |-
@@ -3706,12 +3706,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8ac08e40-e135-4bac-87ec-a0967b1bc348
+      id: dd312d05-16df-405a-8c10-b5487aa36edc
       iscommand: false
       name: Check score is 3 or not?
       type: condition
       version: -1
-    taskid: 8ac08e40-e135-4bac-87ec-a0967b1bc348
+    taskid: dd312d05-16df-405a-8c10-b5487aa36edc
     timertriggers: []
     type: condition
     view: |-
@@ -3742,13 +3742,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 41fcc303-43d4-4121-885e-63bd90e6975d
+      id: 9341a03b-34c0-49ae-8e26-b14043c28ab3
       iscommand: false
       name: Set Source Brand
       script: Set
       type: regular
       version: -1
-    taskid: 41fcc303-43d4-4121-885e-63bd90e6975d
+    taskid: 9341a03b-34c0-49ae-8e26-b14043c28ab3
     timertriggers: []
     type: regular
     view: |-
@@ -3779,13 +3779,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: fc27a36d-da58-42ef-873c-5cac4fdfdcd0
+      id: 6cd8ca9c-9539-41da-861a-a68760ac8ce1
       iscommand: false
       name: Set Source Instance
       script: Set
       type: regular
       version: -1
-    taskid: fc27a36d-da58-42ef-873c-5cac4fdfdcd0
+    taskid: 6cd8ca9c-9539-41da-861a-a68760ac8ce1
     timertriggers: []
     type: regular
     view: |-
@@ -3818,13 +3818,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: d247a288-0f66-437f-8e00-50cdc0568020
+      id: 9bf46342-da35-4cb9-8cb7-87304851b037
       iscommand: false
       name: Remove Context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: d247a288-0f66-437f-8e00-50cdc0568020
+    taskid: 9bf46342-da35-4cb9-8cb7-87304851b037
     timertriggers: []
     type: regular
     view: |-
@@ -3850,12 +3850,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5ddde602-2750-4473-89cb-cc667197754f
+      id: e3c7da8e-0700-4a93-834b-5163d86c3255
       iscommand: false
       name: Date Format
       type: title
       version: -1
-    taskid: 5ddde602-2750-4473-89cb-cc667197754f
+    taskid: e3c7da8e-0700-4a93-834b-5163d86c3255
     timertriggers: []
     type: title
     view: |-
@@ -3880,12 +3880,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ef6d5885-5440-4ec5-8ad9-c46b940784a3
+      id: fdb4a5af-706a-4635-832b-5197a3da6b82
       iscommand: false
       name: Data Format Complete
       type: title
       version: -1
-    taskid: ef6d5885-5440-4ec5-8ad9-c46b940784a3
+    taskid: fdb4a5af-706a-4635-832b-5197a3da6b82
     timertriggers: []
     type: title
     view: |-
@@ -3913,12 +3913,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f6befd08-ad5f-4605-83d1-c9f793e78fb6
+      id: 90568597-ae62-4391-8969-1ceadb07d5a0
       iscommand: false
       name: Field Value
       type: title
       version: -1
-    taskid: f6befd08-ad5f-4605-83d1-c9f793e78fb6
+    taskid: 90568597-ae62-4391-8969-1ceadb07d5a0
     timertriggers: []
     type: title
     view: |-
