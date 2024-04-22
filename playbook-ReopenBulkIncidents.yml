@@ -37,11 +37,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e8a2e9f0-9ef7-412f-8908-2e6e5ce1b684
+      id: 0461f2ac-a944-480c-8ed3-a9294c16ad12
       iscommand: false
       name: ""
       version: -1
-    taskid: e8a2e9f0-9ef7-412f-8908-2e6e5ce1b684
+    taskid: 0461f2ac-a944-480c-8ed3-a9294c16ad12
     timertriggers: []
     type: start
     view: |-
@@ -71,13 +71,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP POST request
-      id: f9dc93d6-7589-4af1-827f-d9e31d736800
+      id: 9dd2e813-1950-4d03-8169-4161c1f39d59
       iscommand: true
       name: Get Incident data
       script: Core REST API|||demisto-api-post
       type: regular
       version: -1
-    taskid: f9dc93d6-7589-4af1-827f-d9e31d736800
+    taskid: 9dd2e813-1950-4d03-8169-4161c1f39d59
     timertriggers: []
     type: regular
     view: |-
@@ -99,12 +99,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4ba2929d-bc19-4718-802f-957fae204654
+      id: e0f364a5-a8df-4138-89d4-9ba29c380b27
       iscommand: false
       name: Untitled Task
       type: regular
       version: -1
-    taskid: 4ba2929d-bc19-4718-802f-957fae204654
+    taskid: e0f364a5-a8df-4138-89d4-9ba29c380b27
     timertriggers: []
     type: regular
     view: |-
