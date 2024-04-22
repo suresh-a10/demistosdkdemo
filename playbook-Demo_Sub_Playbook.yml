@@ -35,11 +35,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d23b5509-c52f-4961-8c07-cf077f07c527
+      id: de4a8d35-e8b4-4d3c-8ae4-09fe83c7217e
       iscommand: false
       name: ""
       version: -1
-    taskid: d23b5509-c52f-4961-8c07-cf077f07c527
+    taskid: de4a8d35-e8b4-4d3c-8ae4-09fe83c7217e
     timertriggers: []
     type: start
     view: |-
@@ -65,13 +65,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: e544fd00-3e91-46c3-83b7-815c675d5c5a
+      id: ed01cf4e-1e99-443a-8ded-d2062bd08cdd
       iscommand: false
       name: Print task
       script: Print
       type: regular
       version: -1
-    taskid: e544fd00-3e91-46c3-83b7-815c675d5c5a
+    taskid: ed01cf4e-1e99-443a-8ded-d2062bd08cdd
     timertriggers: []
     type: regular
     view: |-
@@ -94,13 +94,13 @@ tasks:
     task:
       brand: ""
       description: Pretty-print the contents of the playbook context
-      id: 8f02cc26-6ed2-4cc5-8e6f-e93329c346d0
+      id: 3db606f0-dcdf-4ae1-855f-5fe41060d0f5
       iscommand: false
       name: Print
       script: PrintContext
       type: regular
       version: -1
-    taskid: 8f02cc26-6ed2-4cc5-8e6f-e93329c346d0
+    taskid: 3db606f0-dcdf-4ae1-855f-5fe41060d0f5
     timertriggers: []
     type: regular
     view: |-
@@ -133,13 +133,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 529fb728-5dc5-4b9b-8a89-426609e62732
+      id: 7d0b4a85-e6ab-44ab-8d95-0b11025cf0fd
       iscommand: false
       name: Demo Check List
       playbookId: 169e7e6a-9d54-467c-84ea-a705c1212888
       type: playbook
       version: -1
-    taskid: 529fb728-5dc5-4b9b-8a89-426609e62732
+    taskid: 7d0b4a85-e6ab-44ab-8d95-0b11025cf0fd
     timertriggers: []
     type: playbook
     view: |-
