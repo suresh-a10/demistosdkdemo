@@ -76,6 +76,30 @@
 		"indicatorfield": null,
 		"integration": [
 			{
+				"category": "Utilities",
+				"commands": [
+					{
+						"description": "Lists the example alerts as it would be fetched from the API.",
+						"name": "helloworld-alert-list"
+					},
+					{
+						"description": "Hello command - prints hello to anyone.",
+						"name": "helloworld-say-hello"
+					},
+					{
+						"description": "Return IP information and reputation.",
+						"name": "ip"
+					},
+					{
+						"description": "Example of creating a new item in the API.",
+						"name": "helloworld-alert-note-create"
+					}
+				],
+				"description": "This is the Hello World integration for getting started.",
+				"id": "HelloWorld",
+				"name": "HelloWorld (Community Contribution)"
+			},
+			{
 				"category": "Data Enrichment \u0026 Threat Intelligence",
 				"commands": [
 					{
@@ -86,30 +110,6 @@
 				"description": "This is the Feed Hello World integration for getting started with your feed integration.",
 				"id": "HelloWorld Feed",
 				"name": "HelloWorld Feed (Community Contribution)"
-			},
-			{
-				"category": "Utilities",
-				"commands": [
-					{
-						"description": "Lists the example alerts as it would be fetched from the API.",
-						"name": "helloworld-alert-list"
-					},
-					{
-						"description": "Return IP information and reputation.",
-						"name": "ip"
-					},
-					{
-						"description": "Hello command - prints hello to anyone.",
-						"name": "helloworld-say-hello"
-					},
-					{
-						"description": "Example of creating a new item in the API.",
-						"name": "helloworld-alert-note-create"
-					}
-				],
-				"description": "This is the Hello World integration for getting started.",
-				"id": "HelloWorld",
-				"name": "HelloWorld (Community Contribution)"
 			}
 		],
 		"layoutscontainer": [
@@ -134,42 +134,42 @@
 		"widget": null,
 		"wizard": null
 	},
-	"currentVersion": "3.0.8",
+	"currentVersion": "3.0.7",
 	"definitionId": "",
 	"dependencies": {
 		"Base": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "1.33.37",
+			"minVersion": "1.33.28",
 			"name": "Base"
 		},
 		"CommonPlaybooks": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "2.6.16",
+			"minVersion": "2.6.13",
 			"name": "Common Playbooks"
 		},
 		"CommonScripts": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "1.14.8",
+			"minVersion": "1.13.38",
 			"name": "Common Scripts"
 		},
 		"CommonTypes": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": false,
-			"minVersion": "3.4.4",
+			"minVersion": "3.4.1",
 			"name": "Common Types"
 		}
 	},
 	"deprecated": false,
 	"description": "This is the Hello World integration for getting started.",
 	"disabledMonthly": false,
-	"downloads": 22967,
+	"downloads": 22585,
 	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
 	"fromServerVersion": "5.0.0",
 	"general": [
@@ -188,7 +188,7 @@
 			"name": "HelloWorld Feed"
 		}
 	],
-	"itemVersion": "3.0.8",
+	"itemVersion": "3.0.7",
 	"keywords": [],
 	"legacy": true,
 	"name": "HelloWorld",
@@ -213,13 +213,13 @@
 		"url": "https://www.paloaltonetworks.com/cortex"
 	},
 	"tags": [
-		"TIM",
-		"Getting Started"
+		"Getting Started",
+		"TIM"
 	],
 	"toServerVersion": "",
 	"updated": "2024-03-06T11:15:53Z",
 	"useCases": [],
 	"version": -1,
-	"versionInfo": "871927",
+	"versionInfo": "828628",
 	"videos": []
 }
