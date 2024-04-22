@@ -1787,8 +1787,6 @@ tasks:
       - "66"
     note: false
     quietmode: 0
-    results:
-    - XDRSyncScriptTaskID
     scriptarguments:
       incident_id:
         complex:
