@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 97869422-8b7f-4878-812f-0125e9766151
+      id: 6cb7d07d-371d-41ee-8a3b-be617b22ebaf
       iscommand: false
       name: ""
       version: -1
-    taskid: 97869422-8b7f-4878-812f-0125e9766151
+    taskid: 6cb7d07d-371d-41ee-8a3b-be617b22ebaf
     timertriggers: []
     type: start
     view: |-
@@ -95,12 +95,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 340d602b-8a0e-4d07-8068-54ece9bbf21e
+      id: e3141923-a7e9-4be3-8f6e-806b9d62936c
       iscommand: false
       name: upload the file
       type: collection
       version: -1
-    taskid: 340d602b-8a0e-4d07-8068-54ece9bbf21e
+    taskid: e3141923-a7e9-4be3-8f6e-806b9d62936c
     timertriggers: []
     type: collection
     view: |-
@@ -128,13 +128,13 @@ tasks:
     task:
       brand: ""
       description: Zip a file and upload to war room
-      id: ae94c324-94c5-4004-8d8c-4f3f80f515b7
+      id: d52b90f8-eca1-4aed-8838-f36acbc064e4
       iscommand: false
       name: zip the file
       script: ZipFile
       type: regular
       version: -1
-    taskid: ae94c324-94c5-4004-8d8c-4f3f80f515b7
+    taskid: d52b90f8-eca1-4aed-8838-f36acbc064e4
     timertriggers: []
     type: regular
     view: |-
