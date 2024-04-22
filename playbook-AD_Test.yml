@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0ddc4a0d-36d0-4c9f-8848-c0ed0ef8eeaa
+      id: f81d1320-b49c-400d-83a7-3a99ba9ec9a1
       iscommand: false
       name: ""
       version: -1
-    taskid: 0ddc4a0d-36d0-4c9f-8848-c0ed0ef8eeaa
+    taskid: f81d1320-b49c-400d-83a7-3a99ba9ec9a1
     timertriggers: []
     type: start
     view: |-
@@ -82,13 +82,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0b8a4ce1-d8fe-43be-8a78-85bd8228956e
+      id: 27af004e-a49b-4e18-8046-c591b92173af
       iscommand: false
       name: AD Test ad-search-subsequent
       playbookId: 0fb4c595-2e0d-4446-857c-0c84c449e24e
       type: playbook
       version: -1
-    taskid: 0b8a4ce1-d8fe-43be-8a78-85bd8228956e
+    taskid: 27af004e-a49b-4e18-8046-c591b92173af
     timertriggers: []
     type: playbook
     view: |-
@@ -113,12 +113,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4d6e3e66-6769-40d0-8908-0d203100d350
+      id: 4eaf32eb-2fef-48ee-8316-c7aef5e8d9dc
       iscommand: false
       name: Push to Exabeam
       type: title
       version: -1
-    taskid: 4d6e3e66-6769-40d0-8908-0d203100d350
+    taskid: 4eaf32eb-2fef-48ee-8316-c7aef5e8d9dc
     timertriggers:
     - action: start
       fieldname: newsla
@@ -152,13 +152,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 794e9ed3-4c37-426d-8c91-2b5fcea911cc
+      id: 9a75d5bd-3988-4368-83e0-bc81376cb070
       iscommand: false
       name: Set - NextSearch for loop
       script: Set
       type: regular
       version: -1
-    taskid: 794e9ed3-4c37-426d-8c91-2b5fcea911cc
+    taskid: 9a75d5bd-3988-4368-83e0-bc81376cb070
     timertriggers: []
     type: regular
     view: |-
@@ -183,12 +183,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 494e8d2c-c878-480a-83c8-8a4726af4fe1
+      id: dbe91752-9391-4ddb-8164-be8fa2e4c422
       iscommand: false
       name: Get AD informations
       type: title
       version: -1
-    taskid: 494e8d2c-c878-480a-83c8-8a4726af4fe1
+    taskid: dbe91752-9391-4ddb-8164-be8fa2e4c422
     timertriggers:
     - action: pause
       fieldname: newsla
@@ -228,13 +228,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 06845c68-56df-4fe7-8a13-7c6cb2f31958
+      id: 7808bec5-3591-43fb-8bec-d50953905ef6
       iscommand: false
       name: DeleteContext - SearchPageCookie
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 06845c68-56df-4fe7-8a13-7c6cb2f31958
+    taskid: 7808bec5-3591-43fb-8bec-d50953905ef6
     timertriggers: []
     type: regular
     view: |-
@@ -272,13 +272,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 0c71e548-83f4-4be5-8e36-8b87de98be22
+      id: 059197a3-8d5e-4846-84a8-e84110ecb7d1
       iscommand: false
       name: DeleteContext - NextSearch
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 0c71e548-83f4-4be5-8e36-8b87de98be22
+    taskid: 059197a3-8d5e-4846-84a8-e84110ecb7d1
     timertriggers: []
     type: regular
     view: |-
@@ -308,13 +308,13 @@ tasks:
     task:
       brand: ""
       description: Export given array to csv file
-      id: ac8fc1ff-500a-4b3e-8444-2cbd7c75615b
+      id: 2395289e-44ec-46f0-8b8b-184af7526766
       iscommand: false
       name: ExportToCSV
       script: ExportToCSV
       type: regular
       version: -1
-    taskid: ac8fc1ff-500a-4b3e-8444-2cbd7c75615b
+    taskid: 2395289e-44ec-46f0-8b8b-184af7526766
     timertriggers: []
     type: regular
     view: |-
