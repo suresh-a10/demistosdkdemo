@@ -32,11 +32,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e134959a-609b-45df-857a-9f5be6f5d0d9
+      id: c1aba3ab-10fc-455e-8c5a-7b496713de2e
       iscommand: false
       name: ""
       version: -1
-    taskid: e134959a-609b-45df-857a-9f5be6f5d0d9
+    taskid: c1aba3ab-10fc-455e-8c5a-7b496713de2e
     timertriggers: []
     type: start
     view: |-
@@ -58,12 +58,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9fbb39b2-1ee9-4dd5-8151-3c5a03a3ca7a
+      id: f0ecb72d-7a63-4881-8e4d-853de67329ff
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 9fbb39b2-1ee9-4dd5-8151-3c5a03a3ca7a
+    taskid: f0ecb72d-7a63-4881-8e4d-853de67329ff
     timertriggers: []
     type: title
     view: |-
@@ -110,13 +110,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e8cf5054-6411-4c87-848c-06b069f55ca2
+      id: 92e6ef0f-1618-46e3-863a-79e9ece8f1c4
       iscommand: false
       name: Get Automation API Endpoints
       script: 89bc4c87-dedf-435a-87b1-3f5c26e0348a
       type: regular
       version: -1
-    taskid: e8cf5054-6411-4c87-848c-06b069f55ca2
+    taskid: 92e6ef0f-1618-46e3-863a-79e9ece8f1c4
     timertriggers: []
     type: regular
     view: |-
@@ -163,13 +163,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 604e5649-f711-4ba7-8ac9-2c22098a9a46
+      id: 8246fdbb-6c17-48fd-869f-c85c25148ea8
       iscommand: false
       name: Get All API Endpoints in Playbooks
       script: 7c3f7430-5014-4354-8ab7-02bac4ebfe8f
       type: regular
       version: -1
-    taskid: 604e5649-f711-4ba7-8ac9-2c22098a9a46
+    taskid: 8246fdbb-6c17-48fd-869f-c85c25148ea8
     timertriggers: []
     type: regular
     view: |-
@@ -223,12 +223,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3a6d05b8-b473-486d-89f1-8bef8f2c62cd
+      id: 1d775c7e-7e23-4fe2-834b-028766208f90
       iscommand: false
       name: Check the Demisto Rest API Integration ?
       type: condition
       version: -1
-    taskid: 3a6d05b8-b473-486d-89f1-8bef8f2c62cd
+    taskid: 1d775c7e-7e23-4fe2-834b-028766208f90
     timertriggers: []
     type: condition
     view: |-
