@@ -32,11 +32,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: bab2faae-5d35-4e9c-8dc5-b5cfcaa5a505
+      id: 02535db9-056d-46a7-80ce-8c058dd66931
       iscommand: false
       name: ""
       version: -1
-    taskid: bab2faae-5d35-4e9c-8dc5-b5cfcaa5a505
+    taskid: 02535db9-056d-46a7-80ce-8c058dd66931
     timertriggers: []
     type: start
     view: |-
@@ -86,13 +86,13 @@ tasks:
         less-busy-user: The less busy analyst will be picked to be the incident owner.
         online: The analyst is picked randomly from all online analysts, according to the provided roles (if no roles provided, will fetch all users).
         current: The user that executed the command
-      id: 8b183052-500d-4c8c-8d0c-81aa083da6b7
+      id: d6a6617b-f974-45b5-8173-098b9ac258fe
       iscommand: false
       name: Assign analyst to shiftA
       script: AssignAnalystToIncident
       type: regular
       version: -1
-    taskid: 8b183052-500d-4c8c-8d0c-81aa083da6b7
+    taskid: d6a6617b-f974-45b5-8173-098b9ac258fe
     timertriggers: []
     type: regular
     view: |-
@@ -142,13 +142,13 @@ tasks:
         less-busy-user: The less busy analyst will be picked to be the incident owner.
         online: The analyst is picked randomly from all online analysts, according to the provided roles (if no roles provided, will fetch all users).
         current: The user that executed the command
-      id: b873bb22-2856-4ca5-89fe-870890b116cf
+      id: 464ceebd-8d07-4383-87be-519b6c0b1dc0
       iscommand: false
       name: Assign analyst to shiftB
       script: AssignAnalystToIncident
       type: regular
       version: -1
-    taskid: b873bb22-2856-4ca5-89fe-870890b116cf
+    taskid: 464ceebd-8d07-4383-87be-519b6c0b1dc0
     timertriggers: []
     type: regular
     view: |-
@@ -178,13 +178,13 @@ tasks:
       brand: ""
       description: |
         Retrieves the current date and time.
-      id: 739e69ab-317b-4e77-8f67-53922dd7ca77
+      id: 7dd4a5a0-5644-4d88-8653-96fcb48165ff
       iscommand: false
       name: PrintTime
       script: GetTime
       type: regular
       version: -1
-    taskid: 739e69ab-317b-4e77-8f67-53922dd7ca77
+    taskid: 7dd4a5a0-5644-4d88-8653-96fcb48165ff
     timertriggers: []
     type: regular
     view: |-
@@ -225,13 +225,13 @@ tasks:
     task:
       brand: ""
       description: Check if a given value is true. Will return 'no' otherwise
-      id: 06011009-e7f9-4641-8928-97037693bfd4
+      id: ddb4156a-33fd-423b-809e-adfd5dbec34b
       iscommand: false
       name: If time is in Shift A - 6am to 2pm
       script: IsTrue
       type: condition
       version: -1
-    taskid: 06011009-e7f9-4641-8928-97037693bfd4
+    taskid: ddb4156a-33fd-423b-809e-adfd5dbec34b
     timertriggers: []
     type: condition
     view: |-
@@ -272,13 +272,13 @@ tasks:
     task:
       brand: ""
       description: Check if a given value is true. Will return 'no' otherwise
-      id: 6eb98e8a-6543-4156-8fb1-edefe24e601a
+      id: 826d4f0c-a251-4443-80b6-be0b834be3d2
       iscommand: false
       name: Check if in Shift B
       script: IsTrue
       type: condition
       version: -1
-    taskid: 6eb98e8a-6543-4156-8fb1-edefe24e601a
+    taskid: 826d4f0c-a251-4443-80b6-be0b834be3d2
     timertriggers: []
     type: condition
     view: |-
@@ -328,13 +328,13 @@ tasks:
         less-busy-user: The less busy analyst will be picked to be the incident owner.
         online: The analyst is picked randomly from all online analysts, according to the provided roles (if no roles provided, will fetch all users).
         current: The user that executed the command
-      id: 07a6b022-07f5-482e-8bfc-88f93fe3e1d6
+      id: eaa3f772-9f0c-418d-8e22-321a2252c760
       iscommand: false
       name: Assign analyst to shiftC
       script: AssignAnalystToIncident
       type: regular
       version: -1
-    taskid: 07a6b022-07f5-482e-8bfc-88f93fe3e1d6
+    taskid: eaa3f772-9f0c-418d-8e22-321a2252c760
     timertriggers: []
     type: regular
     view: |-
@@ -356,12 +356,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ec507aea-2883-4c72-8a83-19715a139d53
+      id: b1c1657b-28e5-4299-855f-56f04c9ea68e
       iscommand: false
       name: Completed
       type: title
       version: -1
-    taskid: ec507aea-2883-4c72-8a83-19715a139d53
+    taskid: b1c1657b-28e5-4299-855f-56f04c9ea68e
     timertriggers: []
     type: title
     view: |-
