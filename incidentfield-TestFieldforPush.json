@@ -2,7 +2,7 @@
 	"aliasTo": "",
 	"aliases": null,
 	"associatedToAll": true,
-	"associatedTypes": null,
+	"associatedTypes": [],
 	"autoCompleteTags": null,
 	"breachScript": "",
 	"cacheVersn": 0,
@@ -35,10 +35,10 @@
 	"propagationLabels": [
 		"all"
 	],
-	"required": false,
+	"required": true,
 	"runScriptAfterUpdate": false,
 	"script": "",
-	"selectValues": null,
+	"selectValues": [],
 	"sla": 0,
 	"system": false,
 	"systemAssociatedTypes": null,
