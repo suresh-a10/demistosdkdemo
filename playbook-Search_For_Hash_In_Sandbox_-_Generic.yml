@@ -2,7 +2,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.5.0
-    itemVersion: 2.6.26
+    itemVersion: 2.6.24
     packID: CommonPlaybooks
     packName: Common Playbooks
     packPropagationLabels:
@@ -87,8 +87,6 @@ tasks:
       - "6"
     note: false
     quietmode: 0
-    results:
-    - brandInstances
     scriptarguments:
       brandname:
         simple: CrowdStrike Falcon X
@@ -128,8 +126,6 @@ tasks:
       - "23"
     note: false
     quietmode: 0
-    results:
-    - brandInstances
     scriptarguments:
       brandname:
         simple: WildFire-v2
@@ -601,8 +597,6 @@ tasks:
       - "27"
     note: false
     quietmode: 0
-    results:
-    - brandInstances
     scriptarguments:
       brandname:
         simple: JoeSecurityV2
