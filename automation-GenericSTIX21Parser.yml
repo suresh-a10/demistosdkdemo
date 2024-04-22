@@ -31,7 +31,7 @@ mainengineinfo: {}
 name: GenericSTIX21Parser
 outputs:
 - contextPath: STIX21Parsed
-pswd: '{TOMMED}TKsOylPmeM/8rl0XFdONFh1p6HxFdfaOCO2WLMihH6F5fWZrvIeowTG+JzTgJXWxQ9mBmleEOnEUwVJf2fTMdJH1Qp+lDXOJFGbvR5eDVrOOYBu/CXwlzNWEVy+f/qNfcqo+eHNx+Tb6NCamEV/NkRbBaSCfoBMBobX8LcZv2GHAR9sMKjUcpoURgZBG5U1RZCqeGBD4C5UK/A8i1aXmTDmSqKOBglW/6fCh9l+6ZfNAm+sZZf6Cuu0Xq8iNeMz+'
+pswd: '{TOMMED}9155Dvtco+iBdkBwwA6vBc6FqcOU070F6a9pfbH725HQes+LokyPsyjN5AHxaXIFm/VuZ+vLLSMGuIHrR8h1dyRuRaZYWSDvBe2KpL7s8uEolcoUt3LPL3ETiL9uqORAZcaFYWZ9YuncRi5BGfPrShdmAqebRdjk+IVyaVdc2Z27maUwtdqaaJcSwmWGc6J3ab+XwZetBO7uk5R1PwLSXe95Mzt30B/tkK+4IS1opmvY1pZV2gSjq2Ke1RxyUotY'
 runas: DBotWeakRole
 runonce: false
 script: |
