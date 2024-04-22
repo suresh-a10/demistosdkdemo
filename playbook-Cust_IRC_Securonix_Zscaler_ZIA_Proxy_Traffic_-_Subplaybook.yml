@@ -66,11 +66,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 5b59117e-1613-4419-8bf0-1dfa4baa3d1b
+      id: 6176fa87-3689-43f7-81da-3f85b09afc7d
       iscommand: false
       name: ""
       version: -1
-    taskid: 5b59117e-1613-4419-8bf0-1dfa4baa3d1b
+    taskid: 6176fa87-3689-43f7-81da-3f85b09afc7d
     timertriggers: []
     type: start
     view: |-
@@ -107,13 +107,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e2e2b309-d567-4f52-8c43-0c54cdda07bb
+      id: 981ed301-bb84-4e32-8c0a-0d52b6920800
       iscommand: false
       name: Zscaler Patient 0 Compliance check
       playbookName: Zscaler Patient 0 Compliance check
       type: playbook
       version: -1
-    taskid: e2e2b309-d567-4f52-8c43-0c54cdda07bb
+    taskid: 981ed301-bb84-4e32-8c0a-0d52b6920800
     timertriggers: []
     type: playbook
     view: |-
@@ -149,13 +149,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e2d8cc22-86a1-4423-8106-7ede67435e5d
+      id: 08125552-4378-4c05-861a-9cac88778e10
       iscommand: false
       name: Zscaler_VIP_User_subplaybook
       playbookName: Zscaler_VIP_User_subplaybook
       type: playbook
       version: -1
-    taskid: e2d8cc22-86a1-4423-8106-7ede67435e5d
+    taskid: 08125552-4378-4c05-861a-9cac88778e10
     timertriggers: []
     type: playbook
     view: |-
@@ -209,12 +209,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0521a24b-8502-44e7-8cd5-6811b62860f9
+      id: 6c2a024b-f643-4e81-898e-9c7594141be8
       iscommand: false
       name: Check if the Host is a Server
       type: condition
       version: -1
-    taskid: 0521a24b-8502-44e7-8cd5-6811b62860f9
+    taskid: 6c2a024b-f643-4e81-898e-9c7594141be8
     timertriggers: []
     type: condition
     view: |-
@@ -254,12 +254,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1c67600b-1e1f-49d7-88de-784fe190ceab
+      id: be03f676-3ea0-4f79-8da4-45d6865c6807
       iscommand: false
       name: Check if Host is Non Compliant
       type: condition
       version: -1
-    taskid: 1c67600b-1e1f-49d7-88de-784fe190ceab
+    taskid: be03f676-3ea0-4f79-8da4-45d6865c6807
     timertriggers: []
     type: condition
     view: |-
@@ -295,13 +295,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e7535067-672c-43b0-8c2f-3c00ce499c31
+      id: 9e2edd59-e9d4-4408-8263-80d97baf113e
       iscommand: false
       name: Zscaler_VIP_User_subplaybook
       playbookName: Zscaler_VIP_User_subplaybook
       type: playbook
       version: -1
-    taskid: e7535067-672c-43b0-8c2f-3c00ce499c31
+    taskid: 9e2edd59-e9d4-4408-8263-80d97baf113e
     timertriggers: []
     type: playbook
     view: |-
@@ -365,13 +365,13 @@ tasks:
     task:
       brand: EWS Mail Sender
       description: Sends an email using EWS.
-      id: b98a2d15-632e-4dd8-8e61-b4061c54b88a
+      id: 1fdc70b8-d3c9-414b-8b92-4f82ba2b1951
       iscommand: true
       name: Send email notification to IRC leads
       script: EWS Mail Sender|||send-mail
       type: regular
       version: -1
-    taskid: b98a2d15-632e-4dd8-8e61-b4061c54b88a
+    taskid: 1fdc70b8-d3c9-414b-8b92-4f82ba2b1951
     timertriggers: []
     type: regular
     view: |-
@@ -418,12 +418,12 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 435a4e24-cf43-437f-8e34-c66204d5d6e5
+      id: b33773f6-94fe-4882-8ad0-620bdbfead99
       iscommand: false
       name: Check http_status_code
       type: condition
       version: -1
-    taskid: 435a4e24-cf43-437f-8e34-c66204d5d6e5
+    taskid: b33773f6-94fe-4882-8ad0-620bdbfead99
     timertriggers: []
     type: condition
     view: |-
@@ -452,13 +452,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: df3864d5-2279-4048-81ef-dbb8e0b5c8d9
+      id: 8ad9e322-ffa1-4a09-8e87-4e3c60f10bd4
       iscommand: true
       name: Change the priority of the incident to P2(modified to default P3)
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: df3864d5-2279-4048-81ef-dbb8e0b5c8d9
+    taskid: 8ad9e322-ffa1-4a09-8e87-4e3c60f10bd4
     timertriggers: []
     type: regular
     view: |-
@@ -493,14 +493,14 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: f50a8ff6-527d-4e61-8547-e866aee6df49
+      id: 59df4942-5975-408b-8191-f9acab8a437d
       iscommand: false
       name: Using hostname and username, check for any offence reported in last 48hr
         on SIEM
       script: SearchIncidentsV2
       type: regular
       version: -1
-    taskid: f50a8ff6-527d-4e61-8547-e866aee6df49
+    taskid: 59df4942-5975-408b-8191-f9acab8a437d
     timertriggers: []
     type: regular
     view: |-
@@ -533,14 +533,14 @@ tasks:
       description: |-
         This is a generic playbook which can be used across all other playbooks where the requirement is:
         * Querying CS with hostname to identify associated detections and incidents within the mentioned timeframe.
-      id: 28235cae-492b-46ab-8ed9-799472e89102
+      id: f53997bf-2f55-4e1e-869b-afdb1c500f44
       iscommand: false
       name: Cust_IRC_Generic_Determine CS detections and incidents for a given hostname
       playbookName: Wipro_IRC_Generic_Determine CS detections and incidents for a
         given hostname
       type: playbook
       version: -1
-    taskid: 28235cae-492b-46ab-8ed9-799472e89102
+    taskid: f53997bf-2f55-4e1e-869b-afdb1c500f44
     timertriggers: []
     type: playbook
     view: |-
@@ -573,13 +573,13 @@ tasks:
       description: |-
         This is a generic playbook which can be used across all other playbooks where the requirement is:
         * Querying CS with hostname and IOC to identify the processes involved in the initiation of the connection
-      id: 33b8aaf4-bf68-4dca-85af-f3c6037ef692
+      id: 78c9f6d3-e531-45d8-8022-3c1e7476208e
       iscommand: false
       name: Cust_IRC_Generic_Find processes on CS using hostname and ioc
       playbookName: Wipro_IRC_Generic_Find processes on CS using hostname and ioc
       type: playbook
       version: -1
-    taskid: 33b8aaf4-bf68-4dca-85af-f3c6037ef692
+    taskid: 78c9f6d3-e531-45d8-8022-3c1e7476208e
     timertriggers: []
     type: playbook
     view: |-
@@ -612,13 +612,13 @@ tasks:
       description: |-
         This is a generic playbook which can be used across all other playbooks where the requirement is:
         * Querying CS with hostname and IOC to identify the processes involved in the initiation of the connection
-      id: 882e0f11-c218-4a77-8f9c-7d50add192a9
+      id: 34051c28-a193-4ccc-8df6-de0064faf496
       iscommand: false
       name: Cust_IRC_Generic_Find processes on CS using hostname and ioc
       playbookName: Wipro_IRC_Generic_Find processes on CS using hostname and ioc
       type: playbook
       version: -1
-    taskid: 882e0f11-c218-4a77-8f9c-7d50add192a9
+    taskid: 34051c28-a193-4ccc-8df6-de0064faf496
     timertriggers: []
     type: playbook
     view: |-
@@ -688,12 +688,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 94ee197a-e6c8-49e0-8d85-2b4c70c5966f
+      id: 02d9de03-d0a4-47b5-8df1-558350ac2a48
       iscommand: false
       name: Check if Process involved is a browser
       type: condition
       version: -1
-    taskid: 94ee197a-e6c8-49e0-8d85-2b4c70c5966f
+    taskid: 02d9de03-d0a4-47b5-8df1-558350ac2a48
     timertriggers: []
     type: condition
     view: |-
@@ -722,13 +722,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: bfa8444f-ee7d-4525-8ad8-a655b9a3724b
+      id: efb5593a-0aae-4ab4-8477-566ee6207ceb
       iscommand: true
       name: set P3 priority of the incident
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: bfa8444f-ee7d-4525-8ad8-a655b9a3724b
+    taskid: efb5593a-0aae-4ab4-8477-566ee6207ceb
     timertriggers: []
     type: regular
     view: |-
@@ -774,12 +774,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9ba24842-a51a-40b6-8514-2d6fddeb3af9
+      id: cacb948c-0eea-4986-8023-292e17b6f5ac
       iscommand: false
       name: Check if CS has brought any result
       type: condition
       version: -1
-    taskid: 9ba24842-a51a-40b6-8514-2d6fddeb3af9
+    taskid: cacb948c-0eea-4986-8023-292e17b6f5ac
     timertriggers: []
     type: condition
     view: |-
@@ -831,12 +831,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: dbfda1a9-50c0-4f13-85e5-d925964ca2d3
+      id: ab8df041-7867-42c5-80e5-0217aaec8dc8
       iscommand: false
       name: Check if any results found
       type: condition
       version: -1
-    taskid: dbfda1a9-50c0-4f13-85e5-d925964ca2d3
+    taskid: ab8df041-7867-42c5-80e5-0217aaec8dc8
     timertriggers: []
     type: condition
     view: |-
@@ -901,13 +901,13 @@ tasks:
     task:
       brand: EWS Mail Sender
       description: Sends an email using EWS.
-      id: da05d903-7dab-4a1f-8ce4-48afe4b35e4c
+      id: d206b59a-f010-4e78-82e6-97d8f24ca2bd
       iscommand: true
       name: Send email notification to IRC leads
       script: EWS Mail Sender|||send-mail
       type: regular
       version: -1
-    taskid: da05d903-7dab-4a1f-8ce4-48afe4b35e4c
+    taskid: d206b59a-f010-4e78-82e6-97d8f24ca2bd
     timertriggers: []
     type: regular
     view: |-
@@ -954,12 +954,12 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 1cb20885-10b9-4da1-8765-b8f3983ffe8e
+      id: 2c3cc547-48d2-4592-823d-f24ac93e9767
       iscommand: false
       name: Check if the user is VIP
       type: condition
       version: -1
-    taskid: 1cb20885-10b9-4da1-8765-b8f3983ffe8e
+    taskid: 2c3cc547-48d2-4592-823d-f24ac93e9767
     timertriggers: []
     type: condition
     view: |-
@@ -1006,12 +1006,12 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: f28e5535-0cdb-45ab-8c9a-3c3ef1a051d3
+      id: 77d7a4d8-71e4-46c4-8f33-3eed706dac81
       iscommand: false
       name: Check if the user is VIP
       type: condition
       version: -1
-    taskid: f28e5535-0cdb-45ab-8c9a-3c3ef1a051d3
+    taskid: 77d7a4d8-71e4-46c4-8f33-3eed706dac81
     timertriggers: []
     type: condition
     view: |-
@@ -1045,13 +1045,13 @@ tasks:
     task:
       brand: Anomali ThreatStream v2
       description: Checks the reputation of the given URL.
-      id: 49f00db4-c6e7-458e-8b9c-31d9d265bb0a
+      id: 0f351985-3a6e-4cc8-8850-c064d2a7ef59
       iscommand: true
       name: Query Anomali for URL Reputation
       script: Anomali ThreatStream v2|||url
       type: regular
       version: -1
-    taskid: 49f00db4-c6e7-458e-8b9c-31d9d265bb0a
+    taskid: 0f351985-3a6e-4cc8-8850-c064d2a7ef59
     timertriggers: []
     type: regular
     view: |-
@@ -1088,12 +1088,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c3c9eef1-185b-44db-8fec-c48626c3cbc0
+      id: b0e5afcd-1587-4dcd-8f2b-539e13e0c6d4
       iscommand: false
       name: Check if Anomaly has brought any results
       type: condition
       version: -1
-    taskid: c3c9eef1-185b-44db-8fec-c48626c3cbc0
+    taskid: b0e5afcd-1587-4dcd-8f2b-539e13e0c6d4
     timertriggers: []
     type: condition
     view: |-
@@ -1133,12 +1133,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 526c6f9a-9f20-41c1-876b-9c19dcd6f2ad
+      id: b9f8d7f4-31a3-48b8-82a1-8d6ef1c7c7eb
       iscommand: false
       name: Check if the score is greater than 70
       type: condition
       version: -1
-    taskid: 526c6f9a-9f20-41c1-876b-9c19dcd6f2ad
+    taskid: b9f8d7f4-31a3-48b8-82a1-8d6ef1c7c7eb
     timertriggers: []
     type: condition
     view: |-
@@ -1184,12 +1184,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4167d8c2-7cf3-4c35-88dc-d3c901e9bba4
+      id: 13a56e56-2aea-47f6-8235-2f0750cc2d29
       iscommand: false
       name: Check if CS has brought any result
       type: condition
       version: -1
-    taskid: 4167d8c2-7cf3-4c35-88dc-d3c901e9bba4
+    taskid: 13a56e56-2aea-47f6-8235-2f0750cc2d29
     timertriggers: []
     type: condition
     view: |-
@@ -1259,12 +1259,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c638259f-8075-49ce-8c65-e2bfad58bb33
+      id: d4444224-6655-4eaf-8c31-7af7340dcf7d
       iscommand: false
       name: Check if Process involved is a browser
       type: condition
       version: -1
-    taskid: c638259f-8075-49ce-8c65-e2bfad58bb33
+    taskid: d4444224-6655-4eaf-8c31-7af7340dcf7d
     timertriggers: []
     type: condition
     view: |-
@@ -1293,13 +1293,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 131e0710-c984-4488-8cbb-347b9a70529f
+      id: cb3a48dd-791b-4675-8394-6d43523350c7
       iscommand: true
       name: set P3 priority of the incident
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 131e0710-c984-4488-8cbb-347b9a70529f
+    taskid: cb3a48dd-791b-4675-8394-6d43523350c7
     timertriggers: []
     type: regular
     view: |-
@@ -1329,13 +1329,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d2cc8954-b6d3-40ed-85ba-5874af4c867f
+      id: 1afee8f8-2e20-4ad2-8dd1-5a463ff58ea4
       iscommand: false
       name: Cust_IP Enrichment
       playbookName: Wipro_IP Enrichment
       type: playbook
       version: -1
-    taskid: d2cc8954-b6d3-40ed-85ba-5874af4c867f
+    taskid: 1afee8f8-2e20-4ad2-8dd1-5a463ff58ea4
     timertriggers: []
     type: playbook
     view: |-
@@ -1366,13 +1366,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 776b84eb-8b3b-4e8f-8cfd-fde104ddd2c6
+      id: 5ef790a2-5d67-439a-8d9f-9880b7b4f32f
       iscommand: false
       name: Cust_IP Enrichment
       playbookName: Wipro_IP Enrichment
       type: playbook
       version: -1
-    taskid: 776b84eb-8b3b-4e8f-8cfd-fde104ddd2c6
+    taskid: 5ef790a2-5d67-439a-8d9f-9880b7b4f32f
     timertriggers: []
     type: playbook
     view: |-
@@ -1394,12 +1394,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3a0e67fa-1f5e-4d77-8753-032d7096d362
+      id: 65fcceeb-6f48-4cea-830d-ccf2a3109e0a
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 3a0e67fa-1f5e-4d77-8753-032d7096d362
+    taskid: 65fcceeb-6f48-4cea-830d-ccf2a3109e0a
     timertriggers: []
     type: title
     view: |-
@@ -1421,12 +1421,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 34d8abb8-c595-4095-81d0-09712c725c2a
+      id: 1e5adcd7-6d91-4e7c-8162-17eaf289ba03
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 34d8abb8-c595-4095-81d0-09712c725c2a
+    taskid: 1e5adcd7-6d91-4e7c-8162-17eaf289ba03
     timertriggers: []
     type: title
     view: |-
@@ -1460,13 +1460,13 @@ tasks:
         McAfee ePO and adds ComplianceCheck.EPO_AgentVersion,  ComplianceCheck.EPO_OSType,
         ComplianceCheck.EPO_OSVersion, ComplianceCheck.EPO_LastUpdate, and ComplianceCheck.EPO_OSPlatform
         keys to the context
-      id: a0a9b4e5-921b-47bb-839e-e4b3886b6a09
+      id: adb43723-effb-4c42-832a-b1bd6652d0b5
       iscommand: false
       name: Cust_IRC_Generic_Host_Compliance_Check_using_EPO
       playbookName: Wipro_IRC_Generic_Host_Compliance_Check_using_EPO
       type: playbook
       version: -1
-    taskid: a0a9b4e5-921b-47bb-839e-e4b3886b6a09
+    taskid: adb43723-effb-4c42-832a-b1bd6652d0b5
     timertriggers: []
     type: playbook
     view: |-
@@ -1505,12 +1505,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0c288785-f3c4-41d4-8293-b876ce007de2
+      id: 217b796c-5b25-4797-8560-2879543b8d2d
       iscommand: false
       name: Check if Blocked by Zscaler
       type: condition
       version: -1
-    taskid: 0c288785-f3c4-41d4-8293-b876ce007de2
+    taskid: 217b796c-5b25-4797-8560-2879543b8d2d
     timertriggers: []
     type: condition
     view: |-
@@ -1547,13 +1547,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 88a4e4a7-0480-4d04-8f60-a0cf3c1133a1
+      id: f0be4f7d-b64d-414c-8d16-67791f0b6466
       iscommand: false
       name: Set Zscaler_Action to Context
       script: SetAndHandleEmpty
       type: regular
       version: -1
-    taskid: 88a4e4a7-0480-4d04-8f60-a0cf3c1133a1
+    taskid: f0be4f7d-b64d-414c-8d16-67791f0b6466
     timertriggers: []
     type: regular
     view: |-
@@ -1601,12 +1601,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f4b16256-97ee-4ae2-856f-202e4825d20b
+      id: 8ffea13f-dfc6-4826-869d-f17c13250b17
       iscommand: false
       name: Check if port 443/80 is in URL
       type: condition
       version: -1
-    taskid: f4b16256-97ee-4ae2-856f-202e4825d20b
+    taskid: 8ffea13f-dfc6-4826-869d-f17c13250b17
     timertriggers: []
     type: condition
     view: |-
@@ -1649,13 +1649,13 @@ tasks:
     task:
       brand: Anomali ThreatStream v2
       description: Checks the reputation of the given URL.
-      id: 70ebf049-0b03-4b3f-88b4-bb5a191fe5b6
+      id: 06f1dbe3-6dff-4570-86c4-41d9af49e26b
       iscommand: true
       name: Query Anomali for Domain Reputation
       script: Anomali ThreatStream v2|||url
       type: regular
       version: -1
-    taskid: 70ebf049-0b03-4b3f-88b4-bb5a191fe5b6
+    taskid: 06f1dbe3-6dff-4570-86c4-41d9af49e26b
     timertriggers: []
     type: regular
     view: |-
@@ -1700,13 +1700,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e15ee3c8-01ff-4ad6-8154-ba4cebcf8999
+      id: 706d3a75-c7f9-47a1-8b35-492ef3b324ba
       iscommand: false
       name: Proxy Log search for Bidirectional traffic (Spotter Query)
       playbookName: Wipro_IRC_Securonix_Generic_Get_Activity_Data
       type: playbook
       version: -1
-    taskid: e15ee3c8-01ff-4ad6-8154-ba4cebcf8999
+    taskid: 706d3a75-c7f9-47a1-8b35-492ef3b324ba
     timertriggers: []
     type: playbook
     view: |-
@@ -1751,13 +1751,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 82aa54f5-efea-457a-8614-8c718fe38fde
+      id: 6c577b9f-fda4-421e-89ff-6520243b18f1
       iscommand: false
       name: Proxy Log search for Bidirectional traffic (Spotter Query)
       playbookName: Wipro_IRC_Securonix_Generic_Get_Activity_Data
       type: playbook
       version: -1
-    taskid: 82aa54f5-efea-457a-8614-8c718fe38fde
+    taskid: 6c577b9f-fda4-421e-89ff-6520243b18f1
     timertriggers: []
     type: playbook
     view: |-
@@ -1779,12 +1779,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e315a2f1-b71f-4ca5-85a9-49f35a474119
+      id: b36aa496-75f2-4bfa-8e2f-46f83776622a
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: e315a2f1-b71f-4ca5-85a9-49f35a474119
+    taskid: b36aa496-75f2-4bfa-8e2f-46f83776622a
     timertriggers: []
     type: title
     view: |-
