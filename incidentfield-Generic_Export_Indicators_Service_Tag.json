@@ -23,7 +23,7 @@
 	"hidden": false,
 	"id": "incident_genericexportindicatorsservicetag",
 	"isReadOnly": false,
-	"itemVersion": "3.2.21",
+	"itemVersion": "3.2.19",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Generic Export Indicators Service Tag",
