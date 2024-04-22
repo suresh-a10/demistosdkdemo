@@ -579,7 +579,9 @@
 	"name": "Campaign Report - Demo layout",
 	"packID": "",
 	"packName": "Automating Threat Intel Reports - Demo Pack",
-	"propagationLabels": [],
+	"propagationLabels": [
+		"all"
+	],
 	"quickView": null,
 	"quickViewV2": null,
 	"system": false,
