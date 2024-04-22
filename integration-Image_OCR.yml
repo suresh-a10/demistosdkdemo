@@ -22,7 +22,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 1.1.29
+    itemVersion: 1.1.27
     packID: ImageOCR
     packName: Image OCR
     packPropagationLabels:
@@ -61,11 +61,11 @@ script:
     - contextPath: File.Text
       description: Extracted text from the passed image file.
       type: String
-  dockerimage: demisto/tesseract:1.0.0.91346
+  dockerimage: demisto/tesseract:1.0.0.87375
   runonce: false
   script: |
     register_module_line('Image OCR', 'start', __line__())
-    ### pack version: 1.1.29
+    ### pack version: 1.1.27
 
 
     import subprocess
