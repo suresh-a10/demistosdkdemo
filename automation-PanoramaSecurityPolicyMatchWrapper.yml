@@ -42,7 +42,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.1.0
-    itemVersion: 2.1.24
+    itemVersion: 2.1.22
     packID: PAN-OS
     packName: PAN-OS by Palo Alto Networks
     packPropagationLabels:
@@ -81,7 +81,7 @@ runas: DBotWeakRole
 runonce: false
 script: |
   register_module_line('PanoramaSecurityPolicyMatchWrapper', 'start', __line__())
-  ### pack version: 2.1.24
+  ### pack version: 2.1.22
 
 
 
