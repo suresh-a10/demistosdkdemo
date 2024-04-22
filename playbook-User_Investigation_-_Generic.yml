@@ -2,7 +2,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 6.5.0
-    itemVersion: 2.6.26
+    itemVersion: 2.6.24
     packID: CommonPlaybooks
     packName: Common Playbooks
     packPropagationLabels:
@@ -929,7 +929,7 @@ tasks:
       description: |-
         This playbook searches for failed logon on a specific user by querying logs from different sources.
 
-        Supported integrations:
+        Supported Integrations:
         -Splunk
         -Qradar
         -Azure Log Analytics
