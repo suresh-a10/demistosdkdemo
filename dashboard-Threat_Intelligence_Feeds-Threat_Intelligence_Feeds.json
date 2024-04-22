@@ -8,7 +8,7 @@
 	"hideSearch": false,
 	"id": "Threat Intelligence Feeds",
 	"isCommon": true,
-	"itemVersion": "1.4.0",
+	"itemVersion": "1.3.10",
 	"layout": [
 		{
 			"forceRange": false,
