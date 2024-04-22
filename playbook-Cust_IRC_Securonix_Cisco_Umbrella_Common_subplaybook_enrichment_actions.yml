@@ -51,11 +51,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 73bd07e2-20ab-4721-8b5b-94daf5f5da9b
+      id: acb88844-21e3-4ee6-807d-a62a6ab56b67
       iscommand: false
       name: ""
       version: -1
-    taskid: 73bd07e2-20ab-4721-8b5b-94daf5f5da9b
+    taskid: acb88844-21e3-4ee6-807d-a62a6ab56b67
     timertriggers: []
     type: start
     view: |-
@@ -119,12 +119,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e2c53792-242f-44a2-8945-39c0c473c75e
+      id: 7fc12302-98d4-471a-85b0-c5c6d72efe3a
       iscommand: false
       name: Check Score on Anomali ThreatStream
       type: condition
       version: -1
-    taskid: e2c53792-242f-44a2-8945-39c0c473c75e
+    taskid: 7fc12302-98d4-471a-85b0-c5c6d72efe3a
     timertriggers: []
     type: condition
     view: |-
@@ -146,12 +146,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 326de573-75e8-4d83-8a83-a8af108fa0e3
+      id: bbc26676-b09e-46da-88be-6711e741db97
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 326de573-75e8-4d83-8a83-a8af108fa0e3
+    taskid: bbc26676-b09e-46da-88be-6711e741db97
     timertriggers: []
     type: title
     view: |-
@@ -190,12 +190,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3cdd16c2-c031-4aa6-80b4-499c3a186666
+      id: 22f34aa2-c6b7-45ad-87d1-145a1965ea93
       iscommand: false
       name: Check if playbook has been set to stop
       type: condition
       version: -1
-    taskid: 3cdd16c2-c031-4aa6-80b4-499c3a186666
+    taskid: 22f34aa2-c6b7-45ad-87d1-145a1965ea93
     timertriggers: []
     type: condition
     view: |-
@@ -232,13 +232,13 @@ tasks:
     task:
       brand: ""
       description: Checks the reputation of a domain.
-      id: 637f7ad2-48d2-40d0-868b-950643069768
+      id: 28c73796-f23c-4da7-8e19-56b01f254b56
       iscommand: true
       name: Domain enrichment
       script: '|||domain'
       type: regular
       version: -1
-    taskid: 637f7ad2-48d2-40d0-868b-950643069768
+    taskid: 28c73796-f23c-4da7-8e19-56b01f254b56
     timertriggers: []
     type: regular
     view: |-
@@ -268,13 +268,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 4dea36b0-1b53-48e7-81ab-9c110b62654b
+      id: e17df2f5-bb2e-4ff8-8056-047252563ee7
       iscommand: false
       name: Cust_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_check_process_accept_list
       playbookName: Wipro_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_check_process_accept_list
       type: playbook
       version: -1
-    taskid: 4dea36b0-1b53-48e7-81ab-9c110b62654b
+    taskid: e17df2f5-bb2e-4ff8-8056-047252563ee7
     timertriggers: []
     type: playbook
     view: |-
@@ -304,13 +304,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2f0237c6-5c26-4f52-86ca-22c650236e4a
+      id: d8d968e5-eca1-47ea-8d0b-fafc1c5c48c0
       iscommand: false
       name: Cust_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_high_confidence
       playbookName: Wipro_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_high_confidence
       type: playbook
       version: -1
-    taskid: 2f0237c6-5c26-4f52-86ca-22c650236e4a
+    taskid: d8d968e5-eca1-47ea-8d0b-fafc1c5c48c0
     timertriggers: []
     type: playbook
     view: |-
@@ -340,13 +340,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2561a5fb-e7de-4257-82d3-a832e0a636a0
+      id: 61ed7c1c-09c2-4682-89c1-ae6737aefda9
       iscommand: false
       name: Cust_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_low_confidence
       playbookName: Wipro_IRC_Securonix_Cisco_Umbrella_Common_subplaybook_low_confidence
       type: playbook
       version: -1
-    taskid: 2561a5fb-e7de-4257-82d3-a832e0a636a0
+    taskid: 61ed7c1c-09c2-4682-89c1-ae6737aefda9
     timertriggers: []
     type: playbook
     view: |-
@@ -380,13 +380,13 @@ tasks:
         This is a generic playbook which can be used across all other Securonix playbooks where the requirement is:
         * Closing the incident on XSOAR
         * Sending an email to the end user/analyst
-      id: efb69d1f-48b3-4e94-8310-adcd6a33fc0d
+      id: 1962f553-4f30-48a5-8750-474cbfee518f
       iscommand: false
       name: Cust_IRC_Securonix_Generic_SendMail_CloseIncident
       playbookName: Wipro_IRC_Securonix_Generic_SendMail_CloseIncident
       type: playbook
       version: -1
-    taskid: efb69d1f-48b3-4e94-8310-adcd6a33fc0d
+    taskid: 1962f553-4f30-48a5-8750-474cbfee518f
     timertriggers: []
     type: playbook
     view: |-
