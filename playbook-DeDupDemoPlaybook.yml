@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 581843c4-5f69-47c6-842f-6b9da659701b
+      id: 13646534-e6ca-464e-8940-713c00ad0e53
       iscommand: false
       name: ""
       version: -1
-    taskid: 581843c4-5f69-47c6-842f-6b9da659701b
+    taskid: 13646534-e6ca-464e-8940-713c00ad0e53
     timertriggers: []
     type: start
     view: |-
@@ -66,13 +66,13 @@ tasks:
     task:
       brand: ""
       description: Convert an array to a nice table display. Usually, from the context.
-      id: 43a9aa05-e68c-43bf-89f2-e2adfa2dccd5
+      id: 96c70b09-11bc-4739-85af-1c8609fd8914
       iscommand: false
       name: To Table
       script: ToTable
       type: regular
       version: -1
-    taskid: 43a9aa05-e68c-43bf-89f2-e2adfa2dccd5
+    taskid: 96c70b09-11bc-4739-85af-1c8609fd8914
     timertriggers: []
     type: regular
     view: |-
@@ -94,12 +94,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ca3f9690-061a-47ab-87af-f78976d37e10
+      id: 69bea91f-be03-497f-86c6-3801be2cc7fc
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: ca3f9690-061a-47ab-87af-f78976d37e10
+    taskid: 69bea91f-be03-497f-86c6-3801be2cc7fc
     timertriggers: []
     type: title
     view: |-
@@ -155,13 +155,13 @@ tasks:
         fields and/or indicators to be compared against other incidents in the Cortex
         XSOAR database. \n\nNote: To identify similar incidents you must *must* properly
         define the playbook inputs. "
-      id: 8e876999-af51-4021-8252-e89522a8894b
+      id: b5475bff-197c-4176-8a67-b75a747c9e44
       iscommand: false
       name: Dedup - Generic v4_Custom
       playbookId: 91702eff-03d2-4b26-800b-70528f43af17
       type: playbook
       version: -1
-    taskid: 8e876999-af51-4021-8252-e89522a8894b
+    taskid: b5475bff-197c-4176-8a67-b75a747c9e44
     timertriggers: []
     type: playbook
     view: |-
@@ -205,12 +205,12 @@ tasks:
       brand: ""
       description: Check whether the values provided in arguments are equal. If either
         of the arguments are missing, no is returned.
-      id: d553b2a3-438e-493f-84cb-f464d55d6c2e
+      id: 49a06bb6-9c5d-4468-8c64-a028b2038b62
       iscommand: false
       name: Test
       type: condition
       version: -1
-    taskid: d553b2a3-438e-493f-84cb-f464d55d6c2e
+    taskid: 49a06bb6-9c5d-4468-8c64-a028b2038b62
     timertriggers: []
     type: condition
     view: |-
