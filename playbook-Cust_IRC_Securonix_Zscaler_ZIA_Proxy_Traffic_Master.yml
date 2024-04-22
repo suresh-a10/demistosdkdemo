@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 43d66c56-b364-4dd2-826e-e9a34053e18f
+      id: 2c4fc0e9-c201-4143-80af-f794006201a2
       iscommand: false
       name: ""
       version: -1
-    taskid: 43d66c56-b364-4dd2-826e-e9a34053e18f
+    taskid: 2c4fc0e9-c201-4143-80af-f794006201a2
     timertriggers: []
     type: start
     view: |-
@@ -57,12 +57,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ec77decc-af6a-4169-85d8-445b587bf408
+      id: 9a9a7c8a-91b5-4f23-88d0-25665b70e889
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: ec77decc-af6a-4169-85d8-445b587bf408
+    taskid: 9a9a7c8a-91b5-4f23-88d0-25665b70e889
     timertriggers: []
     type: title
     view: |-
@@ -96,13 +96,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: c8b6b377-af12-4c53-851f-35755725c161
+      id: 2c079367-8407-43d6-89b0-70812e1f4c6e
       iscommand: false
       name: Clear context
       script: DeleteContext
       type: regular
       version: -1
-    taskid: c8b6b377-af12-4c53-851f-35755725c161
+    taskid: 2c079367-8407-43d6-89b0-70812e1f4c6e
     timertriggers: []
     type: regular
     view: |-
@@ -214,13 +214,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 26fe28d5-e316-406f-8c14-6140d82a7695
+      id: b592a65f-fb2c-4528-87e8-9718fdcb98fb
       iscommand: false
       name: Cust_IRC_Securonix_Zscaler ZIA Proxy Traffic - Subplaybook
       playbookId: e27c2273-6e3b-4ae4-89ad-b9e266a8bf85
       type: playbook
       version: -1
-    taskid: 26fe28d5-e316-406f-8c14-6140d82a7695
+    taskid: b592a65f-fb2c-4528-87e8-9718fdcb98fb
     timertriggers: []
     type: playbook
     view: |-
@@ -274,12 +274,12 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 65b566ba-813d-433b-8b73-ee2b27209ab4
+      id: 05d44974-1228-484b-8610-508ae5bd7c73
       iscommand: false
       name: Check if Crowdstrike has brought any results on Processes
       type: condition
       version: -1
-    taskid: 65b566ba-813d-433b-8b73-ee2b27209ab4
+    taskid: 05d44974-1228-484b-8610-508ae5bd7c73
     timertriggers: []
     type: condition
     view: |-
@@ -312,13 +312,13 @@ tasks:
       description: This is a Securonix initializer playbook which identifies the violator
         type, gets the associated policy violations, associates MITRE indicators,
         sets default priority and severity and assigns an analyst to the incident
-      id: 0323043b-b943-4e10-8395-617fdc7b589b
+      id: 685a444b-a7ca-46e6-8f2d-923e15eedff6
       iscommand: false
       name: Cust_IRC_Securonix_Initializer
       playbookId: 3217ac4e-38e5-4d81-8c38-faf7200efc22
       type: playbook
       version: -1
-    taskid: 0323043b-b943-4e10-8395-617fdc7b589b
+    taskid: 685a444b-a7ca-46e6-8f2d-923e15eedff6
     timertriggers: []
     type: playbook
     view: |-
@@ -359,13 +359,13 @@ tasks:
         * MTTD
         * TTAA
         * TTQ
-      id: 7f5a6e49-0553-42e3-84bc-87b1c6a8e467
+      id: a8926c5b-5c8a-4c98-8a16-a7777b8441a1
       iscommand: false
       name: Cust_IRC_Securonix_Generic_Start_SLAs
       playbookId: 825c0dae-5f1e-46fe-80e0-ac72996e8129
       type: playbook
       version: -1
-    taskid: 7f5a6e49-0553-42e3-84bc-87b1c6a8e467
+    taskid: a8926c5b-5c8a-4c98-8a16-a7777b8441a1
     timertriggers: []
     type: playbook
     view: |-
@@ -397,13 +397,13 @@ tasks:
       brand: ""
       description: This is a generic playbook which is used across all other playbooks(Securonix
         dependent). It assigns an analyst to the incident based on the shift roster
-      id: 05388d72-3607-4358-8f4c-00765f8cbd8c
+      id: 7655a109-df03-403f-8177-deaab9a06695
       iscommand: false
       name: Cust_IRC_Securonix_Generic_Assign_Owner
       playbookId: cf99b3fe-2026-4266-8a77-cf78dd8b70fc
       type: playbook
       version: -1
-    taskid: 05388d72-3607-4358-8f4c-00765f8cbd8c
+    taskid: 7655a109-df03-403f-8177-deaab9a06695
     timertriggers: []
     type: playbook
     view: |-
@@ -437,13 +437,13 @@ tasks:
         This is a generic playbook which can be used across all other Securonix playbooks where the requirement is:
         * Closing the incident on XSOAR
         * Sending an email to the end user/analyst
-      id: f831513e-96c3-47c8-8bec-d73d744f06b5
+      id: 7d2de40c-218c-443d-8d29-9378ae21ced1
       iscommand: false
       name: Cust_IRC_Securonix_Generic_SendMail_CloseIncident
       playbookName: Wipro_IRC_Securonix_Generic_SendMail_CloseIncident
       type: playbook
       version: -1
-    taskid: f831513e-96c3-47c8-8bec-d73d744f06b5
+    taskid: 7d2de40c-218c-443d-8d29-9378ae21ced1
     timertriggers: []
     type: playbook
     view: |-
@@ -473,13 +473,13 @@ tasks:
       brand: ""
       description: |
         Retrieves the current date and time.
-      id: 348cca6a-3d51-4f19-84fe-6514ae07d74f
+      id: bb562944-bf9c-4fa2-8baf-b62a0fe3c4ea
       iscommand: false
       name: Gettime now
       script: GetTime
       type: regular
       version: -1
-    taskid: 348cca6a-3d51-4f19-84fe-6514ae07d74f
+    taskid: bb562944-bf9c-4fa2-8baf-b62a0fe3c4ea
     timertriggers: []
     type: regular
     view: |-
