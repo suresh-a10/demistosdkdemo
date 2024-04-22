@@ -41,11 +41,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e24790fe-8af1-48d8-817a-ad6d24fdb103
+      id: 8795cf01-07e1-433b-836e-edd5c33099b0
       iscommand: false
       name: ""
       version: -1
-    taskid: e24790fe-8af1-48d8-817a-ad6d24fdb103
+    taskid: 8795cf01-07e1-433b-836e-edd5c33099b0
     timertriggers: []
     type: start
     view: |-
@@ -76,13 +76,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b9a2a9d3-a23b-40fc-80e9-766b3ddf4a75
+      id: a8e4beb2-1129-4336-84c3-2467c567d803
       iscommand: false
       name: Cust_IRC_Generic_Host_Compliance_Check_master
       playbookName: Wipro_IRC_Generic_Host_Compliance_Check_master
       type: playbook
       version: -1
-    taskid: b9a2a9d3-a23b-40fc-80e9-766b3ddf4a75
+    taskid: a8e4beb2-1129-4336-84c3-2467c567d803
     timertriggers: []
     type: playbook
     view: |-
@@ -104,12 +104,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 52f29532-a365-4a28-83cb-42d771d24e04
+      id: dd31d2ae-b616-4fc3-81e9-7a6d1b6feb0c
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 52f29532-a365-4a28-83cb-42d771d24e04
+    taskid: dd31d2ae-b616-4fc3-81e9-7a6d1b6feb0c
     timertriggers: []
     type: title
     view: |-
@@ -143,13 +143,13 @@ tasks:
         This is a generic playbook which can be used across all other Securonix playbooks where the requirement is:
         * Closing the incident on XSOAR
         * Sending an email to the end user/analyst
-      id: 65761b58-4893-4b51-88d5-b928a6e77db0
+      id: cde5fb69-220a-4c32-8c4f-848632746d84
       iscommand: false
       name: Cust_IRC_Securonix_Generic_SendMail_CloseIncident
       playbookName: Wipro_IRC_Securonix_Generic_SendMail_CloseIncident
       type: playbook
       version: -1
-    taskid: 65761b58-4893-4b51-88d5-b928a6e77db0
+    taskid: cde5fb69-220a-4c32-8c4f-848632746d84
     timertriggers: []
     type: playbook
     view: |-
