@@ -32,11 +32,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 60b2b041-12ca-4ec1-8ef7-61916de58135
+      id: 9b557770-a7fd-4464-8c15-530ce679d4c0
       iscommand: false
       name: ""
       version: -1
-    taskid: 60b2b041-12ca-4ec1-8ef7-61916de58135
+    taskid: 9b557770-a7fd-4464-8c15-530ce679d4c0
     timertriggers: []
     type: start
     view: |-
@@ -62,13 +62,13 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds.
-      id: 4b490fc3-dab6-45a3-8b59-8722edb0632b
+      id: 854308cd-26fe-4af5-8938-8dbb926206a7
       iscommand: false
       name: Sleep
       script: Sleep
       type: regular
       version: -1
-    taskid: 4b490fc3-dab6-45a3-8b59-8722edb0632b
+    taskid: 854308cd-26fe-4af5-8938-8dbb926206a7
     timertriggers: []
     type: regular
     view: |-
@@ -94,13 +94,13 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds.
-      id: b467d3e7-dce8-4756-8257-391b83e1ef8e
+      id: 09cfee71-e59d-479c-8a62-6d49f852cffa
       iscommand: false
       name: Sleep
       script: Sleep
       type: regular
       version: -1
-    taskid: b467d3e7-dce8-4756-8257-391b83e1ef8e
+    taskid: 09cfee71-e59d-479c-8a62-6d49f852cffa
     timertriggers: []
     type: regular
     view: |-
