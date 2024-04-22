@@ -6,7 +6,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 1.33.48
+    itemVersion: 1.33.43
     packID: Base
     packName: Base
     packPropagationLabels:
@@ -22,7 +22,7 @@ pswd: ""
 runas: DBotWeakRole
 runonce: false
 script: |
-  ### pack version: 1.33.48
+  ### pack version: 1.33.43
   """Common functions script
   This script will be appended to each server script before being executed.
   Please notice that to add custom common code, add it to the CommonServerUserPython script.
@@ -563,7 +563,6 @@ script: |
       Identity = "Identity"
       Location = "Location"
       Software = "Software"
-      X509 = "X509 Certificate"
 
       @staticmethod
       def is_valid_type(_type):
@@ -587,8 +586,7 @@ script: |
               FeedIndicatorType.Malware,
               FeedIndicatorType.Identity,
               FeedIndicatorType.Location,
-              FeedIndicatorType.Software,
-              FeedIndicatorType.X509,
+              FeedIndicatorType.Software
           )
 
       @staticmethod
@@ -11533,8 +11531,7 @@ script: |
 
 
   def send_events_to_xsiam(events, vendor, product, data_format=None, url_key='url', num_of_attempts=3,
-                           chunk_size=XSIAM_EVENT_CHUNK_SIZE, should_update_health_module=True,
-                           add_proxy_to_request=False):
+                           chunk_size=XSIAM_EVENT_CHUNK_SIZE, should_update_health_module=True):
       """
       Send the fetched events into the XDR data-collector private api.
 
@@ -11565,9 +11562,6 @@ script: |
       :type should_update_health_module: ``bool``
       :param should_update_health_module: whether to trigger the health module showing how many events were sent to xsiam
 
-      :type add_proxy_to_request :``bool``
-      :param add_proxy_to_request: whether to add proxy to the send evnets request.
-
       :return: None
       :rtype: ``None``
       """
@@ -11580,8 +11574,7 @@ script: |
           num_of_attempts,
           chunk_size,
           data_type="events",
-          should_update_health_module=should_update_health_module,
-          add_proxy_to_request=add_proxy_to_request,
+          should_update_health_module=should_update_health_module
       )
 
 
@@ -11692,8 +11685,7 @@ script: |
 
 
   def send_data_to_xsiam(data, vendor, product, data_format=None, url_key='url', num_of_attempts=3,
-                         chunk_size=XSIAM_EVENT_CHUNK_SIZE, data_type=EVENTS, should_update_health_module=True,
-                         add_proxy_to_request=False):
+                         chunk_size=XSIAM_EVENT_CHUNK_SIZE, data_type=EVENTS, should_update_health_module=True):
       """
       Send the supported fetched data types into the XDR data-collector private api.
 
@@ -11727,9 +11719,6 @@ script: |
       :type should_update_health_module: ``bool``
       :param should_update_health_module: whether to trigger the health module showing how many events were sent to xsiam
           This can be useful when using send_data_to_xsiam in batches for the same fetch.
-
-      :type add_proxy_to_request: ``bool``
-      :param add_proxy_to_request: whether to add proxy to the send evnets request.
 
       :return: None
       :rtype: ``None``
@@ -11814,7 +11803,7 @@ script: |
           demisto.error(header_msg + api_call_info)
           raise DemistoException(header_msg + error, DemistoException)
 
-      client = BaseClient(base_url=xsiam_url, proxy=add_proxy_to_request)
+      client = BaseClient(base_url=xsiam_url)
       data_chunks = split_data_to_chunks(data, chunk_size)
       for data_chunk in data_chunks:
           data_size += len(data_chunk)
