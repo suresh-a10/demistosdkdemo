@@ -14,7 +14,7 @@ contentitemexportablefields:
   contentitemfields:
     definitionid: ""
     fromServerVersion: 5.0.0
-    itemVersion: 1.33.48
+    itemVersion: 1.33.43
     packID: Base
     packName: Base
     packPropagationLabels:
@@ -42,7 +42,7 @@ runas: DBotWeakRole
 runonce: false
 script: |
   register_module_line('StixParser', 'start', __line__())
-  ### pack version: 1.33.48
+  ### pack version: 1.33.43
 
 
   import copy
