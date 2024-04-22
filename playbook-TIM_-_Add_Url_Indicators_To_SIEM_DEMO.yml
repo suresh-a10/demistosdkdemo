@@ -56,11 +56,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6c32bf5b-7134-4b0d-8720-673f34a27a5e
+      id: 82f60d0c-00ee-4dea-82d6-ad8d74e86e5a
       iscommand: false
       name: ""
       version: -1
-    taskid: 6c32bf5b-7134-4b0d-8720-673f34a27a5e
+    taskid: 82f60d0c-00ee-4dea-82d6-ad8d74e86e5a
     timertriggers: []
     type: start
     view: |-
@@ -85,12 +85,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9c94b822-7837-40a4-81fb-db9a6bc8989f
+      id: 0c5121cf-831b-4b7e-8444-4602bec080bd
       iscommand: false
       name: QRadar
       type: title
       version: -1
-    taskid: 9c94b822-7837-40a4-81fb-db9a6bc8989f
+    taskid: 0c5121cf-831b-4b7e-8444-4602bec080bd
     timertriggers: []
     type: title
     view: |-
@@ -141,12 +141,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8c08188d-e265-42c7-820e-86fd5b94c848
+      id: 8287f019-b72c-492a-80ff-6598a0c67524
       iscommand: false
       name: Is Qradar enabled?
       type: condition
       version: -1
-    taskid: 8c08188d-e265-42c7-820e-86fd5b94c848
+    taskid: 8287f019-b72c-492a-80ff-6598a0c67524
     timertriggers: []
     type: condition
     view: |-
@@ -168,12 +168,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 254dcca6-183a-4305-88bf-1b5e3467a2d6
+      id: 4ec7164b-64b5-48c9-8f06-c491107dab41
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 254dcca6-183a-4305-88bf-1b5e3467a2d6
+    taskid: 4ec7164b-64b5-48c9-8f06-c491107dab41
     timertriggers: []
     type: title
     view: |-
@@ -198,12 +198,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6a0034ac-007c-49c8-8390-98aafbdd599b
+      id: f21f9c12-be75-4f52-8b4c-34a0df12d5e7
       iscommand: false
       name: ArcSight
       type: title
       version: -1
-    taskid: 6a0034ac-007c-49c8-8390-98aafbdd599b
+    taskid: f21f9c12-be75-4f52-8b4c-34a0df12d5e7
     timertriggers: []
     type: title
     view: |-
@@ -254,12 +254,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 21e4f54b-bbbc-4ed8-8506-262e495da7b0
+      id: 40a03896-1d2e-4439-87c1-90e1149c8334
       iscommand: false
       name: Is ArcSight enabled?
       type: condition
       version: -1
-    taskid: 21e4f54b-bbbc-4ed8-8506-262e495da7b0
+    taskid: 40a03896-1d2e-4439-87c1-90e1149c8334
     timertriggers: []
     type: condition
     view: |-
@@ -298,12 +298,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c79ae0bd-bd2b-44a4-8030-09994657be29
+      id: 94f3d5aa-9b1d-498c-8be6-f37424687de5
       iscommand: false
       name: Are there Url results?
       type: condition
       version: -1
-    taskid: c79ae0bd-bd2b-44a4-8030-09994657be29
+    taskid: 94f3d5aa-9b1d-498c-8be6-f37424687de5
     timertriggers: []
     type: condition
     view: |-
@@ -328,13 +328,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d7be3688-460c-4ad6-867e-b6babf0a8bd1
+      id: b96b5d25-9747-488f-8385-aac35de47145
       iscommand: false
       name: TIM - ArcSight Add Url Indicators
       playbookId: TIM - ArcSight Add Url Indicators
       type: playbook
       version: -1
-    taskid: d7be3688-460c-4ad6-867e-b6babf0a8bd1
+    taskid: b96b5d25-9747-488f-8385-aac35de47145
     timertriggers: []
     type: playbook
     view: |-
@@ -372,13 +372,13 @@ tasks:
       description: This playbook queries indicators based on a pre-defined query or
         results from a parent playbook, and adds the resulting indicators to a QRadar
         Reference Set. The Reference Set name must be defined in the playbook inputs.
-      id: ea96b434-e0b7-4d8c-86a3-74d7ab871207
+      id: c19156ee-c56b-4742-8b11-d0791ac04537
       iscommand: false
       name: TIM - QRadar Add Url Indicators_DEMO
       playbookId: 7d95df2b-cfe8-46d5-87a7-c254072ccdc8
       type: playbook
       version: -1
-    taskid: ea96b434-e0b7-4d8c-86a3-74d7ab871207
+    taskid: c19156ee-c56b-4742-8b11-d0791ac04537
     timertriggers: []
     type: playbook
     view: |-
