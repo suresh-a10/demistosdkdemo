@@ -32,11 +32,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b936f3e4-db15-4e7f-8ab9-b1d756828dd2
+      id: 163ddd8c-efa0-46f1-85b6-928d87c053c7
       iscommand: false
       name: ""
       version: -1
-    taskid: b936f3e4-db15-4e7f-8ab9-b1d756828dd2
+    taskid: 163ddd8c-efa0-46f1-85b6-928d87c053c7
     timertriggers: []
     type: start
     view: |-
@@ -93,12 +93,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 185e4795-0cee-4692-89a8-f679bb8b58fa
+      id: aa30f6b6-7e0a-49d9-8310-bd7f62123834
       iscommand: false
       name: Datacollectiontaskonly
       type: collection
       version: -1
-    taskid: 185e4795-0cee-4692-89a8-f679bb8b58fa
+    taskid: aa30f6b6-7e0a-49d9-8310-bd7f62123834
     timertriggers: []
     type: collection
     view: |-
@@ -127,13 +127,13 @@ tasks:
     task:
       brand: ""
       description: Sleep for X seconds
-      id: 878d7d14-6eb7-485d-8e05-99410214cc0c
+      id: 8215502c-6781-47fd-857d-31a3f55e02e6
       iscommand: false
       name: Sleep
       script: Sleep
       type: regular
       version: -1
-    taskid: 878d7d14-6eb7-485d-8e05-99410214cc0c
+    taskid: 8215502c-6781-47fd-857d-31a3f55e02e6
     timertriggers: []
     type: regular
     view: |-
@@ -156,13 +156,13 @@ tasks:
     task:
       brand: EWSO365
       description: Sends an email.
-      id: fc7a5e66-ba9e-4411-8ce8-4d70316dd351
+      id: 36423436-d527-4235-802c-6abc51664ceb
       iscommand: true
       name: Sendmail
       script: EWSO365|||send-mail
       type: regular
       version: -1
-    taskid: fc7a5e66-ba9e-4411-8ce8-4d70316dd351
+    taskid: 36423436-d527-4235-802c-6abc51664ceb
     timertriggers: []
     type: regular
     view: |-
