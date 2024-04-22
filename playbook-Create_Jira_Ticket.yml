@@ -104,11 +104,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d5f3e2ce-d90b-4890-8079-2e6dfb2c26c3
+      id: 9f5ccec2-4fe8-4856-8e83-ae89f9008aca
       iscommand: false
       name: ""
       version: -1
-    taskid: d5f3e2ce-d90b-4890-8079-2e6dfb2c26c3
+    taskid: 9f5ccec2-4fe8-4856-8e83-ae89f9008aca
     timertriggers: []
     type: start
     view: |-
@@ -145,13 +145,13 @@ tasks:
     task:
       brand: jira-v2
       description: Creates a new issue in Jira.
-      id: 670bac1d-87e0-4e33-8923-75c7d9fa2eb7
+      id: b88866e3-5c66-4532-8e89-274490a5acca
       iscommand: true
       name: Create JIRA ticket
       script: jira-v2|||jira-create-issue
       type: regular
       version: -1
-    taskid: 670bac1d-87e0-4e33-8923-75c7d9fa2eb7
+    taskid: b88866e3-5c66-4532-8e89-274490a5acca
     timertriggers: []
     type: regular
     view: |-
@@ -173,12 +173,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 42d5c30c-a509-4f23-8bf3-0a4184d6cae6
+      id: 389b3beb-f04c-4823-810d-9c08c28e05fd
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 42d5c30c-a509-4f23-8bf3-0a4184d6cae6
+    taskid: 389b3beb-f04c-4823-810d-9c08c28e05fd
     timertriggers: []
     type: title
     view: |-
@@ -211,13 +211,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 5a399eaa-a5c0-494c-8630-9496e649544b
+      id: 0ee40885-36ad-414b-8051-67f75ef45b71
       iscommand: true
       name: Enable JIRA Ticket Mirroring
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 5a399eaa-a5c0-494c-8630-9496e649544b
+    taskid: 0ee40885-36ad-414b-8051-67f75ef45b71
     timertriggers: []
     type: regular
     view: |-
@@ -277,14 +277,14 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 1a759d0f-de2d-44c7-82ee-742a6c87b4f2
+      id: 28dcf149-a6e0-40de-8096-952468e023ac
       iscommand: false
       name: Waiting for JIRA ticket Approval
       tags:
       - waiting
       type: collection
       version: -1
-    taskid: 1a759d0f-de2d-44c7-82ee-742a6c87b4f2
+    taskid: 28dcf149-a6e0-40de-8096-952468e023ac
     timertriggers: []
     type: collection
     view: |-
@@ -322,12 +322,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 33d534d7-5221-432f-81d8-2fe9ed1c0177
+      id: eda764d8-a678-4d6e-8893-b657617477da
       iscommand: false
       name: Check return status of BlockIP
       type: condition
       version: -1
-    taskid: 33d534d7-5221-432f-81d8-2fe9ed1c0177
+    taskid: eda764d8-a678-4d6e-8893-b657617477da
     timertriggers: []
     type: condition
     view: |-
@@ -356,13 +356,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: 080ba5b3-ad5a-474d-86f4-37ee70a55a76
+      id: 4807e2ea-e336-4a6a-8a1e-481979bd776a
       iscommand: true
       name: Close Investigation
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 080ba5b3-ad5a-474d-86f4-37ee70a55a76
+    taskid: 4807e2ea-e336-4a6a-8a1e-481979bd776a
     timertriggers: []
     type: regular
     view: |-
@@ -443,12 +443,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7c1f8178-e390-4c13-8f14-ef56f74b65da
+      id: dc5afadf-9898-4abf-821e-12a026510eb5
       iscommand: false
       name: Manual Investigation Required
       type: collection
       version: -1
-    taskid: 7c1f8178-e390-4c13-8f14-ef56f74b65da
+    taskid: dc5afadf-9898-4abf-821e-12a026510eb5
     timertriggers: []
     type: collection
     view: |-
@@ -470,12 +470,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: dfdab83b-e86f-471c-86df-c3c6d7bee33e
+      id: 1d2f22a1-d9f2-4d22-8865-705dc9fecbb8
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: dfdab83b-e86f-471c-86df-c3c6d7bee33e
+    taskid: 1d2f22a1-d9f2-4d22-8865-705dc9fecbb8
     timertriggers: []
     type: title
     view: |-
