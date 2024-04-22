@@ -31,11 +31,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 95457a22-c407-4ee4-8f1c-ec58ad993860
+      id: 8c40b672-7c8d-471a-8c27-2b30c53b83be
       iscommand: false
       name: ""
       version: -1
-    taskid: 95457a22-c407-4ee4-8f1c-ec58ad993860
+    taskid: 8c40b672-7c8d-471a-8c27-2b30c53b83be
     timertriggers: []
     type: start
     view: |-
@@ -74,13 +74,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 6f184c7d-e6ec-4730-8cb4-ebc2a84cdb2e
+      id: c7672cd0-f8b1-4cc3-844b-354739613f9e
       iscommand: false
       name: Splunk Query Schedule Search
       playbookId: c818d465-c037-45be-8fe8-4d2f481b616f
       type: playbook
       version: -1
-    taskid: 6f184c7d-e6ec-4730-8cb4-ebc2a84cdb2e
+    taskid: c7672cd0-f8b1-4cc3-844b-354739613f9e
     timertriggers: []
     type: playbook
     view: |-
@@ -114,13 +114,13 @@ tasks:
       brand: ""
       description: Schedule a command to run inside the war room at a future time
         (once or reoccurring)
-      id: d6f32490-3ca2-43c7-8340-99ca094cb31d
+      id: e536b3a5-9c55-4377-8546-bf50e31c4a2a
       iscommand: false
       name: Schedule Command
       script: ScheduleCommand
       type: regular
       version: -1
-    taskid: d6f32490-3ca2-43c7-8340-99ca094cb31d
+    taskid: e536b3a5-9c55-4377-8546-bf50e31c4a2a
     timertriggers: []
     type: regular
     view: |-
@@ -145,14 +145,14 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8c93ed49-c121-49c6-85f4-4088853ed17b
+      id: 9622a9be-3815-4f6b-8072-de6308d2fb2b
       iscommand: false
       name: Manual task waiting to be completed automatically
       tags:
       - scheduletaskcompleted
       type: regular
       version: -1
-    taskid: 8c93ed49-c121-49c6-85f4-4088853ed17b
+    taskid: 9622a9be-3815-4f6b-8072-de6308d2fb2b
     timertriggers: []
     type: regular
     view: |-
@@ -174,12 +174,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 35e4dcb9-f678-4914-8efe-db8d743012bc
+      id: 83bfd695-4df6-49ec-8c04-c4626df19062
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 35e4dcb9-f678-4914-8efe-db8d743012bc
+    taskid: 83bfd695-4df6-49ec-8c04-c4626df19062
     timertriggers: []
     type: title
     view: |-
