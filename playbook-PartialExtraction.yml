@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0f124043-c8d4-4b48-8840-801b6ea02b69
+      id: 9c56b66b-b4e7-46f4-840a-06169aafc5af
       iscommand: false
       name: ""
       version: -1
-    taskid: 0f124043-c8d4-4b48-8840-801b6ea02b69
+    taskid: 9c56b66b-b4e7-46f4-840a-06169aafc5af
     timertriggers: []
     type: start
     view: |-
@@ -66,13 +66,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.unassociate.indicators
-      id: 46870ffb-a52e-451e-8d92-28c9677017c9
+      id: db1c98b9-48bd-44cb-853e-4053b7e18905
       iscommand: true
       name: unAssociateIndicatorsFromIncident
       script: Builtin|||unAssociateIndicatorsFromIncident
       type: regular
       version: -1
-    taskid: 46870ffb-a52e-451e-8d92-28c9677017c9
+    taskid: db1c98b9-48bd-44cb-853e-4053b7e18905
     timertriggers: []
     type: regular
     view: |-
@@ -106,13 +106,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 286872af-3a92-4134-8a3c-c783324d2f4e
+      id: 5ac3a2c8-7b33-44ac-89fa-6e9bacf5f455
       iscommand: false
       name: DeleteContext
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 286872af-3a92-4134-8a3c-c783324d2f4e
+    taskid: 5ac3a2c8-7b33-44ac-89fa-6e9bacf5f455
     timertriggers: []
     type: regular
     view: |-
@@ -137,12 +137,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: c25a61ca-c3c2-4d9c-87f4-0fbf92729116
+      id: 596c3581-5883-4ac9-8b2b-9933825a837a
       iscommand: false
       name: Debug/Setup
       type: title
       version: -1
-    taskid: c25a61ca-c3c2-4d9c-87f4-0fbf92729116
+    taskid: 596c3581-5883-4ac9-8b2b-9933825a837a
     timertriggers: []
     type: title
     view: |-
@@ -173,13 +173,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: b9a660f9-e193-48cb-8dfc-29fcc237e800
+      id: a6ad4563-29ee-4a26-8f5c-f99ae6bdd4f5
       iscommand: false
       name: Set 1
       script: Set
       type: regular
       version: -1
-    taskid: b9a660f9-e193-48cb-8dfc-29fcc237e800
+    taskid: a6ad4563-29ee-4a26-8f5c-f99ae6bdd4f5
     timertriggers: []
     type: regular
     view: |-
@@ -210,13 +210,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 64c42948-1021-4d0e-8c0b-480ccf5abd53
+      id: 39fbacbc-8748-4b2e-8d2c-624ef263880f
       iscommand: false
       name: Set 2
       script: Set
       type: regular
       version: -1
-    taskid: 64c42948-1021-4d0e-8c0b-480ccf5abd53
+    taskid: 39fbacbc-8748-4b2e-8d2c-624ef263880f
     timertriggers: []
     type: regular
     view: |-
@@ -247,13 +247,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 2ebe5253-1bb7-47ba-86a9-dc9eebd452e1
+      id: 1e30c1e1-4177-4eb8-85e9-f11326dfbfb3
       iscommand: false
       name: Set 3
       script: Set
       type: regular
       version: -1
-    taskid: 2ebe5253-1bb7-47ba-86a9-dc9eebd452e1
+    taskid: 1e30c1e1-4177-4eb8-85e9-f11326dfbfb3
     timertriggers: []
     type: regular
     view: |-
@@ -278,12 +278,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9ab72825-36f4-4161-8c76-c57d9147d94d
+      id: ab98c11c-de1d-45df-894a-c264e56ef227
       iscommand: false
       name: Real Use Case Start
       type: title
       version: -1
-    taskid: 9ab72825-36f4-4161-8c76-c57d9147d94d
+    taskid: ab98c11c-de1d-45df-894a-c264e56ef227
     timertriggers: []
     type: title
     view: |-
@@ -313,13 +313,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.extract.indicators
-      id: 9c35060a-66d0-4189-890a-310882793ef1
+      id: 66bdbbb9-1431-421a-832d-b4a58f99fa4d
       iscommand: true
       name: Extract
       script: Builtin|||extractIndicators
       type: regular
       version: -1
-    taskid: 9c35060a-66d0-4189-890a-310882793ef1
+    taskid: 66bdbbb9-1431-421a-832d-b4a58f99fa4d
     timertriggers: []
     type: regular
     view: |-
@@ -350,13 +350,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 13d90290-0e36-4b2f-8397-c3c39ce2a36a
+      id: b7324cc4-cb73-43c6-824e-50a44a134326
       iscommand: false
       name: Print
       script: Print
       type: regular
       version: -1
-    taskid: 13d90290-0e36-4b2f-8397-c3c39ce2a36a
+    taskid: b7324cc4-cb73-43c6-824e-50a44a134326
     timertriggers: []
     type: regular
     view: |-
@@ -400,13 +400,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 1af02604-709d-474b-8dc9-c6db99904e5a
+      id: b4639879-3926-4aba-8548-08f9619feebf
       iscommand: false
       name: Untitled Task
       script: Set
       type: regular
       version: -1
-    taskid: 1af02604-709d-474b-8dc9-c6db99904e5a
+    taskid: b4639879-3926-4aba-8548-08f9619feebf
     timertriggers: []
     type: regular
     view: |-
@@ -463,12 +463,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 62c54cac-6611-4075-896e-79ff73d85eb0
+      id: 7fd793e0-1390-44b3-8116-9a6687e977e1
       iscommand: false
       name: Untitled Tasksds
       type: collection
       version: -1
-    taskid: 62c54cac-6611-4075-896e-79ff73d85eb0
+    taskid: 7fd793e0-1390-44b3-8116-9a6687e977e1
     timertriggers: []
     type: collection
     view: |-
