@@ -17,7 +17,7 @@
 	"hours": 0,
 	"hoursR": 0,
 	"id": "Azure SQL Misconfiguration",
-	"itemVersion": "4.3.1",
+	"itemVersion": "4.3.0",
 	"layout": "Azure SQL Misconfiguration",
 	"locked": false,
 	"name": "Azure SQL Misconfiguration",
