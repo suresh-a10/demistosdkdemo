@@ -36,11 +36,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 31f1a2ab-8a48-47ed-801a-c9579ce9b200
+      id: 242da73f-ef40-4074-8aac-382060737348
       iscommand: false
       name: ""
       version: -1
-    taskid: 31f1a2ab-8a48-47ed-801a-c9579ce9b200
+    taskid: 242da73f-ef40-4074-8aac-382060737348
     timertriggers: []
     type: start
     view: |-
@@ -64,13 +64,13 @@ tasks:
       brand: ""
       description: |
         Adds provided entries to the incident Evidence Board. In playbook, can be positioned after a task to add the previous task's entries to Evidence Board automatically (with no need to provide arguments)
-      id: 2b335612-fb7c-4c1d-8108-cfbbb0f5fed2
+      id: 3b018ba7-93b5-4ea1-83b2-5ce65a88d4a7
       iscommand: false
       name: Update the XSOAR ticket closure notes as Evidence
       script: AddEvidence
       type: regular
       version: -1
-    taskid: 2b335612-fb7c-4c1d-8108-cfbbb0f5fed2
+    taskid: 3b018ba7-93b5-4ea1-83b2-5ce65a88d4a7
     timertriggers: []
     type: regular
     view: |-
@@ -99,13 +99,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.create.inc
-      id: b0df6d46-bff0-4fe3-8a71-ed8b319df436
+      id: 0729efcc-2bb4-425d-8827-8ad4945cc537
       iscommand: true
       name: Create new XSOAR incident
       script: Builtin|||createNewIncident
       type: regular
       version: -1
-    taskid: b0df6d46-bff0-4fe3-8a71-ed8b319df436
+    taskid: 0729efcc-2bb4-425d-8827-8ad4945cc537
     timertriggers: []
     type: regular
     view: |-
@@ -156,13 +156,13 @@ tasks:
         1. Initiate the operation.
         2. Poll to check if the operation completed.
         3. (optional) Get the results of the operation.
-      id: 3869a117-e481-4a4c-8f78-facab9334653
+      id: 8870edb9-873c-40ec-814f-de28180d854b
       iscommand: false
       name: GenericPolling
       playbookId: GenericPolling
       type: playbook
       version: -1
-    taskid: 3869a117-e481-4a4c-8f78-facab9334653
+    taskid: 8870edb9-873c-40ec-814f-de28180d854b
     timertriggers: []
     type: playbook
     view: |-
@@ -191,13 +191,13 @@ tasks:
     task:
       brand: ""
       description: Delete field from context
-      id: d35e4c5a-ef53-456d-8266-3947e7ba357f
+      id: 7499f453-0ec5-45d1-82f7-62b633341d9a
       iscommand: false
       name: Delete Context Data
       script: DeleteContext
       type: regular
       version: -1
-    taskid: d35e4c5a-ef53-456d-8266-3947e7ba357f
+    taskid: 7499f453-0ec5-45d1-82f7-62b633341d9a
     timertriggers: []
     type: regular
     view: |-
@@ -231,13 +231,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 9928bf8d-bb64-489a-8b6e-9aa48e23d7f0
+      id: 515deebe-861f-426e-8f28-c898e033e919
       iscommand: false
       name: Fetch the XSOAR ticket details
       script: SearchIncidentsV2
       type: regular
       version: -1
-    taskid: 9928bf8d-bb64-489a-8b6e-9aa48e23d7f0
+    taskid: 515deebe-861f-426e-8f28-c898e033e919
     timertriggers: []
     type: regular
     view: |-
