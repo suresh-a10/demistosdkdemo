@@ -33,11 +33,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 81db9045-0496-4024-8a30-2922848bc2be
+      id: 83980356-e2f0-451d-80c3-6c37be291907
       iscommand: false
       name: ""
       version: -1
-    taskid: 81db9045-0496-4024-8a30-2922848bc2be
+    taskid: 83980356-e2f0-451d-80c3-6c37be291907
     timertriggers: []
     type: start
     view: |-
@@ -59,12 +59,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 9a5a35c9-f082-4e31-8eef-10fef955e084
+      id: 8d154c12-b03d-4d6e-8865-b4e2e5fc62d2
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 9a5a35c9-f082-4e31-8eef-10fef955e084
+    taskid: 8d154c12-b03d-4d6e-8865-b4e2e5fc62d2
     timertriggers: []
     type: title
     view: |-
@@ -102,13 +102,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: 004adc22-fadb-4bab-86db-9b3f71c94d4b
+      id: a9d797a7-b54a-4706-854c-5084ff38fbcf
       iscommand: false
       name: Set analystemail to the context
       script: SetAndHandleEmpty
       type: regular
       version: -1
-    taskid: 004adc22-fadb-4bab-86db-9b3f71c94d4b
+    taskid: a9d797a7-b54a-4706-854c-5084ff38fbcf
     timertriggers: []
     type: regular
     view: |-
@@ -140,13 +140,13 @@ tasks:
       brand: ""
       description: This is a generic subplaybook of Wipro_IRC_Generic_Assign_Analyst_Shift_Based_master
         which checks the input role and reads the list and assigns the analyst accordingly
-      id: 16399ce6-a4f7-42c9-8bb4-1f01325ff613
+      id: 5fb4d977-c2b0-4fee-8a4e-c926b1839d3b
       iscommand: false
       name: Cust_IRC_Generic_Assign_Analyst_Shift_Based_subplaybook
       playbookName: Wipro_IRC_Generic_Assign_Analyst_Shift_Based_subplaybook
       type: playbook
       version: -1
-    taskid: 16399ce6-a4f7-42c9-8bb4-1f01325ff613
+    taskid: 5fb4d977-c2b0-4fee-8a4e-c926b1839d3b
     timertriggers: []
     type: playbook
     view: |-
