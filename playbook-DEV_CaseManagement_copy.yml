@@ -37,11 +37,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: fefc487d-a4ca-463a-8d30-23a28a486828
+      id: 52388f38-752d-4a96-8005-12ffbd32b28d
       iscommand: false
       name: ""
       version: -1
-    taskid: fefc487d-a4ca-463a-8d30-23a28a486828
+    taskid: 52388f38-752d-4a96-8005-12ffbd32b28d
     timertriggers: []
     type: start
     view: |-
@@ -92,13 +92,13 @@ tasks:
         1. Initiate the operation.
         2. Poll to check if the operation completed.
         3. (optional) Get the results of the operation.
-      id: e8ad5f27-ffe2-45b9-8d60-f480897b05f3
+      id: c552a0e8-1341-42c4-8eb2-37098dcd7a7c
       iscommand: false
       name: GenericPolling
       playbookId: GenericPolling
       type: playbook
       version: -1
-    taskid: e8ad5f27-ffe2-45b9-8d60-f480897b05f3
+    taskid: c552a0e8-1341-42c4-8eb2-37098dcd7a7c
     timertriggers: []
     type: playbook
     view: |-
@@ -124,13 +124,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 7810b6bf-97dc-4a48-844e-d65f8a6d2e97
+      id: 89f4e0a1-2eb0-4e27-8333-e47ca771b2e7
       iscommand: false
       name: Print
       script: Print
       type: regular
       version: -1
-    taskid: 7810b6bf-97dc-4a48-844e-d65f8a6d2e97
+    taskid: 89f4e0a1-2eb0-4e27-8333-e47ca771b2e7
     timertriggers: []
     type: regular
     view: |-
