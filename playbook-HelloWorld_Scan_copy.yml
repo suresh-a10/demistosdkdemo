@@ -87,11 +87,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d0345099-dd78-4e24-8b37-732e99189977
+      id: 458fa958-cccf-4ca1-8257-a93d1f2ca41e
       iscommand: false
       name: ""
       version: -1
-    taskid: d0345099-dd78-4e24-8b37-732e99189977
+    taskid: 458fa958-cccf-4ca1-8257-a93d1f2ca41e
     timertriggers: []
     type: start
     view: |-
@@ -121,13 +121,13 @@ tasks:
       brand: ""
       description: Start a HelloWorld scan on an asset, identified from by ${input.Hostname}
         key.
-      id: 10bd532d-8f3a-4837-8184-b8a7e8fe3031
+      id: 2297969a-64d7-4470-872d-828b29c428a2
       iscommand: true
       name: Start a Hello World Scan
       script: '|||helloworld-scan-start'
       type: regular
       version: -1
-    taskid: 10bd532d-8f3a-4837-8184-b8a7e8fe3031
+    taskid: 2297969a-64d7-4470-872d-828b29c428a2
     timertriggers: []
     type: regular
     view: |-
@@ -178,13 +178,13 @@ tasks:
         1. Initiate the operation.
         2. Poll to check if the operation completed.
         3. (optional) Get the results of the operation.
-      id: 497b80c3-b029-4472-8119-91efa7ab4f9b
+      id: 2a4b9853-c5a2-4ed2-8893-9c7042064766
       iscommand: false
       name: GenericPolling
       playbookId: GenericPolling
       type: playbook
       version: -1
-    taskid: 497b80c3-b029-4472-8119-91efa7ab4f9b
+    taskid: 2a4b9853-c5a2-4ed2-8893-9c7042064766
     timertriggers: []
     type: playbook
     view: |-
@@ -215,13 +215,13 @@ tasks:
     task:
       brand: ""
       description: Retrieve scan status in Context or as a File (default) for a Scan.
-      id: b266bf0a-3b0c-4c78-8ed9-a55583220bcb
+      id: 01a26ad8-30f0-4fd6-8a41-e2999ef56f61
       iscommand: true
       name: Retrieve HelloWorld Scan Results
       script: '|||helloworld-scan-results'
       type: regular
       version: -1
-    taskid: b266bf0a-3b0c-4c78-8ed9-a55583220bcb
+    taskid: 01a26ad8-30f0-4fd6-8a41-e2999ef56f61
     timertriggers: []
     type: regular
     view: |-
@@ -243,12 +243,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 475a864d-e0b2-4e26-8657-8768b66f4e23
+      id: 551eed65-f6fd-4ec4-8b6e-06407e09ff3a
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 475a864d-e0b2-4e26-8657-8768b66f4e23
+    taskid: 551eed65-f6fd-4ec4-8b6e-06407e09ff3a
     timertriggers: []
     type: title
     view: |-
@@ -285,12 +285,12 @@ tasks:
       brand: ""
       description: Check if the input Hostname is valid (i.e. is not Empty), do not
         run the scan otherwise.
-      id: 03ee9dce-48c2-4030-8385-5a8deafbdec6
+      id: ff841fb7-49e2-4bea-8991-18da8a3a004b
       iscommand: false
       name: Is Hostname set?
       type: condition
       version: -1
-    taskid: 03ee9dce-48c2-4030-8385-5a8deafbdec6
+    taskid: ff841fb7-49e2-4bea-8991-18da8a3a004b
     timertriggers: []
     type: condition
     view: |-
@@ -319,13 +319,13 @@ tasks:
     task:
       brand: ""
       description: Prints an error entry with a given message
-      id: 98ce8409-1f11-4847-88b7-9e6137be8747
+      id: 111b457a-34e5-4cd4-82d4-7e12c6ab107f
       iscommand: false
       name: Print Error
       script: PrintErrorEntry
       type: regular
       version: -1
-    taskid: 98ce8409-1f11-4847-88b7-9e6137be8747
+    taskid: 111b457a-34e5-4cd4-82d4-7e12c6ab107f
     timertriggers: []
     type: regular
     view: |-
