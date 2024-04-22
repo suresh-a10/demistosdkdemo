@@ -34,11 +34,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: e3883073-a04c-4953-85c5-cf718ed74517
+      id: fc0c7f88-e3e8-4a21-8ddb-6c15363bac1d
       iscommand: false
       name: ""
       version: -1
-    taskid: e3883073-a04c-4953-85c5-cf718ed74517
+    taskid: fc0c7f88-e3e8-4a21-8ddb-6c15363bac1d
     timertriggers: []
     type: start
     view: |-
@@ -81,13 +81,13 @@ tasks:
       brand: ""
       description: |
         Encode a file as base64 and store it in context
-      id: 55dddf22-000f-4d07-8757-183e914a0445
+      id: 71e883b1-7584-45ba-8030-1119f2b97eb8
       iscommand: false
       name: Base64 Encode - png or jpeg
       script: 25b3a0e5-547a-42fe-8932-5f7969dfca15
       type: regular
       version: -1
-    taskid: 55dddf22-000f-4d07-8757-183e914a0445
+    taskid: 71e883b1-7584-45ba-8030-1119f2b97eb8
     timertriggers: []
     type: regular
     view: |-
@@ -114,13 +114,13 @@ tasks:
       brand: ""
       description: 'This automation creates image tags from base64 encoded images
         in context.  '
-      id: 918189fc-5a60-4784-8b62-6463e8f881dd
+      id: 755dc837-dd6d-4c1b-847c-6ad99be53c5e
       iscommand: false
       name: Create html links with base64 encoded images
       script: 37a9e1d4-b046-4b79-8ed3-55875c9891cd
       type: regular
       version: -1
-    taskid: 918189fc-5a60-4784-8b62-6463e8f881dd
+    taskid: 755dc837-dd6d-4c1b-847c-6ad99be53c5e
     timertriggers: []
     type: regular
     view: |-
