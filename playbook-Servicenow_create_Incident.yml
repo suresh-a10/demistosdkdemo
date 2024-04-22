@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: fe7e850d-f55e-490c-8059-9a2513ceea2f
+      id: 98acb4e8-463d-470e-86fb-7c8d884d45c4
       iscommand: false
       name: ""
       version: -1
-    taskid: fe7e850d-f55e-490c-8059-9a2513ceea2f
+    taskid: 98acb4e8-463d-470e-86fb-7c8d884d45c4
     timertriggers: []
     type: start
     view: |-
@@ -61,13 +61,13 @@ tasks:
       brand: ""
       description: |
         Retrieves the current date and time.
-      id: 973843a0-ac38-4637-89dc-393b3b03abfa
+      id: 6ebd3a1a-120f-41e1-856a-f01820dc8765
       iscommand: false
       name: GetDate & Time
       script: GetTime
       type: regular
       version: -1
-    taskid: 973843a0-ac38-4637-89dc-393b3b03abfa
+    taskid: 6ebd3a1a-120f-41e1-856a-f01820dc8765
     timertriggers: []
     type: regular
     view: |-
@@ -98,13 +98,13 @@ tasks:
     task:
       brand: ServiceNow v2
       description: Creates new ServiceNow ticket.
-      id: 638cec11-7699-4d74-8633-1754a2e31d92
+      id: 4b43e359-9abd-4e6d-80b5-bb5317141190
       iscommand: true
       name: Servicenow create incident
       script: ServiceNow v2|||servicenow-create-ticket
       type: regular
       version: -1
-    taskid: 638cec11-7699-4d74-8633-1754a2e31d92
+    taskid: 4b43e359-9abd-4e6d-80b5-bb5317141190
     timertriggers: []
     type: regular
     view: |-
@@ -127,13 +127,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.close.inv
-      id: 270ef791-1553-4aa5-848c-f2375101ea35
+      id: fafb0693-f8f9-4f3e-86e4-f0f4d6fd4d5f
       iscommand: true
       name: Close
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 270ef791-1553-4aa5-848c-f2375101ea35
+    taskid: fafb0693-f8f9-4f3e-86e4-f0f4d6fd4d5f
     timertriggers: []
     type: regular
     view: |-
