@@ -114,11 +114,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f15c64f0-af92-48b6-8c97-23170567cd11
+      id: 7802044e-f210-4f26-8851-18dbbf249728
       iscommand: false
       name: ""
       version: -1
-    taskid: f15c64f0-af92-48b6-8c97-23170567cd11
+    taskid: 7802044e-f210-4f26-8851-18dbbf249728
     timertriggers: []
     type: start
     view: |-
@@ -152,13 +152,13 @@ tasks:
     task:
       brand: ""
       description: Sends an HTTP GET request to check for updates.
-      id: 1d0f326d-310f-40b5-8fbf-af95afa3ab4d
+      id: cde597cd-b932-47e5-83f0-0cb4394e81c1
       iscommand: true
       name: Check for updates
       script: '|||demisto-api-get'
       type: regular
       version: -1
-    taskid: 1d0f326d-310f-40b5-8fbf-af95afa3ab4d
+    taskid: cde597cd-b932-47e5-83f0-0cb4394e81c1
     timertriggers: []
     type: regular
     view: |-
@@ -189,13 +189,13 @@ tasks:
     task:
       brand: Builtin
       description: Close the investigation.
-      id: 17163fd6-e16f-4f3c-8c46-5398f3f3495c
+      id: bdd0fccb-5ea8-46c0-861a-472156f6ab29
       iscommand: true
       name: Close investigation
       script: Builtin|||closeInvestigation
       type: regular
       version: -1
-    taskid: 17163fd6-e16f-4f3c-8c46-5398f3f3495c
+    taskid: bdd0fccb-5ea8-46c0-861a-472156f6ab29
     timertriggers: []
     type: regular
     view: |-
@@ -220,12 +220,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b961f20d-b223-4e35-861a-76db393addbc
+      id: e2e2e3b6-6309-4efb-8a2e-458b490c522a
       iscommand: false
       name: Process Notifications
       type: title
       version: -1
-    taskid: b961f20d-b223-4e35-861a-76db393addbc
+    taskid: e2e2e3b6-6309-4efb-8a2e-458b490c522a
     timertriggers: []
     type: title
     view: |-
@@ -247,12 +247,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a8aba7b4-d723-4a41-8400-ea59aee4d07b
+      id: a0b29e26-cf72-41fd-8083-7dae317a64b6
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: a8aba7b4-d723-4a41-8400-ea59aee4d07b
+    taskid: a0b29e26-cf72-41fd-8083-7dae317a64b6
     timertriggers: []
     type: title
     view: |-
@@ -313,12 +313,12 @@ tasks:
       brand: ""
       description: Checks if e-mail addresses are provided in the inputs and whether
         any "send-mail" compatible integrations are enabled.
-      id: 23c75b9b-04a1-4e93-8750-94e05d46a470
+      id: efc29237-46fa-4148-8486-a302e6a6df37
       iscommand: false
       name: Are there e-mail addresses?
       type: condition
       version: -1
-    taskid: 23c75b9b-04a1-4e93-8750-94e05d46a470
+    taskid: efc29237-46fa-4148-8486-a302e6a6df37
     timertriggers: []
     type: condition
     view: |-
@@ -379,12 +379,12 @@ tasks:
       brand: ""
       description: Checks if a Slack channel is provided in the inputs and whether
         any Slack integrations are configured.
-      id: f80675fc-83e2-45ad-8d9b-f346055c2778
+      id: 7fe3a8f0-1de8-4bdb-8c49-75b3c7973031
       iscommand: false
       name: Are there Slack channels?
       type: condition
       version: -1
-    taskid: f80675fc-83e2-45ad-8d9b-f346055c2778
+    taskid: 7fe3a8f0-1de8-4bdb-8c49-75b3c7973031
     timertriggers: []
     type: condition
     view: |-
@@ -445,12 +445,12 @@ tasks:
       brand: ""
       description: Checks if a Slack username is provided in the inputs and whether
         any Slack integrations are configured.
-      id: 58ed3435-13a2-4166-86e5-8adbe8024df1
+      id: 0847bde0-cd7a-4e82-8f8d-388184f55307
       iscommand: false
       name: Are there Slack users?
       type: condition
       version: -1
-    taskid: 58ed3435-13a2-4166-86e5-8adbe8024df1
+    taskid: 0847bde0-cd7a-4e82-8f8d-388184f55307
     timertriggers: []
     type: condition
     view: |-
@@ -481,13 +481,13 @@ tasks:
     task:
       brand: Builtin
       description: Sets closing reason and notes for the investigation.
-      id: 7c518118-8ed3-477e-85db-adf83a923ef8
+      id: 27ffac27-60da-4493-8220-87b5a4fab3e8
       iscommand: true
       name: Set closing information - no updates
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 7c518118-8ed3-477e-85db-adf83a923ef8
+    taskid: 27ffac27-60da-4493-8220-87b5a4fab3e8
     timertriggers: []
     type: regular
     view: |-
@@ -512,12 +512,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 87b849ae-f26a-4356-8bbb-e3635913a711
+      id: d8f30243-b1aa-47ee-8b10-0d99f3535b7f
       iscommand: false
       name: Close Investigation
       type: title
       version: -1
-    taskid: 87b849ae-f26a-4356-8bbb-e3635913a711
+    taskid: d8f30243-b1aa-47ee-8b10-0d99f3535b7f
     timertriggers: []
     type: title
     view: |-
@@ -699,12 +699,12 @@ tasks:
     task:
       brand: ""
       description: Sends a Slack message to a user, group, or channel.
-      id: 633069d5-cb9a-419d-8610-03b52b0d103d
+      id: d4f7ae15-20b9-4410-8c09-3143c30261a9
       iscommand: false
       name: Send Slack notification and question to channel
       type: collection
       version: -1
-    taskid: 633069d5-cb9a-419d-8610-03b52b0d103d
+    taskid: d4f7ae15-20b9-4410-8c09-3143c30261a9
     timertriggers: []
     type: collection
     view: |-
@@ -735,13 +735,13 @@ tasks:
     task:
       brand: Builtin
       description: Set closing reason and notes for the investigation.
-      id: b8e717cf-6e4f-4876-88be-49120e80e52e
+      id: 853fb38e-5ed5-48b0-88c2-7bffc4867680
       iscommand: true
       name: Set closing information - finished update
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: b8e717cf-6e4f-4876-88be-49120e80e52e
+    taskid: 853fb38e-5ed5-48b0-88c2-7bffc4867680
     timertriggers: []
     type: regular
     view: |-
@@ -767,13 +767,13 @@ tasks:
     task:
       brand: ""
       description: Get the Server URL.
-      id: 326a2d13-5602-4b0f-8675-da84f6a63baa
+      id: 11dd1e51-719a-4e3c-80a6-2ccb54d0f15d
       iscommand: false
       name: Get server URL
       script: GetServerURL
       type: regular
       version: -1
-    taskid: 326a2d13-5602-4b0f-8675-da84f6a63baa
+    taskid: 11dd1e51-719a-4e3c-80a6-2ccb54d0f15d
     timertriggers: []
     type: regular
     view: |-
@@ -804,13 +804,13 @@ tasks:
     task:
       brand: ""
       description: This playbook checks for content updates.
-      id: 4a4f3694-4b63-4e0d-87c9-d994ba45a014
+      id: 8b3cc0bf-0701-4694-8058-c3f339a4cf3e
       iscommand: false
       name: Check For Content Installation
       playbookId: Check For Content Installation
       type: playbook
       version: -1
-    taskid: 4a4f3694-4b63-4e0d-87c9-d994ba45a014
+    taskid: 8b3cc0bf-0701-4694-8058-c3f339a4cf3e
     timertriggers: []
     type: playbook
     view: |-
@@ -848,12 +848,12 @@ tasks:
       brand: ""
       description: Checks if relevant updates are available. It includes all updates
         if the user selects monitoring "All" packs.
-      id: 430b79d5-b686-4f58-84b7-e36be19456f7
+      id: 56cb663d-7724-448b-8301-020e37fd3395
       iscommand: false
       name: Are there relevant updates?
       type: condition
       version: -1
-    taskid: 430b79d5-b686-4f58-84b7-e36be19456f7
+    taskid: 56cb663d-7724-448b-8301-020e37fd3395
     timertriggers: []
     type: condition
     view: |-
@@ -901,13 +901,13 @@ tasks:
     task:
       brand: Builtin
       description: Sets closing reason and notes for the investigation.
-      id: d9ea6648-b94b-4e39-8863-081f07a3422f
+      id: e8c12c81-8133-4015-8f7a-fbb01cf3449b
       iscommand: true
       name: Set closing information - no updates
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: d9ea6648-b94b-4e39-8863-081f07a3422f
+    taskid: e8c12c81-8133-4015-8f7a-fbb01cf3449b
     timertriggers: []
     type: regular
     view: |-
@@ -945,12 +945,12 @@ tasks:
       description: Checks whether the packs were updated after either the sub-playbook
         timed out or there are no more updates to apply. It results in the "yes" branch
         if the installed updates match those selected in the content packs to be monitored.
-      id: b43e3171-5352-47aa-80f6-6ffa51ab4f7c
+      id: 0e89f9a5-0bff-44ba-8a79-e17da3c5de98
       iscommand: false
       name: Were the packs updated?
       type: condition
       version: -1
-    taskid: b43e3171-5352-47aa-80f6-6ffa51ab4f7c
+    taskid: 0e89f9a5-0bff-44ba-8a79-e17da3c5de98
     timertriggers: []
     type: condition
     view: |-
@@ -1001,13 +1001,13 @@ tasks:
     task:
       brand: ""
       description: Sends a Slack message to a user, group, or channel.
-      id: 758e28f3-aa9d-420e-8b7b-1b6ffd41e868
+      id: ae877a73-fbd6-42b7-8fe8-8c15f28b05eb
       iscommand: true
       name: Send Slack notification
       script: '|||send-notification'
       type: regular
       version: -1
-    taskid: 758e28f3-aa9d-420e-8b7b-1b6ffd41e868
+    taskid: ae877a73-fbd6-42b7-8fe8-8c15f28b05eb
     timertriggers: []
     type: regular
     view: |-
@@ -1047,12 +1047,12 @@ tasks:
     task:
       brand: Builtin
       description: Were there any failed updates?
-      id: f3a38c21-e1db-4c6f-873f-52d52013592f
+      id: 6517c10a-f4a7-4f3b-8f75-5610616553b4
       iscommand: false
       name: Were there any failed updates?
       type: condition
       version: -1
-    taskid: f3a38c21-e1db-4c6f-873f-52d52013592f
+    taskid: 6517c10a-f4a7-4f3b-8f75-5610616553b4
     timertriggers: []
     type: condition
     view: |-
@@ -1101,12 +1101,12 @@ tasks:
       brand: ""
       description: Checks whether the user provided a specific content pack update
         filter other than "All".
-      id: 8a7eced1-062b-47ed-860c-d23c3ce6d77b
+      id: 7c1f3fe5-001e-401a-8b42-0bb3399e2745
       iscommand: false
       name: Is there a user filter?
       type: condition
       version: -1
-    taskid: 8a7eced1-062b-47ed-860c-d23c3ce6d77b
+    taskid: 7c1f3fe5-001e-401a-8b42-0bb3399e2745
     timertriggers: []
     type: condition
     view: |-
@@ -1159,13 +1159,13 @@ tasks:
     task:
       brand: ""
       description: Add all of the existing updates to a check list.
-      id: 065e7d04-03da-49b7-8ea1-033d86cb4d1b
+      id: 5843842a-8757-4e5e-8906-b1cef7105da7
       iscommand: false
       name: Add all updates to check list
       script: Set
       type: regular
       version: -1
-    taskid: 065e7d04-03da-49b7-8ea1-033d86cb4d1b
+    taskid: 5843842a-8757-4e5e-8906-b1cef7105da7
     timertriggers: []
     type: regular
     view: |-
@@ -1228,13 +1228,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: ea75b10c-4734-4cd0-89be-8dabdcb53ed7
+      id: 670c2c33-ccfc-42dc-86f8-543d5f97cd0b
       iscommand: false
       name: Add specific updates to check list
       script: Set
       type: regular
       version: -1
-    taskid: ea75b10c-4734-4cd0-89be-8dabdcb53ed7
+    taskid: 670c2c33-ccfc-42dc-86f8-543d5f97cd0b
     timertriggers: []
     type: regular
     view: |-
@@ -1270,12 +1270,12 @@ tasks:
     task:
       brand: ""
       description: Checks if there are ANY available updates.
-      id: 8963a06a-662a-4208-8ff0-d23f96fc3838
+      id: 2b7a81f7-38d9-4817-8942-2dfaa94b4c34
       iscommand: false
       name: Are there available updates?
       type: condition
       version: -1
-    taskid: 8963a06a-662a-4208-8ff0-d23f96fc3838
+    taskid: 2b7a81f7-38d9-4817-8942-2dfaa94b4c34
     timertriggers: []
     type: condition
     view: |-
@@ -1300,12 +1300,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7f7fee6c-f70d-4442-84f4-88f26c80ced4
+      id: 42a9af13-2415-4dde-8b7e-d17c1e9c0619
       iscommand: false
       name: Close Investigation
       type: title
       version: -1
-    taskid: 7f7fee6c-f70d-4442-84f4-88f26c80ced4
+    taskid: 42a9af13-2415-4dde-8b7e-d17c1e9c0619
     timertriggers: []
     type: title
     view: |-
@@ -1330,12 +1330,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 602e8ab4-e425-4a17-8943-077af0dbb387
+      id: 6b62a34f-d44e-4ff7-8d04-a723261f5a9a
       iscommand: false
       name: Close Investigation
       type: title
       version: -1
-    taskid: 602e8ab4-e425-4a17-8943-077af0dbb387
+    taskid: 6b62a34f-d44e-4ff7-8d04-a723261f5a9a
     timertriggers: []
     type: title
     view: |-
@@ -1401,12 +1401,12 @@ tasks:
       brand: ""
       description: Checks if a Slack channel is provided in the inputs and whether
         any Slack integrations are configured.
-      id: f98a3fc8-9a59-48f0-8d65-d01d5c47cfab
+      id: f5d31f38-ac9d-4ded-8f73-670a0f50d069
       iscommand: false
       name: Are there Slack channels?
       type: condition
       version: -1
-    taskid: f98a3fc8-9a59-48f0-8d65-d01d5c47cfab
+    taskid: f5d31f38-ac9d-4ded-8f73-670a0f50d069
     timertriggers: []
     type: condition
     view: |-
@@ -1432,13 +1432,13 @@ tasks:
     task:
       brand: ""
       description: Collect packs data for packs with updates.
-      id: 1ad0290d-a692-4210-8981-83d7d905e020
+      id: 64285325-6cf9-48b5-898f-2242da260eef
       iscommand: false
       name: Collect packs data
       script: CollectPacksData
       type: regular
       version: -1
-    taskid: 1ad0290d-a692-4210-8981-83d7d905e020
+    taskid: 64285325-6cf9-48b5-898f-2242da260eef
     timertriggers: []
     type: regular
     view: |-
@@ -1481,12 +1481,12 @@ tasks:
     task:
       brand: ""
       description: Should the playbook perform auto-update?
-      id: 0117be40-b60d-48fd-8c2f-1562b605f996
+      id: f666034a-e5bf-42c7-8898-6aca66c354d4
       iscommand: false
       name: Should the playbook perform auto-update?
       type: condition
       version: -1
-    taskid: 0117be40-b60d-48fd-8c2f-1562b605f996
+    taskid: f666034a-e5bf-42c7-8898-6aca66c354d4
     timertriggers: []
     type: condition
     view: |-
@@ -1514,12 +1514,12 @@ tasks:
     task:
       brand: ""
       description: Manual - Do you allow the playbook to perform auto-update?
-      id: 72590d39-4f3a-455e-84c2-6823d61f0d6f
+      id: f2b165cb-e7a3-4627-8047-1d37739a1442
       iscommand: false
       name: Manual - Do you allow the playbook to perform auto-update?
       type: condition
       version: -1
-    taskid: 72590d39-4f3a-455e-84c2-6823d61f0d6f
+    taskid: f2b165cb-e7a3-4627-8047-1d37739a1442
     timertriggers: []
     type: condition
     view: |-
@@ -1702,12 +1702,12 @@ tasks:
     task:
       brand: ""
       description: Sends a Slack message to a user, group, or channel.
-      id: 050724e6-8faf-4b7b-899e-7c84b11f6828
+      id: a58cc395-b7a5-4926-8bc2-a7e2aa6ab7be
       iscommand: false
       name: Send Slack notification and question to user
       type: collection
       version: -1
-    taskid: 050724e6-8faf-4b7b-899e-7c84b11f6828
+    taskid: a58cc395-b7a5-4926-8bc2-a7e2aa6ab7be
     timertriggers: []
     type: collection
     view: |-
@@ -1889,12 +1889,12 @@ tasks:
     task:
       brand: ""
       description: Sends an email message to a user.
-      id: 87cebb0d-73e1-4aef-8c39-74cd58b95a63
+      id: d5f7241f-fb70-4647-898d-fa37ed3713fc
       iscommand: false
       name: Send E-mail notification and question
       type: collection
       version: -1
-    taskid: 87cebb0d-73e1-4aef-8c39-74cd58b95a63
+    taskid: d5f7241f-fb70-4647-898d-fa37ed3713fc
     timertriggers: []
     type: collection
     view: |-
@@ -1936,13 +1936,13 @@ tasks:
     task:
       brand: Builtin
       description: Add the list of available updates to the layout.
-      id: 62144034-8411-4ee5-8bb4-a97a7ee1ad74
+      id: 1241bf2c-6f13-4a6d-897d-c4b5b178b492
       iscommand: true
       name: Add available updates to layout
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 62144034-8411-4ee5-8bb4-a97a7ee1ad74
+    taskid: 1241bf2c-6f13-4a6d-897d-c4b5b178b492
     timertriggers: []
     type: regular
     view: |-
@@ -1969,12 +1969,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b0d53a26-6471-496c-8232-39e61a842683
+      id: 3f750c44-8f55-40c3-8191-137a539c367a
       iscommand: false
       name: Send Slack notification
       type: title
       version: -1
-    taskid: b0d53a26-6471-496c-8232-39e61a842683
+    taskid: 3f750c44-8f55-40c3-8191-137a539c367a
     timertriggers: []
     type: title
     view: |-
@@ -2035,12 +2035,12 @@ tasks:
       brand: ""
       description: Checks if a Slack username is provided in the inputs and whether
         any Slack integrations are configured.
-      id: 5b04f0a0-82d4-4d21-8256-5a40ff145bda
+      id: a19f69b1-6262-47e5-8710-22e671811fae
       iscommand: false
       name: Are there Slack users?
       type: condition
       version: -1
-    taskid: 5b04f0a0-82d4-4d21-8256-5a40ff145bda
+    taskid: a19f69b1-6262-47e5-8710-22e671811fae
     timertriggers: []
     type: condition
     view: |-
@@ -2088,13 +2088,13 @@ tasks:
     task:
       brand: ""
       description: Sends a Slack message to a user, group, or channel.
-      id: 96e77f7a-3455-4d04-81d5-dccf50285244
+      id: b41e03e5-1a74-4ef7-872f-697a6ac05899
       iscommand: true
       name: Send Slack notification
       script: '|||send-notification'
       type: regular
       version: -1
-    taskid: 96e77f7a-3455-4d04-81d5-dccf50285244
+    taskid: b41e03e5-1a74-4ef7-872f-697a6ac05899
     timertriggers: []
     type: regular
     view: |-
@@ -2141,12 +2141,12 @@ tasks:
     task:
       brand: ""
       description: Is the auto-update input set to yes?
-      id: be0ab067-47c6-470c-8f48-74b93fe61bc2
+      id: d8dd8f39-f111-4239-884d-682a18dc07cf
       iscommand: false
       name: Is the auto-update input set to "Yes"?
       type: condition
       version: -1
-    taskid: be0ab067-47c6-470c-8f48-74b93fe61bc2
+    taskid: d8dd8f39-f111-4239-884d-682a18dc07cf
     timertriggers: []
     type: condition
     view: |-
@@ -2173,12 +2173,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: cc13db63-060b-4d05-80dd-eceabf2972b3
+      id: d5b43926-21fb-4a83-81d2-526a1ea65b03
       iscommand: false
       name: Ask by survey
       type: title
       version: -1
-    taskid: cc13db63-060b-4d05-80dd-eceabf2972b3
+    taskid: d5b43926-21fb-4a83-81d2-526a1ea65b03
     timertriggers: []
     type: title
     view: |-
@@ -2203,12 +2203,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: b8cd93da-572f-4cc9-8605-6153545ce330
+      id: aae1f0f7-1783-473e-8e62-e5382ce1e0ee
       iscommand: false
       name: Update packs
       type: title
       version: -1
-    taskid: b8cd93da-572f-4cc9-8605-6153545ce330
+    taskid: aae1f0f7-1783-473e-8e62-e5382ce1e0ee
     timertriggers: []
     type: title
     view: |-
@@ -2234,12 +2234,12 @@ tasks:
     task:
       brand: ""
       description: Manually update content packs.
-      id: 043c9f4b-5a0f-478f-8385-c4a9d767949f
+      id: 8c8dd1d8-13eb-435f-81fc-879a73ca25ef
       iscommand: false
       name: Manually update content packs
       type: regular
       version: -1
-    taskid: 043c9f4b-5a0f-478f-8385-c4a9d767949f
+    taskid: 8c8dd1d8-13eb-435f-81fc-879a73ca25ef
     timertriggers: []
     type: regular
     view: |-
@@ -2300,12 +2300,12 @@ tasks:
       brand: ""
       description: Checks if e-mail addresses are provided in the inputs and whether
         any "send-mail" compatible integrations are enabled.
-      id: 0bf43397-e1cc-45c6-8305-8f00876b5380
+      id: 3b769d4d-e1e6-4489-8959-b7f244124d40
       iscommand: false
       name: Are there e-mail addresses?
       type: condition
       version: -1
-    taskid: 0bf43397-e1cc-45c6-8305-8f00876b5380
+    taskid: 3b769d4d-e1e6-4489-8959-b7f244124d40
     timertriggers: []
     type: condition
     view: |-
@@ -2352,13 +2352,13 @@ tasks:
     task:
       brand: ""
       description: Sends an email notification using Gmail.
-      id: debe1ff8-ddee-4e88-8c54-3d8d06556c68
+      id: 93429695-0152-439c-8208-b0d6ada44827
       iscommand: true
       name: Send Email notification
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: debe1ff8-ddee-4e88-8c54-3d8d06556c68
+    taskid: 93429695-0152-439c-8208-b0d6ada44827
     timertriggers: []
     type: regular
     view: |-
@@ -2400,13 +2400,13 @@ tasks:
     task:
       brand: Builtin
       description: Set description to layout and set default pack selection
-      id: 6725ea84-bc15-409e-8541-38a7883fdc48
+      id: 2ca915de-e135-46de-8fb1-b204cf3afc33
       iscommand: true
       name: Set description to layout and set default pack selection
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 6725ea84-bc15-409e-8541-38a7883fdc48
+    taskid: 2ca915de-e135-46de-8fb1-b204cf3afc33
     timertriggers: []
     type: regular
     view: |-
@@ -2439,13 +2439,13 @@ tasks:
     task:
       brand: ""
       description: Content packs installer from marketplace.
-      id: 99a4856a-3864-4536-86ba-c6348db5cecf
+      id: 7c718656-b19b-41f6-85f0-3476339c0a32
       iscommand: false
       name: Install updates for chosen packs
       script: ContentPackInstaller
       type: regular
       version: -1
-    taskid: 99a4856a-3864-4536-86ba-c6348db5cecf
+    taskid: 7c718656-b19b-41f6-85f0-3476339c0a32
     timertriggers: []
     type: regular
     view: |-
@@ -2475,13 +2475,13 @@ tasks:
     task:
       brand: ""
       description: Get the latest release notes information.
-      id: 0a6327d3-f6ff-4253-85ef-548b45b0a321
+      id: b1f10340-625f-48e8-863c-77a4dcb32f95
       iscommand: false
       name: Save latest release notes
       script: GetLatestReleaseNotes
       type: regular
       version: -1
-    taskid: 0a6327d3-f6ff-4253-85ef-548b45b0a321
+    taskid: b1f10340-625f-48e8-863c-77a4dcb32f95
     timertriggers: []
     type: regular
     view: |-
@@ -2514,13 +2514,13 @@ tasks:
     task:
       brand: ""
       description: Set successful update.
-      id: 388db22b-43a5-482e-8f15-3f58ae60c177
+      id: b9410408-1241-4adb-89e5-f98c25545f72
       iscommand: false
       name: Set successful update
       script: SetAndHandleEmpty
       type: regular
       version: -1
-    taskid: 388db22b-43a5-482e-8f15-3f58ae60c177
+    taskid: b9410408-1241-4adb-89e5-f98c25545f72
     timertriggers: []
     type: regular
     view: |-
@@ -2546,12 +2546,12 @@ tasks:
     task:
       brand: Builtin
       description: Sets closing reason and notes for the investigation.
-      id: c01570f9-6dc3-425b-8256-b57e0e70d733
+      id: 14c8be14-3e3d-46ab-8790-5d6e87a7d4f5
       iscommand: false
       name: Manual - review failed update task
       type: regular
       version: -1
-    taskid: c01570f9-6dc3-425b-8256-b57e0e70d733
+    taskid: 14c8be14-3e3d-46ab-8790-5d6e87a7d4f5
     timertriggers: []
     type: regular
     view: |-
@@ -2602,13 +2602,13 @@ tasks:
         communication tasks if they want to trigger an auto-update process to install
         all updates that were found.\nThis playbook can be used as a Cortex XSOAR
         job to help users track marketplace pack updates and install them regularly."
-      id: 713efe18-4b50-4850-8ab1-40775aca91f7
+      id: 87d6ef0c-9662-4f60-8ea2-663b75d4154a
       iscommand: false
       name: Content Update Manager_copy
       playbookId: 620d245d-d557-4eb5-8283-0b5d3a950012
       type: playbook
       version: -1
-    taskid: 713efe18-4b50-4850-8ab1-40775aca91f7
+    taskid: 87d6ef0c-9662-4f60-8ea2-663b75d4154a
     timertriggers: []
     type: playbook
     view: |-
