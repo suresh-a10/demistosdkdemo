@@ -72,11 +72,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 30aca4a9-653e-4326-80d3-2f0129d86cfe
+      id: 8ec8c25d-40ce-40ed-8958-a71d938b4e5e
       iscommand: false
       name: ""
       version: -1
-    taskid: 30aca4a9-653e-4326-80d3-2f0129d86cfe
+    taskid: 8ec8c25d-40ce-40ed-8958-a71d938b4e5e
     timertriggers: []
     type: start
     view: |-
@@ -114,13 +114,13 @@ tasks:
     task:
       brand: ""
       description: Isolates the specified endpoint.
-      id: 0e2dcac0-95fa-4886-8002-e42222ff54ba
+      id: 9032fa5e-5d12-4737-8a42-aefb97defb2a
       iscommand: true
       name: Cortex XDR - isolate endpoint
       script: '|||xdr-isolate-endpoint'
       type: regular
       version: -1
-    taskid: 0e2dcac0-95fa-4886-8002-e42222ff54ba
+    taskid: 9032fa5e-5d12-4737-8a42-aefb97defb2a
     timertriggers: []
     type: regular
     view: |-
@@ -174,13 +174,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: bb81b40c-8bae-47be-86f1-d7b84b138060
+      id: 1c7591e4-5211-4ea4-8ceb-25937b5870ec
       iscommand: false
       name: Is 'Palo Alto Networks Cortex XDR - Investigation and Response' integration
         enabled?
       type: condition
       version: -1
-    taskid: bb81b40c-8bae-47be-86f1-d7b84b138060
+    taskid: 1c7591e4-5211-4ea4-8ceb-25937b5870ec
     timertriggers: []
     type: condition
     view: |-
@@ -202,12 +202,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: a0871fa5-1c5c-4281-8f2d-dbadcf7842e7
+      id: 40e18e0e-7cfa-47e8-8e83-753856400e52
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: a0871fa5-1c5c-4281-8f2d-dbadcf7842e7
+    taskid: 40e18e0e-7cfa-47e8-8e83-753856400e52
     timertriggers: []
     type: title
     view: |-
@@ -259,12 +259,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 3c457a7d-09cd-4e2b-8b07-252f95da27a9
+      id: 46ff319a-14dd-4bcf-8e98-ce470ead7127
       iscommand: false
       name: Is there an endpoint to isolate?
       type: condition
       version: -1
-    taskid: 3c457a7d-09cd-4e2b-8b07-252f95da27a9
+    taskid: 46ff319a-14dd-4bcf-8e98-ce470ead7127
     timertriggers: []
     type: condition
     view: |-
@@ -317,13 +317,13 @@ tasks:
         1. Initiate the operation.
         2. Poll to check if the operation completed.
         3. (optional) Get the results of the operation.
-      id: 2dbc5400-94be-413e-8c4b-fe3d716d840c
+      id: 76fa0d06-2fcb-4322-857f-ff28a10a4f72
       iscommand: false
       name: GenericPolling
       playbookId: GenericPolling
       type: playbook
       version: -1
-    taskid: 2dbc5400-94be-413e-8c4b-fe3d716d840c
+    taskid: 76fa0d06-2fcb-4322-857f-ff28a10a4f72
     timertriggers: []
     type: playbook
     view: |-
@@ -357,13 +357,13 @@ tasks:
         by multiple fields is concatenated using the AND condition (OR is not supported).
         Maximum result set size is 100. Offset is the zero-based number of the endpoint
         from the start of the result set (start by counting from 0).
-      id: e1a00f1d-aee9-4d8d-8486-8d966ab26011
+      id: fdd85eee-dc5d-4e79-83d3-0ce5bd940f04
       iscommand: true
       name: Cortex XDR - check isolation status
       script: '|||xdr-get-endpoints'
       type: regular
       version: -1
-    taskid: e1a00f1d-aee9-4d8d-8486-8d966ab26011
+    taskid: fdd85eee-dc5d-4e79-83d3-0ce5bd940f04
     timertriggers: []
     type: regular
     view: |-
@@ -399,13 +399,13 @@ tasks:
         by multiple fields is concatenated using the AND condition (OR is not supported).
         Maximum result set size is 100. Offset is the zero-based number of the endpoint
         from the start of the result set (start by counting from 0).
-      id: 1f114f7b-b467-43f8-8d8f-56de343aa761
+      id: 846d039c-8ea3-4977-866d-46d4572743f8
       iscommand: true
       name: Cortex XDR - get endpoint ID
       script: '|||xdr-get-endpoints'
       type: regular
       version: -1
-    taskid: 1f114f7b-b467-43f8-8d8f-56de343aa761
+    taskid: 846d039c-8ea3-4977-866d-46d4572743f8
     timertriggers: []
     type: regular
     view: |-
@@ -439,13 +439,13 @@ tasks:
         by multiple fields is concatenated using the AND condition (OR is not supported).
         Maximum result set size is 100. Offset is the zero-based number of the endpoint
         from the start of the result set (start by counting from 0).
-      id: dcd24a3f-6684-405d-86a2-f0d8bea26740
+      id: 987f4e99-da8c-49aa-8ae3-1cb19670be31
       iscommand: true
       name: Cortex XDR - check isolation status
       script: '|||xdr-get-endpoints'
       type: regular
       version: -1
-    taskid: dcd24a3f-6684-405d-86a2-f0d8bea26740
+    taskid: 987f4e99-da8c-49aa-8ae3-1cb19670be31
     timertriggers: []
     type: regular
     view: |-
@@ -478,13 +478,13 @@ tasks:
         be concatenated using AND condition (OR is not supported). Maximum result
         set size is 100. Offset is the zero-based number of the endpoint from the
         start of the result set (start by counting from 0).
-      id: 17a20910-d647-498d-8f91-897115610d64
+      id: 1b167587-facd-46ba-8bce-760f96e2bd14
       iscommand: true
       name: Get endpoint status
       script: '|||xdr-get-endpoints'
       type: regular
       version: -1
-    taskid: 17a20910-d647-498d-8f91-897115610d64
+    taskid: 1b167587-facd-46ba-8bce-760f96e2bd14
     timertriggers: []
     type: regular
     view: |-
@@ -531,12 +531,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 20d57c3b-bffa-40c6-8cf4-497d27532e6a
+      id: 9c08e08a-7fba-4ff5-84d2-2d3164a67230
       iscommand: false
       name: Is the endpoint ready for isolation?
       type: condition
       version: -1
-    taskid: 20d57c3b-bffa-40c6-8cf4-497d27532e6a
+    taskid: 9c08e08a-7fba-4ff5-84d2-2d3164a67230
     timertriggers: []
     type: condition
     view: |-
