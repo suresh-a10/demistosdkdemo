@@ -24,24 +24,24 @@
 				"category": "Utilities",
 				"commands": [
 					{
-						"description": "Converts a PDF file to an image file.",
-						"name": "rasterize-pdf"
+						"description": "Converts the contents of a URL to an image file or a PDF file.",
+						"name": "rasterize"
 					},
 					{
 						"description": "Converts an HTML file to an image file or a PDF file.",
 						"name": "rasterize-html"
 					},
 					{
-						"description": "Converts the body of an email to an image file or a PDF file.",
-						"name": "rasterize-email"
+						"description": "Converts a PDF file to an image file.",
+						"name": "rasterize-pdf"
 					},
 					{
 						"description": "Converts an image file to a PDF file.",
 						"name": "rasterize-image"
 					},
 					{
-						"description": "Converts the contents of a URL to an image file or a PDF file.",
-						"name": "rasterize"
+						"description": "Converts the body of an email to an image file or a PDF file.",
+						"name": "rasterize-email"
 					}
 				],
 				"description": "Converts URLs, PDF files, and emails to an image file or PDF file.",
@@ -57,21 +57,21 @@
 		"widget": null,
 		"wizard": null
 	},
-	"currentVersion": "2.0.4",
+	"currentVersion": "2.0.3",
 	"definitionId": "",
 	"dependencies": {
 		"Base": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "1.33.43",
+			"minVersion": "1.33.40",
 			"name": "Base"
 		}
 	},
 	"deprecated": false,
 	"description": "Converts URLs, PDF files, and emails to an image file or PDF file.",
 	"disabledMonthly": false,
-	"downloads": 53862,
+	"downloads": 53177,
 	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
 	"fromServerVersion": "5.0.0",
 	"general": [
@@ -88,7 +88,7 @@
 			"name": "Rasterize"
 		}
 	],
-	"itemVersion": "2.0.4",
+	"itemVersion": "2.0.3",
 	"keywords": [],
 	"legacy": true,
 	"name": "Rasterize",
@@ -116,9 +116,9 @@
 		"Trending"
 	],
 	"toServerVersion": "",
-	"updated": "2024-03-25T20:23:35Z",
+	"updated": "2024-04-17T09:31:29Z",
 	"useCases": [],
 	"version": -1,
-	"versionInfo": "913451",
+	"versionInfo": "889167",
 	"videos": []
 }
