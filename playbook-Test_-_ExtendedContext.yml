@@ -37,11 +37,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8c18edbf-2ec1-45b8-80d9-3343b5d164e7
+      id: 79897fa4-fe40-40c8-8c7e-197dab452703
       iscommand: false
       name: ""
       version: -1
-    taskid: 8c18edbf-2ec1-45b8-80d9-3343b5d164e7
+    taskid: 79897fa4-fe40-40c8-8c7e-197dab452703
     timertriggers: []
     type: start
     view: |-
@@ -76,13 +76,13 @@ tasks:
     task:
       brand: VirusTotal (API v3)
       description: Checks the reputation of an IP address.
-      id: cb84f4fc-7c4c-4d20-8a3a-90969fd4673c
+      id: 6fff7b57-8554-47a8-8c3a-8ab8a870be6c
       iscommand: true
       name: 'Get IPInfo '
       script: VirusTotal (API v3)|||ip
       type: regular
       version: -1
-    taskid: cb84f4fc-7c4c-4d20-8a3a-90969fd4673c
+    taskid: 6fff7b57-8554-47a8-8c3a-8ab8a870be6c
     timertriggers: []
     type: regular
     view: |-
@@ -115,13 +115,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: be990b5a-c325-4635-87e9-7bdf3b8c553e
+      id: 9c4d60dc-cdf5-4848-834d-bf4594f29d21
       iscommand: false
       name: Set
       script: Set
       type: regular
       version: -1
-    taskid: be990b5a-c325-4635-87e9-7bdf3b8c553e
+    taskid: 9c4d60dc-cdf5-4848-834d-bf4594f29d21
     timertriggers: []
     type: regular
     view: |-
@@ -156,12 +156,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: ae53dd14-9af4-4930-8f54-11305045b8fd
+      id: f8764ccc-4a30-4a61-83ea-1361572e86eb
       iscommand: false
       name: Check IP exists or not
       type: condition
       version: -1
-    taskid: ae53dd14-9af4-4930-8f54-11305045b8fd
+    taskid: f8764ccc-4a30-4a61-83ea-1361572e86eb
     timertriggers: []
     type: condition
     view: |-
@@ -190,13 +190,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 9ad61252-25fe-49e2-81ca-55e7fdc768cb
+      id: 34358e7e-e43d-4447-8c10-86148bbceb95
       iscommand: false
       name: Print "YES"
       script: Print
       type: regular
       version: -1
-    taskid: 9ad61252-25fe-49e2-81ca-55e7fdc768cb
+    taskid: 34358e7e-e43d-4447-8c10-86148bbceb95
     timertriggers: []
     type: regular
     view: |-
@@ -218,12 +218,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: af72e3d8-08c4-4b29-8076-50b4212b931a
+      id: 786662a6-4e94-4e33-8df8-e4cca4cca69e
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: af72e3d8-08c4-4b29-8076-50b4212b931a
+    taskid: 786662a6-4e94-4e33-8df8-e4cca4cca69e
     timertriggers: []
     type: title
     view: |-
