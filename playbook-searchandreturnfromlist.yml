@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 89c7c447-b4be-46e6-840c-a3106d77f14f
+      id: 41a1bb71-ce08-455e-85e6-2d9e93989781
       iscommand: false
       name: ""
       version: -1
-    taskid: 89c7c447-b4be-46e6-840c-a3106d77f14f
+    taskid: 41a1bb71-ce08-455e-85e6-2d9e93989781
     timertriggers: []
     type: start
     view: |-
@@ -65,13 +65,13 @@ tasks:
     task:
       brand: ""
       description: Set a value in context under the key you entered.
-      id: 124dece2-86f1-447c-8952-961975fb89fe
+      id: 115c5bd6-2988-4e63-8e6d-d16bbf3f5576
       iscommand: false
       name: Set search key
       script: Set
       type: regular
       version: -1
-    taskid: 124dece2-86f1-447c-8952-961975fb89fe
+    taskid: 115c5bd6-2988-4e63-8e6d-d16bbf3f5576
     timertriggers: []
     type: regular
     view: |-
@@ -104,13 +104,13 @@ tasks:
     task:
       brand: ""
       description: Parses a list by header and value.
-      id: 00757f13-7063-4962-86a8-facd19a0703c
+      id: b03674e2-1db2-4bd5-8cdb-013c2e6c6f08
       iscommand: false
       name: Search and return from list
       script: GetListRow
       type: regular
       version: -1
-    taskid: 00757f13-7063-4962-86a8-facd19a0703c
+    taskid: b03674e2-1db2-4bd5-8cdb-013c2e6c6f08
     timertriggers: []
     type: regular
     view: |-
@@ -144,13 +144,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: ca178e03-4607-4b28-82ea-cda63ca8c3c8
+      id: 19d1c8c7-75e6-42f3-8a22-84d626160eed
       iscommand: false
       name: delete searchkey if it exists
       script: DeleteContext
       type: regular
       version: -1
-    taskid: ca178e03-4607-4b28-82ea-cda63ca8c3c8
+    taskid: 19d1c8c7-75e6-42f3-8a22-84d626160eed
     timertriggers: []
     type: regular
     view: |-
