@@ -36,11 +36,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: efd90004-0f34-46b8-81d8-c17abd4778e0
+      id: eef518a8-cb10-4a15-81cb-23ad42a3a558
       iscommand: false
       name: ""
       version: -1
-    taskid: efd90004-0f34-46b8-81d8-c17abd4778e0
+    taskid: eef518a8-cb10-4a15-81cb-23ad42a3a558
     timertriggers: []
     type: start
     view: |-
@@ -71,13 +71,13 @@ tasks:
     task:
       brand: ""
       description: Sends an email.
-      id: 5d32d09b-af28-4ade-8f92-42850e650ec7
+      id: a13b16c8-bfb8-473f-89c4-7d2319387970
       iscommand: true
       name: Send Email with Images in HTML Body
       script: '|||send-mail'
       type: regular
       version: -1
-    taskid: 5d32d09b-af28-4ade-8f92-42850e650ec7
+    taskid: a13b16c8-bfb8-473f-89c4-7d2319387970
     timertriggers: []
     type: regular
     view: |-
