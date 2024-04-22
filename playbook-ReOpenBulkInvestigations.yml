@@ -36,11 +36,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 7ae0680f-683f-476d-8e66-30364ebc983f
+      id: 0c830bcf-d039-47b7-8fd4-ef2dc17c519a
       iscommand: false
       name: ""
       version: -1
-    taskid: 7ae0680f-683f-476d-8e66-30364ebc983f
+    taskid: 0c830bcf-d039-47b7-8fd4-ef2dc17c519a
     timertriggers: []
     type: start
     view: |-
@@ -71,13 +71,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP POST request
-      id: 56cc407a-4061-4c06-874c-247dc64a4341
+      id: a04ace84-f34f-4635-88fa-5441bc4be03a
       iscommand: true
       name: Re-Open Incident
       script: Core REST API|||demisto-api-post
       type: regular
       version: -1
-    taskid: 56cc407a-4061-4c06-874c-247dc64a4341
+    taskid: a04ace84-f34f-4635-88fa-5441bc4be03a
     timertriggers: []
     type: regular
     view: |-
@@ -110,13 +110,13 @@ tasks:
     task:
       brand: Core REST API
       description: send HTTP POST request
-      id: 9cdf9221-b0cd-43e6-8ffb-6145d9b16768
+      id: 004d513d-e67b-4191-82b7-4ed02637ce58
       iscommand: true
       name: SearchIncidents
       script: Core REST API|||demisto-api-post
       type: regular
       version: -1
-    taskid: 9cdf9221-b0cd-43e6-8ffb-6145d9b16768
+    taskid: 004d513d-e67b-4191-82b7-4ed02637ce58
     timertriggers: []
     type: regular
     view: |-
@@ -147,13 +147,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: 55260d7c-ef91-4633-89d9-e38428b5d800
+      id: 5aadd9cf-1dab-41f3-8e86-416302d6e9f9
       iscommand: false
       name: DeleteContext
       script: DeleteContext
       type: regular
       version: -1
-    taskid: 55260d7c-ef91-4633-89d9-e38428b5d800
+    taskid: 5aadd9cf-1dab-41f3-8e86-416302d6e9f9
     timertriggers: []
     type: regular
     view: |-
