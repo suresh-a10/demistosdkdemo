@@ -40,11 +40,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: d5c54c87-fd39-4fad-8fe5-6e8c0514eaf5
+      id: 8a91ad38-8c05-4ee7-89d9-8e3434530292
       iscommand: false
       name: ""
       version: -1
-    taskid: d5c54c87-fd39-4fad-8fe5-6e8c0514eaf5
+    taskid: 8a91ad38-8c05-4ee7-89d9-8e3434530292
     timertriggers: []
     type: start
     view: |-
@@ -109,13 +109,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: d753b727-7e89-4bb1-8f11-2abca0da5ab3
+      id: f51eda93-0b8b-4449-8bee-a23c519becd7
       iscommand: true
       name: Set Incident Fields
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: d753b727-7e89-4bb1-8f11-2abca0da5ab3
+    taskid: f51eda93-0b8b-4449-8bee-a23c519becd7
     timertriggers: []
     type: regular
     view: |-
@@ -161,13 +161,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs-cortex.paloaltonetworks.com/r/Cortex-XSOAR/6.10/Cortex-XSOAR-Administrator-Guide/Automations
-      id: dd159752-e79d-4f16-8b66-5c9d11794fdf
+      id: 25365ad9-e025-4089-82da-4afc9bd5095b
       iscommand: false
       name: Send Email
       script: SendEmailReply
       type: regular
       version: -1
-    taskid: dd159752-e79d-4f16-8b66-5c9d11794fdf
+    taskid: 25365ad9-e025-4089-82da-4afc9bd5095b
     timertriggers: []
     type: regular
     view: |-
@@ -200,7 +200,7 @@ tasks:
     task:
       brand: Gmail Single User
       description: Sends an email using Gmail.
-      id: e7c95cfd-c517-4d9f-8948-450f8382c3ac
+      id: 34be6614-f202-4298-82df-2462838cc833
       iscommand: true
       name: Send Email using Using EmailAskUser
       script: Gmail Single User|||send-mail
@@ -208,7 +208,7 @@ tasks:
       - userreply
       type: regular
       version: -1
-    taskid: e7c95cfd-c517-4d9f-8948-450f8382c3ac
+    taskid: 34be6614-f202-4298-82df-2462838cc833
     timertriggers: []
     type: regular
     view: |-
@@ -233,14 +233,14 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 8c40ed7b-e11b-422b-864c-dca7c8c905c3
+      id: 342351a4-f182-49ff-8feb-966c569c55fd
       iscommand: false
       name: Wiat time
       tags:
       - userreply
       type: regular
       version: -1
-    taskid: 8c40ed7b-e11b-422b-864c-dca7c8c905c3
+    taskid: 342351a4-f182-49ff-8feb-966c569c55fd
     timertriggers:
     - action: start
       fieldname: demoslatimer
@@ -268,13 +268,13 @@ tasks:
     task:
       brand: ""
       description: Prints text to war room (Markdown supported)
-      id: 560a0184-098e-4405-81ad-a86ed266a8f8
+      id: f2859cc0-b095-443b-8d4b-14f4d2cb4448
       iscommand: false
       name: Print
       script: Print
       type: regular
       version: -1
-    taskid: 560a0184-098e-4405-81ad-a86ed266a8f8
+    taskid: f2859cc0-b095-443b-8d4b-14f4d2cb4448
     timertriggers: []
     type: regular
     view: |-
@@ -305,13 +305,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.set.incident
-      id: 03441187-53d8-426f-848e-f5c3e714daef
+      id: 39ef7a28-2eab-4c34-8756-ca47d1c72ea5
       iscommand: true
       name: Set SLA
       script: Builtin|||setIncident
       type: regular
       version: -1
-    taskid: 03441187-53d8-426f-848e-f5c3e714daef
+    taskid: 39ef7a28-2eab-4c34-8756-ca47d1c72ea5
     timertriggers: []
     type: regular
     view: |-
@@ -336,14 +336,14 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 0a904fa9-e33c-4d17-843e-fb7c5a9b167c
+      id: ffa36118-df96-4eaf-8a14-ea655709a0ca
       iscommand: false
       name: wait for user response
       tags:
       - userreply
       type: regular
       version: -1
-    taskid: 0a904fa9-e33c-4d17-843e-fb7c5a9b167c
+    taskid: ffa36118-df96-4eaf-8a14-ea655709a0ca
     timertriggers:
     - action: start
       fieldname: demoslatimer
@@ -376,13 +376,13 @@ tasks:
         If the lock is already in use, the command waits until the lock is released
         or until timeout is reached. If timeout is reached and the lock hasn't been
         released, the command fails to get the lock.
-      id: 4a84fd63-7a2a-4d59-819f-8e2639ddb1e4
+      id: dada2794-fa6d-41b9-871d-596bb9148fdc
       iscommand: true
       name: Acquire Lock
       script: Demisto Lock|||demisto-lock-get
       type: regular
       version: -1
-    taskid: 4a84fd63-7a2a-4d59-819f-8e2639ddb1e4
+    taskid: dada2794-fa6d-41b9-871d-596bb9148fdc
     timertriggers: []
     type: regular
     view: |-
@@ -411,13 +411,13 @@ tasks:
     task:
       brand: Demisto Lock
       description: Release a lock
-      id: 3d867ce0-54ff-420b-8ec1-8cf1a694335e
+      id: e22c6071-090c-4806-86fe-97aa0d1c69ad
       iscommand: true
       name: Release Lock
       script: Demisto Lock|||demisto-lock-release
       type: regular
       version: -1
-    taskid: 3d867ce0-54ff-420b-8ec1-8cf1a694335e
+    taskid: e22c6071-090c-4806-86fe-97aa0d1c69ad
     timertriggers: []
     type: regular
     view: |-
@@ -439,12 +439,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 2f59dbc9-f0cb-4ced-8c96-4d3f042f2a18
+      id: 8d015531-70ab-4099-8830-d32c0e83c967
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 2f59dbc9-f0cb-4ced-8c96-4d3f042f2a18
+    taskid: 8d015531-70ab-4099-8830-d32c0e83c967
     timertriggers: []
     type: title
     view: |-
