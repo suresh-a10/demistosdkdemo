@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: fc38eaed-0029-409c-89c6-1d65322fc4cf
+      id: 0f0ceaee-3c23-4539-888b-570deef6d0bc
       iscommand: false
       name: ""
       version: -1
-    taskid: fc38eaed-0029-409c-89c6-1d65322fc4cf
+    taskid: 0f0ceaee-3c23-4539-888b-570deef6d0bc
     timertriggers: []
     type: start
     view: |-
@@ -66,13 +66,13 @@ tasks:
     task:
       brand: SplunkPy
       description: Searches Splunk for events.
-      id: 2ee3c639-c3eb-4664-8b7e-f6d733874abf
+      id: 570b9c11-48c9-4fc5-8977-ae5897c99e80
       iscommand: true
       name: get count notable number on Splunk
       script: SplunkPy|||splunk-search
       type: regular
       version: -1
-    taskid: 2ee3c639-c3eb-4664-8b7e-f6d733874abf
+    taskid: 570b9c11-48c9-4fc5-8977-ae5897c99e80
     timertriggers: []
     type: regular
     view: |-
@@ -107,13 +107,13 @@ tasks:
         This automation runs using the default Limited User role, unless you explicitly change the permissions.
         For more information, see the section about permissions here:
         https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-2/cortex-xsoar-admin/playbooks/automations.html
-      id: d173f936-418b-48d6-8906-3f1f4d005b4a
+      id: 1f3b2fb6-fa94-43c6-8c91-c5c23051518a
       iscommand: false
       name: Search incidents in XSOAR
       script: SearchIncidentsV2
       type: regular
       version: -1
-    taskid: d173f936-418b-48d6-8906-3f1f4d005b4a
+    taskid: 1f3b2fb6-fa94-43c6-8c91-c5c23051518a
     timertriggers: []
     type: regular
     view: |-
@@ -152,13 +152,13 @@ tasks:
     task:
       brand: Builtin
       description: Set a value in context under the key you entered.
-      id: c6df09ef-ff44-4eaf-8d3f-a330e2ec6b0e
+      id: 20a70ef1-53c1-4005-8218-998157ae107c
       iscommand: false
       name: set last 1 hour time frame
       script: Set
       type: regular
       version: -1
-    taskid: c6df09ef-ff44-4eaf-8d3f-a330e2ec6b0e
+    taskid: 20a70ef1-53c1-4005-8218-998157ae107c
     timertriggers: []
     type: regular
     view: |-
@@ -198,13 +198,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.list.add
-      id: c54e0018-dd78-41f6-83c0-99ecab70c519
+      id: 23e68550-1d27-4d58-81c9-c7aa84e703cf
       iscommand: true
       name: update list with xsoar incidents count
       script: Builtin|||addToList
       type: regular
       version: -1
-    taskid: c54e0018-dd78-41f6-83c0-99ecab70c519
+    taskid: 23e68550-1d27-4d58-81c9-c7aa84e703cf
     timertriggers: []
     type: regular
     view: |-
@@ -235,13 +235,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.list.add
-      id: e03d47a6-ebec-4b2b-8a4b-3723874b4a3d
+      id: 82263e84-0617-41fa-850d-9fa45a2d52f4
       iscommand: true
       name: update list with the timestamp
       script: Builtin|||addToList
       type: regular
       version: -1
-    taskid: e03d47a6-ebec-4b2b-8a4b-3723874b4a3d
+    taskid: 82263e84-0617-41fa-850d-9fa45a2d52f4
     timertriggers: []
     type: regular
     view: |-
@@ -278,13 +278,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.list.add
-      id: 2b6f5d89-1e8e-4fbf-8dad-f5f9a35fd1f1
+      id: 69d89525-8d46-4484-85c1-b2e440d8104e
       iscommand: true
       name: update list with splunk notables count
       script: Builtin|||addToList
       type: regular
       version: -1
-    taskid: 2b6f5d89-1e8e-4fbf-8dad-f5f9a35fd1f1
+    taskid: 69d89525-8d46-4484-85c1-b2e440d8104e
     timertriggers: []
     type: regular
     view: |-
