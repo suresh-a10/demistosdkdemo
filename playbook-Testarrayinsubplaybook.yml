@@ -30,11 +30,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 368a0d12-0d54-493a-8553-ed8d10bec1bd
+      id: 0d1ac1bf-d3b5-4714-87d8-ad6f39c6644e
       iscommand: false
       name: ""
       version: -1
-    taskid: 368a0d12-0d54-493a-8553-ed8d10bec1bd
+    taskid: 0d1ac1bf-d3b5-4714-87d8-ad6f39c6644e
     timertriggers: []
     type: start
     view: |-
@@ -64,13 +64,13 @@ tasks:
     task:
       brand: Builtin
       description: commands.local.cmd.extract.indicators
-      id: 97b653f6-ace5-4272-889b-cfcf4f2a3eb3
+      id: c38aae30-ea1b-4cb1-8892-74da6cc81b83
       iscommand: true
       name: ExtractIP
       script: Builtin|||extractIndicators
       type: regular
       version: -1
-    taskid: 97b653f6-ace5-4272-889b-cfcf4f2a3eb3
+    taskid: c38aae30-ea1b-4cb1-8892-74da6cc81b83
     timertriggers: []
     type: regular
     view: |-
@@ -118,13 +118,13 @@ tasks:
         - Resolve IP addresses to hostnames (DNS)
         - Provide threat information
         - Separate internal and external addresses
-      id: 37083726-256d-4aea-8f9b-4a1f3dc8a0cd
+      id: 22472614-2296-4bac-8a7b-6a1f562a03ac
       iscommand: false
       name: IP Enrichment - External - Generic v2
       playbookId: IP Enrichment - External - Generic v2
       type: playbook
       version: -1
-    taskid: 37083726-256d-4aea-8f9b-4a1f3dc8a0cd
+    taskid: 22472614-2296-4bac-8a7b-6a1f562a03ac
     timertriggers: []
     type: playbook
     view: |-
@@ -149,13 +149,13 @@ tasks:
       description: Checks if the investigation found any malicious indicators (file,
         URL, IP address, domain, or email). Returns "yes" if at least one malicious
         indicator is found.
-      id: 7cd32d92-5bfe-4db4-8133-7ee9a0850027
+      id: 25f6c900-ca3d-4398-8b24-ee410e4a5729
       iscommand: false
       name: Is Malicious Indicator
       script: IsMaliciousIndicatorFound
       type: condition
       version: -1
-    taskid: 7cd32d92-5bfe-4db4-8133-7ee9a0850027
+    taskid: 25f6c900-ca3d-4398-8b24-ee410e4a5729
     timertriggers: []
     type: condition
     view: |-
