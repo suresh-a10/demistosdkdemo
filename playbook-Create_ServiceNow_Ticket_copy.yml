@@ -149,11 +149,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: f7f1ac9c-35b0-4639-82fb-5dd856185ca9
+      id: 3f7408e7-1285-480b-8256-0a8365f1df29
       iscommand: false
       name: ""
       version: -1
-    taskid: f7f1ac9c-35b0-4639-82fb-5dd856185ca9
+    taskid: 3f7408e7-1285-480b-8256-0a8365f1df29
     timertriggers: []
     type: start
     view: |-
@@ -175,12 +175,12 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 78a89240-3fa0-406b-8fbd-db026ee3e37e
+      id: bb5e12ea-0d6d-48d2-8484-25bca8afd424
       iscommand: false
       name: Done
       type: title
       version: -1
-    taskid: 78a89240-3fa0-406b-8fbd-db026ee3e37e
+    taskid: bb5e12ea-0d6d-48d2-8484-25bca8afd424
     timertriggers: []
     type: title
     view: |-
@@ -233,12 +233,12 @@ tasks:
     task:
       brand: ""
       description: Check for a playbook input to indicate which sync mode was selected.
-      id: 1acff224-fb42-49c4-8932-70c39714f4a4
+      id: 38c660c9-bd23-48d0-8d8b-3170aa61eef7
       iscommand: false
       name: Mirror or State Polling?
       type: condition
       version: -1
-    taskid: 1acff224-fb42-49c4-8932-70c39714f4a4
+    taskid: 38c660c9-bd23-48d0-8d8b-3170aa61eef7
     timertriggers: []
     type: condition
     view: |-
@@ -300,13 +300,13 @@ tasks:
 
         In addition to the playbook, Palo Alto Networks recommends that you use the included layout for ServiceNow Ticket, which helps visualize ServiceNow ticket information in Cortex XSOAR.
         You can add the new layout as a tab to existing layouts using the Edit Layout page.
-      id: c71dd1df-78bb-414b-81e2-497b44c6a6c2
+      id: 13ca85a5-639b-480b-81f6-1c330c5fd8a7
       iscommand: false
       name: Mirror ServiceNow Ticket
       playbookId: Mirror ServiceNow Ticket
       type: playbook
       version: -1
-    taskid: c71dd1df-78bb-414b-81e2-497b44c6a6c2
+    taskid: 13ca85a5-639b-480b-81f6-1c330c5fd8a7
     timertriggers: []
     type: playbook
     view: |-
@@ -353,13 +353,13 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      id: 37e74909-d645-43c6-8d9a-2b50e8a93ce7
+      id: 30eb316b-5915-4d80-8e10-33b260af8774
       iscommand: false
       name: ServiceNow Ticket State Polling
       playbookId: ServiceNow Ticket State Polling
       type: playbook
       version: -1
-    taskid: 37e74909-d645-43c6-8d9a-2b50e8a93ce7
+    taskid: 30eb316b-5915-4d80-8e10-33b260af8774
     timertriggers: []
     type: playbook
     view: |-
@@ -417,13 +417,13 @@ tasks:
     task:
       brand: ServiceNow v2
       description: Creates a ServiceNow ticket.
-      id: 3f6a837d-2b3c-41ff-866f-a2295fb4806e
+      id: f6fb5298-3866-4e0a-87de-7d3fdbce6d29
       iscommand: true
       name: Create ServiceNow ticket
       script: ServiceNow v2|||servicenow-create-ticket
       type: regular
       version: -1
-    taskid: 3f6a837d-2b3c-41ff-866f-a2295fb4806e
+    taskid: f6fb5298-3866-4e0a-87de-7d3fdbce6d29
     timertriggers: []
     type: regular
     view: |-
